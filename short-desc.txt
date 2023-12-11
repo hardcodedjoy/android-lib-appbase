@@ -1,0 +1,1 @@
+Our base to use for building android apps faster and easier.
