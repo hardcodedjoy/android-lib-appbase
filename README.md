@@ -15,12 +15,11 @@ Library to be used as a starting point for developing android apps.
 It is our independently-developed Single Activity Architecture, without fragments.
 It also includes some additional utility classes and methods that are useful in many apps.
 
-
-ContentView -> Base class for a new "screen" in the app;
-CvTMLL -> ContentView with title bar, menu button and LinearLayout for additional content;
-CvTMSLL -> same as CvTMLL, but the LinearLayout is inside a ScrollView;
-CvAboutBase -> "about" screen;
-CvSettingsBase -> "settings" screen.
+- ContentView -> Base class for a new "screen" in the app;
+- CvTMLL -> ContentView with title bar, menu button and LinearLayout for additional content;
+- CvTMSLL -> same as CvTMLL, but the LinearLayout is inside a ScrollView;
+- CvAboutBase -> "about" screen;
+- CvSettingsBase -> "settings" screen.
 
 In ContentView, set the layout by calling inflate(int resId) in the constructor.
 
