@@ -36,28 +36,12 @@ import android.widget.LinearLayout;
 import com.hardcodedjoy.appbase.R;
 import com.hardcodedjoy.appbase.gui.MenuOption;
 
-import java.util.Vector;
-
 @SuppressWarnings("unused")
 @SuppressLint("ViewConstructor")
-public class CvTMLL extends ContentView { // Title / Menu / LinearLayout
-
-    // class of cv to be displayed for settings,
-    // to be set to app specific CvSettings using setSettingsCvClass()
-    static private Class<?> settingsCvClass;
-
-    private final LinearLayout llMenuOptions;
-    private Vector<MenuOption> menuOptions;
+public class CvTMLL extends CvTM { // Title / Menu / LinearLayout
 
     @SuppressLint({"ClickableViewAccessibility", "RtlHardcoded"})
     public CvTMLL() {
-        menuOptions = new Vector<>();
-        menuOptions.add(new MenuOption(getString(R.string.about), () -> new CvAboutBase().show()));
-        menuOptions.add(new MenuOption(getString(R.string.settings), () -> {
-            try { ((ContentView)settingsCvClass.newInstance()).show();
-            } catch (Exception e) { e.printStackTrace(System.err); }
-        }));
-
         inflate(R.layout.appbase_cv_tmll);
 
         FrameLayout flMenuOptions = findViewById(R.id.fl_menu_options);
@@ -98,22 +82,4 @@ public class CvTMLL extends ContentView { // Title / Menu / LinearLayout
             return false;
         });
     }
-
-    @Override
-    public boolean onBackPressed() {
-        if(llMenuOptions.getVisibility() == View.VISIBLE) {
-            llMenuOptions.setVisibility(View.GONE);
-            return true; // consumed
-        }
-        return super.onBackPressed();
-    }
-
-    public Vector<MenuOption> getMenuOptions() { return menuOptions; }
-    public void setMenuOptions(Vector<MenuOption> ops) { this.menuOptions = ops; }
-    public void addMenuOptions(Vector<MenuOption> ops, int index) {
-        menuOptions.addAll(index, ops);
-    }
-
-
-    static public void setSettingsCvClass(Class<?> c) { settingsCvClass = c; }
 }

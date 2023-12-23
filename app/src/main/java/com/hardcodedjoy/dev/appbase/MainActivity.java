@@ -28,13 +28,13 @@ package com.hardcodedjoy.dev.appbase;
 
 import com.hardcodedjoy.appbase.activity.SingleActivity;
 import com.hardcodedjoy.appbase.contentview.CvAboutBase;
-import com.hardcodedjoy.appbase.contentview.CvTMSLL;
+import com.hardcodedjoy.appbase.contentview.CvTM;
 
 public class MainActivity extends SingleActivity {
     static {
         setInitialCvClass(CvStartScreen.class);
         setSettingsClass(Settings.class);
-        CvTMSLL.setSettingsCvClass(CvSettings.class);
+        CvTM.setSettingsCvClass(CvSettings.class);
         CvAboutBase.setAppVersion(BuildConfig.VERSION_NAME, BuildConfig.TIMESTAMP);
     }
 }

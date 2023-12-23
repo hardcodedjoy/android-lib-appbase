@@ -57,9 +57,17 @@ public class SingleActivity extends Activity {
     static private ContentView cvCurrent = null;
     static private final Vector<Popup> popups = new Vector<>();
 
+    static {
+        ThemeUtil.setResIdThemeLight(R.style.AppThemeLight);
+        ThemeUtil.setResIdThemeDark(R.style.AppThemeDark);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // we use our own title bar in "layout_main"
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         try {
             settings = settingsClass.newInstance();
@@ -72,12 +80,7 @@ public class SingleActivity extends Activity {
         ((Settings) settings).setSharedPreferences(sp);
         ((Settings) settings).onLoad();
 
-        ThemeUtil.setResIdThemeLight(R.style.AppThemeLight);
-        ThemeUtil.setResIdThemeDark(R.style.AppThemeDark);
         ThemeUtil.set(this, ((Settings) settings).getTheme());
-
-        // we use our own title bar in "layout_main"
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
     }
 
     @Override

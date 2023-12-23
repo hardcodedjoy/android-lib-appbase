@@ -27,6 +27,8 @@ SOFTWARE.
 package com.hardcodedjoy.appbase.contentview;
 
 import android.annotation.SuppressLint;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -66,6 +68,15 @@ public class CvSettingsBase extends ContentView {
             @Override
             public String get() { return ((Settings) settings).getTheme(); }
         });
+    }
+
+    public void addSettings(View view) {
+        LinearLayout llAdditionalSettings = findViewById(R.id.ll_additional_settings);
+        llAdditionalSettings.addView(view);
+    }
+
+    public void addSettings(int layoutResId) {
+        addSettings(inflate(getActivity(), layoutResId, null));
     }
 
     @Override
