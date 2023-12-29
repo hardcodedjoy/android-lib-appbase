@@ -30,13 +30,23 @@ import android.annotation.SuppressLint;
 
 import com.hardcodedjoy.appbase.contentview.ContentView;
 import com.hardcodedjoy.appbase.gui.GuiLinker;
+import com.hardcodedjoy.appbase.popup.Option;
 import com.hardcodedjoy.appbase.popup.PopupAsk;
-import com.hardcodedjoy.appbase.popup.PopupError;
-import com.hardcodedjoy.appbase.popup.PopupInfo;
+import com.hardcodedjoy.appbase.popup.PopupChoose;
+import com.hardcodedjoy.appbase.popup.PopupColorPicker;
+import com.hardcodedjoy.appbase.popup.PopupCustom;
+import com.hardcodedjoy.appbase.popup.PopupImage;
 import com.hardcodedjoy.appbase.popup.PopupInput;
+import com.hardcodedjoy.appbase.popup.PopupPleaseWait;
+import com.hardcodedjoy.appbase.popup.PopupProgress;
+import com.hardcodedjoy.appbase.popup.PopupSelectTimeInterval;
+
+import java.util.Vector;
 
 @SuppressLint("ViewConstructor")
 public class CvPopups extends ContentView {
+
+    private int colorPickerColor;
 
     public CvPopups() {
         // add initialization code here (that must run only one time)
@@ -45,22 +55,84 @@ public class CvPopups extends ContentView {
         GuiLinker.setOnClickListenerToAllButtons(this, view -> {
             int id = view.getId();
 
-            if(id == R.id.btn_popup_ask) {
-                new PopupAsk(R.string.delete, R.string.are_you_sure) {
-                    @Override
-                    public void onOK() {}
-                }.show();
-            }
-
-            if(id == R.id.btn_popup_info) { showInfo(R.string.android_is_cool); }
+            if(id == R.id.btn_popup_ask) { showPopupAsk(); }
+            if(id == R.id.btn_popup_choose) { showPopupChoose(); }
+            if(id == R.id.btn_popup_color_picker) { showPopupColorPicker(); }
+            if(id == R.id.btn_popup_custom) { showPopupCustom(); }
             if(id == R.id.btn_popup_error) { showError(R.string.err_file_not_found); }
-
-            if(id == R.id.btn_popup_input) {
-                new PopupInput(R.string.type_something) {
-                    @Override
-                    public void onOK(String s) { showInfo(s); }
-                }.show();
-            }
+            if(id == R.id.btn_popup_image) { showPopupImage(); }
+            if(id == R.id.btn_popup_info) { showInfo(R.string.android_is_cool); }
+            if(id == R.id.btn_popup_input) { showPopupInput(); }
+            if(id == R.id.btn_popup_please_wait) { showPopupPleaseWait(); }
+            if(id == R.id.btn_popup_progress) { showPopupProgress(); }
+            if(id == R.id.btn_popup_sel_time_interval) { showPopupSelectTimeInterval(); }
         });
+
+        colorPickerColor = 0xFF008000;
+    }
+
+    private void showPopupAsk() {
+        new PopupAsk(R.string.delete, R.string.are_you_sure) {
+            @Override
+            public void onOK() {}
+        }.show();
+    }
+
+    private void showPopupChoose() {
+     Vector<Option> op = new Vector<>();
+     op.add(new Option(R.drawable.ic_settings, "option 1", () -> {}));
+     op.add(new Option(R.drawable.ic_info, "option 2", () -> {}));
+     new PopupChoose("Choose", "choose an option", op).show();
+    }
+
+    private void showPopupColorPicker() {
+        new PopupColorPicker("Select color", null, colorPickerColor) {
+            @Override
+            public void onOK(int colorNew) { colorPickerColor = colorNew; }
+        }.show();
+    }
+
+    private void showPopupCustom() {
+        new PopupCustom("Custom Popup", "message") {
+            @Override
+            public void onOK() {}
+        }.show();
+    }
+
+    private void showPopupImage() {
+        new PopupImage("Image title", null, "fig.1") {
+            @Override
+            public void onCancel() {}
+        }.show();
+    }
+
+    private void showPopupInput() {
+        new PopupInput(R.string.type_something) {
+            @Override
+            public void onOK(String s) { showInfo(s); }
+        }.show();
+    }
+
+    private void showPopupPleaseWait() {
+        new PopupPleaseWait().show();
+    }
+
+    private void showPopupProgress() {
+        PopupProgress popupProgress = new PopupProgress("Progress", "45.0 %");
+        popupProgress.setProgress(0.45f);
+        popupProgress.show();
+    }
+
+    private void showPopupSelectTimeInterval() {
+        long durationMicros = 262000000L;
+        new PopupSelectTimeInterval("Select interval", durationMicros) {
+            @Override
+            public void onOK(long startMicros, long endMicros) {
+                String s = "interval selected:\n";
+                s += millisToHHMMSSmmm(startMicros/1000) + " to ";
+                s += millisToHHMMSSmmm(endMicros/1000);
+                showInfo(s);
+            }
+        }.show();
     }
 }

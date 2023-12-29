@@ -43,4 +43,9 @@ SOFTWARE.
     <string name="btn_ok">OK</string>
     <string name="error">Error</string>
     <string name="info">Info</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="color_opacity">Opacity:</string>
+    <string name="color_old">Old:</string>
+    <string name="color_current">Current:</string>
+    <string name="color_argb_code">ARGB Code:</string>
 </resources>

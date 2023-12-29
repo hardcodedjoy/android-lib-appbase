@@ -23,26 +23,32 @@ SOFTWARE.
 
 -->
 
-<resources>
-    <string name="app_name">AppBase</string>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_outside_popup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/appBasePopupUnder"
+    android:orientation="horizontal">
 
-    <string name="popups">Popups</string>
-    <string name="popup_ask">PopupAsk</string>
-    <string name="popup_choose">PopupChoose</string>
-    <string name="popup_color_picker">PopupColorPicker</string>
-    <string name="popup_custom">PopupCustom</string>
-    <string name="popup_error">PopupError</string>
-    <string name="popup_image">PopupImage</string>
-    <string name="popup_info">PopupInfo</string>
-    <string name="popup_input">PopupInput</string>
-    <string name="popup_please_wait">PopupPleaseWait</string>
-    <string name="popup_progress">PopupProgress</string>
-    <string name="popup_sel_time_interval">PopupSelectTimeInterval</string>
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popup_background"
+        android:orientation="vertical">
 
-    <string name="delete">Delete</string>
-    <string name="are_you_sure">Are you sure?</string>
-    <string name="android_is_cool">Android is cool</string>
-    <string name="err_file_not_found">FILE NOT FOUND</string>
-    <string name="type_something">Type something</string>
+        <include layout="@layout/appbase_popup_tm_center_big"/>
 
-</resources>
+        <ProgressBar
+            android:id="@+id/pb_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:max="100"
+            android:progress="20" />
+
+        <include layout="@layout/appbase_popup_btn_cancel"/>
+    </LinearLayout>
+</LinearLayout>

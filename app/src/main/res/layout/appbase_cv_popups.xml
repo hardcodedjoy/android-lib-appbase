@@ -82,10 +82,24 @@ SOFTWARE.
                 android:textAllCaps="false"/>
 
             <Button
-                android:id="@+id/btn_popup_info"
+                android:id="@+id/btn_popup_choose"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/popup_info"
+                android:text="@string/popup_choose"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_popup_color_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popup_color_picker"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_popup_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popup_custom"
                 android:textAllCaps="false"/>
 
             <Button
@@ -96,10 +110,45 @@ SOFTWARE.
                 android:textAllCaps="false"/>
 
             <Button
+                android:id="@+id/btn_popup_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popup_image"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_popup_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popup_info"
+                android:textAllCaps="false"/>
+
+            <Button
                 android:id="@+id/btn_popup_input"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/popup_input"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_popup_please_wait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popup_please_wait"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_popup_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popup_progress"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_popup_sel_time_interval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popup_sel_time_interval"
                 android:textAllCaps="false"/>
 
         </LinearLayout>

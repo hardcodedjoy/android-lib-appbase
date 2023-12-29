@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
 MIT License
 
@@ -23,26 +24,22 @@ SOFTWARE.
 
 -->
 
-<resources>
-    <string name="app_name">AppBase</string>
 
-    <string name="popups">Popups</string>
-    <string name="popup_ask">PopupAsk</string>
-    <string name="popup_choose">PopupChoose</string>
-    <string name="popup_color_picker">PopupColorPicker</string>
-    <string name="popup_custom">PopupCustom</string>
-    <string name="popup_error">PopupError</string>
-    <string name="popup_image">PopupImage</string>
-    <string name="popup_info">PopupInfo</string>
-    <string name="popup_input">PopupInput</string>
-    <string name="popup_please_wait">PopupPleaseWait</string>
-    <string name="popup_progress">PopupProgress</string>
-    <string name="popup_sel_time_interval">PopupSelectTimeInterval</string>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
 
-    <string name="delete">Delete</string>
-    <string name="are_you_sure">Are you sure?</string>
-    <string name="android_is_cool">Android is cool</string>
-    <string name="err_file_not_found">FILE NOT FOUND</string>
-    <string name="type_something">Type something</string>
+    <gradient
+        android:angle="180"
+        android:startColor="#FFC2C2C2"
+        android:centerColor="#FF727272"
+        android:endColor="#FFA2A2A2"
+        android:centerX="0.8" />
 
-</resources>
+    <size
+        android:height="16dp"
+        android:width="26dp" />
+
+    <corners android:radius="2dp" />
+
+</shape>

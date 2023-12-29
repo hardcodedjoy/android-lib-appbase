@@ -49,6 +49,8 @@ SOFTWARE.
         <item name="android:buttonStyle">@style/Button</item>
         <item name="android:imageButtonStyle">@style/ImageButton</item>
         <item name="android:radioButtonStyle">@style/RadioButton</item>
+        <item name="android:progressBarStyle">@style/ProgressBar</item>
+        <item name="android:seekBarStyle">@style/SeekBar</item>
     </style>
 
     <style name="AppThemeDark" parent="android:Theme.DeviceDefault.Light.DarkActionBar">
@@ -74,6 +76,8 @@ SOFTWARE.
         <item name="android:buttonStyle">@style/Button</item>
         <item name="android:imageButtonStyle">@style/ImageButton</item>
         <item name="android:radioButtonStyle">@style/RadioButton</item>
+        <item name="android:progressBarStyle">@style/ProgressBar</item>
+        <item name="android:seekBarStyle">@style/SeekBar</item>
     </style>
 
     <style name="TextView" parent="android:Widget.TextView">
@@ -102,6 +106,31 @@ SOFTWARE.
     <style name="RadioButton" parent="android:Widget.CompoundButton.RadioButton">
         <item name="android:textSize">20sp</item>
         <item name="android:textColor">?android:colorForeground</item>
+    </style>
+
+    <style name="ProgressBar" parent="android:Widget.ProgressBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_bar</item>
+        <item name="android:indeterminateDrawable">@drawable/progress_bar</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:maxHeight">20dp</item>
+        <item name="android:focusable">false</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+
+    <style name="SeekBar" parent="android:Widget.SeekBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:drawable">@drawable/progress_bar</item>
+        <item name="android:progressDrawable">@drawable/progress_bar</item>
+        <item name="android:indeterminateDrawable">@drawable/progress_bar</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:maxHeight">20dp</item>
+        <item name="android:thumb">@drawable/sb_thumb_horizontal</item>
+        <item name="android:thumbOffset">8dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
     </style>
 
 </resources>

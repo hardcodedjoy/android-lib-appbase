@@ -65,17 +65,9 @@ public class ThemeUtil {
         }
     }
 
-    static public int getColorBackground(Activity activity) {
+    static public int getColor(Activity activity, int androidRAttrColorId) {
         TypedValue typedValue = new TypedValue();
-        activity.getTheme().resolveAttribute(
-                android.R.attr.colorBackground, typedValue, true);
-        return typedValue.data;
-    }
-
-    static public int getColorForeground(Activity activity) {
-        TypedValue typedValue = new TypedValue();
-        activity.getTheme().resolveAttribute(
-                android.R.attr.colorForeground, typedValue, true);
+        activity.getTheme().resolveAttribute(androidRAttrColorId, typedValue, true);
         return typedValue.data;
     }
 }

@@ -29,12 +29,14 @@ package com.hardcodedjoy.appbase.contentview;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.LinearLayout;
 
 import com.hardcodedjoy.appbase.activity.ActivityResultTask;
 import com.hardcodedjoy.appbase.activity.ActivityUtil;
 import com.hardcodedjoy.appbase.activity.PermissionUtil;
 import com.hardcodedjoy.appbase.activity.SingleActivity;
+import com.hardcodedjoy.appbase.gui.ThemeUtil;
 import com.hardcodedjoy.appbase.popup.Popup;
 import com.hardcodedjoy.appbase.popup.PopupError;
 import com.hardcodedjoy.appbase.popup.PopupInfo;
@@ -149,4 +151,32 @@ public class ContentView extends LinearLayout {
         showInfo(getString(infoId), onCancel);
     }
     static public void showInfo(final int infoId) { showInfo(infoId, null); }
+
+    static public int getColor(int id) {
+        if(android.os.Build.VERSION.SDK_INT >= 23) {
+            return activity.getResources().getColor(id, null);
+        }
+        //noinspection deprecation
+        return activity.getResources().getColor(id);
+    }
+
+    static public int getThemeColor(int androidRAttrColorId) {
+        return ThemeUtil.getColor(activity, androidRAttrColorId);
+    }
+
+    // set background to color selected for a few ms, then unset, then run runnable
+    static public void colorThen(View view, int colorCode, Runnable next) {
+        colorThen(view, colorCode, 100, next);
+    }
+
+    static public void colorThen(View view, int colorCode, int delayMillis, Runnable next) {
+        view.setBackgroundColor(colorCode);
+        new Thread() {
+            @Override
+            public void run() {
+                try { Thread.sleep(delayMillis); } catch (Exception e) { /**/ }
+                runOnUiThread(next);
+            }
+        }.start();
+    }
 }
