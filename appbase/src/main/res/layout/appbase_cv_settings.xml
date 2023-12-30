@@ -94,17 +94,43 @@ SOFTWARE.
                     android:id="@+id/rb_theme_light"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/light" />
+                    android:text="light"
+                    tools:ignore="HardcodedText" />
                 <RadioButton
                     android:id="@+id/rb_theme_dark"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/dark" />
+                    android:text="dark"
+                    tools:ignore="HardcodedText" />
                 <RadioButton
                     android:id="@+id/rb_theme_system"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/system" />
+                    android:text="system"
+                    tools:ignore="HardcodedText" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_language" />
+
+            <RadioGroup
+                android:id="@+id/rg_app_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lang_default" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="en"
+                    tools:ignore="HardcodedText" />
             </RadioGroup>
 
         </LinearLayout>

@@ -23,29 +23,154 @@ SOFTWARE.
 
 -->
 
-<resources>
-    <string name="app_name">[appName]</string>
-    <string name="about">about</string>
-    <string name="settings">settings</string>
-    <string name="app_developed_by">App. developed by:</string>
-    <string name="dev_website">https://hardcodedjoy.com</string>
-    <string name="dev_instagram_page">\@hardcodedjoy</string>
-    <string name="dev_youtube_handle">\@hardcoded_joy</string>
-    <string name="dev_github_page">hardcodedjoy</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" tools:ignore="MissingTranslation">[appName]</string>
+
+    <string name="help">Help</string>
+    <string name="about">About</string>
+    <string name="settings">Settings</string>
+    <string name="back">Back</string>
     <string name="theme">Theme</string>
-    <string name="light">Light</string>
-    <string name="dark">Dark</string>
-    <string name="system">System</string>
-    <string name="privacy_policy">Privacy Policy</string>
-    <string name="app_uses">App uses open-source libraries:</string>
-    <string name="btn_add">+ add</string>
-    <string name="btn_cancel">Cancel</string>
-    <string name="btn_ok">OK</string>
+    <string name="app_language">App. language</string>
+    <string name="lang_default">default</string>
+
     <string name="error">Error</string>
     <string name="info">Info</string>
-    <string name="please_wait">Please wait…</string>
+    <string name="info_lowercase">info</string>
+    <string name="loading">Loading</string>
+    <string name="opening">Opening</string>
+    <string name="please_wait">Please wait</string>
+    <string name="processing">Processing</string>
+    <string name="share">Share</string>
+    <string name="share_lowercase">share</string>
+
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_browse">Browse</string>
+    <string name="btn_add">+ add</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="minimum">Min.</string>
+    <string name="maximum">Max.</string>
+
+    <string name="app_developed_by">App. developed by:</string>
+    <string name="dev_website" translatable="false">https://hardcodedjoy.com</string>
+    <string name="dev_instagram_page" translatable="false">\@hardcodedjoy</string>
+    <string name="dev_youtube_handle" translatable="false">\@hardcoded_joy</string>
+    <string name="dev_github_page" translatable="false">hardcodedjoy</string>
+
+    <string name="rate_this_app">Rate this App</string>
+    <string name="share_this_app">Share this App</string>
+    <string name="you_might_also_like">You might also like:</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="eula">End-User License Agreement</string>
+    <string name="non_commercial_use">for personal, non-commercial use only</string>
+    <string name="commercial_use">for personal and commercial use</string>
+    <string name="app_uses">App uses open-source libraries:</string>
+
+    <string name="app_website_label">App. website:</string>
+
     <string name="color_opacity">Opacity:</string>
     <string name="color_old">Old:</string>
     <string name="color_current">Current:</string>
     <string name="color_argb_code">ARGB Code:</string>
+
+    <string name="save_as">Save as</string>
+    <string name="preview">Preview</string>
+    <string name="select_input_folder">Select input folder</string>
+    <string name="select_output_folder">Select output folder</string>
+    <string name="select_folder">Select folder</string>
+    <string name="select_file">Select file</string>
+    <string name="open_file">Open file</string>
+    <string name="save_file">Save file</string>
+    <string name="save_file_as">Save file as</string>
+    <string name="new_folder">New Folder</string>
+    <string name="new_file">New File</string>
+    <string name="file">File</string>
+    <string name="folder">Folder</string>
+    <string name="already_exists">already exists</string>
+
+    <string name="permission_required">permission required</string>
+    <string name="permission_required_please_select_folder">Please select that folder in the next view.</string>
+    <string name="permission_granted">permission granted</string>
+    <string name="please_allow_in_app_info_permissions">Please allow permissions in App info -&gt; Permissions</string>
+
+    <string name="file_system_access">File System Access</string>
+    <string name="all_files_access">All files access</string>
+
+    <string name="rename_file">Rename file</string>
+    <string name="copy_file">Copy file</string>
+    <string name="file_copy">File copy</string>
+    <string name="move_file">Move file</string>
+    <string name="file_move">File move</string>
+    <string name="delete">Delete</string>
+    <string name="file_delete">File delete</string>
+    <string name="forever">forever</string>
+    <string name="this_cannot_be_undone">This cannot be undone</string>
+    <string name="compress">Compress</string>
+    <string name="extract">Extract</string>
+    <string name="file_compress">File compress</string>
+    <string name="file_extract">File extract</string>
+    <string name="overwrite">Overwrite</string>
+    <string name="skip">Skip</string>
+    <string name="search">Search</string>
+    <string name="results">Results</string>
+    <string name="size">Size</string>
+    <string name="content">Content</string>
+
+    <string name="rename">rename</string>
+    <string name="edit">edit</string>
+
+    <string name="unit_bytes">B</string>
+    <string name="unit_kilobytes">kB</string>
+    <string name="unit_megabytes">MB</string>
+    <string name="unit_gigabytes">GB</string>
+    <string name="unit_hertz">Hz</string>
+    <string name="unit_decibels">dB</string>
+    <string name="unit_seconds">s</string>
+    <string name="unit_milliseconds">ms</string>
+    <string name="unit_microseconds">µs</string>
+    <string name="unit_bit">bit</string>
+    <string name="unit_kilohertz">kHz</string>
+    <string name="unit_kilobits_per_second">kbit/s</string>
+
+    <string name="available">available</string>
+    <string name="dynamic">dynamic</string>
+    <string name="constant">constant</string>
+
+    <string name="item">item</string>
+    <string name="items_a">items</string>
+    <string name="items_ov">items</string>
+
+    <string name="channels">Channels</string>
+    <string name="mono">Mono</string>
+    <string name="stereo">Stereo</string>
+    <string name="gain">Gain</string>
+    <string name="track">Track</string>
+
+    <string name="err_out_of_memory">OUT OF MEMORY</string>
+    <string name="err_disk_full">DISK FULL</string>
+    <string name="err_cannot_read_input_file">CANNOT READ INPUT FILE</string>
+    <string name="err_cannot_write_output_file">CANNOT WRITE OUTPUT FILE</string>
+    <string name="err_rename_failed">RENAME FAILED</string>
+    <string name="err_no_files_to_copy">NO FILES TO COPY</string>
+    <string name="err_no_files_to_move">NO FILES TO MOVE</string>
+    <string name="err_file_name_is_null">FILE NAME == NULL</string>
+    <string name="err_already_exists">ALREADY EXISTS</string>
+    <string name="err_could_not_be_deleted_completely">COULD NOT BE DELETED COMPLETELY</string>
+    <string name="err_could_not_be_overwritten">COULD NOT BE OVERWRITTEN</string>
+    <string name="err_file_to_overwrite_is_not_a_folder_nor_file">FILE TO OVERWRITE IS NOT A FOLDER NOR FILE</string>
+    <string name="err_copy_failed">COPY FAILED</string>
+    <string name="err_move_failed">MOVE FAILED</string>
+    <string name="err_delete_failed">DELETE FAILED</string>
+    <string name="err_file_create_failed">FILE CREATE FAILED</string>
+    <string name="err_folder_create_failed">FOLDER CREATE FAILED</string>
+    <string name="err_unimplemented_for_multiple_files">UNIMPLEMENTED FOR MULTIPLE FILES</string>
+    <string name="err_no_files_to_compress">NO FILES TO COMPRESS</string>
+    <string name="err_no_files_to_extract">NO FILES TO EXTRACT</string>
+    <string name="err_dest_dir_is_null">DESTINATION DIR == NULL</string>
+    <string name="err_no_files_to_delete">NO FILES TO DELETE</string>
+    <string name="err_no_files_to_process">NO FILES TO PROCESS</string>
+    <string name="err_permissions_denied">PERMISSIONS DENIED</string>
+    <string name="err_unimplemented">UNIMPLEMENTED</string>
 </resources>

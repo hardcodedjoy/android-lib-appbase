@@ -1,0 +1,170 @@
+<!--
+MIT License
+
+Copyright © 2023 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="help">Aide</string>
+    <string name="about">À propos</string>
+    <string name="settings">Paramètres</string>
+    <string name="back">Retour</string>
+    <string name="theme">Thème</string>
+    <string name="app_language">Langue de l\'app.</string>
+    <string name="lang_default">défaut</string>
+
+    <string name="error">Erreur</string>
+    <string name="info">Info</string>
+    <string name="info_lowercase">info</string>
+    <string name="loading">Chargement</string>
+    <string name="opening">Ouverture</string>
+    <string name="please_wait">S\'il vous plaît, attendez</string>
+    <string name="processing">Traitement</string>
+    <string name="share">Partager</string>
+    <string name="share_lowercase">partager</string>
+
+    <string name="btn_cancel">Annuler</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_browse">Parcourir</string>
+    <string name="btn_add">+ ajouter</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="minimum">Min.</string>
+    <string name="maximum">Max.</string>
+
+    <string name="app_developed_by">App développé par:</string>
+
+    <string name="rate_this_app">Évaluer l\'application</string>
+    <string name="share_this_app">Partager l\'application</string>
+    <string name="you_might_also_like">Vous pourriez aussi aimer:</string>
+    <string name="privacy_policy">Politique de confidentialité</string>
+    <string name="eula">Accord de licence de l\'utilisateur final</string>
+    <string name="non_commercial_use">pour usage personnel et non commercial uniquement</string>
+    <string name="commercial_use">pour un usage personnel et commercial</string>
+    <string name="app_uses">L\'application utilise des bibliothèques open source:</string>
+
+    <string name="app_website_label">Site Web d\'application:</string>
+
+    <string name="color_opacity">Opacité:</string>
+    <string name="color_old">Précédente:</string>
+    <string name="color_current">Actuelle:</string>
+    <string name="color_argb_code">Code ARGB:</string>
+
+    <string name="save_as">Enregistrer sous</string>
+    <string name="preview">Prévisualiser</string>
+    <string name="select_input_folder">Sélectionnez le dossier d\'entrée</string>
+    <string name="select_output_folder">Sélectionnez le dossier de sortie</string>
+    <string name="select_folder">Choisir le dossier</string>
+    <string name="select_file">Choisir le fichier</string>
+    <string name="open_file">Ouvrir le fichier</string>
+    <string name="save_file">Enregistrer le fichier</string>
+    <string name="save_file_as">Enregistrer le fichier sous</string>
+    <string name="new_folder">Nouveau Dossier</string>
+    <string name="new_file">Nouveau Fichier</string>
+    <string name="file">Fichier</string>
+    <string name="folder">Dossier</string>
+    <string name="already_exists">existe déjà</string>
+
+    <string name="permission_required">autorisation requise</string>
+    <string name="permission_required_please_select_folder">Veuillez sélectionner ce dossier dans la vue suivante.</string>
+    <string name="permission_granted">permission accordée</string>
+    <string name="please_allow_in_app_info_permissions">Veuillez autoriser les autorisations dans les Informations sur l\'application -&gt; Autorisations</string>
+
+    <string name="file_system_access">Accès au système de fichiers</string>
+    <string name="all_files_access">Accès à tous fichiers</string>
+
+    <string name="rename_file">Renommer le fichier</string>
+    <string name="copy_file">Copier le fichier</string>
+    <string name="file_copy">Copie de fichier</string>
+    <string name="move_file">Déplacer le fichier</string>
+    <string name="file_move">Déplacement de fichier</string>
+    <string name="delete">Supprimer</string>
+    <string name="file_delete">Suppression de fichier</string>
+    <string name="forever">pour toujours</string>
+    <string name="this_cannot_be_undone">Ça ne peut pas être annulé</string>
+    <string name="compress">Compresse</string>
+    <string name="extract">Extrait</string>
+    <string name="file_compress">Compresser le fichier</string>
+    <string name="file_extract">Extrait de fichier</string>
+    <string name="overwrite">Écraser</string>
+    <string name="skip">Sauter</string>
+    <string name="search">Rechercher</string>
+    <string name="results">Résultats</string>
+    <string name="size">Dimension</string>
+    <string name="content">Contenu</string>
+
+    <string name="rename">renommer</string>
+    <string name="edit">editer</string>
+
+    <string name="unit_bytes">octets</string>
+    <string name="unit_kilobytes">Ko</string>
+    <string name="unit_megabytes">Mo</string>
+    <string name="unit_gigabytes">Go</string>
+    <string name="unit_hertz">Hz</string>
+    <string name="unit_decibels">dB</string>
+    <string name="unit_seconds">s</string>
+    <string name="unit_milliseconds">ms</string>
+    <string name="unit_microseconds">µs</string>
+    <string name="unit_bit">bit</string>
+    <string name="unit_kilohertz">kHz</string>
+    <string name="unit_kilobits_per_second">kbit/s</string>
+
+    <string name="available">disponible</string>
+    <string name="dynamic">dynamique</string>
+    <string name="constant">constant</string>
+
+    <string name="item">élément</string>
+    <string name="items_a">éléments</string>
+    <string name="items_ov">éléments</string>
+
+    <string name="channels">Canaux</string>
+    <string name="mono">Mono</string>
+    <string name="stereo">Stéréo</string>
+    <string name="gain">Gain</string>
+    <string name="track">Piste</string>
+
+    <string name="err_out_of_memory">MÉMOIRE INSUFFISANTE</string>
+    <string name="err_disk_full">DISQUE PLEIN</string>
+    <string name="err_cannot_read_input_file">IMPOSSIBLE DE LIRE LE FICHIER</string>
+    <string name="err_cannot_write_output_file">IMPOSSIBLE D\'ÉCRIRE LE FICHIER</string>
+    <string name="err_rename_failed">ÉCHEC DU RENOMMAGE</string>
+    <string name="err_no_files_to_copy">PAS DE FICHIERS À COPIER</string>
+    <string name="err_no_files_to_move">PAS DE FICHIERS À DÉPLACER</string>
+    <string name="err_file_name_is_null">NOM DU FICHIER == NULL</string>
+    <string name="err_already_exists">EXISTE DÉJÀ</string>
+    <string name="err_could_not_be_deleted_completely">N\'A PAS PU SUPPRIMER COMPLÈTEMENT</string>
+    <string name="err_could_not_be_overwritten">N\'A PAS PU ÉCRASER</string>
+    <string name="err_file_to_overwrite_is_not_a_folder_nor_file">LE FICHIER A ECRIRE N\'EST PAS UN DOSSIER NI UN FICHIER</string>
+    <string name="err_copy_failed">ÉCHEC DE LA COPIE</string>
+    <string name="err_move_failed">ÉCHEC DU DÉPLACEMENT</string>
+    <string name="err_delete_failed">ÉCHEC DE LA SUPPRESSION</string>
+    <string name="err_file_create_failed">ÉCHEC DE LA CRÉATION DE FICHIER</string>
+    <string name="err_folder_create_failed">ÉCHEC DE LA CRÉATION DU DOSSIER</string>
+    <string name="err_unimplemented_for_multiple_files">NON IMPLÉMENTÉ POUR PLUSIEURS FICHIERS</string>
+    <string name="err_no_files_to_compress">AUCUN FICHIER À COMPRESSER</string>
+    <string name="err_no_files_to_extract">AUCUN FICHIER À EXTRAIRE</string>
+    <string name="err_dest_dir_is_null">REPERTOIRE DESTINATION == NULL</string>
+    <string name="err_no_files_to_delete">AUCUN FICHIER À SUPPRIMER</string>
+    <string name="err_no_files_to_process">AUCUN FICHIER À TRAITER</string>
+    <string name="err_permissions_denied">AUTORISATIONS REFUSÉES</string>
+    <string name="err_unimplemented">NON IMPLÉMENTÉ</string>
+</resources>

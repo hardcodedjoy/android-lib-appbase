@@ -1,0 +1,170 @@
+<!--
+MIT License
+
+Copyright © 2023 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="help">Ajutor</string>
+    <string name="about">Despre</string>
+    <string name="settings">Setări</string>
+    <string name="back">Înapoi</string>
+    <string name="theme">Temă</string>
+    <string name="app_language">Limba aplicației</string>
+    <string name="lang_default">implicită</string>
+
+    <string name="error">Eroare</string>
+    <string name="info">Info</string>
+    <string name="info_lowercase">info</string>
+    <string name="loading">Se încarcă</string>
+    <string name="opening">Se deschide</string>
+    <string name="please_wait">Vă rugăm așteptați</string>
+    <string name="processing">Se procesează</string>
+    <string name="share">Distribuie</string>
+    <string name="share_lowercase">distribuie</string>
+
+    <string name="btn_cancel">Anulare</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_browse">Răsfoiește</string>
+    <string name="btn_add">+ adaugă</string>
+    <string name="yes">Da</string>
+    <string name="no">Nu</string>
+    <string name="minimum">Min.</string>
+    <string name="maximum">Max.</string>
+
+    <string name="app_developed_by">Aplicație dezvoltată de:</string>
+
+    <string name="rate_this_app">Evaluează această aplicație</string>
+    <string name="share_this_app">Distribuie această aplicație</string>
+    <string name="you_might_also_like">S-ar putea să vă placă și:</string>
+    <string name="privacy_policy">Politica de Confidențialitate</string>
+    <string name="eula">Acord de licență pentru utilizatorul final</string>
+    <string name="non_commercial_use">doar pentru uz personal, necomercial</string>
+    <string name="commercial_use">pentru uz personal și comercial</string>
+    <string name="app_uses">Aplicația folosește biblioteci open-source:</string>
+
+    <string name="app_website_label">Site-ul aplicației:</string>
+
+    <string name="color_opacity">Opacitate:</string>
+    <string name="color_old">Anterior:</string>
+    <string name="color_current">Curent:</string>
+    <string name="color_argb_code">Cod ARGB:</string>
+
+    <string name="save_as">Salvați ca</string>
+    <string name="preview">Previzualizare</string>
+    <string name="select_input_folder">Selectați folder-ul de intrare</string>
+    <string name="select_output_folder">Selectați folder-ul de ieșire</string>
+    <string name="select_folder">Alege folder</string>
+    <string name="select_file">Alege fișier</string>
+    <string name="open_file">Deschide fișier</string>
+    <string name="save_file">Salvează fișier</string>
+    <string name="save_file_as">Salvează fișier ca</string>
+    <string name="new_folder">Folder nou</string>
+    <string name="new_file">Fișier nou</string>
+    <string name="file">Fișier</string>
+    <string name="folder">Folder</string>
+    <string name="already_exists">deja există</string>
+
+    <string name="permission_required">permisiunea necesară</string>
+    <string name="permission_required_please_select_folder">Vă rugăm să selectați acel folder în următoarea vizualizare.</string>
+    <string name="permission_granted">permisiunea acordată</string>
+    <string name="please_allow_in_app_info_permissions">Vă rugăm să acordați permisiunile în Informații aplicație -&gt; Permisiuni</string>
+
+    <string name="file_system_access">Acces sistem fișiere</string>
+    <string name="all_files_access">Acces la toate fișierele</string>
+
+    <string name="rename_file">Redenumire fișier</string>
+    <string name="copy_file">Copiază fișier</string>
+    <string name="file_copy">Copiere fișier</string>
+    <string name="move_file">Mutare fișier</string>
+    <string name="file_move">Mutare fișier</string>
+    <string name="delete">Șterge</string>
+    <string name="file_delete">Ștergere fișier</string>
+    <string name="forever">pentru totdeauna</string>
+    <string name="this_cannot_be_undone">Această operație este ireversibilă</string>
+    <string name="compress">Comprimare</string>
+    <string name="extract">Extrage</string>
+    <string name="file_compress">Comprimare fișier</string>
+    <string name="file_extract">Extrage fișier</string>
+    <string name="overwrite">Suprascrie</string>
+    <string name="skip">Treci peste</string>
+    <string name="search">Caută</string>
+    <string name="results">Rezultate</string>
+    <string name="size">Dimensiune</string>
+    <string name="content">Conținut</string>
+
+    <string name="rename">redenumire</string>
+    <string name="edit">editare</string>
+
+    <string name="unit_bytes">B</string>
+    <string name="unit_kilobytes">kB</string>
+    <string name="unit_megabytes">MB</string>
+    <string name="unit_gigabytes">GB</string>
+    <string name="unit_hertz">Hz</string>
+    <string name="unit_decibels">dB</string>
+    <string name="unit_seconds">s</string>
+    <string name="unit_milliseconds">ms</string>
+    <string name="unit_microseconds">µs</string>
+    <string name="unit_bit">bit</string>
+    <string name="unit_kilohertz">kHz</string>
+    <string name="unit_kilobits_per_second">kbit/s</string>
+
+    <string name="available">disponibil</string>
+    <string name="dynamic">dinamică</string>
+    <string name="constant">constantă</string>
+
+    <string name="item">obiect</string>
+    <string name="items_a">obiecte</string>
+    <string name="items_ov">obiecte</string>
+
+    <string name="channels">Canale</string>
+    <string name="mono">Mono</string>
+    <string name="stereo">Stereo</string>
+    <string name="gain">Amplificare</string>
+    <string name="track">Track</string>
+
+    <string name="err_out_of_memory">MEMORIE INSUFICIENTĂ</string>
+    <string name="err_disk_full">LIPSĂ SPAȚIU STOCARE</string>
+    <string name="err_cannot_read_input_file">FIȘIERUL NU POATE FI CITIT</string>
+    <string name="err_cannot_write_output_file">NU SE POATE SCRIE ÎN FIȘIER</string>
+    <string name="err_rename_failed">REDNUMIRE EȘUATĂ</string>
+    <string name="err_no_files_to_copy">LIPSĂ FIȘIERE DE COPIAT</string>
+    <string name="err_no_files_to_move">LIPSĂ FIȘIERE DE MUTAT</string>
+    <string name="err_file_name_is_null">NUME FIȘIER == NULL</string>
+    <string name="err_already_exists">DEJA EXISTĂ</string>
+    <string name="err_could_not_be_deleted_completely">NU A PUTUT FI ȘTERS COMPLET</string>
+    <string name="err_could_not_be_overwritten">NU A PUTUT FI SUPRASCRIS</string>
+    <string name="err_file_to_overwrite_is_not_a_folder_nor_file">FIȘIERUL DE SUPRASCRIS NU ESTE FOLDER SAU FIȘIER</string>
+    <string name="err_copy_failed">COPIERE EȘUATĂ</string>
+    <string name="err_move_failed">MUTAREA EȘUATĂ</string>
+    <string name="err_delete_failed">ȘTERGEREA EȘUATĂ</string>
+    <string name="err_file_create_failed">CREAREA FIȘIERULUI A EȘUAT</string>
+    <string name="err_folder_create_failed">CREAREA FOLDER-ULUI A EȘUAT</string>
+    <string name="err_unimplemented_for_multiple_files">NEIMPLEMENTAT PENTRU FIȘIERE MULTIPLE</string>
+    <string name="err_no_files_to_compress">LIPSĂ FIȘIERE DE COMPRIMAT</string>
+    <string name="err_no_files_to_extract">LIPSĂ FIȘIERE DE EXTRAS</string>
+    <string name="err_dest_dir_is_null">FOLDER DESTINAȚIE == NULL</string>
+    <string name="err_no_files_to_delete">LIPSĂ FIȘIERE DE ȘTERS</string>
+    <string name="err_no_files_to_process">LIPSĂ FIȘIERE DE PROCESAT</string>
+    <string name="err_permissions_denied">LIPSĂ PERMISIUNI</string>
+    <string name="err_unimplemented">NEIMPLEMENTAT</string>
+</resources>

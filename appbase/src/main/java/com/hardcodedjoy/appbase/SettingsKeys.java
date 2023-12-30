@@ -24,19 +24,8 @@ SOFTWARE.
 
 */
 
-package com.hardcodedjoy.dev.appbase;
+package com.hardcodedjoy.appbase;
 
-import com.hardcodedjoy.appbase.LanguageUtil;
-import com.hardcodedjoy.appbase.activity.SingleActivity;
-import com.hardcodedjoy.appbase.contentview.CvAboutBase;
-import com.hardcodedjoy.appbase.contentview.CvTM;
-
-public class MainActivity extends SingleActivity {
-    static {
-        setInitialCvClass(CvStartScreen.class);
-        setSettingsClass(Settings.class);
-        CvTM.setSettingsCvClass(CvSettings.class);
-        CvAboutBase.setAppVersion(BuildConfig.VERSION_NAME, BuildConfig.TIMESTAMP);
-        LanguageUtil.setAvailableAppLanguages(new String[]{ "en", "fr", "ro", "ru" });
-    }
+public class SettingsKeys {
+    static public final String appLanguageCode = "appLanguageCode";
 }

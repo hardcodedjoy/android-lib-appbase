@@ -31,6 +31,7 @@ import android.content.res.ColorStateList;
 import android.graphics.PorterDuff;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -77,7 +78,8 @@ public class PopupChoose extends Popup {
 
         llOptions.removeAllViews();
 
-        LinearLayout llOption;
+        View vOption;
+        Button button;
         int n = options.size();
         Option option;
         int iconSize;
@@ -87,17 +89,17 @@ public class PopupChoose extends Popup {
         for(int i=0; i<n; i++) {
             option = options.elementAt(i);
             inflater.inflate(R.layout.appbase_popup_ci_opt_ic, llOptions);
-            llOption = (LinearLayout) llOptions.getChildAt(i);
-            llOption.setId(i);
-            llOption.setBackgroundColor(option.getBackgroundColor());
-            TextView tvText = llOption.findViewById(R.id.tv_text);
+            vOption = llOptions.getChildAt(i);
+            button = vOption.findViewById(R.id.btn_option);
+            button.setId(i);
+            TextView tvText = vOption.findViewById(R.id.tv_text);
             if(option.getName() != null) {
                 tvText.setText(option.getName());
             } else if(option.getNameId() != 0) {
                 tvText.setText(option.getNameId());
             }
-            smallerLongLines(llOption);
-            ImageView ivIcon = llOption.findViewById(R.id.iv_icon);
+            smallerLongLines(vOption);
+            ImageView ivIcon = vOption.findViewById(R.id.iv_icon);
 
             if(option.getIconBitmap() != null) {
                 ivIcon.setImageBitmap(option.getIconBitmap());
@@ -126,7 +128,7 @@ public class PopupChoose extends Popup {
                 }
             }
 
-            llOption.setOnClickListener(ocl);
+            button.setOnClickListener(ocl);
         }
 
         btnAdd.setOnClickListener(ocl);
@@ -139,17 +141,11 @@ public class PopupChoose extends Popup {
     @Override
     void oclOnClick(View view) {
 
-        if(view.getParent() == llOptions) { // option clicked
-            LinearLayout llOption = (LinearLayout)view;
-            int color = ContentView.getThemeColor(android.R.attr.colorFocusedHighlight);
-
-            ContentView.colorThen(llOption, color, () -> {
-                int i = llOption.getId();
-                //TextView tvText = llOption.findViewById(R.id.tv_text);
-                ContentView.removePopUp(PopupChoose.this); // dismiss
-                options.elementAt(i).run();
-                onAfterOptionExecuted();
-            });
+        if(view.getParent().getParent() == llOptions) { // option clicked
+            int i = view.getId();
+            ContentView.removePopUp(PopupChoose.this); // dismiss
+            options.elementAt(i).run();
+            onAfterOptionExecuted();
             return;
         }
 
@@ -174,9 +170,9 @@ public class PopupChoose extends Popup {
         return this;
     }
 
-    static private void smallerLongLines(LinearLayout llOption) {
+    static private void smallerLongLines(View vOption) {
 
-        TextView tvText = llOption.findViewById(R.id.tv_text);
+        TextView tvText = vOption.findViewById(R.id.tv_text);
 
         String text = tvText.getText().toString();
 
@@ -186,7 +182,7 @@ public class PopupChoose extends Popup {
         String text1 = text.substring(0, a);
         String text2 = text.substring(a+1);
         tvText.setText(text1);
-        TextView tvMessage2 = new TextView(llOption.getContext());
+        TextView tvMessage2 = new TextView(vOption.getContext());
         tvMessage2.setText(text2);
         //if(text2.length() > 20) {
             tvMessage2.setTextSize(15);

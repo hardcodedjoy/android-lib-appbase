@@ -28,10 +28,13 @@ package com.hardcodedjoy.appbase.contentview;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.LinearLayout;
 
+import com.hardcodedjoy.appbase.LanguageUtil;
+import com.hardcodedjoy.appbase.Settings;
 import com.hardcodedjoy.appbase.activity.ActivityResultTask;
 import com.hardcodedjoy.appbase.activity.ActivityUtil;
 import com.hardcodedjoy.appbase.activity.PermissionUtil;
@@ -40,6 +43,8 @@ import com.hardcodedjoy.appbase.gui.ThemeUtil;
 import com.hardcodedjoy.appbase.popup.Popup;
 import com.hardcodedjoy.appbase.popup.PopupError;
 import com.hardcodedjoy.appbase.popup.PopupInfo;
+
+import java.util.Locale;
 
 @SuppressLint("ViewConstructor")
 public class ContentView extends LinearLayout {
@@ -57,6 +62,7 @@ public class ContentView extends LinearLayout {
         ContentView.activity = activity;
         ContentView.inflater = activity.getLayoutInflater();
         ContentView.settings = activity.getSettings();
+        setAppLanguage(((Settings)settings).getAppLanguageCode());
     }
     static public SingleActivity getActivity() { return activity; }
     static public LayoutInflater getInflater() { return inflater; }
@@ -91,8 +97,6 @@ public class ContentView extends LinearLayout {
         cvPrevious.show();
         return true; // consumed
     }
-
-
 
 
 
@@ -152,6 +156,7 @@ public class ContentView extends LinearLayout {
     }
     static public void showInfo(final int infoId) { showInfo(infoId, null); }
 
+    @SuppressWarnings("unused")
     static public int getColor(int id) {
         if(android.os.Build.VERSION.SDK_INT >= 23) {
             return activity.getResources().getColor(id, null);
@@ -164,19 +169,14 @@ public class ContentView extends LinearLayout {
         return ThemeUtil.getColor(activity, androidRAttrColorId);
     }
 
-    // set background to color selected for a few ms, then unset, then run runnable
-    static public void colorThen(View view, int colorCode, Runnable next) {
-        colorThen(view, colorCode, 100, next);
-    }
-
-    static public void colorThen(View view, int colorCode, int delayMillis, Runnable next) {
-        view.setBackgroundColor(colorCode);
-        new Thread() {
-            @Override
-            public void run() {
-                try { Thread.sleep(delayMillis); } catch (Exception e) { /**/ }
-                runOnUiThread(next);
-            }
-        }.start();
+    static public void setAppLanguage(String languageCode) {
+        languageCode = LanguageUtil.getAvailableLanguageCode(languageCode);
+        // languageCode is available
+        Locale locale = new Locale(languageCode);
+        Locale.setDefault(locale);
+        Resources resources = activity.getResources();
+        Configuration config = resources.getConfiguration();
+        config.setLocale(locale);
+        resources.updateConfiguration(config, resources.getDisplayMetrics());
     }
 }

@@ -1,0 +1,170 @@
+<!--
+MIT License
+
+Copyright © 2023 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="help">Помощь</string>
+    <string name="about">О приложении</string>
+    <string name="settings">Настройки</string>
+    <string name="back">Назад</string>
+    <string name="theme">Тема</string>
+    <string name="app_language">Язык приложения</string>
+    <string name="lang_default">по умолчанию</string>
+
+    <string name="error">Ошибка</string>
+    <string name="info">Информация</string>
+    <string name="info_lowercase">информация</string>
+    <string name="loading">Загрузка</string>
+    <string name="opening">Открытие</string>
+    <string name="please_wait">Пожалуйста, подождите</string>
+    <string name="processing">Обработка</string>
+    <string name="share">Поделиться</string>
+    <string name="share_lowercase">поделиться</string>
+
+    <string name="btn_cancel">Отмена</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_browse">Просмотр</string>
+    <string name="btn_add">+ добавить</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="minimum">Мин.</string>
+    <string name="maximum">Макс.</string>
+
+    <string name="app_developed_by">Приложение разработано:</string>
+
+    <string name="rate_this_app">Оценить Приложение</string>
+    <string name="share_this_app">Поделиться Приложением</string>
+    <string name="you_might_also_like">Вам также может понравиться:</string>
+    <string name="privacy_policy">Политика конфиденциальности</string>
+    <string name="eula">Лицензионное соглашение с конечным пользователем</string>
+    <string name="non_commercial_use">только для личного некоммерческого использования</string>
+    <string name="commercial_use">для личного и коммерческого использования</string>
+    <string name="app_uses">В приложении используются библиотеки с открытым кодом:</string>
+
+    <string name="app_website_label">Веб-сайт приложения:</string>
+
+    <string name="color_opacity">Непрозр.:</string>
+    <string name="color_old">Пред.:</string>
+    <string name="color_current">Текущий:</string>
+    <string name="color_argb_code">ARGB-код:</string>
+
+    <string name="save_as">Сохранить как</string>
+    <string name="preview">Просмотр</string>
+    <string name="select_input_folder">Выберите входную папку</string>
+    <string name="select_output_folder">Выберите выходную папку</string>
+    <string name="select_folder">Выберите папку</string>
+    <string name="select_file">Выберите файл</string>
+    <string name="open_file">Открыть файл</string>
+    <string name="save_file">Сохранить файл</string>
+    <string name="save_file_as">Сохранить файл как</string>
+    <string name="new_folder">Новая папка</string>
+    <string name="new_file">Новый файл</string>
+    <string name="file">Файл</string>
+    <string name="folder">Папка</string>
+    <string name="already_exists">уже существует</string>
+
+    <string name="permission_required">требуется разрешение</string>
+    <string name="permission_required_please_select_folder">Пожалуйста, выберите эту папку в следующем представлении.</string>
+    <string name="permission_granted">разрешение получено</string>
+    <string name="please_allow_in_app_info_permissions">Предоставьте разрешения в Информации о приложении -&gt; Разрешения</string>
+
+    <string name="file_system_access">Доступ к файловой системе</string>
+    <string name="all_files_access">Доступ ко всем файлам</string>
+
+    <string name="rename_file">Переименовать файл</string>
+    <string name="copy_file">Скопировать файл</string>
+    <string name="file_copy">Копия файла</string>
+    <string name="move_file">Переместить файл</string>
+    <string name="file_move">Перемещение файла</string>
+    <string name="delete">Удалить</string>
+    <string name="file_delete">Удаление файла</string>
+    <string name="forever">навсегда</string>
+    <string name="this_cannot_be_undone">Это нельзя отменить</string>
+    <string name="compress">Сжать</string>
+    <string name="extract">Извлекать</string>
+    <string name="file_compress">Сжать файл</string>
+    <string name="file_extract">Извлечение файла</string>
+    <string name="overwrite">Перезаписать</string>
+    <string name="skip">Пропуск</string>
+    <string name="search">Поиск</string>
+    <string name="results">Результаты</string>
+    <string name="size">Размер</string>
+    <string name="content">Содержание</string>
+
+    <string name="rename">переименовать</string>
+    <string name="edit">редактировать</string>
+
+    <string name="unit_bytes">Б</string>
+    <string name="unit_kilobytes">КБ</string>
+    <string name="unit_megabytes">МБ</string>
+    <string name="unit_gigabytes">ГБ</string>
+    <string name="unit_hertz">Гц</string>
+    <string name="unit_decibels">дБ</string>
+    <string name="unit_seconds">с</string>
+    <string name="unit_milliseconds">мс</string>
+    <string name="unit_microseconds">мкс</string>
+    <string name="unit_bit">бит</string>
+    <string name="unit_kilohertz">кГц</string>
+    <string name="unit_kilobits_per_second">кбит/с</string>
+
+    <string name="available">доступно</string>
+    <string name="dynamic">динамическое</string>
+    <string name="constant">постоянное</string>
+
+    <string name="item">объект</string>
+    <string name="items_a">объекта</string>
+    <string name="items_ov">объектов</string>
+
+    <string name="channels">Каналы</string>
+    <string name="mono">Моно</string>
+    <string name="stereo">Стерео</string>
+    <string name="gain">Усиление</string>
+    <string name="track">Трек</string>
+
+    <string name="err_out_of_memory">НЕДОСТАТОЧНО ПАМЯТИ</string>
+    <string name="err_disk_full">ДИСК ПОЛНЫЙ</string>
+    <string name="err_cannot_read_input_file">НЕВОЗМОЖНО ПРОЧИТАТЬ ВХОДНОЙ ФАЙЛ</string>
+    <string name="err_cannot_write_output_file">НЕВОЗМОЖНО НАПИСАТЬ ВЫХОДНОЙ ФАЙЛ</string>
+    <string name="err_rename_failed">НЕ УДАЛОСЬ ПЕРЕИМЕНОВАТЬ</string>
+    <string name="err_no_files_to_copy">НЕТ ФАЙЛОВ ДЛЯ КОПИРОВАНИЯ</string>
+    <string name="err_no_files_to_move">НЕТ ФАЙЛОВ ДЛЯ ПЕРЕМЕЩЕНИЯ</string>
+    <string name="err_file_name_is_null">ИМЯ ФАЙЛА == NULL</string>
+    <string name="err_already_exists">УЖЕ СУЩЕСТВУЕТ</string>
+    <string name="err_could_not_be_deleted_completely">НЕ УДАЛОСЬ ПОЛНОСТЬЮ УДАЛИТЬ</string>
+    <string name="err_could_not_be_overwritten">НЕ УДАЛОСЬ ПЕРЕЗАПИСАТЬ</string>
+    <string name="err_file_to_overwrite_is_not_a_folder_nor_file">ФАЙЛ ДЛЯ ПЕРЕЗАПИСИ НЕ ЯВЛЯЕТСЯ ПАПКОЙ ИЛИ ФАЙЛОМ</string>
+    <string name="err_copy_failed">КОПИРОВАНИЕ НЕ УДАЛОСЬ</string>
+    <string name="err_move_failed">ПЕРЕМЕЩЕНИЕ НЕ УДАЛОСЬ</string>
+    <string name="err_delete_failed">УДАЛИТЬ НЕ УДАЛОСЬ</string>
+    <string name="err_file_create_failed">ОШИБКА СОЗДАНИЯ ФАЙЛА</string>
+    <string name="err_folder_create_failed">СОЗДАНИЕ ПАПКИ НЕ УДАЛОСЬ</string>
+    <string name="err_unimplemented_for_multiple_files">НЕРЕАЛИЗОВАНО ДЛЯ НЕСКОЛЬКИХ ФАЙЛОВ</string>
+    <string name="err_no_files_to_compress">НЕТ ФАЙЛОВ ДЛЯ СЖАТИЯ</string>
+    <string name="err_no_files_to_extract">НЕТ ФАЙЛОВ ДЛЯ ИЗВЛЕЧЕНИЯ</string>
+    <string name="err_dest_dir_is_null">ПАПКА НАЗНАЧЕНИЯ == NULL</string>
+    <string name="err_no_files_to_delete">НЕТ ФАЙЛОВ ДЛЯ УДАЛЕНИЯ</string>
+    <string name="err_no_files_to_process">НЕТ ФАЙЛОВ ДЛЯ ОБРАБОТКИ</string>
+    <string name="err_permissions_denied">РАЗРЕШЕНИЯ ОТКАЗАНЫ</string>
+    <string name="err_unimplemented">НЕРЕАЛИЗОВАНО</string>
+</resources>

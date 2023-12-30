@@ -66,9 +66,6 @@ public class Option {
         this.executor = executor;
     }
 
-    public void setBackgroundColor(int color) { backgroundColor = color; }
-    public int getBackgroundColor() { return backgroundColor; }
-
     public int getIconId() { return iconId; }
     public Bitmap getIconBitmap() { return iconBitmap; }
     public Drawable getIconDrawable() { return iconDrawable; }

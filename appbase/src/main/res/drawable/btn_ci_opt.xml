@@ -1,5 +1,5 @@
-/*
-
+<?xml version="1.0" encoding="utf-8"?>
+<!--
 MIT License
 
 Copyright © 2023 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
@@ -22,21 +22,31 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-*/
+-->
 
-package com.hardcodedjoy.dev.appbase;
-
-import com.hardcodedjoy.appbase.LanguageUtil;
-import com.hardcodedjoy.appbase.activity.SingleActivity;
-import com.hardcodedjoy.appbase.contentview.CvAboutBase;
-import com.hardcodedjoy.appbase.contentview.CvTM;
-
-public class MainActivity extends SingleActivity {
-    static {
-        setInitialCvClass(CvStartScreen.class);
-        setSettingsClass(Settings.class);
-        CvTM.setSettingsCvClass(CvSettings.class);
-        CvAboutBase.setAppVersion(BuildConfig.VERSION_NAME, BuildConfig.TIMESTAMP);
-        LanguageUtil.setAvailableAppLanguages(new String[]{ "en", "fr", "ro", "ru" });
-    }
-}
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_enabled="true"
+        android:state_pressed="false"
+        android:state_focused="false"
+        android:drawable="@drawable/btn_ci_opt_normal"/>
+    <item
+        android:state_enabled="false"
+        android:state_pressed="false"
+        android:state_focused="false"
+        android:drawable="@drawable/btn_ci_opt_disabled"/>
+    <item
+        android:state_enabled="true"
+        android:state_pressed="true"
+        android:drawable="@drawable/btn_ci_opt_pressed"/>
+    <item
+        android:state_enabled="true"
+        android:state_pressed="false"
+        android:state_focused="true"
+        android:drawable="@drawable/btn_ci_opt_focused"/>
+    <item
+        android:state_enabled="false"
+        android:state_pressed="false"
+        android:state_focused="true"
+        android:drawable="@drawable/btn_ci_opt_disabled_focused"/>
+</selector>

@@ -34,10 +34,12 @@ import com.hardcodedjoy.appbase.gui.ThemeUtil;
 public class Settings { // to be extended by specific app settings
 
     static private final String THEME_DEFAULT = ThemeUtil.SYSTEM;
+    static private final String APP_LANGUAGE_CODE_DEFAULT = null;
 
     private SharedPreferences sp;
 
     private String theme;
+    private String appLanguageCode;
 
     public void setSharedPreferences(SharedPreferences sp) { this.sp = sp; }
 
@@ -47,9 +49,14 @@ public class Settings { // to be extended by specific app settings
     public void setTheme(String theme) { this.theme = theme; }
     public String getTheme() { return theme; }
 
+    public void setAppLanguageCode(String lang) { this.appLanguageCode = lang; }
+    public String getAppLanguageCode() { return appLanguageCode; }
+
+
 
     final public void onLoad() {
         setTheme(sp.getString(ThemeUtil.KEY_THEME, THEME_DEFAULT));
+        setAppLanguageCode(sp.getString(SettingsKeys.appLanguageCode, APP_LANGUAGE_CODE_DEFAULT));
         onLoad(sp);
     }
 
@@ -64,6 +71,7 @@ public class Settings { // to be extended by specific app settings
         SharedPreferences.Editor editor = sp.edit();
 
         editor.putString(ThemeUtil.KEY_THEME, getTheme());
+        editor.putString(SettingsKeys.appLanguageCode, getAppLanguageCode());
         onSave(editor);
 
         editor.commit();

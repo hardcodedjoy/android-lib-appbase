@@ -32,6 +32,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.hardcodedjoy.appbase.LanguageUtil;
 import com.hardcodedjoy.appbase.R;
 import com.hardcodedjoy.appbase.Settings;
 import com.hardcodedjoy.appbase.gui.GuiLinker;
@@ -47,8 +48,10 @@ public class CvSettingsBase extends ContentView {
         removeAllViews();
         inflate(R.layout.appbase_cv_settings);
 
-        RadioGroup rgTheme = findViewById(R.id.rg_theme);
+        RadioGroup rg;
         RadioButton rb;
+
+        rg = findViewById(R.id.rg_theme);
 
         rb = findViewById(R.id.rb_theme_light);
         rb.setText(ThemeUtil.LIGHT);
@@ -57,7 +60,7 @@ public class CvSettingsBase extends ContentView {
         rb = findViewById(R.id.rb_theme_system);
         rb.setText(ThemeUtil.SYSTEM);
 
-        GuiLinker.link(rgTheme, new SetGetter() {
+        GuiLinker.link(rg, new SetGetter() {
             @Override
             public void set(String value) {
                 ((Settings) settings).setTheme(value);
@@ -68,6 +71,34 @@ public class CvSettingsBase extends ContentView {
             @Override
             public String get() { return ((Settings) settings).getTheme(); }
         });
+
+
+        rg = findViewById(R.id.rg_app_language);
+        rg.removeAllViews();
+
+        for(String lang : LanguageUtil.getAvailableAppLanguages()) {
+            if(lang == null) { lang = getString(R.string.lang_default); }
+            rb = new RadioButton(getActivity());
+            rb.setText(lang);
+            rg.addView(rb);
+        }
+
+        GuiLinker.link(rg, new SetGetter() {
+            @Override
+            public void set(String value) {
+                if(LanguageUtil.languageUnavailable(value)) { value = null; }
+                ((Settings) settings).setAppLanguageCode(value);
+                ((Settings) settings).save();
+                setAppLanguage(value);
+                init(); // re-init to reflect new language
+            }
+            @Override
+            public String get() {
+                String lang = ((Settings) settings).getAppLanguageCode();
+                if(lang == null) { lang = getString(R.string.lang_default); }
+                return lang;
+            }
+        });
     }
 
     public void addSettings(View view) {
@@ -75,6 +106,7 @@ public class CvSettingsBase extends ContentView {
         llAdditionalSettings.addView(view);
     }
 
+    @SuppressWarnings("unused")
     public void addSettings(int layoutResId) {
         addSettings(inflate(getActivity(), layoutResId, null));
     }

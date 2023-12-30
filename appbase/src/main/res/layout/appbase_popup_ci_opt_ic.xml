@@ -23,38 +23,46 @@ SOFTWARE.
 
 -->
 
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:clickable="true"
-    android:focusable="true">
+    android:focusableInTouchMode="false"
+    android:focusable="false">
+
+    <Button
+        android:id="@+id/btn_option"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/btn_ci_opt" />
+
     <ImageView
         android:id="@+id/iv_icon"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_gravity="center"
+        android:layout_gravity="left|center_vertical"
         android:paddingTop="2.5dp"
         android:paddingBottom="2.5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
         android:src="@drawable/ic_image_view_default"
         android:clickable="false"
         android:focusableInTouchMode="false"
         android:focusable="false"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:paddingLeft="45dp"
         android:orientation="vertical"
         android:layout_gravity="center"
         android:clickable="false"
         android:focusableInTouchMode="false"
-        android:focusable="false">
+        android:focusable="false"
+        tools:ignore="RtlHardcoded,RtlSymmetry">
+
         <TextView
             android:id="@+id/tv_text"
             android:layout_width="match_parent"
@@ -66,4 +74,4 @@ SOFTWARE.
             android:textColor="?android:textColor"
             tools:ignore="HardcodedText" />
     </LinearLayout>
-</LinearLayout>
+</FrameLayout>
