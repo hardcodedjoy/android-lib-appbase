@@ -2,7 +2,7 @@
 
 MIT License
 
-Copyright © 2023 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -37,6 +37,8 @@ public class MainActivity extends SingleActivity {
         setSettingsClass(Settings.class);
         CvTM.setSettingsCvClass(CvSettings.class);
         CvAboutBase.setAppVersion(BuildConfig.VERSION_NAME, BuildConfig.TIMESTAMP);
-        LanguageUtil.setAvailableAppLanguages(new String[]{ "en", "fr", "ro", "ru" });
+        LanguageUtil.setAvailableAppLanguages(new String[]{
+                "en", "fr", "ro", "ru"
+        });
     }
 }

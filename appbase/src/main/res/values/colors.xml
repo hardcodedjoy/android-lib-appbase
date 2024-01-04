@@ -2,7 +2,7 @@
 <!--
 MIT License
 
-Copyright © 2023 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -24,9 +24,51 @@ SOFTWARE.
 
 -->
 
-<resources
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <color name="appBasePopupUnder">#A0808080</color>
-    <color name="appBaseButtonTextRed">#FFFF6060</color>
-    <color name="appBaseButtonTextGreen">#FF50C050</color>
+<resources>
+    <color name="grayAA0">#A0808080</color>
+    <color name="grayA60">#60808080</color>
+    <color name="grayA40">#40808080</color>
+
+    <color name="poppy">#FFDB3434</color>
+    <color name="bittersweet">#FFF75151</color>
+    <color name="forest">#FF159F15</color>
+    <color name="lime">#FF2DD52D</color>
+    <color name="iris">#FF4B4BDB</color>
+    <color name="neonBlue">#FF4363EF</color>
+    <color name="oilBlue">#FF5080EF</color>
+    <color name="cornflowerBlue">#FF70A0FF</color>
+
+
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="whiteA60">#60FFFFFF</color>
+    <color name="whiteA40">#40FFFFFF</color>
+    <color name="seaSalt">#FFE0F0F0</color>
+    <color name="seaSaltA60">#60E0F0F0</color>
+    <color name="seaSaltA40">#40E0F0F0</color>
+    <color name="seaSaltA30">#30E0F0F0</color>
+    <color name="platinum">#FFDDDDDD</color>
+    <color name="platinumA60">#60DDDDDD</color>
+    <color name="platinumA40">#40DDDDDD</color>
+    <color name="silver">#FFD0D0D0</color>
+    <color name="silverA60">#60D0D0D0</color>
+    <color name="silverA40">#40D0D0D0</color>
+    <color name="silverA30">#30D0D0D0</color>
+    
+    <color name="charcoal">#FF2C3C4C</color>
+    <color name="charcoalA60">#602C3C4C</color>
+    <color name="jet">#FF303030</color>
+    <color name="pennBlue">#FF202060</color>
+    <color name="pennBlueA60">#60202060</color>
+    <color name="pineGreen">#FF00897B</color>
+    
+    <color name="emerald">#FF00C381</color>
+    <color name="emeraldA80">#8000C381</color>
+    <color name="violetBlue">#FF3F4FBF</color>
+    <color name="violetBlueA80">#803F4FBF</color>
+    <color name="sandyBrown">#FFFFB080</color>
+    <color name="sandyBrownA80">#80FFB080</color>
+    <color name="fire">#FFFFAF30</color>
+    <color name="fireA80">#80FFAF30</color>
+
 </resources>

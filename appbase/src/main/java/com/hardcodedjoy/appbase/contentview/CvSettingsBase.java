@@ -2,7 +2,7 @@
 
 MIT License
 
-Copyright © 2023 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -28,19 +28,25 @@ package com.hardcodedjoy.appbase.contentview;
 
 import android.annotation.SuppressLint;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.hardcodedjoy.appbase.LanguageUtil;
 import com.hardcodedjoy.appbase.R;
 import com.hardcodedjoy.appbase.Settings;
-import com.hardcodedjoy.appbase.gui.GuiLinker;
-import com.hardcodedjoy.appbase.gui.SetGetter;
+import com.hardcodedjoy.appbase.SettingsKeys;
 import com.hardcodedjoy.appbase.gui.ThemeUtil;
+import com.hardcodedjoy.appbase.popup.Option;
+import com.hardcodedjoy.appbase.popup.PopupChoose;
+
+import java.util.Vector;
 
 @SuppressLint("ViewConstructor")
 public class CvSettingsBase extends ContentView {
+
+    private Settings settings;
 
     public CvSettingsBase() { init(); }
 
@@ -48,57 +54,55 @@ public class CvSettingsBase extends ContentView {
         removeAllViews();
         inflate(R.layout.appbase_cv_settings);
 
-        RadioGroup rg;
-        RadioButton rb;
+        settings = (Settings) ContentView.settings;
 
-        rg = findViewById(R.id.rg_theme);
+        TextView tvTheme = findViewById(R.id.tv_theme);
 
-        rb = findViewById(R.id.rb_theme_light);
-        rb.setText(ThemeUtil.LIGHT);
-        rb = findViewById(R.id.rb_theme_dark);
-        rb.setText(ThemeUtil.DARK);
-        rb = findViewById(R.id.rb_theme_system);
-        rb.setText(ThemeUtil.SYSTEM);
+        LinearLayout dd;
 
-        GuiLinker.link(rg, new SetGetter() {
-            @Override
-            public void set(String value) {
-                ((Settings) settings).setTheme(value);
-                ((Settings) settings).save();
-                ThemeUtil.set(getActivity(), ((Settings) settings).getTheme());
-                init(); // re-init to reflect new theme
-            }
-            @Override
-            public String get() { return ((Settings) settings).getTheme(); }
-        });
+        dd = findViewById(R.id.dd_theme_mode);
+        EditText etThemeMode = dd.findViewById(R.id.et_drop_down);
+        ImageButton btnThemeMode = dd.findViewById(R.id.btn_drop_down_expand);
 
+        dd = findViewById(R.id.dd_theme);
+        @SuppressLint("CutPasteId")
+        EditText etTheme = dd.findViewById(R.id.et_drop_down);
+        @SuppressLint("CutPasteId")
+        ImageButton btnTheme = dd.findViewById(R.id.btn_drop_down_expand);
 
-        rg = findViewById(R.id.rg_app_language);
-        rg.removeAllViews();
+        dd = findViewById(R.id.dd_app_language);
+        @SuppressLint("CutPasteId")
+        EditText etAppLanguage = dd.findViewById(R.id.et_drop_down);
+        @SuppressLint("CutPasteId")
+        ImageButton btnAppLanguage = dd.findViewById(R.id.btn_drop_down_expand);
 
-        for(String lang : LanguageUtil.getAvailableAppLanguages()) {
-            if(lang == null) { lang = getString(R.string.lang_default); }
-            rb = new RadioButton(getActivity());
-            rb.setText(lang);
-            rg.addView(rb);
+        etThemeMode.setText(keyToText(settings.getThemeMode()));
+        etThemeMode.setFocusable(false);
+        etThemeMode.setFocusableInTouchMode(false);
+        etThemeMode.setOnClickListener(view -> onBtnThemeMode());
+        btnThemeMode.setOnClickListener(view -> onBtnThemeMode());
+
+        boolean lightNotDark = ThemeUtil.themeModeLightNotDark(
+                getActivity(), settings.getThemeMode());
+
+        if(lightNotDark) {
+            tvTheme.setText(R.string.light_theme);
+            etTheme.setText(settings.getLightTheme());
+        } else {
+            tvTheme.setText(R.string.dark_theme );
+            etTheme.setText(settings.getDarkTheme());
         }
 
-        GuiLinker.link(rg, new SetGetter() {
-            @Override
-            public void set(String value) {
-                if(LanguageUtil.languageUnavailable(value)) { value = null; }
-                ((Settings) settings).setAppLanguageCode(value);
-                ((Settings) settings).save();
-                setAppLanguage(value);
-                init(); // re-init to reflect new language
-            }
-            @Override
-            public String get() {
-                String lang = ((Settings) settings).getAppLanguageCode();
-                if(lang == null) { lang = getString(R.string.lang_default); }
-                return lang;
-            }
-        });
+        etTheme.setFocusable(false);
+        etTheme.setFocusableInTouchMode(false);
+        etTheme.setOnClickListener(view -> onBtnTheme());
+        btnTheme.setOnClickListener(view -> onBtnTheme());
+
+        etAppLanguage.setText(keyToText(settings.getAppLanguageCode()));
+        etAppLanguage.setFocusable(false);
+        etAppLanguage.setFocusableInTouchMode(false);
+        etAppLanguage.setOnClickListener(view -> onBtnAppLanguage());
+        btnAppLanguage.setOnClickListener(view -> onBtnAppLanguage());
     }
 
     public void addSettings(View view) {
@@ -109,6 +113,100 @@ public class CvSettingsBase extends ContentView {
     @SuppressWarnings("unused")
     public void addSettings(int layoutResId) {
         addSettings(inflate(getActivity(), layoutResId, null));
+    }
+
+    static private String keyToText(String key) {
+        switch (key) {
+            case SettingsKeys.themeModeDefault: return getString(R.string.theme_mode_default);
+            case SettingsKeys.themeModeLight: return getString(R.string.theme_mode_light);
+            case SettingsKeys.themeModeDark: return getString(R.string.theme_mode_dark);
+            case SettingsKeys.appLanguageCodeDefault: return getString(R.string.lang_default);
+            default: return key;
+        }
+    }
+
+    private void onBtnThemeMode() {
+        String title = getString(R.string.theme_mode);
+        String currentThemeMode = settings.getThemeMode();
+        Vector<Option> op = new Vector<>();
+        String[] themeModes = new String[] {
+                SettingsKeys.themeModeDefault,
+                SettingsKeys.themeModeLight,
+                SettingsKeys.themeModeDark
+        };
+        for(String themeMode : themeModes) {
+            Option option = new Option(keyToText(themeMode), () -> onThemeModeSelected(themeMode));
+            if(themeMode.equals(currentThemeMode)) { option.setSelected(); }
+            op.add(option);
+        }
+        PopupChoose popupChoose = new PopupChoose(title, null, op);
+        popupChoose.enableDismissByOutsideClick();
+        popupChoose.show();
+    }
+
+    private void onThemeModeSelected(String themeMode) {
+        settings.setThemeMode(themeMode);
+        settings.save();
+        // settings.getTheme needs activity to get the day / night mode of android settings
+        ThemeUtil.setTheme(getActivity(), settings.getTheme(getActivity()));
+        init(); // re-init to reflect new theme
+    }
+
+    private void onBtnTheme() {
+        String title;
+        String currentThemeName;
+        boolean lightNotDark = ThemeUtil.themeModeLightNotDark(
+                getActivity(), settings.getThemeMode());
+        if(lightNotDark) {
+            title = getString(R.string.light_theme);
+            currentThemeName = settings.getLightTheme();
+        } else {
+            title = getString(R.string.dark_theme);
+            currentThemeName = settings.getDarkTheme();
+        }
+        Vector<Option> op = new Vector<>();
+        String[] themes = ThemeUtil.getThemes(getActivity(), lightNotDark);
+
+        for(String themeName : themes) {
+            Option option = new Option(themeName, () -> onThemeSelected(lightNotDark, themeName));
+            if(themeName.equals(currentThemeName)) { option.setSelected(); }
+            op.add(option);
+        }
+        PopupChoose popupChoose = new PopupChoose(title, null, op);
+        popupChoose.enableDismissByOutsideClick();
+        popupChoose.show();
+    }
+
+    private void onThemeSelected(boolean lightNotDark, String themeName) {
+        if(lightNotDark) { settings.setLightTheme(themeName); }
+        else             { settings.setDarkTheme(themeName); }
+        // settings.getTheme needs activity to get the day / night mode of android settings
+        ThemeUtil.setTheme(getActivity(), settings.getTheme(getActivity()));
+        init(); // re-init to reflect new theme
+    }
+
+    private void onBtnAppLanguage() {
+        String title = getString(R.string.app_language);
+        Vector<Option> op = new Vector<>();
+        String[] languages = LanguageUtil.getAvailableAppLanguages();
+        String currentLangCode = settings.getAppLanguageCode();
+        for(String langCode : languages) {
+            String text = keyToText(langCode);
+            Option option = new Option(text, () -> onAppLanguageSelected(langCode));
+            if(langCode.equals(currentLangCode)) { option.setSelected(); }
+            op.add(option);
+        }
+        PopupChoose popupChoose = new PopupChoose(title, null, op);
+        popupChoose.enableDismissByOutsideClick();
+        popupChoose.show();
+    }
+
+    private void onAppLanguageSelected(String langCode) {
+        settings.setAppLanguageCode(langCode);
+        settings.save();
+        langCode = settings.getAppLanguageCode();
+        setAppLanguage(langCode);
+        init(); // re-init to reflect new language
     }
 
     @Override

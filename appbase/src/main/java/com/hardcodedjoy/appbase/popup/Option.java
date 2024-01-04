@@ -2,7 +2,7 @@
 
 MIT License
 
-Copyright © 2023 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -41,6 +41,12 @@ public class Option {
     private int nameId;
     private String name;
     private final Runnable executor;
+    private boolean selected;
+
+    public Option(String name, Runnable executor) {
+        this.name = name;
+        this.executor = executor;
+    }
 
     public Option(int iconId, int nameId, Runnable executor) {
         this.iconId = iconId;
@@ -80,4 +86,7 @@ public class Option {
 
     public void setIconTintColor(int color) { this.iconTintColor = color; }
     public int getIconTintColor() { return iconTintColor; }
+
+    public void setSelected() { this.selected = true; }
+    public boolean isSelected() { return selected; }
 }

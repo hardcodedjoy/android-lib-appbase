@@ -2,7 +2,7 @@
 
 MIT License
 
-Copyright © 2023 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -27,5 +27,13 @@ SOFTWARE.
 package com.hardcodedjoy.appbase;
 
 public class SettingsKeys {
+    static public final String themeMode = "themeMode";
+    static public final String themeModeDefault = "themeModeDefault";
+    static public final String themeModeLight = "themeModeLight";
+    static public final String themeModeDark = "themeModeDark";
+    static public final String lightTheme = "lightTheme";
+    static public final String darkTheme = "darkTheme";
+
     static public final String appLanguageCode = "appLanguageCode";
+    static public final String appLanguageCodeDefault = "appLanguageCodeDefault";
 }

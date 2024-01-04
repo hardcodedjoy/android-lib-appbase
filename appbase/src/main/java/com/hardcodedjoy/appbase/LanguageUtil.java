@@ -2,7 +2,7 @@
 
 MIT License
 
-Copyright © 2023 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -36,7 +36,10 @@ public class LanguageUtil {
 
     static public void setAvailableAppLanguages(String[] languages) {
         availableAppLanguages = new String[languages.length + 1];
-        availableAppLanguages[0] = null; // default -> lang. that is set in Android settings
+
+        // default -> language that is set in Android settings:
+        availableAppLanguages[0] = SettingsKeys.appLanguageCodeDefault;
+
         System.arraycopy(languages, 0, availableAppLanguages, 1, languages.length);
     }
 
@@ -45,7 +48,6 @@ public class LanguageUtil {
 
     static public boolean languageUnavailable(String languageCode) {
         for(String lang : availableAppLanguages) {
-            if(lang == null) { continue; }
             if(lang.equals(languageCode)) { return false; }
         }
         return true;
@@ -62,7 +64,9 @@ public class LanguageUtil {
     }
 
     static public String getAvailableLanguageCode(String wanted) {
-        if(wanted == null) { wanted = getSystemLanguageCode(); }
+        if(wanted == null || SettingsKeys.appLanguageCodeDefault.equals(wanted)) {
+            wanted = getSystemLanguageCode();
+        }
 
         // some String or system setting
 

@@ -24,28 +24,32 @@ SOFTWARE.
 
 -->
 
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:left="5dp"
-        android:right="5dp"
-        android:bottom="5dp"
-        android:top="5dp">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-        <shape android:shape="rectangle" >
-            <corners
-                android:bottomLeftRadius="5dp"
-                android:bottomRightRadius="5dp"
-                android:topLeftRadius="5dp"
-                android:topRightRadius="5dp"/>
-            <padding
-                android:top="8dp"
-                android:bottom="8dp"
-                android:left="10dp"
-                android:right="10dp"/>
-            <stroke
-                android:width="2dp"
-                android:color="?android:colorForeground" />
-            <solid android:color="#00000000" />
-        </shape>
-    </item>
-</layer-list>
+    <EditText
+        android:id="@+id/et_drop_down"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:layout_marginRight="-5dp"
+        android:inputType="text|textNoSuggestions"
+        tools:ignore="Autofill,LabelFor,RtlHardcoded">
+    </EditText>
+
+    <ImageButton
+        android:id="@+id/btn_drop_down_expand"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_expand_more"
+        android:tint="?android:colorBackground"
+        android:layout_marginTop="1.25dp"
+        android:layout_marginBottom="1.25dp"
+        tools:ignore="ContentDescription">
+    </ImageButton>
+
+</LinearLayout>

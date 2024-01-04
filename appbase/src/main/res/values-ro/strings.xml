@@ -1,7 +1,7 @@
 <!--
 MIT License
 
-Copyright © 2023 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -28,7 +28,13 @@ SOFTWARE.
     <string name="about">Despre</string>
     <string name="settings">Setări</string>
     <string name="back">Înapoi</string>
+    <string name="theme_mode">Mod temă</string>
+    <string name="theme_mode_default">implicit</string>
+    <string name="theme_mode_light">luminos</string>
+    <string name="theme_mode_dark">întunecat</string>
     <string name="theme">Temă</string>
+    <string name="light_theme">Temă luminoasă</string>
+    <string name="dark_theme">Temă întunecată</string>
     <string name="app_language">Limba aplicației</string>
     <string name="lang_default">implicită</string>
 

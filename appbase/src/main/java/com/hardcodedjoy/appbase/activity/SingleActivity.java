@@ -2,7 +2,7 @@
 
 MIT License
 
-Copyright © 2023 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -38,7 +38,6 @@ import android.widget.FrameLayout;
 
 import com.hardcodedjoy.appbase.SoftKeyboardUtil;
 import com.hardcodedjoy.appbase.contentview.ContentView;
-import com.hardcodedjoy.appbase.R;
 import com.hardcodedjoy.appbase.Settings;
 import com.hardcodedjoy.appbase.gui.ThemeUtil;
 import com.hardcodedjoy.appbase.popup.Popup;
@@ -57,11 +56,6 @@ public class SingleActivity extends Activity {
     static private ContentView cvCurrent = null;
     static private final Vector<Popup> popups = new Vector<>();
 
-    static {
-        ThemeUtil.setResIdThemeLight(R.style.AppThemeLight);
-        ThemeUtil.setResIdThemeDark(R.style.AppThemeDark);
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,11 +70,21 @@ public class SingleActivity extends Activity {
             settings = new Settings();
         }
 
-        SharedPreferences sp = getSharedPreferences(getPackageName(), Context.MODE_PRIVATE);
-        ((Settings) settings).setSharedPreferences(sp);
-        ((Settings) settings).onLoad();
+        Settings settings = (Settings) this.settings;
 
-        ThemeUtil.set(this, ((Settings) settings).getTheme());
+        SharedPreferences sp = getSharedPreferences(getPackageName(), Context.MODE_PRIVATE);
+        settings.setSharedPreferences(sp);
+        settings.onLoad();
+
+        if(settings.getLightTheme() == null) {
+            settings.setLightTheme(ThemeUtil.getThemes(this, true)[0]);
+        }
+        if(settings.getDarkTheme() == null) {
+            settings.setDarkTheme(ThemeUtil.getThemes(this, false)[0]);
+        }
+
+        // settings.getTheme needs activity to get the day / night mode of android settings
+        ThemeUtil.setTheme(this, settings.getTheme(this));
     }
 
     @Override

@@ -2,7 +2,7 @@
 
 MIT License
 
-Copyright © 2023 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -28,46 +28,104 @@ package com.hardcodedjoy.appbase.gui;
 
 import android.app.Activity;
 import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.util.TypedValue;
+
+import com.hardcodedjoy.appbase.R;
+import com.hardcodedjoy.appbase.SettingsKeys;
+
+import java.lang.reflect.Field;
+import java.util.Vector;
 
 public class ThemeUtil {
 
-    static public final String KEY_THEME = "theme";
-    static public final String LIGHT = "light";
-    static public final String DARK = "dark";
-    static public final String SYSTEM = "system";
+    static public void setTheme(Activity activity, String themeName) {
+        Resources resources = activity.getResources();
+        String packageName = activity.getPackageName();
+        int id = resources.getIdentifier(themeName, "style", packageName);
+        activity.setTheme(id);
+    }
 
-    static private int resIdThemeDark;
-    static private int resIdThemeLight;
-
-    static public void setResIdThemeDark(int resId) { ThemeUtil.resIdThemeDark = resId; }
-    static public void setResIdThemeLight(int resId) { ThemeUtil.resIdThemeLight = resId; }
-
-    static public void set(Activity activity, String theme) {
-        switch (theme) {
-            case LIGHT:
-                activity.setTheme(resIdThemeLight);
-                break;
-            case DARK:
-                activity.setTheme(resIdThemeDark);
-                break;
-            case SYSTEM:
-                int systemUiMode = activity.getResources().getConfiguration().uiMode;
-                int nightMode = systemUiMode & Configuration.UI_MODE_NIGHT_MASK;
-                if(nightMode == Configuration.UI_MODE_NIGHT_YES) {
-                    activity.setTheme(resIdThemeDark);
-                } else {
-                    activity.setTheme(resIdThemeLight);
-                }
-                break;
-            default:
-                break;
-        }
+    static public boolean themeModeLightNotDark(Activity activity, String themeMode) {
+        if(SettingsKeys.themeModeLight.equals(themeMode)) { return true; }
+        if(SettingsKeys.themeModeDark.equals(themeMode)) { return false; }
+        int systemUiMode = activity.getResources().getConfiguration().uiMode;
+        int nightMode = systemUiMode & Configuration.UI_MODE_NIGHT_MASK;
+        return nightMode != Configuration.UI_MODE_NIGHT_YES;
     }
 
     static public int getColor(Activity activity, int androidRAttrColorId) {
         TypedValue typedValue = new TypedValue();
         activity.getTheme().resolveAttribute(androidRAttrColorId, typedValue, true);
         return typedValue.data;
+    }
+
+    static private int getColor(Activity activity, int themeId, int androidRAttrColorId) {
+        TypedArray a = activity.getTheme().obtainStyledAttributes(
+                themeId, new int[]{ androidRAttrColorId });
+        int col = a.getColor(0, 0);
+        a.recycle();
+        return col;
+    }
+
+    static private int grayLevel(int color) {
+        int b = color & 0xFF; color = color >> 8;
+        int g = color & 0xFF; color = color >> 8;
+        int r = color & 0xFF;
+        return (int)(((r+g+b) / 3.0f) + 0.5f);
+    }
+
+    static public String[] getThemes(Activity activity) { return getThemes(activity, 'a'); }
+
+    static public String[] getThemes(Activity activity, boolean lightNotDark) {
+        if(lightNotDark) { return getThemes(activity, 'l'); }
+        else             { return getThemes(activity, 'd'); }
+    }
+
+    static private String[] getThemes(Activity activity, char mode) { // mode = 'l' / 'd' / 'a'
+        Resources resources = activity.getResources();
+        String packageName = activity.getPackageName();
+
+        Class<?> c = R.style.class;
+        Field[] fields = c.getFields();
+        String themeName;
+
+        Vector<String> themes = new Vector<>();
+
+        for(Field field : fields) {
+            themeName = field.getName();
+            int id = resources.getIdentifier(themeName, "style", packageName);
+            if(isNotTheme(activity, id)) { continue; }
+
+            int colorBackground = getColor(activity, id, android.R.attr.colorBackground);
+            int colorForeground = getColor(activity, id, android.R.attr.colorForeground);
+            if(colorBackground == 0) { continue; }
+            if(colorForeground == 0) { continue; }
+
+            int bgGray = grayLevel(colorBackground);
+            int fgGray = grayLevel(colorForeground);
+
+            if( (bgGray < fgGray) && mode == 'l' ) { continue; } // dark theme unwanted
+            if( (bgGray > fgGray) && mode == 'd' ) { continue; } // light theme unwanted
+
+            // else -> wanted theme
+            themes.add(themeName);
+        }
+
+        return themes.toArray(new String[0]);
+    }
+
+    static private boolean isNotTheme(Activity activity, int themeId) {
+        Resources resources = activity.getResources();
+        TypedArray a = resources.obtainTypedArray(themeId);
+        boolean res = a.length() < 100;
+
+        // theme -> ~300
+        // something else -> ~15
+        // TODO: improve
+
+        a.recycle();
+        return res;
     }
 }

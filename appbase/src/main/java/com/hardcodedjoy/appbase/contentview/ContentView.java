@@ -2,7 +2,7 @@
 
 MIT License
 
-Copyright © 2023 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -62,7 +62,8 @@ public class ContentView extends LinearLayout {
         ContentView.activity = activity;
         ContentView.inflater = activity.getLayoutInflater();
         ContentView.settings = activity.getSettings();
-        setAppLanguage(((Settings)settings).getAppLanguageCode());
+        String langCode = ((Settings)settings).getAppLanguageCode();
+        setAppLanguage(langCode);
     }
     static public SingleActivity getActivity() { return activity; }
     static public LayoutInflater getInflater() { return inflater; }
@@ -87,6 +88,7 @@ public class ContentView extends LinearLayout {
 
     // to be overridden by apps that can be started by intents other than Intent.ACTION_MAIN
     // @NonNull intent, @NonNull intent.getAction()
+    @SuppressWarnings("unused")
     public void processIntent(Intent intent) {}
 
     public boolean onBackPressed() {
@@ -98,27 +100,29 @@ public class ContentView extends LinearLayout {
         return true; // consumed
     }
 
-
-
-
     static public String getString(int resId) { return getActivity().getString(resId); }
 
+    @SuppressWarnings("unused")
     static public void startActivityForResult(Class<?> c, ActivityResultTask onResultOK) {
         ActivityUtil.startActivityForResult(getActivity(), c, onResultOK);
     }
 
+    @SuppressWarnings("unused")
     static public void startActivityForResult(Class<?> c, Runnable onResultOK) {
         ActivityUtil.startActivityForResult(getActivity(), c, onResultOK);
     }
 
+    @SuppressWarnings("unused")
     static public void startActivityForResult(Intent intent, ActivityResultTask onResultOK) {
         ActivityUtil.startActivityForResult(getActivity(), intent, onResultOK);
     }
 
+    @SuppressWarnings("unused")
     static public void runWithPermissions(String[] permissions, Runnable onPermissionsGranted) {
         PermissionUtil.runWithPermissions(getActivity(), permissions, onPermissionsGranted);
     }
 
+    @SuppressWarnings("unused")
     static public void runWithPermission(String permission, Runnable onPermissionsGranted) {
         PermissionUtil.runWithPermission(getActivity(), permission, onPermissionsGranted);
     }
@@ -126,6 +130,8 @@ public class ContentView extends LinearLayout {
     static public void runOnUiThread(Runnable r) { activity.runOnUiThread(r); }
     static public void showPopUp(Popup popup) { activity.showPopup(popup); }
     static public void removePopUp(Popup popup) { activity.removePopup(popup); }
+
+    @SuppressWarnings("unused")
     static public boolean isShowingPopUp(Popup popup) { return activity.isShowingPopup(popup); }
 
 
@@ -136,6 +142,7 @@ public class ContentView extends LinearLayout {
         }.show());
     }
 
+    @SuppressWarnings("unused")
     static public void showError(String error) { showError(error, null); }
     static public void showError(int errorId, Runnable onCancel) {
         showError(getString(errorId), onCancel);

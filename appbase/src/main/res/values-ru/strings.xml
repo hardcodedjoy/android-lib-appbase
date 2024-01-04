@@ -1,7 +1,7 @@
 <!--
 MIT License
 
-Copyright © 2023 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -28,7 +28,13 @@ SOFTWARE.
     <string name="about">О приложении</string>
     <string name="settings">Настройки</string>
     <string name="back">Назад</string>
+    <string name="theme_mode">Режим темы</string>
+    <string name="theme_mode_default">по умолчанию</string>
+    <string name="theme_mode_light">светлый</string>
+    <string name="theme_mode_dark">темный</string>
     <string name="theme">Тема</string>
+    <string name="light_theme">Светлая тема</string>
+    <string name="dark_theme">Темная тема</string>
     <string name="app_language">Язык приложения</string>
     <string name="lang_default">по умолчанию</string>
 

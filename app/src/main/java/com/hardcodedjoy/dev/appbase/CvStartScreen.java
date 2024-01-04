@@ -2,7 +2,7 @@
 
 MIT License
 
-Copyright © 2023 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -44,6 +44,7 @@ public class CvStartScreen extends CvTMSLL {
         // add initialization code here (that must run only one time)
         Vector<MenuOption> ops = new Vector<>();
         ops.add(new MenuOption("popups", () -> new CvPopups().show()));
+        ops.add(new MenuOption("theme view", () -> new CvThemeView().show()));
         addMenuOptions(ops, 0);
     }
 

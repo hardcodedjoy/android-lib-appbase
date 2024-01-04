@@ -24,28 +24,7 @@ SOFTWARE.
 
 -->
 
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:left="5dp"
-        android:right="5dp"
-        android:bottom="5dp"
-        android:top="5dp">
-
-        <shape android:shape="rectangle" >
-            <corners
-                android:bottomLeftRadius="5dp"
-                android:bottomRightRadius="5dp"
-                android:topLeftRadius="5dp"
-                android:topRightRadius="5dp"/>
-            <padding
-                android:top="8dp"
-                android:bottom="8dp"
-                android:left="10dp"
-                android:right="10dp"/>
-            <stroke
-                android:width="2dp"
-                android:color="?android:colorForeground" />
-            <solid android:color="#00000000" />
-        </shape>
-    </item>
-</layer-list>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:color="?attr/appBaseColorTextDisabled"/>
+    <item android:color="?android:textColor"/>
+</selector>

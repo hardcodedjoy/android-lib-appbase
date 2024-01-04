@@ -2,7 +2,7 @@
 
 MIT License
 
-Copyright © 2023 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -27,6 +27,7 @@ SOFTWARE.
 package com.hardcodedjoy.appbase.popup;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.PorterDuff;
 import android.view.View;
@@ -35,6 +36,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.hardcodedjoy.appbase.R;
@@ -50,7 +53,6 @@ public class PopupChoose extends Popup {
     private final ImageButton btnRefresh;
 
     private final Vector<Option> options;
-
 
     @Override
     public void onCancel() {}
@@ -78,17 +80,72 @@ public class PopupChoose extends Popup {
 
         llOptions.removeAllViews();
 
+        addOptions(llOptions, options);
+
+        btnAdd.setOnClickListener(ocl);
+        btnAdd.setVisibility(GONE);
+        btnRefresh.setOnClickListener(ocl);
+        btnRefresh.setVisibility(GONE);
+        setOnClickListener(ocl);
+    }
+
+    private void addOptions(LinearLayout llOptions, Vector<Option> options) {
+
+        if(options.size() == 0) { return; }
+
+        Option firstOption = options.firstElement();
+        boolean withIcon = (firstOption.getIconId() != 0)
+                | (firstOption.getIconDrawable() != null)
+                | (firstOption.getIconBitmap() != null);
+
+        if(!withIcon) {
+            Context context = llOptions.getContext();
+            RadioGroup rg = new RadioGroup(context);
+            int n = options.size();
+            for(int i=0; i<n; i++) {
+                Option option = options.elementAt(i);
+                RadioButton rb = new RadioButton(context);
+                rb.setText(option.getName());
+                rg.addView(rb);
+                if(option.isSelected()) { rb.setChecked(true); }
+
+                /* rb.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                    if(!isChecked) { return; }
+                    rb.postDelayed(() -> {
+                        ContentView.removePopUp(PopupChoose.this); // dismiss
+                        option.run();
+                        onAfterOptionExecuted();
+                    }, 250);
+                }); */
+
+                rb.setOnClickListener(view -> {
+                    if(!rb.isChecked()) { return; }
+                    rb.postDelayed(() -> {
+                        ContentView.removePopUp(PopupChoose.this); // dismiss
+                        option.run();
+                        onAfterOptionExecuted();
+                    }, 250);
+                });
+            }
+            llOptions.addView(rg);
+            return;
+        }
+
+        // else -> with icon:
+
         View vOption;
         Button button;
-        int n = options.size();
         Option option;
+        int n = options.size();
         int iconSize;
         int iconTint;
         LinearLayout.LayoutParams params;
 
         for(int i=0; i<n; i++) {
             option = options.elementAt(i);
+
             inflater.inflate(R.layout.appbase_popup_ci_opt_ic, llOptions);
+
             vOption = llOptions.getChildAt(i);
             button = vOption.findViewById(R.id.btn_option);
             button.setId(i);
@@ -130,12 +187,6 @@ public class PopupChoose extends Popup {
 
             button.setOnClickListener(ocl);
         }
-
-        btnAdd.setOnClickListener(ocl);
-        btnAdd.setVisibility(GONE);
-        btnRefresh.setOnClickListener(ocl);
-        btnRefresh.setVisibility(GONE);
-        setOnClickListener(ocl);
     }
 
     @Override
@@ -160,11 +211,13 @@ public class PopupChoose extends Popup {
         }
     }
 
+    @SuppressWarnings("unused")
     public PopupChoose showBtnAdd() {
         btnAdd.setVisibility(VISIBLE);
         return this;
     }
 
+    @SuppressWarnings("unused")
     public PopupChoose showBtnRefresh() {
         btnRefresh.setVisibility(VISIBLE);
         return this;

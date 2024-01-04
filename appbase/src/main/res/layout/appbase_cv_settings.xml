@@ -2,7 +2,7 @@
 <!--
 MIT License
 
-Copyright © 2023 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -47,7 +47,7 @@ SOFTWARE.
             android:src="@drawable/ic_settings"
             android:tint="?android:colorBackground"
             android:layout_gravity="center_vertical|right"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription,RtlHardcoded" />
 
         <TextView
             android:id="@+id/tv_title"
@@ -57,7 +57,8 @@ SOFTWARE.
             android:layout_gravity="center_vertical|left"
             android:textColor="?android:colorBackground"
             android:textSize="22sp"
-            android:text="@string/settings"/>
+            android:text="@string/settings"
+            tools:ignore="RtlHardcoded" />
 
     </LinearLayout>
 
@@ -81,57 +82,39 @@ SOFTWARE.
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/theme" />
+                android:text="@string/theme_mode" />
 
-            <RadioGroup
-                android:id="@+id/rg_theme"
-                android:layout_width="match_parent"
+            <include
+                android:id="@+id/dd_theme_mode"
+                layout="@layout/appbase_et_drop_down"
+                android:layout_width="240dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp" />
 
-                <RadioButton
-                    android:id="@+id/rb_theme_light"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="light"
-                    tools:ignore="HardcodedText" />
-                <RadioButton
-                    android:id="@+id/rb_theme_dark"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="dark"
-                    tools:ignore="HardcodedText" />
-                <RadioButton
-                    android:id="@+id/rb_theme_system"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="system"
-                    tools:ignore="HardcodedText" />
-            </RadioGroup>
+            <TextView
+                android:id="@+id/tv_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/light_theme" />
+
+            <include
+                android:id="@+id/dd_theme"
+                layout="@layout/appbase_et_drop_down"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/app_language" />
 
-            <RadioGroup
-                android:id="@+id/rg_app_language"
-                android:layout_width="match_parent"
+            <include
+                android:id="@+id/dd_app_language"
+                layout="@layout/appbase_et_drop_down"
+                android:layout_width="240dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="20dp">
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/lang_default" />
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="en"
-                    tools:ignore="HardcodedText" />
-            </RadioGroup>
+                android:layout_marginBottom="20dp" />
 
         </LinearLayout>
     </ScrollView>
