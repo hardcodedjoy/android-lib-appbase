@@ -36,6 +36,7 @@ import android.view.ViewParent;
 import android.view.Window;
 import android.widget.FrameLayout;
 
+import com.hardcodedjoy.appbase.IntentUtil;
 import com.hardcodedjoy.appbase.SoftKeyboardUtil;
 import com.hardcodedjoy.appbase.contentview.ContentView;
 import com.hardcodedjoy.appbase.Settings;
@@ -111,6 +112,7 @@ public class SingleActivity extends Activity {
         super.onResume();
 
         ContentView.setActivity(this);
+        IntentUtil.setActivity(this);
 
         ContentView cv = cvCurrent;
         if(cv == null) {

@@ -105,6 +105,7 @@ SOFTWARE.
                 android:layout_marginBottom="20dp" />
 
             <TextView
+                android:id="@+id/tv_app_language"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/app_language" />

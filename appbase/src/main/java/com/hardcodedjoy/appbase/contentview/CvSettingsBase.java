@@ -76,6 +76,12 @@ public class CvSettingsBase extends ContentView {
         @SuppressLint("CutPasteId")
         ImageButton btnAppLanguage = dd.findViewById(R.id.btn_drop_down_expand);
 
+        if(LanguageUtil.getAvailableAppLanguages().length == 0) {
+            // no app languages set -> only "en", no language to choose from
+            findViewById(R.id.tv_app_language).setVisibility(GONE);
+            dd.setVisibility(GONE);
+        }
+
         etThemeMode.setText(keyToText(settings.getThemeMode()));
         etThemeMode.setFocusable(false);
         etThemeMode.setFocusableInTouchMode(false);
