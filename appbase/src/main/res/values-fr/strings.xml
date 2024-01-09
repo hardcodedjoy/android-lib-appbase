@@ -26,6 +26,7 @@ SOFTWARE.
 <resources>
     <string name="help">Aide</string>
     <string name="about">À propos</string>
+    <string name="mit_license">Licence MIT</string>
     <string name="settings">Paramètres</string>
     <string name="back">Retour</string>
     <string name="theme_mode">Mode thème</string>
@@ -66,7 +67,7 @@ SOFTWARE.
     <string name="eula">Accord de licence de l\'utilisateur final</string>
     <string name="non_commercial_use">pour usage personnel et non commercial uniquement</string>
     <string name="commercial_use">pour un usage personnel et commercial</string>
-    <string name="app_uses">L\'application utilise des bibliothèques open source:</string>
+    <string name="app_uses">L\'application utilise des bibliothèques open source publiées sous licence MIT:</string>
 
     <string name="app_website_label">Site Web d\'application:</string>
 

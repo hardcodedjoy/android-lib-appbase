@@ -29,8 +29,11 @@ package com.hardcodedjoy.appbase.contentview;
 import android.annotation.SuppressLint;
 import android.os.Build;
 import android.text.Html;
+import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
+import android.view.View;
 import android.widget.TextView;
 
 import com.hardcodedjoy.appbase.AppBase;
@@ -91,8 +94,24 @@ public class CvAboutBase extends ContentView {
 
         tv = findViewById(R.id.tv_app_uses_open_source_libs);
         s = tv.getText().toString();
+
+        // after second space from end, without space:
+        int start = s.substring(0, s.lastIndexOf(' ')).lastIndexOf(' ') + 1;
+        int end = s.length() - 1; // without ending ":"
+
         s += "\n" + infoAboutOpenSourceLibs;
-        tv.setText(s);
+
+        SpannableString spannableString = new SpannableString(s);
+        ClickableSpan clickableSpan = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) { new CvLicense().show(); }
+        };
+
+        spannableString.setSpan(clickableSpan, start, end, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+
+        tv.setText(spannableString);
+        tv.setClickable(true);
+        tv.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     @SuppressWarnings("deprecation")
