@@ -49,6 +49,14 @@ SOFTWARE.
     <string name="share">Distribuie</string>
     <string name="share_lowercase">distribuie</string>
 
+    <string name="set_a_password">Setați o parolă</string>
+    <string name="enter_password">Introduceți parola</string>
+    <string name="register_new_user">Înregistrare utilizator nou</string>
+    <string name="username">"Nume utilizator "</string>
+    <string name="password">Parola</string>
+    <string name="repeat_password">Repetare parolă</string>
+    <string name="login">Conectare</string>
+
     <string name="btn_cancel">Anulare</string>
     <string name="btn_ok">OK</string>
     <string name="btn_browse">Răsfoiește</string>

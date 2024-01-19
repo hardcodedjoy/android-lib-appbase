@@ -49,6 +49,14 @@ SOFTWARE.
     <string name="share">Поделиться</string>
     <string name="share_lowercase">поделиться</string>
 
+    <string name="set_a_password">Установите пароль</string>
+    <string name="enter_password">Введите пароль</string>
+    <string name="register_new_user">Регистрация нового пользователя</string>
+    <string name="username">Имя пользователя</string>
+    <string name="password">Пароль</string>
+    <string name="repeat_password">Повторите пароль</string>
+    <string name="login">Авторизация</string>
+
     <string name="btn_cancel">Отмена</string>
     <string name="btn_ok">OK</string>
     <string name="btn_browse">Просмотр</string>

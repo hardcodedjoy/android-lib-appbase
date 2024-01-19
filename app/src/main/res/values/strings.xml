@@ -44,5 +44,9 @@ SOFTWARE.
     <string name="android_is_cool">Android is cool</string>
     <string name="err_file_not_found">FILE NOT FOUND</string>
     <string name="type_something">Type something</string>
+    <string name="popup_set_password">PopupSetPassword</string>
+    <string name="popup_enter_password">PopupEnterPassword</string>
+    <string name="popup_register">PopupRegister</string>
+    <string name="popup_login">PopupLogin</string>
 
 </resources>

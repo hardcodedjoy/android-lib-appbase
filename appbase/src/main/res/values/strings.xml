@@ -51,6 +51,14 @@ SOFTWARE.
     <string name="share">Share</string>
     <string name="share_lowercase">share</string>
 
+    <string name="set_a_password">Set a password</string>
+    <string name="enter_password">Enter password</string>
+    <string name="register_new_user">Register new user</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="login">Login</string>
+
     <string name="btn_cancel">Cancel</string>
     <string name="btn_ok">OK</string>
     <string name="btn_browse">Browse</string>

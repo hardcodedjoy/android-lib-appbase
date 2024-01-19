@@ -35,11 +35,15 @@ import com.hardcodedjoy.appbase.popup.PopupAsk;
 import com.hardcodedjoy.appbase.popup.PopupChoose;
 import com.hardcodedjoy.appbase.popup.PopupColorPicker;
 import com.hardcodedjoy.appbase.popup.PopupCustom;
+import com.hardcodedjoy.appbase.popup.PopupEnterPassword;
 import com.hardcodedjoy.appbase.popup.PopupImage;
 import com.hardcodedjoy.appbase.popup.PopupInput;
+import com.hardcodedjoy.appbase.popup.PopupLogin;
 import com.hardcodedjoy.appbase.popup.PopupPleaseWait;
 import com.hardcodedjoy.appbase.popup.PopupProgress;
+import com.hardcodedjoy.appbase.popup.PopupRegister;
 import com.hardcodedjoy.appbase.popup.PopupSelectTimeInterval;
+import com.hardcodedjoy.appbase.popup.PopupSetPassword;
 
 import java.util.Vector;
 
@@ -66,6 +70,10 @@ public class CvPopups extends ContentView {
             if(id == R.id.btn_popup_please_wait) { showPopupPleaseWait(); }
             if(id == R.id.btn_popup_progress) { showPopupProgress(); }
             if(id == R.id.btn_popup_sel_time_interval) { showPopupSelectTimeInterval(); }
+            if(id == R.id.btn_popup_set_password) { showPopupSetPassword(); }
+            if(id == R.id.btn_popup_enter_password) { showPopupEnterPassword(); }
+            if(id == R.id.btn_popup_register) { showPopupRegister(); }
+            if(id == R.id.btn_popup_login) { showPopupLogin(); }
         });
 
         colorPickerColor = 0xFF008000;
@@ -136,6 +144,38 @@ public class CvPopups extends ContentView {
                 s += millisToHHMMSSmmm(startMicros/1000) + " to ";
                 s += millisToHHMMSSmmm(endMicros/1000);
                 showInfo(s);
+            }
+        }.show();
+    }
+
+    private void showPopupSetPassword() {
+        new PopupSetPassword() {
+            @Override
+            public void onOK(String s) { showInfo(getString(R.string.password) + " = " + s); }
+        }.show();
+    }
+
+    private void showPopupEnterPassword() {
+        new PopupEnterPassword() {
+            @Override
+            public void onOK(String s) { showInfo(getString(R.string.password) + " = " + s); }
+        }.show();
+    }
+
+    private void showPopupRegister() {
+        new PopupRegister() {
+            @Override
+            public void onOK(String username, String password, String repeatPassword) {
+
+            }
+        }.show();
+    }
+
+    private void showPopupLogin() {
+        new PopupLogin() {
+            @Override
+            public void onOK(String username, String password) {
+
             }
         }.show();
     }

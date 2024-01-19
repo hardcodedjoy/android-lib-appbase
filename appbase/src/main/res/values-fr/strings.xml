@@ -49,6 +49,14 @@ SOFTWARE.
     <string name="share">Partager</string>
     <string name="share_lowercase">partager</string>
 
+    <string name="set_a_password">Définir un mot de passe</string>
+    <string name="enter_password">Entrez le mot de passe</string>
+    <string name="register_new_user">Enregistrer un nouvel utilisateur</string>
+    <string name="username">Nom d\'utilisateur</string>
+    <string name="password">Mot de passe</string>
+    <string name="repeat_password">Répéter le mot de passe</string>
+    <string name="login">Connexion</string>
+
     <string name="btn_cancel">Annuler</string>
     <string name="btn_ok">OK</string>
     <string name="btn_browse">Parcourir</string>

@@ -151,6 +151,34 @@ SOFTWARE.
                 android:text="@string/popup_sel_time_interval"
                 android:textAllCaps="false"/>
 
+            <Button
+                android:id="@+id/btn_popup_set_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popup_set_password"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_popup_enter_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popup_enter_password"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_popup_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popup_register"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_popup_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popup_login"
+                android:textAllCaps="false"/>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
