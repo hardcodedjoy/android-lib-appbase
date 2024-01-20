@@ -32,6 +32,7 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.hardcodedjoy.appbase.LanguageUtil;
 import com.hardcodedjoy.appbase.Settings;
@@ -186,4 +187,10 @@ public class ContentView extends LinearLayout {
         config.setLocale(locale);
         resources.updateConfiguration(config, resources.getDisplayMetrics());
     }
+
+    static public void makeToast(String st) {
+        activity.runOnUiThread(() -> Toast.makeText(activity, st, Toast.LENGTH_LONG).show());
+    }
+
+    static public void makeToast(int stringId) { makeToast(getString(stringId)); }
 }

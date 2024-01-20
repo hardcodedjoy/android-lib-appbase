@@ -128,4 +128,12 @@ public class ThemeUtil {
         a.recycle();
         return res;
     }
+
+    static public boolean currentThemeIsLightNotDark(Activity activity) {
+        int colorBackground = getColor(activity, android.R.attr.colorBackground);
+        int colorForeground = getColor(activity, android.R.attr.colorForeground);
+        int bgGray = grayLevel(colorBackground);
+        int fgGray = grayLevel(colorForeground);
+        return (bgGray > fgGray);
+    }
 }
