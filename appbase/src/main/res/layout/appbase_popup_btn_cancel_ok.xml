@@ -28,10 +28,7 @@ SOFTWARE.
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="5dp"
-    android:layout_marginTop="5dp"
-    android:layout_marginRight="5dp"
-    android:layout_marginBottom="5dp"
+    android:layout_margin="5dp"
     android:orientation="horizontal">
 
     <ImageButton
@@ -41,7 +38,8 @@ SOFTWARE.
         android:layout_weight="1.0"
         android:src="@drawable/ic_dialog_cancel"
         android:tint="?attr/appBaseColorButtonTextRed"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"
+        style="@style/Margin375" />
 
     <ImageButton
         android:id="@+id/btn_ok"
@@ -50,7 +48,8 @@ SOFTWARE.
         android:layout_weight="1.0"
         android:src="@drawable/ic_dialog_ok"
         android:tint="?attr/appBaseColorButtonTextGreen"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"
+        style="@style/Margin375" />
 
     <Button
         android:id="@+id/btn_cancel_text"
@@ -58,7 +57,8 @@ SOFTWARE.
         android:layout_height="wrap_content"
         android:layout_weight="1.0"
         android:text="@string/btn_cancel"
-        android:visibility="gone" />
+        android:visibility="gone"
+        style="@style/Margin375" />
 
     <Button
         android:id="@+id/btn_ok_text"
@@ -66,5 +66,6 @@ SOFTWARE.
         android:layout_height="wrap_content"
         android:layout_weight="1.0"
         android:text="@string/btn_ok"
-        android:visibility="gone" />
+        android:visibility="gone"
+        style="@style/Margin375" />
 </LinearLayout>

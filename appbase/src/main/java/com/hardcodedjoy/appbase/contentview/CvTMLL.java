@@ -27,14 +27,11 @@ SOFTWARE.
 package com.hardcodedjoy.appbase.contentview;
 
 import android.annotation.SuppressLint;
-import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.hardcodedjoy.appbase.R;
-import com.hardcodedjoy.appbase.gui.MenuOption;
 
 @SuppressWarnings("unused")
 @SuppressLint("ViewConstructor")
@@ -50,33 +47,17 @@ public class CvTMLL extends CvTM { // Title / Menu / LinearLayout
 
         findViewById(R.id.iv_menu).setOnClickListener(view -> {
             if(llMenuOptions.getVisibility() == View.VISIBLE) {
-                llMenuOptions.setVisibility(View.GONE);
+                hideMenu();
             } else if(llMenuOptions.getVisibility() == View.GONE) {
-
-                llMenuOptions.removeAllViews();
-                Button button;
-
-                for(MenuOption option : menuOptions) {
-                    button = new Button(getActivity());
-
-                    button.setText(option.getName());
-                    button.setOnClickListener(v -> {
-                        llMenuOptions.setVisibility(View.GONE);
-                        option.getRunnable().run();
-                    });
-                    button.setGravity(Gravity.LEFT);
-                    llMenuOptions.addView(button);
-                }
-
-                llMenuOptions.setVisibility(View.VISIBLE);
+                showMenu();
             }
         });
-        llMenuOptions.setVisibility(View.GONE);
+        hideMenu();
 
         // hide menu on outside touch:
         flMenuOptions.setOnTouchListener((v, event) -> {
             if(llMenuOptions.getVisibility() == View.VISIBLE) {
-                llMenuOptions.setVisibility(View.GONE);
+                hideMenu();
                 return true;
             }
             return false;

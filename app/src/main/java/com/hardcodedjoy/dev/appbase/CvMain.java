@@ -36,11 +36,11 @@ import com.hardcodedjoy.appbase.gui.MenuOption;
 import java.util.Vector;
 
 @SuppressLint("ViewConstructor")
-public class CvStartScreen extends CvTMSLL {
+public class CvMain extends CvTMSLL {
 
     static private int i = 0;
 
-    public CvStartScreen() {
+    public CvMain() {
         // add initialization code here (that must run only one time)
         Vector<MenuOption> ops = new Vector<>();
         ops.add(new MenuOption("popups", () -> new CvPopups().show()));
@@ -57,10 +57,9 @@ public class CvStartScreen extends CvTMSLL {
         // "Hello World" demo:
         LinearLayout llContent = findViewById(R.id.ll_content);
         llContent.removeAllViews();
-        TextView tv = new TextView(getActivity());
+        inflate(getActivity(), R.layout.layout_main, llContent);
+        TextView tv = findViewById(R.id.tv_text);
         String s = "Hello, World! " + (i++);
-
         tv.setText(s);
-        llContent.addView(tv);
     }
 }

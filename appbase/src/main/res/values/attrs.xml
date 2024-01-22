@@ -31,5 +31,9 @@ SOFTWARE.
     <attr name="appBaseColorButtonTextGreen" format="reference" />
     <attr name="appBaseColorButtonDisabled" format="reference" />
     <attr name="appBaseColorTextDisabled" format="reference" />
+    <attr name="appBaseColorButton2Stroke" format="reference" />
+    <attr name="appBaseColorButton2Solid" format="reference" />
+    <attr name="appBaseColorButton2DisabledStroke" format="reference" />
+    <attr name="appBaseColorButton2DisabledSolid" format="reference" />
 
 </resources>

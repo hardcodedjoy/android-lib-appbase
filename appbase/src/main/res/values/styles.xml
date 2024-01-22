@@ -50,6 +50,12 @@ SOFTWARE.
         <item name="appBaseColorButtonTextGreen">@color/lime</item>
         <item name="appBaseColorTextDisabled">@color/charcoalA60</item>
 
+        <item name="appBaseColorButton2Stroke">@color/charcoalA20</item>
+        <item name="appBaseColorButton2Solid">@color/charcoalA20</item>
+        <item name="appBaseColorButton2DisabledStroke">@color/transparent</item>
+        <item name="appBaseColorButton2DisabledSolid">@color/charcoalA10</item>
+
+
         <item name="android:textViewStyle">@style/TextView</item>
         <item name="android:editTextStyle">@style/EditText</item>
         <item name="android:buttonStyle">@style/Button</item>
@@ -83,6 +89,11 @@ SOFTWARE.
         <item name="appBaseColorButtonTextRed">@color/poppy</item>
         <item name="appBaseColorButtonTextGreen">@color/forest</item>
         <item name="appBaseColorTextDisabled">@color/seaSaltA30</item>
+
+        <item name="appBaseColorButton2Stroke">@color/seaSaltA10</item>
+        <item name="appBaseColorButton2Solid">@color/seaSaltA20</item>
+        <item name="appBaseColorButton2DisabledStroke">@color/transparent</item>
+        <item name="appBaseColorButton2DisabledSolid">@color/seaSaltA10</item>
 
         <item name="android:textViewStyle">@style/TextView</item>
         <item name="android:editTextStyle">@style/EditText</item>
@@ -118,6 +129,11 @@ SOFTWARE.
         <item name="appBaseColorButtonTextGreen">@color/lime</item>
         <item name="appBaseColorTextDisabled">@color/pennBlueA60</item>
 
+        <item name="appBaseColorButton2Stroke">@color/pennBlueA20</item>
+        <item name="appBaseColorButton2Solid">@color/pennBlueA20</item>
+        <item name="appBaseColorButton2DisabledStroke">@color/transparent</item>
+        <item name="appBaseColorButton2DisabledSolid">@color/pennBlueA10</item>
+
         <item name="android:textViewStyle">@style/TextView</item>
         <item name="android:editTextStyle">@style/EditText</item>
         <item name="android:buttonStyle">@style/Button</item>
@@ -152,6 +168,11 @@ SOFTWARE.
         <item name="appBaseColorButtonTextGreen">@color/forest</item>
         <item name="appBaseColorTextDisabled">@color/silverA30</item>
 
+        <item name="appBaseColorButton2Stroke">@color/silverA10</item>
+        <item name="appBaseColorButton2Solid">@color/silverA20</item>
+        <item name="appBaseColorButton2DisabledStroke">@color/transparent</item>
+        <item name="appBaseColorButton2DisabledSolid">@color/silverA10</item>
+
         <item name="android:textViewStyle">@style/TextView</item>
         <item name="android:editTextStyle">@style/EditText</item>
         <item name="android:buttonStyle">@style/Button</item>
@@ -178,14 +199,25 @@ SOFTWARE.
     </style>
 
     <style name="Button" parent="android:Widget.Button">
-        <item name="android:background">@drawable/btn</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:background">@drawable/btn_1</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textColor">?android:colorBackground</item>
     </style>
 
     <style name="ImageButton" parent="android:Widget.Button">
-        <item name="android:background">@drawable/btn</item>
+        <item name="android:background">@drawable/btn_1</item>
+    </style>
+
+    <style name="Button2" parent="android:Widget.Button">
+        <item name="android:background">@drawable/btn_2</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@drawable/text_color_selector</item>
+    </style>
+
+    <style name="ImageButton2" parent="android:Widget.Button">
+        <item name="android:background">@drawable/btn_2</item>
     </style>
 
     <style name="RadioButton" parent="android:Widget.CompoundButton.RadioButton">
@@ -221,6 +253,10 @@ SOFTWARE.
         <item name="android:focusable">true</item>
         <item name="android:paddingLeft">8dp</item>
         <item name="android:paddingRight">8dp</item>
+    </style>
+
+    <style name="Margin375">
+        <item name="android:layout_margin">3.75dp</item>
     </style>
 
 </resources>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
 MIT License
 
@@ -27,27 +28,44 @@ SOFTWARE.
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="5dp"
-    android:orientation="horizontal">
-
-    <ImageButton
-        android:id="@+id/btn_cancel"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_weight="1.0"
-        android:src="@drawable/ic_dialog_cancel"
-        android:tint="?attr/appBaseColorButtonTextRed"
-        tools:ignore="ContentDescription"
-        style="@style/Margin375" />
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
 
     <Button
-        android:id="@+id/btn_cancel_text"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1.0"
-        android:text="@string/btn_cancel"
-        android:visibility="gone"
-        style="@style/Margin375" />
+        android:text="btn 1"
+        tools:ignore="HardcodedText"
+        style="@style/Button2"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:text="btn 2"
+        tools:ignore="HardcodedText"
+        android:enabled="true"
+        style="@style/Button2"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:text="btn 3"
+        tools:ignore="HardcodedText"
+        style="@style/Button2"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:text="btn 4"
+        tools:ignore="HardcodedText"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:focusedByDefault="true"
+        android:enabled="false"
+        style="@style/Button2"/>
 
 </LinearLayout>

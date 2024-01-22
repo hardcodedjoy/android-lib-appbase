@@ -25,9 +25,12 @@ SOFTWARE.
 -->
 
 <resources>
+    <color name="transparent">#00000000</color>
     <color name="grayAA0">#A0808080</color>
     <color name="grayA60">#60808080</color>
     <color name="grayA40">#40808080</color>
+    <color name="grayA30">#30808080</color>
+    <color name="grayA20">#20808080</color>
 
     <color name="poppy">#FFDB3434</color>
     <color name="bittersweet">#FFF75151</color>
@@ -38,37 +41,72 @@ SOFTWARE.
     <color name="oilBlue">#FF5080EF</color>
     <color name="cornflowerBlue">#FF70A0FF</color>
 
-
-
     <color name="white">#FFFFFFFF</color>
     <color name="whiteA60">#60FFFFFF</color>
     <color name="whiteA40">#40FFFFFF</color>
+    <color name="whiteA30">#30FFFFFF</color>
+    <color name="whiteA20">#20FFFFFF</color>
+
     <color name="seaSalt">#FFE0F0F0</color>
     <color name="seaSaltA60">#60E0F0F0</color>
     <color name="seaSaltA40">#40E0F0F0</color>
     <color name="seaSaltA30">#30E0F0F0</color>
+    <color name="seaSaltA20">#20E0F0F0</color>
+    <color name="seaSaltA10">#10E0F0F0</color>
+
     <color name="platinum">#FFDDDDDD</color>
     <color name="platinumA60">#60DDDDDD</color>
     <color name="platinumA40">#40DDDDDD</color>
+    <color name="platinumA30">#30DDDDDD</color>
+    <color name="platinumA20">#20DDDDDD</color>
+
     <color name="silver">#FFD0D0D0</color>
     <color name="silverA60">#60D0D0D0</color>
     <color name="silverA40">#40D0D0D0</color>
     <color name="silverA30">#30D0D0D0</color>
+    <color name="silverA20">#20D0D0D0</color>
+    <color name="silverA10">#10D0D0D0</color>
+    <color name="silverA05">#05D0D0D0</color>
     
     <color name="charcoal">#FF2C3C4C</color>
     <color name="charcoalA60">#602C3C4C</color>
+    <color name="charcoalA40">#402C3C4C</color>
+    <color name="charcoalA30">#302C3C4C</color>
+    <color name="charcoalA20">#202C3C4C</color>
+    <color name="charcoalA10">#102C3C4C</color>
+
     <color name="jet">#FF303030</color>
+    <color name="jetA60">#60303030</color>
+    <color name="jetA40">#40303030</color>
+    <color name="jetA30">#30303030</color>
+    <color name="jetA20">#20303030</color>
+
     <color name="pennBlue">#FF202060</color>
     <color name="pennBlueA60">#60202060</color>
-    <color name="pineGreen">#FF00897B</color>
-    
+    <color name="pennBlueA40">#40202060</color>
+    <color name="pennBlueA30">#30202060</color>
+    <color name="pennBlueA20">#20202060</color>
+    <color name="pennBlueA10">#10202060</color>
+
     <color name="emerald">#FF00C381</color>
     <color name="emeraldA80">#8000C381</color>
+    <color name="emeraldA60">#6000C381</color>
+    <color name="emeraldA40">#4000C381</color>
+    <color name="emeraldA30">#3000C381</color>
+    <color name="emeraldA20">#2000C381</color>
+
     <color name="violetBlue">#FF3F4FBF</color>
     <color name="violetBlueA80">#803F4FBF</color>
-    <color name="sandyBrown">#FFFFB080</color>
-    <color name="sandyBrownA80">#80FFB080</color>
+    <color name="violetBlueA60">#603F4FBF</color>
+    <color name="violetBlueA40">#403F4FBF</color>
+    <color name="violetBlueA30">#303F4FBF</color>
+    <color name="violetBlueA20">#203F4FBF</color>
+
     <color name="fire">#FFFFAF30</color>
     <color name="fireA80">#80FFAF30</color>
+    <color name="fireA60">#60FFAF30</color>
+    <color name="fireA40">#40FFAF30</color>
+    <color name="fireA30">#30FFAF30</color>
+    <color name="fireA20">#20FFAF30</color>
 
 </resources>

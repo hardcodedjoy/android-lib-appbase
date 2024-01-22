@@ -103,15 +103,29 @@ SOFTWARE.
                 android:orientation="horizontal">
 
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:text="btn"
                     tools:ignore="HardcodedText" />
 
-                <include layout="@layout/appbase_popup_btn_cancel_ok" />
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:src="@drawable/ic_dialog_cancel"
+                    android:tint="?attr/appBaseColorButtonTextRed"
+                    tools:ignore="ContentDescription" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:src="@drawable/ic_dialog_ok"
+                    android:tint="?attr/appBaseColorButtonTextGreen"
+                    tools:ignore="ContentDescription" />
 
             </LinearLayout>
 
@@ -120,7 +134,59 @@ SOFTWARE.
                 android:layout_height="wrap_content"
                 android:text="disabled button"
                 android:enabled="false"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText"
+                android:layout_marginBottom="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="btn"
+                    tools:ignore="HardcodedText"
+                    style="@style/Button2" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:src="@drawable/ic_dialog_cancel"
+                    android:tint="?attr/appBaseColorButtonTextRed"
+                    tools:ignore="ContentDescription"
+                    style="@style/Button2" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:src="@drawable/ic_dialog_ok"
+                    android:tint="?attr/appBaseColorButtonTextGreen"
+                    tools:ignore="ContentDescription"
+                    style="@style/Button2" />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="disabled button"
+                android:enabled="false"
+                tools:ignore="HardcodedText"
+                style="@style/Button2"
+                android:layout_marginBottom="20dp"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="40"
+                android:layout_marginBottom="20dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

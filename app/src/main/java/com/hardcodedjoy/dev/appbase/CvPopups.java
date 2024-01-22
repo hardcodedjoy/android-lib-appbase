@@ -54,7 +54,7 @@ public class CvPopups extends ContentView {
 
     public CvPopups() {
         // add initialization code here (that must run only one time)
-        inflate(R.layout.appbase_cv_popups);
+        inflate(R.layout.cv_popups);
 
         GuiLinker.setOnClickListenerToAllButtons(this, view -> {
             int id = view.getId();

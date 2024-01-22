@@ -26,11 +26,10 @@ SOFTWARE.
 
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:left="5dp"
-        android:right="5dp"
-        android:bottom="5dp"
-        android:top="5dp">
-
+        android:left="1.25dp"
+        android:right="1.25dp"
+        android:bottom="1.25dp"
+        android:top="1.25dp">
         <shape android:shape="rectangle" >
             <corners
                 android:bottomLeftRadius="2dp"
@@ -43,7 +42,10 @@ SOFTWARE.
                 android:left="12dp"
                 android:right="12dp"/>
 
-            <solid android:color="?attr/appBaseColorButtonDisabled" />
+            <stroke
+                android:width="1dp"
+                android:color="?attr/appBaseColorButton2DisabledStroke" />
+            <solid android:color="?attr/appBaseColorButton2DisabledSolid" />
         </shape>
     </item>
 </layer-list>

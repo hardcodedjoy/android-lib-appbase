@@ -33,7 +33,7 @@ import com.hardcodedjoy.appbase.contentview.CvTM;
 
 public class MainActivity extends SingleActivity {
     static {
-        setInitialCvClass(CvStartScreen.class);
+        setInitialCvClass(CvMain.class);
         setSettingsClass(Settings.class);
         CvTM.setSettingsCvClass(CvSettings.class);
         CvAboutBase.setAppVersion(BuildConfig.VERSION_NAME, BuildConfig.TIMESTAMP);

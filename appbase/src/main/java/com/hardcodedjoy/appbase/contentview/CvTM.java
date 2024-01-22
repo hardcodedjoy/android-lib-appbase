@@ -27,10 +27,13 @@ SOFTWARE.
 package com.hardcodedjoy.appbase.contentview;
 
 import android.annotation.SuppressLint;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.hardcodedjoy.appbase.R;
+import com.hardcodedjoy.appbase.gui.DisplayUnit;
 import com.hardcodedjoy.appbase.gui.MenuOption;
 
 import java.util.Vector;
@@ -52,6 +55,34 @@ public class CvTM extends ContentView { // Content View with Title and Menu
             try { ((ContentView)settingsCvClass.newInstance()).show();
             } catch (Exception e) { e.printStackTrace(System.err); }
         }));
+    }
+
+    protected void hideMenu() { llMenuOptions.setVisibility(View.GONE); }
+
+    @SuppressLint("RtlHardcoded")
+    protected void showMenu() {
+        llMenuOptions.removeAllViews();
+        Button button;
+        LinearLayout.LayoutParams params;
+        int margin = DisplayUnit.dpToPx(3.75f);
+
+        for(MenuOption option : menuOptions) {
+            button = new Button(getActivity());
+
+            button.setText(option.getName());
+            button.setOnClickListener(v -> {
+                llMenuOptions.setVisibility(View.GONE);
+                option.getRunnable().run();
+            });
+            button.setGravity(Gravity.LEFT);
+
+            params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+            params.setMargins(margin, margin, margin, margin);
+
+            llMenuOptions.addView(button, params);
+        }
+
+        llMenuOptions.setVisibility(View.VISIBLE);
     }
 
     @Override

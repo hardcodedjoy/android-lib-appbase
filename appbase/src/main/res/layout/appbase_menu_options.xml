@@ -35,7 +35,7 @@ SOFTWARE.
         android:layout_gravity="top|right"
         android:background="?android:colorForeground"
         android:orientation="vertical"
-        tools:ignore="UselessParent">
+        tools:ignore="RtlHardcoded,UselessParent">
 
         <Button
             android:id="@+id/btn_about"
