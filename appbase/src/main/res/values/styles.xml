@@ -29,8 +29,18 @@ SOFTWARE.
     <style name="SeaSaltEmerald" parent="android:Theme.DeviceDefault.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">@color/seaSalt</item>
+
         <item name="android:colorBackground">@color/seaSalt</item>
+        <item name="appBaseColorBackgroundA80">@color/seaSaltA80</item>
+        <item name="appBaseColorBackgroundA60">@color/seaSaltA60</item>
+        <item name="appBaseColorBackgroundA40">@color/seaSaltA40</item>
+        <item name="appBaseColorBackgroundA20">@color/seaSaltA20</item>
+
         <item name="android:colorForeground">@color/charcoal</item>
+        <item name="appBaseColorForegroundA80">@color/charcoalA80</item>
+        <item name="appBaseColorForegroundA60">@color/charcoalA60</item>
+        <item name="appBaseColorForegroundA40">@color/charcoalA40</item>
+        <item name="appBaseColorForegroundA20">@color/charcoalA20</item>
 
         <item name="android:textColor">@color/charcoal</item>
         <item name="android:textColorHint">@color/charcoalA60</item>
@@ -64,13 +74,24 @@ SOFTWARE.
         <item name="android:checkboxStyle">@style/CheckBox</item>
         <item name="android:progressBarStyle">@style/ProgressBar</item>
         <item name="android:seekBarStyle">@style/SeekBar</item>
+        <item name="android:buttonStyleToggle">@style/ToggleButton</item>
     </style>
 
     <style name="CharcoalEmerald" parent="android:Theme.DeviceDefault.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">@color/charcoal</item>
+
         <item name="android:colorBackground">@color/charcoal</item>
+        <item name="appBaseColorBackgroundA80">@color/charcoalA80</item>
+        <item name="appBaseColorBackgroundA60">@color/charcoalA60</item>
+        <item name="appBaseColorBackgroundA40">@color/charcoalA40</item>
+        <item name="appBaseColorBackgroundA20">@color/charcoalA20</item>
+
         <item name="android:colorForeground">@color/seaSalt</item>
+        <item name="appBaseColorForegroundA80">@color/seaSaltA80</item>
+        <item name="appBaseColorForegroundA60">@color/seaSaltA60</item>
+        <item name="appBaseColorForegroundA40">@color/seaSaltA40</item>
+        <item name="appBaseColorForegroundA20">@color/seaSaltA20</item>
 
         <item name="android:textColor">@color/seaSalt</item>
         <item name="android:textColorHint">@color/seaSaltA30</item>
@@ -103,13 +124,24 @@ SOFTWARE.
         <item name="android:checkboxStyle">@style/CheckBox</item>
         <item name="android:progressBarStyle">@style/ProgressBar</item>
         <item name="android:seekBarStyle">@style/SeekBar</item>
+        <item name="android:buttonStyleToggle">@style/ToggleButton</item>
     </style>
 
     <style name="PlatinumIris" parent="android:Theme.DeviceDefault.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">@color/platinum</item>
+
         <item name="android:colorBackground">@color/platinum</item>
+        <item name="appBaseColorBackgroundA80">@color/platinumA80</item>
+        <item name="appBaseColorBackgroundA60">@color/platinumA60</item>
+        <item name="appBaseColorBackgroundA40">@color/platinumA40</item>
+        <item name="appBaseColorBackgroundA20">@color/platinumA20</item>
+
         <item name="android:colorForeground">@color/pennBlue</item>
+        <item name="appBaseColorForegroundA80">@color/pennBlueA80</item>
+        <item name="appBaseColorForegroundA60">@color/pennBlueA60</item>
+        <item name="appBaseColorForegroundA40">@color/pennBlueA40</item>
+        <item name="appBaseColorForegroundA20">@color/pennBlueA20</item>
 
         <item name="android:textColor">@color/pennBlue</item>
         <item name="android:textColorHint">@color/pennBlueA60</item>
@@ -142,13 +174,24 @@ SOFTWARE.
         <item name="android:checkboxStyle">@style/CheckBox</item>
         <item name="android:progressBarStyle">@style/ProgressBar</item>
         <item name="android:seekBarStyle">@style/SeekBar</item>
+        <item name="android:buttonStyleToggle">@style/ToggleButton</item>
     </style>
 
     <style name="JetFire" parent="android:Theme.DeviceDefault.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">@color/jet</item>
+
         <item name="android:colorBackground">@color/jet</item>
+        <item name="appBaseColorBackgroundA80">@color/jetA80</item>
+        <item name="appBaseColorBackgroundA60">@color/jetA60</item>
+        <item name="appBaseColorBackgroundA40">@color/jetA40</item>
+        <item name="appBaseColorBackgroundA20">@color/jetA20</item>
+
         <item name="android:colorForeground">@color/silver</item>
+        <item name="appBaseColorForegroundA80">@color/silverA80</item>
+        <item name="appBaseColorForegroundA60">@color/silverA60</item>
+        <item name="appBaseColorForegroundA40">@color/silverA40</item>
+        <item name="appBaseColorForegroundA20">@color/silverA20</item>
 
         <item name="android:textColor">@color/silver</item>
         <item name="android:textColorHint">@color/silverA30</item>
@@ -181,6 +224,7 @@ SOFTWARE.
         <item name="android:checkboxStyle">@style/CheckBox</item>
         <item name="android:progressBarStyle">@style/ProgressBar</item>
         <item name="android:seekBarStyle">@style/SeekBar</item>
+        <item name="android:buttonStyleToggle">@style/ToggleButton</item>
     </style>
 
 
@@ -255,8 +299,10 @@ SOFTWARE.
         <item name="android:paddingRight">8dp</item>
     </style>
 
-    <style name="Margin375">
-        <item name="android:layout_margin">3.75dp</item>
+    <style name="ToggleButton" parent="android:Widget.Button.Toggle">
+        <item name="android:background">@drawable/toggle_btn</item>
+        <item name="android:textOn"> </item>
+        <item name="android:textOff"> </item>
     </style>
 
 </resources>

@@ -58,11 +58,11 @@ abstract public class PopupSelectTimeInterval extends Popup {
         // first inflate:
         inflater.inflate(R.layout.appbase_popup_sel_time_interval, this);
 
-        TextView tvTitle = findViewById(R.id.tv_title);
-        tvIntervalStart = findViewById(R.id.tv_interval_start);
-        tvIntervalEnd = findViewById(R.id.tv_interval_end);
-        sbIntervalStart = findViewById(R.id.sb_interval_start);
-        sbIntervalEnd = findViewById(R.id.sb_interval_end);
+        TextView tvTitle = findViewById(R.id.appbase_tv_title);
+        tvIntervalStart = findViewById(R.id.appbase_tv_interval_start);
+        tvIntervalEnd = findViewById(R.id.appbase_tv_interval_end);
+        sbIntervalStart = findViewById(R.id.appbase_sb_interval_start);
+        sbIntervalEnd = findViewById(R.id.appbase_sb_interval_end);
 
         if(title != null) { tvTitle.setText(title); }
 
@@ -97,8 +97,8 @@ abstract public class PopupSelectTimeInterval extends Popup {
             public void onStopTrackingTouch(SeekBar seekBar) {}
         });
 
-        ImageButton btnOk = findViewById(R.id.btn_ok);
-        ImageButton btnCancel = findViewById(R.id.btn_cancel);
+        ImageButton btnOk = findViewById(R.id.appbase_btn_ok);
+        ImageButton btnCancel = findViewById(R.id.appbase_btn_cancel);
         btnOk.setOnClickListener(ocl);
         btnCancel.setOnClickListener(ocl);
     }
@@ -107,13 +107,13 @@ abstract public class PopupSelectTimeInterval extends Popup {
     void oclOnClick(View view) {
         ContentView.removePopUp(this); // dismiss
         int id = view.getId();
-        if(id == R.id.btn_ok || id == R.id.btn_ok_text) {
+        if(id == R.id.appbase_btn_ok || id == R.id.appbase_btn_ok_text) {
             float start = ((float)sbIntervalStart.getProgress()) / PROGRESS_MAX;
             float end = ((float)sbIntervalEnd.getProgress()) / PROGRESS_MAX;
             onOK((long)(totalDurationMicros*start + 0.5f), (long)(totalDurationMicros*end + 0.5f) );
-        } else if(id == R.id.btn_cancel || id == R.id.btn_cancel_text) {
+        } else if(id == R.id.appbase_btn_cancel || id == R.id.appbase_btn_cancel_text) {
             onCancel();
-        } else if(id == R.id.ll_outside_popup) {
+        } else if(id == R.id.appbase_ll_outside_popup) {
             onClickOutside();
         }
     }

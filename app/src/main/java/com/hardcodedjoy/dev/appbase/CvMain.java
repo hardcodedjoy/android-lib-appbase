@@ -55,10 +55,10 @@ public class CvMain extends CvTMSLL {
         // add code to run every time this ContentView appears on screen
 
         // "Hello World" demo:
-        LinearLayout llContent = findViewById(R.id.ll_content);
+        LinearLayout llContent = findViewById(R.id.appbase_ll_content);
         llContent.removeAllViews();
         inflate(getActivity(), R.layout.layout_main, llContent);
-        TextView tv = findViewById(R.id.tv_text);
+        TextView tv = findViewById(R.id.appbase_tv_text);
         String s = "Hello, World! " + (i++);
         tv.setText(s);
     }

@@ -45,10 +45,10 @@ abstract public class PopupImage extends Popup {
         // first inflate:
         inflater.inflate(R.layout.appbase_popup_image, this);
 
-        TextView tvTitle = findViewById(R.id.tv_title);
-        ImageView ivImage = findViewById(R.id.iv_image);
-        TextView tvImageDescription = findViewById(R.id.tv_image_description);
-        ImageButton btnCancel = findViewById(R.id.btn_cancel);
+        TextView tvTitle = findViewById(R.id.appbase_tv_title);
+        ImageView ivImage = findViewById(R.id.appbase_iv_image);
+        TextView tvImageDescription = findViewById(R.id.appbase_tv_image_description);
+        ImageButton btnCancel = findViewById(R.id.appbase_btn_cancel);
 
         if(title != null) tvTitle.setText(title);
         if(image != null) ivImage.setImageBitmap(image);

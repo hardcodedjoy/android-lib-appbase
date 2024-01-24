@@ -36,4 +36,14 @@ SOFTWARE.
     <attr name="appBaseColorButton2DisabledStroke" format="reference" />
     <attr name="appBaseColorButton2DisabledSolid" format="reference" />
 
+    <attr name="appBaseColorBackgroundA80" format="reference" />
+    <attr name="appBaseColorBackgroundA60" format="reference" />
+    <attr name="appBaseColorBackgroundA40" format="reference" />
+    <attr name="appBaseColorBackgroundA20" format="reference" />
+
+    <attr name="appBaseColorForegroundA80" format="reference" />
+    <attr name="appBaseColorForegroundA60" format="reference" />
+    <attr name="appBaseColorForegroundA40" format="reference" />
+    <attr name="appBaseColorForegroundA20" format="reference" />
+
 </resources>

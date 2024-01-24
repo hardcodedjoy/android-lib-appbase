@@ -29,16 +29,14 @@ SOFTWARE.
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="5dp"
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/tv_text"
+        android:id="@+id/appbase_tv_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hello, World! 0"
         tools:ignore="HardcodedText" />
-
-    <include layout="@layout/layout_button_1_bar" />
-    <include layout="@layout/layout_button_2_bar" />
 
 </LinearLayout>

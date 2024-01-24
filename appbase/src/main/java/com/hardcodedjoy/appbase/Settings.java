@@ -34,9 +34,9 @@ import com.hardcodedjoy.appbase.gui.ThemeUtil;
 
 public class Settings { // to be extended by specific app settings
 
-    static private final String THEME_MODE_DEFAULT = SettingsKeys.themeModeDefault;
-    static private final String LIGHT_THEME_DEFAULT = null;
-    static private final String DARK_THEME_DEFAULT = null;
+    static private final String THEME_MODE_DEFAULT = SettingsKeys.themeModeLight;
+    static private final String LIGHT_THEME_DEFAULT = "SeaSaltEmerald";
+    static private final String DARK_THEME_DEFAULT = "CharcoalEmerald";
     static private final String APP_LANGUAGE_CODE_DEFAULT = SettingsKeys.appLanguageCodeDefault;
 
     private SharedPreferences sp;

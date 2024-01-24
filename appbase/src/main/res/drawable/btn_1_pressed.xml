@@ -25,12 +25,7 @@ SOFTWARE.
 -->
 
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:left="1.25dp"
-        android:right="1.25dp"
-        android:bottom="1.25dp"
-        android:top="1.25dp">
-
+    <item>
         <shape android:shape="rectangle" >
             <corners
                 android:bottomLeftRadius="2dp"

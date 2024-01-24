@@ -247,10 +247,15 @@ public class StringUtil {
 	}
 
 	static public int getItemsStringId(int itemCount) {
-		if(itemCount == 0) { return R.string.items_ov; }
-		if(itemCount >= 10 && itemCount <= 20) { return R.string.items_ov; }
-		if((itemCount%10) == 1) { return R.string.item; }
-		if((itemCount%10) >= 2 && (itemCount%10) <= 4) { return R.string.items_a; }
+		if("ru".equals(ContentView.getAppLanguage())) {
+			if(itemCount == 0) { return R.string.items_ov; }
+			if(itemCount >= 10 && itemCount <= 20) { return R.string.items_ov; }
+			if((itemCount%10) == 1) { return R.string.item; }
+			if((itemCount%10) >= 2 && (itemCount%10) <= 4) { return R.string.items_a; }
+			return R.string.items_ov;
+		}
+
+		if(itemCount == 1) { return R.string.item; }
 		return R.string.items_ov;
 	}
 

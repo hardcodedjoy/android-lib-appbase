@@ -25,7 +25,7 @@ SOFTWARE.
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ll_outside_popup"
+    android:id="@+id/appbase_ll_outside_popup"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -39,7 +39,7 @@ SOFTWARE.
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_title"
+            android:id="@+id/appbase_tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -53,7 +53,7 @@ SOFTWARE.
             tools:ignore="HardcodedText" />
 
         <TextView
-            android:id="@+id/tv_interval_start"
+            android:id="@+id/appbase_tv_interval_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -65,7 +65,7 @@ SOFTWARE.
             tools:ignore="HardcodedText" />
 
         <SeekBar
-            android:id="@+id/sb_interval_start"
+            android:id="@+id/appbase_sb_interval_start"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -74,7 +74,7 @@ SOFTWARE.
             android:progress="20" />
 
         <TextView
-            android:id="@+id/tv_interval_end"
+            android:id="@+id/appbase_tv_interval_end"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -87,7 +87,7 @@ SOFTWARE.
             tools:ignore="HardcodedText" />
 
         <SeekBar
-            android:id="@+id/sb_interval_end"
+            android:id="@+id/appbase_sb_interval_end"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"

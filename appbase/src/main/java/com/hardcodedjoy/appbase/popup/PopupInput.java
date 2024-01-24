@@ -49,9 +49,9 @@ abstract public class PopupInput extends Popup {
 
         inflater.inflate(R.layout.appbase_popup_input, this);
 
-        TextView tvTitle = findViewById(R.id.tv_title);
-        TextView tvMessage = findViewById(R.id.tv_message);
-        etInput = findViewById(R.id.et_input);
+        TextView tvTitle = findViewById(R.id.appbase_tv_title);
+        TextView tvMessage = findViewById(R.id.appbase_tv_message);
+        etInput = findViewById(R.id.appbase_et_input);
 
         tvTitle.setText(title);
 
@@ -60,8 +60,8 @@ abstract public class PopupInput extends Popup {
 
         if(def != null) { etInput.setText(def); }
 
-        ImageButton btnOK = findViewById(R.id.btn_ok);
-        ImageButton btnCancel = findViewById(R.id.btn_cancel);
+        ImageButton btnOK = findViewById(R.id.appbase_btn_ok);
+        ImageButton btnCancel = findViewById(R.id.appbase_btn_cancel);
 
         btnOK.setOnClickListener(ocl);
         btnCancel.setOnClickListener(ocl);
@@ -72,9 +72,9 @@ abstract public class PopupInput extends Popup {
     void oclOnClick(View view) {
         ContentView.removePopUp(this); // dismiss
         int id = view.getId();
-        if(id == R.id.btn_ok || id == R.id.btn_ok_text) { onOK(etInput.getText().toString()); }
-        else if(id == R.id.btn_cancel || id == R.id.btn_cancel_text) { onCancel(); }
-        else if(id == R.id.ll_outside_popup) { onClickOutside(); }
+        if(id == R.id.appbase_btn_ok || id == R.id.appbase_btn_ok_text) { onOK(etInput.getText().toString()); }
+        else if(id == R.id.appbase_btn_cancel || id == R.id.appbase_btn_cancel_text) { onCancel(); }
+        else if(id == R.id.appbase_ll_outside_popup) { onClickOutside(); }
     }
 
     public PopupInput(int titleStringId, int messageStringId, String def) {

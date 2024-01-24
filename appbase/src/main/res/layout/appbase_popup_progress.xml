@@ -24,7 +24,7 @@ SOFTWARE.
 -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/ll_outside_popup"
+    android:id="@+id/appbase_ll_outside_popup"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -40,7 +40,7 @@ SOFTWARE.
         <include layout="@layout/appbase_popup_tm_center_big"/>
 
         <ProgressBar
-            android:id="@+id/pb_progress"
+            android:id="@+id/appbase_pb_progress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"

@@ -26,6 +26,10 @@ SOFTWARE.
 
 package com.hardcodedjoy.appbase.gui;
 
+import android.annotation.SuppressLint;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.InsetDrawable;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -37,6 +41,9 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
+import android.widget.ToggleButton;
+
+import com.hardcodedjoy.appbase.ImageUtil;
 
 public class GuiLinker {
 
@@ -79,6 +86,17 @@ public class GuiLinker {
             cb.setChecked(b);
             setGetter.set("" + b);
             cb.setOnCheckedChangeListener((compoundButton, b1) -> setGetter.set("" + b1));
+        } catch (Exception e) {
+            e.printStackTrace(System.err);
+        }
+    }
+
+    static public void link(ToggleButton tb, final SetGetter setGetter) {
+        try {
+            boolean b = Boolean.parseBoolean(setGetter.get());
+            tb.setChecked(b);
+            setGetter.set("" + b);
+            tb.setOnCheckedChangeListener((compoundButton, b1) -> setGetter.set("" + b1));
         } catch (Exception e) {
             e.printStackTrace(System.err);
         }
@@ -139,10 +157,74 @@ public class GuiLinker {
     @SuppressWarnings("unused")
     static public void link(View layout, int resId, final SetGetter setGetter) {
         View view = layout.findViewById(resId);
-             if(view instanceof EditText)    { link((EditText)    view, setGetter); }
-        else if(view instanceof CheckBox)    { link((CheckBox)    view, setGetter); }
-        else if(view instanceof SeekBar)     { link((SeekBar)     view, setGetter); }
-        else if(view instanceof RadioButton) { link((RadioButton) view, setGetter); }
-        else if(view instanceof RadioGroup)  { link((RadioGroup)  view, setGetter); }
+             if(view instanceof EditText)     { link((EditText)     view, setGetter); }
+        else if(view instanceof CheckBox)     { link((CheckBox)     view, setGetter); }
+        else if(view instanceof ToggleButton) { link((ToggleButton) view, setGetter); }
+        else if(view instanceof SeekBar)      { link((SeekBar)      view, setGetter); }
+        else if(view instanceof RadioButton)  { link((RadioButton)  view, setGetter); }
+        else if(view instanceof RadioGroup)   { link((RadioGroup)   view, setGetter); }
+    }
+
+    static public void setHandleImage(ToggleButton tb, Drawable drawable) {
+        setHandleImage(tb, ImageUtil.drawableToBitmap(drawable));
+    }
+
+    @SuppressLint("ClickableViewAccessibility")
+    static public void setHandleImage(ToggleButton tb, Bitmap bitmap) {
+
+        tb.post(() -> {
+            float tbWidth = tb.getWidth();
+            float tbHeight = tb.getHeight();
+
+            // handle:
+            float handleWidth = tbWidth - DisplayUnit.dpToPx(30.0f); // 27 + 3
+            float handleHeight = tbHeight - DisplayUnit.dpToPx(6.0f); // 3 + 3
+
+            float bmpWidth = bitmap.getWidth();
+            float bmpHeight = bitmap.getHeight();
+
+            float scaleFactor = Math.min(handleWidth / bmpWidth, handleHeight / bmpHeight);
+
+            int scaledW = (int)(bmpWidth * scaleFactor + 0.5f);
+            int scaledH = (int)(bmpHeight * scaleFactor + 0.5f);
+
+            Bitmap scaledBitmap = Bitmap.createScaledBitmap(bitmap, scaledW, scaledH, true);
+            Drawable scaledDrawable = ImageUtil.bitmapToDrawable(scaledBitmap);
+
+            {
+                int inset;
+                if(tb.isChecked()) {
+                    inset = DisplayUnit.dpToPx(27.0f) + (int)((handleWidth - scaledW) / 2 + 0.5f);
+                } else {
+                    inset = DisplayUnit.dpToPx(3.0f) + (int)((handleWidth - scaledW) / 2 + 0.5f);
+                }
+                tb.setButtonDrawable(new InsetDrawable(scaledDrawable,
+                        inset, 0, 0, 0));
+            }
+
+            tb.setOnTouchListener((v, event) -> {
+                tb.postDelayed(() -> {
+                    int inset;
+                    if(tb.isPressed()) {
+                        if (tb.isChecked()) {
+                            inset = DisplayUnit.dpToPx(22.0f) + (int) ((handleWidth - scaledW) / 2 + 0.5f);
+                        } else {
+                            inset = DisplayUnit.dpToPx(8.0f) + (int) ((handleWidth - scaledW) / 2 + 0.5f);
+                        }
+                    } else {
+                        if (tb.isChecked()) {
+                            inset = DisplayUnit.dpToPx(27.0f) + (int) ((handleWidth - scaledW) / 2 + 0.5f);
+                        } else {
+                            inset = DisplayUnit.dpToPx(3.0f) + (int) ((handleWidth - scaledW) / 2 + 0.5f);
+                        }
+                    }
+
+                    tb.setButtonDrawable(new InsetDrawable(scaledDrawable,
+                            inset, 0, 0, 0));
+                }, 100);
+
+                return false;
+            });
+        });
     }
 }

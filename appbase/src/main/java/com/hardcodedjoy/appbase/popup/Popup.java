@@ -50,7 +50,7 @@ abstract public class Popup extends LinearLayout {
     }
 
     public void enableDismissByOutsideClick() {
-        llOutsidePopup = findViewById(R.id.ll_outside_popup);
+        llOutsidePopup = findViewById(R.id.appbase_ll_outside_popup);
         llOutsidePopup.setOnClickListener(v -> ContentView.removePopUp(Popup.this));
     }
 

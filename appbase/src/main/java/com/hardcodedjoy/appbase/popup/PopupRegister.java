@@ -51,16 +51,16 @@ abstract public class PopupRegister extends Popup {
 
         inflater.inflate(R.layout.appbase_popup_register, this);
 
-        TextView tvMessage = findViewById(R.id.tv_message);
-        etUsername = findViewById(R.id.et_username);
-        etPassword = findViewById(R.id.et_password);
-        etRepeatPassword = findViewById(R.id.et_repeat_password);
+        TextView tvMessage = findViewById(R.id.appbase_tv_message);
+        etUsername = findViewById(R.id.appbase_et_username);
+        etPassword = findViewById(R.id.appbase_et_password);
+        etRepeatPassword = findViewById(R.id.appbase_et_repeat_password);
 
         if(message == null) { tvMessage.setVisibility(GONE); }
         else { tvMessage.setVisibility(VISIBLE); tvMessage.setText(message); }
 
-        ImageButton btnOK = findViewById(R.id.btn_ok);
-        ImageButton btnCancel = findViewById(R.id.btn_cancel);
+        ImageButton btnOK = findViewById(R.id.appbase_btn_ok);
+        ImageButton btnCancel = findViewById(R.id.appbase_btn_cancel);
 
         btnOK.setOnClickListener(ocl);
         btnCancel.setOnClickListener(ocl);
@@ -71,14 +71,14 @@ abstract public class PopupRegister extends Popup {
     void oclOnClick(View view) {
         ContentView.removePopUp(this); // dismiss
         int id = view.getId();
-        if(id == R.id.btn_ok || id == R.id.btn_ok_text) {
+        if(id == R.id.appbase_btn_ok || id == R.id.appbase_btn_ok_text) {
             String username = etUsername.getText().toString();
             String password = etPassword.getText().toString();
             String repeatPassword = etRepeatPassword.getText().toString();
             onOK(username, password, repeatPassword);
         }
-        else if(id == R.id.btn_cancel || id == R.id.btn_cancel_text) { onCancel(); }
-        else if(id == R.id.ll_outside_popup) { onClickOutside(); }
+        else if(id == R.id.appbase_btn_cancel || id == R.id.appbase_btn_cancel_text) { onCancel(); }
+        else if(id == R.id.appbase_ll_outside_popup) { onClickOutside(); }
     }
 
     public PopupRegister(int messageStringId) { this(getString(messageStringId)); }

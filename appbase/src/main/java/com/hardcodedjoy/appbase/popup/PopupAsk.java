@@ -52,18 +52,18 @@ abstract public class PopupAsk extends Popup {
         // first inflate:
         inflater.inflate(R.layout.appbase_popup_ask, this);
 
-        TextView tvTitle = findViewById(R.id.tv_title);
-        TextView tvMessage = findViewById(R.id.tv_message);
+        TextView tvTitle = findViewById(R.id.appbase_tv_title);
+        TextView tvMessage = findViewById(R.id.appbase_tv_message);
 
         if(title != null) tvTitle.setText(title);
 
         if(message == null) { tvMessage.setVisibility(GONE); }
         else { tvMessage.setVisibility(VISIBLE); tvMessage.setText(message); }
 
-        btnOK = findViewById(R.id.btn_ok);
-        btnCancel = findViewById(R.id.btn_cancel);
-        btnPositive = findViewById(R.id.btn_ok_text);
-        btnNegative = findViewById(R.id.btn_cancel_text);
+        btnOK = findViewById(R.id.appbase_btn_ok);
+        btnCancel = findViewById(R.id.appbase_btn_cancel);
+        btnPositive = findViewById(R.id.appbase_btn_ok_text);
+        btnNegative = findViewById(R.id.appbase_btn_cancel_text);
 
         btnOK.setOnClickListener(ocl);
         btnCancel.setOnClickListener(ocl);
@@ -76,9 +76,9 @@ abstract public class PopupAsk extends Popup {
     void oclOnClick(View view) {
         ContentView.removePopUp(this);  // dismiss
         int id = view.getId();
-             if(id == R.id.btn_ok || id == R.id.btn_ok_text) { onOK(); }
-        else if(id == R.id.btn_cancel || id == R.id.btn_cancel_text) { onCancel(); }
-        else if(id == R.id.ll_outside_popup) { onClickOutside(); }
+             if(id == R.id.appbase_btn_ok || id == R.id.appbase_btn_ok_text) { onOK(); }
+        else if(id == R.id.appbase_btn_cancel || id == R.id.appbase_btn_cancel_text) { onCancel(); }
+        else if(id == R.id.appbase_ll_outside_popup) { onClickOutside(); }
     }
 
     public PopupAsk(String title, String message, String positive, String negative) {

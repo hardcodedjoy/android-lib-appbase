@@ -25,7 +25,7 @@ SOFTWARE.
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ll_outside_popup"
+    android:id="@+id/appbase_ll_outside_popup"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -48,7 +48,7 @@ SOFTWARE.
             android:orientation="horizontal"
             android:layout_gravity="center">
             <TextView
-                android:id="@+id/tv_title"
+                android:id="@+id/appbase_tv_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.0"
@@ -60,7 +60,7 @@ SOFTWARE.
                 android:textColor="?android:textColor"
                 tools:ignore="HardcodedText,RtlHardcoded" />
             <ImageButton
-                android:id="@+id/btn_refresh"
+                android:id="@+id/appbase_btn_refresh"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="7.5dp"
@@ -71,7 +71,7 @@ SOFTWARE.
         </LinearLayout>
 
         <TextView
-            android:id="@+id/tv_message"
+            android:id="@+id/appbase_tv_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
@@ -89,7 +89,7 @@ SOFTWARE.
             android:background="?android:textColor"
             tools:ignore="PxUsage" />
         <ScrollView
-            android:id="@+id/sv_options"
+            android:id="@+id/appbase_sv_options"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp"
@@ -105,7 +105,7 @@ SOFTWARE.
                 android:paddingLeft="2.5dp"
                 android:paddingRight="2.5dp">
                 <LinearLayout
-                    android:id="@+id/ll_options"
+                    android:id="@+id/appbase_ll_options"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">

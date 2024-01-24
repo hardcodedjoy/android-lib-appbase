@@ -87,8 +87,8 @@ abstract public class PopupColorPicker extends Popup {
         // first inflate:
         inflater.inflate(R.layout.appbase_popup_color_picker, this);
 
-        TextView tvTitle = findViewById(R.id.tv_title);
-        TextView tvMessage = findViewById(R.id.tv_message);
+        TextView tvTitle = findViewById(R.id.appbase_tv_title);
+        TextView tvMessage = findViewById(R.id.appbase_tv_message);
 
         if(title == null) { tvTitle.setVisibility(GONE); }
         else { tvTitle.setText(title); }
@@ -96,18 +96,18 @@ abstract public class PopupColorPicker extends Popup {
         if(message == null) { tvMessage.setVisibility(GONE); }
         else { tvMessage.setVisibility(VISIBLE); tvMessage.setText(message); }
 
-        btnOK = findViewById(R.id.btn_ok);
-        btnCancel = findViewById(R.id.btn_cancel);
-        btnPositive = findViewById(R.id.btn_ok_text);
-        btnNegative = findViewById(R.id.btn_cancel_text);
+        btnOK = findViewById(R.id.appbase_btn_ok);
+        btnCancel = findViewById(R.id.appbase_btn_cancel);
+        btnPositive = findViewById(R.id.appbase_btn_ok_text);
+        btnNegative = findViewById(R.id.appbase_btn_cancel_text);
 
-        ivSaturationLightness = findViewById(R.id.iv_saturation_lightness);
-        ivHue = findViewById(R.id.iv_hue);
-        ImageView ivColorOld = findViewById(R.id.iv_color_old);
-        ivColorCurrent = findViewById(R.id.iv_color_current);
+        ivSaturationLightness = findViewById(R.id.appbase_iv_saturation_lightness);
+        ivHue = findViewById(R.id.appbase_iv_hue);
+        ImageView ivColorOld = findViewById(R.id.appbase_iv_color_old);
+        ivColorCurrent = findViewById(R.id.appbase_iv_color_current);
 
-        sbOpacity = findViewById(R.id.sb_current_opacity);
-        etCodeARGB = findViewById(R.id.et_current_argb_code);
+        sbOpacity = findViewById(R.id.appbase_sb_current_opacity);
+        etCodeARGB = findViewById(R.id.appbase_et_current_argb_code);
 
         btnOK.setOnClickListener(ocl);
         btnCancel.setOnClickListener(ocl);
@@ -234,9 +234,9 @@ abstract public class PopupColorPicker extends Popup {
         ContentView.removePopUp(this);  // dismiss
 
         int id = view.getId();
-        if(id == R.id.btn_ok || id == R.id.btn_ok_text) { onOK(colorCurrent); }
-        else if(id == R.id.btn_cancel || id == R.id.btn_cancel_text) { onCancel(); }
-        else if(id == R.id.ll_outside_popup) { onClickOutside(); }
+        if(id == R.id.appbase_btn_ok || id == R.id.appbase_btn_ok_text) { onOK(colorCurrent); }
+        else if(id == R.id.appbase_btn_cancel || id == R.id.appbase_btn_cancel_text) { onCancel(); }
+        else if(id == R.id.appbase_ll_outside_popup) { onClickOutside(); }
     }
 
     public PopupColorPicker(String title, String message, String positive, String negative, int colorOld) {

@@ -50,7 +50,7 @@ SOFTWARE.
             tools:ignore="ContentDescription,RtlHardcoded" />
 
         <TextView
-            android:id="@+id/tv_title"
+            android:id="@+id/appbase_tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -79,7 +79,7 @@ SOFTWARE.
                 android:text="@string/theme" />
 
             <RadioGroup
-                android:id="@+id/rg_theme"
+                android:id="@+id/appbase_rg_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -106,8 +106,7 @@ SOFTWARE.
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.0"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
+                    android:layout_margin="2.5dp"
                     android:text="btn"
                     tools:ignore="HardcodedText" />
 
@@ -115,6 +114,7 @@ SOFTWARE.
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1.0"
+                    android:layout_margin="2.5dp"
                     android:src="@drawable/ic_dialog_cancel"
                     android:tint="?attr/appBaseColorButtonTextRed"
                     tools:ignore="ContentDescription" />
@@ -123,6 +123,7 @@ SOFTWARE.
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1.0"
+                    android:layout_margin="2.5dp"
                     android:src="@drawable/ic_dialog_ok"
                     android:tint="?attr/appBaseColorButtonTextGreen"
                     tools:ignore="ContentDescription" />
@@ -132,9 +133,14 @@ SOFTWARE.
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
                 android:text="disabled button"
                 android:enabled="false"
-                tools:ignore="HardcodedText"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"/>
 
             <LinearLayout
@@ -146,8 +152,7 @@ SOFTWARE.
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.0"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
+                    android:layout_margin="2.5dp"
                     android:text="btn"
                     tools:ignore="HardcodedText"
                     style="@style/Button2" />
@@ -156,6 +161,7 @@ SOFTWARE.
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1.0"
+                    android:layout_margin="2.5dp"
                     android:src="@drawable/ic_dialog_cancel"
                     android:tint="?attr/appBaseColorButtonTextRed"
                     tools:ignore="ContentDescription"
@@ -165,6 +171,7 @@ SOFTWARE.
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1.0"
+                    android:layout_margin="2.5dp"
                     android:src="@drawable/ic_dialog_ok"
                     android:tint="?attr/appBaseColorButtonTextGreen"
                     tools:ignore="ContentDescription"
@@ -175,10 +182,15 @@ SOFTWARE.
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
                 android:text="disabled button"
                 android:enabled="false"
                 tools:ignore="HardcodedText"
-                style="@style/Button2"
+                style="@style/Button2" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"/>
 
             <SeekBar
@@ -187,6 +199,12 @@ SOFTWARE.
                 android:max="100"
                 android:progress="40"
                 android:layout_marginBottom="20dp"/>
+
+            <ToggleButton
+                android:id="@+id/appbase_tb_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_margin="5dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"

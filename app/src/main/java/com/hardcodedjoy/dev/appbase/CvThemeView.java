@@ -55,7 +55,7 @@ public class CvThemeView extends ContentView {
         RadioGroup rg;
         RadioButton rb;
 
-        rg = findViewById(com.hardcodedjoy.appbase.R.id.rg_theme);
+        rg = findViewById(com.hardcodedjoy.appbase.R.id.appbase_rg_theme);
         rg.removeAllViews();
 
         String[] themes = ThemeUtil.getThemes(getActivity());

@@ -68,11 +68,11 @@ public class PopupChoose extends Popup {
         // first inflate:
         inflater.inflate(R.layout.appbase_popup_chooser_input, this);
 
-        final TextView tvTitle = findViewById(R.id.tv_title);
-        final TextView tvMessage = findViewById(R.id.tv_message);
-        llOptions = findViewById(R.id.ll_options);
-        btnAdd = findViewById(R.id.btn_add);
-        btnRefresh = findViewById(R.id.btn_refresh);
+        final TextView tvTitle = findViewById(R.id.appbase_tv_title);
+        final TextView tvMessage = findViewById(R.id.appbase_tv_message);
+        llOptions = findViewById(R.id.appbase_ll_options);
+        btnAdd = findViewById(R.id.appbase_btn_add);
+        btnRefresh = findViewById(R.id.appbase_btn_refresh);
 
         tvTitle.setText(title);
         if(message == null) { tvMessage.setVisibility(GONE); }
@@ -147,16 +147,16 @@ public class PopupChoose extends Popup {
             inflater.inflate(R.layout.appbase_popup_ci_opt_ic, llOptions);
 
             vOption = llOptions.getChildAt(i);
-            button = vOption.findViewById(R.id.btn_option);
+            button = vOption.findViewById(R.id.appbase_btn_option);
             button.setId(i);
-            TextView tvText = vOption.findViewById(R.id.tv_text);
+            TextView tvText = vOption.findViewById(R.id.appbase_tv_text);
             if(option.getName() != null) {
                 tvText.setText(option.getName());
             } else if(option.getNameId() != 0) {
                 tvText.setText(option.getNameId());
             }
             smallerLongLines(vOption);
-            ImageView ivIcon = vOption.findViewById(R.id.iv_icon);
+            ImageView ivIcon = vOption.findViewById(R.id.appbase_iv_icon);
 
             if(option.getIconBitmap() != null) {
                 ivIcon.setImageBitmap(option.getIconBitmap());
@@ -201,12 +201,12 @@ public class PopupChoose extends Popup {
         }
 
         int id = view.getId();
-        if(id == R.id.btn_add) {
+        if(id == R.id.appbase_btn_add) {
             ContentView.removePopUp(PopupChoose.this); // dismiss
             onOther();
-        } else if(id == R.id.btn_refresh) {
+        } else if(id == R.id.appbase_btn_refresh) {
             onRefresh();
-        } else if(id == R.id.ll_outside_popup) {
+        } else if(id == R.id.appbase_ll_outside_popup) {
             onClickOutside();
         }
     }
@@ -225,7 +225,7 @@ public class PopupChoose extends Popup {
 
     static private void smallerLongLines(View vOption) {
 
-        TextView tvText = vOption.findViewById(R.id.tv_text);
+        TextView tvText = vOption.findViewById(R.id.appbase_tv_text);
 
         String text = tvText.getText().toString();
 

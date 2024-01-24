@@ -47,9 +47,9 @@ public class PopupProgress extends Popup {
         // first inflate:
         inflater.inflate(R.layout.appbase_popup_progress, this);
 
-        TextView tvTitle = findViewById(R.id.tv_title);
-        tvMessage = findViewById(R.id.tv_message);
-        progressBar = findViewById(R.id.pb_progress);
+        TextView tvTitle = findViewById(R.id.appbase_tv_title);
+        tvMessage = findViewById(R.id.appbase_tv_message);
+        progressBar = findViewById(R.id.appbase_pb_progress);
 
         if(title != null) tvTitle.setText(title);
 
@@ -59,7 +59,7 @@ public class PopupProgress extends Popup {
         progressBar.setMax(1000);
         progressBar.setProgress(0);
 
-        ImageButton btnCancel = findViewById(R.id.btn_cancel);
+        ImageButton btnCancel = findViewById(R.id.appbase_btn_cancel);
         btnCancel.setOnClickListener(ocl);
     }
 

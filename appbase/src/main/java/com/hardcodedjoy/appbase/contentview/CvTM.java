@@ -64,7 +64,8 @@ public class CvTM extends ContentView { // Content View with Title and Menu
         llMenuOptions.removeAllViews();
         Button button;
         LinearLayout.LayoutParams params;
-        int margin = DisplayUnit.dpToPx(3.75f);
+        int padding = DisplayUnit.dpToPx(5.0f);
+        int margin = DisplayUnit.dpToPx(2.5f);
 
         for(MenuOption option : menuOptions) {
             button = new Button(getActivity());
@@ -75,6 +76,7 @@ public class CvTM extends ContentView { // Content View with Title and Menu
                 option.getRunnable().run();
             });
             button.setGravity(Gravity.LEFT);
+            button.setPadding(padding, padding, padding, padding);
 
             params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
             params.setMargins(margin, margin, margin, margin);

@@ -26,12 +26,19 @@ SOFTWARE.
 
 package com.hardcodedjoy.appbase;
 
+import android.app.Activity;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.media.ExifInterface;
 import android.util.Size;
+
+import com.hardcodedjoy.appbase.contentview.ContentView;
+import com.hardcodedjoy.appbase.gui.ThemeUtil;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -194,5 +201,36 @@ public class ImageUtil {
 
         ImageUtil.saveAsJPG(bitmap, os, jpegQuality);
         os.close();
+    }
+
+    static public Bitmap drawableToBitmap(Drawable drawable) {
+        Bitmap bitmap = Bitmap.createBitmap(
+                drawable.getIntrinsicWidth(),
+                drawable.getIntrinsicHeight(),
+                Bitmap.Config.ARGB_8888);
+        bitmap.eraseColor(0x00000000);
+        Canvas canvas = new Canvas(bitmap);
+        drawable.setBounds(0, 0, bitmap.getWidth(), bitmap.getHeight());
+        drawable.draw(canvas);
+        return bitmap;
+    }
+
+    static public Bitmap drawableToBitmap(Drawable drawable, int w, int h) {
+        Bitmap bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+        bitmap.eraseColor(0x00000000);
+        Canvas canvas = new Canvas(bitmap);
+        drawable.setBounds(0, 0, bitmap.getWidth(), bitmap.getHeight());
+        drawable.draw(canvas);
+        return bitmap;
+    }
+
+    static public BitmapDrawable bitmapToDrawable(Bitmap bitmap) {
+        return new BitmapDrawable(ContentView.getActivity().getResources(), bitmap);
+    }
+
+    static public Drawable getDrawable(int resId) {
+        Activity activity = ContentView.getActivity();
+        Resources.Theme theme = activity.getTheme();
+        return activity.getResources().getDrawable(resId, theme);
     }
 }

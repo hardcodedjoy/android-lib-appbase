@@ -46,9 +46,9 @@ public class PopupError extends Popup {
 
         inflater.inflate(R.layout.appbase_popup_error, this);
 
-        TextView tvTitle = findViewById(R.id.tv_title);
-        TextView tvMessage = findViewById(R.id.tv_message);
-        ImageButton btnCancel = findViewById(R.id.btn_cancel);
+        TextView tvTitle = findViewById(R.id.appbase_tv_title);
+        TextView tvMessage = findViewById(R.id.appbase_tv_message);
+        ImageButton btnCancel = findViewById(R.id.appbase_btn_cancel);
 
         if(title != null) { tvTitle.setText(title); }
 

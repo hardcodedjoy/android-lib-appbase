@@ -47,17 +47,17 @@ abstract public class PopupCustom extends Popup {
         // first inflate:
         inflater.inflate(R.layout.appbase_popup_custom, this);
 
-        TextView tvTitle = findViewById(R.id.tv_title);
-        tvMessage = findViewById(R.id.tv_message);
-        llContent = findViewById(R.id.ll_content);
+        TextView tvTitle = findViewById(R.id.appbase_tv_title);
+        tvMessage = findViewById(R.id.appbase_tv_message);
+        llContent = findViewById(R.id.appbase_ll_content);
 
         if(title != null) { tvTitle.setText(title); }
 
         if(message == null) { tvMessage.setVisibility(GONE); }
         else { tvMessage.setVisibility(VISIBLE); tvMessage.setText(message); }
 
-        findViewById(R.id.btn_ok).setOnClickListener(ocl);
-        findViewById(R.id.btn_cancel).setOnClickListener(ocl);
+        findViewById(R.id.appbase_btn_ok).setOnClickListener(ocl);
+        findViewById(R.id.appbase_btn_cancel).setOnClickListener(ocl);
     }
 
     @Override
@@ -65,9 +65,9 @@ abstract public class PopupCustom extends Popup {
         ContentView.removePopUp(this); // dismiss
 
         int id = view.getId();
-        if(id == R.id.btn_ok || id == R.id.btn_ok_text) { onOK(); }
-        else if(id == R.id.btn_cancel || id == R.id.btn_cancel_text) { onCancel(); }
-        else if(id == R.id.ll_outside_popup) { onClickOutside(); }
+        if(id == R.id.appbase_btn_ok || id == R.id.appbase_btn_ok_text) { onOK(); }
+        else if(id == R.id.appbase_btn_cancel || id == R.id.appbase_btn_cancel_text) { onCancel(); }
+        else if(id == R.id.appbase_ll_outside_popup) { onClickOutside(); }
     }
 
     public PopupCustom(String title) { this(title, null); }
@@ -105,7 +105,7 @@ abstract public class PopupCustom extends Popup {
     }
 
     public void hideButtonsOkCancel() {
-        findViewById(R.id.btn_ok).setVisibility(GONE);
-        findViewById(R.id.btn_cancel).setVisibility(GONE);
+        findViewById(R.id.appbase_btn_ok).setVisibility(GONE);
+        findViewById(R.id.appbase_btn_cancel).setVisibility(GONE);
     }
 }

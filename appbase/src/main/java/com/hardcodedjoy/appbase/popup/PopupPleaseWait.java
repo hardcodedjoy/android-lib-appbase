@@ -49,9 +49,9 @@ public class PopupPleaseWait extends Popup {
         // first inflate:
         inflater.inflate(R.layout.appbase_popup_please_wait, this);
 
-        tvMessage = findViewById(R.id.tv_message);
-        final ImageView ivLoadingSpinner = findViewById(R.id.iv_loading_spinner);
-        ImageButton btnCancel = findViewById(R.id.btn_cancel);
+        tvMessage = findViewById(R.id.appbase_tv_message);
+        final ImageView ivLoadingSpinner = findViewById(R.id.appbase_iv_loading_spinner);
+        ImageButton btnCancel = findViewById(R.id.appbase_btn_cancel);
 
         if(message != null) { tvMessage.setText(message); }
 

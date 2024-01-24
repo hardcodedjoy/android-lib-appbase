@@ -30,6 +30,8 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.graphics.Point;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -51,7 +53,9 @@ import java.util.Locale;
 public class ContentView extends LinearLayout {
 
     static private SingleActivity activity;
+    static private Display display;
     static private LayoutInflater inflater;
+    static private String appLanguageCode;
 
     static protected Object settings;
 
@@ -61,6 +65,13 @@ public class ContentView extends LinearLayout {
 
     static public void setActivity(SingleActivity activity) {
         ContentView.activity = activity;
+
+        if(android.os.Build.VERSION.SDK_INT >= 30) {
+            ContentView.display = activity.getDisplay();
+        } else {
+            ContentView.display = activity.getWindow().getWindowManager().getDefaultDisplay();
+        }
+
         ContentView.inflater = activity.getLayoutInflater();
         ContentView.settings = activity.getSettings();
         String langCode = ((Settings)settings).getAppLanguageCode();
@@ -86,6 +97,24 @@ public class ContentView extends LinearLayout {
 
     public void onPause() {}
     public void onResume() {}
+
+    public int getDisplayWidth() {
+        Point displaySize = new Point();
+        display.getSize(displaySize);
+        return displaySize.x;
+    }
+
+    public int getDisplayHeight() {
+        Point displaySize = new Point();
+        display.getSize(displaySize);
+        return displaySize.y;
+    }
+
+    @SuppressWarnings("unused")
+    public boolean isPortrait() { return ( getDisplayHeight() > getDisplayWidth()); }
+
+    @SuppressWarnings("unused")
+    public boolean isLandscape() { return ( getDisplayHeight() < getDisplayWidth()); }
 
     // to be overridden by apps that can be started by intents other than Intent.ACTION_MAIN
     // @NonNull intent, @NonNull intent.getAction()
@@ -178,9 +207,9 @@ public class ContentView extends LinearLayout {
     }
 
     static public void setAppLanguage(String languageCode) {
-        languageCode = LanguageUtil.getAvailableLanguageCode(languageCode);
-        // languageCode is available
-        Locale locale = new Locale(languageCode);
+        appLanguageCode = LanguageUtil.getAvailableLanguageCode(languageCode);
+        // appLanguageCode is available
+        Locale locale = new Locale(appLanguageCode);
         Locale.setDefault(locale);
         Resources resources = activity.getResources();
         Configuration config = resources.getConfiguration();
@@ -188,9 +217,12 @@ public class ContentView extends LinearLayout {
         resources.updateConfiguration(config, resources.getDisplayMetrics());
     }
 
+    static public String getAppLanguage() { return appLanguageCode; }
+
     static public void makeToast(String st) {
         activity.runOnUiThread(() -> Toast.makeText(activity, st, Toast.LENGTH_LONG).show());
     }
 
+    @SuppressWarnings("unused")
     static public void makeToast(int stringId) { makeToast(getString(stringId)); }
 }

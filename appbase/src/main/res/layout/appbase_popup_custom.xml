@@ -25,7 +25,7 @@ SOFTWARE.
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ll_outside_popup"
+    android:id="@+id/appbase_ll_outside_popup"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -59,7 +59,7 @@ SOFTWARE.
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/ll_content"
+                    android:id="@+id/appbase_ll_content"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"

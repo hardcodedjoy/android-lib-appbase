@@ -68,7 +68,7 @@ public class CvLicense extends CvTSLL {
             "SOFTWARE.";
 
     public CvLicense() {
-        TextView tv = findViewById(R.id.tv_title);
+        TextView tv = findViewById(R.id.appbase_tv_title);
         tv.setText(R.string.mit_license);
 
         tv = new TextView(getActivity());
@@ -80,7 +80,7 @@ public class CvLicense extends CvTSLL {
         params.setMargins(marginPx, marginPx, marginPx, marginPx);
         tv.setLayoutParams(params);
 
-        LinearLayout llContent = findViewById(R.id.ll_content);
+        LinearLayout llContent = findViewById(R.id.appbase_ll_content);
         llContent.addView(tv);
     }
 

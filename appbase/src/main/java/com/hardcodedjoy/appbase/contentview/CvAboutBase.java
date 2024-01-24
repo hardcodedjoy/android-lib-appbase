@@ -34,21 +34,33 @@ import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.hardcodedjoy.appbase.AppBase;
+import com.hardcodedjoy.appbase.IntentUtil;
 import com.hardcodedjoy.appbase.R;
+import com.hardcodedjoy.appbase.gui.ThemeUtil;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Vector;
 
 @SuppressLint("ViewConstructor")
 public class CvAboutBase extends ContentView {
 
     static private String appVersion = "Unknown app version -> must be set using static { CvAboutBase.setAppVersion(BuildConfig.VERSION_NAME, BuildConfig.TIMESTAMP); } in MainActivity.";
     static private String infoAboutOpenSourceLibs = AppBase.about();
+
+    static private int appUsageType = 0;
+    static private String linkEULA = null;
+    static private String linkShareApp = null;
+    static private String linkRateApp = null;
+
+    static private final Vector<String> otherAppNames = new Vector<>();
+    static private final Vector<String> otherAppURLs = new Vector<>();
 
     public CvAboutBase() {
         inflate(R.layout.appbase_cv_about);
@@ -57,42 +69,82 @@ public class CvAboutBase extends ContentView {
         String s;
         String url;
 
-        tv = findViewById(R.id.tv_app_version);
+        tv = findViewById(R.id.appbase_tv_app_version);
         tv.setText(appVersion);
 
-        tv = findViewById(R.id.tv_dev_website);
+        if(appUsageType == 0) {
+            findViewById(R.id.appbase_tv_app_usage_type).setVisibility(GONE);
+        } else {
+            tv = findViewById(R.id.appbase_tv_app_usage_type);
+            tv.setText(appUsageType);
+        }
+
+        if(linkEULA == null) {
+            findViewById(R.id.appbase_tv_eula).setVisibility(GONE);
+        } else {
+            tv = findViewById(R.id.appbase_tv_eula);
+            s = tv.getText().toString();
+            s = "<a href=\"" + linkEULA + "\">" + s + "</a>";
+            setAsLink(tv, s);
+        }
+
+        if(linkRateApp == null) {
+            findViewById(R.id.appbase_tv_rate_app).setVisibility(GONE);
+        } else {
+            tv = findViewById(R.id.appbase_tv_rate_app);
+            s = tv.getText().toString();
+            s = "<a href=\"" + linkRateApp + "\">" + s + "</a>";
+            setAsLink(tv, s);
+        }
+
+        if(linkShareApp == null) {
+            findViewById(R.id.appbase_tv_share_app).setVisibility(GONE);
+        } else {
+            tv = findViewById(R.id.appbase_tv_share_app);
+            s = tv.getText().toString();
+            tv.setText(fromHTML("<u>" + s + "</u>"));
+            tv.setTextColor(ThemeUtil.getColor(getActivity(), android.R.attr.textColorLink));
+
+            tv.setOnClickListener(view -> {
+                String title = getResources().getString(R.string.share) + " "
+                             + getResources().getString(R.string.app_name);
+                IntentUtil.shareText(linkShareApp, title);
+            });
+        }
+
+        tv = findViewById(R.id.appbase_tv_dev_website);
         s = tv.getText().toString();
         s = "<a href=\"" + s + "\">" + s + "</a>";
         setAsLink(tv, s);
 
-        tv = findViewById(R.id.tv_insta_page);
+        tv = findViewById(R.id.appbase_tv_insta_page);
         s = tv.getText().toString();
         s = "<a href=\"https://instagram.com/" + s.substring(1) + "\">" + s + "</a>";
         setAsLink(tv, s);
-        findViewById(R.id.ll_insta_page).setOnClickListener(
-                (view) -> findViewById(R.id.tv_insta_page).performClick());
+        findViewById(R.id.appbase_ll_insta_page).setOnClickListener(
+                (view) -> findViewById(R.id.appbase_tv_insta_page).performClick());
 
-        tv = findViewById(R.id.tv_youtube_channel);
+        tv = findViewById(R.id.appbase_tv_youtube_channel);
         s = tv.getText().toString();
         s = "<a href=\"https://youtube.com/" + s + "\">" + s + "</a>";
         setAsLink(tv, s);
-        findViewById(R.id.ll_youtube_channel).setOnClickListener(
-                (view) -> findViewById(R.id.tv_youtube_channel).performClick());
+        findViewById(R.id.appbase_ll_youtube_channel).setOnClickListener(
+                (view) -> findViewById(R.id.appbase_tv_youtube_channel).performClick());
 
-        tv = findViewById(R.id.tv_github);
+        tv = findViewById(R.id.appbase_tv_github);
         s = tv.getText().toString();
         s = "<a href=\"https://github.com/" + s + "\">" + s + "</a>";
         setAsLink(tv, s);
-        findViewById(R.id.ll_github).setOnClickListener(
-                (view) -> findViewById(R.id.tv_github).performClick());
+        findViewById(R.id.appbase_ll_github).setOnClickListener(
+                (view) -> findViewById(R.id.appbase_tv_github).performClick());
 
-        tv = findViewById(R.id.tv_privacy_policy);
+        tv = findViewById(R.id.appbase_tv_privacy_policy);
         s = tv.getText().toString();
         url = getPrivacyPolicyURL(getContext().getPackageName(), "en");
         s = "<a href=\"" + url + "\">" + s + "</a>";
         setAsLink(tv, s);
 
-        tv = findViewById(R.id.tv_app_uses_open_source_libs);
+        tv = findViewById(R.id.appbase_tv_app_uses_open_source_libs);
         s = tv.getText().toString();
 
         // after second space from end, without space:
@@ -112,6 +164,22 @@ public class CvAboutBase extends ContentView {
         tv.setText(spannableString);
         tv.setClickable(true);
         tv.setMovementMethod(LinkMovementMethod.getInstance());
+
+        if(otherAppNames.size() == 0) {
+            findViewById(R.id.appbase_tv_you_might_also_like).setVisibility(GONE);
+            findViewById(R.id.appbase_ll_links_to_other_apps).setVisibility(GONE);
+        } else {
+            LinearLayout ll = findViewById(R.id.appbase_ll_links_to_other_apps);
+            ll.removeAllViews();
+            int n = otherAppNames.size();
+            for(int i=0; i<n; i++) {
+                tv = new TextView(getActivity());
+                s = otherAppNames.elementAt(i);
+                s = "<a href=\"" + otherAppURLs.elementAt(i) + "\">" + s + "</a>";
+                setAsLink(tv, s);
+                ll.addView(tv);
+            }
+        }
     }
 
     @SuppressWarnings("deprecation")
@@ -141,4 +209,22 @@ public class CvAboutBase extends ContentView {
 
     @SuppressWarnings("unused")
     static public void addInfoAboutOpenSourceLib(String s) { infoAboutOpenSourceLibs += "\n" + s; }
+
+    @SuppressWarnings("unused")
+    static public void addLinkToOtherApp(String appName, String url) {
+        otherAppNames.add(appName);
+        otherAppURLs.add(url);
+    }
+
+    @SuppressWarnings("unused")
+    static public void setAppUsageType(int resStringId) { appUsageType = resStringId; }
+
+    @SuppressWarnings("unused")
+    static public void setLinkEULA(String s) { linkEULA = s; }
+
+    @SuppressWarnings("unused")
+    static public void setLinkRateApp(String s) { linkRateApp = s; }
+
+    @SuppressWarnings("unused")
+    static public void setLinkShareApp(String s) { linkShareApp = s; }
 }

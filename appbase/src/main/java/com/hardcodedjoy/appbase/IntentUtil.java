@@ -99,6 +99,13 @@ public class IntentUtil {
         shareFiles(uriList, title, mimeType, packageName);
     }
 
+    static public void shareText(String text, String title) {
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.putExtra(Intent.EXTRA_TEXT, text);
+        shareIntent.setType("text/plain");
+        activity.startActivity(Intent.createChooser(shareIntent, title));
+    }
+
     static public void viewFile(Uri uri, String mimeType, int flags) {
         viewFile(uri, mimeType, null, flags);
     }

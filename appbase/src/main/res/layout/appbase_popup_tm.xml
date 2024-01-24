@@ -31,7 +31,7 @@ SOFTWARE.
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tv_title"
+        android:id="@+id/appbase_tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
@@ -42,7 +42,7 @@ SOFTWARE.
         tools:ignore="HardcodedText,RtlHardcoded" />
 
     <TextView
-        android:id="@+id/tv_message"
+        android:id="@+id/appbase_tv_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"

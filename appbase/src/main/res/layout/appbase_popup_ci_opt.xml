@@ -32,7 +32,7 @@ SOFTWARE.
     android:clickable="true"
     android:focusable="true">
     <RadioButton
-        android:id="@+id/rb_radiobutton"
+        android:id="@+id/appbase_rb_radiobutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
@@ -54,7 +54,7 @@ SOFTWARE.
         android:focusableInTouchMode="false"
         android:focusable="false">
         <TextView
-            android:id="@+id/tv_text"
+            android:id="@+id/appbase_tv_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="false"

@@ -48,6 +48,7 @@ SOFTWARE.
     <color name="whiteA20">#20FFFFFF</color>
 
     <color name="seaSalt">#FFE0F0F0</color>
+    <color name="seaSaltA80">#80E0F0F0</color>
     <color name="seaSaltA60">#60E0F0F0</color>
     <color name="seaSaltA40">#40E0F0F0</color>
     <color name="seaSaltA30">#30E0F0F0</color>
@@ -55,12 +56,14 @@ SOFTWARE.
     <color name="seaSaltA10">#10E0F0F0</color>
 
     <color name="platinum">#FFDDDDDD</color>
+    <color name="platinumA80">#80DDDDDD</color>
     <color name="platinumA60">#60DDDDDD</color>
     <color name="platinumA40">#40DDDDDD</color>
     <color name="platinumA30">#30DDDDDD</color>
     <color name="platinumA20">#20DDDDDD</color>
 
     <color name="silver">#FFD0D0D0</color>
+    <color name="silverA80">#80D0D0D0</color>
     <color name="silverA60">#60D0D0D0</color>
     <color name="silverA40">#40D0D0D0</color>
     <color name="silverA30">#30D0D0D0</color>
@@ -69,6 +72,7 @@ SOFTWARE.
     <color name="silverA05">#05D0D0D0</color>
     
     <color name="charcoal">#FF2C3C4C</color>
+    <color name="charcoalA80">#802C3C4C</color>
     <color name="charcoalA60">#602C3C4C</color>
     <color name="charcoalA40">#402C3C4C</color>
     <color name="charcoalA30">#302C3C4C</color>
@@ -76,12 +80,14 @@ SOFTWARE.
     <color name="charcoalA10">#102C3C4C</color>
 
     <color name="jet">#FF303030</color>
+    <color name="jetA80">#80303030</color>
     <color name="jetA60">#60303030</color>
     <color name="jetA40">#40303030</color>
     <color name="jetA30">#30303030</color>
     <color name="jetA20">#20303030</color>
 
     <color name="pennBlue">#FF202060</color>
+    <color name="pennBlueA80">#80202060</color>
     <color name="pennBlueA60">#60202060</color>
     <color name="pennBlueA40">#40202060</color>
     <color name="pennBlueA30">#30202060</color>

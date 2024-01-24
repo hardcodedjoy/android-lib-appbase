@@ -38,14 +38,14 @@ SOFTWARE.
         tools:ignore="RtlHardcoded,UselessParent">
 
         <Button
-            android:id="@+id/btn_about"
+            android:id="@+id/appbase_btn_about"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical|left"
             android:text="@string/about" />
 
         <Button
-            android:id="@+id/btn_settings"
+            android:id="@+id/appbase_btn_settings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical|left"

@@ -33,7 +33,6 @@ SOFTWARE.
     android:background="?android:colorBackground">
 
     <FrameLayout
-        android:id="@+id/fl_title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?android:colorForeground"
@@ -41,7 +40,7 @@ SOFTWARE.
         android:paddingRight="10dp">
 
         <TextView
-            android:id="@+id/tv_title"
+            android:id="@+id/appbase_tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|left"
@@ -51,7 +50,7 @@ SOFTWARE.
             tools:ignore="RtlHardcoded" />
 
         <ImageView
-            android:id="@+id/iv_menu"
+            android:id="@+id/appbase_iv_menu"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="5dp"
@@ -69,7 +68,7 @@ SOFTWARE.
         android:layout_height="match_parent"
         android:padding="5dp">
         <LinearLayout
-            android:id="@+id/ll_content"
+            android:id="@+id/appbase_ll_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
@@ -80,7 +79,7 @@ SOFTWARE.
                 android:layout_height="wrap_content"
                 android:text="@string/popup_ask"
                 android:textAllCaps="false"
-                style="@style/Margin375" />
+                android:layout_margin="5dp" />
 
             <Button
                 android:id="@+id/btn_popup_choose"
@@ -88,7 +87,7 @@ SOFTWARE.
                 android:layout_height="wrap_content"
                 android:text="@string/popup_choose"
                 android:textAllCaps="false"
-                style="@style/Margin375" />
+                android:layout_margin="5dp" />
 
             <Button
                 android:id="@+id/btn_popup_color_picker"
@@ -96,7 +95,7 @@ SOFTWARE.
                 android:layout_height="wrap_content"
                 android:text="@string/popup_color_picker"
                 android:textAllCaps="false"
-                style="@style/Margin375" />
+                android:layout_margin="5dp" />
 
             <Button
                 android:id="@+id/btn_popup_custom"
@@ -104,7 +103,7 @@ SOFTWARE.
                 android:layout_height="wrap_content"
                 android:text="@string/popup_custom"
                 android:textAllCaps="false"
-                style="@style/Margin375" />
+                android:layout_margin="5dp" />
 
             <Button
                 android:id="@+id/btn_popup_error"
@@ -112,7 +111,7 @@ SOFTWARE.
                 android:layout_height="wrap_content"
                 android:text="@string/popup_error"
                 android:textAllCaps="false"
-                style="@style/Margin375" />
+                android:layout_margin="5dp" />
 
             <Button
                 android:id="@+id/btn_popup_image"
@@ -120,7 +119,7 @@ SOFTWARE.
                 android:layout_height="wrap_content"
                 android:text="@string/popup_image"
                 android:textAllCaps="false"
-                style="@style/Margin375" />
+                android:layout_margin="5dp" />
 
             <Button
                 android:id="@+id/btn_popup_info"
@@ -128,7 +127,7 @@ SOFTWARE.
                 android:layout_height="wrap_content"
                 android:text="@string/popup_info"
                 android:textAllCaps="false"
-                style="@style/Margin375" />
+                android:layout_margin="5dp" />
 
             <Button
                 android:id="@+id/btn_popup_input"
@@ -136,7 +135,7 @@ SOFTWARE.
                 android:layout_height="wrap_content"
                 android:text="@string/popup_input"
                 android:textAllCaps="false"
-                style="@style/Margin375" />
+                android:layout_margin="5dp" />
 
             <Button
                 android:id="@+id/btn_popup_please_wait"
@@ -144,7 +143,7 @@ SOFTWARE.
                 android:layout_height="wrap_content"
                 android:text="@string/popup_please_wait"
                 android:textAllCaps="false"
-                style="@style/Margin375" />
+                android:layout_margin="5dp" />
 
             <Button
                 android:id="@+id/btn_popup_progress"
@@ -152,7 +151,7 @@ SOFTWARE.
                 android:layout_height="wrap_content"
                 android:text="@string/popup_progress"
                 android:textAllCaps="false"
-                style="@style/Margin375" />
+                android:layout_margin="5dp" />
 
             <Button
                 android:id="@+id/btn_popup_sel_time_interval"
@@ -160,7 +159,7 @@ SOFTWARE.
                 android:layout_height="wrap_content"
                 android:text="@string/popup_sel_time_interval"
                 android:textAllCaps="false"
-                style="@style/Margin375" />
+                android:layout_margin="5dp" />
 
             <Button
                 android:id="@+id/btn_popup_set_password"
@@ -168,7 +167,7 @@ SOFTWARE.
                 android:layout_height="wrap_content"
                 android:text="@string/popup_set_password"
                 android:textAllCaps="false"
-                style="@style/Margin375" />
+                android:layout_margin="5dp" />
 
             <Button
                 android:id="@+id/btn_popup_enter_password"
@@ -176,7 +175,7 @@ SOFTWARE.
                 android:layout_height="wrap_content"
                 android:text="@string/popup_enter_password"
                 android:textAllCaps="false"
-                style="@style/Margin375" />
+                android:layout_margin="5dp" />
 
             <Button
                 android:id="@+id/btn_popup_register"
@@ -184,7 +183,7 @@ SOFTWARE.
                 android:layout_height="wrap_content"
                 android:text="@string/popup_register"
                 android:textAllCaps="false"
-                style="@style/Margin375" />
+                android:layout_margin="5dp" />
 
             <Button
                 android:id="@+id/btn_popup_login"
@@ -192,7 +191,7 @@ SOFTWARE.
                 android:layout_height="wrap_content"
                 android:text="@string/popup_login"
                 android:textAllCaps="false"
-                style="@style/Margin375" />
+                android:layout_margin="5dp" />
 
         </LinearLayout>
     </ScrollView>

@@ -32,40 +32,44 @@ SOFTWARE.
     android:orientation="horizontal">
 
     <ImageButton
-        android:id="@+id/btn_cancel"
+        android:id="@+id/appbase_btn_cancel"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="36dp"
         android:layout_weight="1.0"
         android:src="@drawable/ic_dialog_cancel"
         android:tint="?attr/appBaseColorButtonTextRed"
         tools:ignore="ContentDescription"
-        style="@style/Margin375" />
+        android:padding="5dp"
+        android:layout_margin="5dp" />
 
     <ImageButton
-        android:id="@+id/btn_ok"
+        android:id="@+id/appbase_btn_ok"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="36dp"
         android:layout_weight="1.0"
         android:src="@drawable/ic_dialog_ok"
         android:tint="?attr/appBaseColorButtonTextGreen"
         tools:ignore="ContentDescription"
-        style="@style/Margin375" />
+        android:padding="5dp"
+        android:layout_margin="5dp" />
 
     <Button
-        android:id="@+id/btn_cancel_text"
+        android:id="@+id/appbase_btn_cancel_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1.0"
         android:text="@string/btn_cancel"
         android:visibility="gone"
-        style="@style/Margin375" />
+        android:padding="6dp"
+        android:layout_margin="5dp" />
 
     <Button
-        android:id="@+id/btn_ok_text"
+        android:id="@+id/appbase_btn_ok_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1.0"
         android:text="@string/btn_ok"
         android:visibility="gone"
-        style="@style/Margin375" />
+        android:padding="6dp"
+        android:layout_margin="5dp" />
 </LinearLayout>

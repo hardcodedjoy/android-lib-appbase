@@ -56,29 +56,29 @@ public class CvSettingsBase extends ContentView {
 
         settings = (Settings) ContentView.settings;
 
-        TextView tvTheme = findViewById(R.id.tv_theme);
+        TextView tvTheme = findViewById(R.id.appbase_tv_theme);
 
         LinearLayout dd;
 
-        dd = findViewById(R.id.dd_theme_mode);
-        EditText etThemeMode = dd.findViewById(R.id.et_drop_down);
-        ImageButton btnThemeMode = dd.findViewById(R.id.btn_drop_down_expand);
+        dd = findViewById(R.id.appbase_dd_theme_mode);
+        EditText etThemeMode = dd.findViewById(R.id.appbase_et_drop_down);
+        ImageButton btnThemeMode = dd.findViewById(R.id.appbase_btn_drop_down_expand);
 
-        dd = findViewById(R.id.dd_theme);
+        dd = findViewById(R.id.appbase_dd_theme);
         @SuppressLint("CutPasteId")
-        EditText etTheme = dd.findViewById(R.id.et_drop_down);
+        EditText etTheme = dd.findViewById(R.id.appbase_et_drop_down);
         @SuppressLint("CutPasteId")
-        ImageButton btnTheme = dd.findViewById(R.id.btn_drop_down_expand);
+        ImageButton btnTheme = dd.findViewById(R.id.appbase_btn_drop_down_expand);
 
-        dd = findViewById(R.id.dd_app_language);
+        dd = findViewById(R.id.appbase_dd_app_language);
         @SuppressLint("CutPasteId")
-        EditText etAppLanguage = dd.findViewById(R.id.et_drop_down);
+        EditText etAppLanguage = dd.findViewById(R.id.appbase_et_drop_down);
         @SuppressLint("CutPasteId")
-        ImageButton btnAppLanguage = dd.findViewById(R.id.btn_drop_down_expand);
+        ImageButton btnAppLanguage = dd.findViewById(R.id.appbase_btn_drop_down_expand);
 
         if(LanguageUtil.getAvailableAppLanguages().length == 0) {
             // no app languages set -> only "en", no language to choose from
-            findViewById(R.id.tv_app_language).setVisibility(GONE);
+            findViewById(R.id.appbase_tv_app_language).setVisibility(GONE);
             dd.setVisibility(GONE);
         }
 
@@ -112,7 +112,7 @@ public class CvSettingsBase extends ContentView {
     }
 
     public void addSettings(View view) {
-        LinearLayout llAdditionalSettings = findViewById(R.id.ll_additional_settings);
+        LinearLayout llAdditionalSettings = findViewById(R.id.appbase_ll_additional_settings);
         llAdditionalSettings.addView(view);
     }
 

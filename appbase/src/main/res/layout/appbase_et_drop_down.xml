@@ -32,7 +32,7 @@ SOFTWARE.
     android:layout_height="wrap_content">
 
     <EditText
-        android:id="@+id/et_drop_down"
+        android:id="@+id/appbase_et_drop_down"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1.0"
@@ -42,14 +42,15 @@ SOFTWARE.
     </EditText>
 
     <ImageButton
-        android:id="@+id/btn_drop_down_expand"
-        android:layout_width="40dp"
+        android:id="@+id/appbase_btn_drop_down_expand"
+        android:layout_width="32dp"
         android:layout_height="match_parent"
         android:src="@drawable/ic_expand_more"
         android:tint="?android:colorBackground"
-        android:layout_marginTop="1.25dp"
-        android:layout_marginBottom="1.25dp"
-        tools:ignore="ContentDescription">
-    </ImageButton>
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="2.5dp"
+        android:padding="8dp"
+        tools:ignore="ContentDescription,RtlHardcoded" />
 
 </LinearLayout>
