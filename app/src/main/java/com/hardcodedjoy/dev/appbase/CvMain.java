@@ -31,7 +31,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.hardcodedjoy.appbase.contentview.CvTMSLL;
-import com.hardcodedjoy.appbase.gui.MenuOption;
+import com.hardcodedjoy.appbase.popup.Option;
 
 import java.util.Vector;
 
@@ -42,9 +42,9 @@ public class CvMain extends CvTMSLL {
 
     public CvMain() {
         // add initialization code here (that must run only one time)
-        Vector<MenuOption> ops = new Vector<>();
-        ops.add(new MenuOption("popups", () -> new CvPopups().show()));
-        ops.add(new MenuOption("theme view", () -> new CvThemeView().show()));
+        Vector<Option> ops = new Vector<>();
+        ops.add(new Option(R.drawable.ic_menu, R.string.popups, () -> new CvPopups().show()));
+        ops.add(new Option(R.drawable.ic_preview, R.string.theme_view, () -> new CvThemeView().show()));
         addMenuOptions(ops, 0);
     }
 

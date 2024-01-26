@@ -27,14 +27,15 @@ SOFTWARE.
 package com.hardcodedjoy.appbase.contentview;
 
 import android.annotation.SuppressLint;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.hardcodedjoy.appbase.R;
-import com.hardcodedjoy.appbase.gui.DisplayUnit;
-import com.hardcodedjoy.appbase.gui.MenuOption;
+import com.hardcodedjoy.appbase.popup.Option;
 
 import java.util.Vector;
 
@@ -46,12 +47,12 @@ public class CvTM extends ContentView { // Content View with Title and Menu
     static protected Class<?> settingsCvClass;
 
     protected LinearLayout llMenuOptions;
-    protected Vector<MenuOption> menuOptions;
+    protected Vector<Option> menuOptions;
 
     protected CvTM() {
         menuOptions = new Vector<>();
-        menuOptions.add(new MenuOption(getString(R.string.about), () -> new CvAboutBase().show()));
-        menuOptions.add(new MenuOption(getString(R.string.settings), () -> {
+        menuOptions.add(new Option(R.drawable.ic_info, R.string.about, () -> new CvAboutBase().show()));
+        menuOptions.add(new Option(R.drawable.ic_settings, R.string.settings, () -> {
             try { ((ContentView)settingsCvClass.newInstance()).show();
             } catch (Exception e) { e.printStackTrace(System.err); }
         }));
@@ -62,26 +63,53 @@ public class CvTM extends ContentView { // Content View with Title and Menu
     @SuppressLint("RtlHardcoded")
     protected void showMenu() {
         llMenuOptions.removeAllViews();
-        Button button;
+
+        FrameLayout flMenuOptionWithIcon;
+        Button btnOption;
+        ImageView ivOptionIcon;
+        TextView tvOptionText;
+
         LinearLayout.LayoutParams params;
-        int padding = DisplayUnit.dpToPx(5.0f);
-        int margin = DisplayUnit.dpToPx(2.5f);
 
-        for(MenuOption option : menuOptions) {
-            button = new Button(getActivity());
+        for(Option option : menuOptions) {
+            flMenuOptionWithIcon = (FrameLayout) inflate(getActivity(),
+                    R.layout.appbase_menu_opt_ic, null);
+            btnOption = flMenuOptionWithIcon.findViewById(R.id.appbase_btn_option);
+            ivOptionIcon = flMenuOptionWithIcon.findViewById(R.id.appbase_iv_icon);
+            tvOptionText = flMenuOptionWithIcon.findViewById(R.id.appbase_tv_text);
 
-            button.setText(option.getName());
-            button.setOnClickListener(v -> {
+            btnOption.setOnClickListener(v -> {
                 llMenuOptions.setVisibility(View.GONE);
-                option.getRunnable().run();
+                option.getExecutor().run();
             });
-            button.setGravity(Gravity.LEFT);
-            button.setPadding(padding, padding, padding, padding);
+
+            if(option.getName() != null) {
+                tvOptionText.setText(option.getName());
+            } else if(option.getNameId() != 0) {
+                tvOptionText.setText(option.getNameId());
+            }
+
+            // if option has icon -> set ivOptionIcon
+            // else -> hide ivOptionIcon and remove text padding
+
+            boolean withIcon = (option.getIconId() != 0)
+                    | (option.getIconDrawable() != null)
+                    | (option.getIconBitmap() != null);
+
+            if(withIcon) {
+                option.applyIconTo(ivOptionIcon);
+            } else {
+                ivOptionIcon.setVisibility(GONE);
+                int paddingTop = tvOptionText.getPaddingTop();
+                int paddingBottom = tvOptionText.getPaddingBottom();
+                int paddingRight = tvOptionText.getPaddingRight();
+
+                // remove additional left padding:
+                tvOptionText.setPadding(paddingRight, paddingTop, paddingRight, paddingBottom);
+            }
 
             params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
-            params.setMargins(margin, margin, margin, margin);
-
-            llMenuOptions.addView(button, params);
+            llMenuOptions.addView(flMenuOptionWithIcon, params);
         }
 
         llMenuOptions.setVisibility(View.VISIBLE);
@@ -96,9 +124,9 @@ public class CvTM extends ContentView { // Content View with Title and Menu
         return super.onBackPressed();
     }
 
-    public Vector<MenuOption> getMenuOptions() { return menuOptions; }
-    public void setMenuOptions(Vector<MenuOption> ops) { this.menuOptions = ops; }
-    public void addMenuOptions(Vector<MenuOption> ops, int index) {
+    public Vector<Option> getMenuOptions() { return menuOptions; }
+    public void setMenuOptions(Vector<Option> ops) { this.menuOptions = ops; }
+    public void addMenuOptions(Vector<Option> ops, int index) {
         menuOptions.addAll(index, ops);
     }
 

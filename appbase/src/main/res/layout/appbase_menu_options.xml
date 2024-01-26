@@ -32,24 +32,43 @@ SOFTWARE.
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingLeft="1dp"
+        android:paddingBottom="1dp"
         android:layout_gravity="top|right"
-        android:background="?android:colorForeground"
         android:orientation="vertical"
-        tools:ignore="RtlHardcoded,UselessParent">
+        android:background="?android:colorBackground"
+        tools:ignore="RtlHardcoded,RtlSymmetry">
 
-        <Button
-            android:id="@+id/appbase_btn_about"
-            android:layout_width="match_parent"
+        <ScrollView
+            android:id="@+id/appbase_sv_menu_options"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical|left"
-            android:text="@string/about" />
+            android:background="?android:colorForeground" >
 
-        <Button
-            android:id="@+id/appbase_btn_settings"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical|left"
-            android:text="@string/settings" />
+            <LinearLayout
+                android:id="@+id/appbase_ll_menu_options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:layout_gravity="top|right"
+                android:orientation="vertical"
+                tools:ignore="RtlHardcoded,UselessParent">
 
+                <include
+                    layout="@layout/appbase_menu_opt_ic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2.5dp" />
+
+                <include
+                    layout="@layout/appbase_menu_opt_ic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2.5dp" />
+
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 </FrameLayout>

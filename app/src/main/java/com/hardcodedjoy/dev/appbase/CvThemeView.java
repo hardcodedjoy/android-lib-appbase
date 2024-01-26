@@ -77,4 +77,11 @@ public class CvThemeView extends ContentView {
             public String get() { return theme; }
         });
     }
+
+    @Override
+    public boolean onBackPressed() {
+        Settings settings = (Settings) ContentView.settings;
+        ThemeUtil.setTheme(getActivity(), settings.getTheme(getActivity()));
+        return super.onBackPressed();
+    }
 }

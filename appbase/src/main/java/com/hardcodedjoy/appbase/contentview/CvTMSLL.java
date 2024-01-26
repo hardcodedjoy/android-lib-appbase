@@ -29,7 +29,6 @@ package com.hardcodedjoy.appbase.contentview;
 import android.annotation.SuppressLint;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 
 import com.hardcodedjoy.appbase.R;
 
@@ -42,8 +41,7 @@ public class CvTMSLL extends CvTM { // Title / Menu / ScrollView / LinearLayout
         inflate(R.layout.appbase_cv_tmsll);
 
         FrameLayout flMenuOptions = findViewById(R.id.appbase_fl_menu_options);
-
-        llMenuOptions = (LinearLayout) flMenuOptions.getChildAt(0);
+        llMenuOptions = flMenuOptions.findViewById(R.id.appbase_ll_menu_options);
 
         findViewById(R.id.appbase_iv_menu).setOnClickListener(view -> {
             if(llMenuOptions.getVisibility() == View.VISIBLE) {

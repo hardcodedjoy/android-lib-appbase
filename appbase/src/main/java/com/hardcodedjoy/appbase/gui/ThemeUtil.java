@@ -30,7 +30,10 @@ import android.app.Activity;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.os.Build;
 import android.util.TypedValue;
+import android.view.View;
+import android.view.Window;
 
 import com.hardcodedjoy.appbase.R;
 import com.hardcodedjoy.appbase.SettingsKeys;
@@ -45,6 +48,18 @@ public class ThemeUtil {
         String packageName = activity.getPackageName();
         int id = resources.getIdentifier(themeName, "style", packageName);
         activity.setTheme(id);
+
+        if(Build.VERSION.SDK_INT >= 23) {
+            Window window = activity.getWindow();
+            window.setStatusBarColor(getColor(activity, android.R.attr.colorForeground));
+            if(currentThemeIsDarkNotLight(activity)) {
+                // dark theme -> light title bar and status bar
+                // adjust status bar text accordingly:
+                window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+            } else {
+                window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
+            }
+        }
     }
 
     static public boolean themeModeLightNotDark(Activity activity, String themeMode) {
@@ -135,5 +150,9 @@ public class ThemeUtil {
         int bgGray = grayLevel(colorBackground);
         int fgGray = grayLevel(colorForeground);
         return (bgGray > fgGray);
+    }
+
+    static public boolean currentThemeIsDarkNotLight(Activity activity) {
+        return !currentThemeIsLightNotDark(activity);
     }
 }

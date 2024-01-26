@@ -42,8 +42,7 @@ public class CvTMLL extends CvTM { // Title / Menu / LinearLayout
         inflate(R.layout.appbase_cv_tmll);
 
         FrameLayout flMenuOptions = findViewById(R.id.appbase_fl_menu_options);
-
-        llMenuOptions = (LinearLayout) flMenuOptions.getChildAt(0);
+        llMenuOptions = flMenuOptions.findViewById(R.id.appbase_ll_menu_options);
 
         findViewById(R.id.appbase_iv_menu).setOnClickListener(view -> {
             if(llMenuOptions.getVisibility() == View.VISIBLE) {

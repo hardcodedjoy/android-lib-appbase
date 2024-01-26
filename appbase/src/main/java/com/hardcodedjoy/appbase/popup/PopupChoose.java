@@ -28,8 +28,6 @@ package com.hardcodedjoy.appbase.popup;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.res.ColorStateList;
-import android.graphics.PorterDuff;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -137,9 +135,6 @@ public class PopupChoose extends Popup {
         Button button;
         Option option;
         int n = options.size();
-        int iconSize;
-        int iconTint;
-        LinearLayout.LayoutParams params;
 
         for(int i=0; i<n; i++) {
             option = options.elementAt(i);
@@ -157,34 +152,8 @@ public class PopupChoose extends Popup {
             }
             smallerLongLines(vOption);
             ImageView ivIcon = vOption.findViewById(R.id.appbase_iv_icon);
-
-            if(option.getIconBitmap() != null) {
-                ivIcon.setImageBitmap(option.getIconBitmap());
-            } else if(option.getIconId() != 0) {
-                if(option.getIconTintColor() == 0) { // not set
-                    // set it to text color:
-                    int color = ContentView.getThemeColor(android.R.attr.textColor);
-                    option.setIconTintColor(color);
-                }
-                ivIcon.setImageResource(option.getIconId());
-            } else if(option.getIconDrawable() != null) {
-                ivIcon.setImageDrawable(option.getIconDrawable());
-            }
-
-            iconSize = option.getIconSize();
-            if(iconSize != 0) { // is set
-                params = new LinearLayout.LayoutParams(iconSize, iconSize);
-                ivIcon.setLayoutParams(params);
-            }
-
-            if(android.os.Build.VERSION.SDK_INT > 21) {
-                iconTint = option.getIconTintColor();
-                if(iconTint != 0) { // is set
-                    ivIcon.setImageTintList(ColorStateList.valueOf(iconTint));
-                    ivIcon.setImageTintMode(PorterDuff.Mode.SRC_ATOP);
-                }
-            }
-
+            option.setIconTintColor(tvText.getTextColors().getDefaultColor());
+            option.applyIconTo(ivIcon);
             button.setOnClickListener(ocl);
         }
     }

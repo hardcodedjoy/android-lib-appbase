@@ -26,8 +26,12 @@ SOFTWARE.
 
 package com.hardcodedjoy.appbase.popup;
 
+import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 public class Option {
 
@@ -89,4 +93,28 @@ public class Option {
 
     public void setSelected() { this.selected = true; }
     public boolean isSelected() { return selected; }
+
+    public void applyIconTo(ImageView ivIcon) {
+        if(getIconBitmap() != null) {
+            ivIcon.setImageBitmap(getIconBitmap());
+        } else if(getIconId() != 0) {
+            ivIcon.setImageResource(getIconId());
+        } else if(getIconDrawable() != null) {
+            ivIcon.setImageDrawable(getIconDrawable());
+        } else {
+            return; // no icon to apply
+        }
+
+        if(iconSize != 0) { // is set
+            LinearLayout.LayoutParams params;
+            params = new LinearLayout.LayoutParams(iconSize, iconSize);
+            ivIcon.setLayoutParams(params);
+        }
+
+        int iconTint = getIconTintColor();
+        if(iconTint != 0) { // is set
+            ivIcon.setImageTintList(ColorStateList.valueOf(iconTint));
+            ivIcon.setImageTintMode(PorterDuff.Mode.SRC_ATOP);
+        }
+    }
 }
