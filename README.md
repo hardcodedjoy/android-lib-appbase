@@ -1,6 +1,6 @@
 # AppBase
 
-<code>com.hardcodedjoy.appbase</code> <code>v1.2.4</code><br/>
+<code>com.hardcodedjoy.appbase</code> <code>v1.3.0</code><br/>
 minSdkVersion: <code>21</code><br/>
 targetSdkVersion: <code>33</code><br/>
 
@@ -16,11 +16,11 @@ It is our independently-developed Single Activity Architecture, without fragment
 It also includes some additional utility classes and methods that are useful in many apps.
 
 
-ContentView -> Base class for a new "screen" in the app;
-CvTMLL -> ContentView with title bar, menu button and LinearLayout for additional content;
-CvTMSLL -> same as CvTMLL, but the LinearLayout is inside a ScrollView;
-CvAboutBase -> "about" screen;
-CvSettingsBase -> "settings" screen.
+- ContentView = Base class for a new "screen" in the app;
+- CvTMLL = ContentView with title bar, menu button and LinearLayout for additional content;
+- CvTMSLL = same as CvTMLL, but the LinearLayout is inside a ScrollView;
+- CvAboutBase = "about" screen;
+- CvSettingsBase = "settings" screen.
 
 In ContentView, set the layout by calling inflate(int resId) in the constructor.
 
@@ -31,9 +31,6 @@ Menu button opens a drop-down menu with "ABOUT" and "SETTINGS" options.
 User can add other options to the menu as well.
 
 This repo also contains an android project that is a testbed app. See its code for more details about using the library.
-
-Released under MIT License.
-Only some vector drawables are derived from https://fonts.google.com, that are licensed under the Apache 2.0 License.
 
 
 ## Links

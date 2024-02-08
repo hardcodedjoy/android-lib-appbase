@@ -78,7 +78,7 @@ abstract public class PopupRegister extends Popup {
             onOK(username, password, repeatPassword);
         }
         else if(id == R.id.appbase_btn_cancel || id == R.id.appbase_btn_cancel_text) { onCancel(); }
-        else if(id == R.id.appbase_ll_outside_popup) { onClickOutside(); }
+        else if(id == R.id.appbase_ll_outside_popup) { onCancel(); }
     }
 
     public PopupRegister(int messageStringId) { this(getString(messageStringId)); }

@@ -235,7 +235,7 @@ SOFTWARE.
 
     <style name="EditText" parent="android:Widget.EditText">
         <item name="android:background">@drawable/et</item>
-        <item name="android:textColor">@drawable/text_color_selector</item>
+        <item name="android:textColor">@color/text_color_selector</item>
         <item name="android:textSize">18sp</item>
         <item name="android:imeOptions">flagNoExtractUi</item>
         <item name="android:textCursorDrawable">@drawable/et_cursor</item>
@@ -249,29 +249,40 @@ SOFTWARE.
         <item name="android:textColor">?android:colorBackground</item>
     </style>
 
-    <style name="ImageButton" parent="android:Widget.Button">
-        <item name="android:background">@drawable/btn_1</item>
-    </style>
-
     <style name="Button2" parent="android:Widget.Button">
         <item name="android:background">@drawable/btn_2</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textAllCaps">true</item>
-        <item name="android:textColor">@drawable/text_color_selector</item>
+        <item name="android:textColor">@color/text_color_selector</item>
+    </style>
+
+    <style name="Button3" parent="android:Widget.Button">
+        <item name="android:background">@drawable/btn_3</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/text_color_selector</item>
+    </style>
+
+    <style name="ImageButton" parent="android:Widget.Button">
+        <item name="android:background">@drawable/btn_1</item>
     </style>
 
     <style name="ImageButton2" parent="android:Widget.Button">
         <item name="android:background">@drawable/btn_2</item>
     </style>
 
+    <style name="ImageButton3" parent="android:Widget.Button">
+        <item name="android:background">@drawable/btn_3</item>
+    </style>
+
     <style name="RadioButton" parent="android:Widget.CompoundButton.RadioButton">
         <item name="android:textSize">20sp</item>
-        <item name="android:textColor">@drawable/text_color_selector</item>
+        <item name="android:textColor">@color/text_color_selector</item>
     </style>
 
     <style name="CheckBox" parent="android:Widget.CompoundButton.CheckBox">
         <item name="android:textSize">20sp</item>
-        <item name="android:textColor">@drawable/text_color_selector</item>
+        <item name="android:textColor">@color/text_color_selector</item>
     </style>
 
     <style name="ProgressBar" parent="android:Widget.ProgressBar">

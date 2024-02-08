@@ -37,6 +37,7 @@ import com.hardcodedjoy.appbase.LanguageUtil;
 import com.hardcodedjoy.appbase.R;
 import com.hardcodedjoy.appbase.Settings;
 import com.hardcodedjoy.appbase.SettingsKeys;
+import com.hardcodedjoy.appbase.gui.GuiLinker;
 import com.hardcodedjoy.appbase.gui.ThemeUtil;
 import com.hardcodedjoy.appbase.popup.Option;
 import com.hardcodedjoy.appbase.popup.PopupChoose;
@@ -109,6 +110,12 @@ public class CvSettingsBase extends ContentView {
         etAppLanguage.setFocusableInTouchMode(false);
         etAppLanguage.setOnClickListener(view -> onBtnAppLanguage());
         btnAppLanguage.setOnClickListener(view -> onBtnAppLanguage());
+
+        // fast fix for text color for API 21:
+        int textColor = ThemeUtil.getColor(getActivity(), android.R.attr.colorForeground);
+        etThemeMode.setTextColor(textColor);
+        etTheme.setTextColor(textColor);
+        etAppLanguage.setTextColor(textColor);
     }
 
     public void addSettings(View view) {
@@ -145,9 +152,7 @@ public class CvSettingsBase extends ContentView {
             if(themeMode.equals(currentThemeMode)) { option.setSelected(); }
             op.add(option);
         }
-        PopupChoose popupChoose = new PopupChoose(title, null, op);
-        popupChoose.enableDismissByOutsideClick();
-        popupChoose.show();
+        showPopupChoose(title, op);
     }
 
     private void onThemeModeSelected(String themeMode) {
@@ -156,6 +161,7 @@ public class CvSettingsBase extends ContentView {
         // settings.getTheme needs activity to get the day / night mode of android settings
         ThemeUtil.setTheme(getActivity(), settings.getTheme(getActivity()));
         init(); // re-init to reflect new theme
+        showInfoAppRestartRequiredForTheme();
     }
 
     private void onBtnTheme() {
@@ -178,9 +184,7 @@ public class CvSettingsBase extends ContentView {
             if(themeName.equals(currentThemeName)) { option.setSelected(); }
             op.add(option);
         }
-        PopupChoose popupChoose = new PopupChoose(title, null, op);
-        popupChoose.enableDismissByOutsideClick();
-        popupChoose.show();
+        showPopupChoose(title, op);
     }
 
     private void onThemeSelected(boolean lightNotDark, String themeName) {
@@ -189,6 +193,7 @@ public class CvSettingsBase extends ContentView {
         // settings.getTheme needs activity to get the day / night mode of android settings
         ThemeUtil.setTheme(getActivity(), settings.getTheme(getActivity()));
         init(); // re-init to reflect new theme
+        showInfoAppRestartRequiredForTheme();
     }
 
     private void onBtnAppLanguage() {
@@ -202,9 +207,7 @@ public class CvSettingsBase extends ContentView {
             if(langCode.equals(currentLangCode)) { option.setSelected(); }
             op.add(option);
         }
-        PopupChoose popupChoose = new PopupChoose(title, null, op);
-        popupChoose.enableDismissByOutsideClick();
-        popupChoose.show();
+        showPopupChoose(title, op);
     }
 
     private void onAppLanguageSelected(String langCode) {
@@ -213,6 +216,21 @@ public class CvSettingsBase extends ContentView {
         langCode = settings.getAppLanguageCode();
         setAppLanguage(langCode);
         init(); // re-init to reflect new language
+    }
+
+    private void showPopupChoose(String title, Vector<Option> op) {
+        PopupChoose popupChoose = new PopupChoose(title, null, op);
+        popupChoose.enableDismissByOutsideClick();
+
+        // API 21 text color fix:
+        int textColor = ThemeUtil.getColor(getActivity(), android.R.attr.colorForeground);
+        GuiLinker.setTextColorToAllTextsAndButtons(popupChoose, textColor);
+
+        popupChoose.show();
+    }
+
+    private void showInfoAppRestartRequiredForTheme() {
+        showInfo(R.string.theme_changed_please_restart);
     }
 
     @Override

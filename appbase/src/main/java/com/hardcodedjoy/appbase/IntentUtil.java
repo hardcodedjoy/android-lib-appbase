@@ -28,7 +28,9 @@ package com.hardcodedjoy.appbase;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.PendingIntent;
 import android.content.ClipData;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 
@@ -181,5 +183,19 @@ public class IntentUtil {
     static public void stopService(Class<?> serviceClass) {
         Intent intent = new Intent(activity.getApplicationContext(), serviceClass);
         stopService(intent);
+    }
+
+    static public PendingIntent getPendingBroadcast(int rqCode, Class<?> receiver, String action) {
+        Intent intent = new Intent(activity, receiver).setAction(action);
+        int flags = 0;
+        if(android.os.Build.VERSION.SDK_INT >= 23) { flags = PendingIntent.FLAG_IMMUTABLE; }
+        return PendingIntent.getBroadcast(activity, rqCode, intent, flags);
+    }
+
+    static public PendingIntent getPendingActivity(Context ct, int rqCode, Activity activity) {
+        Intent notificationIntent = new Intent(ct, activity.getClass());
+        int flags = 0;
+        if(android.os.Build.VERSION.SDK_INT >= 23) { flags = PendingIntent.FLAG_IMMUTABLE; }
+        return PendingIntent.getActivity(ct, rqCode, notificationIntent, flags);
     }
 }

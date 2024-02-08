@@ -54,7 +54,7 @@ SOFTWARE.
             <ImageView
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:src="@drawable/ic_user"
+                android:src="@drawable/ic_account_1"
                 android:tint="?android:textColor"
                 android:layout_gravity="center"
                 tools:ignore="ContentDescription" />

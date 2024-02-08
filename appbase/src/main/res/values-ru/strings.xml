@@ -36,6 +36,7 @@ SOFTWARE.
     <string name="theme">Тема</string>
     <string name="light_theme">Светлая тема</string>
     <string name="dark_theme">Темная тема</string>
+    <string name="theme_changed_please_restart">Тема изменена. Перезапустите приложение, чтобы все изменения вступили в силу.</string>
     <string name="app_language">Язык приложения</string>
     <string name="lang_default">по умолчанию</string>
 
@@ -75,7 +76,8 @@ SOFTWARE.
     <string name="eula">Лицензионное соглашение с конечным пользователем</string>
     <string name="non_commercial_use">только для личного некоммерческого использования</string>
     <string name="commercial_use">для личного и коммерческого использования</string>
-    <string name="app_uses">Приложение использует библиотеки с открытым исходным кодом, выпущенные по лицензии MIT:</string>
+    <string name="app_uses_open_source_libs">Приложение использует библиотеки с открытым исходным кодом:</string>
+    <string name="libs_released_under_mit_license">Библиотеки выпущены по лицензии MIT.</string>
 
     <string name="app_website_label">Веб-сайт приложения:</string>
 
@@ -90,7 +92,9 @@ SOFTWARE.
     <string name="select_output_folder">Выберите выходную папку</string>
     <string name="select_folder">Выберите папку</string>
     <string name="select_file">Выберите файл</string>
+    <string name="select_file_s">Выберите файл(ы)</string>
     <string name="open_file">Открыть файл</string>
+    <string name="open_file_s">Открыть файл(ы)</string>
     <string name="save_file">Сохранить файл</string>
     <string name="save_file_as">Сохранить файл как</string>
     <string name="new_folder">Новая папка</string>

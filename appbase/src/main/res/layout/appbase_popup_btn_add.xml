@@ -37,7 +37,7 @@ SOFTWARE.
         android:layout_height="36dp"
         android:layout_weight="1.0"
         android:layout_marginBottom="5dp"
-        android:src="@drawable/ic_add"
+        android:src="@drawable/ic_add_1"
         android:tint="?android:colorBackground"
         tools:ignore="ContentDescription"
         android:padding="5dp"

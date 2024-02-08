@@ -37,12 +37,17 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 public class FileUtil {
 
     @SuppressLint("StaticFieldLeak")
     static private Activity activity;
+
+    static private long diskAvailableBytes;
+    static private long diskTotalBytes;
 
     static public void setActivity(Activity activity) { FileUtil.activity = activity; }
 
@@ -210,5 +215,49 @@ public class FileUtil {
             deletedOK = dir.delete();
         }
         return deletedOK; // true if all deleted OK, false if (some) could not be deleted
+    }
+
+    @SuppressLint("UsableSpace")
+    static synchronized public void updateDiskAvailableBytes(File dir) {
+        if(dir == null) { diskAvailableBytes = 0; return; }
+        // folder may not exist yet
+        // but we need to know the disk available size, so we check its parent
+        while(!dir.exists()) {
+            dir = dir.getParentFile();
+            if(dir == null) { diskAvailableBytes = 0; return; }
+        }
+        diskAvailableBytes = dir.getUsableSpace();
+    }
+
+
+    static synchronized public void updateDiskTotalBytes(File dir) {
+        if(dir == null) { diskTotalBytes = 0; return; }
+        // folder may not exist yet
+        // but we need to know the disk available size, so we check its parent
+        while(!dir.exists()) {
+            dir = dir.getParentFile();
+            if(dir == null) { diskTotalBytes = 0; return; }
+        }
+        diskTotalBytes = dir.getTotalSpace();
+    }
+
+    static synchronized public long getDiskAvailableBytes() { return diskAvailableBytes; }
+    static synchronized public long getDiskTotalBytes() { return diskTotalBytes; }
+
+
+    static public File[] filterFiles(File[] files, FileFilter filter) {
+        if(files == null) { return new File[0]; }
+        if(filter == null) { return files; }
+        ArrayList<File> filteredFiles = new ArrayList<>();
+        for (File f : files) { if (filter.accept(f)) { filteredFiles.add(f); } }
+        return filteredFiles.toArray(new File[0]);
+    }
+
+    static public List<File> filterFiles(List<File> files, FileFilter filter) {
+        if(files == null) { files = new ArrayList<>(); }
+        if(filter == null) { return files; }
+        ArrayList<File> filteredFiles = new ArrayList<>();
+        for (File f : files) { if (filter.accept(f)) { filteredFiles.add(f); } }
+        return filteredFiles;
     }
 }

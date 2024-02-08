@@ -114,7 +114,7 @@ abstract public class PopupSelectTimeInterval extends Popup {
         } else if(id == R.id.appbase_btn_cancel || id == R.id.appbase_btn_cancel_text) {
             onCancel();
         } else if(id == R.id.appbase_ll_outside_popup) {
-            onClickOutside();
+            onCancel();
         }
     }
 

@@ -180,7 +180,9 @@ public class SingleActivity extends Activity {
     @Override
     public void onBackPressed() {
         if(popups.size() > 0) {
-            removePopup(popups.lastElement());
+            Popup popup = popups.lastElement();
+            removePopup(popup);
+            runOnUiThread(popup::onCancel);
             return;
         }
 

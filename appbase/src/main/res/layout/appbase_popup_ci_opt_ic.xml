@@ -48,7 +48,7 @@ SOFTWARE.
         android:layout_gravity="left|center_vertical"
         android:paddingTop="2.5dp"
         android:paddingBottom="2.5dp"
-        android:src="@drawable/ic_image_view_default"
+        android:src="@drawable/ic_image_3"
         android:clickable="false"
         android:focusableInTouchMode="false"
         android:focusable="false"

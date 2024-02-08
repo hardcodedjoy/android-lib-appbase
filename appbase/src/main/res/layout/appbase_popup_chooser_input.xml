@@ -65,7 +65,7 @@ SOFTWARE.
                 android:layout_height="40dp"
                 android:layout_marginTop="7.5dp"
                 android:layout_marginRight="7.5dp"
-                android:src="@drawable/ic_refresh"
+                android:src="@drawable/ic_refresh_1"
                 android:tint="?android:colorBackground"
                 tools:ignore="ContentDescription,RtlHardcoded" />
         </LinearLayout>

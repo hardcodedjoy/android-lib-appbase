@@ -41,6 +41,7 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import com.hardcodedjoy.appbase.ImageUtil;
@@ -56,6 +57,16 @@ public class GuiLinker {
             if(v instanceof ViewGroup) { setOnClickListenerToAllButtons((ViewGroup)v, ocl); }
             else if(v instanceof Button)      { v.setOnClickListener(ocl); }
             else if(v instanceof ImageButton) { v.setOnClickListener(ocl); }
+        }
+    }
+
+    static public void setTextColorToAllTextsAndButtons(ViewGroup vg, int color) {
+        int n = vg.getChildCount();
+        View v;
+        for(int i=0; i<n; i++) {
+            v = vg.getChildAt(i);
+            if(v instanceof ViewGroup) { setTextColorToAllTextsAndButtons((ViewGroup)v, color); }
+            else if(v instanceof TextView) { ((TextView) v).setTextColor(color); }
         }
     }
 

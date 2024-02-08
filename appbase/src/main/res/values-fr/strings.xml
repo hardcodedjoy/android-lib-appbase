@@ -36,6 +36,7 @@ SOFTWARE.
     <string name="theme">Thème</string>
     <string name="light_theme">Thème clair</string>
     <string name="dark_theme">Thème sombre</string>
+    <string name="theme_changed_please_restart">Le thème a changé. Veuillez redémarrer l\'application pour que toutes les modifications prennent effet.</string>
     <string name="app_language">Langue de l\'app.</string>
     <string name="lang_default">défaut</string>
 
@@ -75,7 +76,8 @@ SOFTWARE.
     <string name="eula">Accord de licence de l\'utilisateur final</string>
     <string name="non_commercial_use">pour usage personnel et non commercial uniquement</string>
     <string name="commercial_use">pour un usage personnel et commercial</string>
-    <string name="app_uses">L\'application utilise des bibliothèques open source publiées sous licence MIT:</string>
+    <string name="app_uses_open_source_libs">L\'application utilise des bibliothèques open source:</string>
+    <string name="libs_released_under_mit_license">Bibliothèques publiées sous licence MIT.</string>
 
     <string name="app_website_label">Site Web d\'application:</string>
 
@@ -90,7 +92,9 @@ SOFTWARE.
     <string name="select_output_folder">Sélectionnez le dossier de sortie</string>
     <string name="select_folder">Choisir le dossier</string>
     <string name="select_file">Choisir le fichier</string>
+    <string name="select_file_s">Choisir le fichier(s)</string>
     <string name="open_file">Ouvrir le fichier</string>
+    <string name="open_file_s">Ouvrir le fichier(s)</string>
     <string name="save_file">Enregistrer le fichier</string>
     <string name="save_file_as">Enregistrer le fichier sous</string>
     <string name="new_folder">Nouveau Dossier</string>

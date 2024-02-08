@@ -49,5 +49,6 @@ SOFTWARE.
     <string name="popup_register">PopupRegister</string>
     <string name="popup_login">PopupLogin</string>
     <string name="theme_view">Theme view</string>
+    <string name="icons">Icons</string>
 
 </resources>

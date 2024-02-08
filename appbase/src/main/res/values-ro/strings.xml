@@ -36,6 +36,7 @@ SOFTWARE.
     <string name="theme">Temă</string>
     <string name="light_theme">Temă luminoasă</string>
     <string name="dark_theme">Temă întunecată</string>
+    <string name="theme_changed_please_restart">S-a schimbat tema. Reporniți aplicația pentru ca toate modificările să aibă efect.</string>
     <string name="app_language">Limba aplicației</string>
     <string name="lang_default">implicită</string>
 
@@ -75,7 +76,8 @@ SOFTWARE.
     <string name="eula">Acord de licență pentru utilizatorul final</string>
     <string name="non_commercial_use">doar pentru uz personal, necomercial</string>
     <string name="commercial_use">pentru uz personal și comercial</string>
-    <string name="app_uses">Aplicația utilizează biblioteci open-source lansate sub licența MIT:</string>
+    <string name="app_uses_open_source_libs">Aplicația utilizează biblioteci open-source:</string>
+    <string name="libs_released_under_mit_license">Biblioteci publicate sub licență MIT.</string>
 
     <string name="app_website_label">Site-ul aplicației:</string>
 
@@ -90,7 +92,9 @@ SOFTWARE.
     <string name="select_output_folder">Selectați folder-ul de ieșire</string>
     <string name="select_folder">Alege folder</string>
     <string name="select_file">Alege fișier</string>
+    <string name="select_file_s">Alege fișier(e)</string>
     <string name="open_file">Deschide fișier</string>
+    <string name="open_file_s">Deschide fișier(e)</string>
     <string name="save_file">Salvează fișier</string>
     <string name="save_file_as">Salvează fișier ca</string>
     <string name="new_folder">Folder nou</string>

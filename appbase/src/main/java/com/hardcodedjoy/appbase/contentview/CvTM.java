@@ -46,13 +46,18 @@ public class CvTM extends ContentView { // Content View with Title and Menu
     // to be set to app specific CvSettings using setSettingsCvClass()
     static protected Class<?> settingsCvClass;
 
+    static protected Class<?> aboutCvClass;
+
     protected LinearLayout llMenuOptions;
     protected Vector<Option> menuOptions;
 
     protected CvTM() {
         menuOptions = new Vector<>();
-        menuOptions.add(new Option(R.drawable.ic_info, R.string.about, () -> new CvAboutBase().show()));
-        menuOptions.add(new Option(R.drawable.ic_settings, R.string.settings, () -> {
+        menuOptions.add(new Option(R.drawable.ic_info_1, R.string.about, () -> {
+            try { ((ContentView)aboutCvClass.newInstance()).show();
+            } catch (Exception e) { e.printStackTrace(System.err); }
+        }));
+        menuOptions.add(new Option(R.drawable.ic_settings_1, R.string.settings, () -> {
             try { ((ContentView)settingsCvClass.newInstance()).show();
             } catch (Exception e) { e.printStackTrace(System.err); }
         }));
@@ -131,4 +136,5 @@ public class CvTM extends ContentView { // Content View with Title and Menu
     }
 
     static public void setSettingsCvClass(Class<?> c) { settingsCvClass = c; }
+    static public void setAboutCvClass(Class<?> c) { aboutCvClass = c; }
 }

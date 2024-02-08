@@ -31,6 +31,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Point;
+import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
@@ -58,6 +59,9 @@ public class ContentView extends LinearLayout {
     static private String appLanguageCode;
 
     static protected Object settings;
+
+    static private String logTag = "";
+    static private long logMillis;
 
     protected ContentView cvPrevious;
 
@@ -202,6 +206,7 @@ public class ContentView extends LinearLayout {
         return activity.getResources().getColor(id);
     }
 
+    @SuppressWarnings("unused")
     static public int getThemeColor(int androidRAttrColorId) {
         return ThemeUtil.getColor(activity, androidRAttrColorId);
     }
@@ -225,4 +230,22 @@ public class ContentView extends LinearLayout {
 
     @SuppressWarnings("unused")
     static public void makeToast(int stringId) { makeToast(getString(stringId)); }
+
+
+
+
+    @SuppressWarnings("unused")
+    static public void setLogTag(String logTag) { ContentView.logTag = logTag; }
+
+    @SuppressWarnings("unused")
+    static public void log(String msg) { Log.d(logTag, msg); }
+
+    @SuppressWarnings("unused")
+    static public void logTick() { logMillis = System.currentTimeMillis(); }
+
+    @SuppressWarnings("unused")
+    static public void logTock(String st) {
+        long ms = System.currentTimeMillis() - logMillis;
+        log(st + " " + ms + " ms");
+    }
 }

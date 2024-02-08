@@ -176,7 +176,8 @@ public class PopupChoose extends Popup {
         } else if(id == R.id.appbase_btn_refresh) {
             onRefresh();
         } else if(id == R.id.appbase_ll_outside_popup) {
-            onClickOutside();
+            ContentView.removePopUp(PopupChoose.this); // dismiss
+            onCancel();
         }
     }
 

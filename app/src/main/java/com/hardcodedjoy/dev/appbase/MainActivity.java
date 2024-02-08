@@ -36,6 +36,7 @@ public class MainActivity extends SingleActivity {
         setInitialCvClass(CvMain.class);
         setSettingsClass(Settings.class);
         CvTM.setSettingsCvClass(CvSettings.class);
+        CvTM.setAboutCvClass(CvAboutBase.class);
         CvAboutBase.setAppVersion(BuildConfig.VERSION_NAME, BuildConfig.TIMESTAMP);
         LanguageUtil.setAvailableAppLanguages(new String[]{
                 "en", "fr", "ro", "ru"

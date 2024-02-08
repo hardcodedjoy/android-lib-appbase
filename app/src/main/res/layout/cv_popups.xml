@@ -54,7 +54,7 @@ SOFTWARE.
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="5dp"
-            android:src="@drawable/ic_menu"
+            android:src="@drawable/ic_menu_1"
             android:tint="?android:colorBackground"
             android:layout_gravity="center_vertical|right"
             tools:ignore="ContentDescription,RtlHardcoded"

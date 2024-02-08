@@ -35,14 +35,14 @@ public class FileTypeIcons {
 
     static public int get(File file) {
 
-        if(file == null) { return R.drawable.ic_file_type_file; }
-        if(file.isDirectory()) { return R.drawable.ic_file_type_folder; }
-        if(FileFilter.isText(file)) { return R.drawable.ic_file_type_text; }
-        if(FileFilter.isImage(file)) { return R.drawable.ic_file_type_image; }
-        if(FileFilter.isArchive(file)) { return R.drawable.ic_file_type_archive; }
-        if(FileFilter.isAudio(file)) { return R.drawable.ic_file_type_audio; }
-        if(FileFilter.isVideo(file)) { return R.drawable.ic_file_type_video; }
-        if(FileFilter.isPdf(file)) { return R.drawable.ic_file_type_pdf; }
-        return R.drawable.ic_file_type_file;
+        if(file == null) { return R.drawable.ic_file_type_file_3; }
+        if(file.isDirectory()) { return R.drawable.ic_file_type_folder_3; }
+        if(FileFilter.isText(file)) { return R.drawable.ic_file_type_text_3; }
+        if(FileFilter.isImage(file)) { return R.drawable.ic_file_type_image_3; }
+        if(FileFilter.isArchive(file)) { return R.drawable.ic_file_type_archive_3; }
+        if(FileFilter.isAudio(file)) { return R.drawable.ic_file_type_audio_3; }
+        if(FileFilter.isVideo(file)) { return R.drawable.ic_file_type_video_3; }
+        if(FileFilter.isPdf(file)) { return R.drawable.ic_file_type_pdf_3; }
+        return R.drawable.ic_file_type_file_3;
     }
 }

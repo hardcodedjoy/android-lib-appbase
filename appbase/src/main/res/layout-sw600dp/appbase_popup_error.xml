@@ -49,14 +49,28 @@ SOFTWARE.
             android:orientation="horizontal"
             android:gravity="center"
             tools:ignore="UseCompoundDrawables">
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_gravity="center"
-                android:background="@drawable/ic_error_bg"
-                android:src="@drawable/ic_error"
-                android:tint="?android:textColor"
-                tools:ignore="ContentDescription" />
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_circle_2"
+                    android:tint="?attr/appBaseColorButtonTextRed"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_error_1"
+                    android:tint="?android:textColor"
+                    tools:ignore="ContentDescription" />
+
+            </FrameLayout>
+
             <TextView
                 android:id="@+id/appbase_tv_title"
                 android:layout_width="wrap_content"

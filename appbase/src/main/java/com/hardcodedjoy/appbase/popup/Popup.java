@@ -41,7 +41,6 @@ abstract public class Popup extends LinearLayout {
 
     abstract void oclOnClick(View view);
     abstract public void onCancel();
-    public void onClickOutside() {} // implementation will probably want to dismiss the Popup !!!
 
     Popup() {
         super(ContentView.getActivity());
@@ -51,10 +50,9 @@ abstract public class Popup extends LinearLayout {
 
     public void enableDismissByOutsideClick() {
         llOutsidePopup = findViewById(R.id.appbase_ll_outside_popup);
-        llOutsidePopup.setOnClickListener(v -> ContentView.removePopUp(Popup.this));
+        llOutsidePopup.setOnClickListener(ocl);
     }
 
-    public boolean onBackPressed() { return false; } // not consumed
     public void show() { ContentView.showPopUp(this); }
 
     static protected String getString(int resId) {

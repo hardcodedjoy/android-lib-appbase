@@ -34,12 +34,15 @@ import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.hardcodedjoy.appbase.AppBase;
+import com.hardcodedjoy.appbase.HardcodedJoyConstants;
 import com.hardcodedjoy.appbase.IntentUtil;
 import com.hardcodedjoy.appbase.R;
+import com.hardcodedjoy.appbase.gui.DisplayUnit;
 import com.hardcodedjoy.appbase.gui.ThemeUtil;
 
 import java.text.DateFormat;
@@ -67,7 +70,9 @@ public class CvAboutBase extends ContentView {
 
         TextView tv;
         String s;
-        String url;
+
+        tv = findViewById(R.id.appbase_tv_app_package);
+        tv.setText(getActivity().getPackageName());
 
         tv = findViewById(R.id.appbase_tv_app_version);
         tv.setText(appVersion);
@@ -84,7 +89,7 @@ public class CvAboutBase extends ContentView {
         } else {
             tv = findViewById(R.id.appbase_tv_eula);
             s = tv.getText().toString();
-            s = "<a href=\"" + linkEULA + "\">" + s + "</a>";
+            s = HardcodedJoyConstants.aHref(linkEULA, s);
             setAsLink(tv, s);
         }
 
@@ -93,7 +98,7 @@ public class CvAboutBase extends ContentView {
         } else {
             tv = findViewById(R.id.appbase_tv_rate_app);
             s = tv.getText().toString();
-            s = "<a href=\"" + linkRateApp + "\">" + s + "</a>";
+            s = HardcodedJoyConstants.aHref(linkRateApp, s);
             setAsLink(tv, s);
         }
 
@@ -112,46 +117,40 @@ public class CvAboutBase extends ContentView {
             });
         }
 
+        ImageView ivDevLogo = findViewById(R.id.appbase_iv_dev_logo);
+        int padding = DisplayUnit.dpToPx(8);
+        ivDevLogo.setImageBitmap(HardcodedJoyConstants.devLogo());
+        ivDevLogo.setPadding(0, padding, 0, padding);
+
         tv = findViewById(R.id.appbase_tv_dev_website);
-        s = tv.getText().toString();
-        s = "<a href=\"" + s + "\">" + s + "</a>";
-        setAsLink(tv, s);
+        setAsLink(tv, HardcodedJoyConstants.aHrefDevWebsite());
 
         tv = findViewById(R.id.appbase_tv_insta_page);
-        s = tv.getText().toString();
-        s = "<a href=\"https://instagram.com/" + s.substring(1) + "\">" + s + "</a>";
-        setAsLink(tv, s);
+        setAsLink(tv, HardcodedJoyConstants.aHrefDevInstagram());
         findViewById(R.id.appbase_ll_insta_page).setOnClickListener(
                 (view) -> findViewById(R.id.appbase_tv_insta_page).performClick());
 
         tv = findViewById(R.id.appbase_tv_youtube_channel);
-        s = tv.getText().toString();
-        s = "<a href=\"https://youtube.com/" + s + "\">" + s + "</a>";
-        setAsLink(tv, s);
+        setAsLink(tv, HardcodedJoyConstants.aHrefDevYouTube());
         findViewById(R.id.appbase_ll_youtube_channel).setOnClickListener(
                 (view) -> findViewById(R.id.appbase_tv_youtube_channel).performClick());
 
         tv = findViewById(R.id.appbase_tv_github);
-        s = tv.getText().toString();
-        s = "<a href=\"https://github.com/" + s + "\">" + s + "</a>";
-        setAsLink(tv, s);
+        setAsLink(tv, HardcodedJoyConstants.aHrefDevGitHub());
         findViewById(R.id.appbase_ll_github).setOnClickListener(
                 (view) -> findViewById(R.id.appbase_tv_github).performClick());
 
         tv = findViewById(R.id.appbase_tv_privacy_policy);
-        s = tv.getText().toString();
-        url = getPrivacyPolicyURL(getContext().getPackageName(), "en");
-        s = "<a href=\"" + url + "\">" + s + "</a>";
-        setAsLink(tv, s);
+        setAsLink(tv, HardcodedJoyConstants.aHrefPrivacyPolicy());
 
         tv = findViewById(R.id.appbase_tv_app_uses_open_source_libs);
         s = tv.getText().toString();
+        s += "\n" + infoAboutOpenSourceLibs;
+        s += "\n" + getString(R.string.libs_released_under_mit_license);
 
         // after second space from end, without space:
         int start = s.substring(0, s.lastIndexOf(' ')).lastIndexOf(' ') + 1;
         int end = s.length() - 1; // without ending ":"
-
-        s += "\n" + infoAboutOpenSourceLibs;
 
         SpannableString spannableString = new SpannableString(s);
         ClickableSpan clickableSpan = new ClickableSpan() {
@@ -193,11 +192,6 @@ public class CvAboutBase extends ContentView {
         tv.setText(fromHTML(s));
         tv.setClickable(true);
         tv.setMovementMethod(LinkMovementMethod.getInstance());
-    }
-
-    @SuppressWarnings("SameParameterValue")
-    static private String getPrivacyPolicyURL(String packageName, String languageCode) {
-        return "https://hardcodedjoy.com/app-privacy-policy?id=" + packageName + "&hl=" + languageCode;
     }
 
     @SuppressWarnings("unused")

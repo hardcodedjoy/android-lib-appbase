@@ -44,7 +44,7 @@ SOFTWARE.
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="5dp"
-            android:src="@drawable/ic_info"
+            android:src="@drawable/ic_info_1"
             android:tint="?android:colorBackground"
             android:layout_gravity="center_vertical|right"
             tools:ignore="ContentDescription,RtlHardcoded" />
@@ -79,10 +79,18 @@ SOFTWARE.
                 android:layout_height="wrap_content"
                 android:text="@string/app_name" />
             <TextView
+                android:id="@+id/appbase_tv_app_package"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[app_package]"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+            <TextView
                 android:id="@+id/appbase_tv_app_version"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="[appVersion]"
+                android:textSize="14sp"
                 tools:ignore="HardcodedText" />
             <TextView
                 android:id="@+id/appbase_tv_app_usage_type"
@@ -132,14 +140,15 @@ SOFTWARE.
                 android:id="@+id/appbase_iv_dev_logo"
                 android:layout_width="240dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_dev_logo"
+                android:src="@drawable/ic_image_3"
                 tools:ignore="ContentDescription" />
             <TextView
                 android:id="@+id/appbase_tv_dev_website"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10sp"
-                android:text="@string/dev_website" />
+                android:text="[dev_website]"
+                tools:ignore="HardcodedText" />
 
             <LinearLayout
                 android:id="@+id/appbase_ll_insta_page"
@@ -162,7 +171,8 @@ SOFTWARE.
                     android:id="@+id/appbase_tv_insta_page"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/dev_instagram_page" />
+                    android:text="[dev_instagram_page]"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -187,7 +197,8 @@ SOFTWARE.
                     android:id="@+id/appbase_tv_youtube_channel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/dev_youtube_handle" />
+                    android:text="[dev_youtube_handle]"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -212,7 +223,8 @@ SOFTWARE.
                     android:id="@+id/appbase_tv_github"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/dev_github_page" />
+                    android:text="[dev_github_name]"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -220,7 +232,8 @@ SOFTWARE.
                 android:id="@+id/appbase_tv_app_uses_open_source_libs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/app_uses"
+                android:text="@string/app_uses_open_source_libs"
+                android:textSize="14sp"
                 android:layout_marginBottom="20sp" />
 
             <TextView

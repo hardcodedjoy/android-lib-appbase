@@ -38,6 +38,7 @@ SOFTWARE.
     <string name="theme">Theme</string>
     <string name="light_theme">Light theme</string>
     <string name="dark_theme">Dark theme</string>
+    <string name="theme_changed_please_restart">Theme changed. Please restart the app for all changes to take effect.</string>
     <string name="app_language">App. language</string>
     <string name="lang_default">default</string>
 
@@ -69,10 +70,6 @@ SOFTWARE.
     <string name="maximum">Max.</string>
 
     <string name="app_developed_by">App. developed by:</string>
-    <string name="dev_website" translatable="false">https://hardcodedjoy.com</string>
-    <string name="dev_instagram_page" translatable="false">\@hardcodedjoy</string>
-    <string name="dev_youtube_handle" translatable="false">\@hardcoded_joy</string>
-    <string name="dev_github_page" translatable="false">hardcodedjoy</string>
 
     <string name="rate_this_app">Rate this App</string>
     <string name="share_this_app">Share this App</string>
@@ -81,7 +78,8 @@ SOFTWARE.
     <string name="eula">End-User License Agreement</string>
     <string name="non_commercial_use">for personal, non-commercial use only</string>
     <string name="commercial_use">for personal and commercial use</string>
-    <string name="app_uses">App uses open-source libraries released under MIT License:</string>
+    <string name="app_uses_open_source_libs">App uses open-source libraries:</string>
+    <string name="libs_released_under_mit_license">Libraries released under MIT License.</string>
 
     <string name="app_website_label">App. website:</string>
 
@@ -96,7 +94,9 @@ SOFTWARE.
     <string name="select_output_folder">Select output folder</string>
     <string name="select_folder">Select folder</string>
     <string name="select_file">Select file</string>
+    <string name="select_file_s">Select file(s)</string>
     <string name="open_file">Open file</string>
+    <string name="open_file_s">Open file(s)</string>
     <string name="save_file">Save file</string>
     <string name="save_file_as">Save file as</string>
     <string name="new_folder">New Folder</string>

@@ -50,18 +50,25 @@ public class CvThemeView extends ContentView {
         }
 
         removeAllViews();
-        inflate(R.layout.appbase_cv_theme_view);
+        inflate(R.layout.cv_theme_view);
 
         RadioGroup rg;
         RadioButton rb;
 
-        rg = findViewById(com.hardcodedjoy.appbase.R.id.appbase_rg_theme);
+        rg = findViewById(R.id.appbase_rg_theme);
         rg.removeAllViews();
 
         String[] themes = ThemeUtil.getThemes(getActivity());
         for(String themeName : themes) {
             rb = new RadioButton(getActivity());
             rb.setText(themeName);
+
+            // getColorStateList(resId, theme) requires API 23
+            // maybe this is why text color does not get updated on API 21
+
+            // fast workaround:
+            rb.setTextColor(ThemeUtil.getColor(getActivity(), android.R.attr.colorForeground));
+
             rg.addView(rb);
         }
 
@@ -76,6 +83,8 @@ public class CvThemeView extends ContentView {
             @Override
             public String get() { return theme; }
         });
+
+
     }
 
     @Override

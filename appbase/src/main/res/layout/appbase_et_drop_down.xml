@@ -45,12 +45,12 @@ SOFTWARE.
         android:id="@+id/appbase_btn_drop_down_expand"
         android:layout_width="32dp"
         android:layout_height="match_parent"
-        android:src="@drawable/ic_expand_more"
+        android:src="@drawable/ic_arrow_v_down_1"
         android:tint="?android:colorBackground"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="2.5dp"
-        android:padding="8dp"
+        android:padding="6dp"
         tools:ignore="ContentDescription,RtlHardcoded" />
 
 </LinearLayout>

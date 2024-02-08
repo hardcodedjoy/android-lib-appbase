@@ -67,7 +67,7 @@ abstract public class PopupCustom extends Popup {
         int id = view.getId();
         if(id == R.id.appbase_btn_ok || id == R.id.appbase_btn_ok_text) { onOK(); }
         else if(id == R.id.appbase_btn_cancel || id == R.id.appbase_btn_cancel_text) { onCancel(); }
-        else if(id == R.id.appbase_ll_outside_popup) { onClickOutside(); }
+        else if(id == R.id.appbase_ll_outside_popup) { onCancel(); }
     }
 
     public PopupCustom(String title) { this(title, null); }
