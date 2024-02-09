@@ -50,6 +50,7 @@ public class FileUtil {
     static private long diskTotalBytes;
 
     static public void setActivity(Activity activity) { FileUtil.activity = activity; }
+    static public Activity getActivity() { return activity; }
 
     static public void setFileContent(Uri uri, byte[] ba) {
         try {
@@ -260,4 +261,7 @@ public class FileUtil {
         for (File f : files) { if (filter.accept(f)) { filteredFiles.add(f); } }
         return filteredFiles;
     }
+
+    static public File getFilesDir() { return activity.getFilesDir(); }
+    static public String getFilesDirPath() { return getFilesDir().getAbsolutePath(); }
 }

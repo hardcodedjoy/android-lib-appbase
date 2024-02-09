@@ -345,4 +345,15 @@ public class StringUtil {
 		}
 		return sb.toString();
 	}
+
+	static public String findValueForKey(String key, String[] keys, String[] values) {
+		if(key == null) { return null; }
+		if(keys == null) { return null; }
+		if(values == null) { return null; }
+		if(keys.length != values.length) { return null; }
+		for(int i=0; i<keys.length; i++) {
+			if(key.equals(keys[i])) { return values[i]; }
+		}
+		return null;
+	}
 }

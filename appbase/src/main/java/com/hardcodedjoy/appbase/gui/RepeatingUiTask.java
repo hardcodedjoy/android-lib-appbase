@@ -24,20 +24,31 @@ SOFTWARE.
 
 */
 
-package com.hardcodedjoy.dev.appbase;
+package com.hardcodedjoy.appbase.gui;
 
-import android.annotation.SuppressLint;
-import android.widget.LinearLayout;
+import android.os.Handler;
+import android.os.Looper;
 
-import com.hardcodedjoy.appbase.contentview.CvTSLL;
+@SuppressWarnings("unused")
+public class RepeatingUiTask {
 
-@SuppressLint("ViewConstructor")
-public class CvIcons extends CvTSLL {
+    private final Handler handler;
+    private final Runnable taskRunnable;
+    private final int intervalMillis;
 
-    public CvIcons() {
-        setTitle(R.string.icons);
-        setTitleIcon(R.drawable.ic_image_1);
-        LinearLayout ll = findViewById(R.id.appbase_ll_content);
-        inflate(getActivity(), R.layout.cv_icons, ll);
+    public RepeatingUiTask(final Runnable runnable, final int intervalMillis) {
+        this.handler = new Handler(Looper.getMainLooper());
+        this.intervalMillis = intervalMillis;
+
+        taskRunnable = new Runnable() {
+            @Override
+            public void run() {
+                runnable.run();
+                handler.postDelayed(this, intervalMillis);
+            }
+        };
     }
+
+    public synchronized void start() { handler.postDelayed(taskRunnable, intervalMillis); }
+    public synchronized void stop() { handler.removeCallbacks(taskRunnable); }
 }

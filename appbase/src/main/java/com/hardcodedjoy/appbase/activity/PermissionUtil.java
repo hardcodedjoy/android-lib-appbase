@@ -92,4 +92,9 @@ public class PermissionUtil {
         }
         runTask(requestCode);
     }
+
+    static public boolean permissionAlreadyGranted(Activity activity, String permission) {
+        if (android.os.Build.VERSION.SDK_INT < 23) { return true; }
+        return (activity.checkSelfPermission(permission) == PackageManager.PERMISSION_GRANTED);
+    }
 }

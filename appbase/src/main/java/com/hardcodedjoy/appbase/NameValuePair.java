@@ -24,20 +24,24 @@ SOFTWARE.
 
 */
 
-package com.hardcodedjoy.dev.appbase;
+package com.hardcodedjoy.appbase;
 
-import android.annotation.SuppressLint;
-import android.widget.LinearLayout;
+public class NameValuePair {
 
-import com.hardcodedjoy.appbase.contentview.CvTSLL;
-
-@SuppressLint("ViewConstructor")
-public class CvIcons extends CvTSLL {
-
-    public CvIcons() {
-        setTitle(R.string.icons);
-        setTitleIcon(R.drawable.ic_image_1);
-        LinearLayout ll = findViewById(R.id.appbase_ll_content);
-        inflate(getActivity(), R.layout.cv_icons, ll);
+    private String name;
+    private Object value;
+    
+    public NameValuePair(String n, Object v) {
+        name = n;
+        value = v;
     }
+
+    public void setName(String name) { this.name = name; }
+    public String getName() { return name; }
+
+    public void setValue(Object value) { this.value = value; }
+    public Object getValue() { return value; }
+    
+    public String getValueString() { return (String)value; }
+
 }

@@ -38,6 +38,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
@@ -45,6 +46,13 @@ import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import com.hardcodedjoy.appbase.ImageUtil;
+import com.hardcodedjoy.appbase.R;
+import com.hardcodedjoy.appbase.StringUtil;
+import com.hardcodedjoy.appbase.contentview.ContentView;
+import com.hardcodedjoy.appbase.popup.Option;
+import com.hardcodedjoy.appbase.popup.PopupChoose;
+
+import java.util.Vector;
 
 public class GuiLinker {
 
@@ -166,7 +174,7 @@ public class GuiLinker {
 
 
     @SuppressWarnings("unused")
-    static public void link(View layout, int resId, final SetGetter setGetter) {
+    static public void link(View layout, int resId, SetGetter setGetter) {
         View view = layout.findViewById(resId);
              if(view instanceof EditText)     { link((EditText)     view, setGetter); }
         else if(view instanceof CheckBox)     { link((CheckBox)     view, setGetter); }
@@ -176,6 +184,36 @@ public class GuiLinker {
         else if(view instanceof RadioGroup)   { link((RadioGroup)   view, setGetter); }
     }
 
+    static public void linkDropDownList(LinearLayout llDropDown, String title,
+                String[] optionsKeys, String[] optionsValues, SetGetter setGetter) {
+
+        EditText et = llDropDown.findViewById(R.id.appbase_et_drop_down);
+        ImageButton btn = llDropDown.findViewById(R.id.appbase_btn_drop_down_expand);
+
+        // first time (init)
+        String key = setGetter.get();
+        String value = StringUtil.findValueForKey(key, optionsKeys, optionsValues);
+        if(value != null) { et.setText(value); }
+        //setGetter.set(key);
+
+        Vector<Option> op = new Vector<>();
+
+        for(int i=0; i< optionsKeys.length; i++) {
+            final int index = i;
+            Option option = new Option(optionsValues[i], () -> setGetter.set(optionsKeys[index]));
+            if(optionsKeys[i].equals(key)) { option.setSelected(); }
+            op.add(option);
+        }
+
+        View.OnClickListener ocl = view -> showPopupChoose(title, op);
+
+        et.setFocusable(false);
+        et.setFocusableInTouchMode(false);
+        et.setOnClickListener(ocl);
+        btn.setOnClickListener(ocl);
+    }
+
+    @SuppressWarnings("unused")
     static public void setHandleImage(ToggleButton tb, Drawable drawable) {
         setHandleImage(tb, ImageUtil.drawableToBitmap(drawable));
     }
@@ -237,5 +275,17 @@ public class GuiLinker {
                 return false;
             });
         });
+    }
+
+    static private void showPopupChoose(String title, Vector<Option> op) {
+        PopupChoose popupChoose = new PopupChoose(title, null, op);
+        popupChoose.enableDismissByOutsideClick();
+
+        // API 21 text color fix:
+        int textColor = ThemeUtil.getColor(ContentView.getActivity(),
+                android.R.attr.colorForeground);
+        setTextColorToAllTextsAndButtons(popupChoose, textColor);
+
+        popupChoose.show();
     }
 }

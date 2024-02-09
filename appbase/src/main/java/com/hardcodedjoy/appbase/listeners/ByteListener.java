@@ -24,20 +24,8 @@ SOFTWARE.
 
 */
 
-package com.hardcodedjoy.dev.appbase;
+package com.hardcodedjoy.appbase.listeners;
 
-import android.annotation.SuppressLint;
-import android.widget.LinearLayout;
-
-import com.hardcodedjoy.appbase.contentview.CvTSLL;
-
-@SuppressLint("ViewConstructor")
-public class CvIcons extends CvTSLL {
-
-    public CvIcons() {
-        setTitle(R.string.icons);
-        setTitleIcon(R.drawable.ic_image_1);
-        LinearLayout ll = findViewById(R.id.appbase_ll_content);
-        inflate(getActivity(), R.layout.cv_icons, ll);
-    }
+public interface ByteListener {
+    void onChanged(byte value);
 }

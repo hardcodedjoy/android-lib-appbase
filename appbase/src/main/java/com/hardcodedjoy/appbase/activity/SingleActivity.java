@@ -62,6 +62,9 @@ public class SingleActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        FileUtil.setActivity(this);
+        IntentUtil.setActivity(this);
+
         // we use our own title bar in "layout_main"
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
@@ -113,8 +116,6 @@ public class SingleActivity extends Activity {
         super.onResume();
 
         ContentView.setActivity(this);
-        FileUtil.setActivity(this);
-        IntentUtil.setActivity(this);
 
         ContentView cv = cvCurrent;
         if(cv == null) {

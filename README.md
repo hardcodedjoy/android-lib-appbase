@@ -1,6 +1,6 @@
 # AppBase
 
-<code>com.hardcodedjoy.appbase</code> <code>v1.3.0</code><br/>
+<code>com.hardcodedjoy.appbase</code> <code>v1.3.2</code><br/>
 minSdkVersion: <code>21</code><br/>
 targetSdkVersion: <code>33</code><br/>
 
@@ -24,8 +24,8 @@ It also includes some additional utility classes and methods that are useful in 
 
 In ContentView, set the layout by calling inflate(int resId) in the constructor.
 
-In CvTMLL and CvTMSLL, additional content to be added by the user into the LinearLayout (id = "ll_content").
-Title can be changed by setting other text to the TextView (id = "tv_title").
+In CvTMLL and CvTMSLL, additional content to be added by the user into the LinearLayout (id = "appbase_ll_content").
+Title can be changed by setting other text to the TextView (id = "appbase_tv_title").
 
 Menu button opens a drop-down menu with "ABOUT" and "SETTINGS" options.
 User can add other options to the menu as well.

@@ -29,7 +29,6 @@ package com.hardcodedjoy.appbase.contentview;
 import android.annotation.SuppressLint;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -38,11 +37,8 @@ import com.hardcodedjoy.appbase.R;
 import com.hardcodedjoy.appbase.Settings;
 import com.hardcodedjoy.appbase.SettingsKeys;
 import com.hardcodedjoy.appbase.gui.GuiLinker;
+import com.hardcodedjoy.appbase.gui.SetGetter;
 import com.hardcodedjoy.appbase.gui.ThemeUtil;
-import com.hardcodedjoy.appbase.popup.Option;
-import com.hardcodedjoy.appbase.popup.PopupChoose;
-
-import java.util.Vector;
 
 @SuppressLint("ViewConstructor")
 public class CvSettingsBase extends ContentView {
@@ -59,63 +55,79 @@ public class CvSettingsBase extends ContentView {
 
         TextView tvTheme = findViewById(R.id.appbase_tv_theme);
 
-        LinearLayout dd;
+        String[] themeModes = new String[] {
+                SettingsKeys.themeModeDefault,
+                SettingsKeys.themeModeLight,
+                SettingsKeys.themeModeDark
+        };
 
-        dd = findViewById(R.id.appbase_dd_theme_mode);
-        EditText etThemeMode = dd.findViewById(R.id.appbase_et_drop_down);
-        ImageButton btnThemeMode = dd.findViewById(R.id.appbase_btn_drop_down_expand);
+        GuiLinker.linkDropDownList(
+                findViewById(R.id.appbase_dd_theme_mode),
+                getString(R.string.theme_mode),
+                themeModes,
+                keyToText(themeModes),
+                new SetGetter() {
+                    @Override
+                    public void set(String key) { onThemeModeSelected(key); }
+                    @Override
+                    public String get() { return settings.getThemeMode(); }
+                });
 
-        dd = findViewById(R.id.appbase_dd_theme);
-        @SuppressLint("CutPasteId")
-        EditText etTheme = dd.findViewById(R.id.appbase_et_drop_down);
-        @SuppressLint("CutPasteId")
-        ImageButton btnTheme = dd.findViewById(R.id.appbase_btn_drop_down_expand);
-
-        dd = findViewById(R.id.appbase_dd_app_language);
-        @SuppressLint("CutPasteId")
-        EditText etAppLanguage = dd.findViewById(R.id.appbase_et_drop_down);
-        @SuppressLint("CutPasteId")
-        ImageButton btnAppLanguage = dd.findViewById(R.id.appbase_btn_drop_down_expand);
-
-        if(LanguageUtil.getAvailableAppLanguages().length == 0) {
-            // no app languages set -> only "en", no language to choose from
-            findViewById(R.id.appbase_tv_app_language).setVisibility(GONE);
-            dd.setVisibility(GONE);
-        }
-
-        etThemeMode.setText(keyToText(settings.getThemeMode()));
-        etThemeMode.setFocusable(false);
-        etThemeMode.setFocusableInTouchMode(false);
-        etThemeMode.setOnClickListener(view -> onBtnThemeMode());
-        btnThemeMode.setOnClickListener(view -> onBtnThemeMode());
 
         boolean lightNotDark = ThemeUtil.themeModeLightNotDark(
                 getActivity(), settings.getThemeMode());
 
-        if(lightNotDark) {
-            tvTheme.setText(R.string.light_theme);
-            etTheme.setText(settings.getLightTheme());
-        } else {
-            tvTheme.setText(R.string.dark_theme );
-            etTheme.setText(settings.getDarkTheme());
+        if(lightNotDark) { tvTheme.setText(R.string.light_theme); }
+        else             { tvTheme.setText(R.string.dark_theme ); }
+
+        String[] themes = ThemeUtil.getThemes(getActivity(), lightNotDark);
+
+
+        GuiLinker.linkDropDownList(
+                findViewById(R.id.appbase_dd_theme),
+                getString(R.string.theme),
+                themes,
+                themes,
+                new SetGetter() {
+                    @Override
+                    public void set(String key) { onThemeSelected(lightNotDark, key); }
+                    @Override
+                    public String get() {
+                        if(lightNotDark) { return settings.getLightTheme(); }
+                        else { return settings.getDarkTheme(); }
+                    }
+                });
+
+        String[] languages = LanguageUtil.getAvailableAppLanguages();
+
+        GuiLinker.linkDropDownList(
+                findViewById(R.id.appbase_dd_app_language),
+                getString(R.string.app_language),
+                languages,
+                keyToText(languages),
+                new SetGetter() {
+                    @Override
+                    public void set(String key) { onAppLanguageSelected(key); }
+                    @Override
+                    public String get() { return settings.getAppLanguageCode(); }
+                });
+
+        if(LanguageUtil.getAvailableAppLanguages().length == 0) {
+            // no app languages set -> only "en", no language to choose from
+            findViewById(R.id.appbase_tv_app_language).setVisibility(GONE);
+            findViewById(R.id.appbase_dd_app_language).setVisibility(GONE);
         }
 
-        etTheme.setFocusable(false);
-        etTheme.setFocusableInTouchMode(false);
-        etTheme.setOnClickListener(view -> onBtnTheme());
-        btnTheme.setOnClickListener(view -> onBtnTheme());
-
-        etAppLanguage.setText(keyToText(settings.getAppLanguageCode()));
-        etAppLanguage.setFocusable(false);
-        etAppLanguage.setFocusableInTouchMode(false);
-        etAppLanguage.setOnClickListener(view -> onBtnAppLanguage());
-        btnAppLanguage.setOnClickListener(view -> onBtnAppLanguage());
 
         // fast fix for text color for API 21:
         int textColor = ThemeUtil.getColor(getActivity(), android.R.attr.colorForeground);
-        etThemeMode.setTextColor(textColor);
-        etTheme.setTextColor(textColor);
-        etAppLanguage.setTextColor(textColor);
+        EditText et;
+        et = findViewById(R.id.appbase_dd_theme_mode).findViewById(R.id.appbase_et_drop_down);
+        et.setTextColor(textColor);
+        et = findViewById(R.id.appbase_dd_theme).findViewById(R.id.appbase_et_drop_down);
+        et.setTextColor(textColor);
+        et = findViewById(R.id.appbase_dd_app_language).findViewById(R.id.appbase_et_drop_down);
+        et.setTextColor(textColor);
     }
 
     public void addSettings(View view) {
@@ -138,53 +150,20 @@ public class CvSettingsBase extends ContentView {
         }
     }
 
-    private void onBtnThemeMode() {
-        String title = getString(R.string.theme_mode);
-        String currentThemeMode = settings.getThemeMode();
-        Vector<Option> op = new Vector<>();
-        String[] themeModes = new String[] {
-                SettingsKeys.themeModeDefault,
-                SettingsKeys.themeModeLight,
-                SettingsKeys.themeModeDark
-        };
-        for(String themeMode : themeModes) {
-            Option option = new Option(keyToText(themeMode), () -> onThemeModeSelected(themeMode));
-            if(themeMode.equals(currentThemeMode)) { option.setSelected(); }
-            op.add(option);
-        }
-        showPopupChoose(title, op);
+    static private String[] keyToText(String[] keys) {
+        String[] text = new String[keys.length];
+        for(int i=0; i< keys.length; i++) { text[i] = keyToText(keys[i]); }
+        return text;
     }
 
     private void onThemeModeSelected(String themeMode) {
+        if(themeMode == null) { return; }
         settings.setThemeMode(themeMode);
         settings.save();
         // settings.getTheme needs activity to get the day / night mode of android settings
         ThemeUtil.setTheme(getActivity(), settings.getTheme(getActivity()));
         init(); // re-init to reflect new theme
         showInfoAppRestartRequiredForTheme();
-    }
-
-    private void onBtnTheme() {
-        String title;
-        String currentThemeName;
-        boolean lightNotDark = ThemeUtil.themeModeLightNotDark(
-                getActivity(), settings.getThemeMode());
-        if(lightNotDark) {
-            title = getString(R.string.light_theme);
-            currentThemeName = settings.getLightTheme();
-        } else {
-            title = getString(R.string.dark_theme);
-            currentThemeName = settings.getDarkTheme();
-        }
-        Vector<Option> op = new Vector<>();
-        String[] themes = ThemeUtil.getThemes(getActivity(), lightNotDark);
-
-        for(String themeName : themes) {
-            Option option = new Option(themeName, () -> onThemeSelected(lightNotDark, themeName));
-            if(themeName.equals(currentThemeName)) { option.setSelected(); }
-            op.add(option);
-        }
-        showPopupChoose(title, op);
     }
 
     private void onThemeSelected(boolean lightNotDark, String themeName) {
@@ -196,20 +175,6 @@ public class CvSettingsBase extends ContentView {
         showInfoAppRestartRequiredForTheme();
     }
 
-    private void onBtnAppLanguage() {
-        String title = getString(R.string.app_language);
-        Vector<Option> op = new Vector<>();
-        String[] languages = LanguageUtil.getAvailableAppLanguages();
-        String currentLangCode = settings.getAppLanguageCode();
-        for(String langCode : languages) {
-            String text = keyToText(langCode);
-            Option option = new Option(text, () -> onAppLanguageSelected(langCode));
-            if(langCode.equals(currentLangCode)) { option.setSelected(); }
-            op.add(option);
-        }
-        showPopupChoose(title, op);
-    }
-
     private void onAppLanguageSelected(String langCode) {
         settings.setAppLanguageCode(langCode);
         settings.save();
@@ -218,24 +183,13 @@ public class CvSettingsBase extends ContentView {
         init(); // re-init to reflect new language
     }
 
-    private void showPopupChoose(String title, Vector<Option> op) {
-        PopupChoose popupChoose = new PopupChoose(title, null, op);
-        popupChoose.enableDismissByOutsideClick();
-
-        // API 21 text color fix:
-        int textColor = ThemeUtil.getColor(getActivity(), android.R.attr.colorForeground);
-        GuiLinker.setTextColorToAllTextsAndButtons(popupChoose, textColor);
-
-        popupChoose.show();
-    }
-
     private void showInfoAppRestartRequiredForTheme() {
         showInfo(R.string.theme_changed_please_restart);
     }
 
     @Override
     public boolean onBackPressed() {
-        ((Settings) settings).save();
+        settings.save();
         return super.onBackPressed();
     }
 }
