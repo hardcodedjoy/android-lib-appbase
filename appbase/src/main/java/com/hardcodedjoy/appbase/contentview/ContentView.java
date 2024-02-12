@@ -41,7 +41,6 @@ import com.hardcodedjoy.appbase.LanguageUtil;
 import com.hardcodedjoy.appbase.Settings;
 import com.hardcodedjoy.appbase.activity.ActivityResultTask;
 import com.hardcodedjoy.appbase.activity.ActivityUtil;
-import com.hardcodedjoy.appbase.activity.PermissionUtil;
 import com.hardcodedjoy.appbase.activity.SingleActivity;
 import com.hardcodedjoy.appbase.gui.ThemeUtil;
 import com.hardcodedjoy.appbase.popup.Popup;
@@ -151,16 +150,6 @@ public class ContentView extends LinearLayout {
         ActivityUtil.startActivityForResult(getActivity(), intent, onResultOK);
     }
 
-    @SuppressWarnings("unused")
-    static public void runWithPermissions(String[] permissions, Runnable onPermissionsGranted) {
-        PermissionUtil.runWithPermissions(getActivity(), permissions, onPermissionsGranted);
-    }
-
-    @SuppressWarnings("unused")
-    static public void runWithPermission(String permission, Runnable onPermissionsGranted) {
-        PermissionUtil.runWithPermission(getActivity(), permission, onPermissionsGranted);
-    }
-
     static public void runOnUiThread(Runnable r) { activity.runOnUiThread(r); }
     static public void showPopUp(Popup popup) { activity.showPopup(popup); }
     static public void removePopUp(Popup popup) { activity.removePopup(popup); }
@@ -230,9 +219,6 @@ public class ContentView extends LinearLayout {
 
     @SuppressWarnings("unused")
     static public void makeToast(int stringId) { makeToast(getString(stringId)); }
-
-
-
 
     @SuppressWarnings("unused")
     static public void setLogTag(String logTag) { ContentView.logTag = logTag; }

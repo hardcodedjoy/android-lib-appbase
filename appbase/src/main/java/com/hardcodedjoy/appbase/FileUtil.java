@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+@SuppressWarnings("unused")
 public class FileUtil {
 
     @SuppressLint("StaticFieldLeak")
@@ -65,6 +66,7 @@ public class FileUtil {
     static public void setFileContent(Uri uri, String content) {
         byte[] ba;
         try {
+            //noinspection CharsetObjectCanBeUsed
             ba = content.getBytes("UTF-8");
         } catch (Exception e) {
             e.printStackTrace(System.err);
@@ -120,6 +122,7 @@ public class FileUtil {
 
         byte[] ba = getFileContent(uri);
         try {
+            //noinspection CharsetObjectCanBeUsed
             return new String(ba, "UTF-8");
         } catch (Exception e) {
             e.printStackTrace(System.err);
@@ -197,6 +200,7 @@ public class FileUtil {
         return fileName.substring(0, len);
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     static public boolean deleteNonEmptyDir(File dir) {
         File[] files = dir.listFiles();
         if(files == null) { files = new File[0]; }
@@ -264,4 +268,40 @@ public class FileUtil {
 
     static public File getFilesDir() { return activity.getFilesDir(); }
     static public String getFilesDirPath() { return getFilesDir().getAbsolutePath(); }
+
+    static public String getIncrementedFileName(String orig, String current) {
+        // orig -> "file.txt"
+        // current -> "file_1.txt"
+        // return -> "file_2.txt"
+
+        // orig -> "file.txt"
+        // current -> "file.txt"
+        // return -> "file_1.txt"
+
+        if(orig == null) { return null; }
+        if(current == null) { return null; }
+
+        if(orig.equals(current)) {
+            String s = getNameBase(orig) + "_1";
+            String ext = getExtension(orig);
+            if(ext != null) { s += "." + ext; }
+            return s;
+        }
+
+        // else:
+        String s = getNameBase(orig);
+        String currentBase = getNameBase(current);
+        try {
+            String num = currentBase.substring(s.length()+1);
+            int n = Integer.parseInt(num);
+            n++;
+            s += "_" + n;
+        } catch (Exception e) {
+            return null;
+        }
+
+        String ext = getExtension(orig);
+        if(ext != null) { s += "." + ext; }
+        return s;
+    }
 }

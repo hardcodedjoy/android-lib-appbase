@@ -64,6 +64,7 @@ public class SingleActivity extends Activity {
 
         FileUtil.setActivity(this);
         IntentUtil.setActivity(this);
+        PermissionUtil.setActivity(this);
 
         // we use our own title bar in "layout_main"
         requestWindowFeature(Window.FEATURE_NO_TITLE);

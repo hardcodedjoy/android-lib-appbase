@@ -44,21 +44,21 @@ public class IntentUtil {
 
     static public void setActivity(Activity activity) { IntentUtil.activity = activity; }
 
-    @SuppressLint("ObsoleteSdkInt")
     static public Uri getUri(Intent intent) {
-        if(android.os.Build.VERSION.SDK_INT < 16) { return intent.getData(); }
-
         ClipData clipData = intent.getClipData();
+        if(clipData == null) { return intent.getData(); }
+        if(clipData.getItemCount() == 0) { return null; }
+        return clipData.getItemAt(0).getUri();
+    }
 
-        if(clipData != null) {
-            if(clipData.getItemCount() > 0) {
-                return clipData.getItemAt(0).getUri();
-            } else {
-                return null;
-            }
-        } else {
-            return intent.getData();
-        }
+    static public Uri[] getUris(Intent intent) {
+        ClipData clipData = intent.getClipData();
+        if(clipData == null) { return new Uri[] { intent.getData() }; }
+        int n = clipData.getItemCount();
+        if(n == 0) { return null; }
+        Uri[] uris = new Uri[n];
+        for(int i=0; i<n; i++) { uris[i] = clipData.getItemAt(i).getUri(); }
+        return uris;
     }
 
     static public void shareFiles(ArrayList<Uri> uriList, String title, String mimeType) {

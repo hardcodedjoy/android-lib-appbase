@@ -194,18 +194,22 @@ public class GuiLinker {
         String key = setGetter.get();
         String value = StringUtil.findValueForKey(key, optionsKeys, optionsValues);
         if(value != null) { et.setText(value); }
-        //setGetter.set(key);
 
-        Vector<Option> op = new Vector<>();
+        View.OnClickListener ocl = view -> {
+            Vector<Option> op = new Vector<>();
 
-        for(int i=0; i< optionsKeys.length; i++) {
-            final int index = i;
-            Option option = new Option(optionsValues[i], () -> setGetter.set(optionsKeys[index]));
-            if(optionsKeys[i].equals(key)) { option.setSelected(); }
-            op.add(option);
-        }
+            for(int i=0; i<optionsKeys.length; i++) {
+                final int index = i;
+                Option option = new Option(optionsValues[i], () -> {
+                    et.setText(optionsValues[index]);
+                    setGetter.set(optionsKeys[index]);
+                });
+                if(optionsKeys[i].equals(setGetter.get())) { option.setSelected(); }
+                op.add(option);
+            }
 
-        View.OnClickListener ocl = view -> showPopupChoose(title, op);
+            showPopupChoose(title, op);
+        };
 
         et.setFocusable(false);
         et.setFocusableInTouchMode(false);

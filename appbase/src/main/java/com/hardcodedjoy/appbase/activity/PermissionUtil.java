@@ -26,6 +26,7 @@ SOFTWARE.
 
 package com.hardcodedjoy.appbase.activity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -34,52 +35,84 @@ import java.util.Vector;
 
 public class PermissionUtil {
 
+    @SuppressLint("StaticFieldLeak")
+    static private Activity activity;
+
+    static public void setActivity(Activity activity) { PermissionUtil.activity = activity; }
+
     static private int requestCode = 0;
     static private final Vector<Integer> requestCodes = new Vector<>();
-    static private final Vector<Runnable> tasks = new Vector<>();
+    static private final Vector<Runnable> tasksOnGranted = new Vector<>();
+    static private final Vector<Runnable> tasksOnDenied = new Vector<>();
 
-    static public void runWithPermission(
-            Activity activity, String permission, Runnable onPermissionsGranted) {
-        runWithPermissions(activity, new String[]{permission}, onPermissionsGranted);
+    @SuppressWarnings("unused")
+    static public void runWithPermission(String permission, Runnable onGranted) {
+        runWithPermissions(new String[]{permission}, onGranted);
     }
 
-    static public void runWithPermissions(
-            Activity activity, String[] permissions, Runnable onPermissionsGranted) {
+    @SuppressWarnings("unused")
+    static public void runWithPermission(String permission, Runnable onGranted, Runnable onDenied) {
+        runWithPermissions(new String[]{permission}, onGranted, onDenied);
+    }
+
+    static public void runWithPermissions(String[] permissions, Runnable onGranted) {
+        runWithPermissions(permissions, onGranted, () -> {});
+    }
+
+    static public void runWithPermissions(String[] permissions,
+                                          Runnable onGranted, Runnable onDenied) {
+
+        // all granted -> onGranted
+        // one denied -> onDenied, stop checking others
 
         if(Build.VERSION.SDK_INT < 23) {
-            activity.runOnUiThread(onPermissionsGranted);
+            activity.runOnUiThread(onGranted);
+            return;
+        }
+        permissions = onlyNonGranted(permissions);
+        if(permissions.length == 0) {
+            activity.runOnUiThread(onGranted);
             return;
         }
 
-        for(String permission : permissions) {
-            if(activity.checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED) {
-                addTask(requestCode, () -> activity.runOnUiThread(onPermissionsGranted));
-                activity.requestPermissions(permissions, requestCode++);
-                if(requestCode < 0) { requestCode = 0; }
-                return;
-            }
-        }
+        addTask(requestCode,
+                () -> activity.runOnUiThread(onGranted),
+                () -> activity.runOnUiThread(onDenied));
 
-        activity.runOnUiThread(onPermissionsGranted);
+        activity.requestPermissions(permissions, requestCode++);
+        if(requestCode < 0) { requestCode = 0; }
     }
 
-    static private void addTask(int requestCode, Runnable task) {
-        synchronized(tasks) {
+    static private String[] onlyNonGranted(String[] permissions) {
+        Vector<String> nonGranted = new Vector<>();
+        for(String p : permissions) { if(!permissionAlreadyGranted(p)) { nonGranted.add(p); } }
+        return nonGranted.toArray(new String[0]);
+    }
+
+    static private void addTask(int requestCode, Runnable taskOnGranted, Runnable taskOnDenied) {
+        synchronized(requestCodes) {
             requestCodes.add(requestCode);
-            tasks.add(task);
+            tasksOnGranted.add(taskOnGranted);
+            tasksOnDenied.add(taskOnDenied);
         }
     }
 
-    static private void runTask(int requestCode) {
-        synchronized(tasks) {
-            int n = tasks.size();
+    static private void runTask(int requestCode, int grantResult) {
+        synchronized(requestCodes) {
+            int n = requestCodes.size();
             for(int i=0; i<n; i++) {
-                if(requestCodes.elementAt(i) == requestCode) {
-                    tasks.elementAt(i).run();
-                    requestCodes.remove(i);
-                    tasks.remove(i);
-                    return;
+                if(requestCodes.elementAt(i) != requestCode) { continue; }
+
+                if(grantResult == PackageManager.PERMISSION_GRANTED) {
+                    tasksOnGranted.elementAt(i).run();
+                } else if(grantResult == PackageManager.PERMISSION_DENIED) {
+                    tasksOnDenied.elementAt(i).run();
                 }
+
+                requestCodes.remove(i);
+                tasksOnGranted.remove(i);
+                tasksOnDenied.remove(i);
+                return;
             }
         }
     }
@@ -88,12 +121,15 @@ public class PermissionUtil {
             int requestCode, String[] permissions, int[] grantResults) {
         int n = permissions.length;
         for(int i=0; i<n; i++) {
-            if(grantResults[i] != PackageManager.PERMISSION_GRANTED) { return; }
+            if(grantResults[i] != PackageManager.PERMISSION_GRANTED) {
+                runTask(requestCode, PackageManager.PERMISSION_DENIED);
+                return;
+            }
         }
-        runTask(requestCode);
+        runTask(requestCode, PackageManager.PERMISSION_GRANTED);
     }
 
-    static public boolean permissionAlreadyGranted(Activity activity, String permission) {
+    static public boolean permissionAlreadyGranted(String permission) {
         if (android.os.Build.VERSION.SDK_INT < 23) { return true; }
         return (activity.checkSelfPermission(permission) == PackageManager.PERMISSION_GRANTED);
     }
