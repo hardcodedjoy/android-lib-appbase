@@ -38,9 +38,11 @@ SOFTWARE.
     <string name="theme">Theme</string>
     <string name="light_theme">Light theme</string>
     <string name="dark_theme">Dark theme</string>
-    <string name="theme_changed_please_restart">Theme changed. Please restart the app for all changes to take effect.</string>
+    <string name="theme_changed">Theme has been changed.</string>
     <string name="app_language">App. language</string>
     <string name="lang_default">default</string>
+    <string name="language_changed">Language has been changed.</string>
+    <string name="please_restart_to_take_effect">Please restart the app for all changes to take effect.</string>
 
     <string name="error">Error</string>
     <string name="info">Info</string>

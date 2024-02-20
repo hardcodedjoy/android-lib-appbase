@@ -36,9 +36,11 @@ SOFTWARE.
     <string name="theme">Temă</string>
     <string name="light_theme">Temă luminoasă</string>
     <string name="dark_theme">Temă întunecată</string>
-    <string name="theme_changed_please_restart">S-a schimbat tema. Reporniți aplicația pentru ca toate modificările să aibă efect.</string>
+    <string name="theme_changed">Tema a fost schimbată.</string>
     <string name="app_language">Limba aplicației</string>
     <string name="lang_default">implicită</string>
+    <string name="language_changed">Limba a fost schimbată.</string>
+    <string name="please_restart_to_take_effect">Reporniți aplicația pentru ca toate modificările să aibă efect.</string>
 
     <string name="error">Eroare</string>
     <string name="info">Info</string>

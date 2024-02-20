@@ -36,9 +36,11 @@ SOFTWARE.
     <string name="theme">Тема</string>
     <string name="light_theme">Светлая тема</string>
     <string name="dark_theme">Темная тема</string>
-    <string name="theme_changed_please_restart">Тема изменена. Перезапустите приложение, чтобы все изменения вступили в силу.</string>
+    <string name="theme_changed">Тема изменена.</string>
     <string name="app_language">Язык приложения</string>
     <string name="lang_default">по умолчанию</string>
+    <string name="language_changed">Язык изменен.</string>
+    <string name="please_restart_to_take_effect">Перезапустите приложение, чтобы все изменения вступили в силу.</string>
 
     <string name="error">Ошибка</string>
     <string name="info">Информация</string>

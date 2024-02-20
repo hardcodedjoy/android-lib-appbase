@@ -48,6 +48,13 @@ public class HardcodedJoyConstants {
         return aHref(s, s);
     }
 
+    static public String aHrefDevGooglePlay() {
+        String id = Base64.decode(devIdOnGooglePlay);
+        String url = Base64.decode(googlePlayDevURL) + id;
+        String name = Base64.decode(devCompanyName);
+        return aHref(url, name);
+    }
+
     static public String aHrefDevInstagram() {
         String page = Base64.decode(devInstagramPage);
         String url = Base64.decode(instagramURL) + "/" + (page.substring(1));
@@ -95,6 +102,23 @@ public class HardcodedJoyConstants {
         return yearFormat.format(new Date());
     }
 
+    static public String getInstallationSourceAmazonAppStore() {
+        return Base64.decode(installationSourceAmazonAppStore);
+    }
+    static public String getInstallationSourceGooglePlay() {
+        return Base64.decode(installationSourceGooglePlay);
+    }
+    static public String getInstallationSourceSamsungGalaxyStore() {
+        return Base64.decode(installationSourceSamsungGalaxyStore);
+    }
+    static public String getGooglePlayAppDetailsBrowserURL() {
+        return Base64.decode(googlePlayAppDetailsBrowserURL);
+    }
+    static public String getGooglePlayAppDetailsMarketURL() {
+        return Base64.decode(googlePlayAppDetailsMarketURL);
+    }
+    static public String getReferrerUtmSource() { return Base64.decode(referrerUtmSource); }
+
     static private final String devCompanyName = "SEFSRENPREVEIEpPWSBTLlIuTC4=";
     // "HARDCODED JOY S.R.L."
 
@@ -105,17 +129,31 @@ public class HardcodedJoyConstants {
             "aHR0cHM6Ly9oYXJkY29kZWRqb3kuY29tL2FwcC1wcml2YWN5LXBvbGljeT9pZD0=";
     // "https://hardcodedjoy.com/app-privacy-policy?id="
 
+    static private final String devIdOnGooglePlay = "NjI1ODc0Mzg0MzQ3MTE4OTc2NA==";
+    // "6258743843471189764"
+
     static private final String devInstagramPage = "QGhhcmRjb2RlZGpveQ==";
     // "@hardcodedjoy"
-
-    // static private final String devYouTubeChannel = "VUNmcHVtZWZYdUM1RGUxRnJVMWlGRldB";
-    // "UCfpumefXuC5De1FrU1iFFWA"
 
     static private final String devYouTubeHandle = "QGhhcmRjb2RlZF9qb3k=";
     // "@hardcoded_joy"
 
     static private final String devGitHubName = "aGFyZGNvZGVkam95";
     // "hardcodedjoy"
+
+    static private final String googlePlayDevURL =
+            "aHR0cHM6Ly9wbGF5Lmdvb2dsZS5jb20vc3RvcmUvYXBwcy9kZXY/aWQ9";
+    // "https://play.google.com/store/apps/dev?id="
+
+    static private final String googlePlayAppDetailsBrowserURL =
+            "aHR0cHM6Ly9wbGF5Lmdvb2dsZS5jb20vc3RvcmUvYXBwcy9kZXRhaWxzP2lkPQ==";
+    // "https://play.google.com/store/apps/details?id="
+
+    static private final String googlePlayAppDetailsMarketURL = "bWFya2V0Oi8vZGV0YWlscz9pZD0=";
+    // "market://details?id="
+
+    static private final String referrerUtmSource = "cmVmZXJyZXI9dXRtX3NvdXJjZSUzRA==";
+    // "referrer=utm_source%3D"
 
     static private final String instagramURL = "aHR0cHM6Ly9pbnN0YWdyYW0uY29t";
     // "https://instagram.com"
@@ -125,6 +163,16 @@ public class HardcodedJoyConstants {
 
     static private final String githubURL = "aHR0cHM6Ly9naXRodWIuY29t";
     // "https://github.com"
+
+    static private final String installationSourceGooglePlay = "Y29tLmFuZHJvaWQudmVuZGluZw==";
+    // "com.android.vending"
+
+    static private final String installationSourceAmazonAppStore = "Y29tLmFtYXpvbi52ZW5lemlh";
+    // "com.amazon.venezia"
+
+    static private final String installationSourceSamsungGalaxyStore =
+            "Y29tLnNlYy5hbmRyb2lkLmFwcC5zYW1zdW5nYXBwcw==";
+    // "com.sec.android.app.samsungapps"
 
     static private final String devLogoBase64
           = "iVBORw0KGgoAAAANSUhEUgAAAVwAAABVCAYAAAAFblxQAAAUYUlEQVR42uzdT4iM" +

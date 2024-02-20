@@ -6,15 +6,28 @@ It also includes some additional utility classes and methods that are useful in 
 - ContentView = Base class for a new "screen" in the app;
 - CvTMLL = ContentView with title bar, menu button and LinearLayout for additional content;
 - CvTMSLL = same as CvTMLL, but the LinearLayout is inside a ScrollView;
+- CvTSLL  = same as CvTMSLL, but the Menu button is invisible;
 - CvAboutBase = "about" screen;
 - CvSettingsBase = "settings" screen.
 
 In ContentView, set the layout by calling inflate(int resId) in the constructor.
 
-In CvTMLL and CvTMSLL, additional content to be added by the user into the LinearLayout (id = "appbase_ll_content").
-Title can be changed by setting other text to the TextView (id = "appbase_tv_title").
+In CvT...:
+- add content -> add it to LinearLayout (id = "appbase_ll_content");
+- change title -> setTitle(...);
+- change title icon -> setTitleIcon(...);
 
-Menu button opens a drop-down menu with "ABOUT" and "SETTINGS" options.
+Menu button opens a drop-down menu:
+- "ABOUT" screen;
+- "SETTINGS" screen;
+- add more options:
+<code>
+Vector<Option> ops = new Vector<>();
+ops.add(new Option(...));
+...
+addMenuOptions(ops, 0);
+</code>
+
 User can add other options to the menu as well.
 
 This repo also contains an android project that is a testbed app. See its code for more details about using the library.

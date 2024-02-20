@@ -110,31 +110,80 @@ SOFTWARE.
                 android:layout_marginBottom="20sp"
                 android:text="@string/eula"/>
 
-            <TextView
-                android:id="@+id/appbase_tv_privacy_policy"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/appbase_ll_privacy_policy"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/privacy_policy"
-                android:layout_marginBottom="20sp"/>
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_privacy_policy_1"
+                    android:tint="?android:colorForeground"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+                <TextView
+                    android:id="@+id/appbase_tv_privacy_policy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/privacy_policy" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/appbase_tv_rate_app"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/appbase_ll_rate_app"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20sp"
-                android:text="@string/rate_this_app"/>
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_star_2"
+                    android:tint="?android:colorForeground"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+                <TextView
+                    android:id="@+id/appbase_tv_rate_app"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rate_this_app"/>
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/appbase_tv_share_app"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/appbase_ll_share_app"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20sp"
-                android:text="@string/share_this_app"/>
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_share_1"
+                    android:tint="?android:colorForeground"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+                <TextView
+                    android:id="@+id/appbase_tv_share_app"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/share_this_app"/>
+            </LinearLayout>
+
+
 
             <TextView
                 android:id="@+id/appbase_tv_app_developed_by"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="@string/app_developed_by"/>
             <ImageView
                 android:id="@+id/appbase_iv_dev_logo"
@@ -151,6 +200,32 @@ SOFTWARE.
                 tools:ignore="HardcodedText" />
 
             <LinearLayout
+                android:id="@+id/appbase_ll_gp_page"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_social_gp"
+                    android:tint="?android:colorForeground"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/appbase_tv_gp_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[dev_gp_page]"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/appbase_ll_insta_page"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -163,7 +238,7 @@ SOFTWARE.
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/ic_social_instagram"
+                    android:src="@drawable/ic_social_ig"
                     android:tint="?android:colorForeground"
                     tools:ignore="ContentDescription,RtlHardcoded" />
 
@@ -171,7 +246,7 @@ SOFTWARE.
                     android:id="@+id/appbase_tv_insta_page"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="[dev_instagram_page]"
+                    android:text="[dev_ig_page]"
                     tools:ignore="HardcodedText" />
 
             </LinearLayout>
@@ -189,7 +264,7 @@ SOFTWARE.
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/ic_social_youtube"
+                    android:src="@drawable/ic_social_yt"
                     android:tint="?android:colorForeground"
                     tools:ignore="ContentDescription,RtlHardcoded" />
 
@@ -197,7 +272,7 @@ SOFTWARE.
                     android:id="@+id/appbase_tv_youtube_channel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="[dev_youtube_handle]"
+                    android:text="[dev_yt_handle]"
                     tools:ignore="HardcodedText" />
 
             </LinearLayout>
@@ -215,7 +290,7 @@ SOFTWARE.
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/ic_social_github"
+                    android:src="@drawable/ic_social_gh"
                     android:tint="?android:colorForeground"
                     tools:ignore="ContentDescription,RtlHardcoded" />
 
@@ -223,7 +298,7 @@ SOFTWARE.
                     android:id="@+id/appbase_tv_github"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="[dev_github_name]"
+                    android:text="[dev_gh_name]"
                     tools:ignore="HardcodedText" />
 
             </LinearLayout>

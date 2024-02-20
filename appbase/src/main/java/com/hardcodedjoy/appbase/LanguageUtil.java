@@ -76,4 +76,14 @@ public class LanguageUtil {
 
         return wanted; // wanted / or system if available / or "en"
     }
+
+    static public String getLanguageName(String languageCode) {
+        switch(languageCode) {
+            case "en": return "English";
+            case "fr": return "Français";
+            case "ro": return "Română";
+            case "ru": return "Русский";
+        }
+        return "";
+    }
 }

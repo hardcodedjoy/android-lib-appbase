@@ -41,6 +41,7 @@ import android.widget.TextView;
 import com.hardcodedjoy.appbase.AppBase;
 import com.hardcodedjoy.appbase.HardcodedJoyConstants;
 import com.hardcodedjoy.appbase.IntentUtil;
+import com.hardcodedjoy.appbase.MarketLinkGenerator;
 import com.hardcodedjoy.appbase.R;
 import com.hardcodedjoy.appbase.gui.DisplayUnit;
 import com.hardcodedjoy.appbase.gui.ThemeUtil;
@@ -59,8 +60,6 @@ public class CvAboutBase extends ContentView {
 
     static private int appUsageType = 0;
     static private String linkEULA = null;
-    static private String linkShareApp = null;
-    static private String linkRateApp = null;
 
     static private final Vector<String> otherAppNames = new Vector<>();
     static private final Vector<String> otherAppURLs = new Vector<>();
@@ -93,28 +92,60 @@ public class CvAboutBase extends ContentView {
             setAsLink(tv, s);
         }
 
-        if(linkRateApp == null) {
-            findViewById(R.id.appbase_tv_rate_app).setVisibility(GONE);
-        } else {
+        tv = findViewById(R.id.appbase_tv_privacy_policy);
+        setAsLink(tv, HardcodedJoyConstants.aHrefPrivacyPolicy());
+        findViewById(R.id.appbase_ll_privacy_policy).setOnClickListener(
+                (view) -> findViewById(R.id.appbase_tv_privacy_policy).performClick());
+
+        String packageName = getActivity().getPackageName();
+
+        {
             tv = findViewById(R.id.appbase_tv_rate_app);
             s = tv.getText().toString();
-            s = HardcodedJoyConstants.aHref(linkRateApp, s);
-            setAsLink(tv, s);
+            s = MarketLinkGenerator.aHrefAppInMarket(s, packageName, null);
+            LinearLayout ll = findViewById(R.id.appbase_ll_rate_app);
+            if(s == null) {
+                ll.setVisibility(GONE);
+            } else if(s.equals("unimplemented")) {
+                ll.removeAllViews();
+                ll.setOnClickListener(view -> {});
+                LinearLayout.LayoutParams params;
+                params = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, 1);
+                ll.setLayoutParams(params);
+                ll.setBackgroundColor(ThemeUtil.getColor(getActivity(), android.R.attr.colorForeground));
+            } else {
+                setAsLink(tv, s);
+                ll.setOnClickListener(
+                        (view) -> findViewById(R.id.appbase_tv_rate_app).performClick());
+            }
         }
 
-        if(linkShareApp == null) {
-            findViewById(R.id.appbase_tv_share_app).setVisibility(GONE);
-        } else {
+        {
             tv = findViewById(R.id.appbase_tv_share_app);
             s = tv.getText().toString();
             tv.setText(fromHTML("<u>" + s + "</u>"));
             tv.setTextColor(ThemeUtil.getColor(getActivity(), android.R.attr.textColorLink));
 
-            tv.setOnClickListener(view -> {
-                String title = getResources().getString(R.string.share) + " "
-                             + getResources().getString(R.string.app_name);
-                IntentUtil.shareText(linkShareApp, title);
-            });
+            String url = MarketLinkGenerator.urlAppInBrowser(packageName, "share");
+            LinearLayout ll = findViewById(R.id.appbase_ll_share_app);
+            if(url == null) {
+                ll.setVisibility(GONE);
+            } else if(url.equals("unimplemented")) {
+                ll.removeAllViews();
+                ll.setOnClickListener(view -> {});
+                LinearLayout.LayoutParams params;
+                params = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, 1);
+                ll.setLayoutParams(params);
+                ll.setBackgroundColor(ThemeUtil.getColor(getActivity(), android.R.attr.colorForeground));
+            } else {
+                tv.setOnClickListener(view -> {
+                    String title = getResources().getString(R.string.share) + " "
+                            + getResources().getString(R.string.app_name);
+                    IntentUtil.shareText(url, title);
+                });
+                ll.setOnClickListener(
+                        (view) -> findViewById(R.id.appbase_tv_share_app).performClick());
+            }
         }
 
         ImageView ivDevLogo = findViewById(R.id.appbase_iv_dev_logo);
@@ -124,6 +155,11 @@ public class CvAboutBase extends ContentView {
 
         tv = findViewById(R.id.appbase_tv_dev_website);
         setAsLink(tv, HardcodedJoyConstants.aHrefDevWebsite());
+
+        tv = findViewById(R.id.appbase_tv_gp_page);
+        setAsLink(tv, HardcodedJoyConstants.aHrefDevGooglePlay());
+        findViewById(R.id.appbase_ll_gp_page).setOnClickListener(
+                (view) -> findViewById(R.id.appbase_tv_gp_page).performClick());
 
         tv = findViewById(R.id.appbase_tv_insta_page);
         setAsLink(tv, HardcodedJoyConstants.aHrefDevInstagram());
@@ -139,9 +175,6 @@ public class CvAboutBase extends ContentView {
         setAsLink(tv, HardcodedJoyConstants.aHrefDevGitHub());
         findViewById(R.id.appbase_ll_github).setOnClickListener(
                 (view) -> findViewById(R.id.appbase_tv_github).performClick());
-
-        tv = findViewById(R.id.appbase_tv_privacy_policy);
-        setAsLink(tv, HardcodedJoyConstants.aHrefPrivacyPolicy());
 
         tv = findViewById(R.id.appbase_tv_app_uses_open_source_libs);
         s = tv.getText().toString();
@@ -215,10 +248,4 @@ public class CvAboutBase extends ContentView {
 
     @SuppressWarnings("unused")
     static public void setLinkEULA(String s) { linkEULA = s; }
-
-    @SuppressWarnings("unused")
-    static public void setLinkRateApp(String s) { linkRateApp = s; }
-
-    @SuppressWarnings("unused")
-    static public void setLinkShareApp(String s) { linkShareApp = s; }
 }

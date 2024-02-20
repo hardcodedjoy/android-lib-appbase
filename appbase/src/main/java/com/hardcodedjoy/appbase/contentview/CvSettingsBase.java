@@ -98,13 +98,26 @@ public class CvSettingsBase extends ContentView {
                     }
                 });
 
-        String[] languages = LanguageUtil.getAvailableAppLanguages();
+        String[] langCodes = LanguageUtil.getAvailableAppLanguages();
+        String[] lcn = new String[langCodes.length]; // ex: "en - English"
+        for(int i=0; i<langCodes.length; i++) {
+
+            // default -> "default" in various languages:
+            if(langCodes[i].equals(SettingsKeys.appLanguageCodeDefault)) {
+                lcn[i] = getString(R.string.lang_default);
+                continue;
+            }
+            // else:
+
+            // ex: "en - English"
+            lcn[i] = langCodes[i] + " - " + LanguageUtil.getLanguageName(langCodes[i]);
+        }
 
         GuiLinker.linkDropDownList(
                 findViewById(R.id.appbase_dd_app_language),
                 getString(R.string.app_language),
-                languages,
-                keyToText(languages),
+                langCodes,
+                lcn,
                 new SetGetter() {
                     @Override
                     public void set(String key) { onAppLanguageSelected(key); }
@@ -181,10 +194,19 @@ public class CvSettingsBase extends ContentView {
         langCode = settings.getAppLanguageCode();
         setAppLanguage(langCode);
         init(); // re-init to reflect new language
+        showInfoAppRestartRequiredForLang();
     }
 
     private void showInfoAppRestartRequiredForTheme() {
-        showInfo(R.string.theme_changed_please_restart);
+        String s = getString(R.string.theme_changed) + " "
+                + getString(R.string.please_restart_to_take_effect);
+        showInfo(s);
+    }
+
+    private void showInfoAppRestartRequiredForLang() {
+        String s = getString(R.string.language_changed) + " "
+                + getString(R.string.please_restart_to_take_effect);
+        showInfo(s);
     }
 
     @Override
