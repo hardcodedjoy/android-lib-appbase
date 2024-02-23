@@ -4,7 +4,11 @@
   android:height="56dp"
   android:viewportWidth="480"
   android:viewportHeight="480">
+
   <path
     android:fillColor="#FF000000"
-    android:pathData="m 120 103 c -9 0 -17 8 -17 17 v 240 c 0 9 8 17 17 17 h 69 c 9 0 17 -8 17 -17 V 120 c 0 -9 -8 -17 -17 -17 z m 171 0 c -9 0 -17 8 -17 17 v 240 c 0 9 8 17 17 17 h 69 c 9 0 17 -8 17 -17 V 120 c 0 -9 -8 -17 -17 -17 z"/>
+    android:pathData="m 120 103 c -9 0 -17 8 -17 17 v 240 c 0 9 8 17 17 17 h 69 c 9 0 17 -8 17 -17 V 120 c 0 -9 -8 -17 -17 -17 z"/>
+  <path
+    android:fillColor="#FF000000"
+    android:pathData="m 291 103 c -9 0 -17 8 -17 17 v 240 c 0 9 8 17 17 17 H 360 c 9 0 17 -8 17 -17 V 120 C 377 111 369 103 360 103 Z"/>
 </vector>

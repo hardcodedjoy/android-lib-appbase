@@ -58,11 +58,10 @@ public class MarketLinkGenerator {
 
         if(HardcodedJoyConstants.getInstallationSourceSamsungGalaxyStore().equals(ispn)) {
             // installed from Samsung Galaxy Store
-            // url = "samsungapps://ProductDetail/" + packageName // TODO: test
-            // if(utmSource != null) {
-            //     url += "?" + HardcodedJoyConstants.getReferrerUtmSource() + utmSource
-            // }
-            return null;
+            url = HardcodedJoyConstants.getSamsungGalaxyStoreAppDetailsMarketURL() + packageName;
+            if(utmSource != null) {
+                 url += "?" + HardcodedJoyConstants.getReferrerUtmSource() + utmSource;
+            }
         }
 
         if(url == null) { return null; }
@@ -92,7 +91,10 @@ public class MarketLinkGenerator {
 
         if(HardcodedJoyConstants.getInstallationSourceSamsungGalaxyStore().equals(ispn)) {
             // installed from Samsung Galaxy Store
-            return null; // TODO: implement
+            url = HardcodedJoyConstants.getSamsungGalaxyStoreAppDetailsBrowserURL() + packageName;
+            if(utmSource != null) {
+                url += "?" + HardcodedJoyConstants.getReferrerUtmSource() + utmSource;
+            }
         }
 
         return url;

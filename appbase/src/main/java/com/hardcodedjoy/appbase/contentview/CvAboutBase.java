@@ -99,6 +99,7 @@ public class CvAboutBase extends ContentView {
 
         String packageName = getActivity().getPackageName();
 
+
         {
             tv = findViewById(R.id.appbase_tv_rate_app);
             s = tv.getText().toString();

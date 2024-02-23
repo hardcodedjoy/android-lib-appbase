@@ -117,6 +117,13 @@ public class HardcodedJoyConstants {
     static public String getGooglePlayAppDetailsMarketURL() {
         return Base64.decode(googlePlayAppDetailsMarketURL);
     }
+    static public String getSamsungGalaxyStoreAppDetailsBrowserURL() {
+        return Base64.decode(samsungGalaxyStoreAppDetailsBrowserURL);
+    }
+    static public String getSamsungGalaxyStoreAppDetailsMarketURL() {
+        return Base64.decode(samsungGalaxyStoreAppDetailsMarketURL);
+    }
+
     static public String getReferrerUtmSource() { return Base64.decode(referrerUtmSource); }
 
     static private final String devCompanyName = "SEFSRENPREVEIEpPWSBTLlIuTC4=";
@@ -151,6 +158,16 @@ public class HardcodedJoyConstants {
 
     static private final String googlePlayAppDetailsMarketURL = "bWFya2V0Oi8vZGV0YWlscz9pZD0=";
     // "market://details?id="
+
+    static private final String samsungGalaxyStoreAppDetailsBrowserURL =
+            "aHR0cHM6Ly9nYWxheHlzdG9yZS5zYW1zdW5nLmNvbS9kZXRhaWwv";
+    // "https://galaxystore.samsung.com/detail/"
+
+    static private final String samsungGalaxyStoreAppDetailsMarketURL =
+            "c2Ftc3VuZ2FwcHM6Ly9Qcm9kdWN0RGV0YWlsLw==";
+    // "samsungapps://ProductDetail/"
+
+
 
     static private final String referrerUtmSource = "cmVmZXJyZXI9dXRtX3NvdXJjZSUzRA==";
     // "referrer=utm_source%3D"
