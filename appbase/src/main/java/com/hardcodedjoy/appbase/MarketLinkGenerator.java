@@ -31,7 +31,7 @@ import android.content.pm.PackageManager;
 
 public class MarketLinkGenerator {
 
-    static public String aHrefAppInMarket(String text, String packageName, String utmSource) {
+    static public String urlAppInMarket(String packageName, String utmSource) {
         String ispn = getInstallationSourcePackageName();
         if(ispn == null) { return null; }
 
@@ -64,8 +64,7 @@ public class MarketLinkGenerator {
             }
         }
 
-        if(url == null) { return null; }
-        return HardcodedJoyConstants.aHref(url, text);
+        return url;
     }
 
     static public String urlAppInBrowser(String packageName, String utmSource) {

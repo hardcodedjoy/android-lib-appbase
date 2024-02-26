@@ -27,6 +27,8 @@ SOFTWARE.
 package com.hardcodedjoy.appbase.contentview;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.text.Html;
 import android.text.SpannableString;
@@ -92,20 +94,36 @@ public class CvAboutBase extends ContentView {
             setAsLink(tv, s);
         }
 
-        tv = findViewById(R.id.appbase_tv_privacy_policy);
-        setAsLink(tv, HardcodedJoyConstants.aHrefPrivacyPolicy());
-        findViewById(R.id.appbase_ll_privacy_policy).setOnClickListener(
-                (view) -> findViewById(R.id.appbase_tv_privacy_policy).performClick());
+        {
+            tv = findViewById(R.id.appbase_tv_privacy_policy);
+            s = tv.getText().toString();
+            tv.setText(fromHTML("<u>" + s + "</u>"));
+            tv.setTextColor(ThemeUtil.getColor(getActivity(), android.R.attr.textColorLink));
+
+            String url = HardcodedJoyConstants.urlPrivacyPolicy();
+            LinearLayout ll = findViewById(R.id.appbase_ll_privacy_policy);
+
+            tv.setOnClickListener(view -> {
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                getActivity().startActivity(i);
+            });
+
+            ll.setOnClickListener(
+                    (view) -> findViewById(R.id.appbase_tv_privacy_policy).performClick());
+        }
+
 
         String packageName = getActivity().getPackageName();
-
 
         {
             tv = findViewById(R.id.appbase_tv_rate_app);
             s = tv.getText().toString();
-            s = MarketLinkGenerator.aHrefAppInMarket(s, packageName, null);
+            tv.setText(fromHTML("<u>" + s + "</u>"));
+            tv.setTextColor(ThemeUtil.getColor(getActivity(), android.R.attr.textColorLink));
+
+            String url = MarketLinkGenerator.urlAppInMarket(packageName, null);
             LinearLayout ll = findViewById(R.id.appbase_ll_rate_app);
-            if(s == null) {
+            if(url == null) {
                 ll.setVisibility(GONE);
             } else if(s.equals("unimplemented")) {
                 ll.removeAllViews();
@@ -115,7 +133,10 @@ public class CvAboutBase extends ContentView {
                 ll.setLayoutParams(params);
                 ll.setBackgroundColor(ThemeUtil.getColor(getActivity(), android.R.attr.colorForeground));
             } else {
-                setAsLink(tv, s);
+                tv.setOnClickListener(view -> {
+                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    getActivity().startActivity(i);
+                });
                 ll.setOnClickListener(
                         (view) -> findViewById(R.id.appbase_tv_rate_app).performClick());
             }

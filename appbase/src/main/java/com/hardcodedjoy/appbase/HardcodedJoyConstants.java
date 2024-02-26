@@ -73,12 +73,10 @@ public class HardcodedJoyConstants {
         return aHref(url, name);
     }
 
-    static public String aHrefPrivacyPolicy() {
-        String text = ContentView.getString(R.string.privacy_policy);
+    static public String urlPrivacyPolicy() {
         String packageName = ContentView.getActivity().getPackageName();
         String languageCode = ContentView.getAppLanguage();
-        String url = Base64.decode(privacyPolicyURL) + packageName + "&hl=" + languageCode;
-        return aHref(url, text);
+        return Base64.decode(privacyPolicyURL) + packageName + "&hl=" + languageCode;
     }
 
     static public Bitmap devLogo() {
