@@ -28,6 +28,8 @@ SOFTWARE.
 
     <string name="popups">Popups</string>
     <string name="popup_ask">PopupAsk</string>
+    <string name="popup_ask_2">PopupAsk2</string>
+    <string name="popup_ask_3">PopupAsk3</string>
     <string name="popup_choose">PopupChoose</string>
     <string name="popup_color_picker">PopupColorPicker</string>
     <string name="popup_custom">PopupCustom</string>
@@ -50,5 +52,8 @@ SOFTWARE.
     <string name="popup_login">PopupLogin</string>
     <string name="theme_view">Theme view</string>
     <string name="icons">Icons</string>
+    <string name="popup_ask_with_text_buttons">PopupAsk with text buttons</string>
+    <string name="yes_that_would_be_great">Yes, that would be great</string>
+    <string name="no_i_dont_want_that">No, I don\'t want that</string>
 
 </resources>

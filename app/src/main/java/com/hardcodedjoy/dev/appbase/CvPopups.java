@@ -60,6 +60,8 @@ public class CvPopups extends ContentView {
             int id = view.getId();
 
             if(id == R.id.btn_popup_ask) { showPopupAsk(); }
+            if(id == R.id.btn_popup_ask_2) { showPopupAsk2(); }
+            if(id == R.id.btn_popup_ask_3) { showPopupAsk3(); }
             if(id == R.id.btn_popup_choose) { showPopupChoose(); }
             if(id == R.id.btn_popup_color_picker) { showPopupColorPicker(); }
             if(id == R.id.btn_popup_custom) { showPopupCustom(); }
@@ -81,6 +83,28 @@ public class CvPopups extends ContentView {
 
     private void showPopupAsk() {
         new PopupAsk(R.string.delete, R.string.are_you_sure) {
+            @Override
+            public void onOK() {}
+        }.show();
+    }
+
+    private void showPopupAsk2() {
+        new PopupAsk(
+                R.string.popup_ask_with_text_buttons,
+                R.string.are_you_sure,
+                R.string.yes_that_would_be_great,
+                R.string.no) {
+            @Override
+            public void onOK() {}
+        }.show();
+    }
+
+    private void showPopupAsk3() {
+        new PopupAsk(
+                R.string.popup_ask_with_text_buttons,
+                R.string.are_you_sure,
+                R.string.yes,
+                R.string.no_i_dont_want_that) {
             @Override
             public void onOK() {}
         }.show();

@@ -78,7 +78,7 @@ public class SingleActivity extends Activity {
 
         Settings settings = (Settings) this.settings;
 
-        SharedPreferences sp = getSharedPreferences(getPackageName(), Context.MODE_PRIVATE);
+        SharedPreferences sp = getSharedPreferences("app_settings", Context.MODE_PRIVATE);
         settings.setSharedPreferences(sp);
         settings.onLoad();
 
