@@ -38,7 +38,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.hardcodedjoy.appbase.LanguageUtil;
-import com.hardcodedjoy.appbase.Settings;
+import com.hardcodedjoy.appbase.SettingsBase;
 import com.hardcodedjoy.appbase.activity.ActivityResultTask;
 import com.hardcodedjoy.appbase.activity.ActivityUtil;
 import com.hardcodedjoy.appbase.activity.SingleActivity;
@@ -57,8 +57,6 @@ public class ContentView extends LinearLayout {
     static private LayoutInflater inflater;
     static private String appLanguageCode;
 
-    static protected Object settings;
-
     static private String logTag = "";
     static private long logMillis;
 
@@ -76,8 +74,8 @@ public class ContentView extends LinearLayout {
         }
 
         ContentView.inflater = activity.getLayoutInflater();
-        ContentView.settings = activity.getSettings();
-        String langCode = ((Settings)settings).getAppLanguageCode();
+        SettingsBase settings = SettingsBase.getInstance();
+        String langCode = settings.getAppLanguageCode();
         setAppLanguage(langCode);
     }
     static public SingleActivity getActivity() { return activity; }

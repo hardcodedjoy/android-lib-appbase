@@ -28,7 +28,9 @@ package com.hardcodedjoy.dev.appbase;
 
 import android.content.SharedPreferences;
 
-public class Settings extends com.hardcodedjoy.appbase.Settings {
+import com.hardcodedjoy.appbase.SettingsBase;
+
+public class Settings extends SettingsBase {
 
     // DEFAULTS
     // static private final [type] VAR_NAME_DEFAULT = VALUE;

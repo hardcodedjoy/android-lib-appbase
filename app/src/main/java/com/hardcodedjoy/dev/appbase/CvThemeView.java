@@ -89,7 +89,7 @@ public class CvThemeView extends ContentView {
 
     @Override
     public boolean onBackPressed() {
-        Settings settings = (Settings) ContentView.settings;
+        Settings settings = (Settings) Settings.getInstance();
         ThemeUtil.setTheme(getActivity(), settings.getTheme(getActivity()));
         return super.onBackPressed();
     }

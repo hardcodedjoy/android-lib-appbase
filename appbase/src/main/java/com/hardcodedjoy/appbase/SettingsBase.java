@@ -28,11 +28,21 @@ package com.hardcodedjoy.appbase;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.hardcodedjoy.appbase.gui.ThemeUtil;
 
-public class Settings { // to be extended by specific app settings
+public class SettingsBase { // to be extended by specific app settings
+
+    // class of settings, to be set to app specific settings using setSettingsClass()
+    static private Class<?> settingsClass = SettingsBase.class;
+
+    @SuppressLint("StaticFieldLeak")
+    static private Activity activity;
+
+    @SuppressLint("StaticFieldLeak")
+    static private SettingsBase instance;
 
     static private final String THEME_MODE_DEFAULT = SettingsKeys.themeModeLight;
     static private final String LIGHT_THEME_DEFAULT = "SeaSaltEmerald";
@@ -46,10 +56,29 @@ public class Settings { // to be extended by specific app settings
     private String darkTheme;
     private String appLanguageCode;
 
-    public void setSharedPreferences(SharedPreferences sp) { this.sp = sp; }
+    static public void setActivity(Activity activity) { SettingsBase.activity = activity; }
 
-    // to be overridden by specific app settings
-    public Settings() {}
+    @SuppressWarnings("SameParameterValue")
+    static public void setSettingsClass(Class<?> c) { settingsClass = c; }
+
+    static public SettingsBase getInstance() {
+        if(instance == null) {
+
+            try {
+                instance = (SettingsBase) settingsClass.newInstance();
+            } catch (Exception e) {
+                e.printStackTrace(System.err);
+                instance = new SettingsBase();
+            }
+
+            instance.sp = activity.getSharedPreferences("app_settings", Context.MODE_PRIVATE);
+            instance.onLoad();
+        }
+
+        return instance;
+    }
+
+    protected SettingsBase() {}
 
     public void setThemeMode(String themeMode) { this.themeMode = themeMode; }
     public String getThemeMode() { return themeMode; }
@@ -68,7 +97,6 @@ public class Settings { // to be extended by specific app settings
 
     public void setAppLanguageCode(String lang) { this.appLanguageCode = lang; }
     public String getAppLanguageCode() { return appLanguageCode; }
-
 
 
     final public void onLoad() {

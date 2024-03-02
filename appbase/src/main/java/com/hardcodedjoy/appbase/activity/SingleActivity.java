@@ -27,9 +27,7 @@ SOFTWARE.
 package com.hardcodedjoy.appbase.activity;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.ViewGroup;
 import android.view.ViewParent;
@@ -40,18 +38,13 @@ import com.hardcodedjoy.appbase.FileUtil;
 import com.hardcodedjoy.appbase.IntentUtil;
 import com.hardcodedjoy.appbase.SoftKeyboardUtil;
 import com.hardcodedjoy.appbase.contentview.ContentView;
-import com.hardcodedjoy.appbase.Settings;
+import com.hardcodedjoy.appbase.SettingsBase;
 import com.hardcodedjoy.appbase.gui.ThemeUtil;
 import com.hardcodedjoy.appbase.popup.Popup;
 
 import java.util.Vector;
 
 public class SingleActivity extends Activity {
-
-    private Object settings;
-
-    // class of settings, to be set to app specific settings using setSettingsClass()
-    static private Class<?> settingsClass = Settings.class;
 
     // class of cv to be displayed on app start
     static private Class<?> cvInitialClass = null;
@@ -65,22 +58,12 @@ public class SingleActivity extends Activity {
         FileUtil.setActivity(this);
         IntentUtil.setActivity(this);
         PermissionUtil.setActivity(this);
+        SettingsBase.setActivity(this);
 
         // we use our own title bar in "layout_main"
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        try {
-            settings = settingsClass.newInstance();
-        } catch (Exception e) {
-            e.printStackTrace(System.err);
-            settings = new Settings();
-        }
-
-        Settings settings = (Settings) this.settings;
-
-        SharedPreferences sp = getSharedPreferences("app_settings", Context.MODE_PRIVATE);
-        settings.setSharedPreferences(sp);
-        settings.onLoad();
+        SettingsBase settings = SettingsBase.getInstance();
 
         if(settings.getLightTheme() == null) {
             settings.setLightTheme(ThemeUtil.getThemes(this, true)[0]);
@@ -167,8 +150,6 @@ public class SingleActivity extends Activity {
 
     public ContentView getContentView() { return cvCurrent; }
 
-    public Object getSettings() { return settings; }
-
     @Override
     public void onRequestPermissionsResult(int rqCode, String[] permissions, int[] grantResults) {
         PermissionUtil.onRequestPermissionsResult(rqCode, permissions, grantResults);
@@ -196,9 +177,6 @@ public class SingleActivity extends Activity {
         super.onBackPressed();
         super.finish();
     }
-
-    @SuppressWarnings("SameParameterValue")
-    static protected void setSettingsClass(Class<?> c) { SingleActivity.settingsClass = c; }
 
     @SuppressWarnings("SameParameterValue")
     static protected void setInitialCvClass(Class<?> c) { SingleActivity.cvInitialClass = c; }

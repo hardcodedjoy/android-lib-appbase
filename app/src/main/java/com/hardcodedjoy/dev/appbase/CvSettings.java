@@ -29,7 +29,6 @@ package com.hardcodedjoy.dev.appbase;
 import android.annotation.SuppressLint;
 import android.widget.TextView;
 
-import com.hardcodedjoy.appbase.contentview.ContentView;
 import com.hardcodedjoy.appbase.contentview.CvSettingsBase;
 
 @SuppressLint("ViewConstructor")
@@ -40,7 +39,7 @@ public class CvSettings extends CvSettingsBase {
         super.init();
 
         //noinspection unused
-        Settings settings = (Settings) ContentView.settings;
+        Settings settings = (Settings) Settings.getInstance();
 
         TextView tvTest = new TextView(getActivity());
         String s = "TODO: more settings here";

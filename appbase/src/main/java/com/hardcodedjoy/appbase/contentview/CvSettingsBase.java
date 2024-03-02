@@ -34,7 +34,7 @@ import android.widget.TextView;
 
 import com.hardcodedjoy.appbase.LanguageUtil;
 import com.hardcodedjoy.appbase.R;
-import com.hardcodedjoy.appbase.Settings;
+import com.hardcodedjoy.appbase.SettingsBase;
 import com.hardcodedjoy.appbase.SettingsKeys;
 import com.hardcodedjoy.appbase.gui.GuiLinker;
 import com.hardcodedjoy.appbase.gui.SetGetter;
@@ -43,7 +43,7 @@ import com.hardcodedjoy.appbase.gui.ThemeUtil;
 @SuppressLint("ViewConstructor")
 public class CvSettingsBase extends ContentView {
 
-    private Settings settings;
+    private SettingsBase settings;
 
     public CvSettingsBase() { init(); }
 
@@ -51,7 +51,7 @@ public class CvSettingsBase extends ContentView {
         removeAllViews();
         inflate(R.layout.appbase_cv_settings);
 
-        settings = (Settings) ContentView.settings;
+        settings = SettingsBase.getInstance();
 
         TextView tvTheme = findViewById(R.id.appbase_tv_theme);
 
