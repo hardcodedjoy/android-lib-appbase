@@ -29,8 +29,10 @@ package com.hardcodedjoy.appbase.contentview;
 import android.annotation.SuppressLint;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import com.hardcodedjoy.appbase.R;
+import com.hardcodedjoy.appbase.gui.DisplayUnit;
 
 @SuppressWarnings("unused")
 @SuppressLint("ViewConstructor")
@@ -39,6 +41,10 @@ public class CvTMSLL extends CvTM { // Title / Menu / ScrollView / LinearLayout
     @SuppressLint({"ClickableViewAccessibility", "RtlHardcoded"})
     public CvTMSLL() {
         inflate(R.layout.appbase_cv_tmsll);
+
+        findViewById(R.id.appbase_iv_title_icon).setVisibility(GONE);
+        TextView tvTitle = findViewById(R.id.appbase_tv_title);
+        titleTextSizeDefault = DisplayUnit.pxToSp((int)tvTitle.getTextSize());
 
         FrameLayout flMenuOptions = findViewById(R.id.appbase_fl_menu_options);
         llMenuOptions = flMenuOptions.findViewById(R.id.appbase_ll_menu_options);

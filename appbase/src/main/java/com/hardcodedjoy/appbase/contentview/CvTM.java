@@ -35,6 +35,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.hardcodedjoy.appbase.R;
+import com.hardcodedjoy.appbase.gui.DisplayUnit;
 import com.hardcodedjoy.appbase.popup.Option;
 
 import java.util.Vector;
@@ -50,6 +51,8 @@ public class CvTM extends ContentView { // Content View with Title and Menu
 
     protected LinearLayout llMenuOptions;
     protected Vector<Option> menuOptions;
+
+    protected float titleTextSizeDefault;
 
     protected CvTM() {
         menuOptions = new Vector<>();
@@ -147,21 +150,27 @@ public class CvTM extends ContentView { // Content View with Title and Menu
         tvTitle.setText(titleResId);
     }
 
+    public void setTitleTextSize(float sp) {
+        TextView tvTitle = findViewById(R.id.appbase_tv_title);
+        tvTitle.setTextSize(sp);
+    }
+
+    public void restoreTitleTextSize() {
+        TextView tvTitle = findViewById(R.id.appbase_tv_title);
+        tvTitle.setTextSize(titleTextSizeDefault);
+    }
+
     @SuppressWarnings("unused")
     public void setTitleIcon(int iconResId) {
-        // borrow ivIcon from cv_settings:
-        LinearLayout llCvSettings = (LinearLayout) inflate(
-                getActivity(), R.layout.appbase_cv_settings, null);
-        LinearLayout llTitle = llCvSettings.findViewById(R.id.appbase_ll_title);
-        ImageView ivIcon = (ImageView) llTitle.getChildAt(0);
-        llTitle.removeView(ivIcon);
+        ImageView ivTitleIcon = findViewById(R.id.appbase_iv_title_icon);
+        if(iconResId == -1) {
+            ivTitleIcon.setVisibility(GONE);
+            return;
+        }
 
-        // change icon res:
-        ivIcon.setImageResource(iconResId);
-
-        // add to this cv:
-        llTitle = findViewById(R.id.appbase_ll_title);
-        llTitle.addView(ivIcon, 0);
+        // else:
+        ivTitleIcon.setImageResource(iconResId);
+        ivTitleIcon.setVisibility(VISIBLE);
     }
 
 

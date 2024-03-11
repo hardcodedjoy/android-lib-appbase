@@ -30,6 +30,7 @@ import android.annotation.SuppressLint;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.hardcodedjoy.appbase.StringUtil;
 import com.hardcodedjoy.appbase.contentview.CvTMSLL;
 import com.hardcodedjoy.appbase.popup.Option;
 

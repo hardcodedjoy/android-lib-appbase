@@ -57,7 +57,7 @@ SOFTWARE.
     <string name="register_new_user">Регистрация нового пользователя</string>
     <string name="username">Имя пользователя</string>
     <string name="password">Пароль</string>
-    <string name="repeat_password">Повторите пароль</string>
+    <string name="confirm_password">Подтвердите пароль</string>
     <string name="login">Авторизация</string>
 
     <string name="btn_cancel">Отмена</string>

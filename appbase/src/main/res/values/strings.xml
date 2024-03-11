@@ -59,7 +59,7 @@ SOFTWARE.
     <string name="register_new_user">Register new user</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
-    <string name="repeat_password">Repeat password</string>
+    <string name="confirm_password">Confirm Password</string>
     <string name="login">Login</string>
 
     <string name="btn_cancel">Cancel</string>

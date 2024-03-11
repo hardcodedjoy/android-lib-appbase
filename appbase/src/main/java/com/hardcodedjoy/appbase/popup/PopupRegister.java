@@ -39,7 +39,7 @@ abstract public class PopupRegister extends Popup {
 
     private final EditText etUsername;
     private final EditText etPassword;
-    private final EditText etRepeatPassword;
+    private final EditText etConfirmPassword;
 
     abstract public void onOK(String username, String password, String repeatPassword);
     @Override
@@ -54,7 +54,7 @@ abstract public class PopupRegister extends Popup {
         TextView tvMessage = findViewById(R.id.appbase_tv_message);
         etUsername = findViewById(R.id.appbase_et_username);
         etPassword = findViewById(R.id.appbase_et_password);
-        etRepeatPassword = findViewById(R.id.appbase_et_repeat_password);
+        etConfirmPassword = findViewById(R.id.appbase_et_repeat_password);
 
         if(message == null) { tvMessage.setVisibility(GONE); }
         else { tvMessage.setVisibility(VISIBLE); tvMessage.setText(message); }
@@ -74,7 +74,7 @@ abstract public class PopupRegister extends Popup {
         if(id == R.id.appbase_btn_ok || id == R.id.appbase_btn_ok_text) {
             String username = etUsername.getText().toString();
             String password = etPassword.getText().toString();
-            String repeatPassword = etRepeatPassword.getText().toString();
+            String repeatPassword = etConfirmPassword.getText().toString();
             onOK(username, password, repeatPassword);
         }
         else if(id == R.id.appbase_btn_cancel || id == R.id.appbase_btn_cancel_text) { onCancel(); }
@@ -86,7 +86,7 @@ abstract public class PopupRegister extends Popup {
 
     public EditText getEtUsername() { return etUsername; }
     public EditText getEtPassword() { return etPassword; }
-    public EditText getEtRepeatPassword() { return etRepeatPassword; }
+    public EditText getEtConfirmPassword() { return etConfirmPassword; }
 
     public void show() {
         super.show();

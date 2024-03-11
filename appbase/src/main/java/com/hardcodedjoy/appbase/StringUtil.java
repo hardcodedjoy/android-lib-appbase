@@ -36,10 +36,14 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Random;
 
+@SuppressWarnings("unused")
 public class StringUtil {
 
-	static private final DecimalFormat df1 = new DecimalFormat("0.0");
+	static private DecimalFormat df1 = new DecimalFormat("0.0");
 	static private final Random rand = new Random(System.currentTimeMillis());
+
+	// to be used after language changed:
+	static public void initDf1() { df1 = new DecimalFormat("0.0"); }
 
 	static public String getDelimitedPart(
 			String input,
@@ -305,6 +309,7 @@ public class StringUtil {
 	static public byte[] getBytesUTF8(String s) {
 		if(s == null) { return null; }
 		try {
+			//noinspection CharsetObjectCanBeUsed
 			return s.getBytes("UTF-8");
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace(System.err);
@@ -315,6 +320,7 @@ public class StringUtil {
 	static public String fromBytesUTF8(byte[] ba) {
 		if(ba == null) { return null; }
 		try {
+			//noinspection CharsetObjectCanBeUsed
 			return new String(ba, "UTF-8");
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace(System.err);
@@ -336,7 +342,7 @@ public class StringUtil {
 		if(up) { alphabet += "QWERTYUIOPASDFGHJKLZXCVBNM"; }
 		if(low) { alphabet += "qwertyuiopasdfghjklzxcvbnm"; }
 		if(num) { alphabet += "1234567890"; }
-		if(sym) { alphabet += "!@#$%^&*()_+-={}[]:;\"'|\\,.<>/?~`"; };
+		if(sym) { alphabet += "!@#$%^&*()_+-={}[]:;\"'|\\,.<>/?~`"; }
 		StringBuilder sb = new StringBuilder(len);
 		int x;
 		for(int i=0; i<len; i++) {

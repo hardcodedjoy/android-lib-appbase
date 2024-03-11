@@ -39,6 +39,7 @@ import android.widget.Toast;
 
 import com.hardcodedjoy.appbase.LanguageUtil;
 import com.hardcodedjoy.appbase.SettingsBase;
+import com.hardcodedjoy.appbase.StringUtil;
 import com.hardcodedjoy.appbase.activity.ActivityResultTask;
 import com.hardcodedjoy.appbase.activity.ActivityUtil;
 import com.hardcodedjoy.appbase.activity.SingleActivity;
@@ -207,6 +208,7 @@ public class ContentView extends LinearLayout {
         Configuration config = resources.getConfiguration();
         config.setLocale(locale);
         resources.updateConfiguration(config, resources.getDisplayMetrics());
+        StringUtil.initDf1();
     }
 
     static public String getAppLanguage() { return appLanguageCode; }

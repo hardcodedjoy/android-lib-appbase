@@ -57,7 +57,7 @@ SOFTWARE.
     <string name="register_new_user">Înregistrare utilizator nou</string>
     <string name="username">"Nume utilizator "</string>
     <string name="password">Parola</string>
-    <string name="repeat_password">Repetare parolă</string>
+    <string name="confirm_password">Confirmați parola</string>
     <string name="login">Conectare</string>
 
     <string name="btn_cancel">Anulare</string>

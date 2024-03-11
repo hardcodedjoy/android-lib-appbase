@@ -30,8 +30,10 @@ import android.annotation.SuppressLint;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.hardcodedjoy.appbase.R;
+import com.hardcodedjoy.appbase.gui.DisplayUnit;
 
 @SuppressWarnings("unused")
 @SuppressLint("ViewConstructor")
@@ -40,6 +42,10 @@ public class CvTMLL extends CvTM { // Title / Menu / LinearLayout
     @SuppressLint({"ClickableViewAccessibility", "RtlHardcoded"})
     public CvTMLL() {
         inflate(R.layout.appbase_cv_tmll);
+
+        findViewById(R.id.appbase_iv_title_icon).setVisibility(GONE);
+        TextView tvTitle = findViewById(R.id.appbase_tv_title);
+        titleTextSizeDefault = DisplayUnit.pxToSp((int)tvTitle.getTextSize());
 
         FrameLayout flMenuOptions = findViewById(R.id.appbase_fl_menu_options);
         llMenuOptions = flMenuOptions.findViewById(R.id.appbase_ll_menu_options);
