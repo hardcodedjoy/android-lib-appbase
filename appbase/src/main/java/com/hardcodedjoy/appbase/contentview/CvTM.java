@@ -35,7 +35,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.hardcodedjoy.appbase.R;
-import com.hardcodedjoy.appbase.gui.DisplayUnit;
 import com.hardcodedjoy.appbase.popup.Option;
 
 import java.util.Vector;
@@ -150,11 +149,13 @@ public class CvTM extends ContentView { // Content View with Title and Menu
         tvTitle.setText(titleResId);
     }
 
+    @SuppressWarnings("unused")
     public void setTitleTextSize(float sp) {
         TextView tvTitle = findViewById(R.id.appbase_tv_title);
         tvTitle.setTextSize(sp);
     }
 
+    @SuppressWarnings("unused")
     public void restoreTitleTextSize() {
         TextView tvTitle = findViewById(R.id.appbase_tv_title);
         tvTitle.setTextSize(titleTextSizeDefault);
@@ -172,8 +173,6 @@ public class CvTM extends ContentView { // Content View with Title and Menu
         ivTitleIcon.setImageResource(iconResId);
         ivTitleIcon.setVisibility(VISIBLE);
     }
-
-
 
     static public void setSettingsCvClass(Class<?> c) { settingsCvClass = c; }
     static public void setAboutCvClass(Class<?> c) { aboutCvClass = c; }
