@@ -27,15 +27,19 @@ SOFTWARE.
 package com.hardcodedjoy.appbase;
 
 import android.app.Activity;
+import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.ExifInterface;
 import android.util.Size;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.hardcodedjoy.appbase.contentview.ContentView;
 import com.hardcodedjoy.appbase.gui.ThemeUtil;
@@ -232,5 +236,15 @@ public class ImageUtil {
         Activity activity = ContentView.getActivity();
         Resources.Theme theme = activity.getTheme();
         return activity.getResources().getDrawable(resId, theme);
+    }
+
+    static public void setTint(ImageView iv, int tintColor) {
+        iv.setImageTintList(ColorStateList.valueOf(tintColor));
+        iv.setImageTintMode(PorterDuff.Mode.SRC_ATOP);
+    }
+
+    static public void setTint(ImageButton button, int tintColor) {
+        button.setImageTintList(ColorStateList.valueOf(tintColor));
+        button.setImageTintMode(PorterDuff.Mode.SRC_ATOP);
     }
 }

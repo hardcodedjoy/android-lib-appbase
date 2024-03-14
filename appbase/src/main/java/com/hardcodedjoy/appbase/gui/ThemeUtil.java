@@ -84,13 +84,6 @@ public class ThemeUtil {
         return col;
     }
 
-    static private int grayLevel(int color) {
-        int b = color & 0xFF; color = color >> 8;
-        int g = color & 0xFF; color = color >> 8;
-        int r = color & 0xFF;
-        return (int)(((r+g+b) / 3.0f) + 0.5f);
-    }
-
     static public String[] getThemes(Activity activity) { return getThemes(activity, 'a'); }
 
     static public String[] getThemes(Activity activity, boolean lightNotDark) {
@@ -118,8 +111,8 @@ public class ThemeUtil {
             if(colorBackground == 0) { continue; }
             if(colorForeground == 0) { continue; }
 
-            int bgGray = grayLevel(colorBackground);
-            int fgGray = grayLevel(colorForeground);
+            int bgGray = ColorUtil.grayLevel(colorBackground);
+            int fgGray = ColorUtil.grayLevel(colorForeground);
 
             if( (bgGray < fgGray) && mode == 'l' ) { continue; } // dark theme unwanted
             if( (bgGray > fgGray) && mode == 'd' ) { continue; } // light theme unwanted
@@ -147,8 +140,8 @@ public class ThemeUtil {
     static public boolean currentThemeIsLightNotDark(Activity activity) {
         int colorBackground = getColor(activity, android.R.attr.colorBackground);
         int colorForeground = getColor(activity, android.R.attr.colorForeground);
-        int bgGray = grayLevel(colorBackground);
-        int fgGray = grayLevel(colorForeground);
+        int bgGray = ColorUtil.grayLevel(colorBackground);
+        int fgGray = ColorUtil.grayLevel(colorForeground);
         return (bgGray > fgGray);
     }
 

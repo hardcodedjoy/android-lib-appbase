@@ -24,7 +24,7 @@ SOFTWARE.
 
 */
 
-package com.hardcodedjoy.appbase;
+package com.hardcodedjoy.appbase.gui;
 
 @SuppressWarnings("unused")
 public class ColorUtil {
@@ -62,5 +62,12 @@ public class ColorUtil {
         //noinspection ManualMinMaxCalculation
         if(val > max) { return max; }
         return val;
+    }
+
+    static public int grayLevel(int color) {
+        int b = color & 0xFF; color = color >> 8;
+        int g = color & 0xFF; color = color >> 8;
+        int r = color & 0xFF;
+        return (int)(((r+g+b) / 3.0f) + 0.5f);
     }
 }
