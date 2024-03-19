@@ -43,7 +43,7 @@ public class CvLicense extends CvTSLL {
 
     public CvLicense() {
         TextView tv = findViewById(R.id.appbase_tv_title);
-        tv.setText(R.string.mit_license);
+        tv.setText(R.string.title_mit_license);
 
         tv = new TextView(getActivity());
         tv.setTextSize(18);

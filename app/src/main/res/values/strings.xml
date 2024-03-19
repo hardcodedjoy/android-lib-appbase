@@ -41,8 +41,6 @@ SOFTWARE.
     <string name="popup_progress">PopupProgress</string>
     <string name="popup_sel_time_interval">PopupSelectTimeInterval</string>
 
-    <string name="delete">Delete</string>
-    <string name="are_you_sure">Are you sure?</string>
     <string name="android_is_cool">Android is cool</string>
     <string name="err_file_not_found">FILE NOT FOUND</string>
     <string name="type_something">Type something</string>

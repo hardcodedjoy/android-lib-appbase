@@ -1,0 +1,47 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="option_rename">redenumește</string>
+    <string name="option_open">deschide</string>
+    <string name="option_open_with">deschide cu</string>
+    <string name="option_edit">editează</string>
+    <string name="option_edit_with">editează cu</string>
+    <string name="option_copy_to">copiază în</string>
+    <string name="option_move_to">mută în</string>
+    <string name="option_share">partajează</string>
+    <string name="option_download">descarcă</string>
+    <string name="option_upload">încarcă</string>
+    <string name="option_select_default_app">selectează aplicația implicită</string>
+    <string name="option_create_shortcut">creează un shortcut</string>
+    <string name="option_view_info">informații</string>
+    <string name="option_extract_here">extrage aici</string>
+    <string name="option_compress">comprimă</string>
+    <string name="option_delete">șterge</string>
+    <string name="option_import">importă</string>
+    <string name="option_export">exportă</string>
+    <string name="option_save">salvează</string>
+    <string name="option_save_as">salvează ca</string>
+</resources>

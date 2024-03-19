@@ -54,7 +54,7 @@ SOFTWARE.
             android:layout_gravity="center"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:text="@string/please_wait"
+            android:text="@string/title_please_wait"
             android:textColor="?android:textColor"/>
 
         <include layout="@layout/appbase_popup_btn_cancel"/>

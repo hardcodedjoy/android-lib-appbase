@@ -1,0 +1,52 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="err_out_of_memory">OUT OF MEMORY</string>
+    <string name="err_disk_full">DISK FULL</string>
+    <string name="err_cannot_read_input_file">CANNOT READ INPUT FILE</string>
+    <string name="err_cannot_write_output_file">CANNOT WRITE OUTPUT FILE</string>
+    <string name="err_rename_failed">RENAME FAILED</string>
+    <string name="err_no_files_to_copy">NO FILES TO COPY</string>
+    <string name="err_no_files_to_move">NO FILES TO MOVE</string>
+    <string name="err_file_name_is_null">FILE NAME == NULL</string>
+    <string name="err_already_exists">ALREADY EXISTS</string>
+    <string name="err_could_not_be_deleted_completely">COULD NOT BE DELETED COMPLETELY</string>
+    <string name="err_could_not_be_overwritten">COULD NOT BE OVERWRITTEN</string>
+    <string name="err_file_to_overwrite_is_not_a_folder_nor_file">FILE TO OVERWRITE IS NOT A FOLDER NOR FILE</string>
+    <string name="err_copy_failed">COPY FAILED</string>
+    <string name="err_move_failed">MOVE FAILED</string>
+    <string name="err_delete_failed">DELETE FAILED</string>
+    <string name="err_file_create_failed">FILE CREATE FAILED</string>
+    <string name="err_folder_create_failed">FOLDER CREATE FAILED</string>
+    <string name="err_unimplemented_for_multiple_files">UNIMPLEMENTED FOR MULTIPLE FILES</string>
+    <string name="err_no_files_to_compress">NO FILES TO COMPRESS</string>
+    <string name="err_no_files_to_extract">NO FILES TO EXTRACT</string>
+    <string name="err_dest_dir_is_null">DESTINATION DIR == NULL</string>
+    <string name="err_no_files_to_delete">NO FILES TO DELETE</string>
+    <string name="err_no_files_to_process">NO FILES TO PROCESS</string>
+    <string name="err_permissions_denied">PERMISSIONS DENIED</string>
+    <string name="err_unimplemented">UNIMPLEMENTED</string>
+</resources>

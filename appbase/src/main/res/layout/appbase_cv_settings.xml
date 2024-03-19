@@ -58,7 +58,7 @@ SOFTWARE.
             android:layout_gravity="center_vertical|left"
             android:textColor="?android:colorBackground"
             android:textSize="22sp"
-            android:text="@string/settings"
+            android:text="@string/title_settings"
             tools:ignore="RtlHardcoded" />
 
     </LinearLayout>

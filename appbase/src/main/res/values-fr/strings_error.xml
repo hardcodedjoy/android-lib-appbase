@@ -1,0 +1,52 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="err_out_of_memory">MÉMOIRE INSUFFISANTE</string>
+    <string name="err_disk_full">DISQUE PLEIN</string>
+    <string name="err_cannot_read_input_file">IMPOSSIBLE DE LIRE LE FICHIER</string>
+    <string name="err_cannot_write_output_file">IMPOSSIBLE D\'ÉCRIRE LE FICHIER</string>
+    <string name="err_rename_failed">ÉCHEC DU RENOMMAGE</string>
+    <string name="err_no_files_to_copy">PAS DE FICHIERS À COPIER</string>
+    <string name="err_no_files_to_move">PAS DE FICHIERS À DÉPLACER</string>
+    <string name="err_file_name_is_null">NOM DU FICHIER == NULL</string>
+    <string name="err_already_exists">EXISTE DÉJÀ</string>
+    <string name="err_could_not_be_deleted_completely">N\'A PAS PU SUPPRIMER COMPLÈTEMENT</string>
+    <string name="err_could_not_be_overwritten">N\'A PAS PU ÉCRASER</string>
+    <string name="err_file_to_overwrite_is_not_a_folder_nor_file">LE FICHIER A ECRIRE N\'EST PAS UN DOSSIER NI UN FICHIER</string>
+    <string name="err_copy_failed">ÉCHEC DE LA COPIE</string>
+    <string name="err_move_failed">ÉCHEC DU DÉPLACEMENT</string>
+    <string name="err_delete_failed">ÉCHEC DE LA SUPPRESSION</string>
+    <string name="err_file_create_failed">ÉCHEC DE LA CRÉATION DE FICHIER</string>
+    <string name="err_folder_create_failed">ÉCHEC DE LA CRÉATION DU DOSSIER</string>
+    <string name="err_unimplemented_for_multiple_files">NON IMPLÉMENTÉ POUR PLUSIEURS FICHIERS</string>
+    <string name="err_no_files_to_compress">AUCUN FICHIER À COMPRESSER</string>
+    <string name="err_no_files_to_extract">AUCUN FICHIER À EXTRAIRE</string>
+    <string name="err_dest_dir_is_null">REPERTOIRE DESTINATION == NULL</string>
+    <string name="err_no_files_to_delete">AUCUN FICHIER À SUPPRIMER</string>
+    <string name="err_no_files_to_process">AUCUN FICHIER À TRAITER</string>
+    <string name="err_permissions_denied">AUTORISATIONS REFUSÉES</string>
+    <string name="err_unimplemented">NON IMPLÉMENTÉ</string>
+</resources>

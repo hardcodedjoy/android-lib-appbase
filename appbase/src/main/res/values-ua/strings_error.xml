@@ -1,0 +1,52 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="err_out_of_memory">НЕДОСТАТНЬО ПАМЯТІ</string>
+    <string name="err_disk_full">ДИСК ЗАПОВНЕНИЙ</string>
+    <string name="err_cannot_read_input_file">НЕ МОЖЛИВО ПРОЧИТАТИ ВХІДНИЙ ФАЙЛ</string>
+    <string name="err_cannot_write_output_file">НЕ МОЖЛИВО ЗАПИСАТИ ВИХІДНИЙ ФАЙЛ</string>
+    <string name="err_rename_failed">НЕ ВДАЛОСЯ ПЕРЕЙМЕНУВАТИ</string>
+    <string name="err_no_files_to_copy">НЕМАЄ ФАЙЛІВ ДЛЯ КОПІЮВАННЯ</string>
+    <string name="err_no_files_to_move">НЕМАЄ ФАЙЛІВ ДЛЯ ПЕРЕМІЩЕННЯ</string>
+    <string name="err_file_name_is_null">НАЗВА ФАЙЛУ == NULL</string>
+    <string name="err_already_exists">ВЖЕ ІСНУЄ</string>
+    <string name="err_could_not_be_deleted_completely">НЕ ВДАЛОСЯ ПОВНІСТЮ ВИДАЛИТИ</string>
+    <string name="err_could_not_be_overwritten">НЕ ВДАЛОСЯ ПЕРЕЗАПИСАТИ</string>
+    <string name="err_file_to_overwrite_is_not_a_folder_nor_file">ФАЙЛ ДЛЯ ПЕРЕЗАПИСУ НЕ ДИРЕКТОРІЯ, АНІ ФАЙЛ</string>
+    <string name="err_copy_failed">КОПІЮВАННЯ НЕ ВДАЛОСЯ</string>
+    <string name="err_move_failed">ПЕРЕМІЩЕННЯ НЕ ВДАЛОСЯ</string>
+    <string name="err_delete_failed">НЕ ВДАЛОСЯ ВИДАЛИТИ</string>
+    <string name="err_file_create_failed">ПОМИЛКА СТВОРЕННЯ ФАЙЛУ</string>
+    <string name="err_folder_create_failed">СТВОРЕННЯ ТЕКИ НЕ ВДАЛОСЯ</string>
+    <string name="err_unimplemented_for_multiple_files">НЕРЕАЛІЗОВАНО ДЛЯ КІЛЬКОХ ФАЙЛІВ</string>
+    <string name="err_no_files_to_compress">НЕМАЄ ФАЙЛІВ ДЛЯ СТИСКАННЯ</string>
+    <string name="err_no_files_to_extract">НЕМАЄ ФАЙЛІВ ДЛЯ РОЗПАКУВАННЯ</string>
+    <string name="err_dest_dir_is_null">ТЕКА ПРИЗНАЧЕННЯ == NULL</string>
+    <string name="err_no_files_to_delete">НЕМАЄ ФАЙЛІВ ДЛЯ ВИДАЛЕННЯ</string>
+    <string name="err_no_files_to_process">НЕМАЄ ФАЙЛІВ ДЛЯ ОБРОБКИ</string>
+    <string name="err_permissions_denied">ДОЗВОЛИ ВІДМОВЛЕНО</string>
+    <string name="err_unimplemented">НЕРЕАЛІЗОВАНО</string>
+</resources>

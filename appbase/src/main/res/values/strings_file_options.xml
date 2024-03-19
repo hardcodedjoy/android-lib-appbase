@@ -1,0 +1,47 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="option_rename">rename</string>
+    <string name="option_open">open</string>
+    <string name="option_open_with">open with</string>
+    <string name="option_edit">edit</string>
+    <string name="option_edit_with">edit with</string>
+    <string name="option_copy_to">copy to</string>
+    <string name="option_move_to">move to</string>
+    <string name="option_share">share</string>
+    <string name="option_download">download</string>
+    <string name="option_upload">upload</string>
+    <string name="option_select_default_app">select default app</string>
+    <string name="option_create_shortcut">create shortcut</string>
+    <string name="option_view_info">info</string>
+    <string name="option_extract_here">extract here</string>
+    <string name="option_compress">compress</string>
+    <string name="option_delete">delete</string>
+    <string name="option_import">import</string>
+    <string name="option_export">export</string>
+    <string name="option_save">save</string>
+    <string name="option_save_as">save as</string>
+</resources>

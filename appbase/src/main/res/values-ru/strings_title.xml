@@ -1,0 +1,44 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="title_help">Помощь</string>
+    <string name="title_about">О приложении</string>
+    <string name="title_mit_license">Лицензия MIT</string>
+    <string name="title_settings">Настройки</string>
+    <string name="title_options">Опции</string>
+    <string name="title_system">Система</string>
+    <string name="title_error">Ошибка</string>
+    <string name="title_info">Информация</string>
+    <string name="title_loading">Загрузка</string>
+    <string name="title_opening">Открывается</string>
+    <string name="title_please_wait">Пожалуйста, подождите</string>
+    <string name="title_processing">Обработка</string>
+    <string name="title_share">Поделиться</string>
+    <string name="title_download">Скачивание</string>
+    <string name="title_upload">Загрузка</string>
+    <string name="title_access">Доступ</string>
+    <string name="title_select">Выбор</string>
+</resources>

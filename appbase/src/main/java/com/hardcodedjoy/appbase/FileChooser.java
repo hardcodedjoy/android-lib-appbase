@@ -33,8 +33,8 @@ import android.net.Uri;
 
 import com.hardcodedjoy.appbase.activity.ActivityResultTask;
 import com.hardcodedjoy.appbase.activity.ActivityUtil;
-import com.hardcodedjoy.appbase.resultinterfaces.UriArrayResultInterface;
-import com.hardcodedjoy.appbase.resultinterfaces.UriResultInterface;
+import com.hardcodedjoy.appbase.handlers.UriArrayHandler;
+import com.hardcodedjoy.appbase.handlers.UriHandler;
 
 @SuppressWarnings("unused")
 public class FileChooser {
@@ -48,7 +48,7 @@ public class FileChooser {
 
     public void setInitialUri(Uri initialUri) { this.initialUri = initialUri; }
 
-    public void open(String mimeType, UriResultInterface uriResultInterface) {
+    public void open(String mimeType, UriHandler uriHandler) {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.setType(mimeType);
         if(initialUri != null) { intent.putExtra(EXTRA_INITIAL_URI, initialUri); }
@@ -59,12 +59,12 @@ public class FileChooser {
         art.setRunnable(() -> {
             Uri uri = getFirstUri(art.getData());
             if(uri == null) { return; }
-            uriResultInterface.onUriReceived(uri);
+            uriHandler.handle(uri);
         });
         ActivityUtil.startActivityForResult(activity, intent, art);
     }
 
-    public void openRW(String mimeType, UriResultInterface uriResultInterface) {
+    public void openRW(String mimeType, UriHandler uriHandler) {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.setType(mimeType);
         if(initialUri != null) { intent.putExtra(EXTRA_INITIAL_URI, initialUri); }
@@ -76,12 +76,12 @@ public class FileChooser {
         art.setRunnable(() -> {
             Uri uri = getFirstUri(art.getData());
             if(uri == null) { return; }
-            uriResultInterface.onUriReceived(uri);
+            uriHandler.handle(uri);
         });
         ActivityUtil.startActivityForResult(activity, intent, art);
     }
 
-    public void chooseFolder(UriResultInterface uriResultInterface) {
+    public void chooseFolder(UriHandler uriHandler) {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
         if(initialUri != null) { intent.putExtra(EXTRA_INITIAL_URI, initialUri); }
         intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
@@ -91,12 +91,12 @@ public class FileChooser {
         art.setRunnable(() -> {
             Uri uri = getFirstUri(art.getData());
             if(uri == null) { return; }
-            uriResultInterface.onUriReceived(uri);
+            uriHandler.handle(uri);
         });
         ActivityUtil.startActivityForResult(activity, intent, art);
     }
 
-    public void chooseFolderRW(UriResultInterface uriResultInterface) {
+    public void chooseFolderRW(UriHandler uriHandler) {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
         if(initialUri != null) { intent.putExtra(EXTRA_INITIAL_URI, initialUri); }
         intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
@@ -107,13 +107,13 @@ public class FileChooser {
         art.setRunnable(() -> {
             Uri uri = getFirstUri(art.getData());
             if(uri == null) { return; }
-            uriResultInterface.onUriReceived(uri);
+            uriHandler.handle(uri);
         });
         ActivityUtil.startActivityForResult(activity, intent, art);
     }
 
     public void saveAs(String mimeType, String defaultFileName,
-                       UriResultInterface uriResultInterface) {
+                       UriHandler uriHandler) {
 
         Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
         intent.setType(mimeType);
@@ -127,12 +127,12 @@ public class FileChooser {
         art.setRunnable(() -> {
             Uri uri = getFirstUri(art.getData());
             if(uri == null) { return; }
-            uriResultInterface.onUriReceived(uri);
+            uriHandler.handle(uri);
         });
         ActivityUtil.startActivityForResult(activity, intent, art);
     }
 
-    public void openMultiple(String mimeType, UriArrayResultInterface uriArrayResultInterface) {
+    public void openMultiple(String mimeType, UriArrayHandler uriArrayHandler) {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.setType(mimeType);
         if(initialUri != null) { intent.putExtra(EXTRA_INITIAL_URI, initialUri); }
@@ -141,11 +141,11 @@ public class FileChooser {
         intent = Intent.createChooser(intent, activity.getString(R.string.open_file_s));
 
         ActivityResultTask art = new ActivityResultTask();
-        art.setRunnable(() -> uriArrayResultInterface.onUrisReceived(getAllUris(art.getData())));
+        art.setRunnable(() -> uriArrayHandler.handle(getAllUris(art.getData())));
         ActivityUtil.startActivityForResult(activity, intent, art);
     }
 
-    public void openMultipleRW(String mimeType, UriArrayResultInterface uriArrayResultInterface) {
+    public void openMultipleRW(String mimeType, UriArrayHandler uriArrayHandler) {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.setType(mimeType);
         if(initialUri != null) { intent.putExtra(EXTRA_INITIAL_URI, initialUri); }
@@ -155,28 +155,28 @@ public class FileChooser {
         intent = Intent.createChooser(intent, activity.getString(R.string.open_file_s));
 
         ActivityResultTask art = new ActivityResultTask();
-        art.setRunnable(() -> uriArrayResultInterface.onUrisReceived(getAllUris(art.getData())));
+        art.setRunnable(() -> uriArrayHandler.handle(getAllUris(art.getData())));
         ActivityUtil.startActivityForResult(activity, intent, art);
     }
 
-    public void open(UriResultInterface uriResultInterface) {
-        open("*/*", uriResultInterface);
+    public void open(UriHandler uriHandler) {
+        open("*/*", uriHandler);
     }
 
-    public void openRW(UriResultInterface uriResultInterface) {
-        openRW("*/*", uriResultInterface);
+    public void openRW(UriHandler uriHandler) {
+        openRW("*/*", uriHandler);
     }
 
-    public void saveAs(String defaultFileName, UriResultInterface uriResultInterface) {
-        saveAs("*/*", defaultFileName, uriResultInterface);
+    public void saveAs(String defaultFileName, UriHandler uriHandler) {
+        saveAs("*/*", defaultFileName, uriHandler);
     }
 
-    public void openMultiple(UriArrayResultInterface uriArrayResultInterface) {
-        openMultiple("*/*", uriArrayResultInterface);
+    public void openMultiple(UriArrayHandler uriArrayHandler) {
+        openMultiple("*/*", uriArrayHandler);
     }
 
-    public void openMultipleRW(UriArrayResultInterface uriArrayResultInterface) {
-        openMultipleRW("*/*", uriArrayResultInterface);
+    public void openMultipleRW(UriArrayHandler uriArrayHandler) {
+        openMultipleRW("*/*", uriArrayHandler);
     }
 
     static private Uri getFirstUri(Intent data) {

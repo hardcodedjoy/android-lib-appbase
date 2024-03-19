@@ -55,11 +55,11 @@ public class CvTM extends ContentView { // Content View with Title and Menu
 
     protected CvTM() {
         menuOptions = new Vector<>();
-        menuOptions.add(new Option(R.drawable.ic_info_1, R.string.about, () -> {
+        menuOptions.add(new Option(R.drawable.ic_info_1, R.string.title_about, () -> {
             try { ((ContentView)aboutCvClass.newInstance()).show();
             } catch (Exception e) { e.printStackTrace(System.err); }
         }));
-        menuOptions.add(new Option(R.drawable.ic_settings_1, R.string.settings, () -> {
+        menuOptions.add(new Option(R.drawable.ic_settings_1, R.string.title_settings, () -> {
             try { ((ContentView)settingsCvClass.newInstance()).show();
             } catch (Exception e) { e.printStackTrace(System.err); }
         }));

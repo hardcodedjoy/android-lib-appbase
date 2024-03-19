@@ -79,10 +79,13 @@ public class LanguageUtil {
 
     static public String getLanguageName(String languageCode) {
         switch(languageCode) {
+            case "de": return "Deutsch";
             case "en": return "English";
             case "fr": return "Français";
             case "ro": return "Română";
             case "ru": return "Русский";
+            case "tr": return "Türkçe";
+            case "ua": return "Українська";
         }
         return "";
     }

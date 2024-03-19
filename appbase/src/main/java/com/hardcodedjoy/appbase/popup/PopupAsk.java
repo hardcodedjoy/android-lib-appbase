@@ -112,4 +112,23 @@ abstract public class PopupAsk extends Popup {
         this(getString(titleStringId), getString(messageStringId));
     }
 
+    public PopupAsk(String title, int messageStringId) {
+        this(title, getString(messageStringId));
+    }
+
+    public PopupAsk(int titleStringId, String message) {
+        this(getString(titleStringId), message);
+    }
+
+    public PopupAsk(String title, String message,
+                    int positiveStringId, int negativeStringId) {
+        this(title, message, getString(positiveStringId), getString(negativeStringId));
+    }
+
+    public PopupAsk(int titleStringId, String message,
+                    int positiveStringId, int negativeStringId) {
+        this(getString(titleStringId), message,
+                getString(positiveStringId), getString(negativeStringId));
+    }
+
 }

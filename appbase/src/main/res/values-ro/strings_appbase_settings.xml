@@ -1,5 +1,4 @@
-/*
-
+<!--
 MIT License
 
 Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
@@ -22,12 +21,20 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-*/
+-->
 
-package com.hardcodedjoy.appbase.resultinterfaces;
+<resources>
+    <string name="theme_mode">Mod temă</string>
+    <string name="theme_mode_default">implicit</string>
+    <string name="theme_mode_light">luminos</string>
+    <string name="theme_mode_dark">întunecat</string>
+    <string name="theme">Temă</string>
+    <string name="light_theme">Temă luminoasă</string>
+    <string name="dark_theme">Temă întunecată</string>
+    <string name="theme_changed">Tema a fost schimbată.</string>
 
-import android.net.Uri;
-
-public interface UriResultInterface {
-    void onUriReceived(Uri uri);
-}
+    <string name="app_language">Limba aplicației</string>
+    <string name="lang_default">implicită</string>
+    <string name="language_changed">Limba a fost schimbată.</string>
+    <string name="please_restart_to_take_effect">Reporniți aplicația pentru ca toate modificările să aibă efect.</string>
+</resources>

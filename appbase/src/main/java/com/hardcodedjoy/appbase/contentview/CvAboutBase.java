@@ -161,7 +161,7 @@ public class CvAboutBase extends ContentView {
                 ll.setBackgroundColor(ThemeUtil.getColor(getActivity(), android.R.attr.colorForeground));
             } else {
                 tv.setOnClickListener(view -> {
-                    String title = getResources().getString(R.string.share) + " "
+                    String title = getResources().getString(R.string.title_share) + " "
                             + getResources().getString(R.string.app_name);
                     IntentUtil.shareText(url, title);
                 });
@@ -203,11 +203,20 @@ public class CvAboutBase extends ContentView {
         s += "\n" + infoAboutOpenSourceLibs;
         s += "\n" + getString(R.string.libs_released_under_mit_license);
 
+        SpannableString spannableString = new SpannableString(s);
+
         // after second space from end, without space:
-        int start = s.substring(0, s.lastIndexOf(' ')).lastIndexOf(' ') + 1;
+        int start = nthSpaceFromEnd(s, 2) + 1;
         int end = s.length() - 1; // without ending ":"
 
-        SpannableString spannableString = new SpannableString(s);
+        // exceptions:
+        if("de".equals(getAppLanguage())) {
+            end = nthSpaceFromEnd(s, 1);
+        } else if("tr".equals(getAppLanguage())) {
+            start = nthSpaceFromEnd(s, 4) + 1;
+            end = nthSpaceFromEnd(s, 2);
+        }
+
         ClickableSpan clickableSpan = new ClickableSpan() {
             @Override
             public void onClick(View widget) { new CvLicense().show(); }
@@ -270,4 +279,14 @@ public class CvAboutBase extends ContentView {
 
     @SuppressWarnings("unused")
     static public void setLinkEULA(String s) { linkEULA = s; }
+
+    static private int nthSpaceFromEnd(String s, int n) {
+        int count = 0;
+        int pos = s.length();
+        while (count < n && pos > 0) {
+            pos = s.lastIndexOf(" ", pos - 1);
+            count++;
+        }
+        return pos;
+    }
 }

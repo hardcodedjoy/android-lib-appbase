@@ -1,0 +1,52 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="err_out_of_memory">НЕДОСТАТОЧНО ПАМЯТИ</string>
+    <string name="err_disk_full">ДИСК ПОЛНЫЙ</string>
+    <string name="err_cannot_read_input_file">НЕВОЗМОЖНО ПРОЧИТАТЬ ВХОДНОЙ ФАЙЛ</string>
+    <string name="err_cannot_write_output_file">НЕВОЗМОЖНО НАПИСАТЬ ВЫХОДНОЙ ФАЙЛ</string>
+    <string name="err_rename_failed">НЕ УДАЛОСЬ ПЕРЕИМЕНОВАТЬ</string>
+    <string name="err_no_files_to_copy">НЕТ ФАЙЛОВ ДЛЯ КОПИРОВАНИЯ</string>
+    <string name="err_no_files_to_move">НЕТ ФАЙЛОВ ДЛЯ ПЕРЕМЕЩЕНИЯ</string>
+    <string name="err_file_name_is_null">ИМЯ ФАЙЛА == NULL</string>
+    <string name="err_already_exists">УЖЕ СУЩЕСТВУЕТ</string>
+    <string name="err_could_not_be_deleted_completely">НЕ УДАЛОСЬ ПОЛНОСТЬЮ УДАЛИТЬ</string>
+    <string name="err_could_not_be_overwritten">НЕ УДАЛОСЬ ПЕРЕЗАПИСАТЬ</string>
+    <string name="err_file_to_overwrite_is_not_a_folder_nor_file">ФАЙЛ ДЛЯ ПЕРЕЗАПИСИ НЕ ЯВЛЯЕТСЯ ПАПКОЙ ИЛИ ФАЙЛОМ</string>
+    <string name="err_copy_failed">КОПИРОВАНИЕ НЕ УДАЛОСЬ</string>
+    <string name="err_move_failed">ПЕРЕМЕЩЕНИЕ НЕ УДАЛОСЬ</string>
+    <string name="err_delete_failed">УДАЛИТЬ НЕ УДАЛОСЬ</string>
+    <string name="err_file_create_failed">ОШИБКА СОЗДАНИЯ ФАЙЛА</string>
+    <string name="err_folder_create_failed">СОЗДАНИЕ ПАПКИ НЕ УДАЛОСЬ</string>
+    <string name="err_unimplemented_for_multiple_files">НЕРЕАЛИЗОВАНО ДЛЯ НЕСКОЛЬКИХ ФАЙЛОВ</string>
+    <string name="err_no_files_to_compress">НЕТ ФАЙЛОВ ДЛЯ СЖАТИЯ</string>
+    <string name="err_no_files_to_extract">НЕТ ФАЙЛОВ ДЛЯ ИЗВЛЕЧЕНИЯ</string>
+    <string name="err_dest_dir_is_null">ПАПКА НАЗНАЧЕНИЯ == NULL</string>
+    <string name="err_no_files_to_delete">НЕТ ФАЙЛОВ ДЛЯ УДАЛЕНИЯ</string>
+    <string name="err_no_files_to_process">НЕТ ФАЙЛОВ ДЛЯ ОБРАБОТКИ</string>
+    <string name="err_permissions_denied">РАЗРЕШЕНИЯ ОТКАЗАНЫ</string>
+    <string name="err_unimplemented">НЕРЕАЛИЗОВАНО</string>
+</resources>

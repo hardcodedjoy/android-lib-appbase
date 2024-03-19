@@ -1,5 +1,4 @@
-/*
-
+<!--
 MIT License
 
 Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
@@ -22,12 +21,24 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-*/
+-->
 
-package com.hardcodedjoy.appbase.resultinterfaces;
-
-import android.net.Uri;
-
-public interface UriArrayResultInterface {
-    void onUrisReceived(Uri[] uris);
-}
+<resources>
+    <string name="title_help">Aide</string>
+    <string name="title_about">À propos</string>
+    <string name="title_mit_license">Licence MIT</string>
+    <string name="title_settings">Paramètres</string>
+    <string name="title_options">Options</string>
+    <string name="title_system">Système</string>
+    <string name="title_error">Erreur</string>
+    <string name="title_info">Info</string>
+    <string name="title_loading">Chargement</string>
+    <string name="title_opening">Ouverture</string>
+    <string name="title_please_wait">S\'il vous plaît, attendez</string>
+    <string name="title_processing">Traitement</string>
+    <string name="title_share">Partager</string>
+    <string name="title_download">Téléchargement</string>
+    <string name="title_upload">Chargement</string>
+    <string name="title_access">Accès</string>
+    <string name="title_select">Sélection</string>
+</resources>

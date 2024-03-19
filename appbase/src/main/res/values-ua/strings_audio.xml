@@ -1,0 +1,45 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="audio">Аудіо</string>
+    <string name="audio_source">Джерело аудіо</string>
+    <string name="sample_rate">Частота дискретизації</string>
+    <string name="channels">Канали</string>
+    <string name="mono">Моно</string>
+    <string name="stereo">Стерео</string>
+    <string name="swap_lr">Поміняти Л/П</string>
+    <string name="lr_balance">Баланс Л/П</string>
+    <string name="channel_l">Л</string>
+    <string name="channel_r">П</string>
+    <string name="gain">Підсилення</string>
+    <string name="gain_dynamic">Підсилення (динамічне)</string>
+    <string name="gain_option_dynamic">динамічне</string>
+    <string name="gain_option_constant">постійне</string>
+    <string name="track">Доріжка</string>
+    <string name="select_track">Вибрати доріжку</string>
+    <string name="share_audio_file">Поділитися аудіофайлом</string>
+    <string name="share_audio_files">Поділитися аудіофайлами</string>
+</resources>

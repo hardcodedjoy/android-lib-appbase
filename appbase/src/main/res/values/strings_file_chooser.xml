@@ -1,0 +1,42 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="select_input_folder">Select input folder</string>
+    <string name="select_output_folder">Select output folder</string>
+    <string name="select_folder">Select folder</string>
+    <string name="select_file">Select file</string>
+    <string name="select_file_s">Select file(s)</string>
+    <string name="open_file">Open file</string>
+    <string name="open_file_s">Open file(s)</string>
+    <string name="save_as">Save as</string>
+    <string name="save_file">Save file</string>
+    <string name="save_file_as">Save file as</string>
+    <string name="new_folder">New Folder</string>
+    <string name="new_file">New File</string>
+    <string name="file">File</string>
+    <string name="folder">Folder</string>
+    <string name="already_exists">already exists</string>
+</resources>

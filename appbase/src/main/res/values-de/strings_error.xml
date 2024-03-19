@@ -1,0 +1,52 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="err_out_of_memory">SPEICHER VOLL</string>
+    <string name="err_disk_full">FESTSpeicher VOLL</string>
+    <string name="err_cannot_read_input_file">KANN EINGABEDATEI NICHT LESEN</string>
+    <string name="err_cannot_write_output_file">KANN AUSGABEDATEI NICHT SCHREIBEN</string>
+    <string name="err_rename_failed">UMBENENNUNG FEHLGESCHLAGEN</string>
+    <string name="err_no_files_to_copy">KEINE DATEIEN ZUM KOPIEREN</string>
+    <string name="err_no_files_to_move">KEINE DATEIEN ZUM VERSCHIEBEN</string>
+    <string name="err_file_name_is_null">DATEINAME == NULL</string>
+    <string name="err_already_exists">EXISTIERT BEREITS</string>
+    <string name="err_could_not_be_deleted_completely">KONNTE NICHT VOLLSTÄNDIG GELÖSCHT WERDEN</string>
+    <string name="err_could_not_be_overwritten">KONNTE NICHT ÜBERSCHRIEBEN WERDEN</string>
+    <string name="err_file_to_overwrite_is_not_a_folder_nor_file">DATEI ZUM ÜBERSCHREIBEN IST WEDER EIN ORDNER NOCH EINE DATEI</string>
+    <string name="err_copy_failed">KOPIE FEHLGESCHLAGEN</string>
+    <string name="err_move_failed">VERSCHIEBEN FEHLGESCHLAGEN</string>
+    <string name="err_delete_failed">LÖSCHEN FEHLGESCHLAGEN</string>
+    <string name="err_file_create_failed">ERSTELLEN DER DATEI FEHLGESCHLAGEN</string>
+    <string name="err_folder_create_failed">ERSTELLEN DES ORDNERS FEHLGESCHLAGEN</string>
+    <string name="err_unimplemented_for_multiple_files">FÜR MEHRERE DATEIEN NICHT IMPLEMENTIERT</string>
+    <string name="err_no_files_to_compress">KEINE DATEIEN ZUM KOMPRIMIEREN</string>
+    <string name="err_no_files_to_extract">KEINE DATEIEN ZUM ENTZIPREN</string>
+    <string name="err_dest_dir_is_null">ZIELVERZEICHNIS == NULL</string>
+    <string name="err_no_files_to_delete">KEINE DATEIEN ZUM LÖSCHEN</string>
+    <string name="err_no_files_to_process">KEINE DATEIEN ZUM VERARBEITEN</string>
+    <string name="err_permissions_denied">BERECHTIGUNGEN WURDEN VERWEIGERT</string>
+    <string name="err_unimplemented">NICHT IMPLEMENTIERT</string>
+</resources>
