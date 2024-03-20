@@ -49,4 +49,12 @@ SOFTWARE.
     <string name="err_no_files_to_process">НЕТ ФАЙЛОВ ДЛЯ ОБРАБОТКИ</string>
     <string name="err_permissions_denied">РАЗРЕШЕНИЯ ОТКАЗАНЫ</string>
     <string name="err_unimplemented">НЕРЕАЛИЗОВАНО</string>
+    <string name="err_not_connected">НЕ ПОДКЛЮЧЕНО, СНАЧАЛА ПОДКЛЮЧИТЕСЬ</string>
+    <string name="err_device_disconnected">УСТРОЙСТВО ОТКЛЮЧЕНО</string>
+    <string name="err_input_file_format">ОШИБКА ФОРМАТА ВХОДНОГО ФАЙЛА</string>
+    <string name="err_output_file_format">ОШИБКА ФОРМАТА ВЫХОДНОГО ФАЙЛА</string>
+    <string name="err_convert_failed">ПРЕОБРАЗОВАНИЕ НЕ УДАЛАСЬ</string>
+    <string name="err_cannot_play_this_file">НЕВОЗМОЖНО ВОСПРОИЗВЕСТИ ЭТОТ ФАЙЛ</string>
+    <string name="err_mic_open_failed">ОШИБКА ОТКРЫТИЯ МИКРОФОНА</string>
+    <string name="err_no_write_access_to_folder">НЕТ ПРАВ ДЛЯ ЗАПИСИ В ПАПКУ</string>
 </resources>

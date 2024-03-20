@@ -32,4 +32,16 @@ SOFTWARE.
     <string name="no">Нет</string>
     <string name="start">Старт</string>
     <string name="stop">Стоп</string>
+    <string name="skip">Пропуск</string>
+    <string name="overwrite">Перезаписать</string>
+    <string name="search">Поиск</string>
+    <string name="back">Назад</string>
+    <string name="preview">Просмотр</string>
+    <string name="btn_get">Получить</string>
+    <string name="btn_get_full_version">Получить полную версию</string>
+    <string name="btn_plus_import_files">+ импорт файлов</string>
+    <string name="btn_plus_add_button">+ добавить кнопку</string>
+    <string name="btn_plus_add_row">+ добавить строку</string>
+    <string name="btn_plus_add_column">+ добавить столбец</string>
+    <string name="btn_plus_add_command">+ добавить команду</string>
 </resources>

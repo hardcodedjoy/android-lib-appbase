@@ -44,4 +44,10 @@ SOFTWARE.
     <string name="option_export">dışa aktar</string>
     <string name="option_save">kaydet</string>
     <string name="option_save_as">farklı kaydet</string>
+    <string name="option_move_up">yukarı taşı</string>
+    <string name="option_move_down">aşağı taşı</string>
+    <string name="option_move_left">sola taşı</string>
+    <string name="option_move_right">sağa taşı</string>
+    <string name="option_send">gönder</string>
+    <string name="option_insert">ekle</string>
 </resources>

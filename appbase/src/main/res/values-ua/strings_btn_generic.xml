@@ -32,4 +32,16 @@ SOFTWARE.
     <string name="no">Ні</string>
     <string name="start">Пуск</string>
     <string name="stop">Зупинити</string>
+    <string name="skip">Пропустити</string>
+    <string name="overwrite">Перезаписати</string>
+    <string name="search">Пошук</string>
+    <string name="back">Назад</string>
+    <string name="preview">Попередній перегляд</string>
+    <string name="btn_get">Отримати</string>
+    <string name="btn_get_full_version">Отримати повну версію</string>
+    <string name="btn_plus_import_files">+ імпорт файлів</string>
+    <string name="btn_plus_add_button">+ додати кнопку</string>
+    <string name="btn_plus_add_row">+ додати рядок</string>
+    <string name="btn_plus_add_column">+ додати стовпець</string>
+    <string name="btn_plus_add_command">+ додати команду</string>
 </resources>

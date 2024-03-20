@@ -32,4 +32,16 @@ SOFTWARE.
     <string name="no">Nu</string>
     <string name="start">Start</string>
     <string name="stop">Stop</string>
+    <string name="skip">Treci peste</string>
+    <string name="overwrite">Suprascrie</string>
+    <string name="search">Caută</string>
+    <string name="back">Înapoi</string>
+    <string name="preview">Previzualizare</string>
+    <string name="btn_get">Obține</string>
+    <string name="btn_get_full_version">Obține versiunea completă</string>
+    <string name="btn_plus_import_files">+ importă fișiere</string>
+    <string name="btn_plus_add_button">+ adaugă buton</string>
+    <string name="btn_plus_add_row">+ adaugă rând</string>
+    <string name="btn_plus_add_column">+ adaugă coloană</string>
+    <string name="btn_plus_add_command">+ adaugă comandă</string>
 </resources>

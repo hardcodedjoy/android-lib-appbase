@@ -42,4 +42,5 @@ SOFTWARE.
     <string name="select_track">Selectați piesa</string>
     <string name="share_audio_file">Partajează Fișier Audio</string>
     <string name="share_audio_files">Partajează Fișiere Audio</string>
+    <string name="max_x_db">Max. [x] dB</string>
 </resources>

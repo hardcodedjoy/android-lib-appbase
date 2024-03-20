@@ -24,8 +24,13 @@ SOFTWARE.
 -->
 
 <resources>
-    <string name="back">Geri</string>
-    <string name="preview">Önizleme</string>
     <string name="minimum">Min.</string>
     <string name="maximum">Maks.</string>
+    <string name="available">kullanılabilir</string>
+    <string name="already_exists">zaten var</string>
+    <string name="placeholder_no_file">[ dosya yok ]</string>
+    <string name="placeholder_no_directory">[ dizin yok ]</string>
+    <string name="keep_screen_on">Ekranı AÇIK tut</string>
+    <string name="disable_ringing_and_vibration">Kayıt sırasında zil ve titreşimi devre dışı bırak</string>
+    <string name="dont_show_again">Tekrar gösterme</string>
 </resources>

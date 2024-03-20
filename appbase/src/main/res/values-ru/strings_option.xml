@@ -44,4 +44,10 @@ SOFTWARE.
     <string name="option_export">экспорт</string>
     <string name="option_save">сохранить</string>
     <string name="option_save_as">сохранить как</string>
+    <string name="option_move_up">перем. вверх</string>
+    <string name="option_move_down">перем. вниз</string>
+    <string name="option_move_left">перем. влево</string>
+    <string name="option_move_right">перем. вправо</string>
+    <string name="option_send">отправить</string>
+    <string name="option_insert">вставить</string>
 </resources>

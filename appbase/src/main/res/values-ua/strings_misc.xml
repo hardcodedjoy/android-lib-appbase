@@ -24,8 +24,13 @@ SOFTWARE.
 -->
 
 <resources>
-    <string name="back">Назад</string>
-    <string name="preview">Попередній перегляд</string>
     <string name="minimum">Мін.</string>
     <string name="maximum">Макс.</string>
+    <string name="available">доступно</string>
+    <string name="already_exists">вже існує</string>
+    <string name="placeholder_no_file">[ немає файлу ]</string>
+    <string name="placeholder_no_directory">[ немає каталогу ]</string>
+    <string name="keep_screen_on">Тримати екран УВІМКНЕНИМ</string>
+    <string name="disable_ringing_and_vibration">Вимкнути дзвінок і вібрацію під час запису</string>
+    <string name="dont_show_again">Не показувати знову</string>
 </resources>

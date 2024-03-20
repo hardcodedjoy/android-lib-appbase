@@ -42,4 +42,5 @@ SOFTWARE.
     <string name="select_track">Вибрати доріжку</string>
     <string name="share_audio_file">Поділитися аудіофайлом</string>
     <string name="share_audio_files">Поділитися аудіофайлами</string>
+    <string name="max_x_db">Макс. [x] дБ</string>
 </resources>

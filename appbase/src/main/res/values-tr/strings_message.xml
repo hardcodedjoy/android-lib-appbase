@@ -24,7 +24,11 @@ SOFTWARE.
 -->
 
 <resources>
-    <string name="access_forbidden">Erişim yasak</string>
-    <string name="are_you_sure">Emin misiniz</string>
-    <string name="no_network">Ağ yok. Lütfen Wi-Fi, Mobil Veri veya Hotspot\'u etkinleştirin.</string>
+    <string name="access_forbidden">Erişim yasak.</string>
+    <string name="are_you_sure">Emin misiniz?</string>
+    <string name="this_cannot_be_undone">Bu geri alınamaz.</string>
+    <string name="no_network_please_enable">Ağ yok. Lütfen Wi-Fi, Mobil Veri veya Hotspot\'u etkinleştirin.</string>
+    <string name="conversion_stopped">Dönüştürme durduruldu.</string>
+    <string name="conversion_done">Dönüştürme tamamlandı.</string>
+    <string name="available_only_in_full_version">Bu, sadece [x] (tam sürümde) mevcuttur.</string>
 </resources>

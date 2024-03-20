@@ -24,7 +24,11 @@ SOFTWARE.
 -->
 
 <resources>
-    <string name="access_forbidden">Доступ заборонено</string>
-    <string name="are_you_sure">Ви впевнені</string>
-    <string name="no_network">Немає мережі. Будь ласка, увімкніть Wi-Fi, мобільну передачу даних або точку доступу.</string>
+    <string name="access_forbidden">Доступ заборонено.</string>
+    <string name="are_you_sure">Ви впевнені?</string>
+    <string name="this_cannot_be_undone">Цього неможливо скасувати.</string>
+    <string name="no_network_please_enable">Немає мережі. Будь ласка, увімкніть Wi-Fi, мобільну передачу даних або точку доступу.</string>
+    <string name="conversion_stopped">Перетворення зупинена.</string>
+    <string name="conversion_done">Перетворення завершена.</string>
+    <string name="available_only_in_full_version">Це доступно лише в [x] (повна версія).</string>
 </resources>

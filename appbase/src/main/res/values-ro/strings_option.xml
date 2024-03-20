@@ -44,4 +44,10 @@ SOFTWARE.
     <string name="option_export">exportă</string>
     <string name="option_save">salvează</string>
     <string name="option_save_as">salvează ca</string>
+    <string name="option_move_up">mută mai sus</string>
+    <string name="option_move_down">mută mai jos</string>
+    <string name="option_move_left">mută la stânga</string>
+    <string name="option_move_right">mută la dreapta</string>
+    <string name="option_send">trimite</string>
+    <string name="option_insert">inserează</string>
 </resources>

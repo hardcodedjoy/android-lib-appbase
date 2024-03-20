@@ -82,7 +82,7 @@ public class CvPopups extends ContentView {
     }
 
     private void showPopupAsk() {
-        new PopupAsk(R.string.delete, getString(R.string.are_you_sure) + "?") {
+        new PopupAsk(R.string.title_delete, R.string.are_you_sure) {
             @Override
             public void onOK() {}
         }.show();
@@ -91,7 +91,7 @@ public class CvPopups extends ContentView {
     private void showPopupAsk2() {
         new PopupAsk(
                 R.string.popup_ask_with_text_buttons,
-                getString(R.string.are_you_sure) + "?",
+                R.string.are_you_sure,
                 R.string.yes_that_would_be_great,
                 R.string.no) {
             @Override
@@ -102,7 +102,7 @@ public class CvPopups extends ContentView {
     private void showPopupAsk3() {
         new PopupAsk(
                 R.string.popup_ask_with_text_buttons,
-                getString(R.string.are_you_sure) + "?",
+                R.string.are_you_sure,
                 R.string.yes,
                 R.string.no_i_dont_want_that) {
             @Override

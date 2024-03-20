@@ -24,7 +24,11 @@ SOFTWARE.
 -->
 
 <resources>
-    <string name="access_forbidden">Accesul interzis</string>
-    <string name="are_you_sure">Sunteți sigur</string>
-    <string name="no_network">Nicio rețea activă. Vă rugăm să activați Wi-Fi, Date Mobile sau Hotspot.</string>
+    <string name="access_forbidden">Accesul interzis.</string>
+    <string name="are_you_sure">Sunteți sigur?</string>
+    <string name="this_cannot_be_undone">Această operație este ireversibilă.</string>
+    <string name="no_network_please_enable">Nicio rețea activă. Vă rugăm să activați Wi-Fi, Date Mobile sau Hotspot.</string>
+    <string name="conversion_stopped">Conversie oprită.</string>
+    <string name="conversion_done">Conversie finalizată.</string>
+    <string name="available_only_in_full_version">Acestă opțiune este disponibilă doar în [x] (versiunea completă).</string>
 </resources>

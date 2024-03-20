@@ -24,7 +24,11 @@ SOFTWARE.
 -->
 
 <resources>
-    <string name="access_forbidden">Access forbidden</string>
-    <string name="are_you_sure">Are you sure</string>
-    <string name="no_network">No network. Please enable Wi-Fi, Mobile Data or Hotspot.</string>
+    <string name="access_forbidden">Access forbidden.</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="this_cannot_be_undone">This cannot be undone.</string>
+    <string name="no_network_please_enable">No network. Please enable Wi-Fi, Mobile Data or Hotspot.</string>
+    <string name="conversion_stopped">Conversion stopped.</string>
+    <string name="conversion_done">Conversion done.</string>
+    <string name="available_only_in_full_version">This is available only in [x] (full version).</string>
 </resources>

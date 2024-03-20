@@ -42,4 +42,5 @@ SOFTWARE.
     <string name="select_track">Sélectionnez la piste</string>
     <string name="share_audio_file">Partager un Fichier Audio</string>
     <string name="share_audio_files">Partager des Fichiers Audio</string>
+    <string name="max_x_db">Max. [x] dB</string>
 </resources>

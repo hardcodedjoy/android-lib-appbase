@@ -38,5 +38,4 @@ SOFTWARE.
     <string name="new_file">Новый файл</string>
     <string name="file">Файл</string>
     <string name="folder">Папка</string>
-    <string name="already_exists">уже существует</string>
 </resources>

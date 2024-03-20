@@ -32,4 +32,16 @@ SOFTWARE.
     <string name="no">Non</string>
     <string name="start">Start</string>
     <string name="stop">Stop</string>
+    <string name="skip">Sauter</string>
+    <string name="overwrite">Écraser</string>
+    <string name="search">Rechercher</string>
+    <string name="back">Retour</string>
+    <string name="preview">Prévisualiser</string>
+    <string name="btn_get">Obtenir</string>
+    <string name="btn_get_full_version">Obtenir la version complète</string>
+    <string name="btn_plus_import_files">+ importer des fichiers</string>
+    <string name="btn_plus_add_button">+ ajouter un bouton</string>
+    <string name="btn_plus_add_row">+ ajouter une ligne</string>
+    <string name="btn_plus_add_column">+ ajouter une colonne</string>
+    <string name="btn_plus_add_command">+ ajouter une commande</string>
 </resources>

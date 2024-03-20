@@ -42,4 +42,5 @@ SOFTWARE.
     <string name="select_track">Выберите трек</string>
     <string name="share_audio_file">Поделиться аудио файлом</string>
     <string name="share_audio_files">Поделиться аудио файлами</string>
+    <string name="max_x_db">Макс. [x] дБ</string>
 </resources>

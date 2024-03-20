@@ -38,5 +38,4 @@ SOFTWARE.
     <string name="new_file">New File</string>
     <string name="file">File</string>
     <string name="folder">Folder</string>
-    <string name="already_exists">already exists</string>
 </resources>

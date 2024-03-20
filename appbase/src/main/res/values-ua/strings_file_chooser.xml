@@ -38,5 +38,4 @@ SOFTWARE.
     <string name="new_file">Новий файл</string>
     <string name="file">Файл</string>
     <string name="folder">Каталог</string>
-    <string name="already_exists">вже існує</string>
 </resources>

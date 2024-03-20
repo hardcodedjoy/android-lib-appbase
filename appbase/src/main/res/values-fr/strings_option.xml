@@ -44,4 +44,11 @@ SOFTWARE.
     <string name="option_export">exporter</string>
     <string name="option_save">sauvegarder</string>
     <string name="option_save_as">sauvegarder sous</string>
+    <string name="option_move_up">déplacer haut</string>
+    <string name="option_move_down">déplacer bas</string>
+    <string name="option_move_left">déplacer gauche</string>
+    <string name="option_move_right">déplacer droite</string>
+    <string name="option_send">envoyer</string>
+    <string name="option_insert">insérer</string>
+
 </resources>

@@ -24,8 +24,13 @@ SOFTWARE.
 -->
 
 <resources>
-    <string name="back">Retour</string>
-    <string name="preview">Prévisualiser</string>
     <string name="minimum">Min.</string>
     <string name="maximum">Max.</string>
+    <string name="available">disponible</string>
+    <string name="already_exists">existe déjà</string>
+    <string name="placeholder_no_file">[ aucun fichier ]</string>
+    <string name="placeholder_no_directory">[ aucun répertoire ]</string>
+    <string name="keep_screen_on">Garder l\'écran ALLUMÉ</string>
+    <string name="disable_ringing_and_vibration">Désactiver la sonnerie et la vibration pendant l\'enregistrement</string>
+    <string name="dont_show_again">Ne plus afficher</string>
 </resources>

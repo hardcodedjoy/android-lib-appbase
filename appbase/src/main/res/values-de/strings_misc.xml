@@ -24,8 +24,13 @@ SOFTWARE.
 -->
 
 <resources>
-    <string name="back">Zurück</string>
-    <string name="preview">Vorschau</string>
     <string name="minimum">Min.</string>
     <string name="maximum">Max.</string>
+    <string name="available">verfügbar</string>
+    <string name="already_exists">existiert bereits</string>
+    <string name="placeholder_no_file">[ Keine Datei ]</string>
+    <string name="placeholder_no_directory">[ Kein Verzeichnis ]</string>
+    <string name="keep_screen_on">Bildschirm EIN aktivieren</string>
+    <string name="disable_ringing_and_vibration">Klingeln und Vibration während der Aufnahme deaktivieren</string>
+    <string name="dont_show_again">Nicht wieder anzeigen</string>
 </resources>

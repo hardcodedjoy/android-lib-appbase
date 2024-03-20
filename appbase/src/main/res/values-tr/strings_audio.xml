@@ -42,4 +42,5 @@ SOFTWARE.
     <string name="select_track">Parçayı Seç</string>
     <string name="share_audio_file">Ses Dosyası Paylaş</string>
     <string name="share_audio_files">Ses Dosyaları Paylaş</string>
+    <string name="max_x_db">Max. [x] dB</string>
 </resources>

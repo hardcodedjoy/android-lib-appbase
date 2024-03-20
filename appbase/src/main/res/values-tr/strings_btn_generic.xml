@@ -32,4 +32,16 @@ SOFTWARE.
     <string name="no">Hayır</string>
     <string name="start">Başlat</string>
     <string name="stop">Durdur</string>
+    <string name="skip">Atla</string>
+    <string name="overwrite">Üzerine yaz</string>
+    <string name="search">Ara</string>
+    <string name="back">Geri</string>
+    <string name="preview">Önizleme</string>
+    <string name="btn_get">Al</string>
+    <string name="btn_get_full_version">Tam sürümü al</string>
+    <string name="btn_plus_import_files">+ dosya ekle</string>
+    <string name="btn_plus_add_button">+ düğme ekle</string>
+    <string name="btn_plus_add_row">+ satır ekle</string>
+    <string name="btn_plus_add_column">+ sütun ekle</string>
+    <string name="btn_plus_add_command">+ komut ekle</string>
 </resources>

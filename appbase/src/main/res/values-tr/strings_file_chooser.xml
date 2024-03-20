@@ -38,5 +38,4 @@ SOFTWARE.
     <string name="new_file">Yeni Dosya</string>
     <string name="file">Dosya</string>
     <string name="folder">Klasör</string>
-    <string name="already_exists">zaten var</string>
 </resources>
