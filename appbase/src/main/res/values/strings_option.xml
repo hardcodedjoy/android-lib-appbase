@@ -40,8 +40,18 @@ SOFTWARE.
     <string name="option_extract_here">extract here</string>
     <string name="option_compress">compress</string>
     <string name="option_delete">delete</string>
+    <string name="option_delete_row">delete row</string>
+    <string name="option_delete_column">delete column</string>
+    <string name="option_delete_line">delete line</string>
+    <string name="option_delete_command">delete command</string>
+    <string name="option_delete_file">delete file</string>
+    <string name="option_delay">delay</string>
     <string name="option_import">import</string>
     <string name="option_export">export</string>
+    <string name="option_import_zip">import ZIP</string>
+    <string name="option_import_json">import JSON</string>
+    <string name="option_export_to_zip">export to ZIP</string>
+    <string name="option_export_to_json">export to JSON</string>
     <string name="option_save">save</string>
     <string name="option_save_as">save as</string>
     <string name="option_move_up">move up</string>
@@ -50,4 +60,9 @@ SOFTWARE.
     <string name="option_move_right">move right</string>
     <string name="option_send">send</string>
     <string name="option_insert">insert</string>
+    <string name="option_connect">connect</string>
+    <string name="option_disconnect">disconnect</string>
+    <string name="option_configure">configure</string>
+    <string name="option_send_file">send file</string>
+    <string name="option_receive_file">receive file</string>
 </resources>

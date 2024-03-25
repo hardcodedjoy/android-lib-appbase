@@ -40,8 +40,18 @@ SOFTWARE.
     <string name="option_extract_here">hier entpacken</string>
     <string name="option_compress">komprimieren</string>
     <string name="option_delete">löschen</string>
+    <string name="option_delete_row">Zeile löschen</string>
+    <string name="option_delete_column">Spalte löschen</string>
+    <string name="option_delete_line">Linie löschen</string>
+    <string name="option_delete_command">Befehl löschen</string>
+    <string name="option_delete_file">Datei löschen</string>
+    <string name="option_delay">Verzögerung</string>
     <string name="option_import">importieren</string>
     <string name="option_export">exportieren</string>
+    <string name="option_import_zip">ZIP importieren</string>
+    <string name="option_import_json">JSON importieren</string>
+    <string name="option_export_to_zip">ZIP exportieren</string>
+    <string name="option_export_to_json">JSON exportieren</string>
     <string name="option_save">speichern</string>
     <string name="option_save_as">speichern unter</string>
     <string name="option_move_up">nach oben verschieben</string>
@@ -50,4 +60,9 @@ SOFTWARE.
     <string name="option_move_right">nach rechts verschieben</string>
     <string name="option_send">senden</string>
     <string name="option_insert">einfügen</string>
+    <string name="option_connect">verbinden</string>
+    <string name="option_disconnect">trennen</string>
+    <string name="option_configure">konfigurieren</string>
+    <string name="option_send_file">Datei senden</string>
+    <string name="option_receive_file">Datei empfangen</string>
 </resources>

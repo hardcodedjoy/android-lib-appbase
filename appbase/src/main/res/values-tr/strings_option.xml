@@ -40,8 +40,18 @@ SOFTWARE.
     <string name="option_extract_here">burada çıkart</string>
     <string name="option_compress">sıkıştır</string>
     <string name="option_delete">sil</string>
+    <string name="option_delete_row">satırı sil</string>
+    <string name="option_delete_column">sütunu sil</string>
+    <string name="option_delete_line">çizgiyi sil</string>
+    <string name="option_delete_command">komutu sil</string>
+    <string name="option_delete_file">dosyayı sil</string>
+    <string name="option_delay">gecikme</string>
     <string name="option_import">içe aktar</string>
     <string name="option_export">dışa aktar</string>
+    <string name="option_import_zip">ZIP al</string>
+    <string name="option_import_json">JSON al</string>
+    <string name="option_export_to_zip">ZIP dışa aktar</string>
+    <string name="option_export_to_json">JSON dışa aktar</string>
     <string name="option_save">kaydet</string>
     <string name="option_save_as">farklı kaydet</string>
     <string name="option_move_up">yukarı taşı</string>
@@ -50,4 +60,9 @@ SOFTWARE.
     <string name="option_move_right">sağa taşı</string>
     <string name="option_send">gönder</string>
     <string name="option_insert">ekle</string>
+    <string name="option_connect">bağlan</string>
+    <string name="option_disconnect">bağlantıyı kes</string>
+    <string name="option_configure">ayarla</string>
+    <string name="option_send_file">dosya gönder</string>
+    <string name="option_receive_file">dosya al</string>
 </resources>

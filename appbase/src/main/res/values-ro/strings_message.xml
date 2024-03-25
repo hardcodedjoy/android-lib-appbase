@@ -31,4 +31,5 @@ SOFTWARE.
     <string name="conversion_stopped">Conversie oprită.</string>
     <string name="conversion_done">Conversie finalizată.</string>
     <string name="available_only_in_full_version">Acestă opțiune este disponibilă doar în [x] (versiunea completă).</string>
+    <string name="expecting_x_near_y">Se așteaptă [x] în apropierea [y].</string>
 </resources>

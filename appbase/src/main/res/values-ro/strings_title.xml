@@ -81,5 +81,12 @@ SOFTWARE.
     <string name="title_command">Comandă</string>
     <string name="title_commands">Comenzi</string>
     <string name="title_button_text">Text pe buton</string>
-
+    <string name="title_connect">Conectare</string>
+    <string name="title_connecting">Conectare</string>
+    <string name="title_connected">Conectat</string>
+    <string name="title_disconnect">Deconectare</string>
+    <string name="title_disconnecting">Deconectare</string>
+    <string name="title_disconnected">Deconectat</string>
+    <string name="title_sending_file">Se trimite fișierul</string>
+    <string name="title_receiving_file">Se recepționează fișierul</string>
 </resources>

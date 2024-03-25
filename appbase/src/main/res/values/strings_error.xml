@@ -57,4 +57,5 @@ SOFTWARE.
     <string name="err_cannot_play_this_file">CANNOT PLAY THIS FILE</string>
     <string name="err_mic_open_failed">MICROPHONE OPEN FAILED</string>
     <string name="err_no_write_access_to_folder">NO WRITE ACCESS TO FOLDER</string>
+    <string name="err_syntax_error">SYNTAX ERROR</string>
 </resources>

@@ -31,4 +31,5 @@ SOFTWARE.
     <string name="conversion_stopped">Перетворення зупинена.</string>
     <string name="conversion_done">Перетворення завершена.</string>
     <string name="available_only_in_full_version">Це доступно лише в [x] (повна версія).</string>
+    <string name="expecting_x_near_y">Очікується [x] поруч [y].</string>
 </resources>

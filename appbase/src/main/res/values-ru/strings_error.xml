@@ -57,4 +57,5 @@ SOFTWARE.
     <string name="err_cannot_play_this_file">НЕВОЗМОЖНО ВОСПРОИЗВЕСТИ ЭТОТ ФАЙЛ</string>
     <string name="err_mic_open_failed">ОШИБКА ОТКРЫТИЯ МИКРОФОНА</string>
     <string name="err_no_write_access_to_folder">НЕТ ПРАВ ДЛЯ ЗАПИСИ В ПАПКУ</string>
+    <string name="err_syntax_error">СИНТАКСИЧЕСКАЯ ОШИБКА</string>
 </resources>

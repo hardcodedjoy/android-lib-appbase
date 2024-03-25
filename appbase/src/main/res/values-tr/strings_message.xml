@@ -31,4 +31,5 @@ SOFTWARE.
     <string name="conversion_stopped">Dönüştürme durduruldu.</string>
     <string name="conversion_done">Dönüştürme tamamlandı.</string>
     <string name="available_only_in_full_version">Bu, sadece [x] (tam sürümde) mevcuttur.</string>
+    <string name="expecting_x_near_y">[x] yakınında [y] bekleniyor.</string>
 </resources>

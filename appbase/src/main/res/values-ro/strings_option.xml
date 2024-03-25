@@ -35,13 +35,23 @@ SOFTWARE.
     <string name="option_download">descarcă</string>
     <string name="option_upload">încarcă</string>
     <string name="option_select_default_app">selectează aplicația implicită</string>
-    <string name="option_create_shortcut">creează un shortcut</string>
+    <string name="option_create_shortcut">creează shortcut</string>
     <string name="option_view_info">informații</string>
     <string name="option_extract_here">extrage aici</string>
     <string name="option_compress">comprimă</string>
     <string name="option_delete">șterge</string>
+    <string name="option_delete_row">șterge rândul</string>
+    <string name="option_delete_column">șterge coloana</string>
+    <string name="option_delete_line">șterge linia</string>
+    <string name="option_delete_command">șterge comanda</string>
+    <string name="option_delete_file">șterge fișierul</string>
+    <string name="option_delay">întârziere</string>
     <string name="option_import">importă</string>
     <string name="option_export">exportă</string>
+    <string name="option_import_zip">importă ZIP</string>
+    <string name="option_import_json">importă JSON</string>
+    <string name="option_export_to_zip">exportă ca ZIP</string>
+    <string name="option_export_to_json">exportă ca JSON</string>
     <string name="option_save">salvează</string>
     <string name="option_save_as">salvează ca</string>
     <string name="option_move_up">mută mai sus</string>
@@ -50,4 +60,9 @@ SOFTWARE.
     <string name="option_move_right">mută la dreapta</string>
     <string name="option_send">trimite</string>
     <string name="option_insert">inserează</string>
+    <string name="option_connect">conectare</string>
+    <string name="option_disconnect">deconectare</string>
+    <string name="option_configure">configurare</string>
+    <string name="option_send_file">trimite fișier</string>
+    <string name="option_receive_file">recepționează fișier</string>
 </resources>

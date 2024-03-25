@@ -57,4 +57,5 @@ SOFTWARE.
     <string name="err_cannot_play_this_file">IMPOSSIBLE DE LIRE CE FICHIER</string>
     <string name="err_mic_open_failed">OUVERTURE DU MICROPHONE ÉCHOUÉE</string>
     <string name="err_no_write_access_to_folder">PAS D\'ACCÈS EN ÉCRITURE AU DOSSIER</string>
+    <string name="err_syntax_error">ERREUR DE SYNTAXE</string>
 </resources>

@@ -40,8 +40,18 @@ SOFTWARE.
     <string name="option_extract_here">распаковать здесь</string>
     <string name="option_compress">сжать</string>
     <string name="option_delete">удалить</string>
+    <string name="option_delete_row">удалить строку</string>
+    <string name="option_delete_column">удалить столбец</string>
+    <string name="option_delete_line">удалить линию</string>
+    <string name="option_delete_command">удалить команду</string>
+    <string name="option_delete_file">удалить файл</string>
+    <string name="option_delay">задержка</string>
     <string name="option_import">импорт</string>
     <string name="option_export">экспорт</string>
+    <string name="option_import_zip">импорт ZIP</string>
+    <string name="option_import_json">импорт JSON</string>
+    <string name="option_export_to_zip">экспорт в ZIP</string>
+    <string name="option_export_to_json">экспорт в JSON</string>
     <string name="option_save">сохранить</string>
     <string name="option_save_as">сохранить как</string>
     <string name="option_move_up">перем. вверх</string>
@@ -50,4 +60,9 @@ SOFTWARE.
     <string name="option_move_right">перем. вправо</string>
     <string name="option_send">отправить</string>
     <string name="option_insert">вставить</string>
+    <string name="option_connect">подключиться</string>
+    <string name="option_disconnect">отключиться</string>
+    <string name="option_configure">настроить</string>
+    <string name="option_send_file">отправить файл</string>
+    <string name="option_receive_file">получить файл</string>
 </resources>

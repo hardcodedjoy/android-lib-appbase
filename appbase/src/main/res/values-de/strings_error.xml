@@ -57,4 +57,5 @@ SOFTWARE.
     <string name="err_cannot_play_this_file">DIESE DATEI KANN NICHT ABGESPIELT WERDEN</string>
     <string name="err_mic_open_failed">MIKROFONÖFFNUNG FEHLGESCHLAGEN</string>
     <string name="err_no_write_access_to_folder">KEIN SCHREIBZUGRIFF AUF DEN ORDNER</string>
+    <string name="err_syntax_error">SYNTAX-FEHLER</string>
 </resources>

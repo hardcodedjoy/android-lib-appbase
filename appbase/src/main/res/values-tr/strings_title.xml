@@ -80,4 +80,12 @@ SOFTWARE.
     <string name="title_command">Komut</string>
     <string name="title_commands">Komutlar</string>
     <string name="title_button_text">Düğme metni</string>
+    <string name="title_connect">Bağlan</string>
+    <string name="title_connecting">Bağlanıyor</string>
+    <string name="title_connected">Bağlı</string>
+    <string name="title_disconnect">Bağlantıyı kes</string>
+    <string name="title_disconnecting">Bağlantı kesiliyor</string>
+    <string name="title_disconnected">Bağlantı kesildi</string>
+    <string name="title_sending_file">Dosya gönderiliyor</string>
+    <string name="title_receiving_file">Dosya alınıyor</string>
 </resources>

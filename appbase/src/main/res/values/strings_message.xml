@@ -31,4 +31,5 @@ SOFTWARE.
     <string name="conversion_stopped">Conversion stopped.</string>
     <string name="conversion_done">Conversion done.</string>
     <string name="available_only_in_full_version">This is available only in [x] (full version).</string>
+    <string name="expecting_x_near_y">Expecting [x] near [y].</string>
 </resources>

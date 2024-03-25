@@ -80,4 +80,12 @@ SOFTWARE.
     <string name="title_command">Commande</string>
     <string name="title_commands">Commandes</string>
     <string name="title_button_text">Texte du bouton</string>
+    <string name="title_connect">Connecter</string>
+    <string name="title_connecting">Connexion</string>
+    <string name="title_connected">Connecté</string>
+    <string name="title_disconnect">Déconnecter</string>
+    <string name="title_disconnecting">Déconnexion</string>
+    <string name="title_disconnected">Déconnecté</string>
+    <string name="title_sending_file">Envoi de fichier</string>
+    <string name="title_receiving_file">Réception de fichier</string>
 </resources>
