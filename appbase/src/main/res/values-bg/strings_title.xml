@@ -1,0 +1,92 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="title_help">Помощ</string>
+    <string name="title_about">Относно</string>
+    <string name="title_mit_license">Лиценз MIT</string>
+    <string name="title_settings">Настройки</string>
+    <string name="title_options">Опции</string>
+    <string name="title_system">Система</string>
+    <string name="title_error">Грешка</string>
+    <string name="title_info">Информация</string>
+    <string name="title_loading">Зареждане</string>
+    <string name="title_opening">Отваряне</string>
+    <string name="title_please_wait">Моля, изчакайте</string>
+    <string name="title_processing">Обработване</string>
+    <string name="title_rename">Преименуване</string>
+    <string name="title_copy">Копиране</string>
+    <string name="title_copying">Копиране</string>
+    <string name="title_move">Преместване</string>
+    <string name="title_moving">Преместване</string>
+    <string name="title_delete">Изтриване</string>
+    <string name="title_deleting">Изтриване</string>
+    <string name="title_share">Споделяне</string>
+    <string name="title_sharing">Споделяне</string>
+    <string name="title_download">Сваляне</string>
+    <string name="title_downloading">Сваляне</string>
+    <string name="title_upload">Качване</string>
+    <string name="title_uploading">Качване</string>
+    <string name="title_compress">Компресиране</string>
+    <string name="title_compressing">Компресиране</string>
+    <string name="title_extract">Извличане</string>
+    <string name="title_extracting">Извличане</string>
+    <string name="title_convert">Конвертиране</string>
+    <string name="title_converting">Конвертиране</string>
+    <string name="title_import">Импорт</string>
+    <string name="title_importing">Импортиране</string>
+    <string name="title_export">Експорт</string>
+    <string name="title_exporting">Експортиране</string>
+    <string name="title_access">Достъп</string>
+    <string name="title_select">Избиране</string>
+    <string name="title_content">Съдържание</string>
+    <string name="title_size">Размер</string>
+    <string name="title_search_results">Резултати от търсенето</string>
+    <string name="title_file_system_access">Достъп до файловата система</string>
+    <string name="title_all_files_access">Достъп до всички файлове</string>
+    <string name="title_file_format">Формат на файла</string>
+    <string name="title_output_file_name">Име на изходния файл</string>
+    <string name="title_output_file_format">Формат на изходния файл</string>
+    <string name="title_bits_per_sample">Битове на елемент</string>
+    <string name="title_file_name">Име на файла</string>
+    <string name="title_status">Статус</string>
+    <string name="title_example">Пример</string>
+    <string name="title_send">Изпрати</string>
+    <string name="title_sending">Изпращане</string>
+    <string name="title_byte_delay">Забавяне на байтовете</string>
+    <string name="title_buffer_size">Размер на буфера</string>
+    <string name="title_command">Команда</string>
+    <string name="title_commands">Команди</string>
+    <string name="title_button_text">Текст на бутона</string>
+    <string name="title_connect">Свързване</string>
+    <string name="title_connecting">Свързване</string>
+    <string name="title_connected">Свързан</string>
+    <string name="title_disconnect">Разкачване</string>
+    <string name="title_disconnecting">Разкачване</string>
+    <string name="title_disconnected">Разкачен</string>
+    <string name="title_sending_file">Изпращане на файл</string>
+    <string name="title_receiving_file">Получаване на файл</string>
+    <string name="title_select_color">Избор на цвят</string>
+</resources>

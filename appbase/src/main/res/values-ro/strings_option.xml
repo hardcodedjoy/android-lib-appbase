@@ -40,6 +40,8 @@ SOFTWARE.
     <string name="option_extract_here">extrage aici</string>
     <string name="option_compress">comprimă</string>
     <string name="option_delete">șterge</string>
+    <string name="option_delete_button">șterge butonul</string>
+    <string name="option_delete_all">șterge tot</string>
     <string name="option_delete_row">șterge rândul</string>
     <string name="option_delete_column">șterge coloana</string>
     <string name="option_delete_line">șterge linia</string>

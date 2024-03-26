@@ -1,0 +1,46 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="audio">Audio</string>
+    <string name="audio_source">Sorgente audio</string>
+    <string name="sample_rate">Frequenza di campionamento</string>
+    <string name="channels">Canali</string>
+    <string name="mono">Mono</string>
+    <string name="stereo">Stereo</string>
+    <string name="swap_lr">Scambia S/D</string>
+    <string name="lr_balance">Bilanciamento S/D</string>
+    <string name="channel_l">S</string>
+    <string name="channel_r">D</string>
+    <string name="gain">Guadagno</string>
+    <string name="gain_dynamic">Guadagno (dinamico)</string>
+    <string name="gain_option_dynamic">dinamico</string>
+    <string name="gain_option_constant">costante</string>
+    <string name="track">Traccia</string>
+    <string name="select_track">Seleziona traccia</string>
+    <string name="share_audio_file">Condividi file audio</string>
+    <string name="share_audio_files">Condividi file audio</string>
+    <string name="max_x_db">Max. [x] dB</string>
+</resources>

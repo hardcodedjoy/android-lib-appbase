@@ -1,0 +1,47 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="btn_ok">Aceptar</string>
+    <string name="btn_browse">Examinar</string>
+    <string name="btn_add">+ agregar</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="start">Iniciar</string>
+    <string name="stop">Detener</string>
+    <string name="skip">Omitir</string>
+    <string name="overwrite">Sobrescribir</string>
+    <string name="search">Buscar</string>
+    <string name="back">Atrás</string>
+    <string name="preview">Vista previa</string>
+    <string name="btn_get">Obtener</string>
+    <string name="btn_get_full_version">Obtener versión completa</string>
+    <string name="btn_plus_import_files">+ importar archivos</string>
+    <string name="btn_plus_add_button">+ agregar botón</string>
+    <string name="btn_plus_add_row">+ agregar fila</string>
+    <string name="btn_plus_add_column">+ agregar columna</string>
+    <string name="btn_plus_add_command">+ agregar comando</string>
+</resources>

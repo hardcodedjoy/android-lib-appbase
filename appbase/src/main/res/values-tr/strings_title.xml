@@ -88,4 +88,5 @@ SOFTWARE.
     <string name="title_disconnected">Bağlantı kesildi</string>
     <string name="title_sending_file">Dosya gönderiliyor</string>
     <string name="title_receiving_file">Dosya alınıyor</string>
+    <string name="title_select_color">Renk seçin</string>
 </resources>

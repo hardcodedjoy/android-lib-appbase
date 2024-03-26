@@ -88,4 +88,5 @@ SOFTWARE.
     <string name="title_disconnected">Відключено</string>
     <string name="title_sending_file">Надсилання файлу</string>
     <string name="title_receiving_file">Отримання файлу</string>
+    <string name="title_select_color">Виберіть колір</string>
 </resources>

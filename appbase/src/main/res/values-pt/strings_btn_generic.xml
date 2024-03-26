@@ -1,0 +1,47 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_browse">Navegar</string>
+    <string name="btn_add">+ adicionar</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="start">Iniciar</string>
+    <string name="stop">Parar</string>
+    <string name="skip">Pular</string>
+    <string name="overwrite">Substituir</string>
+    <string name="search">Pesquisar</string>
+    <string name="back">Voltar</string>
+    <string name="preview">Visualização</string>
+    <string name="btn_get">Obter</string>
+    <string name="btn_get_full_version">Obter versão completa</string>
+    <string name="btn_plus_import_files">+ importar ficheiros</string>
+    <string name="btn_plus_add_button">+ adicionar botão</string>
+    <string name="btn_plus_add_row">+ adicionar linha</string>
+    <string name="btn_plus_add_column">+ adicionar coluna</string>
+    <string name="btn_plus_add_command">+ adicionar comando</string>
+</resources>

@@ -40,6 +40,8 @@ SOFTWARE.
     <string name="option_extract_here">hier entpacken</string>
     <string name="option_compress">komprimieren</string>
     <string name="option_delete">löschen</string>
+    <string name="option_delete_button">Knopf löschen</string>
+    <string name="option_delete_all">Alles löschen</string>
     <string name="option_delete_row">Zeile löschen</string>
     <string name="option_delete_column">Spalte löschen</string>
     <string name="option_delete_line">Linie löschen</string>

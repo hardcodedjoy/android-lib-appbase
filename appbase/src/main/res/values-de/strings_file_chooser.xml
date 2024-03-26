@@ -28,9 +28,9 @@ SOFTWARE.
     <string name="select_output_folder">Ausgabeverzeichnis auswählen</string>
     <string name="select_folder">Ordner auswählen</string>
     <string name="select_file">Datei auswählen</string>
-    <string name="select_file_s">Dateien auswählen</string>
+    <string name="select_file_s">Datei(en) auswählen</string>
     <string name="open_file">Datei öffnen</string>
-    <string name="open_file_s">Dateien öffnen</string>
+    <string name="open_file_s">Datei(en) öffnen</string>
     <string name="save_as">Speichern unter</string>
     <string name="save_file">Datei speichern</string>
     <string name="save_file_as">Datei speichern unter</string>

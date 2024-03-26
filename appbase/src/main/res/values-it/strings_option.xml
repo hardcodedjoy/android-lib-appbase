@@ -1,0 +1,70 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="option_rename">rinomina</string>
+    <string name="option_open">apri</string>
+    <string name="option_open_with">apri con</string>
+    <string name="option_edit">modifica</string>
+    <string name="option_edit_with">modifica con</string>
+    <string name="option_copy_to">copia in</string>
+    <string name="option_move_to">muovi in</string>
+    <string name="option_share">condividi</string>
+    <string name="option_download">scarica</string>
+    <string name="option_upload">carica</string>
+    <string name="option_select_default_app">seleziona app predefinita</string>
+    <string name="option_create_shortcut">crea collegamento</string>
+    <string name="option_view_info">informazioni</string>
+    <string name="option_extract_here">estrai qui</string>
+    <string name="option_compress">comprimi</string>
+    <string name="option_delete">elimina</string>
+    <string name="option_delete_button">elimina pulsante</string>
+    <string name="option_delete_all">elimina tutto</string>
+    <string name="option_delete_row">elimina riga</string>
+    <string name="option_delete_column">elimina colonna</string>
+    <string name="option_delete_line">elimina linea</string>
+    <string name="option_delete_command">elimina comando</string>
+    <string name="option_delete_file">elimina file</string>
+    <string name="option_delay">ritardo</string>
+    <string name="option_import">importa</string>
+    <string name="option_export">esporta</string>
+    <string name="option_import_zip">importa ZIP</string>
+    <string name="option_import_json">importa JSON</string>
+    <string name="option_export_to_zip">esporta in ZIP</string>
+    <string name="option_export_to_json">esporta in JSON</string>
+    <string name="option_save">salva</string>
+    <string name="option_save_as">salva come</string>
+    <string name="option_move_up">spostarlo in alto</string>
+    <string name="option_move_down">spostarlo giù</string>
+    <string name="option_move_left">spostarlo a sinistra</string>
+    <string name="option_move_right">spostarlo a destra</string>
+    <string name="option_send">invia</string>
+    <string name="option_insert">inserisci</string>
+    <string name="option_connect">connetti</string>
+    <string name="option_disconnect">disconnetti</string>
+    <string name="option_configure">configura</string>
+    <string name="option_send_file">invia file</string>
+    <string name="option_receive_file">ricevi file</string>
+</resources>

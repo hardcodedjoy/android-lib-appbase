@@ -1,0 +1,70 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="option_rename">преименувай</string>
+    <string name="option_open">отвори</string>
+    <string name="option_open_with">отвори с</string>
+    <string name="option_edit">редактирай</string>
+    <string name="option_edit_with">редактирай с</string>
+    <string name="option_copy_to">копирай в</string>
+    <string name="option_move_to">премести в</string>
+    <string name="option_share">сподели</string>
+    <string name="option_download">изтегли</string>
+    <string name="option_upload">качи</string>
+    <string name="option_select_default_app">избери приложение по подразбиране</string>
+    <string name="option_create_shortcut">създай ярлък</string>
+    <string name="option_view_info">информация</string>
+    <string name="option_extract_here">разархивирай тук</string>
+    <string name="option_compress">компресирай</string>
+    <string name="option_delete">изтрий</string>
+    <string name="option_delete_button">изтрий бутон</string>
+    <string name="option_delete_all">изтрий всичко</string>
+    <string name="option_delete_row">изтрий ред</string>
+    <string name="option_delete_column">изтрий колона</string>
+    <string name="option_delete_line">изтрий линия</string>
+    <string name="option_delete_command">изтрий команда</string>
+    <string name="option_delete_file">изтрий файл</string>
+    <string name="option_delay">закъснение</string>
+    <string name="option_import">импорт</string>
+    <string name="option_export">експор</string>
+    <string name="option_import_zip">импорт ZIP</string>
+    <string name="option_import_json">импорт JSON</string>
+    <string name="option_export_to_zip">експорт в ZIP</string>
+    <string name="option_export_to_json">експорт в JSON</string>
+    <string name="option_save">запиши</string>
+    <string name="option_save_as">запиши като</string>
+    <string name="option_move_up">прем. нагоре</string>
+    <string name="option_move_down">прем. надолу</string>
+    <string name="option_move_left">прем. наляво</string>
+    <string name="option_move_right">прем. надясно</string>
+    <string name="option_send">изпрати</string>
+    <string name="option_insert">вмъкни</string>
+    <string name="option_connect">свържи</string>
+    <string name="option_disconnect">прекрати връзката</string>
+    <string name="option_configure">конфигурирай</string>
+    <string name="option_send_file">изпрати файл</string>
+    <string name="option_receive_file">получи файл</string>
+</resources>

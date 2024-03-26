@@ -1,0 +1,70 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="option_rename">zmień nazwę</string>
+    <string name="option_open">otwórz</string>
+    <string name="option_open_with">otwórz za pomocą</string>
+    <string name="option_edit">edytuj</string>
+    <string name="option_edit_with">edytuj za pomocą</string>
+    <string name="option_copy_to">kopiuj do</string>
+    <string name="option_move_to">przenieś do</string>
+    <string name="option_share">udostępnij</string>
+    <string name="option_download">pobierz</string>
+    <string name="option_upload">wgraj</string>
+    <string name="option_select_default_app">wybierz domyślną aplikację</string>
+    <string name="option_create_shortcut">utwórz skrót</string>
+    <string name="option_view_info">informacje</string>
+    <string name="option_extract_here">wypakuj tutaj</string>
+    <string name="option_compress">kompresuj</string>
+    <string name="option_delete">usuń</string>
+    <string name="option_delete_button">usuń przycisk</string>
+    <string name="option_delete_all">usuń wszystko</string>
+    <string name="option_delete_row">usuń wiersz</string>
+    <string name="option_delete_column">usuń kolumnę</string>
+    <string name="option_delete_line">usuń linie</string>
+    <string name="option_delete_command">usuń polecenie</string>
+    <string name="option_delete_file">usuń plik</string>
+    <string name="option_delay">opóźnienie</string>
+    <string name="option_import">importuj</string>
+    <string name="option_export">eksportuj</string>
+    <string name="option_import_zip">importuj ZIP</string>
+    <string name="option_import_json">importuj JSON</string>
+    <string name="option_export_to_zip">eksportuj do ZIP</string>
+    <string name="option_export_to_json">eksportuj do JSON</string>
+    <string name="option_save">zapisz</string>
+    <string name="option_save_as">zapisz jako</string>
+    <string name="option_move_up">przesuń w górę</string>
+    <string name="option_move_down">przesuń w dół</string>
+    <string name="option_move_left">przesuń w lewo</string>
+    <string name="option_move_right">przesuń w prawo</string>
+    <string name="option_send">wyślij</string>
+    <string name="option_insert">wstaw</string>
+    <string name="option_connect">nawiąż połączenie</string>
+    <string name="option_disconnect">rozłącz</string>
+    <string name="option_configure">skonfiguruj</string>
+    <string name="option_send_file">wyślij plik</string>
+    <string name="option_receive_file">otrzymaj plik</string>
+</resources>

@@ -1,0 +1,92 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="title_help">Aiuto</string>
+    <string name="title_about">Informazioni</string>
+    <string name="title_mit_license">Licenza MIT</string>
+    <string name="title_settings">Impostazioni</string>
+    <string name="title_options">Opzioni</string>
+    <string name="title_system">Sistema</string>
+    <string name="title_error">Errore</string>
+    <string name="title_info">Informazioni</string>
+    <string name="title_loading">Caricamento</string>
+    <string name="title_opening">Apertura</string>
+    <string name="title_please_wait">Attendere prego</string>
+    <string name="title_processing">Elaborazione</string>
+    <string name="title_rename">Rinomina</string>
+    <string name="title_copy">Copia</string>
+    <string name="title_copying">Copiando</string>
+    <string name="title_move">Sposta</string>
+    <string name="title_moving">Spostando</string>
+    <string name="title_delete">Cancella</string>
+    <string name="title_deleting">Cancellando</string>
+    <string name="title_share">Condividi</string>
+    <string name="title_sharing">Condividendo</string>
+    <string name="title_download">Scarica</string>
+    <string name="title_downloading">Scaricando</string>
+    <string name="title_upload">Carica</string>
+    <string name="title_uploading">Caricando</string>
+    <string name="title_compress">Comprimi</string>
+    <string name="title_compressing">Comprimendo</string>
+    <string name="title_extract">Estrai</string>
+    <string name="title_extracting">Estrarre</string>
+    <string name="title_convert">Converti</string>
+    <string name="title_converting">Convertendo</string>
+    <string name="title_import">Importa</string>
+    <string name="title_importing">Importando</string>
+    <string name="title_export">Esporta</string>
+    <string name="title_exporting">Esportando</string>
+    <string name="title_access">Accedi</string>
+    <string name="title_select">Seleziona</string>
+    <string name="title_content">Contenuto</string>
+    <string name="title_size">Dimensione</string>
+    <string name="title_search_results">Risultati della ricerca</string>
+    <string name="title_file_system_access">Accesso al sistema di file</string>
+    <string name="title_all_files_access">Accesso a tutti i file</string>
+    <string name="title_file_format">Formato del file</string>
+    <string name="title_output_file_name">Nome del file di output</string>
+    <string name="title_output_file_format">Formato del file di output</string>
+    <string name="title_bits_per_sample">Bit per campione</string>
+    <string name="title_file_name">Nome del file</string>
+    <string name="title_status">Stato</string>
+    <string name="title_example">Esempio</string>
+    <string name="title_send">Invia</string>
+    <string name="title_sending">Invio</string>
+    <string name="title_byte_delay">Ritardo di byte</string>
+    <string name="title_buffer_size">Buffer</string>
+    <string name="title_command">Comando</string>
+    <string name="title_commands">Comandi</string>
+    <string name="title_button_text">Testo del pulsante</string>
+    <string name="title_connect">Connetti</string>
+    <string name="title_connecting">Connessione in corso</string>
+    <string name="title_connected">Connesso</string>
+    <string name="title_disconnect">Disconnetti</string>
+    <string name="title_disconnecting">Disconnessione in corso</string>
+    <string name="title_disconnected">Disconnesso</string>
+    <string name="title_sending_file">Invio di file</string>
+    <string name="title_receiving_file">Ricezione di file</string>
+    <string name="title_select_color">Seleziona colore</string>
+</resources>

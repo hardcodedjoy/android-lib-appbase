@@ -1,0 +1,61 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="err_out_of_memory">MEMÓRIA INSUFICIENTE</string>
+    <string name="err_disk_full">DISCO CHEIO</string>
+    <string name="err_cannot_read_input_file">NÃO É POSÍVEL LER O ARQUIVO DE ENTRADA</string>
+    <string name="err_cannot_write_output_file">NÃO É POSÍVEL ESCREVER O ARQUIVO DE SAÍDA</string>
+    <string name="err_rename_failed">RENOMEAÇÃO FALHOU</string>
+    <string name="err_no_files_to_copy">NENHUM ARQUIVO PARA COPIAR</string>
+    <string name="err_no_files_to_move">NENHUM ARQUIVO PARA MOVIMENTAR</string>
+    <string name="err_file_name_is_null">NOME DO ARQUIVO == NULL</string>
+    <string name="err_already_exists">JÁ EXISTE</string>
+    <string name="err_could_not_be_deleted_completely">NÃO PODE SER EXCLUÍDO COMPLETAMENTE</string>
+    <string name="err_could_not_be_overwritten">NÃO PODE SER SOBRESCRITO</string>
+    <string name="err_file_to_overwrite_is_not_a_folder_nor_file">O ARQUIVO PARA SOBRESCREVER NÃO É UMA PASTA NEM UM ARQUIVO</string>
+    <string name="err_copy_failed">CÓPIA FALHOU</string>
+    <string name="err_move_failed">MOVER FALHOU</string>
+    <string name="err_delete_failed">EXCLUSÃO FALHOU</string>
+    <string name="err_file_create_failed">CRIAR ARQUIVO FALHOU</string>
+    <string name="err_folder_create_failed">CRIAR PASTA FALHOU</string>
+    <string name="err_unimplemented_for_multiple_files">NÃO IMPLEMENTADO PARA VÁRIOS ARQUIVOS</string>
+    <string name="err_no_files_to_compress">NENHUM ARQUIVO PARA COMPRIMIR</string>
+    <string name="err_no_files_to_extract">NENHUM ARQUIVO PARA EXTRAIR</string>
+    <string name="err_dest_dir_is_null">PASTA DE DESTINO == NULL</string>
+    <string name="err_no_files_to_delete">NENHUM ARQUIVO PARA EXCLUIR</string>
+    <string name="err_no_files_to_process">NENHUM ARQUIVO PARA PROCESSAR</string>
+    <string name="err_permissions_denied">PERMISSÕES NEGADAS</string>
+    <string name="err_unimplemented">NÃO IMPLEMENTADO</string>
+    <string name="err_not_connected">NÃO CONECTADO, POR FAVOR CONECTAR-SE PRIMEIRO</string>
+    <string name="err_device_disconnected">DISPOSITIVO DESCONECTADO</string>
+    <string name="err_input_file_format">FORMATO DO ARQUIVO DE ENTRADA ERRADO</string>
+    <string name="err_output_file_format">FORMATO DO ARQUIVO DE SAÍDA ERRADO</string>
+    <string name="err_convert_failed">CONVERSÃO FALHOU</string>
+    <string name="err_cannot_play_this_file">NÃO É POSÍVEL REPRODUZIR ESTE ARQUIVO</string>
+    <string name="err_mic_open_failed">FALHA AO ABRIR O MICROFONE</string>
+    <string name="err_no_write_access_to_folder">NÃO HÁ ACESSO DE ESCRITA NA PASTA</string>
+    <string name="err_syntax_error">ERRO DE SINTAXE</string>
+</resources>

@@ -66,7 +66,6 @@ SOFTWARE.
     <string name="title_search_results">Rezultatele căutării</string>
     <string name="title_file_system_access">Acces sistem fișiere</string>
     <string name="title_all_files_access">Acces la toate fișierele</string>
-
     <string name="title_file_format">Format fișier</string>
     <string name="title_output_file_name">Nume fișier de ieșire</string>
     <string name="title_output_file_format">Format fișier de ieșire</string>
@@ -89,4 +88,5 @@ SOFTWARE.
     <string name="title_disconnected">Deconectat</string>
     <string name="title_sending_file">Se trimite fișierul</string>
     <string name="title_receiving_file">Se recepționează fișierul</string>
+    <string name="title_select_color">Selectează culoare</string>
 </resources>

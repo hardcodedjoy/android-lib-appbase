@@ -275,6 +275,10 @@ abstract public class PopupColorPicker extends Popup {
                 colorOld);
     }
 
+    public PopupColorPicker(int colorOld) {
+        this(ContentView.getString(R.string.title_select_color), null, colorOld);
+    }
+
     private void refreshSaturationLightnessArea() {
         int w = bmpSaturationLightness.getWidth();
         int h = bmpSaturationLightness.getHeight();

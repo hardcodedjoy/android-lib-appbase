@@ -362,4 +362,37 @@ public class StringUtil {
 		}
 		return null;
 	}
+
+	static public String fillPlaceholderX(String s, String x) {
+		if(s == null) { return null; }
+		if(x == null) { x = ""; }
+		return s.replace("[x]", x);
+	}
+
+	static public String fillPlaceholderXY(String s, String x, String y) {
+		if(s == null) { return null; }
+		if(x == null) { x = ""; }
+		if(y == null) { y = ""; }
+
+		String tempPlaceholderForX = "~!~#~TEMP_PLACEHOLDER_FOR_X~#~!~";
+		return s.replace("[x]", tempPlaceholderForX)
+				.replace("[y]", y)
+				.replace(tempPlaceholderForX, x);
+	}
+
+
+	static public String fillPlaceholderXYZ(String s, String x, String y, String z) {
+		if(s == null) { return null; }
+		if(x == null) { x = ""; }
+		if(y == null) { y = ""; }
+		if(z == null) { z = ""; }
+
+		String tempPlaceholderForX = "~!~#~TEMP_PLACEHOLDER_FOR_X~#~!~";
+		String tempPlaceholderForY = "~!~#~TEMP_PLACEHOLDER_FOR_Y~#~!~";
+		return s.replace("[x]", tempPlaceholderForX)
+				.replace("[y]", tempPlaceholderForY)
+				.replace("[z]", z)
+				.replace(tempPlaceholderForX, x)
+				.replace(tempPlaceholderForY, y);
+	}
 }

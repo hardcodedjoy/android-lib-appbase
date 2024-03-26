@@ -30,6 +30,7 @@ SOFTWARE.
     <string name="no_network_please_enable">Pas de réseau.\nVeuillez activer le Wi-Fi, les données mobiles ou le hotspot.</string>
     <string name="conversion_stopped">Conversion arrêtée.</string>
     <string name="conversion_done">Conversion terminée.</string>
+    <string name="export_complete">Exportation terminée.</string>
     <string name="available_only_in_full_version">Ceci est disponible uniquement dans [x] (version complète).</string>
     <string name="expecting_x_near_y">S\'attendre à [x] près de [y].</string>
 </resources>

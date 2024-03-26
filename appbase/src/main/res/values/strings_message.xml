@@ -30,6 +30,7 @@ SOFTWARE.
     <string name="no_network_please_enable">No network. Please enable Wi-Fi, Mobile Data or Hotspot.</string>
     <string name="conversion_stopped">Conversion stopped.</string>
     <string name="conversion_done">Conversion done.</string>
+    <string name="export_complete">Export complete.</string>
     <string name="available_only_in_full_version">This is available only in [x] (full version).</string>
     <string name="expecting_x_near_y">Expecting [x] near [y].</string>
 </resources>

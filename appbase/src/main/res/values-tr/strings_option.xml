@@ -40,6 +40,8 @@ SOFTWARE.
     <string name="option_extract_here">burada çıkart</string>
     <string name="option_compress">sıkıştır</string>
     <string name="option_delete">sil</string>
+    <string name="option_delete_button">düğmeyi sil</string>
+    <string name="option_delete_all">tümünü sil</string>
     <string name="option_delete_row">satırı sil</string>
     <string name="option_delete_column">sütunu sil</string>
     <string name="option_delete_line">çizgiyi sil</string>

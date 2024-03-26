@@ -1,0 +1,36 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="access_forbidden">Acesso proibido.</string>
+    <string name="are_you_sure">Tem certeza?</string>
+    <string name="this_cannot_be_undone">Isso não pode ser desfeito.</string>
+    <string name="no_network_please_enable">Sem rede. Por favor, ative o Wi-Fi, dados móveis ou Hotspot.</string>
+    <string name="conversion_stopped">Conversão interrompida.</string>
+    <string name="conversion_done">Conversão concluída.</string>
+    <string name="export_complete">Exportação completa.</string>
+    <string name="available_only_in_full_version">Disponível apenas em [x] (versão completa).</string>
+    <string name="expecting_x_near_y">Esperando [x] perto de [y].</string>
+</resources>

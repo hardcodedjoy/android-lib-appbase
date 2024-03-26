@@ -40,6 +40,8 @@ SOFTWARE.
     <string name="option_extract_here">розпакувати тут</string>
     <string name="option_compress">стиснути</string>
     <string name="option_delete">видалити</string>
+    <string name="option_delete_button">видалити кнопку</string>
+    <string name="option_delete_all">видалити всє</string>
     <string name="option_delete_row">видалити рядок</string>
     <string name="option_delete_column">видалити колонку</string>
     <string name="option_delete_line">видалити лінію</string>

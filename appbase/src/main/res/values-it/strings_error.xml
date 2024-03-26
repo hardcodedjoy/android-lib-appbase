@@ -1,0 +1,61 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="err_out_of_memory">MEMORIA ESATTAMENTE</string>
+    <string name="err_disk_full">DISCO PIENO</string>
+    <string name="err_cannot_read_input_file">IMPOSSIBILE LEGGERE IL FILE DI INGRESSO</string>
+    <string name="err_cannot_write_output_file">IMPOSSIBILE SCRIVERE IL FILE DI USCITA</string>
+    <string name="err_rename_failed">RINOMINARE FALLITO</string>
+    <string name="err_no_files_to_copy">NESSUN FILE DA COPIARE</string>
+    <string name="err_no_files_to_move">NESSUN FILE DA SPOSTARE</string>
+    <string name="err_file_name_is_null">NOME FILE == NULL</string>
+    <string name="err_already_exists">ESISTE GIÀ</string>
+    <string name="err_could_not_be_deleted_completely">IMPOSSIBILE ELIMINARE COMPLETAMENTE</string>
+    <string name="err_could_not_be_overwritten">IMPOSSIBILE SOVRASCRIVERE</string>
+    <string name="err_file_to_overwrite_is_not_a_folder_nor_file">IL FILE DA SOVRASCRIVERE NON È UNA CARTELLA O UN FILE</string>
+    <string name="err_copy_failed">COPIA FALLITA</string>
+    <string name="err_move_failed">MOVE FALLITO</string>
+    <string name="err_delete_failed">ELIMINAZIONE FALLITA</string>
+    <string name="err_file_create_failed">CREAZIONE FILE FALLITA</string>
+    <string name="err_folder_create_failed">CREAZIONE CARTELLA FALLITA</string>
+    <string name="err_unimplemented_for_multiple_files">NON IMPLEMENTATO PER MULTIPLI FILE</string>
+    <string name="err_no_files_to_compress">NESSUN FILE DA COMPRIME</string>
+    <string name="err_no_files_to_extract">NESSUN FILE DA ESTRARRE</string>
+    <string name="err_dest_dir_is_null">DIR DI DESTINAZIONE == NULL</string>
+    <string name="err_no_files_to_delete">NESSUN FILE DA ELIMINARE</string>
+    <string name="err_no_files_to_process">NESSUN FILE DA PROCESSARE</string>
+    <string name="err_permissions_denied">PERMESSI NEGATI</string>
+    <string name="err_unimplemented">NON IMPLEMENTATO</string>
+    <string name="err_not_connected">NON CONNESSO, CONNETTERSI PRIMA</string>
+    <string name="err_device_disconnected">DISPOSITIVO DISCONNESSO</string>
+    <string name="err_input_file_format">FORMATO FILE DI INGRESSO ERRATO</string>
+    <string name="err_output_file_format">FORMATO FILE DI USCITA ERRATO</string>
+    <string name="err_convert_failed">CONVERSIONE FALLITA</string>
+    <string name="err_cannot_play_this_file">IMPOSSIBILE RIPRODURRE QUESTO FILE</string>
+    <string name="err_mic_open_failed">APERTURA MICROFONO FALLITA</string>
+    <string name="err_no_write_access_to_folder">NON CI SONO AUTORIZZAZIONI DI SCRITTURA PER LA CARTELLA</string>
+    <string name="err_syntax_error">ERRORE DI SINTAXI</string>
+</resources>

@@ -40,6 +40,8 @@ SOFTWARE.
     <string name="option_extract_here">extract here</string>
     <string name="option_compress">compress</string>
     <string name="option_delete">delete</string>
+    <string name="option_delete_button">delete button</string>
+    <string name="option_delete_all">delete all</string>
     <string name="option_delete_row">delete row</string>
     <string name="option_delete_column">delete column</string>
     <string name="option_delete_line">delete line</string>

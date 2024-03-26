@@ -1,0 +1,92 @@
+<!--
+MIT License
+
+Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+    <string name="title_help">Pomoc</string>
+    <string name="title_about">O aplikacji</string>
+    <string name="title_mit_license">Licencja MIT</string>
+    <string name="title_settings">Ustawienia</string>
+    <string name="title_options">Opcje</string>
+    <string name="title_system">System</string>
+    <string name="title_error">Błąd</string>
+    <string name="title_info">Informacje</string>
+    <string name="title_loading">Ładowanie</string>
+    <string name="title_opening">Otwieranie</string>
+    <string name="title_please_wait">Proszę czekać</string>
+    <string name="title_processing">Przetwarzanie</string>
+    <string name="title_rename">Zmień nazwę</string>
+    <string name="title_copy">Kopiuj</string>
+    <string name="title_copying">Kopiowanie</string>
+    <string name="title_move">Przenieś</string>
+    <string name="title_moving">Przenoszenie</string>
+    <string name="title_delete">Usuń</string>
+    <string name="title_deleting">Usuwanie</string>
+    <string name="title_share">Udostępnij</string>
+    <string name="title_sharing">Udostępnianie</string>
+    <string name="title_download">Pobierz</string>
+    <string name="title_downloading">Pobieranie</string>
+    <string name="title_upload">Wyślij</string>
+    <string name="title_uploading">Wysyłanie</string>
+    <string name="title_compress">Skompresuj</string>
+    <string name="title_compressing">Kompresowanie</string>
+    <string name="title_extract">Wyodrębnij</string>
+    <string name="title_extracting">Wyodrębnianie</string>
+    <string name="title_convert">Konwertuj</string>
+    <string name="title_converting">Konwertowanie</string>
+    <string name="title_import">Importuj</string>
+    <string name="title_importing">Importowanie</string>
+    <string name="title_export">Eksportuj</string>
+    <string name="title_exporting">Eksportowanie</string>
+    <string name="title_access">Dostęp</string>
+    <string name="title_select">Wybierz</string>
+    <string name="title_content">Zawartość</string>
+    <string name="title_size">Rozmiar</string>
+    <string name="title_search_results">Wyniki wyszukiwania</string>
+    <string name="title_file_system_access">Dostęp do systemu plików</string>
+    <string name="title_all_files_access">Dostęp do wszystkich plików</string>
+    <string name="title_file_format">Format pliku</string>
+    <string name="title_output_file_name">Nazwa pliku wyjściowego</string>
+    <string name="title_output_file_format">Format pliku wyjściowego</string>
+    <string name="title_bits_per_sample">Bity na próbkę</string>
+    <string name="title_file_name">Nazwa pliku</string>
+    <string name="title_status">Status</string>
+    <string name="title_example">Przykład</string>
+    <string name="title_send">Wyślij</string>
+    <string name="title_sending">Wysyłanie</string>
+    <string name="title_byte_delay">Opóźnienie bajtu</string>
+    <string name="title_buffer_size">Bufor</string>
+    <string name="title_command">Polecenie</string>
+    <string name="title_commands">Polecenia</string>
+    <string name="title_button_text">Tekst przycisku</string>
+    <string name="title_connect">Łącz</string>
+    <string name="title_connecting">Łączenie</string>
+    <string name="title_connected">Połączony</string>
+    <string name="title_disconnect">Rozłącz</string>
+    <string name="title_disconnecting">Rozłączanie</string>
+    <string name="title_disconnected">Rozłączony</string>
+    <string name="title_sending_file">Wysyłanie pliku</string>
+    <string name="title_receiving_file">Odbieranie pliku</string>
+    <string name="title_select_color">Wybierz kolor</string>
+</resources>

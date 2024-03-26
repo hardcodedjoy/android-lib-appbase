@@ -122,7 +122,7 @@ public class CvPopups extends ContentView {
     }
 
     private void showPopupColorPicker() {
-        new PopupColorPicker("Select color", null, colorPickerColor) {
+        new PopupColorPicker(colorPickerColor) {
             @Override
             public void onOK(int colorNew) { colorPickerColor = colorNew; }
         }.show();
