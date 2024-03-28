@@ -89,4 +89,10 @@ SOFTWARE.
     <string name="title_sending_file">Надсилання файлу</string>
     <string name="title_receiving_file">Отримання файлу</string>
     <string name="title_select_color">Виберіть колір</string>
+    <string name="title_add_button">Додати кнопку</string>
+    <string name="title_add_table">Додати таблицю</string>
+    <string name="title_add_row">Додати рядок</string>
+    <string name="title_add_column">Додати стовпчик</string>
+    <string name="title_add_line">Додати лінію</string>
+    <string name="title_add_command">Додати команду</string>
 </resources>

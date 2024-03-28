@@ -89,4 +89,10 @@ SOFTWARE.
     <string name="title_sending_file">Изпращане на файл</string>
     <string name="title_receiving_file">Получаване на файл</string>
     <string name="title_select_color">Избор на цвят</string>
+    <string name="title_add_button">Добави бутон</string>
+    <string name="title_add_table">Добави таблица</string>
+    <string name="title_add_row">Добави ред</string>
+    <string name="title_add_column">Добави колона</string>
+    <string name="title_add_line">Добави линия</string>
+    <string name="title_add_command">Добави команда</string>
 </resources>

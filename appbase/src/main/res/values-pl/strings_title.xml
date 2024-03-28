@@ -89,4 +89,10 @@ SOFTWARE.
     <string name="title_sending_file">Wysyłanie pliku</string>
     <string name="title_receiving_file">Odbieranie pliku</string>
     <string name="title_select_color">Wybierz kolor</string>
+    <string name="title_add_button">Dodaj przycisk</string>
+    <string name="title_add_table">Dodaj tabelę</string>
+    <string name="title_add_row">Dodaj wiersz</string>
+    <string name="title_add_column">Dodaj kolumnę</string>
+    <string name="title_add_line">Dodaj linie</string>
+    <string name="title_add_command">Dodaj polecenie</string>
 </resources>

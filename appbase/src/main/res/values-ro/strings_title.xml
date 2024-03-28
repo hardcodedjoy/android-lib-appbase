@@ -89,4 +89,10 @@ SOFTWARE.
     <string name="title_sending_file">Se trimite fișierul</string>
     <string name="title_receiving_file">Se recepționează fișierul</string>
     <string name="title_select_color">Selectează culoare</string>
+    <string name="title_add_button">Adaugă buton</string>
+    <string name="title_add_table">Adaugă tabel</string>
+    <string name="title_add_row">Adaugă rând</string>
+    <string name="title_add_column">Adaugă coloană</string>
+    <string name="title_add_line">Adaugă linie</string>
+    <string name="title_add_command">Adaugă comandă</string>
 </resources>
