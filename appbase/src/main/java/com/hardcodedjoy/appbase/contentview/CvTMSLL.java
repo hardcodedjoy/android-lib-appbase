@@ -41,8 +41,7 @@ public class CvTMSLL extends CvTM { // Title / Menu / ScrollView / LinearLayout
     @SuppressLint({"ClickableViewAccessibility", "RtlHardcoded"})
     public CvTMSLL() {
         inflate(R.layout.appbase_cv_tmsll);
-
-        findViewById(R.id.appbase_iv_title_icon).setVisibility(GONE);
+        setTitleIcon(-1);
         TextView tvTitle = findViewById(R.id.appbase_tv_title);
         titleTextSizeDefault = DisplayUnit.pxToSp((int)tvTitle.getTextSize());
 

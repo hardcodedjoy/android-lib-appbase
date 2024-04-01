@@ -95,4 +95,9 @@ SOFTWARE.
     <string name="title_add_column">Добави колона</string>
     <string name="title_add_line">Добави линия</string>
     <string name="title_add_command">Добави команда</string>
+    <string name="title_font_size">Размер на шрифта</string>
+    <string name="title_serial_port">Сериен порт</string>
+    <string name="title_data_mode">Режим на данните</string>
+    <string name="title_mode_text">Текст</string>
+    <string name="title_mode_hex">Шестнадесетичен</string>
 </resources>

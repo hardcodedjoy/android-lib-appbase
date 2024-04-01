@@ -95,4 +95,9 @@ SOFTWARE.
     <string name="title_add_column">Adaugă coloană</string>
     <string name="title_add_line">Adaugă linie</string>
     <string name="title_add_command">Adaugă comandă</string>
+    <string name="title_font_size">Dimensiune font</string>
+    <string name="title_serial_port">Port serial</string>
+    <string name="title_data_mode">Mod date</string>
+    <string name="title_mode_text">Text</string>
+    <string name="title_mode_hex">Hexazecimal</string>
 </resources>

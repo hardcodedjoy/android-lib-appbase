@@ -36,11 +36,11 @@ import com.hardcodedjoy.appbase.gui.DisplayUnit;
 @SuppressLint("ViewConstructor")
 public class CvTSLL extends ContentView { // Content View with Title and LL in SV
 
-    private float titleTextSizeDefault;
+    private final float titleTextSizeDefault;
 
     public CvTSLL() {
         inflate(R.layout.appbase_cv_tsll);
-        findViewById(R.id.appbase_iv_title_icon).setVisibility(GONE);
+        setTitleIcon(-1);
         TextView tvTitle = findViewById(R.id.appbase_tv_title);
         titleTextSizeDefault = DisplayUnit.pxToSp((int)tvTitle.getTextSize());
     }

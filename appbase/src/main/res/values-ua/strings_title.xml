@@ -95,4 +95,9 @@ SOFTWARE.
     <string name="title_add_column">Додати стовпчик</string>
     <string name="title_add_line">Додати лінію</string>
     <string name="title_add_command">Додати команду</string>
+    <string name="title_font_size">Розмір шрифту</string>
+    <string name="title_serial_port">Серійний порт</string>
+    <string name="title_data_mode">Режим даних</string>
+    <string name="title_mode_text">Текст</string>
+    <string name="title_mode_hex">Шестнадцятирічний</string>
 </resources>

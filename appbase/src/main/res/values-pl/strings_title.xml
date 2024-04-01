@@ -95,4 +95,9 @@ SOFTWARE.
     <string name="title_add_column">Dodaj kolumnę</string>
     <string name="title_add_line">Dodaj linie</string>
     <string name="title_add_command">Dodaj polecenie</string>
+    <string name="title_font_size">Rozmiar czcionki</string>
+    <string name="title_serial_port">Port szeregowy</string>
+    <string name="title_data_mode">Tryb danych</string>
+    <string name="title_mode_text">Tekst</string>
+    <string name="title_mode_hex">Szesnastkowy</string>
 </resources>

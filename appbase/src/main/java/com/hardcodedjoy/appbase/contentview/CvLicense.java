@@ -42,10 +42,11 @@ import com.hardcodedjoy.appbase.gui.DisplayUnit;
 public class CvLicense extends CvTSLL {
 
     public CvLicense() {
-        TextView tv = findViewById(R.id.appbase_tv_title);
-        tv.setText(R.string.title_mit_license);
 
-        tv = new TextView(getActivity());
+        setTitleIcon(R.drawable.ic_file_type_text_1);
+        setTitle(R.string.title_mit_license);
+
+        TextView tv = new TextView(getActivity());
         tv.setTextSize(18);
         setAsHTML(tv, HardcodedJoyConstants.mitLicenseTextHTML());
 

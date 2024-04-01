@@ -95,4 +95,9 @@ SOFTWARE.
     <string name="title_add_column">Добавить столбец</string>
     <string name="title_add_line">Добавить линию</string>
     <string name="title_add_command">Добавить команду</string>
+    <string name="title_font_size">Размер шрифта</string>
+    <string name="title_serial_port">Серийный порт</string>
+    <string name="title_data_mode">Режим данных</string>
+    <string name="title_mode_text">Текст</string>
+    <string name="title_mode_hex">Шестнадцатиричный</string>
 </resources>
