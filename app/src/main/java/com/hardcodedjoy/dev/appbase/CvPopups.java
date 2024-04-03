@@ -117,6 +117,13 @@ public class CvPopups extends ContentView {
     private void showPopupChoose() {
         Vector<Option> op = new Vector<>();
 
+        op.add(new Option(R.drawable.ic_settings_1, "option A", () -> {}));
+        op.add(new Option(R.drawable.ic_info_1, "option B", () -> {}));
+
+        Option optionDisabled = new Option(R.drawable.ic_clear_1, "disabled option", () -> {});
+        optionDisabled.setDrawAsDisabled(true);
+        op.add(optionDisabled);
+
         for(int i=0; i<10; i++) {
             op.add(new Option(R.drawable.ic_settings_1, "option " + (i*2 + 1), () -> {}));
             op.add(new Option(R.drawable.ic_info_1, "option " + (i*2 + 2), () -> {}));

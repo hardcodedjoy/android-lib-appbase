@@ -39,6 +39,7 @@ import com.hardcodedjoy.appbase.SettingsKeys;
 import com.hardcodedjoy.appbase.gui.GuiLinker;
 import com.hardcodedjoy.appbase.gui.SetGetter;
 import com.hardcodedjoy.appbase.gui.ThemeUtil;
+import com.hardcodedjoy.appbase.popup.PopupInfo;
 
 @SuppressLint("ViewConstructor")
 public class CvSettingsBase extends ContentView {
@@ -200,13 +201,17 @@ public class CvSettingsBase extends ContentView {
     private void showInfoAppRestartRequiredForTheme() {
         String s = getString(R.string.theme_changed) + " "
                 + getString(R.string.please_restart_to_take_effect);
-        showInfo(s);
+        PopupInfo info = new PopupInfo(s) { @Override public void onCancel() {} };
+        info.enableDismissByOutsideClick();
+        info.show();
     }
 
     private void showInfoAppRestartRequiredForLang() {
         String s = getString(R.string.language_changed) + " "
                 + getString(R.string.please_restart_to_take_effect);
-        showInfo(s);
+        PopupInfo info = new PopupInfo(s) { @Override public void onCancel() {} };
+        info.enableDismissByOutsideClick();
+        info.show();
     }
 
     @Override

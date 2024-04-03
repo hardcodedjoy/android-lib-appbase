@@ -115,6 +115,12 @@ public class CvTM extends ContentView { // Content View with Title and Menu
                 tvOptionText.setPadding(paddingRight, paddingTop, paddingRight, paddingBottom);
             }
 
+            if(option.isDrawAsDisabled()) {
+                ImageView ivDisabledOverlay = new ImageView(getActivity());
+                ivDisabledOverlay.setImageResource(R.drawable.menu_op_disabled_overlay);
+                flMenuOptionWithIcon.addView(ivDisabledOverlay);
+            }
+
             params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
             llMenuOptions.addView(flMenuOptionWithIcon, params);
         }

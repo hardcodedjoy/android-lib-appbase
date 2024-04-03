@@ -31,6 +31,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -107,15 +108,6 @@ public class PopupChoose extends Popup {
                 rg.addView(rb);
                 if(option.isSelected()) { rb.setChecked(true); }
 
-                /* rb.setOnCheckedChangeListener((buttonView, isChecked) -> {
-                    if(!isChecked) { return; }
-                    rb.postDelayed(() -> {
-                        ContentView.removePopUp(PopupChoose.this); // dismiss
-                        option.run();
-                        onAfterOptionExecuted();
-                    }, 250);
-                }); */
-
                 rb.setOnClickListener(view -> {
                     if(!rb.isChecked()) { return; }
                     rb.postDelayed(() -> {
@@ -155,6 +147,12 @@ public class PopupChoose extends Popup {
             option.setIconTintColor(tvText.getTextColors().getDefaultColor());
             option.applyIconTo(ivIcon);
             button.setOnClickListener(ocl);
+
+            if(option.isDrawAsDisabled()) {
+                ImageView ivDisabledOverlay = new ImageView(vOption.getContext());
+                ivDisabledOverlay.setImageResource(R.drawable.chooser_op_disabled_overlay);
+                ((FrameLayout)vOption).addView(ivDisabledOverlay);
+            }
         }
     }
 

@@ -38,7 +38,6 @@ public class Option {
     private int iconId;
     private Bitmap iconBitmap;
     private Drawable iconDrawable;
-    private int backgroundColor;
     private int iconSize;
     private int iconTintColor;
 
@@ -46,6 +45,8 @@ public class Option {
     private String name;
     private final Runnable executor;
     private boolean selected;
+
+    private boolean drawAsDisabled;
 
     public Option(String name, Runnable executor) {
         this.name = name;
@@ -58,6 +59,7 @@ public class Option {
         this.executor = executor;
     }
 
+    @SuppressWarnings("unused")
     public Option(Bitmap iconBitmap, String name, Runnable executor) {
         this.iconBitmap = iconBitmap;
         this.name = name;
@@ -70,6 +72,7 @@ public class Option {
         this.executor = executor;
     }
 
+    @SuppressWarnings("unused")
     public Option(Drawable iconDrawable, String name, Runnable executor) {
         this.iconDrawable = iconDrawable;
         this.name = name;
@@ -85,7 +88,10 @@ public class Option {
     public Runnable getExecutor() { return executor; }
     public void run() { executor.run(); }
 
+    @SuppressWarnings("unused")
     public void setIconSize(int px) { this.iconSize = px; }
+
+    @SuppressWarnings("unused")
     public int getIconSize() { return iconSize; }
 
     public void setIconTintColor(int color) { this.iconTintColor = color; }
@@ -117,4 +123,7 @@ public class Option {
             ivIcon.setImageTintMode(PorterDuff.Mode.SRC_ATOP);
         }
     }
+
+    public void setDrawAsDisabled(boolean b) { this.drawAsDisabled = b; }
+    public boolean isDrawAsDisabled() { return drawAsDisabled; }
 }
