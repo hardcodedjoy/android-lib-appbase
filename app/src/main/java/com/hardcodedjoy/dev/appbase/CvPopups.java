@@ -32,6 +32,7 @@ import com.hardcodedjoy.appbase.contentview.ContentView;
 import com.hardcodedjoy.appbase.gui.GuiLinker;
 import com.hardcodedjoy.appbase.popup.Option;
 import com.hardcodedjoy.appbase.popup.PopupAsk;
+import com.hardcodedjoy.appbase.popup.PopupAvailableOnlyInFullVersion;
 import com.hardcodedjoy.appbase.popup.PopupChoose;
 import com.hardcodedjoy.appbase.popup.PopupColorPicker;
 import com.hardcodedjoy.appbase.popup.PopupCustom;
@@ -76,6 +77,9 @@ public class CvPopups extends ContentView {
             if(id == R.id.btn_popup_enter_password) { showPopupEnterPassword(); }
             if(id == R.id.btn_popup_register) { showPopupRegister(); }
             if(id == R.id.btn_popup_login) { showPopupLogin(); }
+            if(id == R.id.btn_popup_available_only_in_full_version) {
+                showPopupAvailableOnlyInFullVersion();
+            }
         });
 
         colorPickerColor = 0xFF008000;
@@ -202,5 +206,13 @@ public class CvPopups extends ContentView {
 
             }
         }.show();
+    }
+
+    private void showPopupAvailableOnlyInFullVersion() {
+        new PopupAvailableOnlyInFullVersion(
+                "Some premium option",
+                "Super App Pro",
+                "com.hardcodedjoy.superapppro",
+                "appbase_demo").show();
     }
 }

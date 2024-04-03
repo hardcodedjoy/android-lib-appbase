@@ -33,7 +33,7 @@ SOFTWARE.
     <string name="dark_theme">Темна тема</string>
     <string name="theme_changed">Тема змінена.</string>
 
-    <string name="app_language">Мова програми</string>
+    <string name="app_language">Мова додатку</string>
     <string name="lang_default">за замовчуванням</string>
     <string name="language_changed">Мова змінена.</string>
     <string name="please_restart_to_take_effect">Будь ласка, перезапустіть додаток, щоб усі зміни вступили в силу.</string>
