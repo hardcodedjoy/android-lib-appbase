@@ -102,10 +102,15 @@ SOFTWARE.
     <string name="title_mode_hex">Onaltılık</string>
     <string name="title_tcp_settings">TCP Ayarları</string>
     <string name="title_udp_settings">UDP Ayarları</string>
-    <string name="title_mode_client">İstemci</string>
-    <string name="title_mode_server">Sunucu</string>
+    <string name="title_this_device_role">Bu cihazın rolü</string>
+    <string name="title_tcp_client">TCP İstemcisi</string>
+    <string name="title_tcp_server">TCP Sunucusu</string>
+    <string name="title_role_client">İstemci</string>
+    <string name="title_role_server">Sunucu</string>
     <string name="title_ip_address">IP Adresi</string>
     <string name="title_remote_ip_address">Uzak IP Adresi</string>
-    <string name="title_local_ip_address">Yerel IP Adresi</string>
+    <string name="title_local_ip_address">Lokal IP Adresi</string>
     <string name="title_port">Port</string>
+    <string name="title_remote_port">Uzak Port</string>
+    <string name="title_local_port">Lokal Port</string>
 </resources>

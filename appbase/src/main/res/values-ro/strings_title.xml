@@ -102,10 +102,15 @@ SOFTWARE.
     <string name="title_mode_hex">Hexazecimal</string>
     <string name="title_tcp_settings">Setări TCP</string>
     <string name="title_udp_settings">Setări UDP</string>
-    <string name="title_mode_client">Client</string>
-    <string name="title_mode_server">Server</string>
+    <string name="title_this_device_role">Rolul acestui dispozitiv</string>
+    <string name="title_tcp_client">Client TCP</string>
+    <string name="title_tcp_server">Server TCP</string>
+    <string name="title_role_client">Client</string>
+    <string name="title_role_server">Server</string>
     <string name="title_ip_address">Adresă IP</string>
     <string name="title_remote_ip_address">Adresă IP din depărtare</string>
     <string name="title_local_ip_address">Adresă IP locală</string>
     <string name="title_port">Port</string>
+    <string name="title_remote_port">Port la distanță</string>
+    <string name="title_local_port">Port local</string>
 </resources>

@@ -102,10 +102,15 @@ SOFTWARE.
     <string name="title_mode_hex">Шестнадесетичен</string>
     <string name="title_tcp_settings">TCP настройки</string>
     <string name="title_udp_settings">UDP настройки</string>
-    <string name="title_mode_client">Клиент</string>
-    <string name="title_mode_server">Сървър</string>
+    <string name="title_this_device_role">Ролята на това устройство</string>
+    <string name="title_tcp_client">TCP клиент</string>
+    <string name="title_tcp_server">TCP сървър</string>
+    <string name="title_role_client">Клиент</string>
+    <string name="title_role_server">Сървър</string>
     <string name="title_ip_address">IP адрес</string>
     <string name="title_remote_ip_address">Отдалечен IP адрес</string>
     <string name="title_local_ip_address">Локален IP адрес</string>
     <string name="title_port">Порт</string>
+    <string name="title_remote_port">Отдалечен порт</string>
+    <string name="title_local_port">Локален порт</string>
 </resources>

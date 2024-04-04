@@ -102,10 +102,15 @@ SOFTWARE.
     <string name="title_mode_hex">Esadecimale</string>
     <string name="title_tcp_settings">Impostazioni TCP</string>
     <string name="title_udp_settings">Impostazioni UDP</string>
-    <string name="title_mode_client">Client</string>
-    <string name="title_mode_server">Server</string>
+    <string name="title_this_device_role">Ruolo di questo dispositivo</string>
+    <string name="title_tcp_client">Client TCP</string>
+    <string name="title_tcp_server">Server TCP</string>
+    <string name="title_role_client">Client</string>
+    <string name="title_role_server">Server</string>
     <string name="title_ip_address">Indirizzo IP</string>
     <string name="title_remote_ip_address">Indirizzo IP remoto</string>
     <string name="title_local_ip_address">Indirizzo IP locale</string>
     <string name="title_port">Porta</string>
+    <string name="title_remote_port">Porta remota</string>
+    <string name="title_local_port">Porta locale</string>
 </resources>
