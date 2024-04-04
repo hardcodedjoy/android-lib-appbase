@@ -100,4 +100,12 @@ SOFTWARE.
     <string name="title_data_mode">Tryb danych</string>
     <string name="title_mode_text">Tekst</string>
     <string name="title_mode_hex">Szesnastkowy</string>
+    <string name="title_tcp_settings">Ustawienia TCP</string>
+    <string name="title_udp_settings">Ustawienia UDP</string>
+    <string name="title_mode_client">Klient</string>
+    <string name="title_mode_server">Serwer</string>
+    <string name="title_ip_address">Adres IP</string>
+    <string name="title_remote_ip_address">Zdalny adres IP</string>
+    <string name="title_local_ip_address">Lokalny adres IP</string>
+    <string name="title_port">Port</string>
 </resources>

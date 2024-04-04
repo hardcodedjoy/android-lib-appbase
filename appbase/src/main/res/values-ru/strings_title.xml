@@ -100,4 +100,12 @@ SOFTWARE.
     <string name="title_data_mode">Режим данных</string>
     <string name="title_mode_text">Текст</string>
     <string name="title_mode_hex">Шестнадцатиричный</string>
+    <string name="title_tcp_settings">Настройки TCP</string>
+    <string name="title_udp_settings">Настройки UDP</string>
+    <string name="title_mode_client">Клиент</string>
+    <string name="title_mode_server">Сервер</string>
+    <string name="title_ip_address">IP-адрес</string>
+    <string name="title_remote_ip_address">Удаленный IP-адрес</string>
+    <string name="title_local_ip_address">Локальный IP-адрес</string>
+    <string name="title_port">Порт</string>
 </resources>

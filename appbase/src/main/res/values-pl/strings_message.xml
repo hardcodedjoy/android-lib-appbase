@@ -33,4 +33,7 @@ SOFTWARE.
     <string name="export_complete">Eksport zakończony.</string>
     <string name="available_only_in_full_version">To jest dostępne tylko w [x] (pełna wersja).</string>
     <string name="expecting_x_near_y">Oczekiwano [x] blisko [y].</string>
+    <string name="status_waiting_for_client_on_port_x">Oczekiwanie na klienta na porcie [x] …</string>
+    <string name="status_connected_to_x">Połączony z [x]</string>
+    <string name="status_client_x_on_port_y">Klient ([x]) na porcie [y]</string>
 </resources>

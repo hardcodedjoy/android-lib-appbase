@@ -33,4 +33,7 @@ SOFTWARE.
     <string name="export_complete">Dışa aktarma tamamlandı.</string>
     <string name="available_only_in_full_version">Bu, sadece [x] (tam sürümde) mevcuttur.</string>
     <string name="expecting_x_near_y">[x] yakınında [y] bekleniyor.</string>
+    <string name="status_waiting_for_client_on_port_x">[x] numaralı portta bir istemci bekleniyor …</string>
+    <string name="status_connected_to_x">[x] ile bağlantı kuruldu</string>
+    <string name="status_client_x_on_port_y">[y] numaralı portta [x] istemcisi</string>
 </resources>

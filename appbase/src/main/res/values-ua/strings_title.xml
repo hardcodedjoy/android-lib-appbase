@@ -100,4 +100,12 @@ SOFTWARE.
     <string name="title_data_mode">Режим даних</string>
     <string name="title_mode_text">Текст</string>
     <string name="title_mode_hex">Шестнадцятирічний</string>
+    <string name="title_tcp_settings">Налаштування TCP</string>
+    <string name="title_udp_settings">Налаштування UDP</string>
+    <string name="title_mode_client">Клієнт</string>
+    <string name="title_mode_server">Сервер</string>
+    <string name="title_ip_address">IP-адреса</string>
+    <string name="title_remote_ip_address">Віддалена IP-адреса</string>
+    <string name="title_local_ip_address">Локальна IP-адреса</string>
+    <string name="title_port">Порт</string>
 </resources>
