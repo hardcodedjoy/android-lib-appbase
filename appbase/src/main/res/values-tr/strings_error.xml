@@ -49,7 +49,7 @@ SOFTWARE.
     <string name="err_no_files_to_process">İŞLENECEK DOSYA YOK</string>
     <string name="err_permissions_denied">İZİNLER REDDEDİLDİ</string>
     <string name="err_unimplemented">UYGULANMADI</string>
-    <string name="err_not_connected">BAĞLANTI YOK, ÖNCE BAĞLANIN</string>
+    <string name="err_not_connected_please_connect_first">BAĞLANTI YOK, ÖNCE BAĞLANIN</string>
     <string name="err_device_disconnected">AYGIT BAĞLANTISI KESİLDİ</string>
     <string name="err_input_file_format">GİRİŞ DOSYASI BİÇİM HATASI</string>
     <string name="err_output_file_format">ÇIKIŞ DOSYASI BİÇİM HATASI</string>

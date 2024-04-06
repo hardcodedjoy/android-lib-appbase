@@ -79,4 +79,11 @@ SOFTWARE.
     <string name="option_configure">skonfiguruj</string>
     <string name="option_send_file">wyślij plik</string>
     <string name="option_receive_file">otrzymaj plik</string>
+    <string name="option_crop">przytnij</string>
+    <string name="option_rotate">obróć</string>
+    <string name="option_edit_selected">edytuj wybrane</string>
+    <string name="option_export_selected">eksportuj wybrane</string>
+    <string name="option_export_image">eksportuj obraz</string>
+    <string name="option_export_audio">eksportuj audio</string>
+    <string name="option_export_video">eksportuj wideo</string>
 </resources>

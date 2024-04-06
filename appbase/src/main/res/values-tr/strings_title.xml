@@ -113,4 +113,20 @@ SOFTWARE.
     <string name="title_port">Port</string>
     <string name="title_remote_port">Uzak Port</string>
     <string name="title_local_port">Lokal Port</string>
+    <string name="title_reading">Okuma</string>
+    <string name="title_writing">Yazma</string>
+    <string name="title_image">Görüntü</string>
+    <string name="title_output_size">Çıkış Boyutu</string>
+    <string name="title_output_width">Çıkış Genişliği</string>
+    <string name="title_output_height">Çıkış Yüksekliği</string>
+    <string name="title_text_color">Yazı Rengi</string>
+    <string name="title_background_color">Arkaplan Rengi</string>
+    <string name="title_shadow_color">Gölge Rengi</string>
+    <string name="title_shadow_size">Gölge Boyutu</string>
+    <string name="title_jpeg_quality">JPEG Kalitesi</string>
+    <string name="title_brightness">Parlaklık</string>
+    <string name="title_contrast">Kontrast</string>
+    <string name="title_buttons_functions">Düğmelerin işlevleri</string>
+    <string name="title_selection_start">Seçim Başlangıç</string>
+    <string name="title_selection_end">Seçim Sonu</string>
 </resources>

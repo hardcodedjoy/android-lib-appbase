@@ -49,7 +49,7 @@ SOFTWARE.
     <string name="err_no_files_to_process">LIPSĂ FIȘIERE DE PROCESAT</string>
     <string name="err_permissions_denied">LIPSĂ PERMISIUNI</string>
     <string name="err_unimplemented">NEIMPLEMENTAT</string>
-    <string name="err_not_connected">NECONECTAT, CONECTAȚI-VĂ MAI ÎNTÂI</string>
+    <string name="err_not_connected_please_connect_first">NECONECTAT, CONECTAȚI-VĂ MAI ÎNTÂI</string>
     <string name="err_device_disconnected">DISPOZITIV DECONECTAT</string>
     <string name="err_input_file_format">EROARE FORMAT FIȘIER DE INTRARE</string>
     <string name="err_output_file_format">EROARE FORMAT FIȘIER DE IEȘIRE</string>

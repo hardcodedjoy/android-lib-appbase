@@ -49,7 +49,7 @@ SOFTWARE.
     <string name="err_no_files_to_process">AUCUN FICHIER À TRAITER</string>
     <string name="err_permissions_denied">AUTORISATIONS REFUSÉES</string>
     <string name="err_unimplemented">NON IMPLÉMENTÉ</string>
-    <string name="err_not_connected">PAS CONNEXION, VEUILLEZ VOUS CONNECTER D\'ABORD</string>
+    <string name="err_not_connected_please_connect_first">PAS CONNEXION, VEUILLEZ VOUS CONNECTER D\'ABORD</string>
     <string name="err_device_disconnected">PÉRIPHÉRIQUE DÉCONNEXION</string>
     <string name="err_input_file_format">ERREUR DE FORMAT DE FICHIER D\'ENTRÉE</string>
     <string name="err_output_file_format">ERREUR DE FORMAT DE FICHIER DE SORTIE</string>

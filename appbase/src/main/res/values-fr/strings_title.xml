@@ -113,4 +113,20 @@ SOFTWARE.
     <string name="title_port">Port</string>
     <string name="title_remote_port">Port distant</string>
     <string name="title_local_port">Port local</string>
+    <string name="title_reading">Lecture</string>
+    <string name="title_writing">Écriture</string>
+    <string name="title_image">Image</string>
+    <string name="title_output_size">Taille de sortie</string>
+    <string name="title_output_width">Largeur de sortie</string>
+    <string name="title_output_height">Hauteur de sortie</string>
+    <string name="title_text_color">Couleur du texte</string>
+    <string name="title_background_color">Couleur de fond</string>
+    <string name="title_shadow_color">Couleur de l\'ombre</string>
+    <string name="title_shadow_size">Taille de l\'ombre</string>
+    <string name="title_jpeg_quality">Qualité JPEG</string>
+    <string name="title_brightness">Luminosité</string>
+    <string name="title_contrast">Contraste</string>
+    <string name="title_buttons_functions">Fonctions des boutons</string>
+    <string name="title_selection_start">Début de sélection</string>
+    <string name="title_selection_end">Fin de sélection</string>
 </resources>

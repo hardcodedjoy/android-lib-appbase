@@ -38,4 +38,8 @@ SOFTWARE.
     <string name="new_file">Fișier nou</string>
     <string name="file">Fișier</string>
     <string name="folder">Folder</string>
+    <string name="open_image">Deschide imagine</string>
+    <string name="open_audio_file">Deschide fișier audio</string>
+    <string name="open_video_file">Deschide fișier video</string>
+    <string name="open_text_file">Deschide fișier text</string>
 </resources>

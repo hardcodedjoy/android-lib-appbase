@@ -49,7 +49,7 @@ SOFTWARE.
     <string name="err_no_files_to_process">NO FILES TO PROCESS</string>
     <string name="err_permissions_denied">PERMISSIONS DENIED</string>
     <string name="err_unimplemented">UNIMPLEMENTED</string>
-    <string name="err_not_connected">NOT CONNECTED, PLEASE CONNECT FIRST</string>
+    <string name="err_not_connected_please_connect_first">NOT CONNECTED, PLEASE CONNECT FIRST</string>
     <string name="err_device_disconnected">DEVICE DISCONNECTED</string>
     <string name="err_input_file_format">INPUT FILE FORMAT ERROR</string>
     <string name="err_output_file_format">OUTPUT FILE FORMAT ERROR</string>

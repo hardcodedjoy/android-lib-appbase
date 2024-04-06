@@ -79,4 +79,11 @@ SOFTWARE.
     <string name="option_configure">configura</string>
     <string name="option_send_file">invia file</string>
     <string name="option_receive_file">ricevi file</string>
+    <string name="option_crop">riquadra</string>
+    <string name="option_rotate">ruota</string>
+    <string name="option_edit_selected">modifica selezionato</string>
+    <string name="option_export_selected">esporta selezionato</string>
+    <string name="option_export_image">esporta immagine</string>
+    <string name="option_export_audio">esporta audio</string>
+    <string name="option_export_video">esporta video</string>
 </resources>

@@ -27,8 +27,8 @@ SOFTWARE.
     <string name="option_rename">renommer</string>
     <string name="option_open">ouvrir</string>
     <string name="option_open_with">ouvrir avec</string>
-    <string name="option_edit">modifier</string>
-    <string name="option_edit_with">modifier avec</string>
+    <string name="option_edit">éditer</string>
+    <string name="option_edit_with">éditer avec</string>
     <string name="option_copy_to">copier vers</string>
     <string name="option_move_to">déplacer vers</string>
     <string name="option_share">partager</string>
@@ -79,4 +79,11 @@ SOFTWARE.
     <string name="option_configure">configurer</string>
     <string name="option_send_file">envoyer un fichier</string>
     <string name="option_receive_file">recevoir un fichier</string>
+    <string name="option_crop">rogner</string>
+    <string name="option_rotate">pivoter</string>
+    <string name="option_edit_selected">éditer la sélection</string>
+    <string name="option_export_selected">exporter la sélection</string>
+    <string name="option_export_image">exporter l\'image</string>
+    <string name="option_export_audio">exporter l\'audio</string>
+    <string name="option_export_video">exporter la vidéo</string>
 </resources>

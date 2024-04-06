@@ -36,4 +36,5 @@ SOFTWARE.
     <string name="status_waiting_for_client_on_port_x">Ожидание клиента на порту [x] …</string>
     <string name="status_connected_to_x">Подключено к [x]</string>
     <string name="status_client_x_on_port_y">Клиент ([x]) на порту [y]</string>
+    <string name="file_x_not_supported">Файл \"[x]\" не поддерживается.</string>
 </resources>

@@ -38,4 +38,8 @@ SOFTWARE.
     <string name="new_file">Yeni Dosya</string>
     <string name="file">Dosya</string>
     <string name="folder">Klasör</string>
+    <string name="open_image">Aç resim</string>
+    <string name="open_audio_file">Aç ses dosyası</string>
+    <string name="open_video_file">Aç video dosyası</string>
+    <string name="open_text_file">Aç metin dosyası</string>
 </resources>

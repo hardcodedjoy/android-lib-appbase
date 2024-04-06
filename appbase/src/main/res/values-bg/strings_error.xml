@@ -49,7 +49,7 @@ SOFTWARE.
     <string name="err_no_files_to_process">НЯМА ФАЙЛОВЕ ЗА ОБРАБОТКА</string>
     <string name="err_permissions_denied">РАЗРЕШЕНИЯТА СА ОТКАЗАНИ</string>
     <string name="err_unimplemented">НЕ Е ИМПЛЕМЕНТИРАНО</string>
-    <string name="err_not_connected">НЕ СТЕ СВЪРЗАНИ, МОЛЯ СВЪРЖЕТЕ СЕ ПЪРВО</string>
+    <string name="err_not_connected_please_connect_first">НЕ СТЕ СВЪРЗАНИ, МОЛЯ СВЪРЖЕТЕ СЕ ПЪРВО</string>
     <string name="err_device_disconnected">УСТРОЙСТВОТО Е РАЗСВЪРЗАНО</string>
     <string name="err_input_file_format">ГРЕШКА В ФОРМАТА НА ВХОДНИЯ ФАЙЛ</string>
     <string name="err_output_file_format">ГРЕШКА В ФОРМАТА НА ИЗХОДНИЯ ФАЙЛ</string>

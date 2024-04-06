@@ -79,4 +79,11 @@ SOFTWARE.
     <string name="option_configure">конфигурирай</string>
     <string name="option_send_file">изпрати файл</string>
     <string name="option_receive_file">получи файл</string>
+    <string name="option_crop">отрязване</string>
+    <string name="option_rotate">завъртане</string>
+    <string name="option_edit_selected">редактирай на избраното</string>
+    <string name="option_export_selected">експорт на избраното</string>
+    <string name="option_export_image">експорт на изображение</string>
+    <string name="option_export_audio">експорт на аудио</string>
+    <string name="option_export_video">експорт на видео</string>
 </resources>

@@ -79,4 +79,11 @@ SOFTWARE.
     <string name="option_configure">configurare</string>
     <string name="option_send_file">trimite fișier</string>
     <string name="option_receive_file">recepționează fișier</string>
+    <string name="option_crop">decupare</string>
+    <string name="option_rotate">rotire</string>
+    <string name="option_edit_selected">editează selecția</string>
+    <string name="option_export_selected">exportă selecția</string>
+    <string name="option_export_image">exportă imaginea</string>
+    <string name="option_export_audio">exportă audio</string>
+    <string name="option_export_video">exportă video</string>
 </resources>

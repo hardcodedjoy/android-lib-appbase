@@ -49,7 +49,7 @@ SOFTWARE.
     <string name="err_no_files_to_process">BRAK PLIKÓW DO PRZETWARZANIA</string>
     <string name="err_permissions_denied">BRAK UPRAWNIEŃ</string>
     <string name="err_unimplemented">NIEZIMPLEMENTOWANE</string>
-    <string name="err_not_connected">NIE JEST POŁĄCZONY, NALEŻY NACIŚNĄĆ POŁĄCZENIE</string>
+    <string name="err_not_connected_please_connect_first">NIE JEST POŁĄCZONY, NALEŻY NACIŚNĄĆ POŁĄCZENIE</string>
     <string name="err_device_disconnected">URZĄDZENIE ROOZŁĄCZONE</string>
     <string name="err_input_file_format">BŁĘDNY FORMAT PLIKU WEJŚCIOWEGO</string>
     <string name="err_output_file_format">BŁĘDNY FORMAT PLIKU WYJŚCIOWEGO</string>

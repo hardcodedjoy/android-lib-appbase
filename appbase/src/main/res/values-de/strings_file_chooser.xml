@@ -38,4 +38,8 @@ SOFTWARE.
     <string name="new_file">Neue Datei</string>
     <string name="file">Datei</string>
     <string name="folder">Ordner</string>
+    <string name="open_image">Bild öffnen</string>
+    <string name="open_audio_file">Audiodatei öffnen</string>
+    <string name="open_video_file">Video-Datei öffnen</string>
+    <string name="open_text_file">Textdatei öffnen</string>
 </resources>

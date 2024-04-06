@@ -79,4 +79,11 @@ SOFTWARE.
     <string name="option_configure">ayarla</string>
     <string name="option_send_file">dosya gönder</string>
     <string name="option_receive_file">dosya al</string>
+    <string name="option_crop">kes</string>
+    <string name="option_rotate">döndür</string>
+    <string name="option_edit_selected">seçimi düzenle</string>
+    <string name="option_export_selected">seçimi dışarı aktar</string>
+    <string name="option_export_image">görüntüyü dışarı aktar</string>
+    <string name="option_export_audio">sesi dışarı aktar</string>
+    <string name="option_export_video">video dışarı aktar</string>
 </resources>

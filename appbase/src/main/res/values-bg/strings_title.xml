@@ -113,4 +113,20 @@ SOFTWARE.
     <string name="title_port">Порт</string>
     <string name="title_remote_port">Отдалечен порт</string>
     <string name="title_local_port">Локален порт</string>
+    <string name="title_reading">Четене</string>
+    <string name="title_writing">Писане</string>
+    <string name="title_image">Изображение</string>
+    <string name="title_output_size">Размер на изхода</string>
+    <string name="title_output_width">Изходна ширина</string>
+    <string name="title_output_height">Изходна височина</string>
+    <string name="title_text_color">Цвят на текста</string>
+    <string name="title_background_color">Цвят на фона</string>
+    <string name="title_shadow_color">Цвят на сянката</string>
+    <string name="title_shadow_size">Размер на сянката</string>
+    <string name="title_jpeg_quality">JPEG-качество</string>
+    <string name="title_brightness">Яркост</string>
+    <string name="title_contrast">Контраст</string>
+    <string name="title_buttons_functions">Функции на бутоните</string>
+    <string name="title_selection_start">Начало на избора</string>
+    <string name="title_selection_end">Край на избора</string>
 </resources>

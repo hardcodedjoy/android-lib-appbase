@@ -36,4 +36,5 @@ SOFTWARE.
     <string name="status_waiting_for_client_on_port_x">Warten auf Client am Port [x] …</string>
     <string name="status_connected_to_x">Verbunden mit [x]</string>
     <string name="status_client_x_on_port_y">Client ([x]) auf Port [y]</string>
+    <string name="file_x_not_supported">Datei \"[x]\" wird nicht unterstützt.</string>
 </resources>

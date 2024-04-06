@@ -38,4 +38,8 @@ SOFTWARE.
     <string name="new_file">Новый файл</string>
     <string name="file">Файл</string>
     <string name="folder">Папка</string>
+    <string name="open_image">Открыть изображение</string>
+    <string name="open_audio_file">Открыть аудио файл</string>
+    <string name="open_video_file">Открыть видео файл</string>
+    <string name="open_text_file">Открыть текстовый файл</string>
 </resources>
