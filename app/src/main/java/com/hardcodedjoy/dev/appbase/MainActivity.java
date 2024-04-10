@@ -39,7 +39,7 @@ public class MainActivity extends SingleActivity {
         CvTM.setAboutCvClass(CvAboutBase.class);
         CvAboutBase.setAppVersion(BuildConfig.VERSION_NAME, BuildConfig.TIMESTAMP);
         LanguageUtil.setAvailableAppLanguages(new String[] {
-                "bg", "de", "en", "es", "fr", "it", "pl", "pt", "ro", "ru", "tr", "ua"
+                "bg", "de", "en", "es", "fr", "it", "pl", "pt", "ro", "ru", "tr", "uk"
         });
     }
 }

@@ -90,7 +90,7 @@ public class LanguageUtil {
             case "ro": return "Română";
             case "ru": return "Русский";
             case "tr": return "Türkçe";
-            case "ua": return "Українська";
+            case "uk": return "Українська";
         }
         return "";
     }

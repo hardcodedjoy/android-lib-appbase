@@ -30,7 +30,6 @@ import android.annotation.SuppressLint;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.hardcodedjoy.appbase.StringUtil;
 import com.hardcodedjoy.appbase.contentview.CvTMSLL;
 import com.hardcodedjoy.appbase.popup.Option;
 
@@ -53,6 +52,8 @@ public class CvMain extends CvTMSLL {
         ops.add(optionDisabled);
 
         addMenuOptions(ops, 0);
+
+        setTitleIcon(R.drawable.ic_app_1);
     }
 
     @Override
