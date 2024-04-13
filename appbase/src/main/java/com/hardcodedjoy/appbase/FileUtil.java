@@ -146,6 +146,7 @@ public class FileUtil {
 
     static private String getFileNameFromContentURI(Uri uri) {
         if(!uri.getScheme().equals("content")) { return null; }
+
         Cursor cursor = activity.getContentResolver().query(uri,
                 null, null, null, null);
         if(cursor == null) { return null; }
@@ -154,6 +155,21 @@ public class FileUtil {
         if(columnIndex == -1) { cursor.close(); return null; }
         String result = cursor.getString(columnIndex);
         cursor.close();
+
+        String authority = uri.getAuthority();
+        if("com.android.providers.media.documents".equals(authority) ||
+                "media".equals(authority)) {
+            // file managed by the Android MediaStore -> manually add file extension:
+
+            String mimeType = activity.getContentResolver().getType(uri);
+            if(mimeType != null) {
+                String fileExtension = MimeTypeMap.getSingleton()
+                        .getExtensionFromMimeType(mimeType);
+                if(fileExtension != null) {
+                    result += "." + fileExtension;
+                }
+            }
+        }
         return result;
     }
 
