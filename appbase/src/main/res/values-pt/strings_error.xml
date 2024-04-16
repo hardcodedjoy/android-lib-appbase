@@ -50,6 +50,7 @@ SOFTWARE.
     <string name="err_permissions_denied">PERMISSÕES NEGADAS</string>
     <string name="err_unimplemented">NÃO IMPLEMENTADO</string>
     <string name="err_not_connected_please_connect_first">NÃO CONECTADO, POR FAVOR CONECTAR-SE PRIMEIRO</string>
+    <string name="err_comm_not_started_please_start_first">COMUNICAÇÃO NÃO INICIADA, POR FAVOR, INICIE PRIMEIRO</string>
     <string name="err_device_disconnected">DISPOSITIVO DESCONECTADO</string>
     <string name="err_input_file_format">FORMATO DO ARQUIVO DE ENTRADA ERRADO</string>
     <string name="err_output_file_format">FORMATO DO ARQUIVO DE SAÍDA ERRADO</string>

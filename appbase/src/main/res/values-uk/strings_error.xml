@@ -50,6 +50,7 @@ SOFTWARE.
     <string name="err_permissions_denied">ДОЗВОЛИ ВІДМОВЛЕНО</string>
     <string name="err_unimplemented">НЕРЕАЛІЗОВАНО</string>
     <string name="err_not_connected_please_connect_first">НЕМАЄ ЗЄДНАННЯ, СПОЧАТКУ ПІДЄДНАЙТЕСЬ</string>
+    <string name="err_comm_not_started_please_start_first">ЗВЯЗОК НЕ ПОЧАВСЯ, БУДЬ ЛАСКА, СПОЧАТКУ ПОЧНІТЬ ЗВЯЗОК.</string>
     <string name="err_device_disconnected">ПРИСТРОЙ ВІДЄДНАНО</string>
     <string name="err_input_file_format">ПОМИЛКА ФОРМАТУ ВХІДНОГО ФАЙЛУ</string>
     <string name="err_output_file_format">ПОМИЛКА ФОРМАТУ ВИХІДНОГО ФАЙЛУ</string>

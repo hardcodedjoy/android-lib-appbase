@@ -50,6 +50,7 @@ SOFTWARE.
     <string name="err_permissions_denied">BRAK UPRAWNIEŃ</string>
     <string name="err_unimplemented">NIEZIMPLEMENTOWANE</string>
     <string name="err_not_connected_please_connect_first">NIE JEST POŁĄCZONY, NALEŻY NACIŚNĄĆ POŁĄCZENIE</string>
+    <string name="err_comm_not_started_please_start_first">KOMUNIKACJA NIE ZOSTAŁA ROZPOCZĘTA. ZACZNIJ NAJPIERW.</string>
     <string name="err_device_disconnected">URZĄDZENIE ROOZŁĄCZONE</string>
     <string name="err_input_file_format">BŁĘDNY FORMAT PLIKU WEJŚCIOWEGO</string>
     <string name="err_output_file_format">BŁĘDNY FORMAT PLIKU WYJŚCIOWEGO</string>

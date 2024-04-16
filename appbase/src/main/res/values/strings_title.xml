@@ -129,4 +129,6 @@ SOFTWARE.
     <string name="title_buttons_functions">Buttons functions</string>
     <string name="title_selection_start">Selection Start</string>
     <string name="title_selection_end">Selection End</string>
+    <string name="title_prefix">Prefix</string>
+    <string name="title_suffix">Suffix</string>
 </resources>

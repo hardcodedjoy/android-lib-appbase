@@ -97,7 +97,7 @@ public class CvPopups extends ContentView {
                 R.string.popup_ask_with_text_buttons,
                 R.string.are_you_sure,
                 R.string.yes_that_would_be_great,
-                R.string.no) {
+                R.string.btn_no) {
             @Override
             public void onOK() {}
         }.show();
@@ -107,7 +107,7 @@ public class CvPopups extends ContentView {
         new PopupAsk(
                 R.string.popup_ask_with_text_buttons,
                 R.string.are_you_sure,
-                R.string.yes,
+                R.string.btn_yes,
                 R.string.no_i_dont_want_that) {
             @Override
             public void onOK() {}

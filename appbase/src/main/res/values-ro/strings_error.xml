@@ -50,6 +50,7 @@ SOFTWARE.
     <string name="err_permissions_denied">LIPSĂ PERMISIUNI</string>
     <string name="err_unimplemented">NEIMPLEMENTAT</string>
     <string name="err_not_connected_please_connect_first">NECONECTAT, CONECTAȚI-VĂ MAI ÎNTÂI</string>
+    <string name="err_comm_not_started_please_start_first">COMUNICAREA NU A FOST ÎNCEPUTĂ, VĂ RUGĂM SĂ ÎNCEPEȚI MAI ÎNTÂI COMUNICAREA.</string>
     <string name="err_device_disconnected">DISPOZITIV DECONECTAT</string>
     <string name="err_input_file_format">EROARE FORMAT FIȘIER DE INTRARE</string>
     <string name="err_output_file_format">EROARE FORMAT FIȘIER DE IEȘIRE</string>

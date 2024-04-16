@@ -50,6 +50,7 @@ SOFTWARE.
     <string name="err_permissions_denied">BERECHTIGUNGEN WURDEN VERWEIGERT</string>
     <string name="err_unimplemented">NICHT IMPLEMENTIERT</string>
     <string name="err_not_connected_please_connect_first">NICHT VERBUNDEN, BITTE ERST VERBINDEN</string>
+    <string name="err_comm_not_started_please_start_first">DIE KOMMUNIKATION WURDE NOCH NICHT GESTARTET. BITTE STARTEN SIE ZUERST DIE KOMMUNIKATION.</string>
     <string name="err_device_disconnected">GERÄT GETRENNT</string>
     <string name="err_input_file_format">EINGABEDATEIFORMATFEHLER</string>
     <string name="err_output_file_format">AUSGABEDATEIFORMATFEHLER</string>

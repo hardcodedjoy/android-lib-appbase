@@ -129,4 +129,6 @@ SOFTWARE.
     <string name="title_buttons_functions">Функции кнопок</string>
     <string name="title_selection_start">Начало выбора</string>
     <string name="title_selection_end">Конец выбора</string>
+    <string name="title_prefix">Префикс</string>
+    <string name="title_suffix">Суффикс</string>
 </resources>

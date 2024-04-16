@@ -50,6 +50,7 @@ SOFTWARE.
     <string name="err_permissions_denied">PERMISSIONS DENIED</string>
     <string name="err_unimplemented">UNIMPLEMENTED</string>
     <string name="err_not_connected_please_connect_first">NOT CONNECTED, PLEASE CONNECT FIRST</string>
+    <string name="err_comm_not_started_please_start_first">COMMUNICATION NOT STARTED, PLEASE START THE COMMUNICATION FIRST</string>
     <string name="err_device_disconnected">DEVICE DISCONNECTED</string>
     <string name="err_input_file_format">INPUT FILE FORMAT ERROR</string>
     <string name="err_output_file_format">OUTPUT FILE FORMAT ERROR</string>

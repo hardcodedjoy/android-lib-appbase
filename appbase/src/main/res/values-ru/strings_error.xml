@@ -50,6 +50,7 @@ SOFTWARE.
     <string name="err_permissions_denied">РАЗРЕШЕНИЯ ОТКАЗАНЫ</string>
     <string name="err_unimplemented">НЕРЕАЛИЗОВАНО</string>
     <string name="err_not_connected_please_connect_first">НЕ ПОДКЛЮЧЕНО, СНАЧАЛА ПОДКЛЮЧИТЕСЬ</string>
+    <string name="err_comm_not_started_please_start_first">СВЯЗЬ НЕ НАЧАЛАСЬ, СНАЧАЛА НАЧНИТЕ СВЯЗЬ.</string>
     <string name="err_device_disconnected">УСТРОЙСТВО ОТКЛЮЧЕНО</string>
     <string name="err_input_file_format">ОШИБКА ФОРМАТА ВХОДНОГО ФАЙЛА</string>
     <string name="err_output_file_format">ОШИБКА ФОРМАТА ВЫХОДНОГО ФАЙЛА</string>
