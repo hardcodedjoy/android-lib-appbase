@@ -108,10 +108,10 @@ SOFTWARE.
     <string name="title_role_client">Client</string>
     <string name="title_role_server">Server</string>
     <string name="title_ip_address">Adresă IP</string>
-    <string name="title_remote_ip_address">Adresă IP destinație</string>
+    <string name="title_remote_ip_address">Adresă IP remote</string>
     <string name="title_local_ip_address">Adresă IP locală</string>
     <string name="title_port">Port</string>
-    <string name="title_remote_port">Port destinație</string>
+    <string name="title_remote_port">Port remote</string>
     <string name="title_local_port">Port local</string>
     <string name="title_reading">Citire</string>
     <string name="title_writing">Scriere</string>

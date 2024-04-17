@@ -395,4 +395,12 @@ public class StringUtil {
 				.replace(tempPlaceholderForX, x)
 				.replace(tempPlaceholderForY, y);
 	}
+
+	static public String unescapeBNRT(String s) {
+		if(s == null) { return null; }
+		return s.replace("\\b", "\b")
+				.replace("\\n", "\n")
+				.replace("\\r", "\r")
+				.replace("\\t", "\t");
+	}
 }
