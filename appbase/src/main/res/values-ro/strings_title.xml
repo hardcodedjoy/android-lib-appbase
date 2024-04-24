@@ -131,4 +131,6 @@ SOFTWARE.
     <string name="title_selection_end">Sfârșit selecție</string>
     <string name="title_prefix">Prefix</string>
     <string name="title_suffix">Sufix</string>
+    <string name="title_storage">Stocare</string>
+    <string name="title_bit_rate">Bit Rate</string>
 </resources>

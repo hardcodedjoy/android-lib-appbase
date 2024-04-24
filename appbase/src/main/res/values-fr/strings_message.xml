@@ -37,4 +37,5 @@ SOFTWARE.
     <string name="status_connected_to_x">Connecté à [x]</string>
     <string name="status_client_x_on_port_y">Client ([x]) sur le port [y]</string>
     <string name="file_x_not_supported">Le fichier \"[x]\" n\'est pas pris en charge.</string>
+    <string name="delete_x">Supprimer \"[x]\"?</string>
 </resources>

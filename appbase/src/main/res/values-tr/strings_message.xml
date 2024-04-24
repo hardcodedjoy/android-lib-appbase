@@ -37,4 +37,5 @@ SOFTWARE.
     <string name="status_connected_to_x">[x] ile bağlantı kuruldu</string>
     <string name="status_client_x_on_port_y">[y] numaralı portta [x] istemcisi</string>
     <string name="file_x_not_supported">Dosya \"[x]\" desteklenmiyor.</string>
+    <string name="delete_x">\"[x]\" sil?</string>
 </resources>

@@ -28,6 +28,7 @@ SOFTWARE.
     <string name="maximum">Макс.</string>
     <string name="available">доступно</string>
     <string name="unlimited">неограниченно</string>
+    <string name="auto">авто</string>
     <string name="already_exists">уже существует</string>
     <string name="placeholder_no_file">[ нет файла ]</string>
     <string name="placeholder_no_directory">[ нет каталога ]</string>

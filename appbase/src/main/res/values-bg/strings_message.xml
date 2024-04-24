@@ -37,4 +37,5 @@ SOFTWARE.
     <string name="status_connected_to_x">Свързан с [x]</string>
     <string name="status_client_x_on_port_y">Клиент ([x]) на порт [y]</string>
     <string name="file_x_not_supported">Файлът \"[x]\" не се поддържа.</string>
+    <string name="delete_x">Изтриване на \"[x]\"?</string>
 </resources>

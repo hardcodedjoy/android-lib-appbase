@@ -28,6 +28,7 @@ SOFTWARE.
     <string name="maximum">Maks.</string>
     <string name="available">kullanılabilir</string>
     <string name="unlimited">sınırsız</string>
+    <string name="auto">otomatik</string>
     <string name="already_exists">zaten var</string>
     <string name="placeholder_no_file">[ dosya yok ]</string>
     <string name="placeholder_no_directory">[ dizin yok ]</string>

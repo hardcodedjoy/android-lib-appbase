@@ -37,4 +37,5 @@ SOFTWARE.
     <string name="status_connected_to_x">Підключений до [x]</string>
     <string name="status_client_x_on_port_y">Клієнт ([x]) на порту [y]</string>
     <string name="file_x_not_supported">Файл \"[x]\" не підтримується.</string>
+    <string name="delete_x">Видалити \"[x]\"?</string>
 </resources>

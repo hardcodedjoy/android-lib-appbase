@@ -131,4 +131,6 @@ SOFTWARE.
     <string name="title_selection_end">Конец выбора</string>
     <string name="title_prefix">Префикс</string>
     <string name="title_suffix">Суффикс</string>
+    <string name="title_storage">Хранилище</string>
+    <string name="title_bit_rate">Битрейт</string>
 </resources>

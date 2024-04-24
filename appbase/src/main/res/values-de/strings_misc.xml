@@ -28,6 +28,7 @@ SOFTWARE.
     <string name="maximum">Max.</string>
     <string name="available">verfügbar</string>
     <string name="unlimited">unbegrenzt</string>
+    <string name="auto">auto</string>
     <string name="already_exists">existiert bereits</string>
     <string name="placeholder_no_file">[ Keine Datei ]</string>
     <string name="placeholder_no_directory">[ Kein Verzeichnis ]</string>

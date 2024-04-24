@@ -131,4 +131,6 @@ SOFTWARE.
     <string name="title_selection_end">Fim da seleção</string>
     <string name="title_prefix">Prefixo</string>
     <string name="title_suffix">Sufixo</string>
+    <string name="title_storage">Armazenamento</string>
+    <string name="title_bit_rate">Taxa de bits</string>
 </resources>

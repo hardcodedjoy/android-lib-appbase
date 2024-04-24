@@ -24,7 +24,7 @@ SOFTWARE.
 -->
 
 <resources>
-    <string name="err_out_of_memory">НЕДОСТАТНЬО ПАМЯТІ</string>
+    <string name="err_out_of_memory">НЕДОСТАТНЬО ПАМ\'ЯТІ</string>
     <string name="err_disk_full">ДИСК ЗАПОВНЕНИЙ</string>
     <string name="err_cannot_read_input_file">НЕ МОЖЛИВО ПРОЧИТАТИ ВХІДНИЙ ФАЙЛ</string>
     <string name="err_cannot_write_output_file">НЕ МОЖЛИВО ЗАПИСАТИ ВИХІДНИЙ ФАЙЛ</string>

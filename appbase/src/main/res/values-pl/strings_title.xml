@@ -131,4 +131,6 @@ SOFTWARE.
     <string name="title_selection_end">Koniec wyboru</string>
     <string name="title_prefix">Prefiks</string>
     <string name="title_suffix">Sufiks</string>
+    <string name="title_storage">Pamięć</string>
+    <string name="title_bit_rate">Przepływność</string>
 </resources>

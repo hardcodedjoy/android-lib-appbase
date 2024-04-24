@@ -131,4 +131,6 @@ SOFTWARE.
     <string name="title_selection_end">Seçim Sonu</string>
     <string name="title_prefix">Önek</string>
     <string name="title_suffix">Sonek</string>
+    <string name="title_storage">Depolama</string>
+    <string name="title_bit_rate">Bit Hızı</string>
 </resources>

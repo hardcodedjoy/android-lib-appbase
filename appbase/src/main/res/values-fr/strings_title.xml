@@ -131,4 +131,6 @@ SOFTWARE.
     <string name="title_selection_end">Fin de sélection</string>
     <string name="title_prefix">Préfixe</string>
     <string name="title_suffix">Suffixe</string>
+    <string name="title_storage">Stockage</string>
+    <string name="title_bit_rate">Débit binaire</string>
 </resources>

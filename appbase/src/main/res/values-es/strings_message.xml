@@ -37,4 +37,5 @@ SOFTWARE.
     <string name="status_connected_to_x">Conectado a [x]</string>
     <string name="status_client_x_on_port_y">Cliente ([x]) en el puerto [y]</string>
     <string name="file_x_not_supported">El archivo \"[x]\" no es compatible.</string>
+    <string name="delete_x">Eliminar \"[x]\"?</string>
 </resources>
