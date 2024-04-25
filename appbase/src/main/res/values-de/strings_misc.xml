@@ -35,4 +35,5 @@ SOFTWARE.
     <string name="keep_screen_on">Bildschirm EIN aktivieren</string>
     <string name="disable_ringing_and_vibration">Klingeln und Vibration während der Aufnahme deaktivieren</string>
     <string name="dont_show_again">Nicht wieder anzeigen</string>
+    <string name="why_is_this_required">Warum ist dies erforderlich?</string>
 </resources>

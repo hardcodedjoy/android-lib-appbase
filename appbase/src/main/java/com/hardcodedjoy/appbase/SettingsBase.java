@@ -78,6 +78,8 @@ public class SettingsBase { // to be extended by specific app settings
         return instance;
     }
 
+    static public void unInitializeInstance() { instance = null; }
+
     protected SettingsBase() {}
 
     public void setThemeMode(String themeMode) { this.themeMode = themeMode; }

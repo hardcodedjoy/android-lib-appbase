@@ -35,4 +35,5 @@ SOFTWARE.
     <string name="keep_screen_on">Mantieni lo schermo acceso</string>
     <string name="disable_ringing_and_vibration">Disattiva suono e vibrazione durante la registrazione</string>
     <string name="dont_show_again">Non mostrare di nuovo</string>
+    <string name="why_is_this_required">Perché è necessario?</string>
 </resources>

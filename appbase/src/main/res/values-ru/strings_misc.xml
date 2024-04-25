@@ -35,4 +35,5 @@ SOFTWARE.
     <string name="keep_screen_on">Оставить экран ВКЛ</string>
     <string name="disable_ringing_and_vibration">Отключить звонок и вибрацию во время записи</string>
     <string name="dont_show_again">Не показывать снова</string>
+    <string name="why_is_this_required">Почему это необходимо?</string>
 </resources>

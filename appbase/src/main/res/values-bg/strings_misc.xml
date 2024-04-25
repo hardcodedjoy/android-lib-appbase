@@ -35,4 +35,5 @@ SOFTWARE.
     <string name="keep_screen_on">Запази екрана включен</string>
     <string name="disable_ringing_and_vibration">Изключване на звука и вибрации при запис</string>
     <string name="dont_show_again">Не показвай отново</string>
+    <string name="why_is_this_required">Защо е необходимо?</string>
 </resources>

@@ -35,4 +35,5 @@ SOFTWARE.
     <string name="keep_screen_on">Ekranı AÇIK tut</string>
     <string name="disable_ringing_and_vibration">Kayıt sırasında zil ve titreşimi devre dışı bırak</string>
     <string name="dont_show_again">Tekrar gösterme</string>
+    <string name="why_is_this_required">Neden gereklidir?</string>
 </resources>

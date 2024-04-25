@@ -28,7 +28,9 @@ package com.hardcodedjoy.appbase.popup;
 
 import android.annotation.SuppressLint;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.hardcodedjoy.appbase.R;
@@ -72,5 +74,29 @@ public class PopupError extends Popup {
 
     public PopupError(int messageStringId) {
         this(null, getString(messageStringId));
+    }
+
+    public Button addButton() {
+        ImageButton btnCancel = findViewById(R.id.appbase_btn_cancel);
+        Button button = new Button(btnCancel.getContext());
+
+        // copy padding:
+        button.setPadding(
+                btnCancel.getPaddingLeft(),
+                btnCancel.getPaddingTop(),
+                btnCancel.getPaddingRight(),
+                btnCancel.getPaddingBottom());
+
+        // copy margin by copying params:
+        LinearLayout.LayoutParams params;
+        params = (LinearLayout.LayoutParams) btnCancel.getLayoutParams();
+        button.setLayoutParams(params);
+
+        LinearLayout ll = (LinearLayout) btnCancel.getParent();
+        ll.setOrientation(LinearLayout.VERTICAL);
+        int index = ll.indexOfChild(btnCancel);
+        ll.addView(button, index);
+
+        return button;
     }
 }

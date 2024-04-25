@@ -35,4 +35,5 @@ SOFTWARE.
     <string name="keep_screen_on">Garder l\'écran ALLUMÉ</string>
     <string name="disable_ringing_and_vibration">Désactiver la sonnerie et la vibration pendant l\'enregistrement</string>
     <string name="dont_show_again">Ne plus afficher</string>
+    <string name="why_is_this_required">Pourquoi c\'est nécessaire?</string>
 </resources>

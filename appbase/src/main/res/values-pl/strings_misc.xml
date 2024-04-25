@@ -35,4 +35,5 @@ SOFTWARE.
     <string name="keep_screen_on">Pozostaw ekran włączony</string>
     <string name="disable_ringing_and_vibration">Wyłącz dźwięk i wibracje podczas nagrywania</string>
     <string name="dont_show_again">Nie pokazuj ponownie</string>
+    <string name="why_is_this_required">Dlaczego jest to wymagane?</string>
 </resources>

@@ -35,4 +35,5 @@ SOFTWARE.
     <string name="keep_screen_on">Manter tela acesa</string>
     <string name="disable_ringing_and_vibration">Desativar toque e vibração durante a gravação</string>
     <string name="dont_show_again">Não mostrar novamente</string>
+    <string name="why_is_this_required">Por que é necessário?</string>
 </resources>
