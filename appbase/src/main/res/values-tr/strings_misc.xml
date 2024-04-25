@@ -32,7 +32,7 @@ SOFTWARE.
     <string name="already_exists">zaten var</string>
     <string name="placeholder_no_file">[ dosya yok ]</string>
     <string name="placeholder_no_directory">[ dizin yok ]</string>
-    <string name="keep_screen_on">Ekranı AÇIK tut</string>
+    <string name="keep_screen_on">Ekranı açık tut</string>
     <string name="disable_ringing_and_vibration">Kayıt sırasında zil ve titreşimi devre dışı bırak</string>
     <string name="dont_show_again">Tekrar gösterme</string>
     <string name="why_is_this_required">Neden gereklidir?</string>

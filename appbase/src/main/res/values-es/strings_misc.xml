@@ -32,7 +32,7 @@ SOFTWARE.
     <string name="already_exists">ya existe</string>
     <string name="placeholder_no_file">[ no hay archivo ]</string>
     <string name="placeholder_no_directory">[ no hay directorio ]</string>
-    <string name="keep_screen_on">Mantener la pantalla encendida</string>
+    <string name="keep_screen_on">Mantener pantalla encendida</string>
     <string name="disable_ringing_and_vibration">Desactivar sonido y vibración durante la grabación</string>
     <string name="dont_show_again">No volver a mostrar</string>
     <string name="why_is_this_required">¿Por qué se requiere?</string>
