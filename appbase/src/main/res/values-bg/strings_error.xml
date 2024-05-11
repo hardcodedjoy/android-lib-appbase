@@ -26,7 +26,9 @@ SOFTWARE.
 <resources>
     <string name="err_out_of_memory">ПРОБЛЕМ С ПАМЕТТА</string>
     <string name="err_disk_full">ДИСКЪТ Е ПЪЛЕН</string>
+    <string name="err_cannot_read_file">ФАЙЛЪТ НЕ МОЖЕ ДА БЪДЕ ПРОЧЕТЕН</string>
     <string name="err_cannot_read_input_file">НЕ МОЖЕ ДА СЕ ПРОЧЕТЕ ВХОДНИЯТ ФАЙЛ</string>
+    <string name="err_cannot_write_file">ФАЙЛЪТ НЕ МОЖЕ ДА БЪДЕ ЗАПИСАН</string>
     <string name="err_cannot_write_output_file">НЕ МОЖЕ ДА СЕ ЗАПИШЕ ИЗХОДНИЯТ ФАЙЛ</string>
     <string name="err_rename_failed">ПРЕИМЕНУВАНЕТО НЕ УСПЯ</string>
     <string name="err_no_files_to_copy">НЯМА ФАЙЛОВЕ ЗА КОПИРАНЕ</string>
@@ -59,4 +61,6 @@ SOFTWARE.
     <string name="err_mic_open_failed">ОТВАРЯНЕТО НА МИКРОФОНА НЕ УСПЯ</string>
     <string name="err_no_write_access_to_folder">НЯМА ДОСТЪП ЗА ЗАПИС В ПАПКАТА</string>
     <string name="err_syntax_error">СИНТАКТИЧНА ГРЕШКА</string>
+    <string name="err_error_reading_file_content">ГРЕШКА ПРИ ЧЕТЕНЕ НА ФАЙЛОВО СЪДЪРЖАНИЕ</string>
+    <string name="err_error_writing_file_content">ГРЕШКА ПРИ ЗАПИС НА ФАЙЛОВО СЪДЪРЖАНИЕ</string>
 </resources>

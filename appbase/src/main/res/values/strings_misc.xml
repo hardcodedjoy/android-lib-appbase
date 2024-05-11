@@ -31,9 +31,11 @@ SOFTWARE.
     <string name="auto">auto</string>
     <string name="already_exists">already exists</string>
     <string name="placeholder_no_file">[ no file ]</string>
+    <string name="placeholder_no_folder">[ no folder ]</string>
     <string name="placeholder_no_directory">[ no directory ]</string>
     <string name="keep_screen_on">Keep screen ON</string>
     <string name="disable_ringing_and_vibration">Disable ringing and vibration while recording</string>
     <string name="dont_show_again">Don\'t show again</string>
     <string name="why_is_this_required">Why is this required?</string>
+    <string name="note_system_ports_only_on_rooted_devices">Note: system ports (0 – 1023) available only on rooted devices.</string>
 </resources>

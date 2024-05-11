@@ -27,6 +27,7 @@ SOFTWARE.
     <string name="btn_cancel">Cancelar</string>
     <string name="btn_ok">Aceptar</string>
     <string name="btn_browse">Examinar</string>
+    <string name="btn_create">Crear</string>
     <string name="btn_add">+ agregar</string>
     <string name="btn_yes">Sí</string>
     <string name="btn_no">No</string>
@@ -44,4 +45,5 @@ SOFTWARE.
     <string name="btn_plus_add_row">+ agregar fila</string>
     <string name="btn_plus_add_column">+ agregar columna</string>
     <string name="btn_plus_add_command">+ agregar comando</string>
+    <string name="btn_download_all_as_zip">descargar todo como zip</string>
 </resources>

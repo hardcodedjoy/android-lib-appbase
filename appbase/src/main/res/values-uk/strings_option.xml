@@ -33,7 +33,7 @@ SOFTWARE.
     <string name="option_move_to">перемістити до</string>
     <string name="option_share">поділитися</string>
     <string name="option_download">скачати</string>
-    <string name="option_upload">завантажити</string>
+    <string name="option_upload">вивантажити</string>
     <string name="option_select_default_app">обрати додаток за замовчуванням</string>
     <string name="option_create_shortcut">створити ярлик</string>
     <string name="option_view_info">інформація</string>
@@ -86,4 +86,10 @@ SOFTWARE.
     <string name="option_export_image">експорт зображення</string>
     <string name="option_export_audio">експорт аудіо</string>
     <string name="option_export_video">експорт відео</string>
+    <string name="option_readonly">лише читання</string>
+    <string name="option_ask_confirm_delete">запитати підтвердження перед видаленням</string>
+    <string name="option_download_as_zip_link">\"завантажити як zip\" посилання</string>
+    <string name="option_navigate">навігація</string>
+    <string name="option_legacy">застаріла (legacy)</string>
+    <string name="option_translated">перекладна</string>
 </resources>

@@ -26,7 +26,9 @@ SOFTWARE.
 <resources>
     <string name="err_out_of_memory">BELLEK YETERSIZ</string>
     <string name="err_disk_full">DISK DOLU</string>
+    <string name="err_cannot_read_file">DOSYA OKUNAMADI</string>
     <string name="err_cannot_read_input_file">GİRİŞ DOSYASI OKUNAMADI</string>
+    <string name="err_cannot_write_file">DOSYA YAZILAMADI</string>
     <string name="err_cannot_write_output_file">ÇIKTI DOSYASI YAZILAMADI</string>
     <string name="err_rename_failed">YENİDEN ADLANDIRMA BAŞARISIZ</string>
     <string name="err_no_files_to_copy">KOPYALANACAK DOSYA YOK</string>
@@ -59,4 +61,6 @@ SOFTWARE.
     <string name="err_mic_open_failed">MİKROFON AÇILAMADI</string>
     <string name="err_no_write_access_to_folder">KLASÖRE YAZMA ERİŞİMİ YOK</string>
     <string name="err_syntax_error">SÖZ DİZİMİ HATASI</string>
+    <string name="err_error_reading_file_content">DOSYA İÇERİĞİ OKUNURKEN HATA</string>
+    <string name="err_error_writing_file_content">DOSYA İÇERİĞİ YAZILIRKEN HATA</string>
 </resources>

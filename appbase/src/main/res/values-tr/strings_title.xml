@@ -133,4 +133,13 @@ SOFTWARE.
     <string name="title_suffix">Sonek</string>
     <string name="title_storage">Depolama</string>
     <string name="title_bit_rate">Bit Hızı</string>
+    <string name="title_file_links">Dosya bağlantıları</string>
+    <string name="title_file_upload_form">Dosya yükleme formu</string>
+    <string name="title_access_link">Erişim bağlantısı</string>
+    <string name="title_access_links">Erişim bağlantıları</string>
+    <string name="title_server_port">Sunucu portu</string>
+    <string name="title_free_disk_space">Boş disk alanı</string>
+    <string name="title_index_of">İndeks</string>
+    <string name="title_upload_files">Dosyaları yükle</string>
+    <string name="title_del">Sil</string>
 </resources>

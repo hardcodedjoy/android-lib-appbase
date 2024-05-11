@@ -38,4 +38,12 @@ SOFTWARE.
     <string name="status_client_x_on_port_y">Client ([x]) auf Port [y]</string>
     <string name="file_x_not_supported">Datei \"[x]\" wird nicht unterstützt.</string>
     <string name="delete_x">\"[x]\" löschen?</string>
+    <string name="file_x_not_found">Datei \"[x]\" nicht gefunden.</string>
+    <string name="file_x_access_forbidden">Datei \"[x]\" - Zugriff verboten.</string>
+    <string name="file_x_is_readonly">Datei \"[x]\" ist schreibgeschützt.</string>
+    <string name="access_is_readonly">Der Zugriff ist schreibgeschützt.</string>
+    <string name="not_found">Nicht gefunden.</string>
+    <string name="no_folder_selected">Kein Ordner ausgewählt.</string>
+    <string name="no_files_selected">Keine Dateien ausgewählt.</string>
+    <string name="files_selected">Dateien ausgewählt.</string>
 </resources>

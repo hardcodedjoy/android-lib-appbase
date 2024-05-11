@@ -133,4 +133,13 @@ SOFTWARE.
     <string name="title_suffix">Sufix</string>
     <string name="title_storage">Stocare</string>
     <string name="title_bit_rate">Bit Rate</string>
+    <string name="title_file_links">Link-uri fișiere</string>
+    <string name="title_file_upload_form">Formular de încărcare fișiere</string>
+    <string name="title_access_link">Link de acces</string>
+    <string name="title_access_links">Link-uri de acces</string>
+    <string name="title_server_port">Port server</string>
+    <string name="title_free_disk_space">Spațiu disponibil pe disc</string>
+    <string name="title_index_of">Index</string>
+    <string name="title_upload_files">Upload fișiere</string>
+    <string name="title_del">Șterge</string>
 </resources>

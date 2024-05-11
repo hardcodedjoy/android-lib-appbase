@@ -31,9 +31,11 @@ SOFTWARE.
     <string name="auto">auto</string>
     <string name="already_exists">ya existe</string>
     <string name="placeholder_no_file">[ no hay archivo ]</string>
+    <string name="placeholder_no_folder">[ no hay carpeta ]</string>
     <string name="placeholder_no_directory">[ no hay directorio ]</string>
     <string name="keep_screen_on">Mantener pantalla encendida</string>
     <string name="disable_ringing_and_vibration">Desactivar sonido y vibración durante la grabación</string>
     <string name="dont_show_again">No volver a mostrar</string>
     <string name="why_is_this_required">¿Por qué se requiere?</string>
+    <string name="note_system_ports_only_on_rooted_devices">Nota: los puertos del sistema (0 .. 1023) solo están disponibles en dispositivos rooteados.</string>
 </resources>

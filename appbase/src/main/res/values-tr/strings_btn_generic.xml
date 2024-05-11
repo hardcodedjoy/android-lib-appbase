@@ -27,6 +27,7 @@ SOFTWARE.
     <string name="btn_cancel">İptal</string>
     <string name="btn_ok">Tamam</string>
     <string name="btn_browse">Gözat</string>
+    <string name="btn_create">Oluştur</string>
     <string name="btn_add">+ Ekle</string>
     <string name="btn_yes">Evet</string>
     <string name="btn_no">Hayır</string>
@@ -44,4 +45,5 @@ SOFTWARE.
     <string name="btn_plus_add_row">+ satır ekle</string>
     <string name="btn_plus_add_column">+ sütun ekle</string>
     <string name="btn_plus_add_command">+ komut ekle</string>
+    <string name="btn_download_all_as_zip">hepsini zip olarak indir</string>
 </resources>

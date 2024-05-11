@@ -86,4 +86,10 @@ SOFTWARE.
     <string name="option_export_image">görüntüyü dışarı aktar</string>
     <string name="option_export_audio">sesi dışarı aktar</string>
     <string name="option_export_video">video dışarı aktar</string>
+    <string name="option_readonly">salt okunur</string>
+    <string name="option_ask_confirm_delete">silme için onay isteyin</string>
+    <string name="option_download_as_zip_link">\"zip olarak indir\" linki</string>
+    <string name="option_navigate">navigasyon</string>
+    <string name="option_legacy">eski (legacy)</string>
+    <string name="option_translated">çevrilmiş</string>
 </resources>

@@ -133,4 +133,13 @@ SOFTWARE.
     <string name="title_suffix">Suffix</string>
     <string name="title_storage">Speicher</string>
     <string name="title_bit_rate">Bit-Rate</string>
+    <string name="title_file_links">Dateilinks</string>
+    <string name="title_file_upload_form">Datei Hochladen Formular</string>
+    <string name="title_access_link">Zugriffslink</string>
+    <string name="title_access_links">Zugriffslink</string>
+    <string name="title_server_port">Server-Port</string>
+    <string name="title_free_disk_space">Freier Speicherplatz</string>
+    <string name="title_index_of">Index von</string>
+    <string name="title_upload_files">Daten hochladen</string>
+    <string name="title_del">Lösch.</string>
 </resources>

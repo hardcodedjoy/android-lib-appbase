@@ -38,4 +38,12 @@ SOFTWARE.
     <string name="status_client_x_on_port_y">[y] numaralı portta [x] istemcisi</string>
     <string name="file_x_not_supported">Dosya \"[x]\" desteklenmiyor.</string>
     <string name="delete_x">\"[x]\" sil?</string>
+    <string name="file_x_not_found">\"[x]\" dosyası bulunamadı.</string>
+    <string name="file_x_access_forbidden">\"[x]\" dosyası - erişim yasak.</string>
+    <string name="file_x_is_readonly">\"[x]\" dosyası salt okunurdur.</string>
+    <string name="access_is_readonly">Erişim salt okunurdur.</string>
+    <string name="not_found">Bulunamadı.</string>
+    <string name="no_folder_selected">Klasör seçilmedi.</string>
+    <string name="no_files_selected">Hiçbir dosya seçilmedi.</string>
+    <string name="files_selected">seçilen dosyalar.</string>
 </resources>

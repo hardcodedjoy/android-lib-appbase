@@ -27,6 +27,7 @@ SOFTWARE.
     <string name="btn_cancel">Anulare</string>
     <string name="btn_ok">OK</string>
     <string name="btn_browse">Răsfoiește</string>
+    <string name="btn_create">Creează</string>
     <string name="btn_add">+ adaugă</string>
     <string name="btn_yes">Da</string>
     <string name="btn_no">Nu</string>
@@ -44,4 +45,5 @@ SOFTWARE.
     <string name="btn_plus_add_row">+ adaugă rând</string>
     <string name="btn_plus_add_column">+ adaugă coloană</string>
     <string name="btn_plus_add_command">+ adaugă comandă</string>
+    <string name="btn_download_all_as_zip">descarcă tot în zip</string>
 </resources>

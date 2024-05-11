@@ -26,7 +26,9 @@ SOFTWARE.
 <resources>
     <string name="err_out_of_memory">MEMÓRIA INSUFICIENTE</string>
     <string name="err_disk_full">DISCO CHEIO</string>
+    <string name="err_cannot_read_file">NÃO FOI POSSÍVEL LER O ARQUIVO</string>
     <string name="err_cannot_read_input_file">NÃO É POSÍVEL LER O ARQUIVO DE ENTRADA</string>
+    <string name="err_cannot_write_file">NÃO FOI POSSÍVEL GRAVAR O ARQUIVO</string>
     <string name="err_cannot_write_output_file">NÃO É POSÍVEL ESCREVER O ARQUIVO DE SAÍDA</string>
     <string name="err_rename_failed">RENOMEAÇÃO FALHOU</string>
     <string name="err_no_files_to_copy">NENHUM ARQUIVO PARA COPIAR</string>
@@ -59,4 +61,6 @@ SOFTWARE.
     <string name="err_mic_open_failed">FALHA AO ABRIR O MICROFONE</string>
     <string name="err_no_write_access_to_folder">NÃO HÁ ACESSO DE ESCRITA NA PASTA</string>
     <string name="err_syntax_error">ERRO DE SINTAXE</string>
+    <string name="err_error_reading_file_content">ERRO AO LER O CONTEÚDO DO ARQUIVO</string>
+    <string name="err_error_writing_file_content">ERRO AO ESCREVER O CONTEÚDO DO ARQUIVO</string>
 </resources>

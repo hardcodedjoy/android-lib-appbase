@@ -133,4 +133,13 @@ SOFTWARE.
     <string name="title_suffix">Суфикс</string>
     <string name="title_storage">Съхранение</string>
     <string name="title_bit_rate">Битрейт</string>
+    <string name="title_file_links">Файлови връзки</string>
+    <string name="title_file_upload_form">Форма за качване на файлове</string>
+    <string name="title_access_link">Връзка за достъп</string>
+    <string name="title_access_links">Връзки за достъп</string>
+    <string name="title_server_port">Сървърен порт</string>
+    <string name="title_free_disk_space">Свободно пространство на диска</string>
+    <string name="title_index_of">Индекс</string>
+    <string name="title_upload_files">Качване на файлове</string>
+    <string name="title_del">Изтр.</string>
 </resources>

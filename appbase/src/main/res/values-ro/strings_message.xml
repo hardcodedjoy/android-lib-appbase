@@ -38,4 +38,12 @@ SOFTWARE.
     <string name="status_client_x_on_port_y">Client ([x]) pe portul [y]</string>
     <string name="file_x_not_supported">Fișierul \"[x]\" nu este acceptat.</string>
     <string name="delete_x">Șterge \"[x]\"?</string>
+    <string name="file_x_not_found">Fișierul \"[x]\" nu a fost găsit.</string>
+    <string name="file_x_access_forbidden">Fișier \"[x]\" - accesul este interzis.</string>
+    <string name="file_x_is_readonly">Fișierul \"[x]\" este doar pentru citire.</string>
+    <string name="access_is_readonly">Accesul este doar pentru citire.</string>
+    <string name="not_found">Nu a fost găsit.</string>
+    <string name="no_folder_selected">Niciun folder selectat.</string>
+    <string name="no_files_selected">Niciun fișier selectat.</string>
+    <string name="files_selected">fișiere selectate.</string>
 </resources>

@@ -26,7 +26,9 @@ SOFTWARE.
 <resources>
     <string name="err_out_of_memory">OUT OF MEMORY</string>
     <string name="err_disk_full">DISK FULL</string>
+    <string name="err_cannot_read_file">CANNOT READ FILE</string>
     <string name="err_cannot_read_input_file">CANNOT READ INPUT FILE</string>
+    <string name="err_cannot_write_file">CANNOT WRITE FILE</string>
     <string name="err_cannot_write_output_file">CANNOT WRITE OUTPUT FILE</string>
     <string name="err_rename_failed">RENAME FAILED</string>
     <string name="err_no_files_to_copy">NO FILES TO COPY</string>
@@ -59,4 +61,6 @@ SOFTWARE.
     <string name="err_mic_open_failed">MICROPHONE OPEN FAILED</string>
     <string name="err_no_write_access_to_folder">NO WRITE ACCESS TO FOLDER</string>
     <string name="err_syntax_error">SYNTAX ERROR</string>
+    <string name="err_error_reading_file_content">ERROR READING FILE CONTENT</string>
+    <string name="err_error_writing_file_content">ERROR WRITING FILE CONTENT</string>
 </resources>

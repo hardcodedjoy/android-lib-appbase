@@ -86,4 +86,11 @@ SOFTWARE.
     <string name="option_export_image">export image</string>
     <string name="option_export_audio">export audio</string>
     <string name="option_export_video">export video</string>
+    <string name="option_saf_storage_access_framework" translatable="false">SAF (storage access framework)</string>
+    <string name="option_readonly">readonly</string>
+    <string name="option_ask_confirm_delete">ask confirm delete</string>
+    <string name="option_download_as_zip_link">\"download as zip\" link</string>
+    <string name="option_navigate">navigate</string>
+    <string name="option_legacy">legacy</string>
+    <string name="option_translated">translated</string>
 </resources>

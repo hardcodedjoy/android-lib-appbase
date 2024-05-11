@@ -31,9 +31,11 @@ SOFTWARE.
     <string name="auto">auto</string>
     <string name="already_exists">już istnieje</string>
     <string name="placeholder_no_file">[ brak pliku ]</string>
+    <string name="placeholder_no_folder">[ brak folderu ]</string>
     <string name="placeholder_no_directory">[ brak katalogu ]</string>
     <string name="keep_screen_on">Pozostaw ekran włączony</string>
     <string name="disable_ringing_and_vibration">Wyłącz dźwięk i wibracje podczas nagrywania</string>
     <string name="dont_show_again">Nie pokazuj ponownie</string>
     <string name="why_is_this_required">Dlaczego jest to wymagane?</string>
+    <string name="note_system_ports_only_on_rooted_devices">Uwaga: porty systemowe (0 .. 1023) są dostępne tylko na urządzeniach zrootowanych.</string>
 </resources>

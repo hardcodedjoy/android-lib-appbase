@@ -133,4 +133,13 @@ SOFTWARE.
     <string name="title_suffix">Suffisso</string>
     <string name="title_storage">Memoria</string>
     <string name="title_bit_rate">Bitrate</string>
+    <string name="title_file_links">Link ai file</string>
+    <string name="title_file_upload_form">Modulo di caricamento dei file</string>
+    <string name="title_access_link">Link di accesso</string>
+    <string name="title_access_links">Link di accesso</string>
+    <string name="title_server_port">Porta del server</string>
+    <string name="title_free_disk_space">Spazio libero su disco</string>
+    <string name="title_index_of">Indice di</string>
+    <string name="title_upload_files">Carica i file</string>
+    <string name="title_del">Elim.</string>
 </resources>

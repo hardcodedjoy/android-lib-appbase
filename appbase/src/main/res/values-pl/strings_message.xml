@@ -38,4 +38,12 @@ SOFTWARE.
     <string name="status_client_x_on_port_y">Klient ([x]) na porcie [y]</string>
     <string name="file_x_not_supported">Plik \"[x]\" nie jest obsługiwany.</string>
     <string name="delete_x">Usuń \"[x]\"?</string>
+    <string name="file_x_not_found">Plik \"[x]\" nie znaleziony.</string>
+    <string name="file_x_access_forbidden">Plik \"[x]\" - dostęp zabroniony.</string>
+    <string name="file_x_is_readonly">Plik \"[x]\" jest tylko do odczytu.</string>
+    <string name="access_is_readonly">Dostęp tylko do odczytu.</string>
+    <string name="not_found">Nie znaleziono.</string>
+    <string name="no_folder_selected">Nie wybrano folderu.</string>
+    <string name="no_files_selected">Nie wybrano plików.</string>
+    <string name="files_selected">wybrane pliki.</string>
 </resources>

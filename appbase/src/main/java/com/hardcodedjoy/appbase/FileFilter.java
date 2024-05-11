@@ -29,7 +29,7 @@ package com.hardcodedjoy.appbase;
 import java.io.File;
 import java.util.Locale;
 
-abstract public class FileFilter {
+abstract public class FileFilter implements java.io.FileFilter {
 
     abstract public boolean accept(File file);
 

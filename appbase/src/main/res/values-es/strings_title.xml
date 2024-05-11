@@ -133,4 +133,13 @@ SOFTWARE.
     <string name="title_suffix">Sufijo</string>
     <string name="title_storage">Almacenamiento</string>
     <string name="title_bit_rate">Tasa de bits</string>
+    <string name="title_file_links">Enlaces a archivos</string>
+    <string name="title_file_upload_form">Formulario de carga de archivos</string>
+    <string name="title_access_link">Enlace de acceso</string>
+    <string name="title_access_links">Enlaces de acceso</string>
+    <string name="title_server_port">Puerto del servidor</string>
+    <string name="title_free_disk_space">Espacio disponible en disco</string>
+    <string name="title_index_of">Índice de</string>
+    <string name="title_upload_files">Cargar archivos</string>
+    <string name="title_del">Bor.</string>
 </resources>

@@ -86,4 +86,10 @@ SOFTWARE.
     <string name="option_export_image">exportar imagen</string>
     <string name="option_export_audio">exportar audio</string>
     <string name="option_export_video">exportar vídeo</string>
+    <string name="option_readonly">solo lectura</string>
+    <string name="option_ask_confirm_delete">preguntar confirmar eliminar</string>
+    <string name="option_download_as_zip_link">enlace de \"descargar como zip\"</string>
+    <string name="option_navigate">navegar</string>
+    <string name="option_legacy">legado</string>
+    <string name="option_translated">traducido</string>
 </resources>

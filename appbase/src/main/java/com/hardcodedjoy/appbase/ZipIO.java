@@ -38,9 +38,7 @@ import java.util.zip.ZipOutputStream;
 @SuppressWarnings("unused")
 public class ZipIO {
 
-    static public void writeFile(ZipOutputStream zos, File file, String dirPath) throws IOException, InterruptedException {
-        FileInputStream fis = new FileInputStream(file);
-        String fileName = file.getName();
+    static public void writeFile(ZipOutputStream zos, String fileName, FileInputStream fis, String dirPath) throws IOException, InterruptedException {
         if(dirPath != null) { fileName = dirPath + "/" + fileName; }
         ZipEntry e = new ZipEntry(fileName);
         zos.putNextEntry(e);
@@ -49,10 +47,19 @@ public class ZipIO {
         zos.closeEntry();
     }
 
+    static public void writeFile(ZipOutputStream zos, File file, String dirPath) throws IOException, InterruptedException {
+        FileInputStream fis = new FileInputStream(file);
+        String fileName = file.getName();
+        writeFile(zos, fileName, fis, dirPath);
+    }
+
     static public void writeFile(ZipOutputStream zos, File file) throws IOException, InterruptedException {
         writeFile(zos, file, null);
     }
 
+    static public void writeFile(ZipOutputStream zos, String fileName, FileInputStream fis) throws IOException, InterruptedException {
+        writeFile(zos, fileName, fis, null);
+    }
 
     static public void writeFolder(ZipOutputStream zos, File file, String dirPath) throws IOException, InterruptedException {
         File[] files = file.listFiles();
@@ -69,6 +76,7 @@ public class ZipIO {
         zos.putNextEntry(e);
         zos.closeEntry();
 
+        // add the files, if any:
         for(File childFile : files) { write(zos, childFile, dirPath); }
     }
 

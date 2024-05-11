@@ -30,10 +30,12 @@ SOFTWARE.
     <string name="unlimited">unbegrenzt</string>
     <string name="auto">auto</string>
     <string name="already_exists">existiert bereits</string>
-    <string name="placeholder_no_file">[ Keine Datei ]</string>
-    <string name="placeholder_no_directory">[ Kein Verzeichnis ]</string>
+    <string name="placeholder_no_file">[ keine Datei ]</string>
+    <string name="placeholder_no_folder">[ kein Ordner ]</string>
+    <string name="placeholder_no_directory">[ kein Verzeichnis ]</string>
     <string name="keep_screen_on">Bildschirm EIN halten</string>
     <string name="disable_ringing_and_vibration">Klingeln und Vibration während der Aufnahme deaktivieren</string>
     <string name="dont_show_again">Nicht wieder anzeigen</string>
     <string name="why_is_this_required">Warum ist dies erforderlich?</string>
+    <string name="note_system_ports_only_on_rooted_devices">Hinweis: Systemports (0 .. 1023) nur auf gerooteten Geräten verfügbar sind.</string>
 </resources>

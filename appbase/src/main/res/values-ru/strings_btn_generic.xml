@@ -27,6 +27,7 @@ SOFTWARE.
     <string name="btn_cancel">Отмена</string>
     <string name="btn_ok">OK</string>
     <string name="btn_browse">Просмотр</string>
+    <string name="btn_create">Создать</string>
     <string name="btn_add">+ добавить</string>
     <string name="btn_yes">Да</string>
     <string name="btn_no">Нет</string>
@@ -44,4 +45,5 @@ SOFTWARE.
     <string name="btn_plus_add_row">+ добавить строку</string>
     <string name="btn_plus_add_column">+ добавить столбец</string>
     <string name="btn_plus_add_command">+ добавить команду</string>
+    <string name="btn_download_all_as_zip">скачать все как zip</string>
 </resources>

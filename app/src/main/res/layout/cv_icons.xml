@@ -83,6 +83,7 @@ SOFTWARE.
             <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_file_type_video_1" android:tint="?android:colorForeground" />
             <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_heart_1" android:tint="?android:colorForeground" />
             <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_help_1" android:tint="?android:colorForeground" />
+            <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_home_1" android:tint="?android:colorForeground" />
             <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_hourglass_1" android:tint="?android:colorForeground" />
             <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_image_1" android:tint="?android:colorForeground" />
             <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_import_from_file_1" android:tint="?android:colorForeground" />
@@ -174,6 +175,7 @@ SOFTWARE.
             <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_file_type_video_2" android:tint="?android:colorForeground" />
             <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_heart_2" android:tint="?android:colorForeground" />
             <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_help_2" android:tint="?android:colorForeground" />
+            <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_home_2" android:tint="?android:colorForeground" />
             <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
             <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_image_2" android:tint="?android:colorForeground" />
             <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
@@ -263,6 +265,7 @@ SOFTWARE.
             <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_file_type_video_3" android:tint="?android:colorForeground" />
             <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_heart_3" android:tint="?android:colorForeground" />
             <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_help_3" android:tint="?android:colorForeground" />
+            <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_home_3" android:tint="?android:colorForeground" />
             <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
             <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_image_3" android:tint="?android:colorForeground" />
             <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />

@@ -86,4 +86,10 @@ SOFTWARE.
     <string name="option_export_image">exportă imaginea</string>
     <string name="option_export_audio">exportă audio</string>
     <string name="option_export_video">exportă video</string>
+    <string name="option_readonly">doar citire</string>
+    <string name="option_ask_confirm_delete">cere confirmare la ștergere</string>
+    <string name="option_download_as_zip_link">link \"descărcare zip\"</string>
+    <string name="option_navigate">navigare</string>
+    <string name="option_legacy">legacy</string>
+    <string name="option_translated">tradus</string>
 </resources>

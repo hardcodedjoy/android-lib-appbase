@@ -26,7 +26,9 @@ SOFTWARE.
 <resources>
     <string name="err_out_of_memory">НЕДОСТАТОЧНО ПАМЯТИ</string>
     <string name="err_disk_full">ДИСК ПОЛНЫЙ</string>
+    <string name="err_cannot_read_file">НЕ УДАЕТСЯ ПРОЧИТАТЬ ФАЙЛ</string>
     <string name="err_cannot_read_input_file">НЕВОЗМОЖНО ПРОЧИТАТЬ ВХОДНОЙ ФАЙЛ</string>
+    <string name="err_cannot_write_file">НЕ УДАЕТСЯ ЗАПИСАТЬ ФАЙЛ</string>
     <string name="err_cannot_write_output_file">НЕВОЗМОЖНО НАПИСАТЬ ВЫХОДНОЙ ФАЙЛ</string>
     <string name="err_rename_failed">НЕ УДАЛОСЬ ПЕРЕИМЕНОВАТЬ</string>
     <string name="err_no_files_to_copy">НЕТ ФАЙЛОВ ДЛЯ КОПИРОВАНИЯ</string>
@@ -59,4 +61,6 @@ SOFTWARE.
     <string name="err_mic_open_failed">ОШИБКА ОТКРЫТИЯ МИКРОФОНА</string>
     <string name="err_no_write_access_to_folder">НЕТ ПРАВ ДЛЯ ЗАПИСИ В ПАПКУ</string>
     <string name="err_syntax_error">СИНТАКСИЧЕСКАЯ ОШИБКА</string>
+    <string name="err_error_reading_file_content">ОШИБКА ПРИ ЧТЕНИИ СОДЕРЖИМОГО ФАЙЛА</string>
+    <string name="err_error_writing_file_content">ОШИБКА ПРИ ЗАПИСИ СОДЕРЖИМОГО ФАЙЛА</string>
 </resources>

@@ -38,4 +38,12 @@ SOFTWARE.
     <string name="status_client_x_on_port_y">Клиент ([x]) на порт [y]</string>
     <string name="file_x_not_supported">Файлът \"[x]\" не се поддържа.</string>
     <string name="delete_x">Изтриване на \"[x]\"?</string>
+    <string name="file_x_not_found">Файл \"[x]\" не е намерен.</string>
+    <string name="file_x_access_forbidden">Файл \"[x]\" - достъпът е забранен.</string>
+    <string name="file_x_is_readonly">Файл \"[x]\" е само за четене.</string>
+    <string name="access_is_readonly">Достъпът е само за четене.</string>
+    <string name="not_found">Не е намерен.</string>
+    <string name="no_folder_selected">Не е избрана папка.</string>
+    <string name="no_files_selected">Няма избрани файлове.</string>
+    <string name="files_selected">избрани файлове.</string>
 </resources>

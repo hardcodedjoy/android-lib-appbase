@@ -26,7 +26,9 @@ SOFTWARE.
 <resources>
     <string name="err_out_of_memory">MEMORIA ESATTAMENTE</string>
     <string name="err_disk_full">DISCO PIENO</string>
+    <string name="err_cannot_read_file">NON RIUSCITO A LEGGERE IL FILE</string>
     <string name="err_cannot_read_input_file">IMPOSSIBILE LEGGERE IL FILE DI INGRESSO</string>
+    <string name="err_cannot_write_file">NON RIUSCITO A SCRIVERE IL FILE</string>
     <string name="err_cannot_write_output_file">IMPOSSIBILE SCRIVERE IL FILE DI USCITA</string>
     <string name="err_rename_failed">RINOMINARE FALLITO</string>
     <string name="err_no_files_to_copy">NESSUN FILE DA COPIARE</string>
@@ -59,4 +61,6 @@ SOFTWARE.
     <string name="err_mic_open_failed">APERTURA MICROFONO FALLITA</string>
     <string name="err_no_write_access_to_folder">NON CI SONO AUTORIZZAZIONI DI SCRITTURA PER LA CARTELLA</string>
     <string name="err_syntax_error">ERRORE DI SINTAXI</string>
+    <string name="err_error_reading_file_content">ERRORE DI LETTURA DEL CONTENUTO DEL FILE</string>
+    <string name="err_error_writing_file_content">ERRORE DI SCRITTURA DEL CONTENUTO DEL FILE</string>
 </resources>

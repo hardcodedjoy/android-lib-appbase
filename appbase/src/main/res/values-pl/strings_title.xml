@@ -47,8 +47,8 @@ SOFTWARE.
     <string name="title_sharing">Udostępnianie</string>
     <string name="title_download">Pobierz</string>
     <string name="title_downloading">Pobieranie</string>
-    <string name="title_upload">Wyślij</string>
-    <string name="title_uploading">Wysyłanie</string>
+    <string name="title_upload">Wgrywać</string>
+    <string name="title_uploading">Wgrywanie</string>
     <string name="title_compress">Skompresuj</string>
     <string name="title_compressing">Kompresowanie</string>
     <string name="title_extract">Wyodrębnij</string>
@@ -133,4 +133,13 @@ SOFTWARE.
     <string name="title_suffix">Sufiks</string>
     <string name="title_storage">Pamięć</string>
     <string name="title_bit_rate">Przepływność</string>
+    <string name="title_file_links">Linki do plików</string>
+    <string name="title_file_upload_form">Formularz przesyłania plików</string>
+    <string name="title_access_link">Link dostępu</string>
+    <string name="title_access_links">Linki dostępu</string>
+    <string name="title_server_port">Port serwera</string>
+    <string name="title_free_disk_space">Wolna przestrzeń dyskowa</string>
+    <string name="title_index_of">Indeks</string>
+    <string name="title_upload_files">Wgrywać pliki</string>
+    <string name="title_del">Usuw.</string>
 </resources>
