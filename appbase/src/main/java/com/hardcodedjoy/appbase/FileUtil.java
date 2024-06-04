@@ -165,8 +165,10 @@ public class FileUtil {
             if(mimeType != null) {
                 String fileExtension = MimeTypeMap.getSingleton()
                         .getExtensionFromMimeType(mimeType);
-                if(fileExtension != null) {
-                    result += "." + fileExtension;
+                if(fileExtension != null && result != null) {
+                    if(!result.endsWith("." + fileExtension)) { // if did not have the extension
+                        result += "." + fileExtension; // append it
+                    }
                 }
             }
         }

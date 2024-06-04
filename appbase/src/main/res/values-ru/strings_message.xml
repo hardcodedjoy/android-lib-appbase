@@ -46,4 +46,5 @@ SOFTWARE.
     <string name="no_folder_selected">Папка не выбрана.</string>
     <string name="no_files_selected">Ни один файл не выбран.</string>
     <string name="files_selected">файлы выбраны.</string>
+    <string name="selection_must_be_positive">Выбор должен быть положительным.</string>
 </resources>
