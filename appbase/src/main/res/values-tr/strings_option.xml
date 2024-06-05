@@ -92,4 +92,5 @@ SOFTWARE.
     <string name="option_navigate">navigasyon</string>
     <string name="option_legacy">eski (legacy)</string>
     <string name="option_translated">çevrilmiş</string>
+    <string name="option_more_apps">diğer uygulamalar</string>
 </resources>

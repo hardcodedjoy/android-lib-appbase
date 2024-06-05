@@ -92,4 +92,5 @@ SOFTWARE.
     <string name="option_navigate">navegar</string>
     <string name="option_legacy">legado</string>
     <string name="option_translated">traducido</string>
+    <string name="option_more_apps">más apps</string>
 </resources>

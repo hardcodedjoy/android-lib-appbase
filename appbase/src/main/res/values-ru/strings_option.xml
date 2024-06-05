@@ -92,4 +92,5 @@ SOFTWARE.
     <string name="option_navigate">навигация</string>
     <string name="option_legacy">трад. (legacy)</string>
     <string name="option_translated">переведенная</string>
+    <string name="option_more_apps">ещё приложений</string>
 </resources>

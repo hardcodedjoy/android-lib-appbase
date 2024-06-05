@@ -93,4 +93,5 @@ SOFTWARE.
     <string name="option_navigate">navigate</string>
     <string name="option_legacy">legacy</string>
     <string name="option_translated">translated</string>
+    <string name="option_more_apps">more apps</string>
 </resources>
