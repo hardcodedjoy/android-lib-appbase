@@ -46,4 +46,15 @@ SOFTWARE.
     <string name="btn_plus_add_column">+ додати стовпець</string>
     <string name="btn_plus_add_command">+ додати команду</string>
     <string name="btn_download_all_as_zip">завантажити всі як zip</string>
+    <string name="btn_plus_add_file">+ додати файл</string>
+    <string name="btn_plus_add_files">+ додати файли</string>
+    <string name="btn_plus_add_image">+ додати зображення</string>
+    <string name="btn_plus_add_images">+ додати зображення</string>
+    <string name="btn_plus_add_video">+ додати відео</string>
+    <string name="btn_plus_add_video_files">+ додати файли відео</string>
+    <string name="btn_plus_add_audio">+ додати аудіо</string>
+    <string name="btn_plus_add_audio_files">+ додати файли аудіо</string>
+    <string name="btn_plus_add_music">+ додати музику</string>
+    <string name="btn_plus_add_music_files">+ додати файли музики</string>
+    <string name="btn_plus_add_text">+ додати текст</string>
 </resources>

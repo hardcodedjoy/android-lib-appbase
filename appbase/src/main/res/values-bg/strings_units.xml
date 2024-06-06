@@ -36,6 +36,7 @@ SOFTWARE.
     <string name="unit_bit">бит</string>
     <string name="unit_kilohertz">кГц</string>
     <string name="unit_kilobits_per_second">кбит/с</string>
+    <string name="unit_frames_per_second">Кадри/с</string>
 
     <string name="item">обект</string>
     <string name="items_a">обекта</string>

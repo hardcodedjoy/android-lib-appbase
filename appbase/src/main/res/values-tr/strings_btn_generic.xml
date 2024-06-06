@@ -46,4 +46,15 @@ SOFTWARE.
     <string name="btn_plus_add_column">+ sütun ekle</string>
     <string name="btn_plus_add_command">+ komut ekle</string>
     <string name="btn_download_all_as_zip">hepsini zip olarak indir</string>
+    <string name="btn_plus_add_file">+ dosya ekle</string>
+    <string name="btn_plus_add_files">+ dosyalar ekle</string>
+    <string name="btn_plus_add_image">+ fotoğraf ekle</string>
+    <string name="btn_plus_add_images">+ fotoğraflar ekle</string>
+    <string name="btn_plus_add_video">+ video ekle</string>
+    <string name="btn_plus_add_video_files">+ video dosyaları ekle</string>
+    <string name="btn_plus_add_audio">+ ses ekle</string>
+    <string name="btn_plus_add_audio_files">+ ses dosyaları ekle</string>
+    <string name="btn_plus_add_music">+ müzik ekle</string>
+    <string name="btn_plus_add_music_files">+ müzik dosyaları ekle</string>
+    <string name="btn_plus_add_text">+ metin ekle</string>
 </resources>

@@ -142,4 +142,11 @@ SOFTWARE.
     <string name="title_index_of">Indeks</string>
     <string name="title_upload_files">Wgrywać pliki</string>
     <string name="title_del">Usuw.</string>
+    <string name="title_create_video">Utwórz wideo</string>
+    <string name="title_creating_video">Tworzenie wideo</string>
+    <string name="title_frame_rate">Przyspieszenie klatek</string>
+    <string name="title_duration">Trwanie</string>
+    <string name="title_resulting_video_duration">Trwanie video wynikowego</string>
+    <string name="title_resulting_file_size">Rozmiar pliku wynikowego</string>
+    <string name="title_key_frame_interval">Czasowość ramki kluczowej</string>
 </resources>

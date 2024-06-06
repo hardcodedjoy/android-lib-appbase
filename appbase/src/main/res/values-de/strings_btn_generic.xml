@@ -46,4 +46,15 @@ SOFTWARE.
     <string name="btn_plus_add_column">+ Spalte hinzufügen</string>
     <string name="btn_plus_add_command">+ Befehl hinzufügen</string>
     <string name="btn_download_all_as_zip">alles als ZIP herunterladen</string>
+    <string name="btn_plus_add_file">+ Datei hinzufügen</string>
+    <string name="btn_plus_add_files">+ Dateien hinzufügen</string>
+    <string name="btn_plus_add_image">+ Bild hinzufügen</string>
+    <string name="btn_plus_add_images">+ Bilder hinzufügen</string>
+    <string name="btn_plus_add_video">+ Video hinzufügen</string>
+    <string name="btn_plus_add_video_files">+ Videos hinzufügen</string>
+    <string name="btn_plus_add_audio">+ Audio hinzufügen</string>
+    <string name="btn_plus_add_audio_files">+ Audio-Dateien hinzufügen</string>
+    <string name="btn_plus_add_music">+ Musik hinzufügen</string>
+    <string name="btn_plus_add_music_files">+ Musik-Dateien hinzufügen</string>
+    <string name="btn_plus_add_text">+ Text hinzufügen</string>
 </resources>

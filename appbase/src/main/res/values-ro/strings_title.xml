@@ -142,4 +142,11 @@ SOFTWARE.
     <string name="title_index_of">Index</string>
     <string name="title_upload_files">Upload fișiere</string>
     <string name="title_del">Șterge</string>
+    <string name="title_create_video">Creare video</string>
+    <string name="title_creating_video">Se creează video</string>
+    <string name="title_frame_rate">Frame Rate</string>
+    <string name="title_duration">Durată</string>
+    <string name="title_resulting_video_duration">Durata video-ului rezultat</string>
+    <string name="title_resulting_file_size">Dimensiunea fișierului rezultat</string>
+    <string name="title_key_frame_interval">Interval Key Frame</string>
 </resources>

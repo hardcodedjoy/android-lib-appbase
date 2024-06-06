@@ -46,4 +46,15 @@ SOFTWARE.
     <string name="btn_plus_add_column">+ adaugă coloană</string>
     <string name="btn_plus_add_command">+ adaugă comandă</string>
     <string name="btn_download_all_as_zip">descarcă tot în zip</string>
+    <string name="btn_plus_add_file">+ adaugă fișier</string>
+    <string name="btn_plus_add_files">+ adaugă fișiere</string>
+    <string name="btn_plus_add_image">+ adaugă imagine</string>
+    <string name="btn_plus_add_images">+ adaugă imagini</string>
+    <string name="btn_plus_add_video">+ adaugă videoclip</string>
+    <string name="btn_plus_add_video_files">+ adaugă fișiere video</string>
+    <string name="btn_plus_add_audio">+ adaugă audio</string>
+    <string name="btn_plus_add_audio_files">+ adaugă fișiere audio</string>
+    <string name="btn_plus_add_music">+ adaugă muzică</string>
+    <string name="btn_plus_add_music_files">+ adaugă fișiere de muzică</string>
+    <string name="btn_plus_add_text">+ adaugă text</string>
 </resources>

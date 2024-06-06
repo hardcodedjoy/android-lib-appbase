@@ -93,4 +93,12 @@ SOFTWARE.
     <string name="option_legacy">трад. (legacy)</string>
     <string name="option_translated">переведенная</string>
     <string name="option_more_apps">ещё приложений</string>
+    <string name="option_add_filter">добавить фильтр</string>
+    <string name="option_add_filters">добавить фильтры</string>
+    <string name="option_add_effect">добавить эффект</string>
+    <string name="option_add_effects">добавить эффекты</string>
+    <string name="option_add_transition">добавить переход</string>
+    <string name="option_add_transitions">добавить переходы</string>
+    <string name="option_remove">удалить</string>
+    <string name="option_remove_all">удалить все</string>
 </resources>

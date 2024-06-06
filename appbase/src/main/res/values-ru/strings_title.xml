@@ -142,4 +142,11 @@ SOFTWARE.
     <string name="title_index_of">Индекс</string>
     <string name="title_upload_files">Загрузить файлы</string>
     <string name="title_del">Удал.</string>
+    <string name="title_create_video">Создать видео</string>
+    <string name="title_creating_video">Создается видео</string>
+    <string name="title_frame_rate">Скорость кадров</string>
+    <string name="title_duration">Длительность</string>
+    <string name="title_resulting_video_duration">Длительность полученного видео</string>
+    <string name="title_resulting_file_size">Размер полученного файла</string>
+    <string name="title_key_frame_interval">Интервал ключевых кадров</string>
 </resources>

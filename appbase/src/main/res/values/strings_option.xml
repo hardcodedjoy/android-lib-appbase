@@ -94,4 +94,12 @@ SOFTWARE.
     <string name="option_legacy">legacy</string>
     <string name="option_translated">translated</string>
     <string name="option_more_apps">more apps</string>
+    <string name="option_add_filter">add filter</string>
+    <string name="option_add_filters">add filters</string>
+    <string name="option_add_effect">add effect</string>
+    <string name="option_add_effects">add effects</string>
+    <string name="option_add_transition">add transition</string>
+    <string name="option_add_transitions">add transitions</string>
+    <string name="option_remove">remove</string>
+    <string name="option_remove_all">remove all</string>
 </resources>

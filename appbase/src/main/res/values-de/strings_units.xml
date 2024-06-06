@@ -36,6 +36,7 @@ SOFTWARE.
     <string name="unit_bit">Bit</string>
     <string name="unit_kilohertz">kHz</string>
     <string name="unit_kilobits_per_second">kbit/s</string>
+    <string name="unit_frames_per_second">FPS</string>
 
     <string name="item">Element</string>
     <string name="items_a">Elemente</string>

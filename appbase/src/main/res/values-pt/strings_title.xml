@@ -142,4 +142,11 @@ SOFTWARE.
     <string name="title_index_of">Índice de</string>
     <string name="title_upload_files">Carregar arquivos</string>
     <string name="title_del">Excl.</string>
+    <string name="title_create_video">Criar vídeo</string>
+    <string name="title_creating_video">A criar vídeo</string>
+    <string name="title_frame_rate">Taxa de quadros</string>
+    <string name="title_duration">Duração</string>
+    <string name="title_resulting_video_duration">Duração do vídeo resultante</string>
+    <string name="title_resulting_file_size">Tamanho do ficheiro resultante</string>
+    <string name="title_key_frame_interval">Intervalo de frames chave</string>
 </resources>

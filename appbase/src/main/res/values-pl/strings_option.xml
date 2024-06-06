@@ -93,4 +93,12 @@ SOFTWARE.
     <string name="option_legacy">starszy (legacy)</string>
     <string name="option_translated">przetłumaczone</string>
     <string name="option_more_apps">więcej aplikacji</string>
+    <string name="option_add_filter">dodaj filtr</string>
+    <string name="option_add_filters">dodaj filtry</string>
+    <string name="option_add_effect">dodaj efekt</string>
+    <string name="option_add_effects">dodaj efekty</string>
+    <string name="option_add_transition">dodaj przekładkę</string>
+    <string name="option_add_transitions">dodaj przekładki</string>
+    <string name="option_remove">usunąć</string>
+    <string name="option_remove_all">usunąć wszystkie</string>
 </resources>

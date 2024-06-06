@@ -142,4 +142,11 @@ SOFTWARE.
     <string name="title_index_of">Index von</string>
     <string name="title_upload_files">Daten hochladen</string>
     <string name="title_del">Lösch.</string>
+    <string name="title_create_video">Video erstellen</string>
+    <string name="title_creating_video">Video erstellt wird</string>
+    <string name="title_frame_rate">Framenrate</string>
+    <string name="title_duration">Dauer</string>
+    <string name="title_resulting_video_duration">Dauer des Ergebnis-Videos</string>
+    <string name="title_resulting_file_size">Größe des Ergebnis-Datei</string>
+    <string name="title_key_frame_interval">Keyframe-Intervall</string>
 </resources>
