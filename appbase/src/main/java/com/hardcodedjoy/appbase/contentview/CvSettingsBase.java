@@ -37,7 +37,7 @@ import com.hardcodedjoy.appbase.R;
 import com.hardcodedjoy.appbase.SettingsBase;
 import com.hardcodedjoy.appbase.SettingsKeys;
 import com.hardcodedjoy.appbase.gui.GuiLinker;
-import com.hardcodedjoy.appbase.gui.SetGetter;
+import com.hardcodedjoy.appbase.setgetters.SetGetter;
 import com.hardcodedjoy.appbase.gui.ThemeUtil;
 import com.hardcodedjoy.appbase.popup.PopupInfo;
 

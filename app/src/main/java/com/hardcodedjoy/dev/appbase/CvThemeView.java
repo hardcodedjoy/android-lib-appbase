@@ -32,7 +32,7 @@ import android.widget.RadioGroup;
 
 import com.hardcodedjoy.appbase.contentview.ContentView;
 import com.hardcodedjoy.appbase.gui.GuiLinker;
-import com.hardcodedjoy.appbase.gui.SetGetter;
+import com.hardcodedjoy.appbase.setgetters.SetGetter;
 import com.hardcodedjoy.appbase.gui.ThemeUtil;
 
 @SuppressLint("ViewConstructor")

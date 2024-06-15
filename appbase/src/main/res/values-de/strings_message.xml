@@ -47,4 +47,5 @@ SOFTWARE.
     <string name="no_files_selected">Keine Dateien ausgewählt.</string>
     <string name="files_selected">Dateien ausgewählt.</string>
     <string name="selection_must_be_positive">Auswahl muss positiv sein.</string>
+    <string name="done">Fertig.</string>
 </resources>

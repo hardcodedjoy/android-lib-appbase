@@ -47,4 +47,5 @@ SOFTWARE.
     <string name="no_files_selected">Няма избрани файлове.</string>
     <string name="files_selected">избрани файлове.</string>
     <string name="selection_must_be_positive">Селекцията трябва да е положителна.</string>
+    <string name="done">Готово.</string>
 </resources>

@@ -51,6 +51,9 @@ import com.hardcodedjoy.appbase.StringUtil;
 import com.hardcodedjoy.appbase.contentview.ContentView;
 import com.hardcodedjoy.appbase.popup.Option;
 import com.hardcodedjoy.appbase.popup.PopupChoose;
+import com.hardcodedjoy.appbase.popup.PopupColorPicker;
+import com.hardcodedjoy.appbase.setgetters.IntSetGetter;
+import com.hardcodedjoy.appbase.setgetters.SetGetter;
 
 import java.util.Vector;
 
@@ -216,6 +219,63 @@ public class GuiLinker {
         et.setOnClickListener(ocl);
         btn.setOnClickListener(ocl);
     }
+
+
+
+    static public void linkColorField(LinearLayout llColor,
+                                      String colorPickerTitle,
+                                      IntSetGetter intSetGetter) {
+        EditText et = null;
+        ImageButton btn = null;
+        for(int i=0; i<llColor.getChildCount(); i++) {
+            View view = llColor.getChildAt(i);
+            if(view instanceof EditText) { et = (EditText) view; }
+            else if(view instanceof ImageButton) { btn = (ImageButton) view; }
+        }
+        final EditText editText = et;
+        final ImageButton button = btn;
+
+        if(editText != null) {
+            GuiLinker.link(editText, new SetGetter() {
+                @Override
+                public void set(String colorHex) {
+                    int color = 0;
+                    try {
+                        //noinspection PointlessBitwiseExpression
+                        color = (int)(Long.parseLong(colorHex, 16) & 0xFFFFFFFF);
+                    } catch (Exception e) { e.printStackTrace(System.err); }
+
+                    if(button != null) { ViewUtil.setColorOnImageView(button, color); }
+                    intSetGetter.set(color);
+                }
+                @Override
+                public String get() {
+                    int color = intSetGetter.get();
+                    return String.format("%08X", color);
+                }
+            });
+        }
+
+        if(button != null) {
+            PopupColorPicker colorPicker = new PopupColorPicker(
+                    colorPickerTitle, null, intSetGetter.get()) {
+                @Override
+                public void onOK(int colorNew) {
+                    intSetGetter.set(colorNew);
+                    editText.setText(String.format("%08X", colorNew));
+                    ViewUtil.setColorOnImageView(button, colorNew);
+                }
+            };
+            button.setOnClickListener(view -> colorPicker.show());
+        }
+    }
+
+    static public void linkColorField(LinearLayout llColor,
+                                      int colorPickerTitleResId,
+                                      IntSetGetter intSetGetter) {
+        linkColorField(llColor, ContentView.getString(colorPickerTitleResId), intSetGetter);
+    }
+
 
     @SuppressWarnings("unused")
     static public void setHandleImage(ToggleButton tb, Drawable drawable) {

@@ -35,6 +35,7 @@ SOFTWARE.
     <string name="title_loading">Загрузка</string>
     <string name="title_opening">Открывается</string>
     <string name="title_please_wait">Пожалуйста, подождите</string>
+    <string name="title_process">Обработай</string>
     <string name="title_processing">Обработка</string>
     <string name="title_rename">Переименовать</string>
     <string name="title_copy">Копировать</string>
@@ -119,7 +120,10 @@ SOFTWARE.
     <string name="title_output_size">Выходной размер</string>
     <string name="title_output_width">Выходная ширина</string>
     <string name="title_output_height">Выходная высота</string>
+    <string name="title_color">Цвет</string>
     <string name="title_text_color">Цвет текста</string>
+    <string name="title_line_color">Цвет линии</string>
+    <string name="title_foreground_color">Цвет переднего плана</string>
     <string name="title_background_color">Цвет фона</string>
     <string name="title_shadow_color">Цвет тени</string>
     <string name="title_shadow_size">Размер тени</string>

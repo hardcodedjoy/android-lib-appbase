@@ -47,4 +47,5 @@ SOFTWARE.
     <string name="no_files_selected">Niciun fișier selectat.</string>
     <string name="files_selected">fișiere selectate.</string>
     <string name="selection_must_be_positive">Selecția trebuie să fie pozitivă.</string>
+    <string name="done">Efectuat.</string>
 </resources>

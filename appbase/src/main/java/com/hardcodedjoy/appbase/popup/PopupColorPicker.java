@@ -41,7 +41,7 @@ import android.widget.TextView;
 import com.hardcodedjoy.appbase.R;
 import com.hardcodedjoy.appbase.contentview.ContentView;
 import com.hardcodedjoy.appbase.gui.GuiLinker;
-import com.hardcodedjoy.appbase.gui.SetGetter;
+import com.hardcodedjoy.appbase.setgetters.SetGetter;
 
 abstract public class PopupColorPicker extends Popup {
 
@@ -271,8 +271,12 @@ abstract public class PopupColorPicker extends Popup {
     @SuppressWarnings("unused")
     public PopupColorPicker(int titleStringId, int messageStringId, int colorOld) {
         this(ContentView.getString(titleStringId),
-                ContentView.getString(messageStringId),
-                colorOld);
+                ContentView.getString(messageStringId), colorOld);
+    }
+
+    @SuppressWarnings("unused")
+    public PopupColorPicker(int titleStringId, int colorOld) {
+        this(ContentView.getString(titleStringId), null, colorOld);
     }
 
     public PopupColorPicker(int colorOld) {

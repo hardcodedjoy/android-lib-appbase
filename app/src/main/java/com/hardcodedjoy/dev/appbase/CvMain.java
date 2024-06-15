@@ -47,6 +47,8 @@ public class CvMain extends CvTMSLL {
         ops.add(new Option(R.drawable.ic_image_1, R.string.icons, () -> new CvIcons().show()));
         ops.add(new Option(R.drawable.ic_preview_1, R.string.theme_view, () -> new CvThemeView().show()));
 
+        ops.add(new Option(R.drawable.ic_circle_2, "Color Test", () -> new CvColorTest().show()));
+
         Option optionDisabled = new Option(R.drawable.ic_clear_1, "disabled option", () -> {});
         optionDisabled.setDrawAsDisabled(true);
         ops.add(optionDisabled);

@@ -35,6 +35,7 @@ SOFTWARE.
     <string name="title_loading">Se încarcă</string>
     <string name="title_opening">Se deschide</string>
     <string name="title_please_wait">Vă rugăm așteptați</string>
+    <string name="title_process">Procesează</string>
     <string name="title_processing">Se procesează</string>
     <string name="title_rename">Redenumire</string>
     <string name="title_copy">Copiază</string>
@@ -119,7 +120,10 @@ SOFTWARE.
     <string name="title_output_size">Dimensiune ieșire</string>
     <string name="title_output_width">Lățime ieșire</string>
     <string name="title_output_height">Înălțime ieșire</string>
+    <string name="title_color">Culoare</string>
     <string name="title_text_color">Culoare text</string>
+    <string name="title_line_color">Culoare linie</string>
+    <string name="title_foreground_color">Culoare prim plan</string>
     <string name="title_background_color">Culoare fundal</string>
     <string name="title_shadow_color">Culoare umbră</string>
     <string name="title_shadow_size">Dimensiune umbră</string>

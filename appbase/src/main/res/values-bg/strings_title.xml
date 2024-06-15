@@ -35,6 +35,7 @@ SOFTWARE.
     <string name="title_loading">Зареждане</string>
     <string name="title_opening">Отваряне</string>
     <string name="title_please_wait">Моля, изчакайте</string>
+    <string name="title_process">Обработете</string>
     <string name="title_processing">Обработване</string>
     <string name="title_rename">Преименуване</string>
     <string name="title_copy">Копиране</string>
@@ -119,7 +120,10 @@ SOFTWARE.
     <string name="title_output_size">Размер на изхода</string>
     <string name="title_output_width">Изходна ширина</string>
     <string name="title_output_height">Изходна височина</string>
+    <string name="title_color">Цвят</string>
     <string name="title_text_color">Цвят на текста</string>
+    <string name="title_line_color">Цвят на линията</string>
+    <string name="title_foreground_color">Цвят на преден план</string>
     <string name="title_background_color">Цвят на фона</string>
     <string name="title_shadow_color">Цвят на сянката</string>
     <string name="title_shadow_size">Размер на сянката</string>

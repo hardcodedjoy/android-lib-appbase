@@ -35,6 +35,7 @@ SOFTWARE.
     <string name="title_loading">Yükleniyor</string>
     <string name="title_opening">Açılıyor</string>
     <string name="title_please_wait">Lütfen bekleyin</string>
+    <string name="title_process">İşle</string>
     <string name="title_processing">İşleniyor</string>
     <string name="title_rename">Yeniden adlandırma</string>
     <string name="title_copy">Kopyala</string>
@@ -119,7 +120,10 @@ SOFTWARE.
     <string name="title_output_size">Çıkış Boyutu</string>
     <string name="title_output_width">Çıkış Genişliği</string>
     <string name="title_output_height">Çıkış Yüksekliği</string>
+    <string name="title_color">Renk</string>
     <string name="title_text_color">Yazı Rengi</string>
+    <string name="title_line_color">Çizgi rengi</string>
+    <string name="title_foreground_color">Önplan Rengi</string>
     <string name="title_background_color">Arkaplan Rengi</string>
     <string name="title_shadow_color">Gölge Rengi</string>
     <string name="title_shadow_size">Gölge Boyutu</string>

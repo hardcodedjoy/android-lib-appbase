@@ -26,9 +26,12 @@ SOFTWARE.
 
 package com.hardcodedjoy.appbase.gui;
 
+import android.graphics.Bitmap;
 import android.graphics.RectF;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class ViewUtil {
 
@@ -54,5 +57,18 @@ public class ViewUtil {
         view.setLayoutParams(params);
         view.setX(rect.left);
         view.setY(rect.top);
+    }
+
+    static public void setColorOnImageView(View view, int color) {
+        view.post(() -> {
+            int w = view.getWidth() - (view.getPaddingLeft() + view.getPaddingRight());
+            int h = view.getHeight() - (view.getPaddingTop() + view.getPaddingBottom());
+            if(w < 1 || h < 1) { return; }
+            Bitmap bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+            bitmap.eraseColor(color);
+            if(view instanceof ImageView) { // ImageButton is also an ImageView
+                ((ImageView)view).setImageBitmap(bitmap);
+            }
+        });
     }
 }

@@ -24,9 +24,9 @@ SOFTWARE.
 
 */
 
-package com.hardcodedjoy.appbase.gui;
+package com.hardcodedjoy.appbase.setgetters;
 
-public interface SetGetter {
-    void set(String value);
-    String get();
+public interface LongSetGetter {
+    void set(long value);
+    long get();
 }

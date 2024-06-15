@@ -35,6 +35,7 @@ SOFTWARE.
     <string name="title_loading">Caricamento</string>
     <string name="title_opening">Apertura</string>
     <string name="title_please_wait">Attendere prego</string>
+    <string name="title_process">Elaborare</string>
     <string name="title_processing">Elaborazione</string>
     <string name="title_rename">Rinomina</string>
     <string name="title_copy">Copia</string>
@@ -119,7 +120,10 @@ SOFTWARE.
     <string name="title_output_size">Dimensione output</string>
     <string name="title_output_width">Larghezza output</string>
     <string name="title_output_height">Altezza output</string>
+    <string name="title_color">Colore</string>
     <string name="title_text_color">Colore del testo</string>
+    <string name="title_line_color">Colore della linea</string>
+    <string name="title_foreground_color">Colore di primo piano</string>
     <string name="title_background_color">Colore di sfondo</string>
     <string name="title_shadow_color">Colore dell\'ombra</string>
     <string name="title_shadow_size">Dimensione dell\'ombra</string>

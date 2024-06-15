@@ -47,4 +47,5 @@ SOFTWARE.
     <string name="no_files_selected">Hiçbir dosya seçilmedi.</string>
     <string name="files_selected">seçilen dosyalar.</string>
     <string name="selection_must_be_positive">Seçim olumlu olmalı.</string>
+    <string name="done">Yapıldı.</string>
 </resources>
