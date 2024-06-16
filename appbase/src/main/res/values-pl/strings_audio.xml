@@ -24,7 +24,6 @@ SOFTWARE.
 -->
 
 <resources>
-    <string name="audio">Audio</string>
     <string name="audio_source">Źródło audio</string>
     <string name="sample_rate">Częstotliwość próbkowania</string>
     <string name="channels">Kanały</string>

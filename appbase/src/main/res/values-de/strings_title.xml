@@ -153,4 +153,7 @@ SOFTWARE.
     <string name="title_resulting_video_duration">Dauer des Ergebnis-Videos</string>
     <string name="title_resulting_file_size">Größe des Ergebnis-Datei</string>
     <string name="title_key_frame_interval">Keyframe-Intervall</string>
+    <string name="title_audio">Audio</string>
+    <string name="title_video">Video</string>
+    <string name="title_x_images">[x] Bilder</string>
 </resources>

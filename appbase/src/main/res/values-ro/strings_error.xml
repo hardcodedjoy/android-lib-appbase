@@ -63,4 +63,7 @@ SOFTWARE.
     <string name="err_syntax_error">EROARE DE SINTAXĂ</string>
     <string name="err_error_reading_file_content">EROARE LA CITIREA CONȚINUTULUI FIȘIERULUI</string>
     <string name="err_error_writing_file_content">EROARE LA SCRIEREA CONȚINUTULUI FIȘIERULUI</string>
+    <string name="err_no_files_to_save">LIPSĂ FIȘIERE DE SALVAT</string>
+    <string name="err_no_files_to_share">LIPSĂ FIȘIERE DE DISTRIBUIT</string>
+    <string name="err_no_files_to_export">LIPSĂ FIȘIERE DE EXPORTAT</string>
 </resources>

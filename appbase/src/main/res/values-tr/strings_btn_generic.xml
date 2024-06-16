@@ -57,4 +57,19 @@ SOFTWARE.
     <string name="btn_plus_add_music">+ müzik ekle</string>
     <string name="btn_plus_add_music_files">+ müzik dosyaları ekle</string>
     <string name="btn_plus_add_text">+ metin ekle</string>
+    <string name="btn_save_x_files">Kaydet [x] dosyalar</string>
+    <string name="btn_save_x_images">Kaydet [x] resimler</string>
+    <string name="btn_save_x_audio_files">Kaydet [x] ses dosyaları</string>
+    <string name="btn_save_x_video_files">Kaydet [x] video dosyaları</string>
+    <string name="btn_save_x_text_files">Kaydet [x] metin dosyaları</string>
+    <string name="btn_export_x_files">İçe aktar [x] dosyalar</string>
+    <string name="btn_export_x_images">İçe aktar [x] resimler</string>
+    <string name="btn_export_x_audio_files">İçe aktar [x] ses dosyaları</string>
+    <string name="btn_export_x_video_files">İçe aktar [x] video dosyaları</string>
+    <string name="btn_export_x_text_files">İçe aktar [x] metin dosyaları</string>
+    <string name="btn_share_x_files">Paylaş [x] dosyalar</string>
+    <string name="btn_share_x_images">Paylaş [x] resimler</string>
+    <string name="btn_share_x_video_files">Paylaş [x] video dosyaları</string>
+    <string name="btn_share_x_text_files">Paylaş [x] metin dosyaları</string>
+    <string name="btn_share_x_audio_files">Paylaş [x] ses dosyaları</string>
 </resources>

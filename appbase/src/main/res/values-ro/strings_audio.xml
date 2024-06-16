@@ -24,7 +24,6 @@ SOFTWARE.
 -->
 
 <resources>
-    <string name="audio">Audio</string>
     <string name="audio_source">Sursă audio</string>
     <string name="sample_rate">Frecv. de Eșantionare</string>
     <string name="channels">Canale</string>

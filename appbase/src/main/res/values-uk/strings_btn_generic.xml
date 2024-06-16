@@ -57,4 +57,19 @@ SOFTWARE.
     <string name="btn_plus_add_music">+ додати музику</string>
     <string name="btn_plus_add_music_files">+ додати файли музики</string>
     <string name="btn_plus_add_text">+ додати текст</string>
+    <string name="btn_save_x_files">Зберегти [x] файли</string>
+    <string name="btn_save_x_images">Зберегти [x] зображення</string>
+    <string name="btn_save_x_audio_files">Зберегти [x] аудіофайли</string>
+    <string name="btn_save_x_video_files">Зберегти [x] відеофайли</string>
+    <string name="btn_save_x_text_files">Зберегти [x] текстові файли</string>
+    <string name="btn_export_x_files">Експорт [x] файли</string>
+    <string name="btn_export_x_images">Експорт [x] зображення</string>
+    <string name="btn_export_x_audio_files">Експорт [x] аудіофайли</string>
+    <string name="btn_export_x_video_files">Експорт [x] відеофайли</string>
+    <string name="btn_export_x_text_files">Експорт [x] текстові файли</string>
+    <string name="btn_share_x_files">Поділіться [x] файлами</string>
+    <string name="btn_share_x_images">Поділіться [x] зображеннями</string>
+    <string name="btn_share_x_video_files">Поділіться [x] відеофайлами</string>
+    <string name="btn_share_x_text_files">Поділіться [x] текстовими файлами</string>
+    <string name="btn_share_x_audio_files">Поділіться [x] аудіофайлами</string>
 </resources>

@@ -57,4 +57,19 @@ SOFTWARE.
     <string name="btn_plus_add_music">+ adicionar música</string>
     <string name="btn_plus_add_music_files">+ adicionar ficheiros de música</string>
     <string name="btn_plus_add_text">+ adicionar texto</string>
+    <string name="btn_save_x_files">Guardar [x] ficheiros</string>
+    <string name="btn_save_x_images">Guardar [x] imagens</string>
+    <string name="btn_save_x_audio_files">Guardar [x] ficheiros de áudio</string>
+    <string name="btn_save_x_video_files">Guardar [x] ficheiros de vídeo</string>
+    <string name="btn_save_x_text_files">Guardar [x] ficheiros de texto</string>
+    <string name="btn_export_x_files">Exportar [x] ficheiros</string>
+    <string name="btn_export_x_images">Exportar [x] imagens</string>
+    <string name="btn_export_x_audio_files">Exportar [x] ficheiros de áudio</string>
+    <string name="btn_export_x_video_files">Exportar [x] ficheiros de vídeo</string>
+    <string name="btn_export_x_text_files">Exportar [x] ficheiros de texto</string>
+    <string name="btn_share_x_files">Compartilhar [x] ficheiros</string>
+    <string name="btn_share_x_images">Compartilhar [x] imagens</string>
+    <string name="btn_share_x_video_files">Compartilhar [x] ficheiros de vídeo</string>
+    <string name="btn_share_x_text_files">Compartilhar [x] ficheiros de texto</string>
+    <string name="btn_share_x_audio_files">Compartilhar [x] ficheiros de áudio</string>
 </resources>

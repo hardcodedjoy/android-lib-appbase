@@ -63,4 +63,7 @@ SOFTWARE.
     <string name="err_syntax_error">СИНТАКТИЧНА ГРЕШКА</string>
     <string name="err_error_reading_file_content">ГРЕШКА ПРИ ЧЕТЕНЕ НА ФАЙЛОВО СЪДЪРЖАНИЕ</string>
     <string name="err_error_writing_file_content">ГРЕШКА ПРИ ЗАПИС НА ФАЙЛОВО СЪДЪРЖАНИЕ</string>
+    <string name="err_no_files_to_save">НЯМА ФАЙЛОВЕ ЗА ЗАПАЗВАНЕ</string>
+    <string name="err_no_files_to_share">НЯМА ФАЙЛОВЕ ЗА СПОДЕЛЯНЕ</string>
+    <string name="err_no_files_to_export">НЯМА ФАЙЛОВЕ ЗА ЕКСПОРТ</string>
 </resources>

@@ -57,4 +57,19 @@ SOFTWARE.
     <string name="btn_plus_add_music">+ adaugă muzică</string>
     <string name="btn_plus_add_music_files">+ adaugă fișiere de muzică</string>
     <string name="btn_plus_add_text">+ adaugă text</string>
+    <string name="btn_save_x_files">Salvează [x] fișiere</string>
+    <string name="btn_save_x_images">Salvează [x] imagini</string>
+    <string name="btn_save_x_audio_files">Salvează [x] fișiere audio</string>
+    <string name="btn_save_x_video_files">Salvează [x] fișiere video</string>
+    <string name="btn_save_x_text_files">Salvează [x] fișiere text</string>
+    <string name="btn_export_x_files">Export [x] fișiere</string>
+    <string name="btn_export_x_images">Export [x] imagini</string>
+    <string name="btn_export_x_audio_files">Export [x] fișiere audio</string>
+    <string name="btn_export_x_video_files">Export [x] fișiere video</string>
+    <string name="btn_export_x_text_files">Export [x] fișiere de text</string>
+    <string name="btn_share_x_files">Partajează [x] fișiere</string>
+    <string name="btn_share_x_images">Partajează [x] imagini</string>
+    <string name="btn_share_x_video_files">Partajează [x] fișiere video</string>
+    <string name="btn_share_x_text_files">Partajează [x] fișiere text</string>
+    <string name="btn_share_x_audio_files">Partajează [x] fișiere audio</string>
 </resources>

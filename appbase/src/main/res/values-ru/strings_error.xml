@@ -63,4 +63,7 @@ SOFTWARE.
     <string name="err_syntax_error">СИНТАКСИЧЕСКАЯ ОШИБКА</string>
     <string name="err_error_reading_file_content">ОШИБКА ПРИ ЧТЕНИИ СОДЕРЖИМОГО ФАЙЛА</string>
     <string name="err_error_writing_file_content">ОШИБКА ПРИ ЗАПИСИ СОДЕРЖИМОГО ФАЙЛА</string>
+    <string name="err_no_files_to_save">НЕТ ФАЙЛОВ ДЛЯ СОХРАНЕНИЯ</string>
+    <string name="err_no_files_to_share">НЕТ ФАЙЛОВ ДЛЯ ОБМЕНА</string>
+    <string name="err_no_files_to_export">НЕТ ФАЙЛОВ ДЛЯ ЭКСПОРТА</string>
 </resources>

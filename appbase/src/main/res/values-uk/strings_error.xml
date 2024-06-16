@@ -63,4 +63,7 @@ SOFTWARE.
     <string name="err_syntax_error">СИНТАКСИЧНА ПОМИЛКА</string>
     <string name="err_error_reading_file_content">ПОМИЛКА ПРИ ЧИТАННІ ВМІСТУ ФАЙЛУ</string>
     <string name="err_error_writing_file_content">ПОМИЛКА ПРИ ЗАПИСУ ВМІСТУ ФАЙЛУ</string>
+    <string name="err_no_files_to_save">НЕМАЄ ФАЙЛІВ ДЛЯ ЗБЕРЕЖЕННЯ</string>
+    <string name="err_no_files_to_share">НЕМАЄ ФАЙЛІВ ДЛЯ ОБМІНУ</string>
+    <string name="err_no_files_to_export">НЕМАЄ ФАЙЛІВ ДЛЯ ЕКСПОРТУ</string>
 </resources>

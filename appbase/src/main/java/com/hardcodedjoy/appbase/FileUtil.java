@@ -322,4 +322,19 @@ public class FileUtil {
         if(ext != null) { s += "." + ext; }
         return s;
     }
+
+    static public File newFileUniqueName(File dir, String fileName) {
+        String base = getNameBase(fileName);
+        String ext = getExtension(fileName);
+        File file = new File(dir, fileName);
+        if(file.exists()) {
+            int n = 1;
+            while(file.exists()) {
+                fileName = base + " (" + n + ")." + ext;
+                file = new File(dir, fileName);
+                n++;
+            }
+        }
+        return file;
+    }
 }

@@ -55,11 +55,13 @@ public class CvTSLL extends ContentView { // Content View with Title and LL in S
         tvTitle.setText(titleResId);
     }
 
+    @SuppressWarnings("unused")
     public void setTitleTextSize(float sp) {
         TextView tvTitle = findViewById(R.id.appbase_tv_title);
         tvTitle.setTextSize(sp);
     }
 
+    @SuppressWarnings("unused")
     public void restoreTitleTextSize() {
         TextView tvTitle = findViewById(R.id.appbase_tv_title);
         tvTitle.setTextSize(titleTextSizeDefault);

@@ -24,7 +24,6 @@ SOFTWARE.
 -->
 
 <resources>
-    <string name="audio">Audio</string>
     <string name="audio_source">Audioquelle</string>
     <string name="sample_rate">Abtastrate</string>
     <string name="channels">Kanäle</string>

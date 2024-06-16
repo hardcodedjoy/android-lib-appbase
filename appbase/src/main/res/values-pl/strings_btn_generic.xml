@@ -57,4 +57,19 @@ SOFTWARE.
     <string name="btn_plus_add_music">+ dodaj muzykę</string>
     <string name="btn_plus_add_music_files">+ dodaj pliki muzyczne</string>
     <string name="btn_plus_add_text">+ dodaj tekst</string>
+    <string name="btn_save_x_files">Zapisz [x] pliki</string>
+    <string name="btn_save_x_images">Zapisz [x] obrazy</string>
+    <string name="btn_save_x_audio_files">Zapisz [x] pliki audio</string>
+    <string name="btn_save_x_video_files">Zapisz [x] pliki wideo</string>
+    <string name="btn_save_x_text_files">Zapisz [x] pliki tekstowe</string>
+    <string name="btn_export_x_files">Eksport [x] pliki</string>
+    <string name="btn_export_x_images">Eksport [x] obrazy</string>
+    <string name="btn_export_x_audio_files">Eksport [x] pliki audio</string>
+    <string name="btn_export_x_video_files">Eksport [x] pliki wideo</string>
+    <string name="btn_export_x_text_files">Eksport [x] pliki tekstowe</string>
+    <string name="btn_share_x_files">Podziel [x] pliki</string>
+    <string name="btn_share_x_images">Podziel [x] obrazy</string>
+    <string name="btn_share_x_video_files">Podziel [x] pliki wideo</string>
+    <string name="btn_share_x_text_files">Podziel [x] pliki tekstowe</string>
+    <string name="btn_share_x_audio_files">Podziel [x] pliki audio</string>
 </resources>

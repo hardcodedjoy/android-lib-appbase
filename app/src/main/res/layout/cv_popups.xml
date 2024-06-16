@@ -49,16 +49,17 @@ SOFTWARE.
             android:text="@string/popups"
             tools:ignore="RtlHardcoded" />
 
-        <ImageView
-            android:id="@+id/appbase_iv_menu"
+        <ImageButton
+            android:id="@+id/appbase_btn_menu"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="5dp"
+            android:padding="1dp"
             android:src="@drawable/ic_menu_1"
             android:tint="?android:colorBackground"
+            android:visibility="invisible"
             android:layout_gravity="center_vertical|right"
-            tools:ignore="ContentDescription,RtlHardcoded"
-            android:visibility="invisible"/>
+            tools:ignore="ContentDescription,RtlHardcoded" />
 
     </FrameLayout>
 

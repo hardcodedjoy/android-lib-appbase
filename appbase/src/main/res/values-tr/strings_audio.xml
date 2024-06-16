@@ -24,7 +24,6 @@ SOFTWARE.
 -->
 
 <resources>
-    <string name="audio">Ses</string>
     <string name="audio_source">Ses Kaynağı</string>
     <string name="sample_rate">Örnekleme Oranı</string>
     <string name="channels">Kanallar</string>

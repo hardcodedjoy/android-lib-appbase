@@ -24,7 +24,6 @@ SOFTWARE.
 -->
 
 <resources>
-    <string name="audio">Áudio</string>
     <string name="audio_source">Fonte de áudio</string>
     <string name="sample_rate">Taxa de amostragem</string>
     <string name="channels">Canais</string>

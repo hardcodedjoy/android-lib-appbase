@@ -33,6 +33,8 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.hardcodedjoy.appbase.R;
+
 public class ViewUtil {
 
     static public RectF getRect(View view) {

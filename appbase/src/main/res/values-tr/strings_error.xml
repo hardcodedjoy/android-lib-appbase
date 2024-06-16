@@ -63,4 +63,7 @@ SOFTWARE.
     <string name="err_syntax_error">SÖZ DİZİMİ HATASI</string>
     <string name="err_error_reading_file_content">DOSYA İÇERİĞİ OKUNURKEN HATA</string>
     <string name="err_error_writing_file_content">DOSYA İÇERİĞİ YAZILIRKEN HATA</string>
+    <string name="err_no_files_to_save">KAYDEDİLECEK DOSYA YOK</string>
+    <string name="err_no_files_to_share">PAYLAŞILACAK DOSYA YOK</string>
+    <string name="err_no_files_to_export">DIŞA AKTARILACAK DOSYA YOK</string>
 </resources>

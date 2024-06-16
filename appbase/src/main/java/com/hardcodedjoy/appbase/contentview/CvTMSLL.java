@@ -48,7 +48,7 @@ public class CvTMSLL extends CvTM { // Title / Menu / ScrollView / LinearLayout
         FrameLayout flMenuOptions = findViewById(R.id.appbase_fl_menu_options);
         llMenuOptions = flMenuOptions.findViewById(R.id.appbase_ll_menu_options);
 
-        findViewById(R.id.appbase_iv_menu).setOnClickListener(view -> {
+        findViewById(R.id.appbase_btn_menu).setOnClickListener(view -> {
             if(llMenuOptions.getVisibility() == View.VISIBLE) {
                 hideMenu();
             } else if(llMenuOptions.getVisibility() == View.GONE) {

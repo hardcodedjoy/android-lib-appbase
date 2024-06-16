@@ -24,7 +24,6 @@ SOFTWARE.
 -->
 
 <resources>
-    <string name="audio">Аудіо</string>
     <string name="audio_source">Джерело аудіо</string>
     <string name="sample_rate">Частота дискретизації</string>
     <string name="channels">Канали</string>

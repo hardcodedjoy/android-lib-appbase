@@ -57,4 +57,19 @@ SOFTWARE.
     <string name="btn_plus_add_music">+ добави музика</string>
     <string name="btn_plus_add_music_files">+ добави музикални файлове</string>
     <string name="btn_plus_add_text">+ добави текст</string>
+    <string name="btn_save_x_files">Запиши [x] файлове</string>
+    <string name="btn_save_x_images">Запиши [x] снимки</string>
+    <string name="btn_save_x_audio_files">Запиши [x] аудио файлове</string>
+    <string name="btn_save_x_video_files">Запиши [x] видео файлове</string>
+    <string name="btn_save_x_text_files">Запиши [x] текстови файлове</string>
+    <string name="btn_export_x_files">Експорт [x] файлове</string>
+    <string name="btn_export_x_images">Експорт [x] снимки</string>
+    <string name="btn_export_x_audio_files">Експорт [x] аудио файлове</string>
+    <string name="btn_export_x_video_files">Експорт [x] видео файлове</string>
+    <string name="btn_export_x_text_files">Експорт [x] текстови файлове</string>
+    <string name="btn_share_x_files">Сподели [x] файлове</string>
+    <string name="btn_share_x_images">Сподели [x] снимки</string>
+    <string name="btn_share_x_video_files">Сподели [x] видео файлове</string>
+    <string name="btn_share_x_text_files">Сподели [x] текстови файлове</string>
+    <string name="btn_share_x_audio_files">Сподели [x] аудио файлове</string>
 </resources>

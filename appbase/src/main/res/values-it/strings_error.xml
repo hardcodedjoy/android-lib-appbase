@@ -63,4 +63,7 @@ SOFTWARE.
     <string name="err_syntax_error">ERRORE DI SINTAXI</string>
     <string name="err_error_reading_file_content">ERRORE DI LETTURA DEL CONTENUTO DEL FILE</string>
     <string name="err_error_writing_file_content">ERRORE DI SCRITTURA DEL CONTENUTO DEL FILE</string>
+    <string name="err_no_files_to_save">NESSUN FILE DA SALVARE</string>
+    <string name="err_no_files_to_share">NESSUN FILE DA CONDIVIDERE</string>
+    <string name="err_no_files_to_export">NESSUN FILE DA ESPORTARE</string>
 </resources>
