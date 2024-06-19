@@ -66,4 +66,5 @@ SOFTWARE.
     <string name="err_no_files_to_save">NO FILES TO SAVE</string>
     <string name="err_no_files_to_share">NO FILES TO SHARE</string>
     <string name="err_no_files_to_export">NO FILES TO EXPORT</string>
+    <string name="err_file_format_not_supported">FILE FORMAT NOT SUPPORTED</string>
 </resources>

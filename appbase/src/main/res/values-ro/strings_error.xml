@@ -66,4 +66,5 @@ SOFTWARE.
     <string name="err_no_files_to_save">LIPSĂ FIȘIERE DE SALVAT</string>
     <string name="err_no_files_to_share">LIPSĂ FIȘIERE DE DISTRIBUIT</string>
     <string name="err_no_files_to_export">LIPSĂ FIȘIERE DE EXPORTAT</string>
+    <string name="err_file_format_not_supported">FORMATUL FIȘIERULUI NU ESTE ACCEPTAT</string>
 </resources>

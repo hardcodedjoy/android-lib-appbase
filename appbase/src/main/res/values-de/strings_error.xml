@@ -66,4 +66,5 @@ SOFTWARE.
     <string name="err_no_files_to_save">KEINE DATEIEN ZUM SPEICHERN</string>
     <string name="err_no_files_to_share">KEINE DATEIEN ZUM TEILEN</string>
     <string name="err_no_files_to_export">KEINE DATEIEN ZUM EXPORTIEREN</string>
+    <string name="err_file_format_not_supported">DATEIFORMAT NICHT UNTERSTÜTZT</string>
 </resources>

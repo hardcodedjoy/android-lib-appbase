@@ -162,13 +162,23 @@ public class FileUtil {
             // file managed by the Android MediaStore -> manually add file extension:
 
             String mimeType = activity.getContentResolver().getType(uri);
-            if(mimeType != null) {
-                String fileExtension = MimeTypeMap.getSingleton()
+            if(mimeType == null) { return result; }
+
+            // else:
+
+            // first try from AdditionalMimeTypes
+            // as MimeTypeMap.getSingleton() returns wrong file extension for some mimes
+
+            String extensionLowerCase = AdditionalMimeTypes
+                    .getExtensionFromMimeType(mimeType);
+            if(extensionLowerCase == null) {
+                extensionLowerCase = MimeTypeMap.getSingleton()
                         .getExtensionFromMimeType(mimeType);
-                if(fileExtension != null && result != null) {
-                    if(!result.endsWith("." + fileExtension)) { // if did not have the extension
-                        result += "." + fileExtension; // append it
-                    }
+            }
+            if(extensionLowerCase != null && result != null) {
+                // if did not have the extension:
+                if(!result.toLowerCase(Locale.US).endsWith("." + extensionLowerCase)) {
+                    result += "." + extensionLowerCase; // append it
                 }
             }
         }

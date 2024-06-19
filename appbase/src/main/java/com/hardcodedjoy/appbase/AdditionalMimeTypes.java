@@ -77,6 +77,7 @@ public class AdditionalMimeTypes {
             case "mid": return "audio/midi";
             case "midi": return "audio/midi";
             case "mjs": return "text/javascript";
+            case "mov": return "video/quicktime";
             case "mp3": return "audio/mpeg";
             case "mp4": return "video/mp4";
             case "mpeg": return "video/mpeg";
@@ -123,6 +124,106 @@ public class AdditionalMimeTypes {
             case "3gp": return "video/3gpp";
             case "3g2": return "video/3gpp2";
             case "7z": return "application/x-7z-compressed";
+            default: return null;
+        }
+    }
+
+    static public String getExtensionFromMimeType(String mimeType) {
+        if(mimeType == null) { return null; }
+        if(mimeType.length() == 0) { return null; }
+        switch(mimeType) {
+            case "audio/aac": return "aac";
+            case "application/android-library": return "aar";
+            case "application/x-abiword": return "abw";
+            case "application/x-freearc": return "arc";
+            case "text/x-asm": return "asm";
+            case "image/avif": return "avif";
+            case "video/x-msvideo": return "avi";
+            case "application/vnd.amazon.ebook": return "azw";
+            case "application/octet-stream": return "bin";
+            case "application/x-blender": return "blend";
+            case "image/bmp": return "bmp";
+            case "application/brd+xml": return "brd";
+            case "application/x-bzip": return "bz";
+            case "application/x-bzip2": return "bz2";
+            case "application/x-cdf": return "cda";
+            case "text/cfg": return "cfg";
+            case "text/conf": return "conf";
+            case "text/config": return "config";
+            case "application/x-csh": return "csh";
+            case "text/css": return "css";
+            case "text/csv": return "csv";
+            case "application/msword": return "doc";
+            case "application/vnd.openxmlformats-officedocument.wordprocessingml.document": return "docx";
+            case "application/vnd.ms-fontobject": return "eot";
+            case "application/epub+zip": return "epub";
+            case "text/x-gcode": return "gcode";
+            case "application/gzip": return "gz";
+            case "image/gif": return "gif";
+            case "text/hex": return "hex";
+            // case "text/html": return "htm";
+            case "text/html": return "html";
+            case "image/vnd.microsoft.icon": return "ico";
+            case "text/calendar": return "ics";
+            case "text/ini": return "ini";
+            case "application/java-archive": return "jar";
+            // case "image/jpeg": return "jpeg";
+            case "image/jpeg": return "jpg";
+            case "text/javascript": return "js";
+            case "application/json": return "json";
+            case "application/ld+json": return "jsonld";
+            case "text/x-kotlin": return "kt";
+            case "text/x-matlab": return "m";
+            case "audio/midi": return "mid";
+            // case "audio/midi": return "midi"
+            // case "text/javascript": return "mjs";
+            case "video/quicktime": return "mov";
+            case "audio/mpeg": return "mp3";
+            case "video/mp4": return "mp4";
+            case "video/mpeg": return "mpeg";
+            case "application/vnd.apple.installer+xml": return "mpkg";
+            case "application/vnd.oasis.opendocument.presentation": return "odp";
+            case "application/vnd.oasis.opendocument.spreadsheet": return "ods";
+            case "application/vnd.oasis.opendocument.text": return "odt";
+            // case "audio/ogg": return "oga";
+            case "audio/ogg": return "ogg";
+            case "video/ogg": return "ogv";
+            case "application/ogg": return "ogx";
+            case "audio/opus": return "opus";
+            case "font/otf": return "otf";
+            case "image/png": return "png";
+            case "application/pdf": return "pdf";
+            case "application/x-httpd-php": return "php";
+            case "application/vnd.ms-powerpoint": return "ppt";
+            case "application/vnd.openxmlformats-officedocument.presentationml.presentation": return "pptx";
+            case "application/vnd.rar": return "rar";
+            case "application/rtf": return "rtf";
+            case "application/sch+xml": return "sch";
+            case "application/x-sh": return "sh";
+            case "image/svg+xml": return "svg";
+            case "application/x-shockwave-flash": return "swf";
+            case "application/x-tar": return "tar";
+            // case "image/tiff": return "tif";
+            case "image/tiff": return "tiff";
+            case "video/mp2t": return "ts";
+            case "font/ttf": return "ttf";
+            case "text/plain": return "txt";
+            case "application/vnd.visio": return "vsd";
+            case "audio/wav": return "wav";
+            case "audio/webm": return "weba";
+            case "video/webm": return "webm";
+            case "image/webp": return "webp";
+            case "font/woff": return "woff";
+            case "font/woff2": return "woff2";
+            case "application/xhtml+xml": return "xhtml";
+            case "application/vnd.ms-excel": return "xls";
+            case "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": return "xlsx";
+            case "application/xml": return "xml";
+            case "application/vnd.mozilla.xul+xml": return "xul";
+            case "application/zip": return "zip";
+            case "video/3gpp": return "3gp";
+            case "video/3gpp2": return "3g2";
+            case "application/x-7z-compressed": return "7z";
             default: return null;
         }
     }

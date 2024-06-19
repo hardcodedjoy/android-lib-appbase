@@ -66,4 +66,5 @@ SOFTWARE.
     <string name="err_no_files_to_save">NO HAY ARCHIVOS PARA GUARDAR</string>
     <string name="err_no_files_to_share">NO HAY ARCHIVOS PARA COMPARTIR</string>
     <string name="err_no_files_to_export">NO HAY ARCHIVOS PARA EXPORTAR</string>
+    <string name="err_file_format_not_supported">FORMATO DE ARCHIVO NO ES SOPORTADO</string>
 </resources>

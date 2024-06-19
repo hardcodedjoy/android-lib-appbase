@@ -66,4 +66,5 @@ SOFTWARE.
     <string name="err_no_files_to_save">НЕМАЄ ФАЙЛІВ ДЛЯ ЗБЕРЕЖЕННЯ</string>
     <string name="err_no_files_to_share">НЕМАЄ ФАЙЛІВ ДЛЯ ОБМІНУ</string>
     <string name="err_no_files_to_export">НЕМАЄ ФАЙЛІВ ДЛЯ ЕКСПОРТУ</string>
+    <string name="err_file_format_not_supported">ФОРМАТ ФАЙЛУ НЕПІДТРИМУЄТЬСЯ</string>
 </resources>

@@ -66,4 +66,5 @@ SOFTWARE.
     <string name="err_no_files_to_save">BRAK PLIKÓW DO ZAPISANIA</string>
     <string name="err_no_files_to_share">BRAK PLIKÓW DO UDOSTĘPNIENIA</string>
     <string name="err_no_files_to_export">BRAK PLIKÓW DO EKSPORTU</string>
+    <string name="err_file_format_not_supported">NIEOBSŁUGIWANY FORMAT PLIKU</string>
 </resources>

@@ -66,4 +66,5 @@ SOFTWARE.
     <string name="err_no_files_to_save">AUCUN FICHIERS À SAUVEGARDER</string>
     <string name="err_no_files_to_share">AUCUN FICHIERS À PARTAGER</string>
     <string name="err_no_files_to_export">AUCUN FICHIERS À EXPORTER</string>
+    <string name="err_file_format_not_supported">FORMAT DE FICHIER NON SUPPORTÉ</string>
 </resources>
