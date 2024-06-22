@@ -72,4 +72,6 @@ SOFTWARE.
     <string name="btn_share_x_video_files">Partajează [x] fișiere video</string>
     <string name="btn_share_x_text_files">Partajează [x] fișiere text</string>
     <string name="btn_share_x_audio_files">Partajează [x] fișiere audio</string>
+    <string name="btn_next">Înainte</string>
+    <string name="btn_finish">Finalizare</string>
 </resources>

@@ -73,4 +73,6 @@ SOFTWARE.
     <string name="btn_share_x_video_files">Teilen [x] Video-Dateien</string>
     <string name="btn_share_x_text_files">Teilen [x] Textdateien</string>
     <string name="btn_share_x_audio_files">Teilen [x] Audio-Dateien</string>
+    <string name="btn_next">Weiter</string>
+    <string name="btn_finish">Fertig</string>
 </resources>

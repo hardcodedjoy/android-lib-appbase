@@ -72,4 +72,6 @@ SOFTWARE.
     <string name="btn_share_x_video_files">Paylaş [x] video dosyaları</string>
     <string name="btn_share_x_text_files">Paylaş [x] metin dosyaları</string>
     <string name="btn_share_x_audio_files">Paylaş [x] ses dosyaları</string>
+    <string name="btn_next">İleri</string>
+    <string name="btn_finish">Son</string>
 </resources>

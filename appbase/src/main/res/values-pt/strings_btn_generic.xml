@@ -72,4 +72,6 @@ SOFTWARE.
     <string name="btn_share_x_video_files">Compartilhar [x] ficheiros de vídeo</string>
     <string name="btn_share_x_text_files">Compartilhar [x] ficheiros de texto</string>
     <string name="btn_share_x_audio_files">Compartilhar [x] ficheiros de áudio</string>
+    <string name="btn_next">Avançar</string>
+    <string name="btn_finish">Concluir</string>
 </resources>

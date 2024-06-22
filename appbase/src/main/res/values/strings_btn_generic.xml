@@ -72,4 +72,6 @@ SOFTWARE.
     <string name="btn_share_x_video_files">Share [x] video files</string>
     <string name="btn_share_x_text_files">Share [x] text files</string>
     <string name="btn_share_x_audio_files">Share [x] audio files</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_finish">Finish</string>
 </resources>

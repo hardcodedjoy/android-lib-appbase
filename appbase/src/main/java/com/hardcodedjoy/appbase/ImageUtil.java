@@ -32,18 +32,18 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Matrix;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.ExifInterface;
+import android.net.Uri;
 import android.util.Size;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.hardcodedjoy.appbase.contentview.ContentView;
-import com.hardcodedjoy.appbase.gui.ThemeUtil;
+import com.hardcodedjoy.appbase.gui.DisplayUnit;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -58,56 +58,160 @@ public class ImageUtil {
         return loadImage(fis);
     }
 
-    static public Bitmap loadImage(InputStream is) throws Exception {
-        if(is == null) { throw new Exception("is == null"); }
-
-        if(android.os.Build.VERSION.SDK_INT < 24) {
-            Bitmap bitmap = BitmapFactory.decodeStream(is);
-            is.close();
-            return bitmap;
+    static private Matrix getRotationMatrix(int exifOrientation) {
+        Matrix m = new Matrix();
+        switch(exifOrientation) {
+            case ExifInterface.ORIENTATION_ROTATE_90: m.postRotate(90); break;
+            case ExifInterface.ORIENTATION_ROTATE_180: m.postRotate(180); break;
+            case ExifInterface.ORIENTATION_ROTATE_270: m.postRotate(270); break;
+            default: break;
         }
+        return m;
+    }
 
-        if( !(is instanceof FileInputStream)) {
-            Bitmap bitmap = BitmapFactory.decodeStream(is);
-            is.close();
-            return bitmap;
-        }
+    static private Matrix getRotationMatrix(InputStream is) throws Exception {
+        if(is == null) { return null; }
+        if(android.os.Build.VERSION.SDK_INT < 24) { return null; }
+        if( !(is instanceof FileInputStream)) { return null; }
 
-        // else -> "is" is a FileInputStream:
         FileInputStream fis = (FileInputStream) is;
         ExifInterface exif = new ExifInterface(fis);
         int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, 1);
         fis.getChannel().position(0);
-        Bitmap bitmap = BitmapFactory.decodeStream(fis);
-        fis.close();
 
-        Matrix matrix = new Matrix();
-
-        if (orientation == ExifInterface.ORIENTATION_ROTATE_90) {
-            matrix.postRotate(90);
-        }
-        else if (orientation == ExifInterface.ORIENTATION_ROTATE_180) {
-            matrix.postRotate(180);
-        }
-        else if (orientation == ExifInterface.ORIENTATION_ROTATE_270) {
-            matrix.postRotate(270);
-        }
-
-        return Bitmap.createBitmap(
-                bitmap,
-                0,
-                0,
-                bitmap.getWidth(),
-                bitmap.getHeight(),
-                matrix,
-                true); // rotating bmp
+        return getRotationMatrix(orientation);
     }
 
-    static public void saveAsPNG(Bitmap bitmap, OutputStream os) throws Exception {
+    static public Bitmap loadImage(InputStream is) throws Exception {
+        if(is == null) { throw new Exception("is == null"); }
+
+        Matrix matrix = getRotationMatrix(is);
+        if(matrix == null) {
+            Bitmap bitmap = BitmapFactory.decodeStream(is);
+            is.close();
+            return bitmap;
+        }
+
+        // else -> apply matrix:
+        Bitmap bitmap = BitmapFactory.decodeStream(is);
+        is.close();
+
+        int w = bitmap.getWidth();
+        int h = bitmap.getHeight();
+
+        // rotate the bitmap according to the matrix:
+        return Bitmap.createBitmap(bitmap, 0, 0, w, h, matrix, true);
+    }
+
+    static public Bitmap loadImage(Uri uri) throws Exception {
+        if(uri == null) { throw new Exception("uri == null"); }
+        InputStream is = ContentView.openInputStream(uri);
+        return loadImage(is);
+    }
+
+    static public Bitmap loadThumb(Uri uri, int sizeDp) throws Exception {
+        if(uri == null) { throw new Exception("uri == null"); }
+        InputStream is = ContentView.openInputStream(uri);
+        Matrix matrix = getRotationMatrix(is);
+
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeStream(is, null, options);
+        int width = options.outWidth;
+        int height = options.outHeight;
+
+        int sizePixels = DisplayUnit.dpToPx(sizeDp);
+
+        float scale;
+        if(width > height) { scale = sizePixels / (float) width; }
+        else { scale = sizePixels / (float) height; }
+
+        options = new BitmapFactory.Options();
+        options.inSampleSize = (int) (1 / scale + 0.5f);
+
+        width = (int) (width * scale + 0.5f);
+        height = (int) (height * scale + 0.5f);
+
+        is = ContentView.openInputStream(uri);
+        Bitmap bitmap = BitmapFactory.decodeStream(is, null, options);
+        bitmap = Bitmap.createScaledBitmap(bitmap, width, height, true);
+        if(matrix != null) {
+            Bitmap.createBitmap(bitmap, 0, 0,
+                    bitmap.getWidth(), bitmap.getHeight(), matrix, true); // rotate
+        }
+        return bitmap;
+    }
+
+    // TODO: don't repeat code
+    static public Bitmap loadThumbFixedWidth(Uri uri, int widthDp) throws Exception {
+        if(uri == null) { throw new Exception("uri == null"); }
+        InputStream is = ContentView.openInputStream(uri);
+        Matrix matrix = getRotationMatrix(is);
+
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeStream(is, null, options);
+        int width = options.outWidth;
+        int height = options.outHeight;
+
+        int widthPx = DisplayUnit.dpToPx(widthDp);
+
+        float scale = widthPx / (float) width;
+
+        options = new BitmapFactory.Options();
+        options.inSampleSize = (int) (1 / scale + 0.5f);
+
+        width = (int) (width * scale + 0.5f);
+        height = (int) (height * scale + 0.5f);
+
+        is = ContentView.openInputStream(uri);
+        Bitmap bitmap = BitmapFactory.decodeStream(is, null, options);
+        bitmap = Bitmap.createScaledBitmap(bitmap, width, height, true);
+        if(matrix != null) {
+            Bitmap.createBitmap(bitmap, 0, 0,
+                    bitmap.getWidth(), bitmap.getHeight(), matrix, true); // rotate
+        }
+        return bitmap;
+    }
+
+    // TODO: don't repeat code
+    static public Bitmap loadThumbFixedHeight(Uri uri, int heightDp) throws Exception {
+        if(uri == null) { throw new Exception("uri == null"); }
+        InputStream is = ContentView.openInputStream(uri);
+        Matrix matrix = getRotationMatrix(is);
+
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeStream(is, null, options);
+        int width = options.outWidth;
+        int height = options.outHeight;
+
+        int heightPx = DisplayUnit.dpToPx(heightDp);
+
+        float scale = heightPx / (float) height;
+
+        options = new BitmapFactory.Options();
+        options.inSampleSize = (int) (1 / scale + 0.5f);
+
+        width = (int) (width * scale + 0.5f);
+        height = (int) (height * scale + 0.5f);
+
+        is = ContentView.openInputStream(uri);
+        Bitmap bitmap = BitmapFactory.decodeStream(is, null, options);
+        bitmap = Bitmap.createScaledBitmap(bitmap, width, height, true);
+        if(matrix != null) {
+            Bitmap.createBitmap(bitmap, 0, 0,
+                    bitmap.getWidth(), bitmap.getHeight(), matrix, true); // rotate
+        }
+        return bitmap;
+    }
+
+
+    static public void saveAsPNG(Bitmap bitmap, OutputStream os) {
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, os);
     }
 
-    static public void saveAsJPG(Bitmap bitmap, OutputStream os, int jpegQuality) throws Exception {
+    static public void saveAsJPG(Bitmap bitmap, OutputStream os, int jpegQuality) {
         bitmap.compress(Bitmap.CompressFormat.JPEG, jpegQuality, os);
     }
 

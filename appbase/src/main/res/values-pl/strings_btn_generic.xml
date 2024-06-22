@@ -72,4 +72,6 @@ SOFTWARE.
     <string name="btn_share_x_video_files">Podziel [x] pliki wideo</string>
     <string name="btn_share_x_text_files">Podziel [x] pliki tekstowe</string>
     <string name="btn_share_x_audio_files">Podziel [x] pliki audio</string>
+    <string name="btn_next">Dalej</string>
+    <string name="btn_finish">Gotowy</string>
 </resources>

@@ -44,8 +44,13 @@ public class HardcodedJoyConstants {
     }
 
     static public String aHrefDevWebsite() {
-        String s = Base64.decode(devWebsiteURL);
-        return aHref(s, s);
+        String text = Base64.decode(devWebsiteURL);
+        String url = text;
+        String packageName = ContentView.getActivity().getPackageName();
+        String languageCode = ContentView.getAppLanguage();
+        url += "?hl=" + languageCode;
+        url += "&" + getReferrerUtmSource() + packageName;
+        return aHref(url, text);
     }
 
     static public String aHrefDevGooglePlay() {

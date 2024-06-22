@@ -72,4 +72,6 @@ SOFTWARE.
     <string name="btn_share_x_video_files">Condividi [x] file video</string>
     <string name="btn_share_x_text_files">Condividi [x] file testo</string>
     <string name="btn_share_x_audio_files">Condividi [x] file audio</string>
+    <string name="btn_next">Avanti</string>
+    <string name="btn_finish">Fine</string>
 </resources>

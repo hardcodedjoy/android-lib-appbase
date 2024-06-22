@@ -31,6 +31,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Point;
+import android.net.Uri;
 import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
@@ -48,6 +49,9 @@ import com.hardcodedjoy.appbase.popup.Popup;
 import com.hardcodedjoy.appbase.popup.PopupError;
 import com.hardcodedjoy.appbase.popup.PopupInfo;
 
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.Locale;
 
 @SuppressLint("ViewConstructor")
@@ -233,5 +237,17 @@ public class ContentView extends LinearLayout {
     static public void logTock(String st) {
         long ms = System.currentTimeMillis() - logMillis;
         log(st + " " + ms + " ms");
+    }
+
+    static public InputStream openInputStream(Uri uri) throws FileNotFoundException {
+        return getActivity().getContentResolver().openInputStream(uri);
+    }
+
+    static public OutputStream openOutputStream(Uri uri) throws FileNotFoundException {
+        return getActivity().getContentResolver().openOutputStream(uri);
+    }
+
+    static public OutputStream openOutputStream(Uri uri, String mode) throws FileNotFoundException {
+        return getActivity().getContentResolver().openOutputStream(uri, mode);
     }
 }

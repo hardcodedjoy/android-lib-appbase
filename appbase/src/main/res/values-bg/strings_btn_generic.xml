@@ -72,4 +72,6 @@ SOFTWARE.
     <string name="btn_share_x_video_files">Сподели [x] видео файлове</string>
     <string name="btn_share_x_text_files">Сподели [x] текстови файлове</string>
     <string name="btn_share_x_audio_files">Сподели [x] аудио файлове</string>
+    <string name="btn_next">Напред</string>
+    <string name="btn_finish">Готово</string>
 </resources>

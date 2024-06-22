@@ -156,4 +156,10 @@ SOFTWARE.
     <string name="title_audio">Áudio</string>
     <string name="title_video">Vídeo</string>
     <string name="title_x_images">[x] imagens</string>
+    <string name="title_input_folder">Pasta de entrada</string>
+    <string name="title_output_folder">Pasta de saída</string>
+    <string name="title_audio_file">Arquivo de áudio</string>
+    <string name="title_video_file">Arquivo de vídeo</string>
+    <string name="title_image_file">Arquivo de imagem</string>
+    <string name="title_text_file">Arquivo de texto</string>
 </resources>

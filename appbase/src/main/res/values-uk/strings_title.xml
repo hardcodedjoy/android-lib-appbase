@@ -156,4 +156,10 @@ SOFTWARE.
     <string name="title_audio">Аудіо</string>
     <string name="title_video">Відео</string>
     <string name="title_x_images">[x] зображення</string>
+    <string name="title_input_folder">Вхідна папка</string>
+    <string name="title_output_folder">Вихідна папка</string>
+    <string name="title_audio_file">Аудіофайл</string>
+    <string name="title_video_file">Відеофайл</string>
+    <string name="title_image_file">Зображення</string>
+    <string name="title_text_file">Текстовий файл</string>
 </resources>

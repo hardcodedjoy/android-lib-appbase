@@ -72,4 +72,6 @@ SOFTWARE.
     <string name="btn_share_x_video_files">Поделиться [x] видеофайлами</string>
     <string name="btn_share_x_text_files">Поделиться [x] текстовыми файлами</string>
     <string name="btn_share_x_audio_files">Поделиться [x] аудиофайлами</string>
+    <string name="btn_next">Далее</string>
+    <string name="btn_finish">Готово</string>
 </resources>
