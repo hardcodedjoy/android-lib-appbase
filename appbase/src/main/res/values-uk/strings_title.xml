@@ -162,4 +162,16 @@ SOFTWARE.
     <string name="title_video_file">Відеофайл</string>
     <string name="title_image_file">Зображення</string>
     <string name="title_text_file">Текстовий файл</string>
+    <string name="title_image_sequence">Серія зображень</string>
+    <string name="title_video_files">Відеофайли</string>
+    <string name="title_audio_files">Аудіофайли</string>
+    <string name="title_text_files">Текстові файли</string>
+    <string name="title_x_audio_files">[x] аудіофайли</string>
+    <string name="title_x_video_files">[x] відеофайли</string>
+    <string name="title_x_text_files">[x] текстові файли</string>
+    <string name="title_soundtrack">Саундтрек</string>
+    <string name="title_output_video_settings">Параметри вихідного відео</string>
+    <string name="title_output_audio_settings">Параметри вихідного звуку</string>
+    <string name="title_advanced_settings">Розширені налаштування</string>
+    <string name="title_task_overview">Перевірка завдання</string>
 </resources>

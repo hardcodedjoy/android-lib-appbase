@@ -33,6 +33,7 @@ SOFTWARE.
     <string name="placeholder_no_file">[ brak pliku ]</string>
     <string name="placeholder_no_folder">[ brak folderu ]</string>
     <string name="placeholder_no_directory">[ brak katalogu ]</string>
+    <string name="placeholder_no_sound">[ brak dźwięku ]</string>
     <string name="keep_screen_on">Pozostaw ekran włączony</string>
     <string name="disable_ringing_and_vibration">Wyłącz dźwięk i wibracje podczas nagrywania</string>
     <string name="dont_show_again">Nie pokazuj ponownie</string>

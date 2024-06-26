@@ -33,6 +33,7 @@ SOFTWARE.
     <string name="placeholder_no_file">[ nessun file ]</string>
     <string name="placeholder_no_folder">[ nessuna cartella ]</string>
     <string name="placeholder_no_directory">[ nessuna cartella ]</string>
+    <string name="placeholder_no_sound">[ nessun audio ]</string>
     <string name="keep_screen_on">Mantieni schermo acceso</string>
     <string name="disable_ringing_and_vibration">Disattiva suono e vibrazione durante la registrazione</string>
     <string name="dont_show_again">Non mostrare di nuovo</string>

@@ -58,14 +58,23 @@ public class ImageUtil {
         return loadImage(fis);
     }
 
+    static public Size loadImageSize(File file) throws Exception {
+        FileInputStream fis = new FileInputStream(file);
+        return loadImageSize(fis);
+    }
+
+    static private int getRotationDegrees(int exifOrientation) {
+        switch(exifOrientation) {
+            case ExifInterface.ORIENTATION_ROTATE_90: return 90;
+            case ExifInterface.ORIENTATION_ROTATE_180: return 180;
+            case ExifInterface.ORIENTATION_ROTATE_270: return 270;
+            default: return 0;
+        }
+    }
+
     static private Matrix getRotationMatrix(int exifOrientation) {
         Matrix m = new Matrix();
-        switch(exifOrientation) {
-            case ExifInterface.ORIENTATION_ROTATE_90: m.postRotate(90); break;
-            case ExifInterface.ORIENTATION_ROTATE_180: m.postRotate(180); break;
-            case ExifInterface.ORIENTATION_ROTATE_270: m.postRotate(270); break;
-            default: break;
-        }
+        m.postRotate(getRotationDegrees(exifOrientation));
         return m;
     }
 
@@ -80,6 +89,19 @@ public class ImageUtil {
         fis.getChannel().position(0);
 
         return getRotationMatrix(orientation);
+    }
+
+    static private int getRotationDegrees(InputStream is) throws Exception {
+        if(is == null) { return 0; }
+        if(android.os.Build.VERSION.SDK_INT < 24) { return 0; }
+        if( !(is instanceof FileInputStream)) { return 0; }
+
+        FileInputStream fis = (FileInputStream) is;
+        ExifInterface exif = new ExifInterface(fis);
+        int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, 1);
+        fis.getChannel().position(0);
+
+        return getRotationDegrees(orientation);
     }
 
     static public Bitmap loadImage(InputStream is) throws Exception {
@@ -103,10 +125,34 @@ public class ImageUtil {
         return Bitmap.createBitmap(bitmap, 0, 0, w, h, matrix, true);
     }
 
+    static public Size loadImageSize(InputStream is) throws Exception {
+        if(is == null) { throw new Exception("is == null"); }
+
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+
+        int rot = getRotationDegrees(is);
+        BitmapFactory.decodeStream(is, null, options);
+        is.close();
+
+        if(rot == 0 || rot == 180) {
+            return new Size(options.outWidth, options.outHeight);
+        } else {
+            //noinspection SuspiciousNameCombination
+            return new Size(options.outHeight, options.outWidth);
+        }
+    }
+
     static public Bitmap loadImage(Uri uri) throws Exception {
         if(uri == null) { throw new Exception("uri == null"); }
         InputStream is = ContentView.openInputStream(uri);
         return loadImage(is);
+    }
+
+    static public Size loadImageSize(Uri uri) throws Exception {
+        if(uri == null) { throw new Exception("uri == null"); }
+        InputStream is = ContentView.openInputStream(uri);
+        return loadImageSize(is);
     }
 
     static public Bitmap loadThumb(Uri uri, int sizeDp) throws Exception {

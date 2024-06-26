@@ -74,4 +74,5 @@ SOFTWARE.
     <string name="btn_share_x_audio_files">Partajează [x] fișiere audio</string>
     <string name="btn_next">Înainte</string>
     <string name="btn_finish">Finalizare</string>
+    <string name="btn_advanced">Avansat</string>
 </resources>

@@ -162,4 +162,16 @@ SOFTWARE.
     <string name="title_video_file">Видео файл</string>
     <string name="title_image_file">Изображение</string>
     <string name="title_text_file">Текстов файл</string>
+    <string name="title_image_sequence">Серия от изображения</string>
+    <string name="title_video_files">Видео файлове</string>
+    <string name="title_audio_files">Аудио файлове</string>
+    <string name="title_text_files">Текстови файлове</string>
+    <string name="title_x_audio_files">[x] аудио файлове</string>
+    <string name="title_x_video_files">[x] видео файлове</string>
+    <string name="title_x_text_files">[x] текстови файлове</string>
+    <string name="title_soundtrack">Саундтрак</string>
+    <string name="title_output_video_settings">Изходни видео настройки</string>
+    <string name="title_output_audio_settings">Изходни аудио настройки</string>
+    <string name="title_advanced_settings">Разширени настройки</string>
+    <string name="title_task_overview">Обзор на задачата</string>
 </resources>

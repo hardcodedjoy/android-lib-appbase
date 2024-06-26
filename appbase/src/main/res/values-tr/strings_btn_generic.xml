@@ -74,4 +74,5 @@ SOFTWARE.
     <string name="btn_share_x_audio_files">Paylaş [x] ses dosyaları</string>
     <string name="btn_next">İleri</string>
     <string name="btn_finish">Son</string>
+    <string name="btn_advanced">Gelişmiş</string>
 </resources>

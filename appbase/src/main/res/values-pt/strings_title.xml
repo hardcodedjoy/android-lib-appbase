@@ -151,7 +151,7 @@ SOFTWARE.
     <string name="title_frame_rate">Taxa de quadros</string>
     <string name="title_duration">Duração</string>
     <string name="title_resulting_video_duration">Duração do vídeo resultante</string>
-    <string name="title_resulting_file_size">Tamanho do ficheiro resultante</string>
+    <string name="title_resulting_file_size">Tamanho do arquivo resultante</string>
     <string name="title_key_frame_interval">Intervalo de frames chave</string>
     <string name="title_audio">Áudio</string>
     <string name="title_video">Vídeo</string>
@@ -162,4 +162,16 @@ SOFTWARE.
     <string name="title_video_file">Arquivo de vídeo</string>
     <string name="title_image_file">Arquivo de imagem</string>
     <string name="title_text_file">Arquivo de texto</string>
+    <string name="title_image_sequence">Sequência de imagens</string>
+    <string name="title_video_files">Arquivos de vídeo</string>
+    <string name="title_audio_files">Arquivos de áudio</string>
+    <string name="title_text_files">Arquivos de texto</string>
+    <string name="title_x_audio_files">[x] arquivos de áudio</string>
+    <string name="title_x_video_files">[x] arquivos de vídeo</string>
+    <string name="title_x_text_files">[x] arquivos de texto</string>
+    <string name="title_soundtrack">Banda sonora</string>
+    <string name="title_output_video_settings">Conf. para vídeo de saída</string>
+    <string name="title_output_audio_settings">Conf. para áudio de saída</string>
+    <string name="title_advanced_settings">Configurações avançadas</string>
+    <string name="title_task_overview">Revisão da tarefa</string>
 </resources>

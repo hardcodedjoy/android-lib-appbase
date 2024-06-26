@@ -74,4 +74,5 @@ SOFTWARE.
     <string name="btn_share_x_audio_files">Поделиться [x] аудиофайлами</string>
     <string name="btn_next">Далее</string>
     <string name="btn_finish">Готово</string>
+    <string name="btn_advanced">Расширенно</string>
 </resources>

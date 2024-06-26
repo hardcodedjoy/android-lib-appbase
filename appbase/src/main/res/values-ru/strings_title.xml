@@ -158,8 +158,20 @@ SOFTWARE.
     <string name="title_x_images">[x] изображения</string>
     <string name="title_input_folder">Входная папка</string>
     <string name="title_output_folder">Выходная папка</string>
-    <string name="title_audio_file">Аудио файл</string>
-    <string name="title_video_file">Видео файл</string>
+    <string name="title_audio_file">Аудиофайл</string>
+    <string name="title_video_file">Видеофайл</string>
     <string name="title_image_file">Изображение</string>
     <string name="title_text_file">Текстовый файл</string>
+    <string name="title_image_sequence">Серия снимков</string>
+    <string name="title_video_files">Видеофайлы</string>
+    <string name="title_audio_files">Аудиофайлы</string>
+    <string name="title_text_files">Текстовые файлы</string>
+    <string name="title_x_audio_files">[x] аудиофайлы</string>
+    <string name="title_x_video_files">[x] видеофайлы</string>
+    <string name="title_x_text_files">[x] текстовые файлы</string>
+    <string name="title_soundtrack">Саундтрек</string>
+    <string name="title_output_video_settings">Настройки выходного видео</string>
+    <string name="title_output_audio_settings">Настройки выходного аудио</string>
+    <string name="title_advanced_settings">Расширенные настройки</string>
+    <string name="title_task_overview">Обзор задачи</string>
 </resources>

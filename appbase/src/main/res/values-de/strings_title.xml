@@ -162,4 +162,16 @@ SOFTWARE.
     <string name="title_video_file">Videodatei</string>
     <string name="title_image_file">Bilddatei</string>
     <string name="title_text_file">Textdatei</string>
+    <string name="title_image_sequence">Bildsequenz</string>
+    <string name="title_video_files">Videodateien</string>
+    <string name="title_audio_files">Audiodateien</string>
+    <string name="title_text_files">Textdateien</string>
+    <string name="title_x_audio_files">[x] Audio-Dateien</string>
+    <string name="title_x_video_files">[x] Videodateien</string>
+    <string name="title_x_text_files">[x] Textdateien</string>
+    <string name="title_soundtrack">Soundtrack</string>
+    <string name="title_output_video_settings">Ausgabe-Video-Einstellungen</string>
+    <string name="title_output_audio_settings">Ausgabe-Audio-Einstellungen</string>
+    <string name="title_advanced_settings">Erweiterte Einstellungen</string>
+    <string name="title_task_overview">Aufgabenübersicht</string>
 </resources>

@@ -33,6 +33,7 @@ SOFTWARE.
     <string name="placeholder_no_file">[ няма файл ]</string>
     <string name="placeholder_no_folder">[ няма папка ]</string>
     <string name="placeholder_no_directory">[ няма директория ]</string>
+    <string name="placeholder_no_sound">[ няма звук ]</string>
     <string name="keep_screen_on">Запази екрана вкл.</string>
     <string name="disable_ringing_and_vibration">Изключване на звука и вибрации при запис</string>
     <string name="dont_show_again">Не показвай отново</string>

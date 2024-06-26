@@ -33,6 +33,7 @@ SOFTWARE.
     <string name="placeholder_no_file">[ немає файлу ]</string>
     <string name="placeholder_no_folder">[ немає папки ]</string>
     <string name="placeholder_no_directory">[ немає каталогу ]</string>
+    <string name="placeholder_no_sound">[ без звуку ]</string>
     <string name="keep_screen_on">Тримати екран увімк.</string>
     <string name="disable_ringing_and_vibration">Вимкнути дзвінок і вібрацію під час запису</string>
     <string name="dont_show_again">Не показувати знову</string>

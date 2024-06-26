@@ -74,4 +74,5 @@ SOFTWARE.
     <string name="btn_share_x_audio_files">Condividi [x] file audio</string>
     <string name="btn_next">Avanti</string>
     <string name="btn_finish">Fine</string>
+    <string name="btn_advanced">Avanzato</string>
 </resources>

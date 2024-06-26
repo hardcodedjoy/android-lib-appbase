@@ -74,4 +74,5 @@ SOFTWARE.
     <string name="btn_share_x_audio_files">Partager [x] fichiers audio</string>
     <string name="btn_next">Suivant</string>
     <string name="btn_finish">Terminer</string>
+    <string name="btn_advanced">Avancée</string>
 </resources>
