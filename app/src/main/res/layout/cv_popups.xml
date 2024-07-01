@@ -218,6 +218,14 @@ SOFTWARE.
                 android:textAllCaps="false"
                 android:layout_margin="5dp" />
 
+            <Button
+                android:id="@+id/btn_popup_set_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popup_set_time"
+                android:textAllCaps="false"
+                android:layout_margin="5dp" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

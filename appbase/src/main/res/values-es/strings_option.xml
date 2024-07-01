@@ -101,4 +101,6 @@ SOFTWARE.
     <string name="option_add_transitions">agregar transiciones</string>
     <string name="option_remove">eliminar</string>
     <string name="option_remove_all">eliminar todos</string>
+    <string name="option_custom">específico</string>
+    <string name="option_default">predeterminado</string>
 </resources>

@@ -101,4 +101,6 @@ SOFTWARE.
     <string name="option_add_transitions">Übergänge hinzufügen</string>
     <string name="option_remove">entfernen</string>
     <string name="option_remove_all">alle entfernen</string>
+    <string name="option_custom">spezifische</string>
+    <string name="option_default">Standard</string>
 </resources>

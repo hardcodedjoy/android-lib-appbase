@@ -45,6 +45,7 @@ import com.hardcodedjoy.appbase.popup.PopupProgress;
 import com.hardcodedjoy.appbase.popup.PopupRegister;
 import com.hardcodedjoy.appbase.popup.PopupSelectTimeInterval;
 import com.hardcodedjoy.appbase.popup.PopupSetPassword;
+import com.hardcodedjoy.appbase.popup.PopupSetTimeHHmmssmmm;
 
 import java.util.Vector;
 
@@ -52,6 +53,7 @@ import java.util.Vector;
 public class CvPopups extends ContentView {
 
     private int colorPickerColor;
+    private long timeMillis;
 
     public CvPopups() {
         // add initialization code here (that must run only one time)
@@ -80,6 +82,7 @@ public class CvPopups extends ContentView {
             if(id == R.id.btn_popup_available_only_in_full_version) {
                 showPopupAvailableOnlyInFullVersion();
             }
+            if(id == R.id.btn_popup_set_time) { showPopupSetTime(); }
         });
 
         colorPickerColor = 0xFF008000;
@@ -221,5 +224,12 @@ public class CvPopups extends ContentView {
                 "Super App Pro",
                 "com.hardcodedjoy.superapppro",
                 "appbase_demo").show();
+    }
+
+    private void showPopupSetTime() {
+        new PopupSetTimeHHmmssmmm("Set time", timeMillis) {
+            @Override
+            public void onOK(long millis) { timeMillis = millis; }
+        }.show();
     }
 }

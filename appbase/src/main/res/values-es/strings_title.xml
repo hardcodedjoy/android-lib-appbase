@@ -174,4 +174,7 @@ SOFTWARE.
     <string name="title_output_audio_settings">Conf. para audio de salida</string>
     <string name="title_advanced_settings">Configuración avanzada</string>
     <string name="title_task_overview">Resumen de tareas</string>
+    <string name="title_input_files">Archivos de entrada</string>
+    <string name="title_width">Ancho</string>
+    <string name="title_height">Alto</string>
 </resources>

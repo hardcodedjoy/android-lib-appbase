@@ -102,4 +102,6 @@ SOFTWARE.
     <string name="option_add_transitions">add transitions</string>
     <string name="option_remove">remove</string>
     <string name="option_remove_all">remove all</string>
+    <string name="option_custom">custom</string>
+    <string name="option_default">default</string>
 </resources>

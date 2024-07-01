@@ -101,4 +101,6 @@ SOFTWARE.
     <string name="option_add_transitions">dodaj przekładki</string>
     <string name="option_remove">usunąć</string>
     <string name="option_remove_all">usunąć wszystkie</string>
+    <string name="option_custom">specyficzny</string>
+    <string name="option_default">domyślne</string>
 </resources>

@@ -54,5 +54,6 @@ SOFTWARE.
     <string name="yes_that_would_be_great">Yes, that would be great</string>
     <string name="no_i_dont_want_that">No, I don\'t want that</string>
     <string name="popup_available_only_in_full_version">PopupAvailableOnlyInFullVersion</string>
+    <string name="popup_set_time">PopupSetTime</string>
 
 </resources>

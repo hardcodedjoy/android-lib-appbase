@@ -174,4 +174,7 @@ SOFTWARE.
     <string name="title_output_audio_settings">Настройки выходного аудио</string>
     <string name="title_advanced_settings">Расширенные настройки</string>
     <string name="title_task_overview">Обзор задачи</string>
+    <string name="title_input_files">Входные файлы</string>
+    <string name="title_width">Ширина</string>
+    <string name="title_height">Высота</string>
 </resources>

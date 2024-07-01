@@ -101,4 +101,6 @@ SOFTWARE.
     <string name="option_add_transitions">adaugă tranziții</string>
     <string name="option_remove">șterge</string>
     <string name="option_remove_all">șterge toate</string>
+    <string name="option_custom">specific</string>
+    <string name="option_default">implicit</string>
 </resources>

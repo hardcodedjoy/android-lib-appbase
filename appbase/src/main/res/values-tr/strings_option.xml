@@ -101,4 +101,6 @@ SOFTWARE.
     <string name="option_add_transitions">geçişler ekle</string>
     <string name="option_remove">sil</string>
     <string name="option_remove_all">tümünü sil</string>
+    <string name="option_custom">özel</string>
+    <string name="option_default">varsayılan</string>
 </resources>

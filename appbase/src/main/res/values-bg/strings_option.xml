@@ -101,4 +101,6 @@ SOFTWARE.
     <string name="option_add_transitions">добави транзити</string>
     <string name="option_remove">изтрий</string>
     <string name="option_remove_all">изтрий всички</string>
+    <string name="option_custom">специфичен</string>
+    <string name="option_default">по подразбиране</string>
 </resources>

@@ -101,4 +101,6 @@ SOFTWARE.
     <string name="option_add_transitions">додати перехіді</string>
     <string name="option_remove">видалити</string>
     <string name="option_remove_all">видалити всі</string>
+    <string name="option_custom">нестандартне</string>
+    <string name="option_default">за замовчуванням</string>
 </resources>
