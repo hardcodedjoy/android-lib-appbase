@@ -103,4 +103,9 @@ SOFTWARE.
     <string name="option_remove_all">tümünü sil</string>
     <string name="option_custom">özel</string>
     <string name="option_default">varsayılan</string>
+    <string name="option_vertical">dikey</string>
+    <string name="option_horizontal">yatay</string>
+    <string name="option_square">kare</string>
+    <string name="option_fill">doldur</string>
+    <string name="option_fit">sığdır</string>
 </resources>

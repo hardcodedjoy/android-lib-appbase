@@ -148,7 +148,7 @@ SOFTWARE.
     <string name="title_del">Usuw.</string>
     <string name="title_create_video">Utwórz wideo</string>
     <string name="title_creating_video">Tworzenie wideo</string>
-    <string name="title_frame_rate">Przyspieszenie klatek</string>
+    <string name="title_frame_rate">Częstot. klatek</string>
     <string name="title_duration">Trwanie</string>
     <string name="title_resulting_video_duration">Trwanie wideo wynikowego</string>
     <string name="title_resulting_file_size">Rozmiar pliku wynikowego</string>
@@ -177,4 +177,15 @@ SOFTWARE.
     <string name="title_input_files">Pliki wejściowe</string>
     <string name="title_width">Szerokość</string>
     <string name="title_height">Wysokość</string>
+    <string name="title_premium_feature">Funkcja premium</string>
+    <string name="title_premium">Premium</string>
+    <string name="title_premium_version">Wersja Premium</string>
+    <string name="title_free_version">Wersja bezpłatna</string>
+    <string name="title_aspect">Aspekt</string>
+    <string name="title_aspect_ratio">Proporcje</string>
+    <string name="title_image_aspect">Aspekt obrazu</string>
+    <string name="title_video_aspect">Aspekt wideo</string>
+    <string name="title_video_resolution">Rozdzielczość wideo</string>
+    <string name="title_image_framing">Kadrowanie obrazu</string>
+    <string name="title_step">Krok</string>
 </resources>

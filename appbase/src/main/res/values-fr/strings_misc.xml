@@ -39,4 +39,6 @@ SOFTWARE.
     <string name="dont_show_again">Ne plus afficher</string>
     <string name="why_is_this_required">Pourquoi c\'est nécessaire?</string>
     <string name="note_system_ports_only_on_rooted_devices">Remarque: les ports système (0 .. 1023) ne sont disponibles que sur les appareils rootés.</string>
+    <string name="premium_version_intro">En plus des fonctionnalités de base de l\'application, la mise à niveau vers la version premium vous offre les avantages suivants :</string>
+    <string name="premium_version_intro_owned">Vous disposez de la version Premium, qui vous offre les avantages suivants:</string>
 </resources>

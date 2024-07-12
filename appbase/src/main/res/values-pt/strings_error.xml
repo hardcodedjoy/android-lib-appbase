@@ -67,4 +67,5 @@ SOFTWARE.
     <string name="err_no_files_to_share">NENHUM ARQUIVO PARA COMPARTILHAR</string>
     <string name="err_no_files_to_export">NENHUM ARQUIVO PARA EXPORTAR</string>
     <string name="err_file_format_not_supported">FORMATO DE ARQUIVO NÃO SUPORTADO</string>
+    <string name="err_billing_unavailable">PAGAMENTO INDISPONÍVEL</string>
 </resources>

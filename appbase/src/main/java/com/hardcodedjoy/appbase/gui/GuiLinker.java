@@ -245,7 +245,7 @@ public class GuiLinker {
                         color = (int)(Long.parseLong(colorHex, 16) & 0xFFFFFFFF);
                     } catch (Exception e) { e.printStackTrace(System.err); }
 
-                    if(button != null) { ViewUtil.setColorOnImageView(button, color); }
+                    if(button != null) { GuiUtil.setColorOnImageView(button, color); }
                     intSetGetter.set(color);
                 }
                 @Override
@@ -263,7 +263,7 @@ public class GuiLinker {
                 public void onOK(int colorNew) {
                     intSetGetter.set(colorNew);
                     editText.setText(String.format("%08X", colorNew));
-                    ViewUtil.setColorOnImageView(button, colorNew);
+                    GuiUtil.setColorOnImageView(button, colorNew);
                 }
             };
             button.setOnClickListener(view -> colorPicker.show());

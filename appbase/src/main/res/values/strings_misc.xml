@@ -38,5 +38,7 @@ SOFTWARE.
     <string name="disable_ringing_and_vibration">Disable ringing and vibration while recording</string>
     <string name="dont_show_again">Don\'t show again</string>
     <string name="why_is_this_required">Why is this required?</string>
-    <string name="note_system_ports_only_on_rooted_devices">Note: system ports (0 – 1023) available only on rooted devices.</string>
+    <string name="note_system_ports_only_on_rooted_devices">Note: system ports (0 .. 1023) available only on rooted devices.</string>
+    <string name="premium_version_intro">In addition to the basic app features, upgrading to the premium version gives you the following advantages:</string>
+    <string name="premium_version_intro_owned">You have the Premium version, which gives you the following advantages:</string>
 </resources>

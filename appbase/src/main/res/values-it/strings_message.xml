@@ -48,4 +48,11 @@ SOFTWARE.
     <string name="files_selected">file selezionati.</string>
     <string name="selection_must_be_positive">La selezione deve essere positiva.</string>
     <string name="done">Fatto.</string>
+    <string name="this_is_a_premium_feature">Questa è una funzionalità Premium.</string>
+    <string name="no_internet_please_enable_and_try_again">Nessuna connessione internet. Abilita Wi-Fi o Dati mobili e riprova.</string>
+    <string name="purchase_pending">L\'acquisto è in fase di realizzazione.</string>
+    <string name="x_purchased_successfully">[x] acquistato con successo.</string>
+    <string name="product_purchased_successfully">Prodotto acquistato con successo.</string>
+    <string name="products_purchased_successfully">Prodotti acquistati con successo.</string>
+    <string name="your_device_does_not_support_this_resolution">Il tuo dispositivo non supporta questa risoluzione.</string>
 </resources>

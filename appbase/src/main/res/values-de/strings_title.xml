@@ -177,4 +177,15 @@ SOFTWARE.
     <string name="title_input_files">Eingabedateien</string>
     <string name="title_width">Breite</string>
     <string name="title_height">Höhe</string>
+    <string name="title_premium_feature">Premium-Funktion</string>
+    <string name="title_premium">Premium</string>
+    <string name="title_premium_version">Premium Version</string>
+    <string name="title_free_version">Gratisversion</string>
+    <string name="title_aspect">Aspekt</string>
+    <string name="title_aspect_ratio">Proportion</string>
+    <string name="title_image_aspect">Bildaspekt</string>
+    <string name="title_video_aspect">Videoaspekt</string>
+    <string name="title_video_resolution">Video Auflösung</string>
+    <string name="title_image_framing">Bildeinfassung</string>
+    <string name="title_step">Schritt</string>
 </resources>

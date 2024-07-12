@@ -48,4 +48,11 @@ SOFTWARE.
     <string name="files_selected">fișiere selectate.</string>
     <string name="selection_must_be_positive">Selecția trebuie să fie pozitivă.</string>
     <string name="done">Efectuat.</string>
+    <string name="this_is_a_premium_feature">Aceasta este o funcție premium.</string>
+    <string name="no_internet_please_enable_and_try_again">Lipsește conexiunea la Internet. Activați Wi-Fi sau Date mobile și încercați din nou.</string>
+    <string name="purchase_pending">Achiziția este în curs de realizare.</string>
+    <string name="x_purchased_successfully">[x] a fost achiziționat cu succes.</string>
+    <string name="product_purchased_successfully">Produs achizitionat cu succes.</string>
+    <string name="products_purchased_successfully">Produse achiziționate cu succes.</string>
+    <string name="your_device_does_not_support_this_resolution">Dispozitivul dvs. nu acceptă această rezoluție.</string>
 </resources>

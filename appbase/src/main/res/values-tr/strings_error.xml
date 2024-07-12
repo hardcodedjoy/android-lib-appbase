@@ -67,4 +67,5 @@ SOFTWARE.
     <string name="err_no_files_to_share">PAYLAŞILACAK DOSYA YOK</string>
     <string name="err_no_files_to_export">DIŞA AKTARILACAK DOSYA YOK</string>
     <string name="err_file_format_not_supported">DOSYA FORMATI DESTEKLENMİYOR</string>
+    <string name="err_billing_unavailable">ÖDEME MEVCUT DEĞİL</string>
 </resources>

@@ -101,6 +101,11 @@ SOFTWARE.
     <string name="option_add_transitions">добавить переходы</string>
     <string name="option_remove">удалить</string>
     <string name="option_remove_all">удалить все</string>
-    <string name="option_custom">нестандартный</string>
+    <string name="option_custom">специф.</string>
     <string name="option_default">по умолчанию</string>
+    <string name="option_vertical">вертикал</string>
+    <string name="option_horizontal">горизонтал</string>
+    <string name="option_square">квадрат</string>
+    <string name="option_fill">заполнить</string>
+    <string name="option_fit">поместить</string>
 </resources>

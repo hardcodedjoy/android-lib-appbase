@@ -75,4 +75,5 @@ SOFTWARE.
     <string name="btn_next">Suivant</string>
     <string name="btn_finish">Terminer</string>
     <string name="btn_advanced">Avancée</string>
+    <string name="btn_more_details">Plus de détails</string>
 </resources>

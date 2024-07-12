@@ -104,4 +104,9 @@ SOFTWARE.
     <string name="option_remove_all">remove all</string>
     <string name="option_custom">custom</string>
     <string name="option_default">default</string>
+    <string name="option_vertical">vertical</string>
+    <string name="option_horizontal">horizontal</string>
+    <string name="option_square">square</string>
+    <string name="option_fill">fill</string>
+    <string name="option_fit">fit</string>
 </resources>

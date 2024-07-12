@@ -177,4 +177,15 @@ SOFTWARE.
     <string name="title_input_files">Giriş dosyaları</string>
     <string name="title_width">Genişlik</string>
     <string name="title_height">Yükseklik</string>
+    <string name="title_premium_feature">Premium Özellik</string>
+    <string name="title_premium">Premium</string>
+    <string name="title_premium_version">Premium Sürüm</string>
+    <string name="title_free_version">Ücretsiz sürüm</string>
+    <string name="title_aspect">En Boyu</string>
+    <string name="title_aspect_ratio">En Boy Oranı</string>
+    <string name="title_image_aspect">Görüntü En Boy Oranı</string>
+    <string name="title_video_aspect">Videonun En Boyu</string>
+    <string name="title_video_resolution">Video çözünürlüğü</string>
+    <string name="title_image_framing">Görüntü çerçeveleme</string>
+    <string name="title_step">Aşama</string>
 </resources>

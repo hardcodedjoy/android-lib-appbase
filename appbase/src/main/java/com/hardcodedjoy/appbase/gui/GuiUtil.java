@@ -26,16 +26,23 @@ SOFTWARE.
 
 package com.hardcodedjoy.appbase.gui;
 
+import android.app.Activity;
 import android.graphics.Bitmap;
+import android.graphics.PorterDuff;
 import android.graphics.RectF;
+import android.graphics.Typeface;
+import android.text.SpannableString;
+import android.text.style.StyleSpan;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.hardcodedjoy.appbase.ImageUtil;
 import com.hardcodedjoy.appbase.R;
+import com.hardcodedjoy.appbase.contentview.ContentView;
 
-public class ViewUtil {
+public class GuiUtil {
 
     static public RectF getRect(View view) {
         float x = view.getX();
@@ -72,5 +79,32 @@ public class ViewUtil {
                 ((ImageView)view).setImageBitmap(bitmap);
             }
         });
+    }
+
+    static public void setGlowInside(ViewGroup vg, boolean glow, boolean locked) {
+
+        Activity a = ContentView.getActivity();
+        int color = ThemeUtil.getColor(a, android.R.attr.colorBackground);
+        if(glow) { color = ThemeUtil.getColor(a, android.R.attr.colorFocusedHighlight); }
+        if(locked) { color = ThemeUtil.getColor(a, R.attr.appBaseColorBackgroundA60); }
+
+        int n = vg.getChildCount();
+        for(int i = 0; i < n; ++i) {
+            View v = vg.getChildAt(i);
+            if (v instanceof ViewGroup) {
+                setGlowInside((ViewGroup)v, glow, locked);
+            } else if (v instanceof TextView) {
+                ((TextView) v).setTextColor(color);
+                String text = ((TextView) v).getText().toString();
+                SpannableString spannableString = new SpannableString(text);
+                StyleSpan styleSpan = new StyleSpan(Typeface.NORMAL);
+                if(glow) { styleSpan = new StyleSpan(Typeface.BOLD); }
+                spannableString.setSpan(styleSpan, 0, text.length(), 0);
+                ((TextView) v).setText(spannableString);
+            } else if (v instanceof ImageView) {
+                ImageUtil.setTint((ImageView) v, color);
+                ((ImageView) v).setImageTintMode(PorterDuff.Mode.SRC_IN);
+            }
+        }
     }
 }

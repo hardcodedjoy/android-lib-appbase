@@ -39,4 +39,6 @@ SOFTWARE.
     <string name="dont_show_again">No volver a mostrar</string>
     <string name="why_is_this_required">¿Por qué se requiere?</string>
     <string name="note_system_ports_only_on_rooted_devices">Nota: los puertos del sistema (0 .. 1023) solo están disponibles en dispositivos rooteados.</string>
+    <string name="premium_version_intro">Además de las funciones básicas de la aplicación, actualizar a la versión premium le brinda las siguientes ventajas:</string>
+    <string name="premium_version_intro_owned">Tienes la versión Premium, que te brinda las siguientes ventajas:</string>
 </resources>

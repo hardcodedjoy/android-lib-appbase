@@ -101,6 +101,11 @@ SOFTWARE.
     <string name="option_add_transitions">aggiungi transizioni</string>
     <string name="option_remove">rimuovi</string>
     <string name="option_remove_all">rimuovi tutti</string>
-    <string name="option_custom">specifico</string>
+    <string name="option_custom">specif.</string>
     <string name="option_default">predefinito</string>
+    <string name="option_vertical">verticale</string>
+    <string name="option_horizontal">orizzontale</string>
+    <string name="option_square">quadrato</string>
+    <string name="option_fill">riempire</string>
+    <string name="option_fit">adattare</string>
 </resources>

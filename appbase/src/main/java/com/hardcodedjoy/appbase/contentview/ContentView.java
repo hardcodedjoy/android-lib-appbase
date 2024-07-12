@@ -39,6 +39,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.hardcodedjoy.appbase.LanguageUtil;
+import com.hardcodedjoy.appbase.R;
 import com.hardcodedjoy.appbase.SettingsBase;
 import com.hardcodedjoy.appbase.StringUtil;
 import com.hardcodedjoy.appbase.activity.ActivityResultTask;
@@ -46,6 +47,7 @@ import com.hardcodedjoy.appbase.activity.ActivityUtil;
 import com.hardcodedjoy.appbase.activity.SingleActivity;
 import com.hardcodedjoy.appbase.gui.ThemeUtil;
 import com.hardcodedjoy.appbase.popup.Popup;
+import com.hardcodedjoy.appbase.popup.PopupAsk;
 import com.hardcodedjoy.appbase.popup.PopupError;
 import com.hardcodedjoy.appbase.popup.PopupInfo;
 
@@ -249,5 +251,20 @@ public class ContentView extends LinearLayout {
 
     static public OutputStream openOutputStream(Uri uri, String mode) throws FileNotFoundException {
         return getActivity().getContentResolver().openOutputStream(uri, mode);
+    }
+
+    static public void showPopupThisIsPremiumFeature(Runnable onMoreDetails) {
+        String title = ContentView.getString(R.string.title_premium_feature);
+        String message = ContentView.getString(R.string.this_is_a_premium_feature);
+        String positive = ContentView.getString(R.string.btn_more_details);
+        String negative = ContentView.getString(R.string.btn_ok);
+        PopupAsk popupAsk = new PopupAsk(title, message, positive, negative) {
+            @Override
+            public void onOK() {
+                if(onMoreDetails != null) { onMoreDetails.run(); }
+            }
+        };
+        popupAsk.enableDismissByOutsideClick();
+        popupAsk.show();
     }
 }

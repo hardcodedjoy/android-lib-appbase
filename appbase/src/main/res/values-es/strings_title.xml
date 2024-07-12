@@ -148,7 +148,7 @@ SOFTWARE.
     <string name="title_del">Bor.</string>
     <string name="title_create_video">Crear video</string>
     <string name="title_creating_video">Creando video</string>
-    <string name="title_frame_rate">Tasa de marcos</string>
+    <string name="title_frame_rate">Tasa de cuadros</string>
     <string name="title_duration">Duración</string>
     <string name="title_resulting_video_duration">Duración del video resultante</string>
     <string name="title_resulting_file_size">Tamaño del archivo resultante</string>
@@ -177,4 +177,15 @@ SOFTWARE.
     <string name="title_input_files">Archivos de entrada</string>
     <string name="title_width">Ancho</string>
     <string name="title_height">Alto</string>
+    <string name="title_premium_feature">Función premium</string>
+    <string name="title_premium">Premium</string>
+    <string name="title_premium_version">Versión prémium</string>
+    <string name="title_free_version">Versión gratuita</string>
+    <string name="title_aspect">Aspecto</string>
+    <string name="title_aspect_ratio">Relación de aspecto</string>
+    <string name="title_image_aspect">Aspecto de la imagen</string>
+    <string name="title_video_aspect">Aspecto del vídeo</string>
+    <string name="title_video_resolution">Resolución de video</string>
+    <string name="title_image_framing">Encuadre de imagen</string>
+    <string name="title_step">Paso</string>
 </resources>

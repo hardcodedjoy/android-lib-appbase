@@ -101,6 +101,11 @@ SOFTWARE.
     <string name="option_add_transitions">dodaj przekładki</string>
     <string name="option_remove">usunąć</string>
     <string name="option_remove_all">usunąć wszystkie</string>
-    <string name="option_custom">specyficzny</string>
+    <string name="option_custom">specyf.</string>
     <string name="option_default">domyślne</string>
+    <string name="option_vertical">wertykal</string>
+    <string name="option_horizontal">horyzontal</string>
+    <string name="option_square">kwadrat</string>
+    <string name="option_fill">wypełnić</string>
+    <string name="option_fit">pasować</string>
 </resources>

@@ -152,7 +152,7 @@ SOFTWARE.
     <string name="title_duration">Длительность</string>
     <string name="title_resulting_video_duration">Длительность полученного видео</string>
     <string name="title_resulting_file_size">Размер полученного файла</string>
-    <string name="title_key_frame_interval">Интервал ключевых кадров</string>
+    <string name="title_key_frame_interval">Интервал ключ. кадров</string>
     <string name="title_audio">Аудио</string>
     <string name="title_video">Видео</string>
     <string name="title_x_images">[x] изображения</string>
@@ -177,4 +177,15 @@ SOFTWARE.
     <string name="title_input_files">Входные файлы</string>
     <string name="title_width">Ширина</string>
     <string name="title_height">Высота</string>
+    <string name="title_premium_feature">Премиум-функция</string>
+    <string name="title_premium">Премиум</string>
+    <string name="title_premium_version">Премиум-версия</string>
+    <string name="title_free_version">Бесплатная версия</string>
+    <string name="title_aspect">Аспект</string>
+    <string name="title_aspect_ratio">Пропорция</string>
+    <string name="title_image_aspect">Аспект изображения</string>
+    <string name="title_video_aspect">Видео аспект</string>
+    <string name="title_video_resolution">Разрешение видео</string>
+    <string name="title_image_framing">Обрамление</string>
+    <string name="title_step">Шаг</string>
 </resources>

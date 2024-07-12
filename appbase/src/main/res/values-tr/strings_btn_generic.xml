@@ -75,4 +75,5 @@ SOFTWARE.
     <string name="btn_next">İleri</string>
     <string name="btn_finish">Son</string>
     <string name="btn_advanced">Gelişmiş</string>
+    <string name="btn_more_details">Daha fazla detay</string>
 </resources>

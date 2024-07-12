@@ -67,4 +67,5 @@ SOFTWARE.
     <string name="err_no_files_to_share">НЯМА ФАЙЛОВЕ ЗА СПОДЕЛЯНЕ</string>
     <string name="err_no_files_to_export">НЯМА ФАЙЛОВЕ ЗА ЕКСПОРТ</string>
     <string name="err_file_format_not_supported">ФАЙЛОВИЯТ ФОРМАТ НЕ СЕ ПОДДЪРЖА</string>
+    <string name="err_billing_unavailable">ПЛАЩАНЕТО НЕ Е ВЪЗМОЖНО</string>
 </resources>

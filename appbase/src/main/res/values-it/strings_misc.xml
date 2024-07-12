@@ -39,4 +39,6 @@ SOFTWARE.
     <string name="dont_show_again">Non mostrare di nuovo</string>
     <string name="why_is_this_required">Perché è necessario?</string>
     <string name="note_system_ports_only_on_rooted_devices">Nota: i porte di sistema (0..1023) sono disponibili solo sui dispositivi rooted.</string>
+    <string name="premium_version_intro">Oltre alle funzionalità di base dell\'app, l\'aggiornamento alla versione premium offre i seguenti vantaggi:</string>
+    <string name="premium_version_intro_owned">Hai la versione Premium, che ti offre i seguenti vantaggi:</string>
 </resources>
