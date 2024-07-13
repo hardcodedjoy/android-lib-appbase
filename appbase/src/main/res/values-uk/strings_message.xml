@@ -48,7 +48,7 @@ SOFTWARE.
     <string name="files_selected">вибраних файлів.</string>
     <string name="selection_must_be_positive">Відбір повинен бути позитивним.</string>
     <string name="done">Готово.</string>
-    <string name="this_is_a_premium_feature">Це функція Premium.</string>
+    <string name="this_is_a_premium_feature">Це функція Преміум.</string>
     <string name="no_internet_please_enable_and_try_again">Немає підключення до Інтернету. Вмикаєте Wi-Fi або мобільні дані і спробуйте ще раз.</string>
     <string name="purchase_pending">Покупка в процесі реалізації.</string>
     <string name="x_purchased_successfully">[x] успішно придбано.</string>

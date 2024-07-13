@@ -53,7 +53,7 @@ public class ImageFraming {
             return new RectF(cropX, cropY, cropX + cropW, cropY + cropH);
 
         } else { // Image is taller than display -> crop height:
-            float cropH = outAR * inW;
+            float cropH = inW / outAR;
             float cropX = 0;
             float cropY = (inH - cropH) / 2;
             //noinspection UnnecessaryLocalVariable
