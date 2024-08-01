@@ -55,4 +55,5 @@ SOFTWARE.
     <string name="product_purchased_successfully">Продукт успішно придбано.</string>
     <string name="products_purchased_successfully">Продукти успішно придбані.</string>
     <string name="your_device_does_not_support_this_resolution">Ваш пристрій не підтримує цю роздільність.</string>
+    <string name="discard_unsaved_video">Відкинути незбережене відео?</string>
 </resources>

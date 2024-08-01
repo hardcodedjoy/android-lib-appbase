@@ -188,4 +188,5 @@ SOFTWARE.
     <string name="title_video_resolution">Video çözünürlüğü</string>
     <string name="title_image_framing">Görüntü çerçeveleme</string>
     <string name="title_step">Aşama</string>
+    <string name="title_unsaved_video">Kaydedilmeyen Video</string>
 </resources>

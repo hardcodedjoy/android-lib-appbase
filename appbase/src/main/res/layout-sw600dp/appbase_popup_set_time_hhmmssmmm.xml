@@ -31,7 +31,9 @@ SOFTWARE.
     android:layout_height="match_parent"
     android:gravity="center"
     android:background="?attr/appBaseColorPopupUnder"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:clickable="true"
+    android:focusable="true">
 
     <LinearLayout
         android:layout_width="500dp"

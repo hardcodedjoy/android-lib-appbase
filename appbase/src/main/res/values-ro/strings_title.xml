@@ -188,4 +188,5 @@ SOFTWARE.
     <string name="title_video_resolution">Rezoluție video</string>
     <string name="title_image_framing">Încadrarea imaginii</string>
     <string name="title_step">Pasul</string>
+    <string name="title_unsaved_video">Videoclip nesalvat</string>
 </resources>

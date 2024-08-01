@@ -188,4 +188,5 @@ SOFTWARE.
     <string name="title_video_resolution">Video Auflösung</string>
     <string name="title_image_framing">Bildeinfassung</string>
     <string name="title_step">Schritt</string>
+    <string name="title_unsaved_video">Ungespeichertes Video</string>
 </resources>

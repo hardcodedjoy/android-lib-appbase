@@ -76,4 +76,5 @@ SOFTWARE.
     <string name="btn_finish">Finalizare</string>
     <string name="btn_advanced">Avansat</string>
     <string name="btn_more_details">Mai multe detalii</string>
+    <string name="btn_discard">Renunță</string>
 </resources>

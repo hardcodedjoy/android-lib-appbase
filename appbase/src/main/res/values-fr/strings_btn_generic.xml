@@ -76,4 +76,5 @@ SOFTWARE.
     <string name="btn_finish">Terminer</string>
     <string name="btn_advanced">Avancée</string>
     <string name="btn_more_details">Plus de détails</string>
+    <string name="btn_discard">Jeter</string>
 </resources>

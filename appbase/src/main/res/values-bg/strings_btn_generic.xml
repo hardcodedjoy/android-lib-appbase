@@ -76,4 +76,5 @@ SOFTWARE.
     <string name="btn_finish">Готово</string>
     <string name="btn_advanced">Разширено</string>
     <string name="btn_more_details">Повече детайли</string>
+    <string name="btn_discard">Изхвърли</string>
 </resources>

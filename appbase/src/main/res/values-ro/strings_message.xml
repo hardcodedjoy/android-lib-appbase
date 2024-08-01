@@ -55,4 +55,5 @@ SOFTWARE.
     <string name="product_purchased_successfully">Produs achizitionat cu succes.</string>
     <string name="products_purchased_successfully">Produse achiziționate cu succes.</string>
     <string name="your_device_does_not_support_this_resolution">Dispozitivul dvs. nu acceptă această rezoluție.</string>
+    <string name="discard_unsaved_video">Renunțați la videoclipul nesalvat?</string>
 </resources>

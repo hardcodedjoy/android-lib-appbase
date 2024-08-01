@@ -76,4 +76,5 @@ SOFTWARE.
     <string name="btn_finish">Concluir</string>
     <string name="btn_advanced">Avançado</string>
     <string name="btn_more_details">Mais detalhes</string>
+    <string name="btn_discard">Descartar</string>
 </resources>

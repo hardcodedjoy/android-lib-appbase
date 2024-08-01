@@ -188,4 +188,5 @@ SOFTWARE.
     <string name="title_video_resolution">Роздільність відео</string>
     <string name="title_image_framing">Обрамлення</string>
     <string name="title_step">Крок</string>
+    <string name="title_unsaved_video">Незбережене відео</string>
 </resources>

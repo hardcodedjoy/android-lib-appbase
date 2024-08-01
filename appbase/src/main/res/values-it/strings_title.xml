@@ -188,4 +188,5 @@ SOFTWARE.
     <string name="title_video_resolution">Risoluzione video</string>
     <string name="title_image_framing">Inquadramento</string>
     <string name="title_step">Passo</string>
+    <string name="title_unsaved_video">Video non salvato</string>
 </resources>

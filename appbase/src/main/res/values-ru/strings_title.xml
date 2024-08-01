@@ -188,4 +188,5 @@ SOFTWARE.
     <string name="title_video_resolution">Разрешение видео</string>
     <string name="title_image_framing">Обрамление</string>
     <string name="title_step">Шаг</string>
+    <string name="title_unsaved_video">Несохраненное видео</string>
 </resources>

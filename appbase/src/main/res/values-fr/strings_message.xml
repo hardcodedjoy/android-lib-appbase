@@ -55,4 +55,5 @@ SOFTWARE.
     <string name="product_purchased_successfully">Produit acheté avec succès.</string>
     <string name="products_purchased_successfully">Produits achetés avec succès.</string>
     <string name="your_device_does_not_support_this_resolution">Votre appareil ne supporte pas cette résolution.</string>
+    <string name="discard_unsaved_video">Jeter la vidéo non sauvegardée?</string>
 </resources>

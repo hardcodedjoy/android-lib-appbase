@@ -76,4 +76,5 @@ SOFTWARE.
     <string name="btn_finish">Son</string>
     <string name="btn_advanced">Gelişmiş</string>
     <string name="btn_more_details">Daha fazla detay</string>
+    <string name="btn_discard">At</string>
 </resources>

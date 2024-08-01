@@ -188,4 +188,5 @@ SOFTWARE.
     <string name="title_video_resolution">Rozdzielczość wideo</string>
     <string name="title_image_framing">Kadrowanie obrazu</string>
     <string name="title_step">Krok</string>
+    <string name="title_unsaved_video">Niezapisane wideo</string>
 </resources>

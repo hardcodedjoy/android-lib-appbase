@@ -188,4 +188,5 @@ SOFTWARE.
     <string name="title_video_resolution">Видео резолюция</string>
     <string name="title_image_framing">Рамкиране</string>
     <string name="title_step">Стъпка</string>
+    <string name="title_unsaved_video">Несъхранен видео</string>
 </resources>
