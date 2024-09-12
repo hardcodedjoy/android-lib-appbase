@@ -36,7 +36,7 @@ public class CvIcons extends CvTSLL {
 
     public CvIcons() {
         setTitle(R.string.icons);
-        setTitleIcon(R.drawable.ic_image_1);
+        setTitleIcon(com.hardcodedjoy.appbase.R.drawable.ic_image_1);
         LinearLayout ll = findViewById(R.id.appbase_ll_content);
         inflate(getActivity(), R.layout.cv_icons, ll);
     }

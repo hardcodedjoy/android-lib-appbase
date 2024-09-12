@@ -1,14 +1,18 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 33
-
+    namespace "com.hardcodedjoy.appbase"
+    compileSdk 34
+    buildFeatures {
+        buildConfig = true
+    }
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 33
-        versionCode 79
-        versionName "1.9.0"
+        targetSdk 34
+        versionCode 80
+        versionName "2.0.0"
         buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
+        buildConfigField "String", "VERSION_NAME", "\"" + versionName + "\""
     }
 
     buildTypes {

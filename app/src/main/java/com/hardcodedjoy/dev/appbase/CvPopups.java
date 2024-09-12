@@ -89,7 +89,8 @@ public class CvPopups extends ContentView {
     }
 
     private void showPopupAsk() {
-        new PopupAsk(R.string.title_delete, R.string.are_you_sure) {
+        new PopupAsk(com.hardcodedjoy.appbase.R.string.title_delete,
+                com.hardcodedjoy.appbase.R.string.are_you_sure) {
             @Override
             public void onOK() {}
         }.show();
@@ -98,9 +99,9 @@ public class CvPopups extends ContentView {
     private void showPopupAsk2() {
         new PopupAsk(
                 R.string.popup_ask_with_text_buttons,
-                R.string.are_you_sure,
+                com.hardcodedjoy.appbase.R.string.are_you_sure,
                 R.string.yes_that_would_be_great,
-                R.string.btn_no) {
+                com.hardcodedjoy.appbase.R.string.btn_no) {
             @Override
             public void onOK() {}
         }.show();
@@ -109,8 +110,8 @@ public class CvPopups extends ContentView {
     private void showPopupAsk3() {
         new PopupAsk(
                 R.string.popup_ask_with_text_buttons,
-                R.string.are_you_sure,
-                R.string.btn_yes,
+                com.hardcodedjoy.appbase.R.string.are_you_sure,
+                com.hardcodedjoy.appbase.R.string.btn_yes,
                 R.string.no_i_dont_want_that) {
             @Override
             public void onOK() {}
@@ -120,16 +121,16 @@ public class CvPopups extends ContentView {
     private void showPopupChoose() {
         Vector<Option> op = new Vector<>();
 
-        op.add(new Option(R.drawable.ic_settings_1, "option A", () -> {}));
-        op.add(new Option(R.drawable.ic_info_1, "option B", () -> {}));
+        op.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_settings_1, "option A", () -> {}));
+        op.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_info_1, "option B", () -> {}));
 
-        Option optionDisabled = new Option(R.drawable.ic_clear_1, "disabled option", () -> {});
+        Option optionDisabled = new Option(com.hardcodedjoy.appbase.R.drawable.ic_clear_1, "disabled option", () -> {});
         optionDisabled.setDrawAsDisabled(true);
         op.add(optionDisabled);
 
         for(int i=0; i<10; i++) {
-            op.add(new Option(R.drawable.ic_settings_1, "option " + (i*2 + 1), () -> {}));
-            op.add(new Option(R.drawable.ic_info_1, "option " + (i*2 + 2), () -> {}));
+            op.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_settings_1, "option " + (i*2 + 1), () -> {}));
+            op.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_info_1, "option " + (i*2 + 2), () -> {}));
         }
 
         new PopupChoose("Choose", "choose an option", op).show();
@@ -189,14 +190,14 @@ public class CvPopups extends ContentView {
     private void showPopupSetPassword() {
         new PopupSetPassword() {
             @Override
-            public void onOK(String s) { showInfo(getString(R.string.password) + " = " + s); }
+            public void onOK(String s) { showInfo(getString(com.hardcodedjoy.appbase.R.string.password) + " = " + s); }
         }.show();
     }
 
     private void showPopupEnterPassword() {
         new PopupEnterPassword() {
             @Override
-            public void onOK(String s) { showInfo(getString(R.string.password) + " = " + s); }
+            public void onOK(String s) { showInfo(getString(com.hardcodedjoy.appbase.R.string.password) + " = " + s); }
         }.show();
     }
 

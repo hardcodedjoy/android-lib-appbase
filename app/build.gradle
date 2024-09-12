@@ -1,14 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 33
-
+    namespace "com.hardcodedjoy.dev.appbase"
+    compileSdk 34
+    buildFeatures {
+        buildConfig = true
+    }
     defaultConfig {
         applicationId "com.hardcodedjoy.dev.appbase"
         minSdkVersion 21
-        targetSdkVersion 33
-        versionCode 79
-        versionName "1.9.0"
+        targetSdk 34
+        versionCode 80
+        versionName "2.0.0"
         buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
     }
     buildTypes {

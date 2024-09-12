@@ -40,13 +40,13 @@ public class CvColorTest extends CvTSLL {
     private int colorBackground;
 
     public CvColorTest() {
-        setTitle(R.string.title_color);
-        setTitleIcon(R.drawable.ic_circle_2);
+        setTitle(com.hardcodedjoy.appbase.R.string.title_color);
+        setTitleIcon(com.hardcodedjoy.appbase.R.drawable.ic_circle_2);
         LinearLayout ll = findViewById(R.id.appbase_ll_content);
         inflate(getActivity(), R.layout.cv_color_test, ll);
 
         GuiLinker.linkColorField(findViewById(R.id.ll_fg_color),
-                R.string.title_foreground_color, new IntSetGetter() {
+                com.hardcodedjoy.appbase.R.string.title_foreground_color, new IntSetGetter() {
             @Override
             public void set(int value) { colorForeground = value; }
             @Override
@@ -54,7 +54,7 @@ public class CvColorTest extends CvTSLL {
         });
 
         GuiLinker.linkColorField(findViewById(R.id.ll_bg_color),
-                R.string.title_background_color, new IntSetGetter() {
+                com.hardcodedjoy.appbase.R.string.title_background_color, new IntSetGetter() {
             @Override
             public void set(int value) { colorBackground = value; }
             @Override

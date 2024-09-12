@@ -43,19 +43,19 @@ public class CvMain extends CvTMSLL {
     public CvMain() {
         // add initialization code here (that must run only one time)
         Vector<Option> ops = new Vector<>();
-        ops.add(new Option(R.drawable.ic_menu_1, R.string.popups, () -> new CvPopups().show()));
-        ops.add(new Option(R.drawable.ic_image_1, R.string.icons, () -> new CvIcons().show()));
-        ops.add(new Option(R.drawable.ic_preview_1, R.string.theme_view, () -> new CvThemeView().show()));
+        ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_menu_1, R.string.popups, () -> new CvPopups().show()));
+        ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_image_1, R.string.icons, () -> new CvIcons().show()));
+        ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_preview_1, R.string.theme_view, () -> new CvThemeView().show()));
 
-        ops.add(new Option(R.drawable.ic_circle_2, "Color Test", () -> new CvColorTest().show()));
+        ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_circle_2, "Color Test", () -> new CvColorTest().show()));
 
-        Option optionDisabled = new Option(R.drawable.ic_clear_1, "disabled option", () -> {});
+        Option optionDisabled = new Option(com.hardcodedjoy.appbase.R.drawable.ic_clear_1, "disabled option", () -> {});
         optionDisabled.setDrawAsDisabled(true);
         ops.add(optionDisabled);
 
         addMenuOptions(ops, 0);
 
-        setTitleIcon(R.drawable.ic_app_1);
+        setTitleIcon(com.hardcodedjoy.appbase.R.drawable.ic_app_1);
     }
 
     @Override
