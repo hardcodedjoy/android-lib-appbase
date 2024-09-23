@@ -41,4 +41,6 @@ SOFTWARE.
     <string name="item">item</string>
     <string name="items_a">itens</string>
     <string name="items_ov">itens</string>
+    <string name="unit_x">x</string>
+    <string name="unit_samples">amostras</string>
 </resources>

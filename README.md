@@ -1,6 +1,6 @@
 # AppBase
 
-<code>com.hardcodedjoy.appbase</code> <code>v2.0.0</code><br/>
+<code>com.hardcodedjoy.appbase</code> <code>v2.0.1</code><br/>
 minSdkVersion: <code>21</code><br/>
 targetSdkVersion: <code>34</code><br/>
 

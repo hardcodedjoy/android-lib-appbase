@@ -41,4 +41,5 @@ SOFTWARE.
     <string name="note_system_ports_only_on_rooted_devices">Примітка: системні порти (0 .. 1023) доступні лише на пристроях з root-доступом.</string>
     <string name="premium_version_intro">Крім основних функцій додатку, оновлення до преміум-версії дає наступні переваги:</string>
     <string name="premium_version_intro_owned">У вас є преміум-версія, яка дає наступні переваги:</string>
+    <string name="empty_disabled">пусто = вимкнено</string>
 </resources>

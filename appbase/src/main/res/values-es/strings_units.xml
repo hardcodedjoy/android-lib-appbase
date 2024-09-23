@@ -41,4 +41,6 @@ SOFTWARE.
     <string name="item">elemento</string>
     <string name="items_a">elementos</string>
     <string name="items_ov">elementos</string>
+    <string name="unit_x">x</string>
+    <string name="unit_samples">muestras</string>
 </resources>

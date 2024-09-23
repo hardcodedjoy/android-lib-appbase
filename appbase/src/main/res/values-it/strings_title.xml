@@ -189,4 +189,8 @@ SOFTWARE.
     <string name="title_image_framing">Inquadramento</string>
     <string name="title_step">Passo</string>
     <string name="title_unsaved_video">Video non salvato</string>
+    <string name="title_min_frequency">Frequenza min.</string>
+    <string name="title_max_frequency">Frequenza mas.</string>
+    <string name="title_time_window">Finestra temporale</string>
+    <string name="title_display_settings">Visualizzazione</string>
 </resources>

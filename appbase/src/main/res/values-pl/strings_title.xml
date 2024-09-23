@@ -189,4 +189,8 @@ SOFTWARE.
     <string name="title_image_framing">Kadrowanie obrazu</string>
     <string name="title_step">Krok</string>
     <string name="title_unsaved_video">Niezapisane wideo</string>
+    <string name="title_min_frequency">Min. częstość</string>
+    <string name="title_max_frequency">Maks. częstość</string>
+    <string name="title_time_window">Okno Czasowe</string>
+    <string name="title_display_settings">Wyświetlanie</string>
 </resources>

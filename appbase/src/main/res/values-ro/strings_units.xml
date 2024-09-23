@@ -41,4 +41,6 @@ SOFTWARE.
     <string name="item">obiect</string>
     <string name="items_a">obiecte</string>
     <string name="items_ov">obiecte</string>
+    <string name="unit_x">x</string>
+    <string name="unit_samples">eșantioane</string>
 </resources>

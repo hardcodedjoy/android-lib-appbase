@@ -189,4 +189,8 @@ SOFTWARE.
     <string name="title_image_framing">Bildeinfassung</string>
     <string name="title_step">Schritt</string>
     <string name="title_unsaved_video">Ungespeichertes Video</string>
+    <string name="title_min_frequency">Min. Frequenz</string>
+    <string name="title_max_frequency">Max. Frequenz</string>
+    <string name="title_time_window">Zeitfenster</string>
+    <string name="title_display_settings">Anzeigen</string>
 </resources>

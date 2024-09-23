@@ -189,4 +189,8 @@ SOFTWARE.
     <string name="title_image_framing">Cadrage d\'image</string>
     <string name="title_step">Étape</string>
     <string name="title_unsaved_video">Vidéo non sauvegardée</string>
+    <string name="title_min_frequency">Fréquence min.</string>
+    <string name="title_max_frequency">Fréquence max.</string>
+    <string name="title_time_window">Fenêtre temporelle</string>
+    <string name="title_display_settings">Affichage</string>
 </resources>

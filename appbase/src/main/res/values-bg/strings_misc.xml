@@ -41,4 +41,5 @@ SOFTWARE.
     <string name="note_system_ports_only_on_rooted_devices">Забележка: системните портове (0 .. 1023) са налични само на руутнати устройства.</string>
     <string name="premium_version_intro">В допълнение към основните функции на приложението, надграждането до премиум версия ви дава следните предимства:</string>
     <string name="premium_version_intro_owned">Вече имате Премиум версията, която ви дава следните предимства:</string>
+    <string name="empty_disabled">празно = забранено</string>
 </resources>

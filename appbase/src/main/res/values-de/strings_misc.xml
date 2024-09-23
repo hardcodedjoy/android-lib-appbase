@@ -41,4 +41,5 @@ SOFTWARE.
     <string name="note_system_ports_only_on_rooted_devices">Hinweis: Systemports (0 .. 1023) nur auf gerooteten Geräten verfügbar sind.</string>
     <string name="premium_version_intro">Zusätzlich zu den grundlegenden App-Funktionen bietet Ihnen das Upgrade auf die Premium-Version folgende Vorteile:</string>
     <string name="premium_version_intro_owned">Sie verfügen über die Premium-Version, die Ihnen folgende Vorteile bietet:</string>
+    <string name="empty_disabled">leer = deaktiviert</string>
 </resources>

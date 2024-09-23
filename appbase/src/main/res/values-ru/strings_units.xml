@@ -41,4 +41,6 @@ SOFTWARE.
     <string name="item">объект</string>
     <string name="items_a">объекта</string>
     <string name="items_ov">объектов</string>
+    <string name="unit_x">x</string>
+    <string name="unit_samples">образцы</string>
 </resources>

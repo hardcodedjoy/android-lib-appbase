@@ -41,4 +41,5 @@ SOFTWARE.
     <string name="note_system_ports_only_on_rooted_devices">Not: sistem bağlantı noktaları (0 .. 1023) yalnızca root erişimli cihazlarda kullanılabilir.</string>
     <string name="premium_version_intro">Temel uygulama özelliklerine ek olarak, premium sürüme yükseltme size aşağıdaki avantajları sağlar:</string>
     <string name="premium_version_intro_owned">Size aşağıdaki avantajları sağlayan Premium sürümüne sahipsiniz:</string>
+    <string name="empty_disabled">boş = etkisiz</string>
 </resources>

@@ -41,4 +41,5 @@ SOFTWARE.
     <string name="note_system_ports_only_on_rooted_devices">Notă: porturile de sistem (0 .. 1023) sunt disponibile numai pe dispozitivele rootate.</string>
     <string name="premium_version_intro">Pe lângă funcțiile de bază ale aplicației, trecerea la versiunea premium vă oferă următoarele avantaje:</string>
     <string name="premium_version_intro_owned">Aveți deja versiunea Premium, care vă oferă următoarele avantaje:</string>
+    <string name="empty_disabled">gol = dezactivat</string>
 </resources>

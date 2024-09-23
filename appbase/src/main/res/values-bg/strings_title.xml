@@ -189,4 +189,8 @@ SOFTWARE.
     <string name="title_image_framing">Рамкиране</string>
     <string name="title_step">Стъпка</string>
     <string name="title_unsaved_video">Несъхранен видео</string>
+    <string name="title_min_frequency">Мин. честота</string>
+    <string name="title_max_frequency">Макс. честота</string>
+    <string name="title_time_window">Времеви прозорец</string>
+    <string name="title_display_settings">Показване</string>
 </resources>

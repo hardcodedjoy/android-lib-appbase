@@ -41,4 +41,5 @@ SOFTWARE.
     <string name="note_system_ports_only_on_rooted_devices">Примечание: системные порты (0 .. 1023) доступны только на рутованных устройствах.</string>
     <string name="premium_version_intro">Помимо основных функций приложения, обновление до премиум-версии дает вам следующие преимущества:</string>
     <string name="premium_version_intro_owned">У вас есть Премиум-версия, которая дает вам следующие преимущества:</string>
+    <string name="empty_disabled">пусто = отключено</string>
 </resources>

@@ -41,4 +41,6 @@ SOFTWARE.
     <string name="item">elemento</string>
     <string name="items_a">elementi</string>
     <string name="items_ov">elementi</string>
+    <string name="unit_x">x</string>
+    <string name="unit_samples">campioni</string>
 </resources>

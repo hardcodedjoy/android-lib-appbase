@@ -41,4 +41,5 @@ SOFTWARE.
     <string name="note_system_ports_only_on_rooted_devices">Nota: portas do sistema (0 .. 1023) estão disponíveis apenas em dispositivos com acesso root.</string>
     <string name="premium_version_intro">Além dos recursos básicos do aplicativo, a atualização para a versão premium oferece as seguintes vantagens:</string>
     <string name="premium_version_intro_owned">Você já possui a versão Premium, que oferece as seguintes vantagens:</string>
+    <string name="empty_disabled">vazio = desativado</string>
 </resources>

@@ -41,4 +41,6 @@ SOFTWARE.
     <string name="item">öğe</string>
     <string name="items_a">öğeler</string>
     <string name="items_ov">öğeler</string>
+    <string name="unit_x">x</string>
+    <string name="unit_samples">örnekler</string>
 </resources>
