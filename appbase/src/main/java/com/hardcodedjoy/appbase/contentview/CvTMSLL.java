@@ -27,8 +27,6 @@ SOFTWARE.
 package com.hardcodedjoy.appbase.contentview;
 
 import android.annotation.SuppressLint;
-import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.hardcodedjoy.appbase.R;
@@ -45,21 +43,18 @@ public class CvTMSLL extends CvTM { // Title / Menu / ScrollView / LinearLayout
         TextView tvTitle = findViewById(R.id.appbase_tv_title);
         titleTextSizeDefault = DisplayUnit.pxToSp((int)tvTitle.getTextSize());
 
-        FrameLayout flMenuOptions = findViewById(R.id.appbase_fl_menu_options);
+        flMenuOptions = findViewById(R.id.appbase_fl_menu_options);
         llMenuOptions = flMenuOptions.findViewById(R.id.appbase_ll_menu_options);
 
         findViewById(R.id.appbase_btn_menu).setOnClickListener(view -> {
-            if(llMenuOptions.getVisibility() == View.VISIBLE) {
-                hideMenu();
-            } else if(llMenuOptions.getVisibility() == View.GONE) {
-                showMenu();
-            }
+            if(menuVisible()) { hideMenu(); }
+            else { showMenu(); }
         });
         hideMenu();
 
         // hide menu on outside touch:
         flMenuOptions.setOnTouchListener((v, event) -> {
-            if(llMenuOptions.getVisibility() == View.VISIBLE) {
+            if(menuVisible()) {
                 hideMenu();
                 return true;
             }

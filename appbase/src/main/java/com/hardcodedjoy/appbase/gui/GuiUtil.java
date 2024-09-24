@@ -35,6 +35,7 @@ import android.text.SpannableString;
 import android.text.style.StyleSpan;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -106,5 +107,15 @@ public class GuiUtil {
                 ((ImageView) v).setImageTintMode(PorterDuff.Mode.SRC_IN);
             }
         }
+    }
+
+    static public void disable(Activity activity, EditText et, View.OnClickListener ocl) {
+        et.setFocusable(false);
+        et.setFocusableInTouchMode(false);
+        et.setBackgroundResource(com.hardcodedjoy.appbase.R.drawable.et_disabled);
+        int colorText = ThemeUtil.getColor(activity,
+                com.hardcodedjoy.appbase.R.attr.appBaseColorTextDisabled);
+        et.setTextColor(colorText);
+        et.setOnClickListener(ocl);
     }
 }

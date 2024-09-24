@@ -48,7 +48,8 @@ public class CvTM extends ContentView { // Content View with Title and Menu
 
     static protected Class<?> aboutCvClass;
 
-    protected LinearLayout llMenuOptions;
+    protected FrameLayout flMenuOptions; // menu together with 1dp border and scrollview
+    protected LinearLayout llMenuOptions; // container for the menu options
     protected Vector<Option> menuOptions;
 
     protected float titleTextSizeDefault;
@@ -65,7 +66,11 @@ public class CvTM extends ContentView { // Content View with Title and Menu
         }));
     }
 
-    protected void hideMenu() { llMenuOptions.setVisibility(View.GONE); }
+    protected boolean menuVisible() {
+        return flMenuOptions.getVisibility() == View.VISIBLE;
+    }
+
+    protected void hideMenu() { flMenuOptions.setVisibility(View.GONE); }
 
     @SuppressLint("RtlHardcoded")
     protected void showMenu() {
@@ -86,7 +91,7 @@ public class CvTM extends ContentView { // Content View with Title and Menu
             tvOptionText = flMenuOptionWithIcon.findViewById(R.id.appbase_tv_text);
 
             btnOption.setOnClickListener(v -> {
-                llMenuOptions.setVisibility(View.GONE);
+                hideMenu();
                 option.getExecutor().run();
             });
 
@@ -125,13 +130,13 @@ public class CvTM extends ContentView { // Content View with Title and Menu
             llMenuOptions.addView(flMenuOptionWithIcon, params);
         }
 
-        llMenuOptions.setVisibility(View.VISIBLE);
+        flMenuOptions.setVisibility(View.VISIBLE);
     }
 
     @Override
     public boolean onBackPressed() {
-        if(llMenuOptions.getVisibility() == View.VISIBLE) {
-            llMenuOptions.setVisibility(View.GONE);
+        if(menuVisible()) {
+            hideMenu();
             return true; // consumed
         }
         return super.onBackPressed();
