@@ -53,12 +53,17 @@ public class IntentUtil {
 
     static public Uri[] getUris(Intent intent) {
         ClipData clipData = intent.getClipData();
-        if(clipData == null) { return new Uri[] { intent.getData() }; }
-        int n = clipData.getItemCount();
-        if(n == 0) { return null; }
-        Uri[] uris = new Uri[n];
-        for(int i=0; i<n; i++) { uris[i] = clipData.getItemAt(i).getUri(); }
-        return uris;
+        if(clipData == null) {
+            // no clipData -> use data
+            Uri uri = intent.getData();
+            if(uri == null) { return new Uri[0]; }
+            else { return new Uri[] { uri }; }
+        } else { // use clipData
+            int n = clipData.getItemCount();
+            Uri[] uris = new Uri[n];
+            for(int i=0; i<n; i++) { uris[i] = clipData.getItemAt(i).getUri(); }
+            return uris;
+        }
     }
 
     static public void shareFiles(ArrayList<Uri> uriList, String title, String mimeType) {

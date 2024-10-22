@@ -38,6 +38,7 @@ import java.io.File;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
@@ -53,14 +54,19 @@ public class FileUtil {
     static public void setActivity(Activity activity) { FileUtil.activity = activity; }
     static public Activity getActivity() { return activity; }
 
-    static public void setFileContent(Uri uri, byte[] ba) {
+    static public void setFileContent(Uri uri, byte[] ba, int offset, int len) {
         try {
             OutputStream os = activity.getContentResolver().openOutputStream(uri, "wt");
-            os.write(ba);
+            //noinspection DataFlowIssue
+            os.write(ba, offset, len);
             os.close();
         } catch (Exception e) {
             e.printStackTrace(System.err);
         }
+    }
+
+    static public void setFileContent(Uri uri, byte[] ba) {
+        setFileContent(uri, ba, 0, ba.length);
     }
 
     static public void setFileContent(Uri uri, String content) {
@@ -79,8 +85,40 @@ public class FileUtil {
         setFileContent(Uri.fromFile(file), ba);
     }
 
+    static public void setFileContent(File file, byte[] ba, int offset, int len) {
+        setFileContent(Uri.fromFile(file), ba, offset, len);
+    }
+
     static public void setFileContent(File file, String content) {
         setFileContent(Uri.fromFile(file), content);
+    }
+
+    static public int readFileContent(Uri uri, byte[] dest) {
+        InputStream is;
+
+        try {
+            is = activity.getContentResolver().openInputStream(uri);
+            if(is == null) { return 0; }
+        } catch (Exception e) {
+            e.printStackTrace(System.err);
+            return 0;
+        }
+
+        byte[] block = new byte[1024];
+        int destOffset = 0;
+        int bytesRead;
+        try {
+            while((bytesRead = is.read(block)) != -1) {
+                System.arraycopy(block, 0, dest, destOffset, bytesRead);
+                destOffset += bytesRead;
+            }
+            is.close();
+        } catch (Exception e) {
+            e.printStackTrace(System.err);
+            return 0;
+        }
+
+        return destOffset;
     }
 
     static public byte[] getFileContent(Uri uri) {
@@ -130,9 +168,11 @@ public class FileUtil {
         }
     }
 
-    static public byte[] getFileContent(File file) {
-        return getFileContent(Uri.fromFile(file));
+    static public int readFileContent(File file, byte[] dest) {
+        return readFileContent(Uri.fromFile(file), dest);
     }
+
+    static public byte[] getFileContent(File file) { return getFileContent(Uri.fromFile(file)); }
 
     static public String getFileContentAsString(File file) {
         return getFileContentAsString(Uri.fromFile(file));
@@ -145,7 +185,7 @@ public class FileUtil {
     }
 
     static private String getFileNameFromContentURI(Uri uri) {
-        if(!uri.getScheme().equals("content")) { return null; }
+        if(!"content".equals(uri.getScheme())) { return null; }
 
         Cursor cursor = activity.getContentResolver().query(uri,
                 null, null, null, null);
@@ -209,7 +249,7 @@ public class FileUtil {
         int a = fileName.lastIndexOf('.');
         if(a == -1) { return null; }
         String ext = fileName.substring(a+1);
-        if(ext.length() == 0) { return null; }
+        if(ext.isEmpty()) { return null; }
         return ext;
     }
 
@@ -228,26 +268,20 @@ public class FileUtil {
         return fileName.substring(0, len);
     }
 
-    @SuppressWarnings("UnusedReturnValue")
     static public boolean deleteNonEmptyDir(File dir) {
+        if(!emptyDir(dir)) { return false; } // could not empty
+        return dir.delete(); // true if emptied OK and deleted OK
+    }
+
+    static public boolean emptyDir(File dir) {
         File[] files = dir.listFiles();
         if(files == null) { files = new File[0]; }
-        boolean deletedOK = true;
+
         for(File file : files) {
-            if(file.isDirectory()) {
-                deleteNonEmptyDir(file);
-            } else {
-                deletedOK = file.delete();
-                if(!deletedOK) {
-                    break;
-                }
-            }
+            boolean deletedOK = file.isDirectory() ? deleteNonEmptyDir(file) : file.delete();
+            if(!deletedOK) { return false; }
         }
-        if(deletedOK) { // all contents deleted
-            // now delete this dir:
-            deletedOK = dir.delete();
-        }
-        return deletedOK; // true if all deleted OK, false if (some) could not be deleted
+        return true; // success
     }
 
     @SuppressLint("UsableSpace")
@@ -346,5 +380,18 @@ public class FileUtil {
             }
         }
         return file;
+    }
+
+    static public File[] listFilesSorted(File dir) {
+        if(dir == null) { return new File[0]; }
+        File[] files = dir.listFiles();
+        if(files == null) { return new File[0]; }
+        Arrays.sort(files);
+        return files;
+    }
+
+    static public boolean mkEmptyDir(File dir) {
+        if(dir.exists()) { return emptyDir(dir); }
+        else { return dir.mkdir(); }
     }
 }

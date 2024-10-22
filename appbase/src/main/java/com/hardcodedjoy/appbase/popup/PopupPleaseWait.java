@@ -40,9 +40,11 @@ import com.hardcodedjoy.appbase.contentview.ContentView;
 public class PopupPleaseWait extends Popup {
 
     private final TextView tvMessage;
+    private boolean canceled;
 
     @Override
-    public void onCancel() { }
+    public void onCancel() { canceled = true; }
+    public boolean isCanceled() { return canceled; }
 
     public PopupPleaseWait(String message) {
 

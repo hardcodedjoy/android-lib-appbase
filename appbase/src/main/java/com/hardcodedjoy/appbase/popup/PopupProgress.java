@@ -38,9 +38,11 @@ public class PopupProgress extends Popup {
 
     private final TextView tvMessage;
     private final ProgressBar progressBar;
+    private boolean canceled;
 
     @Override
-    public void onCancel() {}
+    public void onCancel() { canceled = true; }
+    public boolean isCanceled() { return canceled; }
 
     public PopupProgress(String title, String message) {
 

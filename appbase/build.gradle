@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
 
 android {
     namespace "com.hardcodedjoy.appbase"
@@ -9,8 +10,8 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdk 34
-        versionCode 82
-        versionName "2.0.2"
+        versionCode 88
+        versionName "2.0.8"
         buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
         buildConfigField "String", "VERSION_NAME", "\"" + versionName + "\""
     }
@@ -26,5 +27,29 @@ android {
     }
 
     dependencies {
+    }
+
+    publishing {
+        singleVariant("release") {
+            // if you don't want sources/javadoc, remove these lines
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId 'com.hardcodedjoy'
+                artifactId 'appbase'
+                version '2.0.8'
+            }
+        }
+        repositories {
+            mavenLocal() // Publishing to local Maven
+        }
     }
 }
