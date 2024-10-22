@@ -396,11 +396,23 @@ public class StringUtil {
 				.replace(tempPlaceholderForY, y);
 	}
 
-	static public String unescapeBNRT(String s) {
+	static public String escapeBFNRT(String s) {
+		if(s == null) { return null; }
+		return s.replace("\\", "\\\\") // escape the backslash first !!!
+				.replace("\b", "\\b")
+				.replace("\f", "\\f")
+				.replace("\n", "\\n")
+				.replace("\r", "\\r")
+				.replace("\t", "\\t");
+	}
+
+	static public String unescapeBFNRT(String s) {
 		if(s == null) { return null; }
 		return s.replace("\\b", "\b")
+				.replace("\\f", "\f")
 				.replace("\\n", "\n")
 				.replace("\\r", "\r")
-				.replace("\\t", "\t");
+				.replace("\\t", "\t")
+				.replace("\\\\", "\\"); // unescape the backslash last !!!
 	}
 }
