@@ -374,7 +374,8 @@ public class FileUtil {
         if(file.exists()) {
             int n = 1;
             while(file.exists()) {
-                fileName = base + " (" + n + ")." + ext;
+                fileName = base + " (" + n + ")";
+                if(ext != null) { fileName += "." + ext; }
                 file = new File(dir, fileName);
                 n++;
             }
@@ -387,6 +388,23 @@ public class FileUtil {
         File[] files = dir.listFiles();
         if(files == null) { return new File[0]; }
         Arrays.sort(files);
+        return files;
+    }
+
+    static public File[] listFilesOldestFirst(File dir) {
+        if(dir == null) { return new File[0]; }
+        File[] files = dir.listFiles();
+        if(files == null) { return new File[0]; }
+        //noinspection ComparatorCombinators
+        Arrays.sort(files, (f1, f2) -> Long.compare(f1.lastModified(), f2.lastModified()));
+        return files;
+    }
+
+    static public File[] listFilesNewestFirst(File dir) {
+        if(dir == null) { return new File[0]; }
+        File[] files = dir.listFiles();
+        if(files == null) { return new File[0]; }
+        Arrays.sort(files, (f1, f2) -> Long.compare(f2.lastModified(), f1.lastModified()));
         return files;
     }
 

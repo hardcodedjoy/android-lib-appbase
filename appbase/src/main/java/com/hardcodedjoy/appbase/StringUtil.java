@@ -415,4 +415,43 @@ public class StringUtil {
 				.replace("\\t", "\t")
 				.replace("\\\\", "\\"); // unescape the backslash last !!!
 	}
+
+	static public char removeDiacritics(char ch) {
+		switch(ch) {
+			case 'ă':
+			case 'â':
+			case 'ã':
+			case 'á':
+			case 'à':
+			case 'ą': return 'a';
+			case 'ć':
+			case 'ç': return 'c';
+			case 'é':
+			case 'ê':
+			case 'ę': return 'e';
+			case 'ğ': return 'g';
+			case 'î':
+			case 'ı':
+			case 'í':
+			case 'ї': return 'i';
+			case 'ł': return 'l';
+			case 'ñ':
+			case 'ń': return 'n';
+			case 'й': return 'и';
+			case 'ё': return 'е';
+			case 'ó':
+			case 'ô':
+			case 'õ':
+			case 'ö': return 'o';
+			case 'ú':
+			case 'ü': return 'u';
+			case 'ś':
+			case 'ș':
+			case 'ş': return 's';
+			case 'ț': return 't';
+			case 'ź':
+			case 'ż': return 'z';
+			default: return ch;
+		}
+	}
 }

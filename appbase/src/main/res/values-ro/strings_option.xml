@@ -108,4 +108,21 @@ SOFTWARE.
     <string name="option_square">pătrat</string>
     <string name="option_fill">umple</string>
     <string name="option_fit">potrivește</string>
+    <string name="option_save_to_library">salvează în bibl.</string>
+    <string name="option_insert_from_library">inserare din bibl.</string>
+    <string name="option_new">nou</string>
+    <string name="option_undo">anulează</string>
+    <string name="option_redo">reface</string>
+    <string name="option_beginning">început</string>
+    <string name="option_ending">sfârșit</string>
+    <string name="option_play">redare</string>
+    <string name="option_trim_selection">păstrează</string>
+    <string name="option_amplify">amplifică</string>
+    <string name="option_amplify_max">amplifică max.</string>
+    <string name="option_silence">suprimă</string>
+    <string name="option_add_padding">adaugă \"padding\"</string>
+    <string name="option_to_mono">în mono</string>
+    <string name="option_select_all">selectează tot</string>
+    <string name="option_fade_in">fade in</string>
+    <string name="option_fade_out">fade out</string>
 </resources>

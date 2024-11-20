@@ -25,7 +25,6 @@ SOFTWARE.
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
@@ -37,9 +36,9 @@ SOFTWARE.
         android:layout_height="36dp"
         android:layout_weight="1.0"
         android:layout_marginBottom="5dp"
+        android:contentDescription="@string/btn_add"
         android:src="@drawable/ic_add_1"
         android:tint="?android:colorBackground"
-        tools:ignore="ContentDescription"
         android:padding="5dp"
         android:layout_margin="5dp" />
 

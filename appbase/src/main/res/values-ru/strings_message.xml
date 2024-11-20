@@ -56,4 +56,7 @@ SOFTWARE.
     <string name="products_purchased_successfully">Продукты успешно приобретены.</string>
     <string name="your_device_does_not_support_this_resolution">Ваше устройство не поддерживает данное разрешение.</string>
     <string name="discard_unsaved_video">Отбросить несохраненное видео?</string>
+    <string name="unsaved_data_will_be_lost">Несохраненные данные будут утеряны.</string>
+    <string name="no_items_found">Ничего не найдено.</string>
+    <string name="too_little_disk_space_available">Слишком мало места на диске</string>
 </resources>

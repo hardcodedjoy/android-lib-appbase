@@ -56,4 +56,7 @@ SOFTWARE.
     <string name="products_purchased_successfully">Ürünler başarıyla satın alındı.</string>
     <string name="your_device_does_not_support_this_resolution">Cihazınız bu çözünürlüğü desteklemiyor.</string>
     <string name="discard_unsaved_video">Kaydedilmemiş video atılsın mı?</string>
+    <string name="unsaved_data_will_be_lost">Kaydedilmemiş veriler kaybolacaktır.</string>
+    <string name="no_items_found">Hiçbir şey bulunamadı.</string>
+    <string name="too_little_disk_space_available">Çok az disk alanı mevcut</string>
 </resources>

@@ -108,4 +108,21 @@ SOFTWARE.
     <string name="option_square">quadrado</string>
     <string name="option_fill">preencher</string>
     <string name="option_fit">ajustar</string>
+    <string name="option_save_to_library">salvar na bibl.</string>
+    <string name="option_insert_from_library">inserir da bibl.</string>
+    <string name="option_new">novo</string>
+    <string name="option_undo">desfazer</string>
+    <string name="option_redo">refazer</string>
+    <string name="option_beginning">começo</string>
+    <string name="option_ending">fim</string>
+    <string name="option_play">reproduzir</string>
+    <string name="option_trim_selection">aparar</string>
+    <string name="option_amplify">amplificar</string>
+    <string name="option_amplify_max">amplificar máx.</string>
+    <string name="option_silence">silenciar</string>
+    <string name="option_add_padding">adicionar preenchimento</string>
+    <string name="option_to_mono">para mono</string>
+    <string name="option_select_all">selecionar tudo</string>
+    <string name="option_fade_in">aparecer grad.</string>
+    <string name="option_fade_out">desapar. grad.</string>
 </resources>

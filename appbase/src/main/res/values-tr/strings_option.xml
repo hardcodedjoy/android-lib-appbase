@@ -108,4 +108,21 @@ SOFTWARE.
     <string name="option_square">kare</string>
     <string name="option_fill">doldur</string>
     <string name="option_fit">sığdır</string>
+    <string name="option_save_to_library">ktp.\'ye kaydet</string>
+    <string name="option_insert_from_library">ktp.\'den ekle</string>
+    <string name="option_new">yeni</string>
+    <string name="option_undo">geri al</string>
+    <string name="option_redo">tekrar yap</string>
+    <string name="option_beginning">başlangıç</string>
+    <string name="option_ending">bitiş</string>
+    <string name="option_play">oynat</string>
+    <string name="option_trim_selection">kırpma</string>
+    <string name="option_amplify">yükselt</string>
+    <string name="option_amplify_max">maks. yükselt</string>
+    <string name="option_silence">sustur</string>
+    <string name="option_add_padding">dolgu ekle</string>
+    <string name="option_to_mono">monoya</string>
+    <string name="option_select_all">hepsini seç</string>
+    <string name="option_fade_in">yavaş beliren</string>
+    <string name="option_fade_out">yavaş kaybolan</string>
 </resources>

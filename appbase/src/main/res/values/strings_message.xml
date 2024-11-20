@@ -56,4 +56,7 @@ SOFTWARE.
     <string name="products_purchased_successfully">Products purchased successfully.</string>
     <string name="your_device_does_not_support_this_resolution">Your device does not support this resolution.</string>
     <string name="discard_unsaved_video">Discard unsaved video?</string>
+    <string name="unsaved_data_will_be_lost">Unsaved data will be lost.</string>
+    <string name="no_items_found">No items found.</string>
+    <string name="too_little_disk_space_available">Too little disk space available</string>
 </resources>

@@ -193,4 +193,13 @@ SOFTWARE.
     <string name="title_max_frequency">Max. Frequency</string>
     <string name="title_time_window">Time Window</string>
     <string name="title_display_settings">Display</string>
+    <string name="title_untitled">Untitled</string>
+    <string name="title_close_editor">Close the editor</string>
+    <string name="title_audio_library">Audio Library</string>
+    <string name="title_video_library">Video Library</string>
+    <string name="title_edit">Edit</string>
+    <string name="title_selection">Selection</string>
+    <string name="title_effects">Effects</string>
+    <string name="title_name_denomination">Name</string>
+    <string name="title_empty_space">Empty space</string>
 </resources>

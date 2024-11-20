@@ -193,4 +193,13 @@ SOFTWARE.
     <string name="title_max_frequency">Макс. честота</string>
     <string name="title_time_window">Времеви прозорец</string>
     <string name="title_display_settings">Показване</string>
+    <string name="title_untitled">Без име</string>
+    <string name="title_close_editor">Затваряне на редактора</string>
+    <string name="title_audio_library">Аудио библиотека</string>
+    <string name="title_video_library">Видео библиотека</string>
+    <string name="title_edit">Редактор</string>
+    <string name="title_selection">Избор</string>
+    <string name="title_effects">Ефекти</string>
+    <string name="title_name_denomination">Име</string>
+    <string name="title_empty_space">Празно място</string>
 </resources>

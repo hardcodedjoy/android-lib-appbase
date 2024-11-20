@@ -108,4 +108,21 @@ SOFTWARE.
     <string name="option_square">carré</string>
     <string name="option_fill">remplir</string>
     <string name="option_fit">ajuster</string>
+    <string name="option_save_to_library">sauver dans la bibl.</string>
+    <string name="option_insert_from_library">insérer de la bibl.</string>
+    <string name="option_new">nouveau</string>
+    <string name="option_undo">annuler</string>
+    <string name="option_redo">refaire</string>
+    <string name="option_beginning">début</string>
+    <string name="option_ending">fin</string>
+    <string name="option_play">lire</string>
+    <string name="option_trim_selection">tronquer</string>
+    <string name="option_amplify">amplifier</string>
+    <string name="option_amplify_max">amplifier max.</string>
+    <string name="option_silence">supprimer</string>
+    <string name="option_add_padding">ajouter du rembourrage</string>
+    <string name="option_to_mono">à mono</string>
+    <string name="option_select_all">sélectionner tout</string>
+    <string name="option_fade_in">fondu entrant</string>
+    <string name="option_fade_out">fondu sortant</string>
 </resources>

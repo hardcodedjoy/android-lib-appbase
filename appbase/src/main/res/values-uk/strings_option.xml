@@ -108,4 +108,21 @@ SOFTWARE.
     <string name="option_square">квадрат</string>
     <string name="option_fill">заповнити</string>
     <string name="option_fit">підігнати</string>
+    <string name="option_save_to_library">зберег. в бібл.</string>
+    <string name="option_insert_from_library">встав. з бібл.</string>
+    <string name="option_new">новий</string>
+    <string name="option_undo">скасувати</string>
+    <string name="option_redo">повторити</string>
+    <string name="option_beginning">початок</string>
+    <string name="option_ending">кінець</string>
+    <string name="option_play">відтвор.</string>
+    <string name="option_trim_selection">обрізати</string>
+    <string name="option_amplify">посилювати</string>
+    <string name="option_amplify_max">посилити макс.</string>
+    <string name="option_silence">заглушити</string>
+    <string name="option_add_padding">додати відступ</string>
+    <string name="option_to_mono">до моно</string>
+    <string name="option_select_all">вибрати все</string>
+    <string name="option_fade_in">поступ. поява</string>
+    <string name="option_fade_out">поступ. зникн.</string>
 </resources>

@@ -56,4 +56,7 @@ SOFTWARE.
     <string name="products_purchased_successfully">Продуктите са закупени успешно.</string>
     <string name="your_device_does_not_support_this_resolution">Вашето устройство не поддържа тази резолюция.</string>
     <string name="discard_unsaved_video">Да изхвърлите ли незапазеното видео?</string>
+    <string name="unsaved_data_will_be_lost">Незапазените данни ще бъдат загубени.</string>
+    <string name="no_items_found">Няма намерени елементи.</string>
+    <string name="too_little_disk_space_available">Твърде малко налично дисково пространство</string>
 </resources>

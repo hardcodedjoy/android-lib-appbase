@@ -49,6 +49,8 @@ public class CvMain extends CvTMSLL {
 
         ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_circle_2, "Color Test", () -> new CvColorTest().show()));
 
+        ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_circle_2, "Button Bar Test", () -> new CvTBBLLTest().show()));
+
         Option optionDisabled = new Option(com.hardcodedjoy.appbase.R.drawable.ic_clear_1, "disabled option", () -> {});
         optionDisabled.setDrawAsDisabled(true);
         ops.add(optionDisabled);

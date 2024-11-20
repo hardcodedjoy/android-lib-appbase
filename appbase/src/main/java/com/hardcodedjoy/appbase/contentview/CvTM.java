@@ -28,13 +28,13 @@ package com.hardcodedjoy.appbase.contentview;
 
 import android.annotation.SuppressLint;
 import android.view.View;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.hardcodedjoy.appbase.R;
+import com.hardcodedjoy.appbase.gui.DropDownMenu;
 import com.hardcodedjoy.appbase.popup.Option;
 
 import java.util.Vector;
@@ -66,9 +66,7 @@ public class CvTM extends ContentView { // Content View with Title and Menu
         }));
     }
 
-    protected boolean menuVisible() {
-        return flMenuOptions.getVisibility() == View.VISIBLE;
-    }
+    protected boolean menuVisible() { return flMenuOptions.getVisibility() == View.VISIBLE; }
 
     protected void hideMenu() { flMenuOptions.setVisibility(View.GONE); }
 
@@ -76,59 +74,10 @@ public class CvTM extends ContentView { // Content View with Title and Menu
     protected void showMenu() {
         llMenuOptions.removeAllViews();
 
-        FrameLayout flMenuOptionWithIcon;
-        Button btnOption;
-        ImageView ivOptionIcon;
-        TextView tvOptionText;
-
-        LinearLayout.LayoutParams params;
-
-        for(Option option : menuOptions) {
-            flMenuOptionWithIcon = (FrameLayout) inflate(getActivity(),
-                    R.layout.appbase_menu_opt_ic, null);
-            btnOption = flMenuOptionWithIcon.findViewById(R.id.appbase_btn_option);
-            ivOptionIcon = flMenuOptionWithIcon.findViewById(R.id.appbase_iv_icon);
-            tvOptionText = flMenuOptionWithIcon.findViewById(R.id.appbase_tv_text);
-
-            btnOption.setOnClickListener(v -> {
-                hideMenu();
-                option.getExecutor().run();
-            });
-
-            if(option.getName() != null) {
-                tvOptionText.setText(option.getName());
-            } else if(option.getNameId() != 0) {
-                tvOptionText.setText(option.getNameId());
-            }
-
-            // if option has icon -> set ivOptionIcon
-            // else -> hide ivOptionIcon and remove text padding
-
-            boolean withIcon = (option.getIconId() != 0)
-                    | (option.getIconDrawable() != null)
-                    | (option.getIconBitmap() != null);
-
-            if(withIcon) {
-                option.applyIconTo(ivOptionIcon);
-            } else {
-                ivOptionIcon.setVisibility(GONE);
-                int paddingTop = tvOptionText.getPaddingTop();
-                int paddingBottom = tvOptionText.getPaddingBottom();
-                int paddingRight = tvOptionText.getPaddingRight();
-
-                // remove additional left padding:
-                tvOptionText.setPadding(paddingRight, paddingTop, paddingRight, paddingBottom);
-            }
-
-            if(option.isDrawAsDisabled()) {
-                ImageView ivDisabledOverlay = new ImageView(getActivity());
-                ivDisabledOverlay.setImageResource(R.drawable.menu_op_disabled_overlay);
-                flMenuOptionWithIcon.addView(ivDisabledOverlay);
-            }
-
-            params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
-            llMenuOptions.addView(flMenuOptionWithIcon, params);
-        }
+        new DropDownMenu(menuOptions) {
+            @Override
+            public void hideMenu() { CvTM.this.hideMenu(); }
+        }.inflate(llMenuOptions);
 
         flMenuOptions.setVisibility(View.VISIBLE);
     }

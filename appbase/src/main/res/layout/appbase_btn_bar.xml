@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!--
 MIT License
 
@@ -24,34 +23,35 @@ SOFTWARE.
 
 -->
 
-<LinearLayout
+<HorizontalScrollView
+    android:id="@+id/appbase_hsv_button_bar"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:fadeScrollbars="false"
+    android:background="?android:colorForeground">
 
-    <EditText
-        android:id="@+id/appbase_et_drop_down"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:id="@+id/appbase_ll_button_bar"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1.0"
-        android:layout_marginRight="-5dp"
-        android:inputType="text|textNoSuggestions"
-        tools:ignore="Autofill,LabelFor,RtlHardcoded">
-    </EditText>
+        android:orientation="horizontal">
 
-    <ImageButton
-        android:id="@+id/appbase_btn_drop_down_expand"
-        android:layout_width="32dp"
-        android:layout_height="match_parent"
-        android:contentDescription="@string/title_select"
-        android:src="@drawable/ic_arrow_v_down_1"
-        android:tint="?android:colorBackground"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="2.5dp"
-        android:padding="6dp"
-        tools:ignore="RtlHardcoded" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/file" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/option_edit" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="very ultra and super long string"
+            tools:ignore="HardcodedText" />
 
-</LinearLayout>
+    </LinearLayout>
+
+</HorizontalScrollView>

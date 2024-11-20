@@ -108,4 +108,21 @@ SOFTWARE.
     <string name="option_square">kwadrat</string>
     <string name="option_fill">wypełnić</string>
     <string name="option_fit">pasować</string>
+    <string name="option_save_to_library">zapisz w bibl.</string>
+    <string name="option_insert_from_library">wstaw z bibl.</string>
+    <string name="option_new">nowy</string>
+    <string name="option_undo">cofnąć</string>
+    <string name="option_redo">powtórzyć</string>
+    <string name="option_beginning">początek</string>
+    <string name="option_ending">koniec</string>
+    <string name="option_play">odtwórz</string>
+    <string name="option_trim_selection">przycinać</string>
+    <string name="option_amplify">wzmacniać</string>
+    <string name="option_amplify_max">wzmocnić maks.</string>
+    <string name="option_silence">zamilknąć</string>
+    <string name="option_add_padding">dodaj wypełnienie</string>
+    <string name="option_to_mono">do mono</string>
+    <string name="option_select_all">wybierz wszystko</string>
+    <string name="option_fade_in">pow. pojawianie</string>
+    <string name="option_fade_out">pow. znikanie</string>
 </resources>

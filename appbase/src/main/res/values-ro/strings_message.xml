@@ -56,4 +56,7 @@ SOFTWARE.
     <string name="products_purchased_successfully">Produse achiziționate cu succes.</string>
     <string name="your_device_does_not_support_this_resolution">Dispozitivul dvs. nu acceptă această rezoluție.</string>
     <string name="discard_unsaved_video">Renunțați la videoclipul nesalvat?</string>
+    <string name="unsaved_data_will_be_lost">Datele nesalvate se vor pierde.</string>
+    <string name="no_items_found">Nu s-a găsit nimic.</string>
+    <string name="too_little_disk_space_available">Prea puțin spațiu disponibil pe disc</string>
 </resources>

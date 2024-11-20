@@ -65,7 +65,8 @@ SOFTWARE.
         <ScrollView
             android:id="@+id/appbase_sv"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:contentDescription="@string/title_empty_space">
             <LinearLayout
                 android:id="@+id/appbase_ll_content"
                 android:layout_width="match_parent"

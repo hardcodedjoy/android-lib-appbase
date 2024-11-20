@@ -26,7 +26,6 @@ SOFTWARE.
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -41,38 +40,21 @@ SOFTWARE.
         <include
             android:id="@+id/appbase_ll_title"
             layout="@layout/appbase_ll_ic_title"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.0" />
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
 
-        <ImageButton
-            android:id="@+id/appbase_btn_menu"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_margin="5dp"
-            android:padding="1dp"
-            android:src="@drawable/ic_menu_1"
-            android:tint="?android:colorBackground"
-            android:visibility="invisible"
-            android:layout_gravity="center_vertical|right"
-            tools:ignore="ContentDescription,RtlHardcoded" />
 
     </LinearLayout>
 
-    <FrameLayout
+    <ScrollView
+        android:id="@+id/appbase_sv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ScrollView
-            android:id="@+id/appbase_sv"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/title_empty_space">
+        <LinearLayout
+            android:id="@+id/appbase_ll_content"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:ignore="UselessParent">
-            <LinearLayout
-                android:id="@+id/appbase_ll_content"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        </ScrollView>
-    </FrameLayout>
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
 </LinearLayout>

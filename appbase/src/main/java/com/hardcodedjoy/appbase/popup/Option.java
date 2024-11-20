@@ -43,7 +43,7 @@ public class Option {
 
     private int nameId;
     private String name;
-    private final Runnable executor;
+    private Runnable executor;
     private boolean selected;
 
     private boolean drawAsDisabled;
@@ -85,7 +85,11 @@ public class Option {
 
     public int getNameId() { return nameId; }
     public String getName() { return name; }
+
+    /** @noinspection unused*/
+    public void setExecutor(Runnable executor) { this.executor = executor; }
     public Runnable getExecutor() { return executor; }
+
     public void run() { executor.run(); }
 
     @SuppressWarnings("unused")

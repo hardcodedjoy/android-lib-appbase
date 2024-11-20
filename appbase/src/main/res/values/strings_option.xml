@@ -109,4 +109,21 @@ SOFTWARE.
     <string name="option_square">square</string>
     <string name="option_fill">fill</string>
     <string name="option_fit">fit</string>
+    <string name="option_save_to_library">save to library</string>
+    <string name="option_insert_from_library">insert from library</string>
+    <string name="option_new">new</string>
+    <string name="option_undo">undo</string>
+    <string name="option_redo">redo</string>
+    <string name="option_beginning">start</string>
+    <string name="option_ending">end</string>
+    <string name="option_play">play</string>
+    <string name="option_trim_selection">trim</string>
+    <string name="option_amplify">amplify</string>
+    <string name="option_amplify_max">amplify max.</string>
+    <string name="option_silence">silence</string>
+    <string name="option_add_padding">add padding</string>
+    <string name="option_to_mono">to mono</string>
+    <string name="option_select_all">select all</string>
+    <string name="option_fade_in">fade in</string>
+    <string name="option_fade_out">fade out</string>
 </resources>

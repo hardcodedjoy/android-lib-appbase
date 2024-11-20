@@ -10,8 +10,8 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdk 34
-        versionCode 89
-        versionName "2.0.9"
+        versionCode 92
+        versionName "2.1.2"
         buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
         buildConfigField "String", "VERSION_NAME", "\"" + versionName + "\""
     }
@@ -44,8 +44,8 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
                 groupId 'com.hardcodedjoy'
-                artifactId 'appbase'
-                version '2.0.9'
+                artifactId project.android.namespace.replace("${groupId}.", "")
+                version "${project.android.defaultConfig.versionName}"
             }
         }
         repositories {
