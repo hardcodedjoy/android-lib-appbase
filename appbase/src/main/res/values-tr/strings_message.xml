@@ -59,4 +59,5 @@ SOFTWARE.
     <string name="unsaved_data_will_be_lost">Kaydedilmemiş veriler kaybolacaktır.</string>
     <string name="no_items_found">Hiçbir şey bulunamadı.</string>
     <string name="too_little_disk_space_available">Çok az disk alanı mevcut</string>
+    <string name="please_select_a_folder_where_to_store_pictures">Lütfen resimleri saklamak istediğiniz klasörü seçin.</string>
 </resources>

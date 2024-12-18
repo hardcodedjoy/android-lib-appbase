@@ -202,4 +202,6 @@ SOFTWARE.
     <string name="title_effects">Efektler</string>
     <string name="title_name_denomination">İsim</string>
     <string name="title_empty_space">Boş alan</string>
+    <string name="title_output_sizes">Çıkış Boyutları</string>
+    <string name="title_review_time">İnceleme zamanı</string>
 </resources>

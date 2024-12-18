@@ -59,4 +59,5 @@ SOFTWARE.
     <string name="unsaved_data_will_be_lost">Datele nesalvate se vor pierde.</string>
     <string name="no_items_found">Nu s-a găsit nimic.</string>
     <string name="too_little_disk_space_available">Prea puțin spațiu disponibil pe disc</string>
+    <string name="please_select_a_folder_where_to_store_pictures">Vă rugăm să selectați un folder pentru stocarea imaginilor.</string>
 </resources>

@@ -68,4 +68,5 @@ SOFTWARE.
     <string name="err_no_files_to_export">KEINE DATEIEN ZUM EXPORTIEREN</string>
     <string name="err_file_format_not_supported">DATEIFORMAT NICHT UNTERSTÜTZT</string>
     <string name="err_billing_unavailable">ZAHLUNG NICHT VERFÜGBAR</string>
+    <string name="err_storage_folder_unavailable">SPEICHERORDNER NICHT VERFÜGBAR</string>
 </resources>

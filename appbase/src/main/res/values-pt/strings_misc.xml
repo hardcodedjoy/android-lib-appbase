@@ -34,6 +34,7 @@ SOFTWARE.
     <string name="placeholder_no_folder">[ sem pasta ]</string>
     <string name="placeholder_no_directory">[ sem diretório ]</string>
     <string name="placeholder_no_sound">[ sem som ]</string>
+    <string name="placeholder_no_image" >[ sem imagem ]</string>
     <string name="keep_screen_on">Manter tela acesa</string>
     <string name="disable_ringing_and_vibration">Desativar toque e vibração durante a gravação</string>
     <string name="dont_show_again">Não mostrar novamente</string>
@@ -41,5 +42,6 @@ SOFTWARE.
     <string name="note_system_ports_only_on_rooted_devices">Nota: portas do sistema (0 .. 1023) estão disponíveis apenas em dispositivos com acesso root.</string>
     <string name="premium_version_intro">Além dos recursos básicos do aplicativo, a atualização para a versão premium oferece as seguintes vantagens:</string>
     <string name="premium_version_intro_owned">Você já possui a versão Premium, que oferece as seguintes vantagens:</string>
+    <string name="pv_no_ads">• sem publicidade</string>
     <string name="empty_disabled">vazio = desativado</string>
 </resources>

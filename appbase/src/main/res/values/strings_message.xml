@@ -59,4 +59,5 @@ SOFTWARE.
     <string name="unsaved_data_will_be_lost">Unsaved data will be lost.</string>
     <string name="no_items_found">No items found.</string>
     <string name="too_little_disk_space_available">Too little disk space available</string>
+    <string name="please_select_a_folder_where_to_store_pictures">Please select a folder where to store the pictures.</string>
 </resources>

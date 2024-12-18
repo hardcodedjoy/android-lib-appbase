@@ -68,4 +68,5 @@ SOFTWARE.
     <string name="err_no_files_to_export">LIPSĂ FIȘIERE DE EXPORTAT</string>
     <string name="err_file_format_not_supported">FORMATUL FIȘIERULUI NU ESTE ACCEPTAT</string>
     <string name="err_billing_unavailable">PLATA INDISPONIBILĂ</string>
+    <string name="err_storage_folder_unavailable">FOLDER DE STOCARE INDISPONIBIL</string>
 </resources>

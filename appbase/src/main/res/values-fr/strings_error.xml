@@ -68,4 +68,5 @@ SOFTWARE.
     <string name="err_no_files_to_export">AUCUN FICHIERS À EXPORTER</string>
     <string name="err_file_format_not_supported">FORMAT DE FICHIER NON SUPPORTÉ</string>
     <string name="err_billing_unavailable">PAIEMENT INDISPONIBLE</string>
+    <string name="err_storage_folder_unavailable">DOSSIER DE STOCKAGE INDISPONIBLE</string>
 </resources>

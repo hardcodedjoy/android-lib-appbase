@@ -35,8 +35,13 @@ import android.text.SpannableString;
 import android.text.style.StyleSpan;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.hardcodedjoy.appbase.ImageUtil;
@@ -55,7 +60,20 @@ public class GuiUtil {
 
     static public void setXYWH(View view, float x, float y, float w, float h) {
         ViewGroup.LayoutParams params;
-        params = new ViewGroup.LayoutParams((int)w, (int)h);
+        ViewGroup parent = (ViewGroup) view.getParent();
+
+        if (parent == null) {
+            params = new ViewGroup.LayoutParams((int) w, (int) h);
+        } else if (parent instanceof LinearLayout) {
+            params = new LinearLayout.LayoutParams((int) w, (int) h);
+        } else if (parent instanceof RelativeLayout) {
+            params = new RelativeLayout.LayoutParams((int) w, (int) h);
+        } else if (parent instanceof FrameLayout) {
+            params = new FrameLayout.LayoutParams((int) w, (int) h);
+        } else {
+            params = new ViewGroup.LayoutParams((int) w, (int) h);
+        }
+
         view.setLayoutParams(params);
         view.setX(x);
         view.setY(y);
@@ -113,9 +131,65 @@ public class GuiUtil {
         et.setFocusable(false);
         et.setFocusableInTouchMode(false);
         et.setBackgroundResource(com.hardcodedjoy.appbase.R.drawable.et_disabled);
-        int colorText = ThemeUtil.getColor(activity,
-                com.hardcodedjoy.appbase.R.attr.appBaseColorTextDisabled);
+        int colorText = ThemeUtil.getColor(activity, R.attr.appBaseColorTextDisabled);
         et.setTextColor(colorText);
         et.setOnClickListener(ocl);
+    }
+
+    static public void disable(Activity activity, LinearLayout llDropDown, View.OnClickListener ocl) {
+        EditText et = llDropDown.findViewById(R.id.appbase_et_drop_down);
+        ImageButton btn = llDropDown.findViewById(R.id.appbase_btn_drop_down_expand);
+        int colorText = ThemeUtil.getColor(activity, R.attr.appBaseColorTextDisabled);
+
+        et.setFocusable(false);
+        et.setFocusableInTouchMode(false);
+        et.setBackgroundResource(R.drawable.et_disabled);
+        et.setTextColor(colorText);
+        et.setOnClickListener(ocl);
+
+        btn.setFocusable(false);
+        btn.setFocusableInTouchMode(false);
+
+        int leftPadding   = btn.getPaddingLeft();
+        int topPadding    = btn.getPaddingTop();
+        int rightPadding  = btn.getPaddingRight();
+        int bottomPadding = btn.getPaddingBottom();
+
+        btn.setBackgroundResource(R.drawable.btn_1_disabled);
+        btn.setPadding(leftPadding, topPadding, rightPadding, bottomPadding);
+
+        ImageUtil.setTint(btn, colorText);
+        btn.setOnClickListener(ocl);
+    }
+
+    static public void replaceView(View what, View with) {
+        if(what == null) { return; }
+        if(with == null) { return; }
+        ViewParent whatParent = what.getParent();
+        if(whatParent == null) { return; }
+        if(!(whatParent instanceof ViewGroup)) { return; }
+
+        ViewParent withParent = with.getParent();
+        if(withParent != null) {
+            if(!(withParent instanceof ViewGroup)) { return; }
+            ((ViewGroup) withParent).removeView(with);
+        }
+
+        ((ViewGroup) whatParent).removeView(what);
+        ((ViewGroup) whatParent).addView(with);
+    }
+
+    static public void setMargins(View view, int left, int top, int right, int bottom) {
+        if(view == null) { return; }
+        ViewGroup.LayoutParams params = view.getLayoutParams();
+        if (params == null) { return; }
+        if(params instanceof LinearLayout.LayoutParams) {
+            ((LinearLayout.LayoutParams) params).setMargins(left, top, right, bottom);
+        } else if(params instanceof RelativeLayout.LayoutParams) {
+            ((RelativeLayout.LayoutParams) params).setMargins(left, top, right, bottom);
+        } else if(params instanceof FrameLayout.LayoutParams) {
+            ((FrameLayout.LayoutParams) params).setMargins(left, top, right, bottom);
+        }
+        view.setLayoutParams(params);
     }
 }

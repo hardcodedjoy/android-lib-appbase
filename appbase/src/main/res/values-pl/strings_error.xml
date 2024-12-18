@@ -68,4 +68,5 @@ SOFTWARE.
     <string name="err_no_files_to_export">BRAK PLIKÓW DO EKSPORTU</string>
     <string name="err_file_format_not_supported">NIEOBSŁUGIWANY FORMAT PLIKU</string>
     <string name="err_billing_unavailable">PŁATNOŚĆ NIEMOŻLIWA</string>
+    <string name="err_storage_folder_unavailable">FOLDER PRZECHOWYWANIA NIEDOSTĘPNY</string>
 </resources>

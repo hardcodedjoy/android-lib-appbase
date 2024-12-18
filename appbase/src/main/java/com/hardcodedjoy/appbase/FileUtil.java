@@ -30,6 +30,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.database.Cursor;
 import android.net.Uri;
+import android.provider.DocumentsContract;
 import android.provider.OpenableColumns;
 import android.webkit.MimeTypeMap;
 
@@ -411,5 +412,102 @@ public class FileUtil {
     static public boolean mkEmptyDir(File dir) {
         if(dir.exists()) { return emptyDir(dir); }
         else { return dir.mkdir(); }
+    }
+
+    static public boolean canRead(Uri uri) {
+        if(uri == null) { return false; }
+        if("content".equals(uri.getScheme())) {
+            Cursor cursor = activity.getContentResolver().query(uri,
+                    null, null, null, null);
+            if(cursor == null) { return false; }
+            if(!cursor.moveToFirst()) { cursor.close(); return false; }
+            // if reached here, it means the file or directory exists
+            cursor.close();
+            return true;
+        } else if("file".equalsIgnoreCase(uri.getScheme())) {
+            File file = new File(uri.getPath());
+            if(!file.exists()) { return false; }
+            return file.canRead();
+        } else {
+            return false;
+        }
+    }
+
+    static public boolean canWrite(Uri uri) {
+        if(uri == null) { return false; }
+        if("content".equals(uri.getScheme())) {
+            Cursor cursor = activity.getContentResolver().query(uri,
+                    null, null, null, null);
+            if(cursor == null) { return false; }
+            if(!cursor.moveToFirst()) { cursor.close(); return false; }
+            // if reached here, it means the file or directory exists
+            int flagsIndex = cursor.getColumnIndex(DocumentsContract.Document.COLUMN_FLAGS);
+            if(flagsIndex == -1) { cursor.close(); return false; }
+            int flags = cursor.getInt(flagsIndex);
+            cursor.close();
+            return (flags & DocumentsContract.Document.FLAG_SUPPORTS_WRITE) != 0;
+        } else if("file".equalsIgnoreCase(uri.getScheme())) {
+            File file = new File(uri.getPath());
+            if(!file.exists()) { return false; }
+            return file.canWrite();
+        } else {
+            return false;
+        }
+    }
+
+    static public String getReadablePath(Uri uri) { // for displaying only, not for accessing the file
+        if(uri == null) { return ""; }
+
+        if("file".equalsIgnoreCase(uri.getScheme())) { return uri.getPath(); }
+
+        String s = uri.toString();
+
+        String prefix = "content://com.android.externalstorage.documents/tree/";
+
+        int a = s.indexOf(prefix);
+        if(a != -1) {
+            s = s.substring(a + prefix.length());
+            // remains only what is after prefix
+        }
+
+        if(s.startsWith("raw%3A")) {
+            // remove "raw%3A" from raw URIs:
+            s = s.substring(6);
+        } else if(s.startsWith("msd%3A") || s.startsWith("msf%3A")) {
+            // msd / msf says nothing to user, return file name instead:
+            //if(isVolumeRoot()) { return "/storage/" + getName(); }
+            return getFileName(uri);
+        }
+
+        s = s.replace("%3A", "/"); // show "/" instead of ":"
+        s = Uri.decode(s);
+
+        if(isDirectory(uri)) { if(!s.endsWith("/")) { s = s + "/"; } }
+
+        //if(isVolumeRoot()) { return "/storage/" + s; }
+        return s;
+    }
+
+    static public boolean isDirectory(Uri uri) {
+        // Check if the URI is using the DocumentsProvider
+        if (DocumentsContract.isDocumentUri(activity, uri)) {
+            // Check the type of the URI
+            try {
+                String mimeType = activity.getContentResolver().getType(uri);
+                return mimeType != null && mimeType.startsWith("vnd.android.document/directory");
+            } catch (Exception e) {
+                e.printStackTrace(System.err);
+            }
+        }
+
+        // Fallback: query the content URI to see
+        // if it provides information on children (only for directories)
+        try (Cursor cursor = activity.getContentResolver()
+                .query(uri, null, null, null, null)) {
+            return cursor != null && cursor.getCount() > 0;
+        } catch (Exception e) {
+            e.printStackTrace(System.err);
+        }
+        return false;
     }
 }

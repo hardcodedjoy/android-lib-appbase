@@ -43,4 +43,5 @@ SOFTWARE.
     <string name="items_ov">öğeler</string>
     <string name="unit_x">x</string>
     <string name="unit_samples">örnekler</string>
+    <string name="unit_pixels">pikseller</string>
 </resources>

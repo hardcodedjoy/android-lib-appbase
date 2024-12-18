@@ -34,6 +34,7 @@ SOFTWARE.
     <string name="placeholder_no_folder">[ нет папки ]</string>
     <string name="placeholder_no_directory">[ нет каталога ]</string>
     <string name="placeholder_no_sound">[ без звука ]</string>
+    <string name="placeholder_no_image" >[ нет изображения ]</string>
     <string name="keep_screen_on">Держать экран вкл.</string>
     <string name="disable_ringing_and_vibration">Отключить звонок и вибрацию во время записи</string>
     <string name="dont_show_again">Не показывать снова</string>
@@ -41,5 +42,6 @@ SOFTWARE.
     <string name="note_system_ports_only_on_rooted_devices">Примечание: системные порты (0 .. 1023) доступны только на рутованных устройствах.</string>
     <string name="premium_version_intro">Помимо основных функций приложения, обновление до премиум-версии дает вам следующие преимущества:</string>
     <string name="premium_version_intro_owned">У вас есть Премиум-версия, которая дает вам следующие преимущества:</string>
+    <string name="pv_no_ads">• без рекламы</string>
     <string name="empty_disabled">пусто = отключено</string>
 </resources>

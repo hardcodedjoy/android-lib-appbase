@@ -34,6 +34,7 @@ SOFTWARE.
     <string name="placeholder_no_folder">[ no folder ]</string>
     <string name="placeholder_no_directory">[ no directory ]</string>
     <string name="placeholder_no_sound">[ no sound ]</string>
+    <string name="placeholder_no_image" >[ no image ]</string>
     <string name="keep_screen_on">Keep screen ON</string>
     <string name="disable_ringing_and_vibration">Disable ringing and vibration while recording</string>
     <string name="dont_show_again">Don\'t show again</string>
@@ -41,5 +42,6 @@ SOFTWARE.
     <string name="note_system_ports_only_on_rooted_devices">Note: system ports (0 .. 1023) available only on rooted devices.</string>
     <string name="premium_version_intro">In addition to the basic app features, upgrading to the premium version gives you the following advantages:</string>
     <string name="premium_version_intro_owned">You have the Premium version, which gives you the following advantages:</string>
+    <string name="pv_no_ads">• no ads</string>
     <string name="empty_disabled">empty = disabled</string>
 </resources>

@@ -43,4 +43,5 @@ SOFTWARE.
     <string name="items_ov">obiecte</string>
     <string name="unit_x">x</string>
     <string name="unit_samples">eșantioane</string>
+    <string name="unit_pixels">px</string>
 </resources>

@@ -43,4 +43,5 @@ SOFTWARE.
     <string name="items_ov">объектов</string>
     <string name="unit_x">x</string>
     <string name="unit_samples">образцы</string>
+    <string name="unit_pixels">пиксели</string>
 </resources>

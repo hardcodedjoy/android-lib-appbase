@@ -43,4 +43,5 @@ SOFTWARE.
     <string name="items_ov">itens</string>
     <string name="unit_x">x</string>
     <string name="unit_samples">amostras</string>
+    <string name="unit_pixels">píxeis</string>
 </resources>

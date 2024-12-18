@@ -34,6 +34,7 @@ SOFTWARE.
     <string name="placeholder_no_folder">[ klasör yok ]</string>
     <string name="placeholder_no_directory">[ dizin yok ]</string>
     <string name="placeholder_no_sound">[ sessiz ]</string>
+    <string name="placeholder_no_image" >[ resim yok ]</string>
     <string name="keep_screen_on">Ekranı açık tut</string>
     <string name="disable_ringing_and_vibration">Kayıt sırasında zil ve titreşimi devre dışı bırak</string>
     <string name="dont_show_again">Tekrar gösterme</string>
@@ -41,5 +42,6 @@ SOFTWARE.
     <string name="note_system_ports_only_on_rooted_devices">Not: sistem bağlantı noktaları (0 .. 1023) yalnızca root erişimli cihazlarda kullanılabilir.</string>
     <string name="premium_version_intro">Temel uygulama özelliklerine ek olarak, premium sürüme yükseltme size aşağıdaki avantajları sağlar:</string>
     <string name="premium_version_intro_owned">Size aşağıdaki avantajları sağlayan Premium sürümüne sahipsiniz:</string>
+    <string name="pv_no_ads">• reklam yok</string>
     <string name="empty_disabled">boş = etkisiz</string>
 </resources>

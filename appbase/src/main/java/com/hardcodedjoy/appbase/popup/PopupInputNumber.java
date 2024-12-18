@@ -1,4 +1,5 @@
-<!--
+/*
+
 MIT License
 
 Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
@@ -21,27 +22,32 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--->
+*/
 
-<resources>
-    <string name="unit_bytes">B</string>
-    <string name="unit_kilobytes">kB</string>
-    <string name="unit_megabytes">MB</string>
-    <string name="unit_gigabytes">GB</string>
-    <string name="unit_hertz">Hz</string>
-    <string name="unit_decibels">dB</string>
-    <string name="unit_seconds">s</string>
-    <string name="unit_milliseconds">ms</string>
-    <string name="unit_microseconds">µs</string>
-    <string name="unit_bit">bit</string>
-    <string name="unit_kilohertz">kHz</string>
-    <string name="unit_kilobits_per_second">kbit/s</string>
-    <string name="unit_frames_per_second">FPS</string>
+package com.hardcodedjoy.appbase.popup;
 
-    <string name="item">item</string>
-    <string name="items_a">items</string>
-    <string name="items_ov">items</string>
-    <string name="unit_x">x</string>
-    <string name="unit_samples">samples</string>
-    <string name="unit_pixels">px</string>
-</resources>
+import android.view.inputmethod.EditorInfo;
+
+abstract public class PopupInputNumber extends PopupInput {
+
+    abstract public void onOK(String s);
+
+    public PopupInputNumber(String title, String message, String def) {
+        super(title, message, def);
+        getEtInput().setInputType(EditorInfo.TYPE_CLASS_NUMBER);
+    }
+
+    public PopupInputNumber(int titleStringId, int messageStringId, String def) {
+        this(getString(titleStringId), getString(messageStringId), def);
+    }
+
+    public PopupInputNumber(String title, String message) { this(title, message, null); }
+    public PopupInputNumber(String title) { this(title, null, null); }
+    public PopupInputNumber(int titleStringId, int messageStringId) {
+        this(titleStringId, messageStringId, null);
+    }
+    public PopupInputNumber(int titleStringId) { this(getString(titleStringId), null, null); }
+    public PopupInputNumber(int titleStringId, String def) {
+        this(getString(titleStringId), null, def);
+    }
+}

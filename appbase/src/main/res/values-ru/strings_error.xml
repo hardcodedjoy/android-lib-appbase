@@ -68,4 +68,5 @@ SOFTWARE.
     <string name="err_no_files_to_export">НЕТ ФАЙЛОВ ДЛЯ ЭКСПОРТА</string>
     <string name="err_file_format_not_supported">ФОРМАТ ФАЙЛА НЕ ПОДДЕРЖИВАЕТСЯ</string>
     <string name="err_billing_unavailable">ОПЛАТА НЕДОСТУПНА</string>
+    <string name="err_storage_folder_unavailable">ПАПКА ДЛЯ ХРАНЕНИЯ НЕДОСТУПНА</string>
 </resources>

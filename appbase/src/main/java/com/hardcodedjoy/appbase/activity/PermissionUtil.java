@@ -28,7 +28,9 @@ package com.hardcodedjoy.appbase.activity;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 
 import java.util.Vector;
@@ -132,5 +134,27 @@ public class PermissionUtil {
     static public boolean permissionAlreadyGranted(String permission) {
         if (android.os.Build.VERSION.SDK_INT < 23) { return true; }
         return (activity.checkSelfPermission(permission) == PackageManager.PERMISSION_GRANTED);
+    }
+
+    static public void takePersistableUriPermissionRead(Uri uri) {
+        activity.getContentResolver().takePersistableUriPermission(
+                uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
+    }
+
+    static public void takePersistableUriPermissionReadWrite(Uri uri) {
+        activity.getContentResolver().takePersistableUriPermission(
+                uri, Intent.FLAG_GRANT_READ_URI_PERMISSION |
+                        Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+    }
+
+    static public void releasePersistableUriPermissionRead(Uri uri) {
+        activity.getContentResolver().releasePersistableUriPermission(
+                uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
+    }
+
+    static public void releasePersistableUriPermissionReadWrite(Uri uri) {
+        activity.getContentResolver().releasePersistableUriPermission(
+                uri, Intent.FLAG_GRANT_READ_URI_PERMISSION |
+                        Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
     }
 }

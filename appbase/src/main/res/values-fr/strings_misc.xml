@@ -34,6 +34,7 @@ SOFTWARE.
     <string name="placeholder_no_folder">[ aucun dossier ]</string>
     <string name="placeholder_no_directory">[ aucun répertoire ]</string>
     <string name="placeholder_no_sound">[ pas de son ]</string>
+    <string name="placeholder_no_image" >[ aucune image ]</string>
     <string name="keep_screen_on">Garder l\'écran allumé</string>
     <string name="disable_ringing_and_vibration">Désactiver la sonnerie et la vibration pendant l\'enregistrement</string>
     <string name="dont_show_again">Ne plus afficher</string>
@@ -41,5 +42,6 @@ SOFTWARE.
     <string name="note_system_ports_only_on_rooted_devices">Remarque: les ports système (0 .. 1023) ne sont disponibles que sur les appareils rootés.</string>
     <string name="premium_version_intro">En plus des fonctionnalités de base de l\'application, la mise à niveau vers la version premium vous offre les avantages suivants :</string>
     <string name="premium_version_intro_owned">Vous disposez de la version Premium, qui vous offre les avantages suivants:</string>
+    <string name="pv_no_ads">• pas de publicité</string>
     <string name="empty_disabled">vide = désactivé</string>
 </resources>

@@ -68,4 +68,5 @@ SOFTWARE.
     <string name="err_no_files_to_export">NESSUN FILE DA ESPORTARE</string>
     <string name="err_file_format_not_supported">FORMATO DI FILE NON SUPPORTATO</string>
     <string name="err_billing_unavailable">PAGAMENTO NON DISPONIBILE</string>
+    <string name="err_storage_folder_unavailable">CARTELLA DI ARCHIVIAZIONE NON DISPONIBILE</string>
 </resources>

@@ -267,4 +267,23 @@ public class ContentView extends LinearLayout {
         popupAsk.enableDismissByOutsideClick();
         popupAsk.show();
     }
+
+    static public void showPopupFreeVersionLimitation(String message, Runnable onMoreDetails) {
+        String title = ContentView.getString(R.string.title_free_version);
+        String positive = ContentView.getString(R.string.btn_more_details);
+        String negative = ContentView.getString(R.string.btn_ok);
+        PopupAsk popupAsk = new PopupAsk(title, message, positive, negative) {
+            @Override
+            public void onOK() {
+                if(onMoreDetails != null) { onMoreDetails.run(); }
+            }
+        };
+        popupAsk.enableDismissByOutsideClick();
+        popupAsk.show();
+    }
+
+    static public void showPopupFreeVersionLimitation(int messageStringId, Runnable onMoreDetails) {
+        String message = getString(messageStringId);
+        showPopupFreeVersionLimitation(message, onMoreDetails);
+    }
 }

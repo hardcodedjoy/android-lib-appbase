@@ -202,4 +202,6 @@ SOFTWARE.
     <string name="title_effects">Efecte</string>
     <string name="title_name_denomination">Denumire</string>
     <string name="title_empty_space">Spațiu gol</string>
+    <string name="title_output_sizes">Dimensiuni de ieșire</string>
+    <string name="title_review_time">Timp de revizuire</string>
 </resources>

@@ -59,4 +59,5 @@ SOFTWARE.
     <string name="unsaved_data_will_be_lost">Незапазените данни ще бъдат загубени.</string>
     <string name="no_items_found">Няма намерени елементи.</string>
     <string name="too_little_disk_space_available">Твърде малко налично дисково пространство</string>
+    <string name="please_select_a_folder_where_to_store_pictures">Моля, изберете папка, където да съхранявате снимките.</string>
 </resources>

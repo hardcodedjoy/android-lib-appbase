@@ -43,4 +43,5 @@ SOFTWARE.
     <string name="items_ov">Elemente</string>
     <string name="unit_x">x</string>
     <string name="unit_samples">Proben</string>
+    <string name="unit_pixels">Pixel</string>
 </resources>

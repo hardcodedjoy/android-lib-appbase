@@ -202,4 +202,6 @@ SOFTWARE.
     <string name="title_effects">Effetti</string>
     <string name="title_name_denomination">Nome</string>
     <string name="title_empty_space">Spazio vuoto</string>
+    <string name="title_output_sizes">Dimensioni di uscita</string>
+    <string name="title_review_time">Tempo di revisione</string>
 </resources>
