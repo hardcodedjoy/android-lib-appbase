@@ -39,7 +39,9 @@ SOFTWARE.
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:background="@drawable/popup_background"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true">
 
         <TextView
             android:id="@+id/appbase_tv_title"

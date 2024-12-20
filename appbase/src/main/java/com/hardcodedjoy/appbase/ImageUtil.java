@@ -45,11 +45,13 @@ import android.widget.ImageView;
 import com.hardcodedjoy.appbase.contentview.ContentView;
 import com.hardcodedjoy.appbase.gui.DisplayUnit;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.channels.FileChannel;
 
 public class ImageUtil {
 
@@ -81,12 +83,11 @@ public class ImageUtil {
     static private Matrix getRotationMatrix(InputStream is) throws Exception {
         if(is == null) { return null; }
         if(android.os.Build.VERSION.SDK_INT < 24) { return null; }
-        if( !(is instanceof FileInputStream)) { return null; }
+        if(canNotResetInputStream(is)) { return null; }
 
-        FileInputStream fis = (FileInputStream) is;
-        ExifInterface exif = new ExifInterface(fis);
+        ExifInterface exif = new ExifInterface(is);
         int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, 1);
-        fis.getChannel().position(0);
+        resetInputStream(is);
 
         return getRotationMatrix(orientation);
     }
@@ -94,14 +95,32 @@ public class ImageUtil {
     static private int getRotationDegrees(InputStream is) throws Exception {
         if(is == null) { return 0; }
         if(android.os.Build.VERSION.SDK_INT < 24) { return 0; }
-        if( !(is instanceof FileInputStream)) { return 0; }
+        if(canNotResetInputStream(is)) { return 0; }
 
-        FileInputStream fis = (FileInputStream) is;
-        ExifInterface exif = new ExifInterface(fis);
+        ExifInterface exif = new ExifInterface(is);
         int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, 1);
-        fis.getChannel().position(0);
+        resetInputStream(is);
 
         return getRotationDegrees(orientation);
+    }
+
+    /** @noinspection RedundantIfStatement*/
+    static private boolean canNotResetInputStream(InputStream is) {
+        if(is instanceof FileInputStream) { return false; }
+        if(is instanceof ByteArrayInputStream) { return false; }
+        return true;
+    }
+
+    static private void resetInputStream(InputStream is) throws Exception {
+        if(is == null) { return; }
+        if(is instanceof FileInputStream) {
+            FileInputStream fis = (FileInputStream) is;
+            FileChannel ch = fis.getChannel();
+            ch.position(0);
+        } else if(is instanceof ByteArrayInputStream) {
+            ByteArrayInputStream bais = (ByteArrayInputStream) is;
+            bais.reset();
+        }
     }
 
     static public Bitmap loadImage(InputStream is) throws Exception {

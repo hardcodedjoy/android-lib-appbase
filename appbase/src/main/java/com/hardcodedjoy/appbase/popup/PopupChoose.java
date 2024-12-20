@@ -27,6 +27,7 @@ SOFTWARE.
 package com.hardcodedjoy.appbase.popup;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,6 +42,7 @@ import android.widget.TextView;
 
 import com.hardcodedjoy.appbase.R;
 import com.hardcodedjoy.appbase.contentview.ContentView;
+import com.hardcodedjoy.appbase.gui.ThemeUtil;
 
 import java.util.Vector;
 
@@ -52,6 +54,8 @@ public class PopupChoose extends Popup {
     private final ImageButton btnRefresh;
 
     private final Vector<Option> options;
+
+    private final int colorSelected;
 
     @Override
     public void onCancel() {}
@@ -70,16 +74,21 @@ public class PopupChoose extends Popup {
         final TextView tvTitle = findViewById(R.id.appbase_tv_title);
         final TextView tvMessage = findViewById(R.id.appbase_tv_message);
         llOptions = findViewById(R.id.appbase_ll_options);
+        final LinearLayout llOptionsOverlays = findViewById(R.id.appbase_ll_options_overlays);
         btnAdd = findViewById(R.id.appbase_btn_add);
         btnRefresh = findViewById(R.id.appbase_btn_refresh);
+
+        Activity a = ContentView.getActivity();
+        colorSelected = ThemeUtil.getColor(a, android.R.attr.textColorHighlight);
 
         tvTitle.setText(title);
         if(message == null) { tvMessage.setVisibility(GONE); }
         else { tvMessage.setVisibility(VISIBLE); tvMessage.setText(message); }
 
         llOptions.removeAllViews();
+        llOptionsOverlays.removeAllViews();
 
-        addOptions(llOptions, options);
+        addOptions(llOptions, llOptionsOverlays, options);
 
         btnAdd.setOnClickListener(ocl);
         btnAdd.setVisibility(GONE);
@@ -88,9 +97,30 @@ public class PopupChoose extends Popup {
         setOnClickListener(ocl);
     }
 
-    private void addOptions(LinearLayout llOptions, Vector<Option> options) {
+    private RadioButton getNewRadioButton(Option option) {
+        Context context = llOptions.getContext();
+        RadioButton rb = new RadioButton(context);
+        rb.setText(option.getName());
 
-        if(options.size() == 0) { return; }
+        if(option.isSelected()) { rb.setChecked(true); }
+
+        rb.setOnClickListener(view -> {
+            if(!rb.isChecked()) { return; }
+            rb.postDelayed(() -> {
+                ContentView.removePopUp(PopupChoose.this); // dismiss
+                option.run();
+                onAfterOptionExecuted();
+            }, 250);
+        });
+
+        return rb;
+    }
+
+    private void addOptions(LinearLayout llOptions,
+                            LinearLayout llOptionsOverlays,
+                            Vector<Option> options) {
+
+        if(options.isEmpty()) { return; }
 
         Option firstOption = options.firstElement();
         boolean withIcon = (firstOption.getIconId() != 0)
@@ -100,22 +130,22 @@ public class PopupChoose extends Popup {
         if(!withIcon) {
             Context context = llOptions.getContext();
             RadioGroup rg = new RadioGroup(context);
-            int n = options.size();
-            for(int i=0; i<n; i++) {
-                Option option = options.elementAt(i);
-                RadioButton rb = new RadioButton(context);
-                rb.setText(option.getName());
-                rg.addView(rb);
-                if(option.isSelected()) { rb.setChecked(true); }
+            for(Option option : options) {
+                rg.addView(getNewRadioButton(option));
 
-                rb.setOnClickListener(view -> {
-                    if(!rb.isChecked()) { return; }
-                    rb.postDelayed(() -> {
-                        ContentView.removePopUp(PopupChoose.this); // dismiss
-                        option.run();
-                        onAfterOptionExecuted();
-                    }, 250);
-                });
+                // overlay
+                // option disabled -> semi-transparent colorBG
+                // option enabled -> transparent (invisible) overlay, but still hold the space
+                {
+                    ImageView ivOverlay = new ImageView(context);
+                    if(option.isDrawAsDisabled()) {
+                        ivOverlay.setImageResource(R.drawable.chooser_op_disabled_overlay);
+                    }
+                    LinearLayout.LayoutParams params;
+                    params = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0);
+                    params.weight = 1.0f;
+                    llOptionsOverlays.addView(ivOverlay, params);
+                }
             }
             llOptions.addView(rg);
             return;
@@ -126,6 +156,7 @@ public class PopupChoose extends Popup {
         View vOption;
         Button button;
         Option option;
+
         int n = options.size();
 
         for(int i=0; i<n; i++) {
@@ -147,6 +178,8 @@ public class PopupChoose extends Popup {
             option.setIconTintColor(tvText.getTextColors().getDefaultColor());
             option.applyIconTo(ivIcon);
             button.setOnClickListener(ocl);
+
+            if(option.isSelected()) { button.setBackgroundColor(colorSelected); }
 
             if(option.isDrawAsDisabled()) {
                 ImageView ivDisabledOverlay = new ImageView(vOption.getContext());

@@ -187,8 +187,20 @@ public class GuiLinker {
         else if(view instanceof RadioGroup)   { link((RadioGroup)   view, setGetter); }
     }
 
-    static public void linkDropDownList(LinearLayout llDropDown, String title,
-                String[] optionsKeys, String[] optionsValues, SetGetter setGetter) {
+    static public void linkDropDownList(LinearLayout llDropDown,
+                                        String title,
+                                        String[] optionsKeys,
+                                        String[] optionsValues,
+                                        SetGetter setGetter) {
+        linkDropDownList(llDropDown, title, optionsKeys, new String[]{}, optionsValues, setGetter);
+    }
+
+    static public void linkDropDownList(LinearLayout llDropDown,
+                                        String title,
+                                        String[] optionsKeys,
+                                        String[] optionsKeysDisabled,
+                                        String[] optionsValues,
+                                        SetGetter setGetter) {
 
         EditText et = llDropDown.findViewById(R.id.appbase_et_drop_down);
         ImageButton btn = llDropDown.findViewById(R.id.appbase_btn_drop_down_expand);
@@ -208,6 +220,15 @@ public class GuiLinker {
                     setGetter.set(optionsKeys[index]);
                 });
                 if(optionsKeys[i].equals(setGetter.get())) { option.setSelected(); }
+                for(String keyDisabled : optionsKeysDisabled) {
+                    if(optionsKeys[i].equals(keyDisabled)) {
+                        option.setDrawAsDisabled(true);
+
+                        // only setGetter.set(...), app will redirect that to display a dialog
+                        // no more et.setText(...) for disabled option:
+                        option.setExecutor(() -> setGetter.set(optionsKeys[index]));
+                    }
+                }
                 op.add(option);
             }
 
@@ -241,8 +262,7 @@ public class GuiLinker {
                 public void set(String colorHex) {
                     int color = 0;
                     try {
-                        //noinspection PointlessBitwiseExpression
-                        color = (int)(Long.parseLong(colorHex, 16) & 0xFFFFFFFF);
+                        color = (int)(Long.parseLong(colorHex, 16) & 0xFFFFFFFFL);
                     } catch (Exception e) { e.printStackTrace(System.err); }
 
                     if(button != null) { GuiUtil.setColorOnImageView(button, color); }
@@ -262,7 +282,9 @@ public class GuiLinker {
                 @Override
                 public void onOK(int colorNew) {
                     intSetGetter.set(colorNew);
-                    editText.setText(String.format("%08X", colorNew));
+                    if(editText != null) {
+                        editText.setText(String.format("%08X", colorNew));
+                    }
                     GuiUtil.setColorOnImageView(button, colorNew);
                 }
             };

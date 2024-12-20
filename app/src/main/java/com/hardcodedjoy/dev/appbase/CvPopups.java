@@ -228,9 +228,11 @@ public class CvPopups extends ContentView {
     }
 
     private void showPopupSetTime() {
-        new PopupSetTimeHHmmssmmm("Set time", timeMillis) {
+        PopupSetTimeHHmmssmmm p = new PopupSetTimeHHmmssmmm("Set time", timeMillis) {
             @Override
             public void onOK(long millis) { timeMillis = millis; }
-        }.show();
+        };
+        p.enableDismissByOutsideClick();
+        p.show();
     }
 }

@@ -104,14 +104,30 @@ SOFTWARE.
                 android:paddingTop="10dp"
                 android:paddingLeft="2.5dp"
                 android:paddingRight="2.5dp">
-                <LinearLayout
-                    android:id="@+id/appbase_ll_options"
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <include layout="@layout/appbase_popup_ci_opt"/>
-                    <include layout="@layout/appbase_popup_ci_opt"/>
-                </LinearLayout>
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/appbase_ll_options"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <include layout="@layout/appbase_popup_ci_opt"/>
+                        <include layout="@layout/appbase_popup_ci_opt"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/appbase_ll_options_overlays"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:clickable="false"
+                        android:focusable="false">
+                    </LinearLayout>
+
+                </FrameLayout>
+
                 <include layout="@layout/appbase_popup_btn_add" />
             </LinearLayout>
         </ScrollView>
