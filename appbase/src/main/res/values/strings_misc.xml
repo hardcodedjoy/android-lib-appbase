@@ -1,7 +1,7 @@
 <!--
 MIT License
 
-Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -44,4 +44,6 @@ SOFTWARE.
     <string name="premium_version_intro_owned">You have the Premium version, which gives you the following advantages:</string>
     <string name="pv_no_ads">• no ads</string>
     <string name="empty_disabled">empty = disabled</string>
+    <string name="remaining_time">Remaining time:</string>
+    <string name="next_frame_in">Next frame in:</string>
 </resources>

@@ -1,7 +1,7 @@
 <!--
 MIT License
 
-Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -126,4 +126,6 @@ SOFTWARE.
     <string name="option_select_all">select all</string>
     <string name="option_fade_in">fade in</string>
     <string name="option_fade_out">fade out</string>
+    <string name="option_close">close</string>
+    <string name="option_open_camera">open camera</string>
 </resources>

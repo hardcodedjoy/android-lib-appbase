@@ -1,7 +1,7 @@
 <!--
 MIT License
 
-Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -204,4 +204,12 @@ SOFTWARE.
     <string name="title_empty_space">Spazio vuoto</string>
     <string name="title_output_sizes">Dimensioni di uscita</string>
     <string name="title_review_time">Tempo di revisione</string>
+    <string name="title_camera">Fotocamera</string>
+    <string name="title_image_count">Numero di immagini</string>
+    <string name="title_images">Immagini</string>
+    <string name="title_frame_interval">Intervallo di frame</string>
+    <string name="title_interval">Intervallo</string>
+    <string name="title_capture_duration">Durata della cattura</string>
+    <string name="title_input">Ingresso</string>
+    <string name="title_output">Uscita</string>
 </resources>

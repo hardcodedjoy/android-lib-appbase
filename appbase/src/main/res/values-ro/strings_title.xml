@@ -1,7 +1,7 @@
 <!--
 MIT License
 
-Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -204,4 +204,12 @@ SOFTWARE.
     <string name="title_empty_space">Spațiu gol</string>
     <string name="title_output_sizes">Dimensiuni de ieșire</string>
     <string name="title_review_time">Timp de revizuire</string>
+    <string name="title_camera">Camera</string>
+    <string name="title_image_count">Număr de imagini</string>
+    <string name="title_images">Imagini</string>
+    <string name="title_frame_interval">Interval cadre</string>
+    <string name="title_interval">Interval</string>
+    <string name="title_capture_duration">Durată captură</string>
+    <string name="title_input">Intrare</string>
+    <string name="title_output">Ieșire</string>
 </resources>

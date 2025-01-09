@@ -2,7 +2,7 @@
 
 MIT License
 
-Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -175,8 +175,12 @@ public class GuiUtil {
             ((ViewGroup) withParent).removeView(with);
         }
 
+        ViewGroup.LayoutParams params = what.getLayoutParams();
+        if(params != null) { with.setLayoutParams(params); }
+
+        int index = ((ViewGroup) whatParent).indexOfChild(what);
         ((ViewGroup) whatParent).removeView(what);
-        ((ViewGroup) whatParent).addView(with);
+        ((ViewGroup) whatParent).addView(with, index);
     }
 
     static public void setMargins(View view, int left, int top, int right, int bottom) {

@@ -1,7 +1,7 @@
 <!--
 MIT License
 
-Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -69,4 +69,5 @@ SOFTWARE.
     <string name="err_file_format_not_supported">FORMATO DE ARCHIVO NO ES SOPORTADO</string>
     <string name="err_billing_unavailable">PAGO NO DISPONIBLE</string>
     <string name="err_storage_folder_unavailable">CARPETA DE ALMACENAMIENTO NO DISPONIBLE</string>
+    <string name="err_device_has_no_camera">EL DISPOSITIVO NO TIENE CÁMARA</string>
 </resources>

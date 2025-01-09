@@ -1,7 +1,7 @@
 <!--
 MIT License
 
-Copyright © 2024 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -204,4 +204,12 @@ SOFTWARE.
     <string name="title_empty_space">Boş alan</string>
     <string name="title_output_sizes">Çıkış Boyutları</string>
     <string name="title_review_time">İnceleme zamanı</string>
+    <string name="title_camera">Kamera</string>
+    <string name="title_image_count">Görüntü sayısı</string>
+    <string name="title_images">Resimler</string>
+    <string name="title_frame_interval">Çerçeve aralığı</string>
+    <string name="title_interval">Çerçeve</string>
+    <string name="title_capture_duration">Çekim süresi</string>
+    <string name="title_input">Giriş</string>
+    <string name="title_output">Çıkış</string>
 </resources>
