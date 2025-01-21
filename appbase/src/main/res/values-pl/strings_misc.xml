@@ -46,4 +46,6 @@ SOFTWARE.
     <string name="empty_disabled">pusty = wyłączony</string>
     <string name="remaining_time">Pozostały czas:</string>
     <string name="next_frame_in">Następna klatka za:</string>
+    <string name="variable">zmienne</string>
+    <string name="pv_no_watermark">• bez znaku wodnego</string>
 </resources>

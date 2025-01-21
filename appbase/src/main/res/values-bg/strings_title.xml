@@ -186,6 +186,7 @@ SOFTWARE.
     <string name="title_image_aspect">Аспект на изображението</string>
     <string name="title_video_aspect">Видео аспект</string>
     <string name="title_video_resolution">Видео резолюция</string>
+    <string name="title_resolution">Резолюция</string>
     <string name="title_image_framing">Рамкиране</string>
     <string name="title_step">Стъпка</string>
     <string name="title_unsaved_video">Несъхранен видео</string>
@@ -212,4 +213,21 @@ SOFTWARE.
     <string name="title_capture_duration">Продълж. на заснемането</string>
     <string name="title_input">Вход</string>
     <string name="title_output">Изход</string>
+    <string name="title_source">Източник</string>
+    <string name="title_sender">Изпращач</string>
+    <string name="title_subject">Тема</string>
+    <string name="title_destination">Дестинация</string>
+    <string name="title_frame_count">Брой кадри</string>
+    <string name="title_packet_size">Размер на пакета</string>
+    <string name="title_packet_format">Формат на пакета</string>
+    <string name="title_field">Поле</string>
+    <string name="title_add_field">Добавяне на поле</string>
+    <string name="title_resulting_packet">Резултатен пакет</string>
+    <string name="title_quality">Качество</string>
+    <string name="title_image_data">Данни за изображения</string>
+    <string name="title_image_width">Ширина на изображението</string>
+    <string name="title_image_height">Височина на изображението</string>
+    <string name="title_length">Дължина</string>
+    <string name="title_data_type">Тип данни</string>
+    <string name="title_udp_packet">UDP пакет</string>
 </resources>

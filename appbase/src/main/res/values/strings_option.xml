@@ -128,4 +128,5 @@ SOFTWARE.
     <string name="option_fade_out">fade out</string>
     <string name="option_close">close</string>
     <string name="option_open_camera">open camera</string>
+    <string name="option_new_field">new field</string>
 </resources>

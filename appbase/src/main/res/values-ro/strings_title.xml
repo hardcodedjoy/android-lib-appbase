@@ -186,6 +186,7 @@ SOFTWARE.
     <string name="title_image_aspect">Aspect imagine</string>
     <string name="title_video_aspect">Aspect video</string>
     <string name="title_video_resolution">Rezoluție video</string>
+    <string name="title_resolution">Rezoluție</string>
     <string name="title_image_framing">Încadrarea imaginii</string>
     <string name="title_step">Pasul</string>
     <string name="title_unsaved_video">Videoclip nesalvat</string>
@@ -212,4 +213,21 @@ SOFTWARE.
     <string name="title_capture_duration">Durată captură</string>
     <string name="title_input">Intrare</string>
     <string name="title_output">Ieșire</string>
+    <string name="title_source">Sursă</string>
+    <string name="title_sender">Expeditor</string>
+    <string name="title_subject">Subiect</string>
+    <string name="title_destination">Destinație</string>
+    <string name="title_frame_count">Număr cadre</string>
+    <string name="title_packet_size">Dimensiune pachet</string>
+    <string name="title_packet_format">Format pachet</string>
+    <string name="title_field">Câmp</string>
+    <string name="title_add_field">Adaugă câmp</string>
+    <string name="title_resulting_packet">Pachetul rezultat</string>
+    <string name="title_quality">Calitate</string>
+    <string name="title_image_data">Date imagine</string>
+    <string name="title_image_width">Lățime imagine</string>
+    <string name="title_image_height">Înălțime imagine</string>
+    <string name="title_length">Lungime</string>
+    <string name="title_data_type">Tip de date</string>
+    <string name="title_udp_packet">Pachetul UDP</string>
 </resources>

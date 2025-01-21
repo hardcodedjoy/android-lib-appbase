@@ -186,6 +186,7 @@ SOFTWARE.
     <string name="title_image_aspect">Aspect de l\'image</string>
     <string name="title_video_aspect">Aspect vidéo</string>
     <string name="title_video_resolution">Résolution vidéo</string>
+    <string name="title_resolution">Résolution</string>
     <string name="title_image_framing">Cadrage d\'image</string>
     <string name="title_step">Étape</string>
     <string name="title_unsaved_video">Vidéo non sauvegardée</string>
@@ -212,4 +213,21 @@ SOFTWARE.
     <string name="title_capture_duration">Durée de capture</string>
     <string name="title_input">Entrée</string>
     <string name="title_output">Sortie</string>
+    <string name="title_source">Source</string>
+    <string name="title_sender">Expéditeur</string>
+    <string name="title_subject">Sujet</string>
+    <string name="title_destination">Destination</string>
+    <string name="title_frame_count">Nombre d\'images</string>
+    <string name="title_packet_size">Taille du paquet</string>
+    <string name="title_packet_format">Format du paquet</string>
+    <string name="title_field">Champ</string>
+    <string name="title_add_field">Ajouter un champ</string>
+    <string name="title_resulting_packet">Paquet résultant</string>
+    <string name="title_quality">Qualité</string>
+    <string name="title_image_data">Données d\'image</string>
+    <string name="title_image_width">Largeur d\'image</string>
+    <string name="title_image_height">Hauteur d\'image</string>
+    <string name="title_length">Longueur</string>
+    <string name="title_data_type">Type de données</string>
+    <string name="title_udp_packet">Paquet UDP</string>
 </resources>

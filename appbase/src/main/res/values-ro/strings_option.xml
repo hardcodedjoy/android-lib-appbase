@@ -127,4 +127,5 @@ SOFTWARE.
     <string name="option_fade_out">fade out</string>
     <string name="option_close">închide</string>
     <string name="option_open_camera">deschide camera</string>
+    <string name="option_new_field">câmp nou</string>
 </resources>

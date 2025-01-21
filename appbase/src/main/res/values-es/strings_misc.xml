@@ -46,4 +46,6 @@ SOFTWARE.
     <string name="empty_disabled">vacío = inactivo</string>
     <string name="remaining_time">Tiempo restante:</string>
     <string name="next_frame_in">Siguiente fotograma en:</string>
+    <string name="variable">variable</string>
+    <string name="pv_no_watermark">• sin marca de agua</string>
 </resources>

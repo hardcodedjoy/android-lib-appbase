@@ -46,4 +46,6 @@ SOFTWARE.
     <string name="empty_disabled">gol = dezactivat</string>
     <string name="remaining_time">Timp rămas:</string>
     <string name="next_frame_in">Următorul cadru în:</string>
+    <string name="variable">variabil</string>
+    <string name="pv_no_watermark">• fără filigran</string>
 </resources>

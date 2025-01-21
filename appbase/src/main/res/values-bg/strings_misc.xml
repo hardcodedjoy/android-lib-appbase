@@ -46,4 +46,6 @@ SOFTWARE.
     <string name="empty_disabled">празно = забранено</string>
     <string name="remaining_time">Оставащо време:</string>
     <string name="next_frame_in">Следващ кадър в:</string>
+    <string name="variable">променлив</string>
+    <string name="pv_no_watermark">• без воден знак</string>
 </resources>

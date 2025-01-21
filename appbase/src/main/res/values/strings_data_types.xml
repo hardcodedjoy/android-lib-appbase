@@ -1,0 +1,51 @@
+<!--
+MIT License
+
+Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="data_type_string" tools:ignore="MissingTranslation">STRING</string>
+    <string name="data_type_int32" tools:ignore="MissingTranslation">INT32</string>
+    <string name="data_type_int32_be" tools:ignore="MissingTranslation">INT32_BE</string>
+    <string name="data_type_int32_le" tools:ignore="MissingTranslation">INT32_LE</string>
+    <string name="data_type_uint32" tools:ignore="MissingTranslation">UINT32</string>
+    <string name="data_type_uint32_be" tools:ignore="MissingTranslation">UINT32_BE</string>
+    <string name="data_type_uint32_le" tools:ignore="MissingTranslation">UINT32_LE</string>
+    <string name="data_type_int24" tools:ignore="MissingTranslation">INT24</string>
+    <string name="data_type_int24_be" tools:ignore="MissingTranslation">INT24_BE</string>
+    <string name="data_type_int24_le" tools:ignore="MissingTranslation">INT24_LE</string>
+    <string name="data_type_uint24" tools:ignore="MissingTranslation">UINT24</string>
+    <string name="data_type_uint24_be" tools:ignore="MissingTranslation">UINT24_BE</string>
+    <string name="data_type_uint24_le" tools:ignore="MissingTranslation">UINT24_LE</string>
+    <string name="data_type_int16" tools:ignore="MissingTranslation">INT16</string>
+    <string name="data_type_int16_be" tools:ignore="MissingTranslation">INT16_BE</string>
+    <string name="data_type_int16_le" tools:ignore="MissingTranslation">INT16_LE</string>
+    <string name="data_type_uint16" tools:ignore="MissingTranslation">UINT16</string>
+    <string name="data_type_uint16_be" tools:ignore="MissingTranslation">UINT16_BE</string>
+    <string name="data_type_uint16_le" tools:ignore="MissingTranslation">UINT16_LE</string>
+    <string name="data_type_int8" tools:ignore="MissingTranslation">INT8</string>
+    <string name="data_type_uint8" tools:ignore="MissingTranslation">UINT8</string>
+    <string name="data_type_boolean" tools:ignore="MissingTranslation">BOOLEAN</string>
+    <string name="data_type_float" tools:ignore="MissingTranslation">FLOAT</string>
+    <string name="data_type_double" tools:ignore="MissingTranslation">DOUBLE</string>
+</resources>

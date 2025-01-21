@@ -60,4 +60,7 @@ SOFTWARE.
     <string name="no_items_found">Нічого не знайдено.</string>
     <string name="too_little_disk_space_available">Замало доступного місця на диску</string>
     <string name="please_select_a_folder_where_to_store_pictures">Будь ласка, виберіть папку для зберігання зображень.</string>
+    <string name="x_technically_limited_to_y">[x] обмежується [y] (технічне обмеження) і буде скорочено, якщо він більший.</string>
+    <string name="note">Примітка:</string>
+    <string name="notes">Примітки:</string>
 </resources>

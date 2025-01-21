@@ -60,4 +60,7 @@ SOFTWARE.
     <string name="no_items_found">Nenhum item encontrado.</string>
     <string name="too_little_disk_space_available">Pouco espaço em disco disponível</string>
     <string name="please_select_a_folder_where_to_store_pictures">Selecione uma pasta onde armazenar as imagens.</string>
+    <string name="x_technically_limited_to_y">[x] é limitado a [y] (limite técnico) e será truncado se for maior.</string>
+    <string name="note">Observação:</string>
+    <string name="notes">Observações:</string>
 </resources>

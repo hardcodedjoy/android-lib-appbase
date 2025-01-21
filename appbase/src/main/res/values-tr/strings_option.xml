@@ -127,4 +127,5 @@ SOFTWARE.
     <string name="option_fade_out">yavaş kaybolan</string>
     <string name="option_close">kapat</string>
     <string name="option_open_camera">kamerayı aç</string>
+    <string name="option_new_field">yeni alan</string>
 </resources>

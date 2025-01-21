@@ -46,4 +46,6 @@ SOFTWARE.
     <string name="empty_disabled">empty = disabled</string>
     <string name="remaining_time">Remaining time:</string>
     <string name="next_frame_in">Next frame in:</string>
+    <string name="variable">variable</string>
+    <string name="pv_no_watermark">• no watermark</string>
 </resources>

@@ -127,4 +127,5 @@ SOFTWARE.
     <string name="option_fade_out">f. de salida</string>
     <string name="option_close">cerrar</string>
     <string name="option_open_camera">abrir la cámara</string>
+    <string name="option_new_field">nuevo campo</string>
 </resources>

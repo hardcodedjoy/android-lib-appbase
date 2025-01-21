@@ -60,4 +60,7 @@ SOFTWARE.
     <string name="no_items_found">Keine Elemente gefunden.</string>
     <string name="too_little_disk_space_available">Zu wenig Speicherplatz verfügbar</string>
     <string name="please_select_a_folder_where_to_store_pictures">Bitte wählen Sie einen Ordner zum Speichern der Bilder aus.</string>
+    <string name="x_technically_limited_to_y">[x] ist auf [y] beschränkt (technische Grenze) und wird abgeschnitten, wenn es größer ist.</string>
+    <string name="note">Hinweis:</string>
+    <string name="notes">Hinweise:</string>
 </resources>

@@ -46,4 +46,6 @@ SOFTWARE.
     <string name="empty_disabled">vuoto = disattivato</string>
     <string name="remaining_time">Tempo rimanente:</string>
     <string name="next_frame_in">Prossimo fotogramma tra:</string>
+    <string name="variable">variabile</string>
+    <string name="pv_no_watermark">• senza filigrana</string>
 </resources>

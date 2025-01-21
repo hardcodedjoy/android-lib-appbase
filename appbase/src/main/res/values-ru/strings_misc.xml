@@ -46,4 +46,6 @@ SOFTWARE.
     <string name="empty_disabled">пусто = отключено</string>
     <string name="remaining_time">Оставшееся время:</string>
     <string name="next_frame_in">Следующий кадр через:</string>
+    <string name="variable">переменная</string>
+    <string name="pv_no_watermark">• без водяного знака</string>
 </resources>

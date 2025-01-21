@@ -186,6 +186,7 @@ SOFTWARE.
     <string name="title_image_aspect">Görüntü En Boy Oranı</string>
     <string name="title_video_aspect">Videonun En Boyu</string>
     <string name="title_video_resolution">Video çözünürlüğü</string>
+    <string name="title_resolution">Çözünürlüğü</string>
     <string name="title_image_framing">Görüntü çerçeveleme</string>
     <string name="title_step">Aşama</string>
     <string name="title_unsaved_video">Kaydedilmeyen Video</string>
@@ -212,4 +213,21 @@ SOFTWARE.
     <string name="title_capture_duration">Çekim süresi</string>
     <string name="title_input">Giriş</string>
     <string name="title_output">Çıkış</string>
+    <string name="title_source">Kaynak</string>
+    <string name="title_sender">Gönderici</string>
+    <string name="title_subject">Konu</string>
+    <string name="title_destination">Varış noktası</string>
+    <string name="title_frame_count">Çerçeve sayısı</string>
+    <string name="title_packet_size">Paket boyutu</string>
+    <string name="title_packet_format">Paket formatı</string>
+    <string name="title_field">Alan</string>
+    <string name="title_add_field">Alan ekle</string>
+    <string name="title_resulting_packet">Sonuç paketi</string>
+    <string name="title_quality">Kalite</string>
+    <string name="title_image_data">Resim verileri</string>
+    <string name="title_image_width">Resim genişliği</string>
+    <string name="title_image_height">Resim yüksekliği</string>
+    <string name="title_length">Uzunluk</string>
+    <string name="title_data_type">Veri tipi</string>
+    <string name="title_udp_packet">UDP Paketi</string>
 </resources>

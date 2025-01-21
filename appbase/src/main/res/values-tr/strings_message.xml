@@ -60,4 +60,7 @@ SOFTWARE.
     <string name="no_items_found">Hiçbir şey bulunamadı.</string>
     <string name="too_little_disk_space_available">Çok az disk alanı mevcut</string>
     <string name="please_select_a_folder_where_to_store_pictures">Lütfen resimleri saklamak istediğiniz klasörü seçin.</string>
+    <string name="x_technically_limited_to_y">[x], [y] (teknik sınır) ile sınırlıdır ve daha büyükse kesilecektir.</string>
+    <string name="note">Not:</string>
+    <string name="notes">Notlar:</string>
 </resources>

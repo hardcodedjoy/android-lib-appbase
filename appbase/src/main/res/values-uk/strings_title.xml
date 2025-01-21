@@ -186,6 +186,7 @@ SOFTWARE.
     <string name="title_image_aspect">Аспект зображення</string>
     <string name="title_video_aspect">Аспект відео</string>
     <string name="title_video_resolution">Роздільність відео</string>
+    <string name="title_resolution">Роздільність</string>
     <string name="title_image_framing">Обрамлення</string>
     <string name="title_step">Крок</string>
     <string name="title_unsaved_video">Незбережене відео</string>
@@ -212,4 +213,21 @@ SOFTWARE.
     <string name="title_capture_duration">Тривалість знімка</string>
     <string name="title_input">Вхід</string>
     <string name="title_output">Вихід</string>
+    <string name="title_source">Джерело</string>
+    <string name="title_sender">Відправник</string>
+    <string name="title_subject">Тема</string>
+    <string name="title_destination">Пункт призначення</string>
+    <string name="title_frame_count">Кількість кадрів</string>
+    <string name="title_packet_size">Розмір пакета</string>
+    <string name="title_packet_format">Формат пакета</string>
+    <string name="title_field">Поле</string>
+    <string name="title_add_field">Додати поле</string>
+    <string name="title_resulting_packet">Результуючий пакет</string>
+    <string name="title_quality">Якість</string>
+    <string name="title_image_data">Дані зображення</string>
+    <string name="title_image_width">Ширина зображення</string>
+    <string name="title_image_height">Висота зображення</string>
+    <string name="title_length">Довжина</string>
+    <string name="title_data_type">Тип даних</string>
+    <string name="title_udp_packet">Пакет UDP</string>
 </resources>

@@ -60,4 +60,7 @@ SOFTWARE.
     <string name="no_items_found">Ничего не найдено.</string>
     <string name="too_little_disk_space_available">Слишком мало места на диске</string>
     <string name="please_select_a_folder_where_to_store_pictures">Выберите папку для хранения фотографий.</string>
+    <string name="x_technically_limited_to_y">[x] ограничено [y] (технический предел) и будет усечен, если больше.</string>
+    <string name="note">Примечание:</string>
+    <string name="notes">Примечания:</string>
 </resources>

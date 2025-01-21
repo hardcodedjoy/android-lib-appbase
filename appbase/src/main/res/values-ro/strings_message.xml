@@ -60,4 +60,7 @@ SOFTWARE.
     <string name="no_items_found">Nu s-a găsit nimic.</string>
     <string name="too_little_disk_space_available">Prea puțin spațiu disponibil pe disc</string>
     <string name="please_select_a_folder_where_to_store_pictures">Vă rugăm să selectați un folder pentru stocarea imaginilor.</string>
+    <string name="x_technically_limited_to_y">[x] este limitat la [y] (limita tehnică) și va fi trunchiat dacă este mai mare.</string>
+    <string name="note">Notă:</string>
+    <string name="notes">Note:</string>
 </resources>

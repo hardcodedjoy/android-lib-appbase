@@ -46,4 +46,6 @@ SOFTWARE.
     <string name="empty_disabled">vazio = desativado</string>
     <string name="remaining_time">Tempo restante:</string>
     <string name="next_frame_in">Próximo quadro em:</string>
+    <string name="variable">variável</string>
+    <string name="pv_no_watermark">• sem marca d\'água</string>
 </resources>

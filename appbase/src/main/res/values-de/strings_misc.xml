@@ -46,4 +46,6 @@ SOFTWARE.
     <string name="empty_disabled">leer = deaktiviert</string>
     <string name="remaining_time">Restzeit:</string>
     <string name="next_frame_in">Nächstes Bild in:</string>
+    <string name="variable">variabel</string>
+    <string name="pv_no_watermark">• kein Wasserzeichen</string>
 </resources>

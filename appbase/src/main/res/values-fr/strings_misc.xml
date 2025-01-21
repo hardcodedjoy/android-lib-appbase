@@ -46,4 +46,6 @@ SOFTWARE.
     <string name="empty_disabled">vide = désactivé</string>
     <string name="remaining_time">Temps restant:</string>
     <string name="next_frame_in">Image suivante dans:</string>
+    <string name="variable">variable</string>
+    <string name="pv_no_watermark">• pas de filigrane</string>
 </resources>
