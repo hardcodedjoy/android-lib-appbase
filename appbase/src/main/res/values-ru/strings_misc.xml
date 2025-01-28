@@ -48,4 +48,7 @@ SOFTWARE.
     <string name="next_frame_in">Следующий кадр через:</string>
     <string name="variable">переменная</string>
     <string name="pv_no_watermark">• без водяного знака</string>
+    <string name="fullscreen">на весь экран</string>
+    <string name="start_in_fullscreen">начать в полноэкранном режиме</string>
+    <string name="normal_not_fullscreen">Обычный</string>
 </resources>

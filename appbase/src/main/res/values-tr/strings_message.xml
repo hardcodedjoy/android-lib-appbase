@@ -63,4 +63,5 @@ SOFTWARE.
     <string name="x_technically_limited_to_y">[x], [y] (teknik sınır) ile sınırlıdır ve daha büyükse kesilecektir.</string>
     <string name="note">Not:</string>
     <string name="notes">Notlar:</string>
+    <string name="no_signal">Sinyal yok.</string>
 </resources>

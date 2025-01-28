@@ -63,4 +63,5 @@ SOFTWARE.
     <string name="x_technically_limited_to_y">[x] este limitat la [y] (limita tehnică) și va fi trunchiat dacă este mai mare.</string>
     <string name="note">Notă:</string>
     <string name="notes">Note:</string>
+    <string name="no_signal">Fără semnal.</string>
 </resources>

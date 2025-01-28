@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+/*
+
 MIT License
 
 Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
@@ -22,25 +22,39 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--->
+*/
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:background="?android:colorBackground">
+package com.hardcodedjoy.appbase;
 
-    <include
-        android:id="@+id/ll_1"
-        layout="@layout/layout_icons_1" />
+abstract public class WatchDog {
 
-    <include
-        android:id="@+id/ll_2"
-        layout="@layout/layout_icons_2" />
+    private final long timeoutMillis;
+    private Thread thread;
 
-    <include
-        android:id="@+id/ll_3"
-        layout="@layout/layout_icons_3" />
+    abstract public void onTimeout();
 
-</LinearLayout>
+    public WatchDog(long timeoutMillis) {
+        this.timeoutMillis = timeoutMillis;
+    }
+
+    synchronized public void start() {
+        thread = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(WatchDog.this.timeoutMillis);
+                    onTimeout();
+                } catch (Exception e) {
+                    /**/
+                }
+            }
+        };
+        thread.start();
+    }
+
+    synchronized public void stop() {
+        if(thread != null) { thread.interrupt(); }
+    }
+
+    public void reset() { stop(); start(); }
+}

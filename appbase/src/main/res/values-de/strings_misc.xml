@@ -48,4 +48,7 @@ SOFTWARE.
     <string name="next_frame_in">Nächstes Bild in:</string>
     <string name="variable">variabel</string>
     <string name="pv_no_watermark">• kein Wasserzeichen</string>
+    <string name="fullscreen">Vollbild</string>
+    <string name="start_in_fullscreen">im Vollbildmodus starten</string>
+    <string name="normal_not_fullscreen">Normal</string>
 </resources>

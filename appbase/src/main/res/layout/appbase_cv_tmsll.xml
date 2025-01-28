@@ -62,17 +62,30 @@ SOFTWARE.
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ScrollView
-            android:id="@+id/appbase_sv"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:contentDescription="@string/title_empty_space">
+            android:orientation="vertical">
+
             <LinearLayout
-                android:id="@+id/appbase_ll_content"
+                android:id="@+id/appbase_ll_banner_ad_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" />
-        </ScrollView>
+
+            <ScrollView
+                android:id="@+id/appbase_sv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/title_empty_space">
+                <LinearLayout
+                    android:id="@+id/appbase_ll_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </ScrollView>
+
+        </LinearLayout>
 
         <include
             android:id="@+id/appbase_fl_menu_options"

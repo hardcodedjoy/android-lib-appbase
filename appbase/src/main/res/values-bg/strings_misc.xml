@@ -48,4 +48,7 @@ SOFTWARE.
     <string name="next_frame_in">Следващ кадър в:</string>
     <string name="variable">променлив</string>
     <string name="pv_no_watermark">• без воден знак</string>
+    <string name="fullscreen">на цял екран</string>
+    <string name="start_in_fullscreen">стартиране на цял екран</string>
+    <string name="normal_not_fullscreen">Обичайно</string>
 </resources>

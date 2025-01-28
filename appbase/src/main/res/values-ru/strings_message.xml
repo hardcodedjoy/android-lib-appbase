@@ -63,4 +63,5 @@ SOFTWARE.
     <string name="x_technically_limited_to_y">[x] ограничено [y] (технический предел) и будет усечен, если больше.</string>
     <string name="note">Примечание:</string>
     <string name="notes">Примечания:</string>
+    <string name="no_signal">Нет сигнала.</string>
 </resources>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+MIT License
+
+Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_account_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_add_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_app_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_arrow_up_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_arrow_right_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_arrow_down_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_arrow_left_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_check_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_circle_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_clear_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_content_copy_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_content_delete_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_content_move_to_folder_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_content_paste_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_edit_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_error_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_file_new_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_file_type_archive_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_file_type_audio_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_file_type_file_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_file_type_folder_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_file_type_image_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_file_type_pdf_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_file_type_text_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_file_type_video_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_heart_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_help_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_home_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_image_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_image_sequence_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_info_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_lock_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_lock_open_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_media_pause_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_media_play_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_media_rec_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_media_skip_next_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_media_skip_prev_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_media_stop_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_preview_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_save_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_save_as_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_square_rounded_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_star_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_time_duration_3" android:tint="?android:colorForeground" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/bg_chess" />
+</LinearLayout>

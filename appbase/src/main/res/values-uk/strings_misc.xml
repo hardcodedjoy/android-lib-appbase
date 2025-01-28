@@ -48,4 +48,7 @@ SOFTWARE.
     <string name="next_frame_in">Наступний кадр через:</string>
     <string name="variable">улшӑнакан</string>
     <string name="pv_no_watermark">• без водяного знака</string>
+    <string name="fullscreen">на весь екран</string>
+    <string name="start_in_fullscreen">почати в повноекранному режимі</string>
+    <string name="normal_not_fullscreen">Обычне</string>
 </resources>

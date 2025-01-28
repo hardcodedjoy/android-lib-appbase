@@ -63,4 +63,5 @@ SOFTWARE.
     <string name="x_technically_limited_to_y">[x] está limitado a [y] (límite técnico) y se truncará si es mayor.</string>
     <string name="note">Nota:</string>
     <string name="notes">Notas:</string>
+    <string name="no_signal">Sin señal.</string>
 </resources>

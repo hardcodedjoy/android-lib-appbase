@@ -10,8 +10,8 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdk 34
-        versionCode 96
-        versionName "2.1.6"
+        versionCode 97
+        versionName "2.1.7"
         buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
         buildConfigField "String", "VERSION_NAME", "\"" + versionName + "\""
     }
@@ -36,6 +36,10 @@ android {
             withJavadocJar()
         }
     }
+}
+
+dependencies {
+    implementation ("androidx.core:core:1.10.1")
 }
 
 afterEvaluate {

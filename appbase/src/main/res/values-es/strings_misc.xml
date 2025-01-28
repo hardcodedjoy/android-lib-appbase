@@ -48,4 +48,7 @@ SOFTWARE.
     <string name="next_frame_in">Siguiente fotograma en:</string>
     <string name="variable">variable</string>
     <string name="pv_no_watermark">• sin marca de agua</string>
+    <string name="fullscreen">Pantalla completa</string>
+    <string name="start_in_fullscreen">iniciar en pantalla completa</string>
+    <string name="normal_not_fullscreen">Normal</string>
 </resources>

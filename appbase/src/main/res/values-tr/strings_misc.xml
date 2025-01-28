@@ -48,4 +48,7 @@ SOFTWARE.
     <string name="next_frame_in">Sonraki kare:</string>
     <string name="variable">değişkendir</string>
     <string name="pv_no_watermark">• filigran yok</string>
+    <string name="fullscreen">Tam Ekranda</string>
+    <string name="start_in_fullscreen">Tam Ekranda başlat</string>
+    <string name="normal_not_fullscreen">Normal</string>
 </resources>

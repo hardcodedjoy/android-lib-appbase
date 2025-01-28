@@ -35,8 +35,14 @@ import android.net.Uri;
 import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import androidx.core.view.WindowCompat;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 
 import com.hardcodedjoy.appbase.LanguageUtil;
 import com.hardcodedjoy.appbase.R;
@@ -285,5 +291,35 @@ public class ContentView extends LinearLayout {
     static public void showPopupFreeVersionLimitation(int messageStringId, Runnable onMoreDetails) {
         String message = getString(messageStringId);
         showPopupFreeVersionLimitation(message, onMoreDetails);
+    }
+
+    static public void goFullscreen(boolean fullscreen) {
+        goFullscreen(fullscreen, 0xFF000000);
+    }
+
+    static public void goFullscreen(boolean fullscreen, int bgColor) {
+        Window window = getActivity().getWindow();
+        window.getDecorView().setBackgroundColor(bgColor);
+
+        WindowInsetsControllerCompat controller =
+                WindowCompat.getInsetsController(window, window.getDecorView());
+
+        if(fullscreen) {
+            window.clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+            window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+            controller.setSystemBarsBehavior(
+                    WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);
+            controller.hide(WindowInsetsCompat.Type.statusBars());
+            controller.hide(WindowInsetsCompat.Type.navigationBars());
+        } else {
+            window.addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+            window.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+            controller.setSystemBarsBehavior(
+                    WindowInsetsControllerCompat.BEHAVIOR_DEFAULT);
+            controller.show(WindowInsetsCompat.Type.statusBars());
+            controller.show(WindowInsetsCompat.Type.navigationBars());
+        }
     }
 }

@@ -48,4 +48,7 @@ SOFTWARE.
     <string name="next_frame_in">Următorul cadru în:</string>
     <string name="variable">variabil</string>
     <string name="pv_no_watermark">• fără filigran</string>
+    <string name="fullscreen">pe tot ecranul</string>
+    <string name="start_in_fullscreen">de la început pe tot ecranul</string>
+    <string name="normal_not_fullscreen">Normal</string>
 </resources>

@@ -48,4 +48,7 @@ SOFTWARE.
     <string name="next_frame_in">Próximo quadro em:</string>
     <string name="variable">variável</string>
     <string name="pv_no_watermark">• sem marca d\'água</string>
+    <string name="fullscreen">Tela cheia</string>
+    <string name="start_in_fullscreen">iniciar em tela cheia</string>
+    <string name="normal_not_fullscreen">Normal</string>
 </resources>

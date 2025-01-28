@@ -36,6 +36,7 @@ import android.text.style.StyleSpan;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
@@ -136,7 +137,19 @@ public class GuiUtil {
         et.setOnClickListener(ocl);
     }
 
-    static public void disable(Activity activity, LinearLayout llDropDown, View.OnClickListener ocl) {
+    static public void disable(Activity activity, CheckBox cb, View.OnClickListener ocl) {
+        cb.setFocusable(false);
+        cb.setFocusableInTouchMode(false);
+        // cb.setBackgroundResource(com.hardcodedjoy.appbase.R.drawable.cb_disabled);
+        int colorText = ThemeUtil.getColor(activity, R.attr.appBaseColorTextDisabled);
+        cb.setTextColor(colorText);
+        cb.setOnClickListener(view -> {
+            cb.setChecked(false);
+            ocl.onClick(view);
+        });
+    }
+
+    static public void disableDDL(Activity activity, LinearLayout llDropDown, View.OnClickListener ocl) {
         EditText et = llDropDown.findViewById(R.id.appbase_et_drop_down);
         ImageButton btn = llDropDown.findViewById(R.id.appbase_btn_drop_down_expand);
         int colorText = ThemeUtil.getColor(activity, R.attr.appBaseColorTextDisabled);

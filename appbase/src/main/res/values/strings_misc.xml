@@ -48,4 +48,7 @@ SOFTWARE.
     <string name="next_frame_in">Next frame in:</string>
     <string name="variable">variable</string>
     <string name="pv_no_watermark">• no watermark</string>
+    <string name="fullscreen">Fullscreen</string>
+    <string name="start_in_fullscreen">start in Fullscreen</string>
+    <string name="normal_not_fullscreen">Normal</string>
 </resources>
