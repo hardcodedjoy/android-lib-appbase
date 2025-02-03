@@ -24,7 +24,7 @@ SOFTWARE.
 
 */
 
-package com.hardcodedjoy.dev.appbase;
+package com.hardcodedjoy.dev.appbase.cv;
 
 import android.annotation.SuppressLint;
 import android.widget.RadioButton;
@@ -34,6 +34,8 @@ import com.hardcodedjoy.appbase.contentview.ContentView;
 import com.hardcodedjoy.appbase.gui.GuiLinker;
 import com.hardcodedjoy.appbase.setgetters.SetGetter;
 import com.hardcodedjoy.appbase.gui.ThemeUtil;
+import com.hardcodedjoy.dev.appbase.R;
+import com.hardcodedjoy.dev.appbase.Settings;
 
 @SuppressLint("ViewConstructor")
 public class CvThemeView extends ContentView {

@@ -128,4 +128,5 @@ SOFTWARE.
     <string name="option_close">закрыть</string>
     <string name="option_open_camera">открыть камеру</string>
     <string name="option_new_field">новое поле</string>
+    <string name="option_original">оригинальный</string>
 </resources>

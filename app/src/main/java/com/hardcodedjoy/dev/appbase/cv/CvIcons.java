@@ -24,41 +24,21 @@ SOFTWARE.
 
 */
 
-package com.hardcodedjoy.dev.appbase;
+package com.hardcodedjoy.dev.appbase.cv;
 
 import android.annotation.SuppressLint;
 import android.widget.LinearLayout;
 
 import com.hardcodedjoy.appbase.contentview.CvTSLL;
-import com.hardcodedjoy.appbase.gui.GuiLinker;
-import com.hardcodedjoy.appbase.setgetters.IntSetGetter;
+import com.hardcodedjoy.dev.appbase.R;
 
 @SuppressLint("ViewConstructor")
-public class CvColorTest extends CvTSLL {
+public class CvIcons extends CvTSLL {
 
-    private int colorForeground;
-    private int colorBackground;
-
-    public CvColorTest() {
-        setTitle(com.hardcodedjoy.appbase.R.string.title_color);
-        setTitleIcon(com.hardcodedjoy.appbase.R.drawable.ic_circle_2);
+    public CvIcons() {
+        setTitle(R.string.icons);
+        setTitleIcon(com.hardcodedjoy.appbase.R.drawable.ic_image_1);
         LinearLayout ll = findViewById(R.id.appbase_ll_content);
-        inflate(getActivity(), R.layout.cv_color_test, ll);
-
-        GuiLinker.linkColorField(findViewById(R.id.ll_fg_color),
-                com.hardcodedjoy.appbase.R.string.title_foreground_color, new IntSetGetter() {
-            @Override
-            public void set(int value) { colorForeground = value; }
-            @Override
-            public int get() { return colorForeground; }
-        });
-
-        GuiLinker.linkColorField(findViewById(R.id.ll_bg_color),
-                com.hardcodedjoy.appbase.R.string.title_background_color, new IntSetGetter() {
-            @Override
-            public void set(int value) { colorBackground = value; }
-            @Override
-            public int get() { return colorBackground; }
-        });
+        inflate(getActivity(), R.layout.cv_icons, ll);
     }
 }

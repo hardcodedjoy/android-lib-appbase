@@ -24,24 +24,15 @@ SOFTWARE.
 
 */
 
-package com.hardcodedjoy.dev.appbase;
+package com.hardcodedjoy.appbase;
 
-import com.hardcodedjoy.appbase.LanguageUtil;
-import com.hardcodedjoy.appbase.activity.SingleActivity;
-import com.hardcodedjoy.appbase.contentview.CvAboutBase;
-import com.hardcodedjoy.appbase.contentview.CvTM;
-import com.hardcodedjoy.dev.appbase.cv.CvMain;
-import com.hardcodedjoy.dev.appbase.cv.CvSettings;
+import android.os.Build;
 
-public class MainActivity extends SingleActivity {
-    static {
-        setInitialCvClass(CvMain.class);
-        Settings.setSettingsClass(Settings.class);
-        CvTM.setSettingsCvClass(CvSettings.class);
-        CvTM.setAboutCvClass(CvAboutBase.class);
-        CvAboutBase.setAppVersion(BuildConfig.VERSION_NAME, BuildConfig.TIMESTAMP);
-        LanguageUtil.setAvailableAppLanguages(new String[] {
-                "bg", "de", "en", "es", "fr", "it", "pl", "pt", "ro", "ru", "tr", "uk"
-        });
-    }
+public class DeviceInfo {
+
+    static public String getManufacturer() { return Build.MANUFACTURER; }
+
+    static public String getModel() { return Build.MODEL; }
+
+    static public String getAndroidAPI() { return "" + Build.VERSION.SDK_INT; }
 }

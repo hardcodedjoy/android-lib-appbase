@@ -24,7 +24,7 @@ SOFTWARE.
 
 */
 
-package com.hardcodedjoy.dev.appbase;
+package com.hardcodedjoy.dev.appbase.cv;
 
 import android.annotation.SuppressLint;
 import android.widget.LinearLayout;
@@ -32,6 +32,7 @@ import android.widget.TextView;
 
 import com.hardcodedjoy.appbase.contentview.CvTMSLL;
 import com.hardcodedjoy.appbase.popup.Option;
+import com.hardcodedjoy.dev.appbase.R;
 
 import java.util.Vector;
 
@@ -51,6 +52,8 @@ public class CvMain extends CvTMSLL {
         ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_circle_2, "Color Test", () -> new CvColorTest().show()));
 
         ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_circle_2, "Button Bar Test", () -> new CvTBBLLTest().show()));
+
+        ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_info_1, "Device Info", () -> new CvDeviceInfo().show()));
 
         Option optionDisabled = new Option(com.hardcodedjoy.appbase.R.drawable.ic_clear_1, "disabled option", () -> {});
         optionDisabled.setDrawAsDisabled(true);

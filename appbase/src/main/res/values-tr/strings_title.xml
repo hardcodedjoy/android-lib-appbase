@@ -230,4 +230,6 @@ SOFTWARE.
     <string name="title_length">Uzunluk</string>
     <string name="title_data_type">Veri tipi</string>
     <string name="title_udp_packet">UDP Paketi</string>
+    <string name="title_video_encoder">Video Kodlayıcı</string>
+    <string name="title_color_format">Renk Formatı</string>
 </resources>

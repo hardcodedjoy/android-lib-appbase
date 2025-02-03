@@ -24,7 +24,7 @@ SOFTWARE.
 
 */
 
-package com.hardcodedjoy.dev.appbase;
+package com.hardcodedjoy.dev.appbase.cv;
 
 import android.annotation.SuppressLint;
 import android.widget.LinearLayout;
@@ -32,6 +32,7 @@ import android.widget.TextView;
 
 import com.hardcodedjoy.appbase.contentview.CvTBBLL;
 import com.hardcodedjoy.appbase.popup.Option;
+import com.hardcodedjoy.dev.appbase.R;
 
 import java.util.Vector;
 

@@ -188,8 +188,17 @@ public class FileUtil {
     static private String getFileNameFromContentURI(Uri uri) {
         if(!"content".equals(uri.getScheme())) { return null; }
 
-        Cursor cursor = activity.getContentResolver().query(uri,
-                null, null, null, null);
+        String[] projection = { OpenableColumns.DISPLAY_NAME };
+        Cursor cursor;
+
+        try {
+            cursor = activity.getContentResolver().query(uri,
+                    projection, null, null, null);
+        } catch (Exception e) {
+            e.printStackTrace(System.err);
+            return null;
+        }
+
         if(cursor == null) { return null; }
         if(!cursor.moveToFirst()) { cursor.close(); return null; }
         int columnIndex = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME);

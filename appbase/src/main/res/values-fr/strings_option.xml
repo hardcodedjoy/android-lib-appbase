@@ -128,4 +128,5 @@ SOFTWARE.
     <string name="option_close">fermer</string>
     <string name="option_open_camera">ouvrir la caméra</string>
     <string name="option_new_field">nouveau champ</string>
+    <string name="option_original">original</string>
 </resources>

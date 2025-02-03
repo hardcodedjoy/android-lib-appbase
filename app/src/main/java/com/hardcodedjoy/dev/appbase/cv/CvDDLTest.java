@@ -24,7 +24,7 @@ SOFTWARE.
 
 */
 
-package com.hardcodedjoy.dev.appbase;
+package com.hardcodedjoy.dev.appbase.cv;
 
 import android.annotation.SuppressLint;
 import android.widget.LinearLayout;
@@ -32,6 +32,7 @@ import android.widget.LinearLayout;
 import com.hardcodedjoy.appbase.contentview.ContentView;
 import com.hardcodedjoy.appbase.gui.GuiLinker;
 import com.hardcodedjoy.appbase.setgetters.SetGetter;
+import com.hardcodedjoy.dev.appbase.R;
 
 @SuppressLint("ViewConstructor")
 public class CvDDLTest extends ContentView {

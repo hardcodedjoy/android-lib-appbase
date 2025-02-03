@@ -24,24 +24,31 @@ SOFTWARE.
 
 */
 
-package com.hardcodedjoy.dev.appbase;
+package com.hardcodedjoy.dev.appbase.cv;
 
-import com.hardcodedjoy.appbase.LanguageUtil;
-import com.hardcodedjoy.appbase.activity.SingleActivity;
-import com.hardcodedjoy.appbase.contentview.CvAboutBase;
-import com.hardcodedjoy.appbase.contentview.CvTM;
-import com.hardcodedjoy.dev.appbase.cv.CvMain;
-import com.hardcodedjoy.dev.appbase.cv.CvSettings;
+import android.annotation.SuppressLint;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
-public class MainActivity extends SingleActivity {
-    static {
-        setInitialCvClass(CvMain.class);
-        Settings.setSettingsClass(Settings.class);
-        CvTM.setSettingsCvClass(CvSettings.class);
-        CvTM.setAboutCvClass(CvAboutBase.class);
-        CvAboutBase.setAppVersion(BuildConfig.VERSION_NAME, BuildConfig.TIMESTAMP);
-        LanguageUtil.setAvailableAppLanguages(new String[] {
-                "bg", "de", "en", "es", "fr", "it", "pl", "pt", "ro", "ru", "tr", "uk"
-        });
+import com.hardcodedjoy.appbase.DeviceInfo;
+import com.hardcodedjoy.appbase.contentview.CvTSLL;
+import com.hardcodedjoy.dev.appbase.R;
+
+@SuppressLint("ViewConstructor")
+public class CvDeviceInfo extends CvTSLL {
+
+    public CvDeviceInfo() {
+        // add initialization code here (that must run only one time)
+
+        setTitle("Device Info");
+        setTitleIcon(com.hardcodedjoy.appbase.R.drawable.ic_info_1);
+        LinearLayout ll = findViewById(R.id.appbase_ll_content);
+        inflate(getActivity(), R.layout.cv_device_info, ll);
+
+        TextView tv;
+
+        tv = findViewById(R.id.tv_manufacturer); tv.setText(DeviceInfo.getManufacturer());
+        tv = findViewById(R.id.tv_model); tv.setText(DeviceInfo.getModel());
+        tv = findViewById(R.id.tv_android_api); tv.setText(DeviceInfo.getAndroidAPI());
     }
 }

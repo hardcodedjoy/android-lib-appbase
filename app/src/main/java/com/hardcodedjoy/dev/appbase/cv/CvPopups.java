@@ -24,7 +24,7 @@ SOFTWARE.
 
 */
 
-package com.hardcodedjoy.dev.appbase;
+package com.hardcodedjoy.dev.appbase.cv;
 
 import android.annotation.SuppressLint;
 
@@ -46,6 +46,7 @@ import com.hardcodedjoy.appbase.popup.PopupRegister;
 import com.hardcodedjoy.appbase.popup.PopupSelectTimeInterval;
 import com.hardcodedjoy.appbase.popup.PopupSetPassword;
 import com.hardcodedjoy.appbase.popup.PopupSetTimeHHmmssmmm;
+import com.hardcodedjoy.dev.appbase.R;
 
 import java.util.Vector;
 

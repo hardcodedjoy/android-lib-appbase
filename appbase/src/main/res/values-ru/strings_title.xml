@@ -230,4 +230,6 @@ SOFTWARE.
     <string name="title_length">Длина</string>
     <string name="title_data_type">Тип данных</string>
     <string name="title_udp_packet">UDP-пакет</string>
+    <string name="title_video_encoder">Видеокодер</string>
+    <string name="title_color_format">Формат цвета</string>
 </resources>

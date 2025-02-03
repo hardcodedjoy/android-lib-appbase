@@ -24,12 +24,13 @@ SOFTWARE.
 
 */
 
-package com.hardcodedjoy.dev.appbase;
+package com.hardcodedjoy.dev.appbase.cv;
 
 import android.annotation.SuppressLint;
 import android.widget.TextView;
 
 import com.hardcodedjoy.appbase.contentview.CvSettingsBase;
+import com.hardcodedjoy.dev.appbase.Settings;
 
 @SuppressLint("ViewConstructor")
 public class CvSettings extends CvSettingsBase {

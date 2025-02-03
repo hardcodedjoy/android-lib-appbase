@@ -230,4 +230,6 @@ SOFTWARE.
     <string name="title_length">Longitud</string>
     <string name="title_data_type">Tipo de datos</string>
     <string name="title_udp_packet">Paquete UDP</string>
+    <string name="title_video_encoder">Codificador de vídeo</string>
+    <string name="title_color_format">Formato de color</string>
 </resources>
