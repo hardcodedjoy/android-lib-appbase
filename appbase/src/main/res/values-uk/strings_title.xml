@@ -232,4 +232,5 @@ SOFTWARE.
     <string name="title_udp_packet">Пакет UDP</string>
     <string name="title_video_encoder">Відео кодер</string>
     <string name="title_color_format">Формат кольору</string>
+    <string name="title_peak_amplitude">Максимальна амплітуда</string>
 </resources>

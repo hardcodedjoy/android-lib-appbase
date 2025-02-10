@@ -129,4 +129,7 @@ SOFTWARE.
     <string name="option_open_camera">відкрити камеру</string>
     <string name="option_new_field">нове поле</string>
     <string name="option_original">оригінальний</string>
+    <string name="option_force_mono">змусити моно</string>
+    <string name="option_normalize_amplitude">нормалізує амплітуду</string>
+    <string name="option_normalize_stereo_channels_independently">нормалізуйте стереоканали окремо</string>
 </resources>

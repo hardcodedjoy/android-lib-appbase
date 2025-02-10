@@ -129,4 +129,7 @@ SOFTWARE.
     <string name="option_open_camera">kamerayı aç</string>
     <string name="option_new_field">yeni alan</string>
     <string name="option_original">orijinal</string>
+    <string name="option_force_mono">monoyu zorla</string>
+    <string name="option_normalize_amplitude">genliği normalleştir</string>
+    <string name="option_normalize_stereo_channels_independently">stereo kanalları ayrı ayrı normalleştir</string>
 </resources>

@@ -129,4 +129,7 @@ SOFTWARE.
     <string name="option_open_camera">Kamera öffnen</string>
     <string name="option_new_field">neues Feld</string>
     <string name="option_original">original</string>
+    <string name="option_force_mono">Mono erzwingen</string>
+    <string name="option_normalize_amplitude">Amplitude normalisieren</string>
+    <string name="option_normalize_stereo_channels_independently">Stereokanäle einzeln normalisieren</string>
 </resources>
