@@ -132,4 +132,5 @@ SOFTWARE.
     <string name="option_force_mono">monoyu zorla</string>
     <string name="option_normalize_amplitude">genliği normalleştir</string>
     <string name="option_normalize_stereo_channels_independently">stereo kanalları ayrı ayrı normalleştir</string>
+    <string name="option_clear">temizle</string>
 </resources>

@@ -34,6 +34,10 @@ import android.provider.DocumentsContract;
 import android.provider.OpenableColumns;
 import android.webkit.MimeTypeMap;
 
+import androidx.documentfile.provider.DocumentFile;
+
+import com.hardcodedjoy.appbase.handlers.StringHandler;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.InputStream;
@@ -187,6 +191,14 @@ public class FileUtil {
 
     static private String getFileNameFromContentURI(Uri uri) {
         if(!"content".equals(uri.getScheme())) { return null; }
+
+        if(isTreeUri(uri)) {
+            DocumentFile documentFile = DocumentFile.fromTreeUri(activity, uri);
+            if(documentFile == null) { return null; }
+            return documentFile.getName();
+        }
+
+        // else -> non-tree uri:
 
         String[] projection = { OpenableColumns.DISPLAY_NAME };
         Cursor cursor;
@@ -518,5 +530,76 @@ public class FileUtil {
             e.printStackTrace(System.err);
         }
         return false;
+    }
+
+    static public boolean isTreeUri(Uri uri) {
+        final List<String> pathSegments = uri.getPathSegments();
+        if(pathSegments.size() < 2) { return false; }
+        return "tree".equals(pathSegments.get(0));
+    }
+
+    static public void copyContents(Uri srcFileUri, File destFile, StringHandler onError) {
+
+        // copies file or folder
+        // assuming destFile does not exist yet and this method will create it
+
+        boolean srcFileIsFileNotDir = true;
+        DocumentFile docFile = null;
+
+        if(FileUtil.isTreeUri(srcFileUri)) {
+
+            // ContentView.log("is tree uri");
+
+            docFile = DocumentFile.fromTreeUri(getActivity(), srcFileUri);
+            if(docFile == null) {
+                onError.handle("docFile == null");
+                return;
+            }
+            srcFileIsFileNotDir = docFile.isFile();
+        }
+
+        if(srcFileIsFileNotDir) {
+
+            // ContentView.log("is file: " + srcFileUri.toString());
+
+            try {
+                InputStream is = activity.getContentResolver().openInputStream(srcFileUri);
+                if(is == null) { throw new Exception("is == null"); }
+                Uri destFileUri = Uri.fromFile(destFile);
+                OutputStream os = activity.getContentResolver().openOutputStream(destFileUri);
+                if(os == null) { throw new Exception("os == null"); }
+                StreamIO.copyStream(is, os);
+            } catch (Exception e) {
+                onError.handle(e.toString());
+                return;
+            }
+            return;
+        }
+
+        // else -> dir
+
+        boolean mkDirOK = destFile.mkdir();
+        if(!mkDirOK) {
+            onError.handle("mkDir == false");
+            return;
+        }
+
+        DocumentFile[] files = docFile.listFiles();
+        for(DocumentFile srcFile : files) {
+            String srcFileName = srcFile.getName();
+            File f = new File(destFile, srcFileName);
+            copyContents(srcFile.getUri(), f, onError);
+        }
+    }
+
+    static public void unpackDirs(File[] files, ArrayList<File> destFiles) {
+        if(files == null) { return; }
+        for(File file : files) {
+            if(file.isDirectory()) {
+                unpackDirs(file.listFiles(), destFiles);
+            } else {
+                destFiles.add(file);
+            }
+        }
     }
 }

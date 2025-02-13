@@ -132,4 +132,5 @@ SOFTWARE.
     <string name="option_force_mono">сделать моно</string>
     <string name="option_normalize_amplitude">нормировать амплитуду</string>
     <string name="option_normalize_stereo_channels_independently">нормализовать стереоканалы отдельно</string>
+    <string name="option_clear">очистить</string>
 </resources>

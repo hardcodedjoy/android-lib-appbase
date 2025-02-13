@@ -132,4 +132,5 @@ SOFTWARE.
     <string name="option_force_mono">forzar mono</string>
     <string name="option_normalize_amplitude">normalizar la amplitud</string>
     <string name="option_normalize_stereo_channels_independently">normalizar canales estéreo individualmente</string>
+    <string name="option_clear">borrar</string>
 </resources>

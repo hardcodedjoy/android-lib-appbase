@@ -132,4 +132,5 @@ SOFTWARE.
     <string name="option_force_mono">forțează mono</string>
     <string name="option_normalize_amplitude">normalizare amplitudine</string>
     <string name="option_normalize_stereo_channels_independently">normalizare canale stereo separat</string>
+    <string name="option_clear">curăță</string>
 </resources>
