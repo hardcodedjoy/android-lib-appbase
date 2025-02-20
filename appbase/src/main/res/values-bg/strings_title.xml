@@ -233,4 +233,10 @@ SOFTWARE.
     <string name="title_video_encoder">Видео енкодер</string>
     <string name="title_color_format">Формат на цветовете</string>
     <string name="title_peak_amplitude">Върхова амплитуда</string>
+    <string name="title_mask_image">Изображение на маската</string>
+    <string name="title_import_mask_images">Импорт. изображения на маска</string>
+    <string name="title_select_mask_image">Изберете изображение на маска</string>
+    <string name="title_delete_mask">Изтриване на маската</string>
+    <string name="title_input_image_size_limit">Ограничение за размер на входно изображение</string>
+    <string name="title_mask">Маска</string>
 </resources>

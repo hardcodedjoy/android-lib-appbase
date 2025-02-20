@@ -70,4 +70,5 @@ SOFTWARE.
     <string name="err_billing_unavailable">PLATA INDISPONIBILĂ</string>
     <string name="err_storage_folder_unavailable">FOLDER DE STOCARE INDISPONIBIL</string>
     <string name="err_device_has_no_camera">DISPOZITIVUL NU ARE CAMERĂ FOTO</string>
+    <string name="err_file_is_not_image">FIȘIERUL NU ESTE O IMAGINE</string>
 </resources>

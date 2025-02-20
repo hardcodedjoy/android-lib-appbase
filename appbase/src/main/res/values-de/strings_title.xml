@@ -233,4 +233,10 @@ SOFTWARE.
     <string name="title_video_encoder">Video-Encoder</string>
     <string name="title_color_format">Farbformat</string>
     <string name="title_peak_amplitude">Maximale Amplitude</string>
+    <string name="title_mask_image">Maskenbild</string>
+    <string name="title_import_mask_images">Maskenbilder importieren</string>
+    <string name="title_select_mask_image">Maskenbild auswählen</string>
+    <string name="title_delete_mask">Maske löschen</string>
+    <string name="title_input_image_size_limit">Größenbeschränkung für Eingabebilder</string>
+    <string name="title_mask">Maske</string>
 </resources>

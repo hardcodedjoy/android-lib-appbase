@@ -133,4 +133,7 @@ SOFTWARE.
     <string name="option_normalize_amplitude">normalizować amplitudę</string>
     <string name="option_normalize_stereo_channels_independently">normalizować kanały stereo oddzielnie</string>
     <string name="option_clear">wyczyść</string>
+    <string name="option_invert_colors">odwrócić kolory</string>
+    <string name="option_no_mask">bez maski</string>
+    <string name="option_no_limit">bez limitu</string>
 </resources>

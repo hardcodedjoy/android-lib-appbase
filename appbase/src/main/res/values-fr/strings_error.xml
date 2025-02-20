@@ -70,4 +70,5 @@ SOFTWARE.
     <string name="err_billing_unavailable">PAIEMENT INDISPONIBLE</string>
     <string name="err_storage_folder_unavailable">DOSSIER DE STOCKAGE INDISPONIBLE</string>
     <string name="err_device_has_no_camera">L\'APPAREIL N\'A PAS DE CAMÉRA</string>
+    <string name="err_file_is_not_image">LE FICHIER N\'EST PAS UNE IMAGE</string>
 </resources>

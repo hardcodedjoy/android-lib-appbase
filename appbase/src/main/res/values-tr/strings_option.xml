@@ -133,4 +133,7 @@ SOFTWARE.
     <string name="option_normalize_amplitude">genliği normalleştir</string>
     <string name="option_normalize_stereo_channels_independently">stereo kanalları ayrı ayrı normalleştir</string>
     <string name="option_clear">temizle</string>
+    <string name="option_invert_colors">renkleri ters çevir</string>
+    <string name="option_no_mask">maske yok</string>
+    <string name="option_no_limit">sınırsız</string>
 </resources>

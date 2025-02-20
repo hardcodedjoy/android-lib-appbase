@@ -70,4 +70,5 @@ SOFTWARE.
     <string name="err_billing_unavailable">ÖDEME MEVCUT DEĞİL</string>
     <string name="err_storage_folder_unavailable">DEPOLAMA KLASÖRÜ KULLANILAMAZ</string>
     <string name="err_device_has_no_camera">CİHAZIN KAMERA YOK</string>
+    <string name="err_file_is_not_image">DOSYA BİR RESİM DEĞİLDİR</string>
 </resources>

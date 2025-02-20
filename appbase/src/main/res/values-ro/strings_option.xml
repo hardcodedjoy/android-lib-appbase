@@ -133,4 +133,7 @@ SOFTWARE.
     <string name="option_normalize_amplitude">normalizare amplitudine</string>
     <string name="option_normalize_stereo_channels_independently">normalizare canale stereo separat</string>
     <string name="option_clear">curăță</string>
+    <string name="option_invert_colors">inversează culori</string>
+    <string name="option_no_mask">fără mască</string>
+    <string name="option_no_limit">fără limită</string>
 </resources>

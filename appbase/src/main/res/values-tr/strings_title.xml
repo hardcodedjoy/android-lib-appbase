@@ -233,4 +233,10 @@ SOFTWARE.
     <string name="title_video_encoder">Video Kodlayıcı</string>
     <string name="title_color_format">Renk Formatı</string>
     <string name="title_peak_amplitude">Maksimum Genlik</string>
+    <string name="title_mask_image">Maske Resmi</string>
+    <string name="title_import_mask_images">Maske Resimlerini İçe Aktar</string>
+    <string name="title_select_mask_image">Maske Resmini Seçin</string>
+    <string name="title_delete_mask">Maskeyi Sil</string>
+    <string name="title_input_image_size_limit">Giriş Görüntü Boyutu Sınırı</string>
+    <string name="title_mask">Maske</string>
 </resources>

@@ -70,4 +70,5 @@ SOFTWARE.
     <string name="err_billing_unavailable">BILLING UNAVAILABLE</string>
     <string name="err_storage_folder_unavailable">STORAGE FOLDER UNAVAILABLE</string>
     <string name="err_device_has_no_camera">DEVICE HAS NO CAMERA</string>
+    <string name="err_file_is_not_image">FILE IS NOT AN IMAGE</string>
 </resources>

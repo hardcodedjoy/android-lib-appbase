@@ -70,4 +70,5 @@ SOFTWARE.
     <string name="err_billing_unavailable">PŁATNOŚĆ NIEMOŻLIWA</string>
     <string name="err_storage_folder_unavailable">FOLDER PRZECHOWYWANIA NIEDOSTĘPNY</string>
     <string name="err_device_has_no_camera">URZĄDZENIE NIE MA KAMERY</string>
+    <string name="err_file_is_not_image">PLIK NIE JEST OBRAZEM</string>
 </resources>

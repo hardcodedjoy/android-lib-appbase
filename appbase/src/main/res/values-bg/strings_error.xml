@@ -70,4 +70,5 @@ SOFTWARE.
     <string name="err_billing_unavailable">ПЛАЩАНЕТО НЕ Е ВЪЗМОЖНО</string>
     <string name="err_storage_folder_unavailable">ПАПКАТА ЗА СЪХРАНЕНИЕ НЕ Е НАЛИЧНА</string>
     <string name="err_device_has_no_camera">УСТРОЙСТВОТО НЯМА КАМЕРА</string>
+    <string name="err_file_is_not_image">ФАЙЛЪТ НЕ Е ИЗОБРАЖЕНИЕ</string>
 </resources>

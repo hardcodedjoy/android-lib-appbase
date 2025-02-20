@@ -133,4 +133,7 @@ SOFTWARE.
     <string name="option_normalize_amplitude">нормировать амплитуду</string>
     <string name="option_normalize_stereo_channels_independently">нормализовать стереоканалы отдельно</string>
     <string name="option_clear">очистить</string>
+    <string name="option_invert_colors">инвертировать цвета</string>
+    <string name="option_no_mask">без маски</string>
+    <string name="option_no_limit">без ограничения</string>
 </resources>

@@ -233,4 +233,10 @@ SOFTWARE.
     <string name="title_video_encoder">Koder wideo</string>
     <string name="title_color_format">Format koloru</string>
     <string name="title_peak_amplitude">Maksymalna amplituda</string>
+    <string name="title_mask_image">Obraz maski</string>
+    <string name="title_import_mask_images">Importuj obrazy maski</string>
+    <string name="title_select_mask_image">Wybierz obraz maski</string>
+    <string name="title_delete_mask">Usuń maskę</string>
+    <string name="title_input_image_size_limit">Limit rozmiaru obrazu wejściowego</string>
+    <string name="title_mask">Maska</string>
 </resources>

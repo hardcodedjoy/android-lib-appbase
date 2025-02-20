@@ -233,4 +233,10 @@ SOFTWARE.
     <string name="title_video_encoder">Encoder video</string>
     <string name="title_color_format">Format culoare</string>
     <string name="title_peak_amplitude">Amplitudine maximă</string>
+    <string name="title_mask_image">Imagine mască</string>
+    <string name="title_import_mask_images">Import imagini mască</string>
+    <string name="title_select_mask_image">Selectați imagine mască</string>
+    <string name="title_delete_mask">Ștergeți masca</string>
+    <string name="title_input_image_size_limit">Limită dimensiune imagine de intrare</string>
+    <string name="title_mask">Masca</string>
 </resources>

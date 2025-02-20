@@ -70,4 +70,5 @@ SOFTWARE.
     <string name="err_billing_unavailable">PAGAMENTO NON DISPONIBILE</string>
     <string name="err_storage_folder_unavailable">CARTELLA DI ARCHIVIAZIONE NON DISPONIBILE</string>
     <string name="err_device_has_no_camera">IL DISPOSITIVO NON HA FOTOCAMERA</string>
+    <string name="err_file_is_not_image">IL FILE NON È UN\'IMMAGINE</string>
 </resources>

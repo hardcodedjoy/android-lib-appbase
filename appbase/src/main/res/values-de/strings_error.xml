@@ -70,4 +70,5 @@ SOFTWARE.
     <string name="err_billing_unavailable">ZAHLUNG NICHT VERFÜGBAR</string>
     <string name="err_storage_folder_unavailable">SPEICHERORDNER NICHT VERFÜGBAR</string>
     <string name="err_device_has_no_camera">GERÄT HAT KEINE KAMERA</string>
+    <string name="err_file_is_not_image">DATEI IST KEIN BILD</string>
 </resources>

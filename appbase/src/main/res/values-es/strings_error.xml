@@ -70,4 +70,5 @@ SOFTWARE.
     <string name="err_billing_unavailable">PAGO NO DISPONIBLE</string>
     <string name="err_storage_folder_unavailable">CARPETA DE ALMACENAMIENTO NO DISPONIBLE</string>
     <string name="err_device_has_no_camera">EL DISPOSITIVO NO TIENE CÁMARA</string>
+    <string name="err_file_is_not_image">EL ARCHIVO NO ES UNA IMAGEN</string>
 </resources>
