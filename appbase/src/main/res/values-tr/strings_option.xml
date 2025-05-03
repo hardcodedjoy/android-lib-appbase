@@ -136,4 +136,9 @@ SOFTWARE.
     <string name="option_invert_colors">renkleri ters çevir</string>
     <string name="option_no_mask">maske yok</string>
     <string name="option_no_limit">sınırsız</string>
+    <string name="option_open_from_library">ktp.\'den aç</string>
+    <string name="option_join">birleştir</string>
+    <string name="option_mix">karıştır</string>
+    <string name="option_replace">değiştir</string>
+    <string name="option_reverse">ters çevir</string>
 </resources>

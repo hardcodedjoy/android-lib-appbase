@@ -569,6 +569,8 @@ public class FileUtil {
                 OutputStream os = activity.getContentResolver().openOutputStream(destFileUri);
                 if(os == null) { throw new Exception("os == null"); }
                 StreamIO.copyStream(is, os);
+                is.close();
+                os.close();
             } catch (Exception e) {
                 onError.handle(e.toString());
                 return;
@@ -601,5 +603,17 @@ public class FileUtil {
                 destFiles.add(file);
             }
         }
+    }
+
+    static public long getFileSizeInBytes(Uri uri) {
+        if("file".equalsIgnoreCase(uri.getScheme())) {
+            return new File(uri.getPath()).length();
+        }
+        // else:
+        DocumentFile documentFile = DocumentFile.fromSingleUri(getActivity(), uri);
+        if(documentFile != null) { return documentFile.length(); }
+
+        // else:
+        return 0;
     }
 }

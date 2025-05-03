@@ -136,4 +136,9 @@ SOFTWARE.
     <string name="option_invert_colors">inverser les couleurs</string>
     <string name="option_no_mask">pas de masque</string>
     <string name="option_no_limit">pas de limite</string>
+    <string name="option_open_from_library">ouvrir depuis la bibl.</string>
+    <string name="option_join">joindre</string>
+    <string name="option_mix">mixer</string>
+    <string name="option_replace">remplacer</string>
+    <string name="option_reverse">inverser</string>
 </resources>

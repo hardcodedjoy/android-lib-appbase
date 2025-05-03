@@ -101,7 +101,7 @@ public class Option {
     public void setIconTintColor(int color) { this.iconTintColor = color; }
     public int getIconTintColor() { return iconTintColor; }
 
-    public void setSelected() { this.selected = true; }
+    public void setSelected(boolean selected) { this.selected = selected; }
     public boolean isSelected() { return selected; }
 
     public void applyIconTo(ImageView ivIcon) {

@@ -131,4 +131,8 @@ abstract public class PopupAsk extends Popup {
                 getString(positiveStringId), getString(negativeStringId));
     }
 
+    public Button getBtnPositive() { return btnPositive; }
+    public Button getBtnNegative() { return btnNegative; }
+    public ImageButton getBtnOK() { return btnOK; }
+    public ImageButton getBtnCancel() { return btnCancel; }
 }

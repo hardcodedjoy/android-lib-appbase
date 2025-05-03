@@ -136,4 +136,9 @@ SOFTWARE.
     <string name="option_invert_colors">инвертиране на цветовете</string>
     <string name="option_no_mask">без маска</string>
     <string name="option_no_limit">без ограничение</string>
+    <string name="option_open_from_library">отвори от библ.</string>
+    <string name="option_join">присъедини</string>
+    <string name="option_mix">миксирай</string>
+    <string name="option_replace">замени</string>
+    <string name="option_reverse">обърнете</string>
 </resources>

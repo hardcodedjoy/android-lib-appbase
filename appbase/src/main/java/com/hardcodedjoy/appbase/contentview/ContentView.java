@@ -274,23 +274,39 @@ public class ContentView extends LinearLayout {
         popupAsk.show();
     }
 
-    static public void showPopupFreeVersionLimitation(String message, Runnable onMoreDetails) {
+    static public void showPopupFreeVersionLimitation(String message,
+                                                      Runnable onAccept,
+                                                      Runnable onMoreDetails) {
         String title = ContentView.getString(R.string.title_free_version);
         String positive = ContentView.getString(R.string.btn_more_details);
         String negative = ContentView.getString(R.string.btn_ok);
         PopupAsk popupAsk = new PopupAsk(title, message, positive, negative) {
             @Override
-            public void onOK() {
-                if(onMoreDetails != null) { onMoreDetails.run(); }
-            }
+            public void onOK() { if(onMoreDetails != null) { onMoreDetails.run(); } }
         };
+
+        if(onAccept != null) {
+            popupAsk.getBtnNegative().setOnClickListener(view -> {
+                removePopUp(popupAsk);
+                onAccept.run();
+            });
+        }
+
         popupAsk.enableDismissByOutsideClick();
         popupAsk.show();
     }
 
-    static public void showPopupFreeVersionLimitation(int messageStringId, Runnable onMoreDetails) {
+    static public void showPopupFreeVersionLimitation(int messageStringId,
+                                                      Runnable onMoreDetails) {
         String message = getString(messageStringId);
-        showPopupFreeVersionLimitation(message, onMoreDetails);
+        showPopupFreeVersionLimitation(message, null, onMoreDetails);
+    }
+
+    static public void showPopupFreeVersionLimitation(int messageStringId,
+                                                      Runnable onAccept,
+                                                      Runnable onMoreDetails) {
+        String message = getString(messageStringId);
+        showPopupFreeVersionLimitation(message, onAccept, onMoreDetails);
     }
 
     static public void goFullscreen(boolean fullscreen) {

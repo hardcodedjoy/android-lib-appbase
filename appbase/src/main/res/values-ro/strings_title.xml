@@ -239,4 +239,8 @@ SOFTWARE.
     <string name="title_delete_mask">Ștergeți masca</string>
     <string name="title_input_image_size_limit">Limită dimensiune imagine de intrare</string>
     <string name="title_mask">Masca</string>
+    <string name="title_speed">Viteza</string>
+    <string name="title_repeat">Repetă</string>
+    <string name="title_how_many_times">De câte ori</string>
+    <string name="title_boomerang">Bumerang</string>
 </resources>

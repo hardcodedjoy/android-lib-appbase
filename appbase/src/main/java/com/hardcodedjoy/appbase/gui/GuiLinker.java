@@ -192,7 +192,20 @@ public class GuiLinker {
                                         String[] optionsKeys,
                                         String[] optionsValues,
                                         SetGetter setGetter) {
-        linkDropDownList(llDropDown, title, optionsKeys, new String[]{}, optionsValues, setGetter);
+        linkDropDownList(llDropDown, title, optionsKeys, new String[]{}, optionsValues,
+                setGetter, null, null, false);
+    }
+
+    static public void linkDropDownList(LinearLayout llDropDown,
+                                        String title,
+                                        String[] optionsKeys,
+                                        String[] optionsValues,
+                                        SetGetter setGetter,
+                                        View btnRefresh,
+                                        View.OnClickListener refreshOcl,
+                                        boolean dismissBeforeRefresh) {
+        linkDropDownList(llDropDown, title, optionsKeys, new String[]{}, optionsValues,
+                setGetter, btnRefresh, refreshOcl, dismissBeforeRefresh);
     }
 
     static public void linkDropDownList(LinearLayout llDropDown,
@@ -201,6 +214,19 @@ public class GuiLinker {
                                         String[] optionsKeysDisabled,
                                         String[] optionsValues,
                                         SetGetter setGetter) {
+        linkDropDownList(llDropDown, title, optionsKeys, optionsKeysDisabled, optionsValues,
+                setGetter, null, null, false);
+    }
+
+    static public void linkDropDownList(LinearLayout llDropDown,
+                                        String title,
+                                        String[] optionsKeys,
+                                        String[] optionsKeysDisabled,
+                                        String[] optionsValues,
+                                        SetGetter setGetter,
+                                        View btnRefresh,
+                                        View.OnClickListener refreshOcl,
+                                        boolean dismissBeforeRefresh) {
 
         EditText et = llDropDown.findViewById(R.id.appbase_et_drop_down);
         ImageButton btn = llDropDown.findViewById(R.id.appbase_btn_drop_down_expand);
@@ -211,7 +237,7 @@ public class GuiLinker {
         if(value != null) { et.setText(value); }
 
         View.OnClickListener ocl = view -> {
-            Vector<Option> op = new Vector<>();
+            Vector<Option> ops = new Vector<>();
 
             for(int i=0; i<optionsKeys.length; i++) {
                 final int index = i;
@@ -219,7 +245,7 @@ public class GuiLinker {
                     et.setText(optionsValues[index]);
                     setGetter.set(optionsKeys[index]);
                 });
-                if(optionsKeys[i].equals(setGetter.get())) { option.setSelected(); }
+                option.setSelected( optionsKeys[i].equals(setGetter.get()) );
                 for(String keyDisabled : optionsKeysDisabled) {
                     if(optionsKeys[i].equals(keyDisabled)) {
                         option.setDrawAsDisabled(true);
@@ -229,10 +255,10 @@ public class GuiLinker {
                         option.setExecutor(() -> setGetter.set(optionsKeys[index]));
                     }
                 }
-                op.add(option);
+                ops.add(option);
             }
 
-            showPopupChoose(title, op);
+            showPopupChoose(title, ops, btnRefresh, refreshOcl, dismissBeforeRefresh);
         };
 
         et.setFocusable(false);
@@ -241,7 +267,33 @@ public class GuiLinker {
         btn.setOnClickListener(ocl);
     }
 
+    @SuppressLint("ClickableViewAccessibility")
+    static private void showPopupChoose(String title,
+                                        Vector<Option> ops,
+                                        View btnRefresh,
+                                        View.OnClickListener refreshOcl,
+                                        boolean dismissBeforeRefresh) {
 
+        PopupChoose popupChoose = new PopupChoose(title, null, ops);
+        popupChoose.enableDismissByOutsideClick();
+
+        // API 21 text color fix:
+        int textColor = ThemeUtil.getColor(ContentView.getActivity(),
+                android.R.attr.colorForeground);
+        setTextColorToAllTextsAndButtons(popupChoose, textColor);
+
+        GuiUtil.replaceView(popupChoose.findViewById(
+                com.hardcodedjoy.appbase.R.id.appbase_btn_refresh), btnRefresh);
+
+        if(btnRefresh != null) {
+            btnRefresh.setOnClickListener(view -> {
+                if(dismissBeforeRefresh) { ContentView.removePopUp(popupChoose); }
+                if(refreshOcl != null) { refreshOcl.onClick(view); }
+            });
+        }
+
+        popupChoose.show();
+    }
 
     static public void linkColorField(LinearLayout llColor,
                                       String colorPickerTitle,
@@ -361,17 +413,5 @@ public class GuiLinker {
                 return false;
             });
         });
-    }
-
-    static private void showPopupChoose(String title, Vector<Option> op) {
-        PopupChoose popupChoose = new PopupChoose(title, null, op);
-        popupChoose.enableDismissByOutsideClick();
-
-        // API 21 text color fix:
-        int textColor = ThemeUtil.getColor(ContentView.getActivity(),
-                android.R.attr.colorForeground);
-        setTextColorToAllTextsAndButtons(popupChoose, textColor);
-
-        popupChoose.show();
     }
 }

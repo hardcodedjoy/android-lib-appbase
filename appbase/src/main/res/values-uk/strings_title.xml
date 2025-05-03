@@ -239,4 +239,8 @@ SOFTWARE.
     <string name="title_delete_mask">Видалити маску</string>
     <string name="title_input_image_size_limit">Обмеження розміру вхідного зображення</string>
     <string name="title_mask">Маска</string>
+    <string name="title_speed">Швидкість</string>
+    <string name="title_repeat">Повторіть</string>
+    <string name="title_how_many_times">Скільки раз</string>
+    <string name="title_boomerang">Бумеранг</string>
 </resources>

@@ -64,4 +64,6 @@ SOFTWARE.
     <string name="note">Not:</string>
     <string name="notes">Notlar:</string>
     <string name="no_signal">Sinyal yok.</string>
+    <string name="audio_lib_no_items_available_you_can_save">Kullanılabilir öğe yok. Ses parçalarını kütüphaneye kaydedebilir ve burada görünürler.</string>
+    <string name="video_lib_no_items_available_you_can_save">Kullanılabilir öğe yok. Video klipleri kütüphaneye kaydedebilir ve burada görünürler.</string>
 </resources>

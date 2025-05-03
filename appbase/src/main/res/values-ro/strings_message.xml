@@ -64,4 +64,6 @@ SOFTWARE.
     <string name="note">Notă:</string>
     <string name="notes">Note:</string>
     <string name="no_signal">Fără semnal.</string>
+    <string name="audio_lib_no_items_available_you_can_save">Nu există elemente disponibile. Puteți salva fragmente audio în bibliotecă și vor apărea aici.</string>
+    <string name="video_lib_no_items_available_you_can_save">Nu există elemente disponibile. Puteți salva clipuri video în bibliotecă și vor apărea aici.</string>
 </resources>

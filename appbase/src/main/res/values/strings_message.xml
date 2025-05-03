@@ -64,4 +64,6 @@ SOFTWARE.
     <string name="note">Note:</string>
     <string name="notes">Notes:</string>
     <string name="no_signal">No signal.</string>
+    <string name="audio_lib_no_items_available_you_can_save">No items available. You can save audio fragments to the library and they will appear here.</string>
+    <string name="video_lib_no_items_available_you_can_save">No items available. You can save video clips to the library and they will appear here.</string>
 </resources>

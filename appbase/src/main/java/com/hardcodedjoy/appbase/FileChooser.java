@@ -42,6 +42,9 @@ public class FileChooser {
     private final Activity activity;
 
     static private final String EXTRA_INITIAL_URI = "android.provider.extra.INITIAL_URI";
+    static public final String URI_STRING_DOWNLOAD_DIR =
+            "content://com.android.externalstorage.documents/document/primary:Download";
+
     private Uri initialUri;
 
     public FileChooser(Activity activity) { this.activity = activity; }

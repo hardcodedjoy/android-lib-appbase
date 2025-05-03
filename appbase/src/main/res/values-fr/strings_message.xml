@@ -64,4 +64,6 @@ SOFTWARE.
     <string name="note">Remarque:</string>
     <string name="notes">Remarques:</string>
     <string name="no_signal">Aucun signal.</string>
+    <string name="audio_lib_no_items_available_you_can_save">Aucun élément disponible. Vous pouvez sauvegarder des fragments audio dans la bibliothèque et ils apparaîtront ici.</string>
+    <string name="video_lib_no_items_available_you_can_save">Aucun élément disponible. Vous pouvez sauvegarder des clips vidéo dans la bibliothèque et ils apparaîtront ici.</string>
 </resources>

@@ -64,4 +64,6 @@ SOFTWARE.
     <string name="note">Примечание:</string>
     <string name="notes">Примечания:</string>
     <string name="no_signal">Нет сигнала.</string>
+    <string name="audio_lib_no_items_available_you_can_save">Нет доступных элементов. Вы можете сохранить аудиофрагменты в библиотеке, и они появятся здесь.</string>
+    <string name="video_lib_no_items_available_you_can_save">Нет доступных элементов. Вы можете сохранить видеоклипы в библиотеке, и они появятся здесь.</string>
 </resources>

@@ -239,4 +239,8 @@ SOFTWARE.
     <string name="title_delete_mask">Maskeyi Sil</string>
     <string name="title_input_image_size_limit">Giriş Görüntü Boyutu Sınırı</string>
     <string name="title_mask">Maske</string>
+    <string name="title_speed">Hız</string>
+    <string name="title_repeat">Tekrarla</string>
+    <string name="title_how_many_times">Kaç defa</string>
+    <string name="title_boomerang">Bumerang</string>
 </resources>

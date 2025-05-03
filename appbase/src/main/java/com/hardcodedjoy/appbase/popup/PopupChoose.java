@@ -194,7 +194,7 @@ public class PopupChoose extends Popup {
 
         if(view.getParent().getParent() == llOptions) { // option clicked
             int i = view.getId();
-            ContentView.removePopUp(PopupChoose.this); // dismiss
+            ContentView.removePopUp(this); // dismiss
             options.elementAt(i).run();
             onAfterOptionExecuted();
             return;
@@ -202,12 +202,12 @@ public class PopupChoose extends Popup {
 
         int id = view.getId();
         if(id == R.id.appbase_btn_add) {
-            ContentView.removePopUp(PopupChoose.this); // dismiss
+            ContentView.removePopUp(this); // dismiss
             onOther();
         } else if(id == R.id.appbase_btn_refresh) {
             onRefresh();
         } else if(id == R.id.appbase_ll_outside_popup) {
-            ContentView.removePopUp(PopupChoose.this); // dismiss
+            ContentView.removePopUp(this); // dismiss
             onCancel();
         }
     }

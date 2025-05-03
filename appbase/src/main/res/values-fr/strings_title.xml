@@ -239,4 +239,8 @@ SOFTWARE.
     <string name="title_delete_mask">Supprimer le masque</string>
     <string name="title_input_image_size_limit">Limite de taille de l\'image d\'entrée</string>
     <string name="title_mask">Masque</string>
+    <string name="title_speed">Vitesse</string>
+    <string name="title_repeat">Répéter</string>
+    <string name="title_how_many_times">Combien de fois</string>
+    <string name="title_boomerang">Boomérang</string>
 </resources>
