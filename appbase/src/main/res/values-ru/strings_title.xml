@@ -243,4 +243,9 @@ SOFTWARE.
     <string name="title_repeat">Повтор</string>
     <string name="title_how_many_times">Сколько раз</string>
     <string name="title_boomerang">Бумеранг</string>
+    <string name="title_weekly_subscription">Еженедельная подписка</string>
+    <string name="title_monthly_subscription">Ежемесячная подписка</string>
+    <string name="title_annual_subscription">Годовая подписка</string>
+    <string name="title_lifetime_otp">Пожизненная (единовременная оплата)</string>
+    <string name="title_google_play_subs_center">Центр подписок Google Play</string>
 </resources>

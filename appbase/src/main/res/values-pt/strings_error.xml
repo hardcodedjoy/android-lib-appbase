@@ -71,4 +71,5 @@ SOFTWARE.
     <string name="err_storage_folder_unavailable">PASTA DE ARMAZENAMENTO INDISPONÍVEL</string>
     <string name="err_device_has_no_camera">O DISPOSITIVO NÃO TEM CÂMERA</string>
     <string name="err_file_is_not_image">ARQUIVO NÃO É UMA IMAGEM</string>
+    <string name="err_no_file_selected">NENHUM ARQUIVO SELECIONADO</string>
 </resources>

@@ -66,4 +66,5 @@ SOFTWARE.
     <string name="no_signal">Няма сигнал.</string>
     <string name="audio_lib_no_items_available_you_can_save">Няма налични елементи. Можете да запазвате аудио фрагменти в библиотеката и те ще се показват тук.</string>
     <string name="video_lib_no_items_available_you_can_save">Няма налични елементи. Можете да запазвате видеоклипове в библиотеката и те ще се показват тук.</string>
+    <string name="subs_automatically_renew">Абонаментите се подновяват автоматично до анулиране най-малко 24 часа преди края на текущия период. Ако трябва да анулирате, моля, посетете GPSC и изключете ръчно автоматичното подновяване.</string>
 </resources>

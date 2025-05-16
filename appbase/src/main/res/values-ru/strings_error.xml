@@ -71,4 +71,5 @@ SOFTWARE.
     <string name="err_storage_folder_unavailable">ПАПКА ДЛЯ ХРАНЕНИЯ НЕДОСТУПНА</string>
     <string name="err_device_has_no_camera">УСТРОЙСТВО НЕ ИМЕЕТ КАМЕРЫ</string>
     <string name="err_file_is_not_image">ФАЙЛ НЕ ЯВЛЯЕТСЯ ИЗОБРАЖЕНИЕМ</string>
+    <string name="err_no_file_selected">НЕ ВЫБРАН ФАЙЛ</string>
 </resources>

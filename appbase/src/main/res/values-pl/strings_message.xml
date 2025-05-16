@@ -66,4 +66,5 @@ SOFTWARE.
     <string name="no_signal">Brak sygnału.</string>
     <string name="audio_lib_no_items_available_you_can_save">Brak dostępnych elementów. Możesz zapisać fragmenty audio do biblioteki, a one pojawią się tutaj.</string>
     <string name="video_lib_no_items_available_you_can_save">Brak dostępnych elementów. Możesz zapisać klipy wideo do biblioteki, a one pojawią się tutaj.</string>
+    <string name="subs_automatically_renew">Subskrypcje odnawiają się automatycznie do momentu anulowania co najmniej 24 godziny przed końcem bieżącego okresu. Jeśli musisz anulować, odwiedź GPSC i ręcznie wyłącz automatyczne odnawianie.</string>
 </resources>

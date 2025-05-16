@@ -243,4 +243,9 @@ SOFTWARE.
     <string name="title_repeat">Repetă</string>
     <string name="title_how_many_times">De câte ori</string>
     <string name="title_boomerang">Bumerang</string>
+    <string name="title_weekly_subscription">Abonament săptămânal</string>
+    <string name="title_monthly_subscription">Abonament lunar</string>
+    <string name="title_annual_subscription">Abonament anual</string>
+    <string name="title_lifetime_otp">Pe viață (plata o singură dată)</string>
+    <string name="title_google_play_subs_center">Centrul de abonamente Google Play</string>
 </resources>

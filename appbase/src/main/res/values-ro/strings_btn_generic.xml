@@ -77,4 +77,7 @@ SOFTWARE.
     <string name="btn_advanced">Avansat</string>
     <string name="btn_more_details">Mai multe detalii</string>
     <string name="btn_discard">Renunță</string>
+    <string name="btn_get_image">Obține imaginea</string>
+    <string name="btn_share_the_image">Partajează imaginea</string>
+    <string name="btn_continue">Continuă</string>
 </resources>

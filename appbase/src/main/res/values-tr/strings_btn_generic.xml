@@ -77,4 +77,7 @@ SOFTWARE.
     <string name="btn_advanced">Gelişmiş</string>
     <string name="btn_more_details">Daha fazla detay</string>
     <string name="btn_discard">At</string>
+    <string name="btn_get_image">Resmi al</string>
+    <string name="btn_share_the_image">Resmi paylaş</string>
+    <string name="btn_continue">Devam et</string>
 </resources>

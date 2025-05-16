@@ -78,4 +78,7 @@ SOFTWARE.
     <string name="btn_advanced">Erweitert</string>
     <string name="btn_more_details">Mehr Details</string>
     <string name="btn_discard">Verwerfen</string>
+    <string name="btn_get_image">Bild abrufen</string>
+    <string name="btn_share_the_image">Das Bild teilen</string>
+    <string name="btn_continue">Weitermachen</string>
 </resources>

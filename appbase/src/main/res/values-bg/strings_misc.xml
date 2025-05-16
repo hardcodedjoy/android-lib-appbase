@@ -51,4 +51,9 @@ SOFTWARE.
     <string name="fullscreen">на цял екран</string>
     <string name="start_in_fullscreen">стартиране на цял екран</string>
     <string name="normal_not_fullscreen">Обичайно</string>
+    <string name="you_have_the_premium_version">Вие имате Премиум версията.</string>
+    <string name="you_are_subscribed_to_the_premium_version">Вие сте абонирани за Премиум версията.</string>
+    <string name="you_have_the_following_advantages">Имате следните предимства:</string>
+    <string name="your_subscription_will_renew_on_x">Вашият абонамент ще бъде подновен на [x].</string>
+    <string name="your_subscription_will_end_on_x">Вашият абонамент ще приключи на [x].</string>
 </resources>

@@ -51,4 +51,9 @@ SOFTWARE.
     <string name="fullscreen">Tela cheia</string>
     <string name="start_in_fullscreen">iniciar em tela cheia</string>
     <string name="normal_not_fullscreen">Normal</string>
+    <string name="you_have_the_premium_version">Você tem a versão Premium.</string>
+    <string name="you_are_subscribed_to_the_premium_version">Você está inscrito na versão Premium.</string>
+    <string name="you_have_the_following_advantages">Você tem as seguintes vantagens:</string>
+    <string name="your_subscription_will_renew_on_x">Sua assinatura será renovada em [x].</string>
+    <string name="your_subscription_will_end_on_x">Sua assinatura terminará em [x].</string>
 </resources>

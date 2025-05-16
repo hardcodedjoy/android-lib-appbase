@@ -77,4 +77,7 @@ SOFTWARE.
     <string name="btn_advanced">Розширене</string>
     <string name="btn_more_details">Детальніше</string>
     <string name="btn_discard">Відкинути</string>
+    <string name="btn_get_image">Отримати зображення</string>
+    <string name="btn_share_the_image">Поділіться зображенням</string>
+    <string name="btn_continue">Продовжити</string>
 </resources>

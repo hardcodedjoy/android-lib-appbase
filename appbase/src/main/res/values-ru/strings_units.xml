@@ -44,4 +44,7 @@ SOFTWARE.
     <string name="unit_x">x</string>
     <string name="unit_samples">образцы</string>
     <string name="unit_pixels">пиксели</string>
+    <string name="unit_week">неделя</string>
+    <string name="unit_month">месяц</string>
+    <string name="unit_year">год</string>
 </resources>

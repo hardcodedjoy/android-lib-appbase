@@ -44,4 +44,7 @@ SOFTWARE.
     <string name="unit_x">x</string>
     <string name="unit_samples">échantillons</string>
     <string name="unit_pixels">pixels</string>
+    <string name="unit_week">semaine</string>
+    <string name="unit_month">mois</string>
+    <string name="unit_year">année</string>
 </resources>

@@ -66,4 +66,5 @@ SOFTWARE.
     <string name="no_signal">Sin señal.</string>
     <string name="audio_lib_no_items_available_you_can_save">No hay elementos disponibles. Puedes guardar fragmentos de audio en la biblioteca y aparecerán aquí.</string>
     <string name="video_lib_no_items_available_you_can_save">No hay elementos disponibles. Puedes guardar videoclips en la biblioteca y aparecerán aquí.</string>
+    <string name="subs_automatically_renew">Las suscripciones se renuevan automáticamente hasta que se cancelen al menos 24 horas antes del final del periodo actual. Si necesita cancelar, visite GPSC y desactive manualmente la renovación automática.</string>
 </resources>

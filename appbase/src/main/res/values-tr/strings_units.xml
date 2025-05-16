@@ -44,4 +44,7 @@ SOFTWARE.
     <string name="unit_x">x</string>
     <string name="unit_samples">örnekler</string>
     <string name="unit_pixels">pikseller</string>
+    <string name="unit_week">hafta</string>
+    <string name="unit_month">ay</string>
+    <string name="unit_year">yıl</string>
 </resources>

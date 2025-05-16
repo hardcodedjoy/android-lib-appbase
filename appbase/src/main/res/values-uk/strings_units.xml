@@ -44,4 +44,7 @@ SOFTWARE.
     <string name="unit_x">x</string>
     <string name="unit_samples">проб</string>
     <string name="unit_pixels">пікселів</string>
+    <string name="unit_week">тиждень</string>
+    <string name="unit_month">місяць</string>
+    <string name="unit_year">рік</string>
 </resources>

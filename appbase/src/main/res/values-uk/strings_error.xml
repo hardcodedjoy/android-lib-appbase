@@ -71,4 +71,5 @@ SOFTWARE.
     <string name="err_storage_folder_unavailable">ПАПКА ЗБЕРІГЛЕННЯ НЕДОСТУПНА</string>
     <string name="err_device_has_no_camera">ПРИСТРІЙ НЕМАЄ КАМЕРИ</string>
     <string name="err_file_is_not_image">ФАЙЛ НЕ Є ЗОБРАЖЕННЯМ</string>
+    <string name="err_no_file_selected">НЕ ВИБРАНО ЖОДНОГО ФАЙЛУ</string>
 </resources>

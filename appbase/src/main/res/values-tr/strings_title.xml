@@ -243,4 +243,9 @@ SOFTWARE.
     <string name="title_repeat">Tekrarla</string>
     <string name="title_how_many_times">Kaç defa</string>
     <string name="title_boomerang">Bumerang</string>
+    <string name="title_weekly_subscription">Haftalık abonelik</string>
+    <string name="title_monthly_subscription">Aylık abonelik</string>
+    <string name="title_annual_subscription">Yıllık abonelik</string>
+    <string name="title_lifetime_otp">Ömür boyu (bir defalık ödeme)</string>
+    <string name="title_google_play_subs_center">Google Play abonelik merkezi</string>
 </resources>

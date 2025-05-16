@@ -243,4 +243,9 @@ SOFTWARE.
     <string name="title_repeat">Répéter</string>
     <string name="title_how_many_times">Combien de fois</string>
     <string name="title_boomerang">Boomérang</string>
+    <string name="title_weekly_subscription">Abonnement hebdomadaire</string>
+    <string name="title_monthly_subscription">Abonnement mensuel</string>
+    <string name="title_annual_subscription">Abonnement annuel</string>
+    <string name="title_lifetime_otp">À vie (paiement unique)</string>
+    <string name="title_google_play_subs_center">Centre d\'abonnements Google Play</string>
 </resources>

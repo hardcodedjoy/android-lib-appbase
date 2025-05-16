@@ -243,4 +243,9 @@ SOFTWARE.
     <string name="title_repeat">Повторете</string>
     <string name="title_how_many_times">Колко пъти</string>
     <string name="title_boomerang">Бумеранг</string>
+    <string name="title_weekly_subscription">Седмичен абонамент</string>
+    <string name="title_monthly_subscription">Месечен абонамент</string>
+    <string name="title_annual_subscription">Годишен абонамент</string>
+    <string name="title_lifetime_otp">Доживотен (еднократно плащане)</string>
+    <string name="title_google_play_subs_center">Център за абонаменти на Google Play</string>
 </resources>

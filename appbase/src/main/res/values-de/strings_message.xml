@@ -66,4 +66,5 @@ SOFTWARE.
     <string name="no_signal">Kein Signal.</string>
     <string name="audio_lib_no_items_available_you_can_save">Keine Elemente verfügbar. Sie können Audiofragmente in der Bibliothek speichern und sie werden hier angezeigt.</string>
     <string name="video_lib_no_items_available_you_can_save">Keine Elemente verfügbar. Sie können Videoclips in der Bibliothek speichern und sie werden hier angezeigt.</string>
+    <string name="subs_automatically_renew">Abonnements verlängern sich automatisch, bis sie mindestens 24 Stunden vor Ablauf des aktuellen Zeitraums gekündigt werden. Wenn Sie kündigen müssen, besuchen Sie bitte GPSC und deaktivieren Sie die automatische Verlängerung manuell.</string>
 </resources>

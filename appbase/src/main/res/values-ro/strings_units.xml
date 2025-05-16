@@ -44,4 +44,7 @@ SOFTWARE.
     <string name="unit_x">x</string>
     <string name="unit_samples">eșantioane</string>
     <string name="unit_pixels">px</string>
+    <string name="unit_week">săptămână</string>
+    <string name="unit_month">lună</string>
+    <string name="unit_year">an</string>
 </resources>

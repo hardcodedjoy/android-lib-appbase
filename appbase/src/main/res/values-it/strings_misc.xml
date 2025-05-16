@@ -51,4 +51,9 @@ SOFTWARE.
     <string name="fullscreen">Schermo intero</string>
     <string name="start_in_fullscreen">inizia a schermo intero</string>
     <string name="normal_not_fullscreen">Normale</string>
+    <string name="you_have_the_premium_version">Hai la versione Premium.</string>
+    <string name="you_are_subscribed_to_the_premium_version">Sei abbonato alla versione Premium.</string>
+    <string name="you_have_the_following_advantages">Hai i seguenti vantaggi:</string>
+    <string name="your_subscription_will_renew_on_x">Il tuo abbonamento verrà rinnovato il [x].</string>
+    <string name="your_subscription_will_end_on_x">Il tuo abbonamento terminerà il [x].</string>
 </resources>

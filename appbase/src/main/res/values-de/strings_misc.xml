@@ -51,4 +51,9 @@ SOFTWARE.
     <string name="fullscreen">Vollbild</string>
     <string name="start_in_fullscreen">im Vollbildmodus starten</string>
     <string name="normal_not_fullscreen">Normal</string>
+    <string name="you_have_the_premium_version">Sie haben die Premium-Version.</string>
+    <string name="you_are_subscribed_to_the_premium_version">Sie haben die Premium-Version abonniert.</string>
+    <string name="you_have_the_following_advantages">Sie haben folgende Vorteile:</string>
+    <string name="your_subscription_will_renew_on_x">Ihr Abonnement wird am [x] erneuert.</string>
+    <string name="your_subscription_will_end_on_x">Ihr Abonnement endet am [x].</string>
 </resources>
