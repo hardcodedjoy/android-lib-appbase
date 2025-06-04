@@ -141,4 +141,7 @@ SOFTWARE.
     <string name="option_mix">karıştır</string>
     <string name="option_replace">değiştir</string>
     <string name="option_reverse">ters çevir</string>
+    <string name="option_clockwise">saat yönünde</string>
+    <string name="option_counterclockwise">saat yönünün tersine</string>
+    <string name="option_flip">çevir</string>
 </resources>

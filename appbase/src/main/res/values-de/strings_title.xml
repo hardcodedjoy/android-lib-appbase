@@ -248,4 +248,8 @@ SOFTWARE.
     <string name="title_annual_subscription">Jährliches Abonnement</string>
     <string name="title_lifetime_otp">Lebenslang (einmalige Zahlung)</string>
     <string name="title_google_play_subs_center">Google Play-Abonnementcenter</string>
+    <string name="title_file_info">Dateiinfo</string>
+    <string name="title_rotation">Rotation</string>
+    <string name="title_track_count">Trackanzahl</string>
+    <string name="title_start_position">Startposition</string>
 </resources>

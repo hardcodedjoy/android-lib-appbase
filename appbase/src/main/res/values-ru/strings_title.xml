@@ -248,4 +248,8 @@ SOFTWARE.
     <string name="title_annual_subscription">Годовая подписка</string>
     <string name="title_lifetime_otp">Пожизненная (единовременная оплата)</string>
     <string name="title_google_play_subs_center">Центр подписок Google Play</string>
+    <string name="title_file_info">Информация о файле</string>
+    <string name="title_rotation">Вращение</string>
+    <string name="title_track_count">Количество треков</string>
+    <string name="title_start_position">Исходное положение</string>
 </resources>

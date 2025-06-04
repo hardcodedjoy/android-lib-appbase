@@ -248,4 +248,8 @@ SOFTWARE.
     <string name="title_annual_subscription">Suscripción anual</string>
     <string name="title_lifetime_otp">De por vida (pago único)</string>
     <string name="title_google_play_subs_center">Centro de suscripciones de Google Play</string>
+    <string name="title_file_info">Info del archivo</string>
+    <string name="title_rotation">Rotación</string>
+    <string name="title_track_count">Recuento de pistas</string>
+    <string name="title_start_position">Posición inicial</string>
 </resources>

@@ -157,6 +157,49 @@ public class FileUtil {
         return baos.toByteArray();
     }
 
+    static public byte[] getAssetContent(String filename) {
+
+        InputStream is;
+
+        try {
+            is = activity.getAssets().open(filename);
+        } catch (Exception e) {
+            e.printStackTrace(System.err);
+            return new byte[0];
+        }
+
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        byte[] block = new byte[1024];
+        int bytesRead;
+        try {
+            while((bytesRead = is.read(block)) != -1) {
+                baos.write(block, 0, bytesRead);
+            }
+            is.close();
+        } catch (Exception e) {
+            e.printStackTrace(System.err);
+            return new byte[0];
+        }
+
+        return baos.toByteArray();
+    }
+
+    static public String getAssetContentAsString(String filename) {
+
+        // NOTE: intended for small files
+        // this will get the InputStream
+        // and read the entire stream to baos (to RAM)
+
+        byte[] ba = getAssetContent(filename);
+        try {
+            //noinspection CharsetObjectCanBeUsed
+            return new String(ba, "UTF-8");
+        } catch (Exception e) {
+            e.printStackTrace(System.err);
+            return "";
+        }
+    }
+
     static public String getFileContentAsString(Uri uri) {
 
         // NOTE: intended for small files

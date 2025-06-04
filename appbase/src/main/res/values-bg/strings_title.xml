@@ -248,4 +248,8 @@ SOFTWARE.
     <string name="title_annual_subscription">Годишен абонамент</string>
     <string name="title_lifetime_otp">Доживотен (еднократно плащане)</string>
     <string name="title_google_play_subs_center">Център за абонаменти на Google Play</string>
+    <string name="title_file_info">Инфо за файла</string>
+    <string name="title_rotation">Ротация</string>
+    <string name="title_track_count">Броят на пистите</string>
+    <string name="title_start_position">Стартова позиция</string>
 </resources>

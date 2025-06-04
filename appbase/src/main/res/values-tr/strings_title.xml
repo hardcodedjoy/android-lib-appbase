@@ -248,4 +248,8 @@ SOFTWARE.
     <string name="title_annual_subscription">Yıllık abonelik</string>
     <string name="title_lifetime_otp">Ömür boyu (bir defalık ödeme)</string>
     <string name="title_google_play_subs_center">Google Play abonelik merkezi</string>
+    <string name="title_file_info">Dosya bilgisi</string>
+    <string name="title_rotation">Rotasyon</string>
+    <string name="title_track_count">Parça sayısı</string>
+    <string name="title_start_position">Başlangıç ​​pozisyonu</string>
 </resources>

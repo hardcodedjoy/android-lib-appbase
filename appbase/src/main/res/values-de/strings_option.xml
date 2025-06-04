@@ -141,4 +141,7 @@ SOFTWARE.
     <string name="option_mix">mischen</string>
     <string name="option_replace">ersetzen</string>
     <string name="option_reverse">umkehren</string>
+    <string name="option_clockwise">im Uhrzeigersinn</string>
+    <string name="option_counterclockwise">gegen den Uhrzeigersinn</string>
+    <string name="option_flip">spiegeln</string>
 </resources>

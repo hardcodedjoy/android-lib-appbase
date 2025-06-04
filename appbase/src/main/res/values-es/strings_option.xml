@@ -141,4 +141,7 @@ SOFTWARE.
     <string name="option_mix">mezclar</string>
     <string name="option_replace">reemplazar</string>
     <string name="option_reverse">invertir</string>
+    <string name="option_clockwise">dextrorso</string>
+    <string name="option_counterclockwise">sinistrórsum</string>
+    <string name="option_flip">voltear</string>
 </resources>
