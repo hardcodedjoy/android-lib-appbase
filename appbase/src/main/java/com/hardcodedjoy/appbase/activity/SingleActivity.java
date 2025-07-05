@@ -34,6 +34,11 @@ import android.view.ViewParent;
 import android.view.Window;
 import android.widget.FrameLayout;
 
+import androidx.annotation.NonNull;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
 import com.hardcodedjoy.appbase.FileUtil;
 import com.hardcodedjoy.appbase.IntentUtil;
 import com.hardcodedjoy.appbase.SoftKeyboardUtil;
@@ -107,7 +112,6 @@ public class SingleActivity extends Activity {
                 cv = (ContentView)cvInitialClass.newInstance();
             } catch (Exception e) {
                 e.printStackTrace(System.err);
-                cv = null;
             }
         }
         if(cv == null) { return; }
@@ -146,12 +150,29 @@ public class SingleActivity extends Activity {
         for(int i=0; i<n; i++) { frameLayout.addView(popups.elementAt(i)); }
         super.setContentView(frameLayout);
         cvCurrent = cv;
+
+        // added for API15+:
+        int colorDecorViewBG = ThemeUtil.getColor(this,
+                android.R.attr.colorForeground);
+        Window window = getWindow();
+        window.getDecorView().setBackgroundColor(colorDecorViewBG);
+        ViewCompat.setOnApplyWindowInsetsListener(window.getDecorView(),
+                (v, insets) -> {
+                    Insets bars = insets.getInsets(
+                            WindowInsetsCompat.Type.systemBars()
+                                    | WindowInsetsCompat.Type.displayCutout()
+                    );
+                    v.setPadding(bars.left, bars.top, bars.right, bars.bottom);
+                    return WindowInsetsCompat.CONSUMED;
+                });
     }
 
     public ContentView getContentView() { return cvCurrent; }
 
     @Override
-    public void onRequestPermissionsResult(int rqCode, String[] permissions, int[] grantResults) {
+    public void onRequestPermissionsResult(int rqCode,
+                                           @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
         PermissionUtil.onRequestPermissionsResult(rqCode, permissions, grantResults);
     }
 
@@ -162,7 +183,7 @@ public class SingleActivity extends Activity {
 
     @Override
     public void onBackPressed() {
-        if(popups.size() > 0) {
+        if(!popups.isEmpty()) {
             Popup popup = popups.lastElement();
             removePopup(popup);
             runOnUiThread(popup::onCancel);

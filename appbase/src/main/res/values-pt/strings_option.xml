@@ -144,4 +144,10 @@ SOFTWARE.
     <string name="option_clockwise">horário</string>
     <string name="option_counterclockwise">anti-horário</string>
     <string name="option_flip">virar</string>
+    <string name="option_black_and_white">preto e branco</string>
+    <string name="option_sepia">sépia</string>
+    <string name="option_edge_detection">detecção de bordas</string>
+    <string name="option_select_image">selecionar imagem</string>
+    <string name="option_select_sound">selecionar som</string>
+    <string name="option_select_video">selecionar vídeo</string>
 </resources>

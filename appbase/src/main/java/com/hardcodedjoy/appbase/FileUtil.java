@@ -553,6 +553,18 @@ public class FileUtil {
     }
 
     static public boolean isDirectory(Uri uri) {
+
+        if(uri == null) { return false; }
+
+        if ("file".equalsIgnoreCase(uri.getScheme())) {
+            File file = new File(uri.getPath());
+            if(file.exists()) {
+                return file.isDirectory();
+            } else {
+                return false;
+            }
+        }
+
         // Check if the URI is using the DocumentsProvider
         if (DocumentsContract.isDocumentUri(activity, uri)) {
             // Check the type of the URI

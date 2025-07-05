@@ -130,6 +130,7 @@ SOFTWARE.
     <string name="title_jpeg_quality">JPEG-качество</string>
     <string name="title_brightness">Яркост</string>
     <string name="title_contrast">Контраст</string>
+    <string name="title_brightness_contrast">Яркост / Контраст</string>
     <string name="title_buttons_functions">Функции на бутоните</string>
     <string name="title_selection_start">Начало на избора</string>
     <string name="title_selection_end">Край на избора</string>
@@ -252,4 +253,7 @@ SOFTWARE.
     <string name="title_rotation">Ротация</string>
     <string name="title_track_count">Броят на пистите</string>
     <string name="title_start_position">Стартова позиция</string>
+    <string name="title_filter_effect">Филтър / Ефект</string>
+    <string name="title_view_file_details">Вижте подробности за файла</string>
+    <string name="title_interface">Интерфейс</string>
 </resources>

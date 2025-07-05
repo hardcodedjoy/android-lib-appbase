@@ -144,4 +144,10 @@ SOFTWARE.
     <string name="option_clockwise">saat yönünde</string>
     <string name="option_counterclockwise">saat yönünün tersine</string>
     <string name="option_flip">çevir</string>
+    <string name="option_black_and_white">siyah ve beyaz</string>
+    <string name="option_sepia">sepya</string>
+    <string name="option_edge_detection">kenar algılama</string>
+    <string name="option_select_image">resim seç</string>
+    <string name="option_select_sound">ses seç</string>
+    <string name="option_select_video">video seç</string>
 </resources>

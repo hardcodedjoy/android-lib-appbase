@@ -144,4 +144,10 @@ SOFTWARE.
     <string name="option_clockwise">по часовниковата стрелка</string>
     <string name="option_counterclockwise">обратно на часовниковата стрелка</string>
     <string name="option_flip">обърнете</string>
+    <string name="option_black_and_white">черно-бели</string>
+    <string name="option_sepia">сепия</string>
+    <string name="option_edge_detection">разпознаване на ръбове</string>
+    <string name="option_select_image">изберете изображение</string>
+    <string name="option_select_sound">изберете звук</string>
+    <string name="option_select_video">изберете видео</string>
 </resources>

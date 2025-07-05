@@ -144,4 +144,10 @@ SOFTWARE.
     <string name="option_clockwise">dextrorso</string>
     <string name="option_counterclockwise">sinistrórsum</string>
     <string name="option_flip">voltear</string>
+    <string name="option_black_and_white">blanco y negro</string>
+    <string name="option_sepia">sepia</string>
+    <string name="option_edge_detection">detección de bordes</string>
+    <string name="option_select_image">seleccionar imagen</string>
+    <string name="option_select_sound">seleccionar sonido</string>
+    <string name="option_select_video">seleccionar vídeo</string>
 </resources>

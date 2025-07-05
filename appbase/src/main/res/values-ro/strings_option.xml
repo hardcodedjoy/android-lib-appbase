@@ -144,4 +144,10 @@ SOFTWARE.
     <string name="option_clockwise">în sensul acelor de ceasornic</string>
     <string name="option_counterclockwise">în sens invers acelor de ceasornic</string>
     <string name="option_flip">răstoarnă</string>
+    <string name="option_black_and_white">alb-negru</string>
+    <string name="option_sepia">sepia</string>
+    <string name="option_edge_detection">detecție margini</string>
+    <string name="option_select_image">selectați imagine</string>
+    <string name="option_select_sound">selectați sunet</string>
+    <string name="option_select_video">selectați videoclip</string>
 </resources>

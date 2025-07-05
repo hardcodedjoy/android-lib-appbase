@@ -144,4 +144,10 @@ SOFTWARE.
     <string name="option_clockwise">zgodnie ze wskazówkami zegara</string>
     <string name="option_counterclockwise">przeciwnie do ruchu wskazówek zegara</string>
     <string name="option_flip">odwrócić</string>
+    <string name="option_black_and_white">czarno-biały</string>
+    <string name="option_sepia">sepia</string>
+    <string name="option_edge_detection">wykrywanie krawędzi</string>
+    <string name="option_select_image">wybierz obraz</string>
+    <string name="option_select_sound">wybierz dźwięk</string>
+    <string name="option_select_video">wybierz wideo</string>
 </resources>

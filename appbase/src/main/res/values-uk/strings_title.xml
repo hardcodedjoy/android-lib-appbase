@@ -129,7 +129,8 @@ SOFTWARE.
     <string name="title_shadow_size">Розмір тіні</string>
     <string name="title_jpeg_quality">Якість JPEG</string>
     <string name="title_brightness">Яскравість</string>
-    <string name="title_contrast">Контрастність</string>
+    <string name="title_contrast">Контраст</string>
+    <string name="title_brightness_contrast">Яскравість / Контраст</string>
     <string name="title_buttons_functions">Функції кнопок</string>
     <string name="title_selection_start">Старт відбору</string>
     <string name="title_selection_end">Кінець відбору</string>
@@ -252,4 +253,7 @@ SOFTWARE.
     <string name="title_rotation">Ротація</string>
     <string name="title_track_count">Кількість треків</string>
     <string name="title_start_position">Початкова позиція</string>
+    <string name="title_filter_effect">Фільтр / Ефект</string>
+    <string name="title_view_file_details">Переглянути деталі файлу</string>
+    <string name="title_interface">Інтерфейс</string>
 </resources>

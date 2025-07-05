@@ -145,4 +145,10 @@ SOFTWARE.
     <string name="option_clockwise">clockwise</string>
     <string name="option_counterclockwise">counterclockwise</string>
     <string name="option_flip">flip</string>
+    <string name="option_black_and_white">black and white</string>
+    <string name="option_sepia">sepia</string>
+    <string name="option_edge_detection">edge detection</string>
+    <string name="option_select_image">select image</string>
+    <string name="option_select_sound">select sound</string>
+    <string name="option_select_video">select video</string>
 </resources>

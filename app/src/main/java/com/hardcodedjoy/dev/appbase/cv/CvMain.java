@@ -44,6 +44,14 @@ public class CvMain extends CvTMSLL {
     public CvMain() {
         // add initialization code here (that must run only one time)
         Vector<Option> ops = new Vector<>();
+
+        ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_fullscreen_1,
+                com.hardcodedjoy.appbase.R.string.fullscreen,
+                () -> goFullscreen(true)));
+        ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_exit_fullscreen_1,
+                com.hardcodedjoy.appbase.R.string.normal_not_fullscreen,
+                () -> goFullscreen(false)));
+
         ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_menu_1, R.string.popups, () -> new CvPopups().show()));
         ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_menu_1, R.string.ddl_test, () -> new CvDDLTest().show()));
         ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_image_1, R.string.icons, () -> new CvIcons().show()));

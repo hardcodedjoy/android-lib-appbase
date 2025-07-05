@@ -196,6 +196,7 @@ public class GuiLinker {
                 setGetter, null, null, false);
     }
 
+    /** @noinspection unused*/
     static public void linkDropDownList(LinearLayout llDropDown,
                                         String title,
                                         String[] optionsKeys,
@@ -308,6 +309,11 @@ public class GuiLinker {
         final EditText editText = et;
         final ImageButton button = btn;
 
+        // first time (init)
+        int color = intSetGetter.get();
+        if(editText != null) { editText.setText(String.format("%08X", color)); }
+        if(button != null) {  GuiUtil.setColorOnImageView(button, color); }
+
         if(editText != null) {
             GuiLinker.link(editText, new SetGetter() {
                 @Override
@@ -341,6 +347,7 @@ public class GuiLinker {
                 }
             };
             button.setOnClickListener(view -> colorPicker.show());
+
         }
     }
 

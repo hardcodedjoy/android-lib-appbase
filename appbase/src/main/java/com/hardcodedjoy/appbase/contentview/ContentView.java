@@ -61,6 +61,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Locale;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 @SuppressLint("ViewConstructor")
 public class ContentView extends LinearLayout {
@@ -310,17 +311,14 @@ public class ContentView extends LinearLayout {
     }
 
     static public void goFullscreen(boolean fullscreen) {
-        goFullscreen(fullscreen, 0xFF000000);
-    }
-
-    static public void goFullscreen(boolean fullscreen, int bgColor) {
         Window window = getActivity().getWindow();
-        window.getDecorView().setBackgroundColor(bgColor);
 
         WindowInsetsControllerCompat controller =
                 WindowCompat.getInsetsController(window, window.getDecorView());
 
         if(fullscreen) {
+            // black bar around the camera hole
+            window.getDecorView().setBackgroundColor(0xFF000000);
             window.clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
             window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
@@ -329,6 +327,11 @@ public class ContentView extends LinearLayout {
             controller.hide(WindowInsetsCompat.Type.statusBars());
             controller.hide(WindowInsetsCompat.Type.navigationBars());
         } else {
+            // not fullscreen
+            // colorForeground around the camera hole, same color as notification bar
+            int colorDecorViewBG = ThemeUtil.getColor(getActivity(),
+                    android.R.attr.colorForeground);
+            window.getDecorView().setBackgroundColor(colorDecorViewBG);
             window.addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
             window.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
@@ -336,6 +339,15 @@ public class ContentView extends LinearLayout {
                     WindowInsetsControllerCompat.BEHAVIOR_DEFAULT);
             controller.show(WindowInsetsCompat.Type.statusBars());
             controller.show(WindowInsetsCompat.Type.navigationBars());
+        }
+    }
+
+    static public void waitUntil(AtomicBoolean atomicBooleanModifiedByOtherThread) {
+        while(!atomicBooleanModifiedByOtherThread.get()) {
+            try {
+                //noinspection BusyWait
+                Thread.sleep(0, 100);
+            } catch (Exception e) { /**/ }
         }
     }
 }

@@ -10,8 +10,8 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdk 34
-        versionCode 107
-        versionName "2.2.7"
+        versionCode 108
+        versionName "2.2.8"
         buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
         buildConfigField "String", "VERSION_NAME", "\"" + versionName + "\""
     }
@@ -39,7 +39,10 @@ android {
 }
 
 dependencies {
+    // don't increase version for core, as it will include kotlin libs
+    //noinspection GradleDependency
     implementation ("androidx.core:core:1.10.1")
+
     implementation ("androidx.documentfile:documentfile:1.0.1")
 }
 

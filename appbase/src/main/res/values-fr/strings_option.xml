@@ -144,4 +144,10 @@ SOFTWARE.
     <string name="option_clockwise">dans le sens des aiguilles d\'une montre</string>
     <string name="option_counterclockwise">dans le sens inverse des aiguilles d\'une montre</string>
     <string name="option_flip">retourner</string>
+    <string name="option_black_and_white">noir et blanc</string>
+    <string name="option_sepia">sépia</string>
+    <string name="option_edge_detection">détection des bords</string>
+    <string name="option_select_image">sélectionner une image</string>
+    <string name="option_select_sound">sélectionner le son</string>
+    <string name="option_select_video">sélectionner une vidéo</string>
 </resources>

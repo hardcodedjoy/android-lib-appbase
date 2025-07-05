@@ -130,6 +130,7 @@ SOFTWARE.
     <string name="title_jpeg_quality">JPEG Kalitesi</string>
     <string name="title_brightness">Parlaklık</string>
     <string name="title_contrast">Kontrast</string>
+    <string name="title_brightness_contrast">Parlaklık / Kontrast</string>
     <string name="title_buttons_functions">Düğmelerin işlevleri</string>
     <string name="title_selection_start">Seçim Başlangıç</string>
     <string name="title_selection_end">Seçim Sonu</string>
@@ -251,5 +252,8 @@ SOFTWARE.
     <string name="title_file_info">Dosya bilgisi</string>
     <string name="title_rotation">Rotasyon</string>
     <string name="title_track_count">Parça sayısı</string>
-    <string name="title_start_position">Başlangıç ​​pozisyonu</string>
+    <string name="title_start_position">Başlangıç pozisyonu</string>
+    <string name="title_filter_effect">Filtre / Efekt</string>
+    <string name="title_view_file_details">Dosya ayrıntılarını görüntüle</string>
+    <string name="title_interface">Arayüz</string>
 </resources>

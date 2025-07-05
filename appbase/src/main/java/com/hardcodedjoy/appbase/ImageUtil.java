@@ -417,4 +417,9 @@ public class ImageUtil {
         button.setImageTintList(ColorStateList.valueOf(tintColor));
         button.setImageTintMode(PorterDuff.Mode.SRC_ATOP);
     }
+
+    static public Bitmap loadAssetImage(String assetFileName) throws Exception {
+        InputStream is = ContentView.getActivity().getAssets().open(assetFileName);
+        return loadImage(is);
+    }
 }

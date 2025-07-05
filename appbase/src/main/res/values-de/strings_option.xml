@@ -144,4 +144,10 @@ SOFTWARE.
     <string name="option_clockwise">im Uhrzeigersinn</string>
     <string name="option_counterclockwise">gegen den Uhrzeigersinn</string>
     <string name="option_flip">spiegeln</string>
+    <string name="option_black_and_white">Schwarz und Weiß</string>
+    <string name="option_sepia">Sepia</string>
+    <string name="option_edge_detection">Kantenerkennung</string>
+    <string name="option_select_image">Bild auswählen</string>
+    <string name="option_select_sound">Ton auswählen</string>
+    <string name="option_select_video">Video auswählen</string>
 </resources>

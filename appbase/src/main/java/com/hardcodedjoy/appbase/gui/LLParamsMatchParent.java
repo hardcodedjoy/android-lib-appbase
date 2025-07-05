@@ -26,40 +26,11 @@ SOFTWARE.
 
 package com.hardcodedjoy.appbase.gui;
 
-import android.os.Handler;
-import android.os.Looper;
+import android.widget.LinearLayout;
 
-@SuppressWarnings("unused")
-public class RepeatingUiTask {
-
-    private final Handler handler;
-    private final Runnable taskRunnable;
-    private final int intervalMillis;
-    private boolean running;
-
-    public RepeatingUiTask(final Runnable runnable, final int intervalMillis) {
-        this.handler = new Handler(Looper.getMainLooper());
-        this.intervalMillis = intervalMillis;
-
-        taskRunnable = new Runnable() {
-            @Override
-            public void run() {
-                if(!running) { return; } // if already stopped
-                // else, if still running ( not stopped from runnable.run(); )
-                runnable.run();
-                handler.postDelayed(this, intervalMillis);
-            }
-        };
+public class LLParamsMatchParent extends LinearLayout.LayoutParams {
+    public LLParamsMatchParent() {
+        super(LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT);
     }
-
-    public synchronized void start() {
-        handler.postDelayed(taskRunnable, intervalMillis);
-        running = true;
-    }
-    public synchronized void stop() {
-        handler.removeCallbacks(taskRunnable);
-        running = false;
-    }
-
-    public synchronized boolean isRunning() { return running; }
 }

@@ -130,6 +130,7 @@ SOFTWARE.
     <string name="title_jpeg_quality">Jakość JPEG</string>
     <string name="title_brightness">Jasność</string>
     <string name="title_contrast">Kontrast</string>
+    <string name="title_brightness_contrast">Jasność / Kontrast</string>
     <string name="title_buttons_functions">Funkcje przycisków</string>
     <string name="title_selection_start">Początek wyboru</string>
     <string name="title_selection_end">Koniec wyboru</string>
@@ -252,4 +253,7 @@ SOFTWARE.
     <string name="title_rotation">Rotacja</string>
     <string name="title_track_count">Liczba utworów</string>
     <string name="title_start_position">Pozycja startowa</string>
+    <string name="title_filter_effect">Filtr / Efekt</string>
+    <string name="title_view_file_details">Wyświetl szczegóły pliku</string>
+    <string name="title_interface">Interfejs</string>
 </resources>

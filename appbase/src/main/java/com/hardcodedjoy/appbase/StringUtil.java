@@ -454,4 +454,19 @@ public class StringUtil {
 			default: return ch;
 		}
 	}
+	
+	static public <T> String arrayValues(T[] array, int offset, int len) {
+		if(array == null) { return "null"; }
+		StringBuilder s = new StringBuilder("[");
+		for(int i=0; i<len; i++) {
+			if(i > 0) { s.append(" "); }
+			s.append(array[offset + i]);
+		}
+		s.append("]");
+		return s.toString();
+	}
+
+	static public <T> String arrayValues(T[] array) {
+		return arrayValues(array, 0, array.length);
+	}
 }
