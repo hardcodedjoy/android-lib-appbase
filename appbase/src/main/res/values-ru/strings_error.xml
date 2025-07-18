@@ -72,4 +72,13 @@ SOFTWARE.
     <string name="err_device_has_no_camera">УСТРОЙСТВО НЕ ИМЕЕТ КАМЕРЫ</string>
     <string name="err_file_is_not_image">ФАЙЛ НЕ ЯВЛЯЕТСЯ ИЗОБРАЖЕНИЕМ</string>
     <string name="err_no_file_selected">НЕ ВЫБРАН ФАЙЛ</string>
+    <string name="err_connect_failed">ПОДКЛЮЧЕНИЕ НЕ УДАЛОСЬ</string>
+    <string name="err_no_bluetooth">НА ЭТОМ УСТРОЙСТВЕ НЕТ BLUETOOTH</string>
+    <string name="err_no_ble">НА ЭТОМ УСТРОЙСТВЕ НЕТ BLUETOOTH LOW ENERGY</string>
+    <string name="err_no_usb_host_api">НА ЭТОМ УСТРОЙСТВЕ НЕТ API USB-ХОСТА</string>
+    <string name="err_syntax_error_in_x">СИНТАКСИЧЕСКАЯ ОШИБКА В [x]</string>
+    <string name="err_failed_to_start_service_discovery">НЕ УДАЛОСЬ ЗАПУСТИТЬ ОБНАРУЖЕНИЕ СЛУЖБ</string>
+    <string name="err_service_discovery_failed">ОБНАРУЖЕНИЕ СЛУЖБ НЕУДАЧНО</string>
+    <string name="err_unknown_connection_type">НЕИЗВЕСТНЫЙ ТИП ПОДКЛЮЧЕНИЯ</string>
+    <string name="err_address_cannot_be_empty">АДРЕС НЕ МОЖЕТ БЫТЬ ПУСТЫМ</string>
 </resources>

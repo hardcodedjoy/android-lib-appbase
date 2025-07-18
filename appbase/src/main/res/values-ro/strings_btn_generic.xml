@@ -80,4 +80,5 @@ SOFTWARE.
     <string name="btn_get_image">Obține imaginea</string>
     <string name="btn_share_the_image">Partajează imaginea</string>
     <string name="btn_continue">Continuă</string>
+    <string name="btn_clear_file">Golește fișierul</string>
 </resources>

@@ -72,4 +72,13 @@ SOFTWARE.
     <string name="err_device_has_no_camera">IL DISPOSITIVO NON HA FOTOCAMERA</string>
     <string name="err_file_is_not_image">IL FILE NON È UN\'IMMAGINE</string>
     <string name="err_no_file_selected">NESSUN FILE SELEZIONATO</string>
+    <string name="err_connect_failed">CONNESSIONE NON RIUSCITA</string>
+    <string name="err_no_bluetooth">QUESTO DISPOSITIVO NON DISPONE DI BLUETOOTH</string>
+    <string name="err_no_ble">QUESTO DISPOSITIVO NON SUPPORTA BLUETOOTH LOW ENERGY</string>
+    <string name="err_no_usb_host_api">QUESTO DISPOSITIVO NON DISPONE DI API HOST USB</string>
+    <string name="err_syntax_error_in_x">ERRORE DI SINTASSI IN [x]</string>
+    <string name="err_failed_to_start_service_discovery">IMPOSSIBILE AVVIO DEL CONTROLLO DEI SERVIZI</string>
+    <string name="err_service_discovery_failed">CONTROLLO DEI SERVIZI NON RIUSCITO</string>
+    <string name="err_unknown_connection_type">CONNESSIONE SCONOSCIUTA TIPO</string>
+    <string name="err_address_cannot_be_empty">L\'INDIRIZZO NON PUÒ ESSERE VUOTO</string>
 </resources>

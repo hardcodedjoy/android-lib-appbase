@@ -37,7 +37,7 @@ SOFTWARE.
     <string name="placeholder_no_image" >[ kein Bild ]</string>
     <string name="keep_screen_on">Bildschirm EIN halten</string>
     <string name="disable_ringing_and_vibration">Klingeln und Vibration während der Aufnahme deaktivieren</string>
-    <string name="dont_show_again">Nicht wieder anzeigen</string>
+    <string name="dont_show_again">nicht wieder anzeigen</string>
     <string name="why_is_this_required">Warum ist dies erforderlich?</string>
     <string name="note_system_ports_only_on_rooted_devices">Hinweis: Systemports (0 .. 1023) nur auf gerooteten Geräten verfügbar sind.</string>
     <string name="premium_version_intro">Zusätzlich zu den grundlegenden App-Funktionen bietet Ihnen das Upgrade auf die Premium-Version folgende Vorteile:</string>
@@ -56,4 +56,5 @@ SOFTWARE.
     <string name="you_have_the_following_advantages">Sie haben folgende Vorteile:</string>
     <string name="your_subscription_will_renew_on_x">Ihr Abonnement wird am [x] erneuert.</string>
     <string name="your_subscription_will_end_on_x">Ihr Abonnement endet am [x].</string>
+    <string name="copied">kopiert</string>
 </resources>

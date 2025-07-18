@@ -80,4 +80,5 @@ SOFTWARE.
     <string name="btn_get_image">Ottieni l\'immagine</string>
     <string name="btn_share_the_image">Condividi l\'immagine</string>
     <string name="btn_continue">Continuare</string>
+    <string name="btn_clear_file">Cancella file</string>
 </resources>

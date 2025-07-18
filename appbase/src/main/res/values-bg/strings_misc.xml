@@ -35,9 +35,9 @@ SOFTWARE.
     <string name="placeholder_no_directory">[ няма директория ]</string>
     <string name="placeholder_no_sound">[ няма звук ]</string>
     <string name="placeholder_no_image" >[ няма изображение ]</string>
-    <string name="keep_screen_on">Запази екрана вкл.</string>
+    <string name="keep_screen_on">запази екрана вкл.</string>
     <string name="disable_ringing_and_vibration">Изключване на звука и вибрации при запис</string>
-    <string name="dont_show_again">Не показвай отново</string>
+    <string name="dont_show_again">не показвай отново</string>
     <string name="why_is_this_required">Защо е необходимо?</string>
     <string name="note_system_ports_only_on_rooted_devices">Забележка: системните портове (0 .. 1023) са налични само на руутнати устройства.</string>
     <string name="premium_version_intro">В допълнение към основните функции на приложението, надграждането до премиум версия ви дава следните предимства:</string>
@@ -56,4 +56,5 @@ SOFTWARE.
     <string name="you_have_the_following_advantages">Имате следните предимства:</string>
     <string name="your_subscription_will_renew_on_x">Вашият абонамент ще бъде подновен на [x].</string>
     <string name="your_subscription_will_end_on_x">Вашият абонамент ще приключи на [x].</string>
+    <string name="copied">копиран</string>
 </resources>

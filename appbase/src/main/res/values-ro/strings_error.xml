@@ -72,4 +72,13 @@ SOFTWARE.
     <string name="err_device_has_no_camera">DISPOZITIVUL NU ARE CAMERĂ FOTO</string>
     <string name="err_file_is_not_image">FIȘIERUL NU ESTE O IMAGINE</string>
     <string name="err_no_file_selected">NICIUN FIȘIER SELECTAT</string>
+    <string name="err_connect_failed">CONEXIUNE EȘUATĂ</string>
+    <string name="err_no_bluetooth">ACEST DISPOZITIV NU ARE BLUETOOTH</string>
+    <string name="err_no_ble">ACEST DISPOZITIV NU ARE BLUETOOTH LOW ENERGY</string>
+    <string name="err_no_usb_host_api">ACEST DISPOZITIV NU ARE USB HOST API</string>
+    <string name="err_syntax_error_in_x">EROARE DE SINTAXĂ ÎN [x]</string>
+    <string name="err_failed_to_start_service_discovery">A EȘUAT PORNIREA DESCOPERIRII SERVICIILOR</string>
+    <string name="err_service_discovery_failed">DESCOPERIREA SERVICIILOR A EȘUAT</string>
+    <string name="err_unknown_connection_type">TIP DE CONEXIUNE NECUNOSCUT</string>
+    <string name="err_address_cannot_be_empty">CÂMPUL PENTRU ADRESĂ NU POATE FI LĂSAT GOL</string>
 </resources>

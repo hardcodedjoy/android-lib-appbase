@@ -80,4 +80,5 @@ SOFTWARE.
     <string name="btn_get_image">Получаване на изображение</string>
     <string name="btn_share_the_image">Споделете изображението</string>
     <string name="btn_continue">Продължете</string>
+    <string name="btn_clear_file">Изчисти файла</string>
 </resources>

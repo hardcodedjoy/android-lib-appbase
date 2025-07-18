@@ -72,4 +72,13 @@ SOFTWARE.
     <string name="err_device_has_no_camera">DEVICE HAS NO CAMERA</string>
     <string name="err_file_is_not_image">FILE IS NOT AN IMAGE</string>
     <string name="err_no_file_selected">NO FILE SELECTED</string>
+    <string name="err_connect_failed">CONNECT FAILED</string>
+    <string name="err_no_bluetooth">THIS DEVICE DOES NOT HAVE BLUETOOTH</string>
+    <string name="err_no_ble">THIS DEVICE DOES NOT SUPPORT BLUETOOTH LOW ENERGY</string>
+    <string name="err_no_usb_host_api">THIS DEVICE DOES NOT HAVE USB HOST API</string>
+    <string name="err_syntax_error_in_x">SYNTAX ERROR IN [x]</string>
+    <string name="err_failed_to_start_service_discovery">FAILED TO START SERVICE DISCOVERY</string>
+    <string name="err_service_discovery_failed">SERVICE DISCOVERY FAILED</string>
+    <string name="err_unknown_connection_type">UNKNOWN CONNECTION TYPE</string>
+    <string name="err_address_cannot_be_empty">ADDRESS CANNOT BE EMPTY</string>
 </resources>

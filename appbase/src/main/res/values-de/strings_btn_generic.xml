@@ -81,4 +81,5 @@ SOFTWARE.
     <string name="btn_get_image">Bild abrufen</string>
     <string name="btn_share_the_image">Das Bild teilen</string>
     <string name="btn_continue">Weitermachen</string>
+    <string name="btn_clear_file">Datei löschen</string>
 </resources>

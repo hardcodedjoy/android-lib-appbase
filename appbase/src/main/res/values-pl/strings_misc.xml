@@ -35,9 +35,9 @@ SOFTWARE.
     <string name="placeholder_no_directory">[ brak katalogu ]</string>
     <string name="placeholder_no_sound">[ brak dźwięku ]</string>
     <string name="placeholder_no_image" >[ brak obrazka ]</string>
-    <string name="keep_screen_on">Pozostaw ekran włączony</string>
+    <string name="keep_screen_on">pozostaw ekran włączony</string>
     <string name="disable_ringing_and_vibration">Wyłącz dźwięk i wibracje podczas nagrywania</string>
-    <string name="dont_show_again">Nie pokazuj ponownie</string>
+    <string name="dont_show_again">nie pokazuj ponownie</string>
     <string name="why_is_this_required">Dlaczego jest to wymagane?</string>
     <string name="note_system_ports_only_on_rooted_devices">Uwaga: porty systemowe (0 .. 1023) są dostępne tylko na urządzeniach zrootowanych.</string>
     <string name="premium_version_intro">Oprócz podstawowych funkcji aplikacji aktualizacja do wersji premium zapewnia następujące korzyści:</string>
@@ -56,4 +56,5 @@ SOFTWARE.
     <string name="you_have_the_following_advantages">Masz następujące korzyści:</string>
     <string name="your_subscription_will_renew_on_x">Twoja subskrypcja zostanie odnowiona [x].</string>
     <string name="your_subscription_will_end_on_x">Twoja subskrypcja zakończy się [x].</string>
+    <string name="copied">skopiowano</string>
 </resources>

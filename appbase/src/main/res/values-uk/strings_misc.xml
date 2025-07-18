@@ -35,9 +35,9 @@ SOFTWARE.
     <string name="placeholder_no_directory">[ немає каталогу ]</string>
     <string name="placeholder_no_sound">[ без звуку ]</string>
     <string name="placeholder_no_image" >[ немає зображення ]</string>
-    <string name="keep_screen_on">Тримати екран увімк.</string>
+    <string name="keep_screen_on">тримати екран увімк.</string>
     <string name="disable_ringing_and_vibration">Вимкнути дзвінок і вібрацію під час запису</string>
-    <string name="dont_show_again">Не показувати знову</string>
+    <string name="dont_show_again">не показувати знову</string>
     <string name="why_is_this_required">Чому це потрібно?</string>
     <string name="note_system_ports_only_on_rooted_devices">Примітка: системні порти (0 .. 1023) доступні лише на пристроях з root-доступом.</string>
     <string name="premium_version_intro">Крім основних функцій додатку, оновлення до преміум-версії дає наступні переваги:</string>
@@ -56,4 +56,5 @@ SOFTWARE.
     <string name="you_have_the_following_advantages">Ви маєте такі переваги:</string>
     <string name="your_subscription_will_renew_on_x">Ваша підписка буде оновлена [x].</string>
     <string name="your_subscription_will_end_on_x">Ваша підписка закінчується [x].</string>
+    <string name="copied">скопійовано</string>
 </resources>

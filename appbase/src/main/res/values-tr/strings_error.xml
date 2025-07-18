@@ -72,4 +72,13 @@ SOFTWARE.
     <string name="err_device_has_no_camera">CİHAZIN KAMERA YOK</string>
     <string name="err_file_is_not_image">DOSYA BİR RESİM DEĞİLDİR</string>
     <string name="err_no_file_selected">DOSYA SEÇİLMEMİŞ</string>
+    <string name="err_connect_failed">BAĞLANTI BAŞARISIZ</string>
+    <string name="err_no_bluetooth">BU CİHAZDA BLUETOOTH YOK</string>
+    <string name="err_no_ble">BU CİHAZDA BLUETOOTH DÜŞÜK ENERJİ DESTEKLENMİYOR</string>
+    <string name="err_no_usb_host_api">BU CİHAZDA USB HOST API YOK</string>
+    <string name="err_syntax_error_in_x">[x]\'TE SÖZDİZİMİ HATASI</string>
+    <string name="err_failed_to_start_service_discovery">SERVİS KEŞFİ BAŞLATILAMADI</string>
+    <string name="err_service_discovery_failed">SERVİS KEŞFİ BAŞARISIZ</string>
+    <string name="err_unknown_connection_type">BİLİNMEYEN BAĞLANTI TÜRÜ</string>
+    <string name="err_address_cannot_be_empty">ADRES BOŞ OLMAZ</string>
 </resources>

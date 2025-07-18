@@ -80,4 +80,5 @@ SOFTWARE.
     <string name="btn_get_image">Resmi al</string>
     <string name="btn_share_the_image">Resmi paylaş</string>
     <string name="btn_continue">Devam et</string>
+    <string name="btn_clear_file">Dosyayı temizle</string>
 </resources>
