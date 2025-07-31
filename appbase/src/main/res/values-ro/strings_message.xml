@@ -31,7 +31,7 @@ SOFTWARE.
     <string name="conversion_stopped">Conversie oprită.</string>
     <string name="conversion_done">Conversie finalizată.</string>
     <string name="export_complete">Export finalizat.</string>
-    <string name="available_only_in_full_version">Acestă opțiune este disponibilă doar în [x] (versiunea completă).</string>
+    <string name="available_only_in_x_full_version">Acestă opțiune este disponibilă doar în [x] (versiunea completă).</string>
     <string name="expecting_x_near_y">Se așteaptă [x] în apropierea [y].</string>
     <string name="status_waiting_for_client_on_port_x">Așteptare client pe portul [x] …</string>
     <string name="status_connected_to_x">Conectat la [x]</string>
@@ -67,4 +67,17 @@ SOFTWARE.
     <string name="audio_lib_no_items_available_you_can_save">Nu există elemente disponibile. Puteți salva fragmente audio în bibliotecă și vor apărea aici.</string>
     <string name="video_lib_no_items_available_you_can_save">Nu există elemente disponibile. Puteți salva clipuri video în bibliotecă și vor apărea aici.</string>
     <string name="subs_automatically_renew">Abonamentele se reînnoiesc automat până la anulare cu cel puțin 24 de ore înainte de sfârșitul perioadei curente. Dacă doriți să anulați, vă rugăm să vizitați GPSC și să dezactivați manual reînnoirea automată.</string>
+    <string name="data_from_x_will_be_lost">Datele din [x] se vor pierde.</string>
+    <string name="please_open_x_settings_and_y">Vă rugăm să deschideți setările [x] și [y].</string>
+    <string name="first_disconnect">Mai întâi deconectați-vă.</string>
+    <string name="x_cannot_be_negative">[x] nu poate fi negativ.</string>
+    <string name="x_is_empty_string">[x] este un șir gol.</string>
+    <string name="receiving_will_not_work_properly">Recepția nu va funcționa corect.</string>
+    <string name="drag_to_move">Trage pentru a muta</string>
+    <string name="tap_to_config">Atinge pentru a configura</string>
+    <string name="drag_to_resize">Trage pentru a redimensiona</string>
+    <string name="to_start">Pentru a începe:</string>
+    <string name="tap_x">Atingeți [x]</string>
+    <string name="expecting_x">Se așteaptă [x].</string>
+    <string name="x_requires_y_full_version">[x] necesită [y] (versiunea completă).</string>
 </resources>

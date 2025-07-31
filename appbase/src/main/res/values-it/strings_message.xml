@@ -31,7 +31,7 @@ SOFTWARE.
     <string name="conversion_stopped">Conversione arrestata.</string>
     <string name="conversion_done">Conversione completata.</string>
     <string name="export_complete">Esportazione completata.</string>
-    <string name="available_only_in_full_version">Disponibile solo in [x] (versione completa).</string>
+    <string name="available_only_in_x_full_version">Disponibile solo in [x] (versione completa).</string>
     <string name="expecting_x_near_y">In attesa di [x] vicino a [y].</string>
     <string name="status_waiting_for_client_on_port_x">In attesa di un client sulla porta [x] …</string>
     <string name="status_connected_to_x">Connesso a [x]</string>
@@ -67,4 +67,17 @@ SOFTWARE.
     <string name="audio_lib_no_items_available_you_can_save">Nessun elemento disponibile. Puoi salvare frammenti audio nella libreria e appariranno qui.</string>
     <string name="video_lib_no_items_available_you_can_save">Nessun elemento disponibile. Puoi salvare i videoclip nella libreria e appariranno qui.</string>
     <string name="subs_automatically_renew">Gli abbonamenti si rinnovano automaticamente fino alla disdetta da effettuarsi almeno 24 ore prima della scadenza del periodo in corso. Se desideri annullare l\'abbonamento, visita il sito GPSC e disattiva manualmente il rinnovo automatico.</string>
+    <string name="data_from_x_will_be_lost">I dati di [x] andranno persi.</string>
+    <string name="please_open_x_settings_and_y">Apri le impostazioni di [x] e [y].</string>
+    <string name="first_disconnect">Prima disconnettiti.</string>
+    <string name="x_cannot_be_negative">[x] non può essere negativo.</string>
+    <string name="x_is_empty_string">[x] è una stringa vuota.</string>
+    <string name="receiving_will_not_work_properly">La ricezione non funzionerà correttamente.</string>
+    <string name="drag_to_move">Trascina per spostare</string>
+    <string name="tap_to_config">Tocca per configurare</string>
+    <string name="drag_to_resize">Trascina per ridimensionare</string>
+    <string name="to_start">Per iniziare:</string>
+    <string name="tap_x">Tocca [x]</string>
+    <string name="expecting_x">In attesa di [x].</string>
+    <string name="x_requires_y_full_version">[x] richiede [y] (versione completa).</string>
 </resources>

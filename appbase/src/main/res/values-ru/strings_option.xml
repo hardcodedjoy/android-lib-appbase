@@ -178,7 +178,7 @@ SOFTWARE.
     <string name="option_edit_ui">редактировать UI</string>
     <string name="option_exit_the_editor">закрыть редактор</string>
     <string name="option_screen_orientation_lock">блокировка ориентации экрана</string>
-    <string name="option_repeat">повторить</string>
+    <string name="option_repeat">повтор</string>
     <string name="option_custom_image">пользовательское изображение</string>
     <string name="option_log_to_file">запись в файл</string>
     <string name="option_sine_wave">синусоида</string>

@@ -57,4 +57,8 @@ SOFTWARE.
     <string name="your_subscription_will_renew_on_x">Ваша подписка будет продлена [x].</string>
     <string name="your_subscription_will_end_on_x">Ваша подписка закончится [x].</string>
     <string name="copied">скопировано</string>
+    <string name="or">или</string>
+    <string name="address_port">адрес:порт</string>
+    <string name="integer_number">целое число</string>
+    <string name="english">Английский</string>
 </resources>

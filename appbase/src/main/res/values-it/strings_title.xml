@@ -241,7 +241,7 @@ SOFTWARE.
     <string name="title_input_image_size_limit">Limite dimensione immagine in ingresso</string>
     <string name="title_mask">Maschera</string>
     <string name="title_speed">Velocità</string>
-    <string name="title_repeat">Ripetere</string>
+    <string name="title_repeat">Ripeti</string>
     <string name="title_how_many_times">Quante volte</string>
     <string name="title_boomerang">Bumerango</string>
     <string name="title_weekly_subscription">Abbonamento settimanale</string>
@@ -338,4 +338,5 @@ SOFTWARE.
     <string name="title_block_delay">Ritardo blocco</string>
     <string name="title_storage_folder">Cartella di archiviazione</string>
     <string name="title_default_file_name">Nome file predefinito</string>
+    <string name="title_welcome_to_x">Benvenuti a [x]</string>
 </resources>

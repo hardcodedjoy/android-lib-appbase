@@ -81,4 +81,6 @@ SOFTWARE.
     <string name="err_service_discovery_failed">ОТКРИВАНЕТО НА УСЛУГАТА Е НЕУСПЕШНО</string>
     <string name="err_unknown_connection_type">НЕИЗВЕСТЕН ТИП ВРЪЗКА</string>
     <string name="err_address_cannot_be_empty">АДРЕСЪТ НЕ МОЖЕ ДА БЪДЕ ПРАЗЕН</string>
+    <string name="err_error_parsing_x">ГРЕШКА ПРИ ПАРСИРАНЕ [x]</string>
+    <string name="err_can_not_access_file_x">НЯМА ДОСТЪП ДО ФАЙЛА [x]</string>
 </resources>

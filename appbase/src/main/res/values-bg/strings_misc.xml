@@ -57,4 +57,8 @@ SOFTWARE.
     <string name="your_subscription_will_renew_on_x">Вашият абонамент ще бъде подновен на [x].</string>
     <string name="your_subscription_will_end_on_x">Вашият абонамент ще приключи на [x].</string>
     <string name="copied">копиран</string>
+    <string name="or">или</string>
+    <string name="address_port">адрес:порт</string>
+    <string name="integer_number">цяло число</string>
+    <string name="english">Английски</string>
 </resources>

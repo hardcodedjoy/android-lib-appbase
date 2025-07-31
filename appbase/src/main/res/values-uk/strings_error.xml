@@ -81,4 +81,6 @@ SOFTWARE.
     <string name="err_service_discovery_failed">ПОМИЛКА ВИКОНАННЯ СЛУЖБИ</string>
     <string name="err_unknown_connection_type">НЕВІДОМИЙ ТИП ПІДКЛЮЧЕННЯ</string>
     <string name="err_address_cannot_be_empty">АДРЕСА НЕ МОЖЕ БУТИ ПУСТОЮ</string>
+    <string name="err_error_parsing_x">ПОМИЛКА ПАРСИНГУ [x]</string>
+    <string name="err_can_not_access_file_x">НЕМАЄ ДОСТУПУ ДО ФАЙЛУ [x]</string>
 </resources>

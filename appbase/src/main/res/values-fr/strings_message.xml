@@ -31,7 +31,7 @@ SOFTWARE.
     <string name="conversion_stopped">Conversion arrêtée.</string>
     <string name="conversion_done">Conversion terminée.</string>
     <string name="export_complete">Exportation terminée.</string>
-    <string name="available_only_in_full_version">Ceci est disponible uniquement dans [x] (version complète).</string>
+    <string name="available_only_in_x_full_version">Ceci est disponible uniquement dans [x] (version complète).</string>
     <string name="expecting_x_near_y">S\'attendre à [x] près de [y].</string>
     <string name="status_waiting_for_client_on_port_x">En attente d\'un client sur le port [x] …</string>
     <string name="status_connected_to_x">Connecté à [x]</string>
@@ -67,4 +67,17 @@ SOFTWARE.
     <string name="audio_lib_no_items_available_you_can_save">Aucun élément disponible. Vous pouvez sauvegarder des fragments audio dans la bibliothèque et ils apparaîtront ici.</string>
     <string name="video_lib_no_items_available_you_can_save">Aucun élément disponible. Vous pouvez sauvegarder des clips vidéo dans la bibliothèque et ils apparaîtront ici.</string>
     <string name="subs_automatically_renew">Les abonnements sont automatiquement renouvelés jusqu\'à leur annulation au moins 24 heures avant la fin de la période en cours. Pour annuler, veuillez consulter le GPSC et désactiver manuellement le renouvellement automatique.</string>
+    <string name="data_from_x_will_be_lost">Les données de [x] seront perdues.</string>
+    <string name="please_open_x_settings_and_y">Veuillez ouvrir les paramètres de [x] et [y].</string>
+    <string name="first_disconnect">Première déconnexion.</string>
+    <string name="x_cannot_be_negative">[x] ne peut pas être négatif.</string>
+    <string name="x_is_empty_string">[x] est une chaîne vide.</string>
+    <string name="receiving_will_not_work_properly">La réception ne fonctionnera pas correctement.</string>
+    <string name="drag_to_move">Glisser pour déplacer</string>
+    <string name="tap_to_config">Appuyer pour configurer</string>
+    <string name="drag_to_resize">Glisser pour redimensionner</string>
+    <string name="to_start">Pour commencer:</string>
+    <string name="tap_x">Appuyez sur [x]</string>
+    <string name="expecting_x">S\'attendre à [x].</string>
+    <string name="x_requires_y_full_version">[x] nécessite [y] (version complète).</string>
 </resources>

@@ -31,8 +31,8 @@ SOFTWARE.
     <string name="conversion_stopped">Dönüştürme durduruldu.</string>
     <string name="conversion_done">Dönüştürme tamamlandı.</string>
     <string name="export_complete">Dışa aktarma tamamlandı.</string>
-    <string name="available_only_in_full_version">Bu, sadece [x] (tam sürümde) mevcuttur.</string>
-    <string name="expecting_x_near_y">[x] yakınında [y] bekleniyor.</string>
+    <string name="available_only_in_x_full_version">Bu, sadece [x] (tam sürümde) mevcuttur.</string>
+    <string name="expecting_x_near_y">[y] yakınında [x] bekleniyor.</string>
     <string name="status_waiting_for_client_on_port_x">[x] numaralı portta bir istemci bekleniyor …</string>
     <string name="status_connected_to_x">[x] ile bağlantı kuruldu</string>
     <string name="status_client_x_on_port_y">[y] numaralı portta [x] istemcisi</string>
@@ -67,4 +67,17 @@ SOFTWARE.
     <string name="audio_lib_no_items_available_you_can_save">Kullanılabilir öğe yok. Ses parçalarını kütüphaneye kaydedebilir ve burada görünürler.</string>
     <string name="video_lib_no_items_available_you_can_save">Kullanılabilir öğe yok. Video klipleri kütüphaneye kaydedebilir ve burada görünürler.</string>
     <string name="subs_automatically_renew">Abonelikler, geçerli dönemin bitiminden en az 24 saat önce iptal edilene kadar otomatik olarak yenilenir. İptal etmeniz gerekirse, lütfen GPSC\'yi ziyaret edin ve otomatik yenilemeyi manuel olarak kapatın.</string>
+    <string name="data_from_x_will_be_lost">[x]\'ten gelen veriler kaybolacak.</string>
+    <string name="please_open_x_settings_and_y">Lütfen [x] ayarlarını açın ve [y].</string>
+    <string name="first_disconnect">İlk bağlantıyı kes.</string>
+    <string name="x_cannot_be_negative">[x] negatif olamaz.</string>
+    <string name="x_is_empty_string">[x] boş bir dizedir.</string>
+    <string name="receiving_will_not_work_properly">Alma işlemi düzgün çalışmayacak.</string>
+    <string name="drag_to_move">Taşımak için sürükleyin</string>
+    <string name="tap_to_config">Yapılandırmak için dokunun</string>
+    <string name="drag_to_resize">Yeniden boyutlandırmak için sürükleyin</string>
+    <string name="to_start">Başlamak için:</string>
+    <string name="tap_x">[x]\'e dokunun</string>
+    <string name="expecting_x">[x] bekleniyor.</string>
+    <string name="x_requires_y_full_version">[x], [y]\'yi gerektirir (tam sürüm).</string>
 </resources>

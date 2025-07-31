@@ -338,4 +338,5 @@ SOFTWARE.
     <string name="title_block_delay">Blockverzögerung</string>
     <string name="title_storage_folder">Speicherordner</string>
     <string name="title_default_file_name">Standarddateiname</string>
+    <string name="title_welcome_to_x">Willkommen bei [x]</string>
 </resources>

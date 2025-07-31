@@ -81,4 +81,6 @@ SOFTWARE.
     <string name="err_service_discovery_failed">DIENST-ERKENNUNG FEHLGESCHLAGEN</string>
     <string name="err_unknown_connection_type">UNBEKANNTER VERBINDUNGSTYP</string>
     <string name="err_address_cannot_be_empty">ADRESSE DARF NICHT LEER SEIN</string>
+    <string name="err_error_parsing_x">FEHLER BEIM ANALYSIEREN [x]</string>
+    <string name="err_can_not_access_file_x">KANN NICHT AUF DIE DATEI [x] ZUGREIFEN</string>
 </resources>

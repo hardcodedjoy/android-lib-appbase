@@ -81,4 +81,6 @@ SOFTWARE.
     <string name="err_service_discovery_failed">ОБНАРУЖЕНИЕ СЛУЖБ НЕУДАЧНО</string>
     <string name="err_unknown_connection_type">НЕИЗВЕСТНЫЙ ТИП ПОДКЛЮЧЕНИЯ</string>
     <string name="err_address_cannot_be_empty">АДРЕС НЕ МОЖЕТ БЫТЬ ПУСТЫМ</string>
+    <string name="err_error_parsing_x">ОШИБКА АНАЛИЗА [x]</string>
+    <string name="err_can_not_access_file_x">НЕВОЗМОЖНО ПОЛУЧИТЬ ДОСТУП К ФАЙЛУ [x]</string>
 </resources>

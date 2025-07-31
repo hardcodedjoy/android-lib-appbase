@@ -81,4 +81,5 @@ SOFTWARE.
     <string name="btn_share_the_image">Comparte la imagen</string>
     <string name="btn_continue">Continuar</string>
     <string name="btn_clear_file">Borrar archivo</string>
+    <string name="btn_menu">Menú</string>
 </resources>

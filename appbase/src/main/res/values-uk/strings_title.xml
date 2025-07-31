@@ -241,7 +241,7 @@ SOFTWARE.
     <string name="title_input_image_size_limit">Обмеження розміру вхідного зображення</string>
     <string name="title_mask">Маска</string>
     <string name="title_speed">Швидкість</string>
-    <string name="title_repeat">Повторіть</string>
+    <string name="title_repeat">Повтор</string>
     <string name="title_how_many_times">Скільки раз</string>
     <string name="title_boomerang">Бумеранг</string>
     <string name="title_weekly_subscription">Тижнева підписка</string>
@@ -338,4 +338,5 @@ SOFTWARE.
     <string name="title_block_delay">Затримка блоку</string>
     <string name="title_storage_folder">Папка для зберігання</string>
     <string name="title_default_file_name">Ім\'я файлу за замовчуванням</string>
+    <string name="title_welcome_to_x">Вітаємо в [x]</string>
 </resources>

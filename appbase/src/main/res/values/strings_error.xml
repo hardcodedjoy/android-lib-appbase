@@ -81,4 +81,6 @@ SOFTWARE.
     <string name="err_service_discovery_failed">SERVICE DISCOVERY FAILED</string>
     <string name="err_unknown_connection_type">UNKNOWN CONNECTION TYPE</string>
     <string name="err_address_cannot_be_empty">ADDRESS CANNOT BE EMPTY</string>
+    <string name="err_error_parsing_x">ERROR PARSING [x]</string>
+    <string name="err_can_not_access_file_x">CAN NOT ACCESS FILE [x]</string>
 </resources>

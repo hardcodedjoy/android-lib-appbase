@@ -338,4 +338,5 @@ SOFTWARE.
     <string name="title_block_delay">Blok Gecikmesi</string>
     <string name="title_storage_folder">Depolama Klasörü</string>
     <string name="title_default_file_name">Varsayılan Dosya Adı</string>
+    <string name="title_welcome_to_x">[x]\'e hoş geldiniz</string>
 </resources>

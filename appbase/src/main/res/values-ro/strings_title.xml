@@ -241,7 +241,7 @@ SOFTWARE.
     <string name="title_input_image_size_limit">Limită dimensiune imagine de intrare</string>
     <string name="title_mask">Masca</string>
     <string name="title_speed">Viteza</string>
-    <string name="title_repeat">Repetă</string>
+    <string name="title_repeat">Repetare</string>
     <string name="title_how_many_times">De câte ori</string>
     <string name="title_boomerang">Bumerang</string>
     <string name="title_weekly_subscription">Abonament săptămânal</string>
@@ -261,7 +261,7 @@ SOFTWARE.
     <string name="title_rfcomm_port">Port RFCOMM</string>
     <string name="title_baud_rate">Baudrate</string>
     <string name="title_received_image_format">Formatul imaginii primite</string>
-    <string name="title_line_width">Lățimea liniei</string>
+    <string name="title_line_width">Lățime linie</string>
     <string name="title_bluetooth_rfcomm">Bluetooth (RFCOMM)</string>
     <string name="title_bluetooth_ble">Bluetooth (BLE)</string>
     <string name="title_internet_tcp">Internet (TCP)</string>
@@ -338,4 +338,5 @@ SOFTWARE.
     <string name="title_block_delay">Întârziere bloc</string>
     <string name="title_storage_folder">Folder stocare</string>
     <string name="title_default_file_name">Nume fișier implicit</string>
+    <string name="title_welcome_to_x">Bun venit în [x]</string>
 </resources>

@@ -31,7 +31,7 @@ SOFTWARE.
     <string name="conversion_stopped">Конверсията е спряна.</string>
     <string name="conversion_done">Конверсията е завършена.</string>
     <string name="export_complete">Експортът е завършен.</string>
-    <string name="available_only_in_full_version">Това е достъпно само в [x] (пълна версия).</string>
+    <string name="available_only_in_x_full_version">Това е достъпно само в [x] (пълна версия).</string>
     <string name="expecting_x_near_y">Очаквайки [x] близо до [y].</string>
     <string name="status_waiting_for_client_on_port_x">Изчакване на клиент на порт [x] …</string>
     <string name="status_connected_to_x">Свързан с [x]</string>
@@ -67,4 +67,17 @@ SOFTWARE.
     <string name="audio_lib_no_items_available_you_can_save">Няма налични елементи. Можете да запазвате аудио фрагменти в библиотеката и те ще се показват тук.</string>
     <string name="video_lib_no_items_available_you_can_save">Няма налични елементи. Можете да запазвате видеоклипове в библиотеката и те ще се показват тук.</string>
     <string name="subs_automatically_renew">Абонаментите се подновяват автоматично до анулиране най-малко 24 часа преди края на текущия период. Ако трябва да анулирате, моля, посетете GPSC и изключете ръчно автоматичното подновяване.</string>
+    <string name="data_from_x_will_be_lost">Данните от [x] ще бъдат загубени.</string>
+    <string name="please_open_x_settings_and_y">Моля, отворете настройките на [x] и [y].</string>
+    <string name="first_disconnect">Първо изключете.</string>
+    <string name="x_cannot_be_negative">[x] не може да бъде отрицателно.</string>
+    <string name="x_is_empty_string">[x] е празен низ.</string>
+    <string name="receiving_will_not_work_properly">Получаването няма да работи правилно.</string>
+    <string name="drag_to_move">Плъзнете за преместване</string>
+    <string name="tap_to_config">Докоснете за конфигуриране</string>
+    <string name="drag_to_resize">Плъзнете за преоразмеряване</string>
+    <string name="to_start">За да започнете:</string>
+    <string name="tap_x">Докоснете [x]</string>
+    <string name="expecting_x">Очаквайки [x].</string>
+    <string name="x_requires_y_full_version">[x] изисква [y] (пълна версия).</string>
 </resources>

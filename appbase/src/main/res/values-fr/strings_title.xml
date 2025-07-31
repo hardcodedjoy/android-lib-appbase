@@ -338,4 +338,5 @@ SOFTWARE.
     <string name="title_block_delay">Délai de blocage</string>
     <string name="title_storage_folder">Dossier de stockage</string>
     <string name="title_default_file_name">Nom de fichier par défaut</string>
+    <string name="title_welcome_to_x">Bienvenue à [x]</string>
 </resources>

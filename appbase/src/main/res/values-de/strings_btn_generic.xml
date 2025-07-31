@@ -82,4 +82,5 @@ SOFTWARE.
     <string name="btn_share_the_image">Das Bild teilen</string>
     <string name="btn_continue">Weitermachen</string>
     <string name="btn_clear_file">Datei löschen</string>
+    <string name="btn_menu">Menü</string>
 </resources>

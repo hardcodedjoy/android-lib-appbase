@@ -338,4 +338,5 @@ SOFTWARE.
     <string name="title_block_delay">Retardo del bloque</string>
     <string name="title_storage_folder">Carpeta de almacenamiento</string>
     <string name="title_default_file_name">Nombre de archivo predeterminado</string>
+    <string name="title_welcome_to_x">Bienvenido a [x]</string>
 </resources>

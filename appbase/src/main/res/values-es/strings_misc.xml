@@ -57,4 +57,8 @@ SOFTWARE.
     <string name="your_subscription_will_renew_on_x">Su suscripción se renovará el [x].</string>
     <string name="your_subscription_will_end_on_x">Su suscripción finalizará el [x].</string>
     <string name="copied">copiado</string>
+    <string name="or">o</string>
+    <string name="address_port">dirección:puerto</string>
+    <string name="integer_number">número entero</string>
+    <string name="english">Inglés</string>
 </resources>

@@ -81,4 +81,6 @@ SOFTWARE.
     <string name="err_service_discovery_failed">WYKRYWANIE USŁUG NIEPOWODZENIE</string>
     <string name="err_unknown_connection_type">NIEZNANY TYP POŁĄCZENIA</string>
     <string name="err_address_cannot_be_empty">ADRES NIE MOŻE BYĆ PUSTY</string>
+    <string name="err_error_parsing_x">BŁĄD PODCZAS PAROWANIA [x]</string>
+    <string name="err_can_not_access_file_x">NIE MOŻNA UZYSKAĆ DOSTĘPU DO PLIKU [x]</string>
 </resources>

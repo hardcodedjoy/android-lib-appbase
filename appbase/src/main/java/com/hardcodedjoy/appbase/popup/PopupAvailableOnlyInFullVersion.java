@@ -45,7 +45,7 @@ public class PopupAvailableOnlyInFullVersion extends PopupAsk {
             String utmSource) {
 
         super(title,
-              getString(R.string.available_only_in_full_version)
+              getString(R.string.available_only_in_x_full_version)
                       .replace("[x]", fullVersionAppName),
               getString(R.string.btn_get_full_version),
               getString(R.string.btn_ok));

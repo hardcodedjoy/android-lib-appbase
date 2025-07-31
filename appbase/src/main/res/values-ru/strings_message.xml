@@ -31,7 +31,7 @@ SOFTWARE.
     <string name="conversion_stopped">Преобразование остановлена.</string>
     <string name="conversion_done">Преобразование завершена.</string>
     <string name="export_complete">Экспорт завершен.</string>
-    <string name="available_only_in_full_version">Это доступно только в [x] (полная версия).</string>
+    <string name="available_only_in_x_full_version">Это доступно только в [x] (полная версия).</string>
     <string name="expecting_x_near_y">Ожидается [x] около [y].</string>
     <string name="status_waiting_for_client_on_port_x">Ожидание клиента на порту [x] …</string>
     <string name="status_connected_to_x">Подключено к [x]</string>
@@ -67,4 +67,17 @@ SOFTWARE.
     <string name="audio_lib_no_items_available_you_can_save">Нет доступных элементов. Вы можете сохранить аудиофрагменты в библиотеке, и они появятся здесь.</string>
     <string name="video_lib_no_items_available_you_can_save">Нет доступных элементов. Вы можете сохранить видеоклипы в библиотеке, и они появятся здесь.</string>
     <string name="subs_automatically_renew">Подписки автоматически продлеваются до тех пор, пока не будут отменены не менее чем за 24 часа до окончания текущего периода. Если вам нужно отменить подписку, посетите GPSC и вручную отключите автоматическое продление.</string>
+    <string name="data_from_x_will_be_lost">Данные из [x] будут утеряны.</string>
+    <string name="please_open_x_settings_and_y">Откройте настройки [x] и [y].</string>
+    <string name="first_disconnect">Сначала отключитесь.</string>
+    <string name="x_cannot_be_negative">[x] не может быть отрицательным.</string>
+    <string name="x_is_empty_string">[x] — пустая строка.</string>
+    <string name="receiving_will_not_work_properly">Приём будет работать неправильно.</string>
+    <string name="drag_to_move">Перетащите для перемещения</string>
+    <string name="tap_to_config">Нажмите для настройки</string>
+    <string name="drag_to_resize">Перетащите для изменения размера</string>
+    <string name="to_start">Чтобы начать:</string>
+    <string name="tap_x">Нажмите [x]</string>
+    <string name="expecting_x">Ожидается [x].</string>
+    <string name="x_requires_y_full_version">[x] требует [y] (полная версия).</string>
 </resources>

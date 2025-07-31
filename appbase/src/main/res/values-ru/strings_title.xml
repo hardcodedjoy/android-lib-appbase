@@ -338,4 +338,5 @@ SOFTWARE.
     <string name="title_block_delay">Задержка блока</string>
     <string name="title_storage_folder">Папка хранения</string>
     <string name="title_default_file_name">Имя файла по умолчанию</string>
+    <string name="title_welcome_to_x">Добро пожаловать в [x]</string>
 </resources>

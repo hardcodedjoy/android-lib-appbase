@@ -81,4 +81,6 @@ SOFTWARE.
     <string name="err_service_discovery_failed">ERROR EN EL DESCUBRIMIENTO DE SERVICIO</string>
     <string name="err_unknown_connection_type">CONEXIÓN DESCONOCIDA TIPO</string>
     <string name="err_address_cannot_be_empty">LA DIRECCIÓN NO PUEDE ESTAR VACÍA</string>
+    <string name="err_error_parsing_x">ERROR DE ANÁLISIS [x]</string>
+    <string name="err_can_not_access_file_x">NO SE PUEDE ACCEDER AL ARCHIVO [x]</string>
 </resources>

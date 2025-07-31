@@ -31,7 +31,7 @@ SOFTWARE.
     <string name="conversion_stopped">Conversion stopped.</string>
     <string name="conversion_done">Conversion done.</string>
     <string name="export_complete">Export complete.</string>
-    <string name="available_only_in_full_version">This is available only in [x] (full version).</string>
+    <string name="available_only_in_x_full_version">This is available only in [x] (full version).</string>
     <string name="expecting_x_near_y">Expecting [x] near [y].</string>
     <string name="status_waiting_for_client_on_port_x">Waiting for client on port [x] …</string>
     <string name="status_connected_to_x">Connected to [x]</string>
@@ -67,4 +67,18 @@ SOFTWARE.
     <string name="audio_lib_no_items_available_you_can_save">No items available. You can save audio fragments to the library and they will appear here.</string>
     <string name="video_lib_no_items_available_you_can_save">No items available. You can save video clips to the library and they will appear here.</string>
     <string name="subs_automatically_renew">Subscriptions automatically renew until canceled at least 24 hours before the end of the current period. If you need to cancel, please visit GPSC and manually turn off automatic renewal.</string>
+    <string name="data_from_x_will_be_lost">Data from [x] will be lost.</string>
+    <string name="please_open_x_settings_and_y">Please open [x] settings and [y].</string>
+    <string name="first_disconnect">First disconnect.</string>
+    <string name="x_cannot_be_negative">[x] cannot be negative.</string>
+    <string name="x_is_empty_string">[x] is empty string.</string>
+    <string name="receiving_will_not_work_properly">Receiving will not work properly.</string>
+    <string name="drag_to_move">Drag to move</string>
+    <string name="tap_to_config">Tap to configure</string>
+    <string name="drag_to_resize">Drag to resize</string>
+    <string name="to_start">To start:</string>
+    <string name="tap_x">Tap [x]</string>
+    <string name="expecting_x">Expecting [x].</string>
+    <string name="x_requires_y_full_version">[x] requires [y] (full version).</string>
+
 </resources>

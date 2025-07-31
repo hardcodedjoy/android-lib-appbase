@@ -81,4 +81,6 @@ SOFTWARE.
     <string name="err_service_discovery_failed">SERVİS KEŞFİ BAŞARISIZ</string>
     <string name="err_unknown_connection_type">BİLİNMEYEN BAĞLANTI TÜRÜ</string>
     <string name="err_address_cannot_be_empty">ADRES BOŞ OLMAZ</string>
+    <string name="err_error_parsing_x">[x] AYRIŞTIRMA HATASI</string>
+    <string name="err_can_not_access_file_x">[x] DOSYASINA ERİŞİLEMEZ</string>
 </resources>
