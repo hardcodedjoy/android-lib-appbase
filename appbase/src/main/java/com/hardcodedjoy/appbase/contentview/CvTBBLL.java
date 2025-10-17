@@ -27,6 +27,8 @@ SOFTWARE.
 package com.hardcodedjoy.appbase.contentview;
 
 import android.annotation.SuppressLint;
+import android.graphics.Bitmap;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -35,9 +37,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.hardcodedjoy.appbase.ImageUtil;
 import com.hardcodedjoy.appbase.R;
 import com.hardcodedjoy.appbase.gui.DisplayUnit;
 import com.hardcodedjoy.appbase.gui.DropDownMenu;
+import com.hardcodedjoy.appbase.gui.LinearLayoutHorizontal;
+import com.hardcodedjoy.appbase.gui.ThemeUtil;
 import com.hardcodedjoy.appbase.popup.Option;
 
 import java.util.Vector;
@@ -176,6 +181,55 @@ public class CvTBBLL extends ContentView { // Content View with Title, Button Ba
             });
         });
         llButtonBar.addView(button);
+    }
+
+    public void addSingleButton(Option option) {
+
+        FrameLayout fl = new FrameLayout(getActivity());
+        int lrPadding = DisplayUnit.dpToPx(10f);
+        int ivPadding = DisplayUnit.dpToPx(5f);
+        llButtonBar.addView(fl);
+
+        fl.setLayoutParams(new LinearLayout.LayoutParams(
+                LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT));
+
+        Button button = new Button(getActivity());
+        fl.addView(button, new FrameLayout.LayoutParams(
+                FrameLayout.LayoutParams.MATCH_PARENT,
+                FrameLayout.LayoutParams.MATCH_PARENT));
+
+        LinearLayout ll = new LinearLayoutHorizontal(
+                LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
+        ll.setGravity(Gravity.CENTER);
+        ll.setPadding(lrPadding, 0, lrPadding, 0);
+        fl.addView(ll);
+
+        ImageView ivIcon = new ImageView(getActivity());
+        ll.addView(ivIcon);
+
+        TextView tvText = new TextView(getActivity());
+        int colorBG = ThemeUtil.getColor(getActivity(), android.R.attr.colorBackground);
+        tvText.setTextColor(colorBG);
+        tvText.setAllCaps(true);
+        ll.addView(tvText);
+
+        button.setOnClickListener(view -> {
+            hideMenu();
+            Runnable runnable = option.getExecutor();
+            if(runnable != null) { runnable.run(); }
+        });
+
+        Bitmap bitmap = option.getIconBitmap();
+        int iconId = option.getIconId();
+        if(bitmap != null) { ivIcon.setImageBitmap(bitmap); }
+        else if(iconId != 0) { ivIcon.setImageResource(iconId); }
+        ImageUtil.setTint(ivIcon, colorBG);
+        ivIcon.setPadding(0, ivPadding, 0, ivPadding);
+
+        String name = option.getName();
+        int nameId = option.getNameId();
+        if(name != null) { tvText.setText(name); }
+        else if(nameId != 0) { tvText.setText(nameId); }
     }
 
     @Override

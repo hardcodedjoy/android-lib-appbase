@@ -469,4 +469,99 @@ public class StringUtil {
 	static public <T> String arrayValues(T[] array) {
 		return arrayValues(array, 0, array.length);
 	}
+
+	static public String formatNumber(byte b, int radix, boolean zeroPadded) {
+		if(radix == 10) { return "" + b; }
+		else if(radix == 16) {
+			if(zeroPadded) {
+				return String.format("%02X", b & 0xFF);
+			} else {
+				return String.format("%2X", b & 0xFF);
+			}
+		} else if(radix == 2) {
+			String bin = Integer.toBinaryString(b & 0xFF);
+			if(zeroPadded) {
+				return "0".repeat(8 - bin.length()) + bin;
+			} else {
+				return bin;
+			}
+		}
+		return "";
+	}
+
+	static public String formatNumber(char ch, int radix, boolean zeroPadded) {
+		if(radix == 10) { return "" + (int) ch; }
+		else if(radix == 16) {
+			if(zeroPadded) {
+				return String.format("%04X", ch & 0xFFFF);
+			} else {
+				return String.format("%4X", ch & 0xFFFF);
+			}
+		} else if(radix == 2) {
+			String bin = Integer.toBinaryString(ch & 0xFFFF);
+			if(zeroPadded) {
+				return "0".repeat(16 - bin.length()) + bin;
+			} else {
+				return bin;
+			}
+		}
+		return "";
+	}
+
+	static public String formatNumber(short sh, int radix, boolean zeroPadded) {
+		if(radix == 10) { return "" + sh; }
+		else if(radix == 16) {
+			if(zeroPadded) {
+				return String.format("%04X", sh & 0xFFFF);
+			} else {
+				return String.format("%4X", sh & 0xFFFF);
+			}
+		} else if(radix == 2) {
+			String bin = Integer.toBinaryString(sh & 0xFFFF);
+			if(zeroPadded) {
+				return "0".repeat(16 - bin.length()) + bin;
+			} else {
+				return bin;
+			}
+		}
+		return "";
+	}
+
+	static public String formatNumber(int i, int radix, boolean zeroPadded) {
+		if(radix == 10) { return "" + i; }
+		else if(radix == 16) {
+			if(zeroPadded) {
+				return String.format("%08X", i);
+			} else {
+				return String.format("%8X", i);
+			}
+		} else if(radix == 2) {
+			String bin = Integer.toBinaryString(i);
+			if(zeroPadded) {
+				return "0".repeat(32 - bin.length()) + bin;
+			} else {
+				return bin;
+			}
+		}
+		return "";
+	}
+
+	static public String formatNumber(long l, int radix, boolean zeroPadded) {
+		if(radix == 10) { return "" + l; }
+		else if(radix == 16) {
+			if(zeroPadded) {
+				return String.format("%016X", l);
+			} else {
+				return String.format("%16X", l);
+			}
+		} else if(radix == 2) {
+			String bin = Long.toBinaryString(l);
+			if(zeroPadded) {
+				return "0".repeat(64 - bin.length()) + bin;
+			} else {
+				return bin;
+			}
+		}
+		return "";
+	}
 }

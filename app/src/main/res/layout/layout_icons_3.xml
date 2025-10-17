@@ -78,11 +78,13 @@ SOFTWARE.
     <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
+    <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/ic_heart_3" android:tint="?android:colorForeground" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/ic_help_3" android:tint="?android:colorForeground" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/ic_home_3" android:tint="?android:colorForeground" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/ic_image_3" android:tint="?android:colorForeground" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
+    <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/ic_image_sequence_3" android:tint="?android:colorForeground" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/ic_info_3" android:tint="?android:colorForeground" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
@@ -105,11 +107,17 @@ SOFTWARE.
     <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
+    <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
+    <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
+    <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
+    <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/ic_preview_3" android:tint="?android:colorForeground" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
+    <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/ic_save_3" android:tint="?android:colorForeground" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/ic_save_as_3" android:tint="?android:colorForeground" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
+    <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />

@@ -31,15 +31,15 @@ import android.content.res.Resources;
 public class DisplayUnit {
 
     public static int dpToPx(float dp) {
-        return (int) (dp * Resources.getSystem().getDisplayMetrics().density);
+        return Math.round(dp * Resources.getSystem().getDisplayMetrics().density);
     }
 
-    public static float pxToDp(int px) {
+    public static float pxToDp(float px) {
         return px / Resources.getSystem().getDisplayMetrics().density;
     }
     
     public static int spToPx(float sp) {
-        return (int) (sp * Resources.getSystem().getDisplayMetrics().scaledDensity);
+        return Math.round(sp * Resources.getSystem().getDisplayMetrics().scaledDensity);
     }
 
     public static float pxToSp(int px) {

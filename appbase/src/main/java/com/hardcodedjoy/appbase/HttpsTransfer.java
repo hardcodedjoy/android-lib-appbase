@@ -33,8 +33,12 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Vector;
 
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSocketFactory;
+
 @SuppressWarnings("unused")
-public class HttpTransfer {
+public class HttpsTransfer {
 
     // Don't forget to add:
     // <uses-permission android:name="android.permission.INTERNET" />
@@ -60,7 +64,7 @@ public class HttpTransfer {
     public byte[] getAsByteArray(String urlString) {
         try {
             URL url = new URL(urlString);
-            HttpURLConnection c = (HttpURLConnection) url.openConnection();
+            HttpsURLConnection c = (HttpsURLConnection) url.openConnection();
             c.setRequestMethod("GET");
             if(userAgent != null) { c.setRequestProperty("User-Agent", userAgent); }
             if(accept != null) { c.setRequestProperty("Accept", accept); }
@@ -68,6 +72,8 @@ public class HttpTransfer {
 
             c.setUseCaches(false);
             c.setDoOutput(true);
+
+            setSSLSocketFactory(c);
 
             InputStream is = c.getInputStream();
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -126,7 +132,8 @@ public class HttpTransfer {
         try {
             String boundary = Long.toHexString(System.currentTimeMillis());
             URL destinationURL = new URL(urlString);
-            HttpURLConnection c = (HttpURLConnection) destinationURL.openConnection();
+            HttpsURLConnection c = (HttpsURLConnection) destinationURL.openConnection();
+            //HttpURLConnection c = (HttpURLConnection) destinationURL.openConnection();
 
             c.setRequestMethod("POST");
             if(userAgent != null) { c.setRequestProperty("User-Agent", userAgent); }
@@ -173,6 +180,19 @@ public class HttpTransfer {
             e.printStackTrace(System.err);
             return null;
         }
+    }
+
+    private void setSSLSocketFactory(HttpsURLConnection c) throws Exception {
+
+        SSLContext context;
+        if(protocol == null) {
+            context = SSLContext.getInstance("TLS");
+        } else {
+            context = SSLContext.getInstance(protocol);
+        }
+        context.init(null, null, null);
+        SSLSocketFactory sslSocketFactory = context.getSocketFactory();
+        c.setSSLSocketFactory(sslSocketFactory);
     }
 
     static private void readAllBytes(InputStream is, OutputStream os) throws Exception {

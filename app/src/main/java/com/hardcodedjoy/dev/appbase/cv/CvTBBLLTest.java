@@ -63,6 +63,28 @@ public class CvTBBLLTest extends CvTBBLL {
             addButton(com.hardcodedjoy.appbase.R.string.file, ops);
         }
 
+        addSingleButton(new Option(
+                com.hardcodedjoy.appbase.R.drawable.ic_media_play_2,
+                com.hardcodedjoy.appbase.R.string.btn_start,
+                null));
+
+        addSingleButton(new Option(
+                com.hardcodedjoy.appbase.R.drawable.ic_media_play_2,
+                0,
+                null));
+        addSingleButton(new Option(
+                com.hardcodedjoy.appbase.R.drawable.ic_media_stop_2,
+                0,
+                null));
+
+        addSingleButton(new Option(
+                0,
+                com.hardcodedjoy.appbase.R.string.btn_start,
+                null));
+
+
+
+
         {
             ops = new Vector<>();
 

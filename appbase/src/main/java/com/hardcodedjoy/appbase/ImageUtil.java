@@ -389,6 +389,11 @@ public class ImageUtil {
         return bitmap;
     }
 
+    static public Bitmap drawableToBitmap(Drawable drawable, int tintColor) {
+        setTint(drawable, tintColor);
+        return drawableToBitmap(drawable);
+    }
+
     static public Bitmap drawableToBitmap(Drawable drawable, int w, int h) {
         Bitmap bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
         bitmap.eraseColor(0x00000000);
@@ -396,6 +401,12 @@ public class ImageUtil {
         drawable.setBounds(0, 0, bitmap.getWidth(), bitmap.getHeight());
         drawable.draw(canvas);
         return bitmap;
+    }
+
+    static public Bitmap drawableToBitmap(Drawable drawable,
+                                          int w, int h, int tintColor) {
+        setTint(drawable, tintColor);
+        return drawableToBitmap(drawable, w, h);
     }
 
     static public BitmapDrawable bitmapToDrawable(Bitmap bitmap) {
@@ -416,6 +427,11 @@ public class ImageUtil {
     static public void setTint(ImageButton button, int tintColor) {
         button.setImageTintList(ColorStateList.valueOf(tintColor));
         button.setImageTintMode(PorterDuff.Mode.SRC_ATOP);
+    }
+
+    static public void setTint(Drawable drawable, int tintColor) {
+        drawable.setTintList(ColorStateList.valueOf(tintColor));
+        drawable.setTintMode(PorterDuff.Mode.SRC_ATOP);
     }
 
     static public Bitmap loadAssetImage(String assetFileName) throws Exception {
