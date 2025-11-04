@@ -29,6 +29,7 @@ package com.hardcodedjoy.appbase;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.database.Cursor;
+import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.provider.DocumentsContract;
 import android.provider.OpenableColumns;
@@ -37,6 +38,7 @@ import android.webkit.MimeTypeMap;
 import androidx.documentfile.provider.DocumentFile;
 
 import com.hardcodedjoy.appbase.handlers.StringHandler;
+import com.hardcodedjoy.appbase.handlers.UriHandler;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -307,6 +309,12 @@ public class FileUtil {
         }
         if(mimeType == null) { mimeType = "*/*"; }
         return mimeType;
+    }
+
+    static public String getMimeType(File file) {
+        String fileName = file.getName();
+        String extLowerCase = getExtensionLowerCase(fileName);
+        return getMimeType(extLowerCase);
     }
 
     static public String getExtension(String fileName) {
@@ -670,5 +678,34 @@ public class FileUtil {
 
         // else:
         return 0;
+    }
+
+    static public File createNewFile(File dir, String fileName) {
+        File file = new File(dir, fileName);
+        try {
+            boolean createdOK = file.createNewFile();
+            if(createdOK) { return file; }
+            else { return null; }
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    static public File createNewDir(File dir, String newDirName) {
+        File newDir = new File(dir, newDirName);
+        try {
+            boolean createdOK = newDir.mkdir();
+            if(createdOK) { return newDir; }
+            else { return null; }
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    static public void getNonExposedUri(File file, UriHandler resultingUriHandler) {
+        final String filePath = file.getAbsolutePath();
+        MediaScannerConnection.scanFile(activity,
+                new String[] { filePath }, null,
+                (path, uri) -> resultingUriHandler.handle(uri));
     }
 }

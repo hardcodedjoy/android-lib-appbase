@@ -57,6 +57,7 @@ SOFTWARE.
     <ImageView android:src="@drawable/ic_content_move_to_folder_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
     <ImageView android:src="@drawable/ic_content_paste_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
     <ImageView android:src="@drawable/ic_contrast_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
+    <ImageView android:src="@drawable/ic_create_shortcut_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
     <ImageView android:src="@drawable/ic_diamond_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
     <ImageView android:src="@drawable/ic_edit_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
     <ImageView android:src="@drawable/ic_edit_redo_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
@@ -67,16 +68,22 @@ SOFTWARE.
     <ImageView android:src="@drawable/ic_fade_in_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
     <ImageView android:src="@drawable/ic_fade_out_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
     <ImageView android:src="@drawable/ic_file_new_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
+    <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/ic_file_type_archive_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
     <ImageView android:src="@drawable/ic_file_type_audio_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
+    <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/ic_file_type_file_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
     <ImageView android:src="@drawable/ic_file_type_folder_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
     <ImageView android:src="@drawable/ic_file_type_image_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
+    <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/ic_file_type_pdf_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
+    <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
+    <ImageView android:src="@drawable/bg_chess" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" />
     <ImageView android:src="@drawable/ic_file_type_text_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
     <ImageView android:src="@drawable/ic_file_type_video_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
     <ImageView android:src="@drawable/ic_flip_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
     <ImageView android:src="@drawable/ic_flip_camera_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
+    <ImageView android:src="@drawable/ic_folder_new_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
     <ImageView android:src="@drawable/ic_fps_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
     <ImageView android:src="@drawable/ic_fullscreen_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
     <ImageView android:src="@drawable/ic_heart_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
@@ -114,6 +121,7 @@ SOFTWARE.
     <ImageView android:src="@drawable/ic_preview_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
     <ImageView android:src="@drawable/ic_privacy_policy_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
     <ImageView android:src="@drawable/ic_refresh_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
+    <ImageView android:src="@drawable/ic_rename_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
     <ImageView android:src="@drawable/ic_rotate_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
     <ImageView android:src="@drawable/ic_save_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />
     <ImageView android:src="@drawable/ic_save_as_1" android:layout_width="48dp" android:layout_height="48dp" android:importantForAccessibility="no" android:tint="?android:colorForeground" />

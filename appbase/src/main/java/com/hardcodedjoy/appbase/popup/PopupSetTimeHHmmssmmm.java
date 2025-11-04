@@ -120,8 +120,6 @@ abstract public class PopupSetTimeHHmmssmmm extends Popup {
             onOK(millis);
         } else if(id == R.id.appbase_btn_cancel || id == R.id.appbase_btn_cancel_text) {
             onCancel();
-        } else if(id == R.id.appbase_ll_outside_popup) {
-            onCancel();
         }
     }
 

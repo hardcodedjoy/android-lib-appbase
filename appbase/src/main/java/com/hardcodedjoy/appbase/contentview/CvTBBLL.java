@@ -230,6 +230,12 @@ public class CvTBBLL extends ContentView { // Content View with Title, Button Ba
         int nameId = option.getNameId();
         if(name != null) { tvText.setText(name); }
         else if(nameId != 0) { tvText.setText(nameId); }
+
+        if(option.isDrawAsDisabled()) {
+            ImageView ivDisabledOverlay = new ImageView(ContentView.getActivity());
+            ivDisabledOverlay.setImageResource(R.drawable.menu_op_disabled_overlay);
+            fl.addView(ivDisabledOverlay);
+        }
     }
 
     @Override

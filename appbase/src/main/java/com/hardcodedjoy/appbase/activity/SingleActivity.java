@@ -186,7 +186,6 @@ public class SingleActivity extends Activity {
         if(!popups.isEmpty()) {
             Popup popup = popups.lastElement();
             removePopup(popup);
-            runOnUiThread(popup::onCancel);
             return;
         }
 

@@ -66,6 +66,12 @@ import java.util.concurrent.atomic.AtomicBoolean;
 @SuppressLint("ViewConstructor")
 public class ContentView extends LinearLayout {
 
+    protected int THEME_COLOR_FG;
+    protected int THEME_COLOR_BG;
+    protected int THEME_COLOR_FOCUSED;
+    protected int THEME_COLOR_GREEN;
+    protected int THEME_COLOR_RED;
+
     static private SingleActivity activity;
     static private Display display;
     static private LayoutInflater inflater;
@@ -95,7 +101,14 @@ public class ContentView extends LinearLayout {
     static public SingleActivity getActivity() { return activity; }
     static public LayoutInflater getInflater() { return inflater; }
 
-    public ContentView() { super(activity); }
+    public ContentView() {
+        super(activity);
+        THEME_COLOR_BG = ThemeUtil.getColor(activity, android.R.attr.colorBackground);
+        THEME_COLOR_FG = ThemeUtil.getColor(activity, android.R.attr.colorForeground);
+        THEME_COLOR_FOCUSED = ThemeUtil.getColor(activity, android.R.attr.colorFocusedHighlight);
+        THEME_COLOR_GREEN = ThemeUtil.getColor(activity, R.attr.appBaseColorButtonTextGreen);
+        THEME_COLOR_RED = ThemeUtil.getColor(activity, R.attr.appBaseColorButtonTextRed);
+    }
 
     public void inflate(int resId) { inflater.inflate(resId, this); }
 

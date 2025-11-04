@@ -75,7 +75,6 @@ abstract public class PopupLogin extends Popup {
             onOK(username, password);
         }
         else if(id == R.id.appbase_btn_cancel || id == R.id.appbase_btn_cancel_text) { onCancel(); }
-        else if(id == R.id.appbase_ll_outside_popup) { onCancel(); }
     }
 
     public PopupLogin(int messageStringId) { this(getString(messageStringId)); }
