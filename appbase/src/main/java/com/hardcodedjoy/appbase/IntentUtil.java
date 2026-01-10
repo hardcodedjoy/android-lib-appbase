@@ -2,7 +2,7 @@
 
 MIT License
 
-Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2026 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -156,7 +156,6 @@ public class IntentUtil {
         intentEdit.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
         activity.startActivity(Intent.createChooser(intentEdit, title));
     }
-
 
     // TODO: test (not tested)
     static public void openFileWith(Uri uri, String title, String mimeType) {

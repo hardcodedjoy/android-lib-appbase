@@ -1,7 +1,7 @@
 <!--
 MIT License
 
-Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2026 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -339,4 +339,9 @@ SOFTWARE.
     <string name="title_storage_folder">Folder stocare</string>
     <string name="title_default_file_name">Nume fișier implicit</string>
     <string name="title_welcome_to_x">Bun venit în [x]</string>
+    <string name="title_image_library">Biblioteca de imagens</string>
+    <string name="title_advanced_recording">Înregistrare avansată</string>
+    <string name="title_noise_threshold">Pragul de zgomot</string>
+    <string name="title_clap_detection_threshold">Prag detectare bătăi din palme</string>
+    <string name="title_start_after">Începe după</string>
 </resources>

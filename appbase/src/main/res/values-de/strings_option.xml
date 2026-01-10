@@ -1,7 +1,7 @@
 <!--
 MIT License
 
-Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2026 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -183,4 +183,8 @@ SOFTWARE.
     <string name="option_log_to_file">In Datei protokollieren</string>
     <string name="option_sine_wave">Sinuswelle</string>
     <string name="option_square_wave">Rechteckwelle</string>
+    <string name="option_resize">Größe ändern</string>
+    <string name="option_shrink">schrumpfen</string>
+    <string name="option_skip_silence">Stille überspringen</string>
+    <string name="option_remove_silence">Stille beseitigen</string>
 </resources>

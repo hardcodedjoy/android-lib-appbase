@@ -2,7 +2,7 @@
 
 MIT License
 
-Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2026 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -67,9 +67,44 @@ public class FileChooser {
         ActivityUtil.startActivityForResult(activity, intent, art);
     }
 
+    public void open(String[] mimeTypes, UriHandler uriHandler) {
+        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+        intent.setType("*/*");
+        intent.putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes);
+        if(initialUri != null) { intent.putExtra(EXTRA_INITIAL_URI, initialUri); }
+        intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        intent = Intent.createChooser(intent, activity.getString(R.string.open_file));
+
+        ActivityResultTask art = new ActivityResultTask();
+        art.setRunnable(() -> {
+            Uri uri = getFirstUri(art.getData());
+            if(uri == null) { return; }
+            uriHandler.handle(uri);
+        });
+        ActivityUtil.startActivityForResult(activity, intent, art);
+    }
+
     public void openRW(String mimeType, UriHandler uriHandler) {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.setType(mimeType);
+        if(initialUri != null) { intent.putExtra(EXTRA_INITIAL_URI, initialUri); }
+        intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        intent.setFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+        intent = Intent.createChooser(intent, activity.getString(R.string.open_file));
+
+        ActivityResultTask art = new ActivityResultTask();
+        art.setRunnable(() -> {
+            Uri uri = getFirstUri(art.getData());
+            if(uri == null) { return; }
+            uriHandler.handle(uri);
+        });
+        ActivityUtil.startActivityForResult(activity, intent, art);
+    }
+
+    public void openRW(String[] mimeTypes, UriHandler uriHandler) {
+        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+        intent.setType("*/*");
+        intent.putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes);
         if(initialUri != null) { intent.putExtra(EXTRA_INITIAL_URI, initialUri); }
         intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         intent.setFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
@@ -148,9 +183,38 @@ public class FileChooser {
         ActivityUtil.startActivityForResult(activity, intent, art);
     }
 
+    public void openMultiple(String[] mimeTypes, UriArrayHandler uriArrayHandler) {
+        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+        intent.setType("*/*");
+        intent.putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes);
+        if(initialUri != null) { intent.putExtra(EXTRA_INITIAL_URI, initialUri); }
+        intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
+        intent = Intent.createChooser(intent, activity.getString(R.string.open_file_s));
+
+        ActivityResultTask art = new ActivityResultTask();
+        art.setRunnable(() -> uriArrayHandler.handle(getAllUris(art.getData())));
+        ActivityUtil.startActivityForResult(activity, intent, art);
+    }
+
     public void openMultipleRW(String mimeType, UriArrayHandler uriArrayHandler) {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.setType(mimeType);
+        if(initialUri != null) { intent.putExtra(EXTRA_INITIAL_URI, initialUri); }
+        intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        intent.setFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+        intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
+        intent = Intent.createChooser(intent, activity.getString(R.string.open_file_s));
+
+        ActivityResultTask art = new ActivityResultTask();
+        art.setRunnable(() -> uriArrayHandler.handle(getAllUris(art.getData())));
+        ActivityUtil.startActivityForResult(activity, intent, art);
+    }
+
+    public void openMultipleRW(String[] mimeTypes, UriArrayHandler uriArrayHandler) {
+        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+        intent.setType("*/*");
+        intent.putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes);
         if(initialUri != null) { intent.putExtra(EXTRA_INITIAL_URI, initialUri); }
         intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         intent.setFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);

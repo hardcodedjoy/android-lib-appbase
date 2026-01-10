@@ -2,7 +2,7 @@
 
 MIT License
 
-Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2026 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -51,6 +51,16 @@ abstract public class Popup extends LinearLayout {
     public void enableDismissByOutsideClick() {
         llOutsidePopup = findViewById(R.id.appbase_ll_outside_popup);
         llOutsidePopup.setOnClickListener(ocl);
+    }
+
+    public void enableDismissByOutsideClick(Runnable onDismissByOutsideClick) {
+        llOutsidePopup = findViewById(R.id.appbase_ll_outside_popup);
+        llOutsidePopup.setOnClickListener(view -> {
+            ocl.onClick(view);
+            if(onDismissByOutsideClick != null) {
+                onDismissByOutsideClick.run();
+            }
+        });
     }
 
     public void show() { ContentView.showPopUp(this); }

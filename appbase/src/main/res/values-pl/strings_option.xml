@@ -1,7 +1,7 @@
 <!--
 MIT License
 
-Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2026 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -183,4 +183,8 @@ SOFTWARE.
     <string name="option_log_to_file">zapisz do pliku</string>
     <string name="option_sine_wave">fala sinusoidalna</string>
     <string name="option_square_wave">fala prostokątna</string>
+    <string name="option_resize">zmienić rozmiar</string>
+    <string name="option_shrink">kurczyć</string>
+    <string name="option_skip_silence">pominąć ciszę</string>
+    <string name="option_remove_silence">usuń ciszę</string>
 </resources>

@@ -1,7 +1,7 @@
 <!--
 MIT License
 
-Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2026 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -339,4 +339,9 @@ SOFTWARE.
     <string name="title_storage_folder">Depolama Klasörü</string>
     <string name="title_default_file_name">Varsayılan Dosya Adı</string>
     <string name="title_welcome_to_x">[x]\'e hoş geldiniz</string>
+    <string name="title_image_library">Resim Kütüphanesi</string>
+    <string name="title_advanced_recording">Gelişmiş kayıt</string>
+    <string name="title_noise_threshold">Gürültü eşiği</string>
+    <string name="title_clap_detection_threshold">Alkış algılama eşiği</string>
+    <string name="title_start_after">Bir süre sonra başlayın</string>
 </resources>

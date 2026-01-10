@@ -2,7 +2,7 @@
 
 MIT License
 
-Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2026 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -201,7 +201,7 @@ public class ImageUtil {
         Bitmap bitmap = BitmapFactory.decodeStream(is, null, options);
         bitmap = Bitmap.createScaledBitmap(bitmap, width, height, true);
         if(matrix != null) {
-            Bitmap.createBitmap(bitmap, 0, 0,
+            bitmap = Bitmap.createBitmap(bitmap, 0, 0,
                     bitmap.getWidth(), bitmap.getHeight(), matrix, true); // rotate
         }
         return bitmap;
@@ -233,7 +233,7 @@ public class ImageUtil {
         Bitmap bitmap = BitmapFactory.decodeStream(is, null, options);
         bitmap = Bitmap.createScaledBitmap(bitmap, width, height, true);
         if(matrix != null) {
-            Bitmap.createBitmap(bitmap, 0, 0,
+            bitmap = Bitmap.createBitmap(bitmap, 0, 0,
                     bitmap.getWidth(), bitmap.getHeight(), matrix, true); // rotate
         }
         return bitmap;
@@ -265,7 +265,7 @@ public class ImageUtil {
         Bitmap bitmap = BitmapFactory.decodeStream(is, null, options);
         bitmap = Bitmap.createScaledBitmap(bitmap, width, height, true);
         if(matrix != null) {
-            Bitmap.createBitmap(bitmap, 0, 0,
+            bitmap = Bitmap.createBitmap(bitmap, 0, 0,
                     bitmap.getWidth(), bitmap.getHeight(), matrix, true); // rotate
         }
         return bitmap;

@@ -2,7 +2,7 @@
 
 MIT License
 
-Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2026 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -208,5 +208,15 @@ public class GuiUtil {
             ((FrameLayout.LayoutParams) params).setMargins(left, top, right, bottom);
         }
         view.setLayoutParams(params);
+    }
+
+    static public boolean isPointInsideView(View view, float rawX, float rawY) {
+        int[] location = new int[2];
+        view.getLocationOnScreen(location);
+        int viewX = location[0];
+        int viewY = location[1];
+
+        return (rawX >= viewX && rawX <= (viewX + view.getWidth()) &&
+                rawY >= viewY && rawY <= (viewY + view.getHeight()));
     }
 }

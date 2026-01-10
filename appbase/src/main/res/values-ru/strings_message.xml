@@ -1,7 +1,7 @@
 <!--
 MIT License
 
-Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2026 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -80,4 +80,5 @@ SOFTWARE.
     <string name="tap_x">Нажмите [x]</string>
     <string name="expecting_x">Ожидается [x].</string>
     <string name="x_requires_y_full_version">[x] требует [y] (полная версия).</string>
+    <string name="image_lib_no_items_available_you_can_save">Нет доступных элементов. Вы можете сохранить изображения в библиотеке, и они появятся здесь.</string>
 </resources>

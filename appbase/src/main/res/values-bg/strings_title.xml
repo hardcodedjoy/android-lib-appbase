@@ -1,7 +1,7 @@
 <!--
 MIT License
 
-Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2026 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -339,4 +339,9 @@ SOFTWARE.
     <string name="title_storage_folder">Папка за съхранение</string>
     <string name="title_default_file_name">Име на файл по подразбиране</string>
     <string name="title_welcome_to_x">Добре дошли в [x]</string>
+    <string name="title_image_library">Фото библиотека</string>
+    <string name="title_advanced_recording">Разширено записване</string>
+    <string name="title_noise_threshold">Праг на шума</string>
+    <string name="title_clap_detection_threshold">Праг за откриване на пляскане с ръка</string>
+    <string name="title_start_after">Започнете след</string>
 </resources>

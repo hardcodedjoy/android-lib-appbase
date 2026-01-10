@@ -1,7 +1,7 @@
 <!--
 MIT License
 
-Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2026 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -183,4 +183,8 @@ SOFTWARE.
     <string name="option_log_to_file">înregistrare în fișier</string>
     <string name="option_sine_wave">undă sinusoidală</string>
     <string name="option_square_wave">undă dreptunghiulară</string>
+    <string name="option_resize">redimensionare</string>
+    <string name="option_shrink">micșorare</string>
+    <string name="option_skip_silence">sări peste liniște</string>
+    <string name="option_remove_silence">eliminare liniște</string>
 </resources>

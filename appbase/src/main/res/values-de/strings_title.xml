@@ -1,7 +1,7 @@
 <!--
 MIT License
 
-Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2026 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -339,4 +339,9 @@ SOFTWARE.
     <string name="title_storage_folder">Speicherordner</string>
     <string name="title_default_file_name">Standarddateiname</string>
     <string name="title_welcome_to_x">Willkommen bei [x]</string>
+    <string name="title_image_library">Bildbibliothek</string>
+    <string name="title_advanced_recording">Erweiterte Aufzeichnung</string>
+    <string name="title_noise_threshold">Rauschschwelle</string>
+    <string name="title_clap_detection_threshold">Erkennungsschwelle für Händeklatschen</string>
+    <string name="title_start_after">Beginnen Sie nach</string>
 </resources>

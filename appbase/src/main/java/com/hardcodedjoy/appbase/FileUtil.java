@@ -2,7 +2,7 @@
 
 MIT License
 
-Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2026 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -28,6 +28,7 @@ package com.hardcodedjoy.appbase;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.database.Cursor;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
@@ -46,6 +47,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
@@ -463,6 +466,54 @@ public class FileUtil {
         Arrays.sort(files);
         return files;
     }
+
+    static public String[][] listFilesUriNameMime(Context context, Uri treeUri) {
+
+        ArrayList<String[]> res = new ArrayList<>();
+
+        String rootDocId = DocumentsContract.getTreeDocumentId(treeUri);
+
+        Uri childrenUri = DocumentsContract.buildChildDocumentsUriUsingTree(
+                treeUri, rootDocId);
+
+        String[] projection = new String[] {
+                DocumentsContract.Document.COLUMN_DOCUMENT_ID,
+                DocumentsContract.Document.COLUMN_DISPLAY_NAME,
+                DocumentsContract.Document.COLUMN_MIME_TYPE
+        };
+
+        try (Cursor cursor = context.getContentResolver().query(childrenUri, projection, null, null, null)) {
+            if (cursor != null && cursor.moveToFirst()) {
+                int idIndex = cursor.getColumnIndexOrThrow(
+                        DocumentsContract.Document.COLUMN_DOCUMENT_ID);
+                int nameIndex = cursor.getColumnIndexOrThrow(
+                        DocumentsContract.Document.COLUMN_DISPLAY_NAME);
+                int mimeIndex = cursor.getColumnIndexOrThrow(
+                        DocumentsContract.Document.COLUMN_MIME_TYPE);
+
+                do {
+                    String docId = cursor.getString(idIndex);
+                    String name = cursor.getString(nameIndex);
+                    String mime = cursor.getString(mimeIndex);
+
+                    Uri childUri = DocumentsContract
+                            .buildDocumentUriUsingTree(treeUri, docId);
+
+                    res.add(new String[] { childUri.toString(), name, mime });
+                } while (cursor.moveToNext());
+            }
+        }
+
+        Collections.sort(res, (row1, row2) -> {
+            if(row1[1] == null && row2[1] == null) { return 0; }
+            if(row1[1] == null) { return 1; }
+            if(row2[1] == null) { return -1; }
+            return row1[1].compareTo(row2[1]);
+        });
+
+        return res.toArray(new String[][]{});
+    }
+
 
     static public File[] listFilesOldestFirst(File dir) {
         if(dir == null) { return new File[0]; }

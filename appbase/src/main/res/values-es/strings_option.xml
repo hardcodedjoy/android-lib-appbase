@@ -1,7 +1,7 @@
 <!--
 MIT License
 
-Copyright © 2025 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+Copyright © 2026 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -183,4 +183,8 @@ SOFTWARE.
     <string name="option_log_to_file">registrar en archivo</string>
     <string name="option_sine_wave">onda sinusoidal</string>
     <string name="option_square_wave">onda cuadrada</string>
+    <string name="option_resize">cambiar el tamaño</string>
+    <string name="option_shrink">encoger</string>
+    <string name="option_skip_silence">saltar el silencio</string>
+    <string name="option_remove_silence">eliminar el silencio</string>
 </resources>
