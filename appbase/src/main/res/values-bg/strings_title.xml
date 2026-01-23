@@ -344,4 +344,8 @@ SOFTWARE.
     <string name="title_noise_threshold">Праг на шума</string>
     <string name="title_clap_detection_threshold">Праг за откриване на пляскане с ръка</string>
     <string name="title_start_after">Започнете след</string>
+    <string name="title_x_files">[x] файлове</string>
+    <string name="title_library">Библиотека</string>
+    <string name="title_libraries">Библиотеки</string>
+    <string name="title_remaining_silence_duration">Продължителност на оставащата тишина</string>
 </resources>

@@ -199,6 +199,7 @@ public class ImageUtil {
 
         is = ContentView.openInputStream(uri);
         Bitmap bitmap = BitmapFactory.decodeStream(is, null, options);
+        if(bitmap == null) { return null; }
         bitmap = Bitmap.createScaledBitmap(bitmap, width, height, true);
         if(matrix != null) {
             bitmap = Bitmap.createBitmap(bitmap, 0, 0,
@@ -231,6 +232,7 @@ public class ImageUtil {
 
         is = ContentView.openInputStream(uri);
         Bitmap bitmap = BitmapFactory.decodeStream(is, null, options);
+        if(bitmap == null) { return null; }
         bitmap = Bitmap.createScaledBitmap(bitmap, width, height, true);
         if(matrix != null) {
             bitmap = Bitmap.createBitmap(bitmap, 0, 0,
@@ -263,6 +265,7 @@ public class ImageUtil {
 
         is = ContentView.openInputStream(uri);
         Bitmap bitmap = BitmapFactory.decodeStream(is, null, options);
+        if(bitmap == null) { return null; }
         bitmap = Bitmap.createScaledBitmap(bitmap, width, height, true);
         if(matrix != null) {
             bitmap = Bitmap.createBitmap(bitmap, 0, 0,
@@ -282,6 +285,7 @@ public class ImageUtil {
 
     static public void saveAsPNG(Bitmap bitmap, File file) throws Exception {
         FileOutputStream fos = new FileOutputStream(file);
+        //noinspection resource
         fos.getChannel().truncate(0);
         saveAsPNG(bitmap, fos);
         fos.close();
@@ -289,9 +293,38 @@ public class ImageUtil {
 
     static public void saveAsJPG(Bitmap bitmap, File file, int jpegQuality) throws Exception {
         FileOutputStream fos = new FileOutputStream(file);
+        //noinspection resource
         fos.getChannel().truncate(0);
         saveAsJPG(bitmap, fos, jpegQuality);
         fos.close();
+    }
+
+    static private void saveAsJPGorPNG(Bitmap bitmap, OutputStream os, String fileName, int jpegQuality) throws Exception {
+        String ext = FileUtil.getExtensionLowerCase(fileName);
+        if(bitmap == null) {
+            throw new Exception("bitmap == null");
+        } else if("jpg".equals(ext)) {
+            saveAsJPG(bitmap, os, jpegQuality);
+        } else if("png".equals(ext)) {
+            saveAsPNG(bitmap, os);
+        } else {
+            throw new Exception(ContentView.getString(
+                    com.hardcodedjoy.appbase.R.string.err_output_file_format));
+        }
+        os.close();
+    }
+
+    static public void saveAsJPGorPNG(Bitmap bitmap, Uri destUri, int jpegQuality) throws Exception {
+        OutputStream os = ContentView.openOutputStream(destUri);
+        String fileName = FileUtil.getFileName(destUri);
+        saveAsJPGorPNG(bitmap, os, fileName, jpegQuality);
+    }
+
+    static public void saveAsJPGorPNG(Bitmap bitmap, File destFile, int jpegQuality) throws Exception {
+        //noinspection IOStreamConstructor
+        OutputStream os = new FileOutputStream(destFile);
+        String fileName = destFile.getName();
+        saveAsJPGorPNG(bitmap, os, fileName, jpegQuality);
     }
 
     static public Bitmap cropAndScale(Bitmap inputBitmap, float cropX, float cropY,
@@ -332,6 +365,7 @@ public class ImageUtil {
         if(cy >= h) { return false; }
 
         if(cx + cw > w) { return false; }
+        //noinspection RedundantIfStatement
         if(cy + ch > h) { return false; }
 
         return true;

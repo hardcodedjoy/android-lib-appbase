@@ -344,4 +344,8 @@ SOFTWARE.
     <string name="title_noise_threshold">Soglia di rumore</string>
     <string name="title_clap_detection_threshold">Soglia di rilevamento del battito di mani</string>
     <string name="title_start_after">Inizia dopo</string>
+    <string name="title_x_files">[x] file</string>
+    <string name="title_library">Libreria</string>
+    <string name="title_libraries">Librerie</string>
+    <string name="title_remaining_silence_duration">Durata del silenzio rimanente</string>
 </resources>

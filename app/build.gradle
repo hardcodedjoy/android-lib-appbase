@@ -10,8 +10,8 @@ android {
         applicationId "com.hardcodedjoy.dev.appbase"
         minSdkVersion 21
         targetSdk 34
-        versionCode 114
-        versionName "2.3.4"
+        versionCode 115
+        versionName "2.3.5"
         buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
     }
     buildTypes {

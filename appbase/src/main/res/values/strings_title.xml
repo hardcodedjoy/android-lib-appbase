@@ -344,4 +344,8 @@ SOFTWARE.
     <string name="title_noise_threshold">Noise threshold</string>
     <string name="title_clap_detection_threshold">Clap detection threshold</string>
     <string name="title_start_after">Start after</string>
+    <string name="title_x_files">[x] files</string>
+    <string name="title_library">Library</string>
+    <string name="title_libraries">Libraries</string>
+    <string name="title_remaining_silence_duration">Remaining silence duration</string>
 </resources>

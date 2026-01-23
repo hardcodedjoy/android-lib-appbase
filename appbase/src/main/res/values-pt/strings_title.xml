@@ -344,4 +344,8 @@ SOFTWARE.
     <string name="title_noise_threshold">Limiar de ruído</string>
     <string name="title_clap_detection_threshold">Limiar de detecção de palmas</string>
     <string name="title_start_after">Comece depois de</string>
+    <string name="title_x_files">[x] arquivos</string>
+    <string name="title_library">Biblioteca</string>
+    <string name="title_libraries">Bibliotecas</string>
+    <string name="title_remaining_silence_duration">Duração do silêncio restante</string>
 </resources>

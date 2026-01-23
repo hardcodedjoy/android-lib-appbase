@@ -344,4 +344,8 @@ SOFTWARE.
     <string name="title_noise_threshold">Pragul de zgomot</string>
     <string name="title_clap_detection_threshold">Prag detectare bătăi din palme</string>
     <string name="title_start_after">Începe după</string>
+    <string name="title_x_files">[x] fișiere</string>
+    <string name="title_library">Biblioteca</string>
+    <string name="title_libraries">Biblioteci</string>
+    <string name="title_remaining_silence_duration">Durata liniștii rămase</string>
 </resources>

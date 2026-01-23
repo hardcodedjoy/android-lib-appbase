@@ -185,6 +185,7 @@ public class SingleActivity extends Activity {
     public void onBackPressed() {
         if(!popups.isEmpty()) {
             Popup popup = popups.lastElement();
+            popup.performOutsideClick();
             removePopup(popup);
             return;
         }

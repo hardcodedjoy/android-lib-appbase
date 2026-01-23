@@ -344,4 +344,8 @@ SOFTWARE.
     <string name="title_noise_threshold">Rauschschwelle</string>
     <string name="title_clap_detection_threshold">Erkennungsschwelle für Händeklatschen</string>
     <string name="title_start_after">Beginnen Sie nach</string>
+    <string name="title_x_files">[x] Dateien</string>
+    <string name="title_library">Bibliothek</string>
+    <string name="title_libraries">Bibliotheken</string>
+    <string name="title_remaining_silence_duration">Dauer der verbleibenden Stille</string>
 </resources>

@@ -344,4 +344,8 @@ SOFTWARE.
     <string name="title_noise_threshold">Порог шума</string>
     <string name="title_clap_detection_threshold">Порог обнаружения хлопка</string>
     <string name="title_start_after">Начать после</string>
+    <string name="title_x_files">[x] файлы</string>
+    <string name="title_library">Библиотека</string>
+    <string name="title_libraries">Библиотеки</string>
+    <string name="title_remaining_silence_duration">Продолжительность оставшейся тишины</string>
 </resources>

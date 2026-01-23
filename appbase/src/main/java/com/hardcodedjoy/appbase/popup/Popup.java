@@ -63,6 +63,12 @@ abstract public class Popup extends LinearLayout {
         });
     }
 
+    public void performOutsideClick() {
+        if(llOutsidePopup != null) {
+            llOutsidePopup.performClick();
+        }
+    }
+
     public void show() { ContentView.showPopUp(this); }
 
     static protected String getString(int resId) {

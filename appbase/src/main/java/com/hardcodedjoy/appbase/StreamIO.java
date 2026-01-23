@@ -26,9 +26,12 @@ SOFTWARE.
 
 package com.hardcodedjoy.appbase;
 
+import com.hardcodedjoy.appbase.listeners.LongListener;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 @SuppressWarnings("unused")
 public class StreamIO {
@@ -52,6 +55,24 @@ public class StreamIO {
             if(len <= 0) { break; }
             read = is.read(buffer, 0, buffer.length < len ? buffer.length : (int)len);
             len -= read;
+            if (Thread.interrupted()) { throw new InterruptedException(); }
+        }
+    }
+
+    static public void copyStream(InputStream is,
+                                  OutputStream os,
+                                  int blockLen,
+                                  AtomicBoolean cancel,
+                                  LongListener progressBytes) throws IOException, InterruptedException {
+        long bytesCopied = 0;
+        byte[] buffer = new byte[blockLen];
+        int read = is.read(buffer, 0, buffer.length);
+        while(read != -1) {
+            if(cancel.get()) { break; }
+            os.write(buffer, 0, read);
+            bytesCopied += read;
+            progressBytes.onChanged(bytesCopied);
+            read = is.read(buffer, 0, buffer.length);
             if (Thread.interrupted()) { throw new InterruptedException(); }
         }
     }

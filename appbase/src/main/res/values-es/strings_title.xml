@@ -344,4 +344,8 @@ SOFTWARE.
     <string name="title_noise_threshold">Umbral de ruido</string>
     <string name="title_clap_detection_threshold">Umbral de detección de aplausos</string>
     <string name="title_start_after">Empezar después de</string>
+    <string name="title_x_files">[x] archivos</string>
+    <string name="title_library">Biblioteca</string>
+    <string name="title_libraries">Bibliotecas</string>
+    <string name="title_remaining_silence_duration">Duración del silencio restante</string>
 </resources>

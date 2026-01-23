@@ -344,4 +344,8 @@ SOFTWARE.
     <string name="title_noise_threshold">Поріг шуму</string>
     <string name="title_clap_detection_threshold">Поріг виявлення оплесків</string>
     <string name="title_start_after">Початок після</string>
+    <string name="title_x_files">[x] файли</string>
+    <string name="title_library">Бібліотека</string>
+    <string name="title_libraries">Бібліотеки</string>
+    <string name="title_remaining_silence_duration">Тривалість мовчання, що залишилося</string>
 </resources>

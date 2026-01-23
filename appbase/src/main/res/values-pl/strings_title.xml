@@ -344,4 +344,8 @@ SOFTWARE.
     <string name="title_noise_threshold">Próg hałasu</string>
     <string name="title_clap_detection_threshold">Próg wykrywania klaśnięcia</string>
     <string name="title_start_after">Zacznij po</string>
+    <string name="title_x_files">[x] pliki</string>
+    <string name="title_library">Biblioteka</string>
+    <string name="title_libraries">Biblioteki</string>
+    <string name="title_remaining_silence_duration">Czas trwania pozostałej ciszy</string>
 </resources>

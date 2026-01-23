@@ -344,4 +344,8 @@ SOFTWARE.
     <string name="title_noise_threshold">Seuil de bruit</string>
     <string name="title_clap_detection_threshold">Seuil de détection des applaudissements</string>
     <string name="title_start_after">Commencez après</string>
+    <string name="title_x_files">[x] fichiers</string>
+    <string name="title_library">Bibliothèque</string>
+    <string name="title_libraries">Bibliothèques</string>
+    <string name="title_remaining_silence_duration">Durée du silence restant</string>
 </resources>

@@ -30,7 +30,7 @@ public class AdditionalMimeTypes {
 
     static public String getMimeTypeFromExtension(String extension) {
         if(extension == null) { return null; }
-        if(extension.length() == 0) { return null; }
+        if(extension.isEmpty()) { return null; }
         switch (extension) {
             case "aac": return "audio/aac";
             case "aar": return "application/android-library";
@@ -74,6 +74,7 @@ public class AdditionalMimeTypes {
             case "jsonld": return "application/ld+json";
             case "kt": return "text/x-kotlin";
             case "m": return "text/x-matlab";
+            case "m4a": return "audio/mp4";
             case "mid": return "audio/midi";
             case "midi": return "audio/midi";
             case "mjs": return "text/javascript";
@@ -130,7 +131,7 @@ public class AdditionalMimeTypes {
 
     static public String getExtensionFromMimeType(String mimeType) {
         if(mimeType == null) { return null; }
-        if(mimeType.length() == 0) { return null; }
+        if(mimeType.isEmpty()) { return null; }
         switch(mimeType) {
             case "audio/aac": return "aac";
             case "application/android-library": return "aar";
@@ -174,6 +175,8 @@ public class AdditionalMimeTypes {
             case "application/ld+json": return "jsonld";
             case "text/x-kotlin": return "kt";
             case "text/x-matlab": return "m";
+            case "audio/mp4": return "m4a";
+            case "audio/x-m4a": return "m4a";
             case "audio/midi": return "mid";
             // case "audio/midi": return "midi"
             // case "text/javascript": return "mjs";

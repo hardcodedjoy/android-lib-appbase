@@ -344,4 +344,8 @@ SOFTWARE.
     <string name="title_noise_threshold">Gürültü eşiği</string>
     <string name="title_clap_detection_threshold">Alkış algılama eşiği</string>
     <string name="title_start_after">Bir süre sonra başlayın</string>
+    <string name="title_x_files">[x] dosyaları</string>
+    <string name="title_library">Kütüphanesi</string>
+    <string name="title_libraries">Kütüphaneler</string>
+    <string name="title_remaining_silence_duration">Kalan sessizliğin süresi</string>
 </resources>

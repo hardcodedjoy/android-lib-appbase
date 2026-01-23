@@ -57,6 +57,11 @@ public class PermissionUtil {
         runWithPermissions(new String[]{permission}, onGranted, onDenied);
     }
 
+    @SuppressWarnings("unused")
+    static public void runWithOrWithoutPermission(String permission, Runnable r) {
+        runWithPermissions(new String[]{permission}, r, r);
+    }
+
     static public void runWithPermissions(String[] permissions, Runnable onGranted) {
         runWithPermissions(permissions, onGranted, () -> {});
     }
