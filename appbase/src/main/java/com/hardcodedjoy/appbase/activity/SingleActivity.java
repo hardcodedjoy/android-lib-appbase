@@ -33,6 +33,8 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.Window;
 import android.widget.FrameLayout;
+import android.window.OnBackInvokedCallback;
+import android.window.OnBackInvokedDispatcher;
 
 import androidx.annotation.NonNull;
 import androidx.core.graphics.Insets;
@@ -55,6 +57,8 @@ public class SingleActivity extends Activity {
     static private Class<?> cvInitialClass = null;
     static private ContentView cvCurrent = null;
     static private final Vector<Popup> popups = new Vector<>();
+
+    private OnBackInvokedCallback onBackInvokedCallback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,11 +84,22 @@ public class SingleActivity extends Activity {
         // settings.getTheme needs activity to get the day / night mode of android settings
         ThemeUtil.setTheme(this, settings.getTheme(this));
 
-        /* a if(Build.VERSION.SDK_INT >= 33) {
+        if(android.os.Build.VERSION.SDK_INT >= 33) {
+            onBackInvokedCallback = SingleActivity.this::handleOnBackPressed;
             getOnBackInvokedDispatcher().registerOnBackInvokedCallback(
-                    OnBackInvokedDispatcher.PRIORITY_DEFAULT,
-                    this::onBackPressedNew);
-        } */
+                    OnBackInvokedDispatcher.PRIORITY_DEFAULT, onBackInvokedCallback);
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        if(android.os.Build.VERSION.SDK_INT >= 33) {
+            if(onBackInvokedCallback != null) {
+                getOnBackInvokedDispatcher()
+                        .unregisterOnBackInvokedCallback(onBackInvokedCallback);
+            }
+        }
+        super.onDestroy();
     }
 
     @Override
@@ -187,8 +202,7 @@ public class SingleActivity extends Activity {
         ActivityUtil.onActivityResult(requestCode, resultCode, data);
     }
 
-    @Override
-    public void onBackPressed() {
+    private void handleOnBackPressed() {
         if(!popups.isEmpty()) {
             Popup popup = popups.lastElement();
             popup.performOutsideClick();
@@ -204,6 +218,9 @@ public class SingleActivity extends Activity {
         // else -> not consumed -> close app:
         finish();
     }
+
+    @Override
+    public void onBackPressed() { handleOnBackPressed(); }
 
     @Override
     public void finish() {
