@@ -188,4 +188,8 @@ SOFTWARE.
     <string name="option_shrink">shrink</string>
     <string name="option_skip_silence">skip silence</string>
     <string name="option_remove_silence">remove silence</string>
+    <string name="option_published">published</string>
+    <string name="option_all_posts">all posts</string>
+    <string name="option_new_post">new post</string>
+    <string name="option_edit_post">edit post</string>
 </resources>

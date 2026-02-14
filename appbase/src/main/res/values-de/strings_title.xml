@@ -348,4 +348,9 @@ SOFTWARE.
     <string name="title_library">Bibliothek</string>
     <string name="title_libraries">Bibliotheken</string>
     <string name="title_remaining_silence_duration">Dauer der verbleibenden Stille</string>
+    <string name="title_mode_html">HTML</string>
+    <string name="title_protocol">Protokoll</string>
+    <string name="title_access_token">Zugriffstoken</string>
+    <string name="title_free">Frei</string>
+    <string name="title_install">Installieren</string>
 </resources>

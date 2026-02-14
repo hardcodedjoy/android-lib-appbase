@@ -348,4 +348,9 @@ SOFTWARE.
     <string name="title_library">Biblioteca</string>
     <string name="title_libraries">Biblioteci</string>
     <string name="title_remaining_silence_duration">Durata liniștii rămase</string>
+    <string name="title_mode_html">HTML</string>
+    <string name="title_protocol">Protocol</string>
+    <string name="title_access_token">Token de acces</string>
+    <string name="title_free">Gratuit</string>
+    <string name="title_install">Instalează</string>
 </resources>

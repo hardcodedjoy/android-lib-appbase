@@ -61,4 +61,5 @@ SOFTWARE.
     <string name="address_port">адрес:порт</string>
     <string name="integer_number">цяло число</string>
     <string name="english">Английски</string>
+    <string name="dont_ask_again">не питай отново</string>
 </resources>

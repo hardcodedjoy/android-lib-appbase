@@ -44,6 +44,10 @@ public class HttpTransfer {
     private String accept;
     private String acceptLanguage;
     private String protocol;
+    private final Vector<NameValuePair> additionalHeaders;
+    private int responseCode;
+
+    public HttpTransfer() { this.additionalHeaders = new Vector<>(); }
 
     public void setUserAgent(String userAgent) { this.userAgent = userAgent; }
     public String getUserAgent() { return userAgent; }
@@ -57,21 +61,37 @@ public class HttpTransfer {
     public void setProtocol(String protocol) { this.protocol = protocol; }
     public String getProtocol() { return protocol; }
 
-    public byte[] getAsByteArray(String urlString) {
+    public void addHeader(String name, String value) {
+        additionalHeaders.add(new NameValuePair(name, value));
+    }
+
+    public void clearHeaders() { additionalHeaders.clear(); }
+
+    public String getAsString(String urlString) {
+        byte[] ba = getAsBytes(urlString);
+        return StringUtil.fromBytesUTF8(ba);
+    }
+
+    public byte[] getAsBytes(String urlString) {
         try {
             URL url = new URL(urlString);
+            //noinspection ExtractMethodRecommender
             HttpURLConnection c = (HttpURLConnection) url.openConnection();
+
             c.setRequestMethod("GET");
+            c.setUseCaches(false);
+            // c.setDoOutput(true); no output for GET (fixed 2026-02-05)
+
             if(userAgent != null) { c.setRequestProperty("User-Agent", userAgent); }
             if(accept != null) { c.setRequestProperty("Accept", accept); }
             if(acceptLanguage != null) { c.setRequestProperty("Accept-Language", acceptLanguage); }
+            for(NameValuePair nvp : additionalHeaders) {
+                c.setRequestProperty(nvp.getName(), nvp.getValueString());
+            }
 
-            c.setUseCaches(false);
-            c.setDoOutput(true);
-
-            InputStream is = c.getInputStream();
+            InputStream is = getInputStreamOrErrorStream(c);
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            readAllBytes(is, baos);
+            StreamIO.copyStream(is, baos);
             is.close();
             c.disconnect();
 
@@ -83,18 +103,41 @@ public class HttpTransfer {
         }
     }
 
-    public String getAsString(String urlString) {
+    public String deleteForString(String urlString) {
+        byte[] ba = deleteForBytes(urlString);
+        return StringUtil.fromBytesUTF8(ba);
+    }
+
+    public byte[] deleteForBytes(String urlString) {
         try {
-            byte[] ba = getAsByteArray(urlString);
-            if(ba == null) { return null; }
-            //noinspection CharsetObjectCanBeUsed
-            return new String(ba, "UTF-8");
+            URL url = new URL(urlString);
+            //noinspection ExtractMethodRecommender
+            HttpURLConnection c = (HttpURLConnection) url.openConnection();
+
+            c.setRequestMethod("DELETE");
+            c.setUseCaches(false);
+            // c.setDoOutput(true); no output for DELETE (fixed 2026-02-05)
+
+            if(userAgent != null) { c.setRequestProperty("User-Agent", userAgent); }
+            if(accept != null) { c.setRequestProperty("Accept", accept); }
+            if(acceptLanguage != null) { c.setRequestProperty("Accept-Language", acceptLanguage); }
+            for(NameValuePair nvp : additionalHeaders) {
+                c.setRequestProperty(nvp.getName(), nvp.getValueString());
+            }
+
+            InputStream is = getInputStreamOrErrorStream(c);
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            StreamIO.copyStream(is, baos);
+            is.close();
+            c.disconnect();
+
+            return baos.toByteArray();
+
         } catch (Exception e) {
             e.printStackTrace(System.err);
             return null;
         }
     }
-
 
     public String postForString(String urlString, String name, byte[] content) {
         return postForString(urlString, new String[]{ name }, new byte[][]{ content });
@@ -121,17 +164,22 @@ public class HttpTransfer {
                 contents.toArray(new byte[][]{}));
     }
 
-    @SuppressWarnings("CharsetObjectCanBeUsed")
-    public byte[] postForBytes(String urlString, String[] names, byte[][] contents) {
+    private byte[] postForBytes(String urlString, String[] names, byte[][] contents) {
         try {
             String boundary = Long.toHexString(System.currentTimeMillis());
+            //noinspection ExtractMethodRecommender
             URL destinationURL = new URL(urlString);
             HttpURLConnection c = (HttpURLConnection) destinationURL.openConnection();
 
             c.setRequestMethod("POST");
-            if(userAgent != null) { c.setRequestProperty("User-Agent", userAgent); }
-
+            c.setUseCaches(false);
             c.setDoOutput(true);
+
+            if(userAgent != null) { c.setRequestProperty("User-Agent", userAgent); }
+            for(NameValuePair nvp : additionalHeaders) {
+                c.setRequestProperty(nvp.getName(), nvp.getValueString());
+            }
+
             c.setRequestProperty("Content-Type", "multipart/form-data; boundary=" + boundary);
 
             OutputStream os = c.getOutputStream();
@@ -139,6 +187,7 @@ public class HttpTransfer {
             int n = names.length;
             String name;
             byte[] content;
+            byte[] ba;
 
             for(int i=0; i<n; i++) {
                 name = names[i];
@@ -147,23 +196,21 @@ public class HttpTransfer {
                 if(name == null) { name = ""; }
                 if(content == null) { content = new byte[0]; }
 
-                os.write(("--" + boundary + "\r\n").getBytes("UTF-8"));
-                os.write(("Content-Disposition: form-data; name=\"" + name + "\"\r\n")
-                        .getBytes("UTF-8"));
-
-                os.write(("\r\n").getBytes("UTF-8"));
+                outputAsUTF8Bytes(os, "--" + boundary + "\r\n");
+                outputAsUTF8Bytes(os, "Content-Disposition: form-data; name=\"" + name + "\"\r\n");
+                outputAsUTF8Bytes(os, "\r\n");
 
                 os.write(content);
 
-                os.write(("\r\n").getBytes("UTF-8"));
-                os.write(("--" + boundary + "--\r\n").getBytes("UTF-8"));
+                outputAsUTF8Bytes(os, "\r\n");
+                outputAsUTF8Bytes(os, "--" + boundary + "--\r\n");
             }
 
             os.close();
 
-            InputStream is = c.getInputStream();
+            InputStream is = getInputStreamOrErrorStream(c);
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            readAllBytes(is, baos);
+            StreamIO.copyStream(is, baos);
             is.close();
 
             c.disconnect();
@@ -175,11 +222,62 @@ public class HttpTransfer {
         }
     }
 
-    static private void readAllBytes(InputStream is, OutputStream os) throws Exception {
-        byte[] block = new byte[1024];
-        int bytesRead;
-        while((bytesRead = is.read(block)) != -1) {
-            os.write(block, 0, bytesRead);
+    // for POST / PUT / PATCH
+    public String sendJsonForString(String requestMethod, String urlString, String jsonBody) {
+        byte[] ba = sendJsonForBytes(requestMethod, urlString, jsonBody);
+        return StringUtil.fromBytesUTF8(ba);
+    }
+
+    // for POST / PUT / PATCH
+    public byte[] sendJsonForBytes(String requestMethod, String urlString, String jsonBody) {
+        try {
+            //noinspection ExtractMethodRecommender
+            URL destinationURL = new URL(urlString);
+            HttpURLConnection c = (HttpURLConnection)
+                    destinationURL.openConnection();
+
+            c.setRequestMethod(requestMethod);
+            c.setUseCaches(false);
+            c.setDoOutput(true);
+
+            if(userAgent != null) { c.setRequestProperty("User-Agent", userAgent); }
+            for(NameValuePair nvp : additionalHeaders) {
+                c.setRequestProperty(nvp.getName(), nvp.getValueString());
+            }
+
+            c.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+
+            OutputStream os = c.getOutputStream();
+            outputAsUTF8Bytes(os, jsonBody);
+            os.close();
+
+            InputStream is = getInputStreamOrErrorStream(c);
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            StreamIO.copyStream(is, baos);
+            is.close();
+
+            c.disconnect();
+
+            return baos.toByteArray();
+        } catch (Exception e) {
+            e.printStackTrace(System.err);
+            return null;
         }
     }
+
+    static private void outputAsUTF8Bytes(OutputStream os, String s) throws Exception {
+        byte[] ba = StringUtil.getBytesUTF8(s);
+        os.write(ba);
+    }
+
+    private InputStream getInputStreamOrErrorStream(HttpURLConnection c) throws Exception {
+        responseCode = c.getResponseCode();
+        if(responseCode >= 200 && responseCode < 300) {
+            return c.getInputStream();
+        } else {
+            return c.getErrorStream();
+        }
+    }
+
+    public int getResponseCode() { return responseCode; }
 }

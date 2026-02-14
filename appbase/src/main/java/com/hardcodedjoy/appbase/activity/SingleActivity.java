@@ -79,6 +79,12 @@ public class SingleActivity extends Activity {
 
         // settings.getTheme needs activity to get the day / night mode of android settings
         ThemeUtil.setTheme(this, settings.getTheme(this));
+
+        /* a if(Build.VERSION.SDK_INT >= 33) {
+            getOnBackInvokedDispatcher().registerOnBackInvokedCallback(
+                    OnBackInvokedDispatcher.PRIORITY_DEFAULT,
+                    this::onBackPressedNew);
+        } */
     }
 
     @Override
@@ -194,8 +200,14 @@ public class SingleActivity extends Activity {
             boolean consumed = cvCurrent.onBackPressed();
             if(consumed) { return; }
         }
-        cvCurrent = null;
-        super.onBackPressed();
+
+        // else -> not consumed -> close app:
+        finish();
+    }
+
+    @Override
+    public void finish() {
+        cvCurrent = null; // to create new CV instance on next app start
         super.finish();
     }
 
@@ -205,7 +217,18 @@ public class SingleActivity extends Activity {
     public void showPopup(Popup popup) {
         if(popup == null) { return; }
         runOnUiThread(() -> {
+            popups.remove(popup); // to be sure it will not exist twice
             popups.add(popup);
+
+            // remove from its parent to prevent
+            // java.lang.IllegalStateException: The specified child
+            // already has a parent. You must call removeView()
+            // on the child's parent first.
+            ViewParent parent = popup.getParent();
+            if(parent instanceof ViewGroup) {
+                ((ViewGroup) parent).removeView(popup);
+            }
+
             FrameLayout frameLayout = (FrameLayout) cvCurrent.getParent();
             frameLayout.addView(popup);
         });

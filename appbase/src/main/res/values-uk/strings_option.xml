@@ -187,4 +187,8 @@ SOFTWARE.
     <string name="option_shrink">зменшити</string>
     <string name="option_skip_silence">пропустити тишу</string>
     <string name="option_remove_silence">видалити тишу</string>
+    <string name="option_published">опубліковано</string>
+    <string name="option_all_posts">всі дописи</string>
+    <string name="option_new_post">новий допис</string>
+    <string name="option_edit_post">редагувати допис</string>
 </resources>

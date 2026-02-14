@@ -187,4 +187,8 @@ SOFTWARE.
     <string name="option_shrink">schrumpfen</string>
     <string name="option_skip_silence">Stille überspringen</string>
     <string name="option_remove_silence">Stille beseitigen</string>
+    <string name="option_published">veröffentlicht</string>
+    <string name="option_all_posts">alle Beiträge</string>
+    <string name="option_new_post">neuer Beitrag</string>
+    <string name="option_edit_post">Beitrag bearbeiten</string>
 </resources>

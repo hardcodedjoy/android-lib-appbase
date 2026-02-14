@@ -187,4 +187,8 @@ SOFTWARE.
     <string name="option_shrink">kurczyć</string>
     <string name="option_skip_silence">pominąć ciszę</string>
     <string name="option_remove_silence">usuń ciszę</string>
+    <string name="option_published">opublikowany</string>
+    <string name="option_all_posts">wszystkie posty</string>
+    <string name="option_new_post">nowy post</string>
+    <string name="option_edit_post">edytuj post</string>
 </resources>

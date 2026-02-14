@@ -348,4 +348,9 @@ SOFTWARE.
     <string name="title_library">Библиотека</string>
     <string name="title_libraries">Библиотеки</string>
     <string name="title_remaining_silence_duration">Продължителност на оставащата тишина</string>
+    <string name="title_mode_html">HTML</string>
+    <string name="title_protocol">Протокол</string>
+    <string name="title_access_token">Токен за достъп</string>
+    <string name="title_free">Безплатно</string>
+    <string name="title_install">Инсталиране</string>
 </resources>

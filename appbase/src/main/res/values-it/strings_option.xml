@@ -187,4 +187,8 @@ SOFTWARE.
     <string name="option_shrink">restringersi</string>
     <string name="option_skip_silence">salta il silenzio</string>
     <string name="option_remove_silence">rimuovere il silenzio</string>
+    <string name="option_published">pubblicato</string>
+    <string name="option_all_posts">tutti i post</string>
+    <string name="option_new_post">nuovo post</string>
+    <string name="option_edit_post">modifica post</string>
 </resources>

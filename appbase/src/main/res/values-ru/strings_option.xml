@@ -187,4 +187,8 @@ SOFTWARE.
     <string name="option_shrink">уменьшить</string>
     <string name="option_skip_silence">пропустить тишину</string>
     <string name="option_remove_silence">убрать тишину</string>
+    <string name="option_published">опубликовано</string>
+    <string name="option_all_posts">все записи</string>
+    <string name="option_new_post">новая запись</string>
+    <string name="option_edit_post">редактировать запись</string>
 </resources>

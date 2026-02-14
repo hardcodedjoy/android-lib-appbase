@@ -187,4 +187,8 @@ SOFTWARE.
     <string name="option_shrink">свиване</string>
     <string name="option_skip_silence">пропускане на тишината</string>
     <string name="option_remove_silence">премахнете тишината</string>
+    <string name="option_published">публикувано</string>
+    <string name="option_all_posts">всички публикации</string>
+    <string name="option_new_post">нова публикация</string>
+    <string name="option_edit_post">редактиране на публикацията</string>
 </resources>

@@ -61,4 +61,5 @@ SOFTWARE.
     <string name="address_port">adres:port</string>
     <string name="integer_number">tam sayı</string>
     <string name="english">İngilizce</string>
+    <string name="dont_ask_again">tekrar sorma</string>
 </resources>

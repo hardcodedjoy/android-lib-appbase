@@ -61,4 +61,5 @@ SOFTWARE.
     <string name="address_port">address:port</string>
     <string name="integer_number">integer number</string>
     <string name="english">English</string>
+    <string name="dont_ask_again">don\'t ask again</string>
 </resources>

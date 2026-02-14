@@ -61,4 +61,5 @@ SOFTWARE.
     <string name="address_port">adresă:port</string>
     <string name="integer_number">număr întreg</string>
     <string name="english">Engleză</string>
+    <string name="dont_ask_again">nu întreba din nou</string>
 </resources>

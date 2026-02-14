@@ -61,4 +61,5 @@ SOFTWARE.
     <string name="address_port">dirección:puerto</string>
     <string name="integer_number">número entero</string>
     <string name="english">Inglés</string>
+    <string name="dont_ask_again">no preguntes de nuevo</string>
 </resources>

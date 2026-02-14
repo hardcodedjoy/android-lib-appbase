@@ -187,4 +187,8 @@ SOFTWARE.
     <string name="option_shrink">encolher</string>
     <string name="option_skip_silence">pular silêncio</string>
     <string name="option_remove_silence">remover silêncio</string>
+    <string name="option_published">publicado</string>
+    <string name="option_all_posts">todas as postagens</string>
+    <string name="option_new_post">nova postagem</string>
+    <string name="option_edit_post">editar postagem</string>
 </resources>
