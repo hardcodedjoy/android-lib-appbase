@@ -41,6 +41,7 @@ import androidx.core.view.WindowInsetsControllerCompat;
 
 import com.hardcodedjoy.appbase.R;
 import com.hardcodedjoy.appbase.SettingsKeys;
+import com.hardcodedjoy.appbase.contentview.ContentView;
 
 import java.lang.reflect.Field;
 import java.util.Vector;
@@ -126,10 +127,24 @@ public class ThemeUtil {
 
         Vector<String> themes = new Vector<>();
 
+        // String dbg = "";
+
         for(Field field : fields) {
             themeName = field.getName();
+
+            //dbg += themeName + " ";
+
             int id = resources.getIdentifier(themeName, "style", packageName);
-            if(isNotTheme(activity, id)) { continue; }
+            if(id == 0) {
+                //dbg += " == 0\n";
+                continue;
+            }
+            if(isNotTheme(activity, id)) {
+                //dbg += " is not theme\n";
+                continue;
+            }
+
+            //dbg += " is theme OK\n";
 
             int colorBackground = getColor(activity, id, android.R.attr.colorBackground);
             int colorForeground = getColor(activity, id, android.R.attr.colorForeground);
@@ -145,6 +160,8 @@ public class ThemeUtil {
             // else -> wanted theme
             themes.add(themeName);
         }
+
+        // ContentView.showInfo(dbg);
 
         return themes.toArray(new String[0]);
     }

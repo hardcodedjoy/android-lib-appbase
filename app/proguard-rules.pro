@@ -19,3 +19,23 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-keep public class com.hardcodedjoy.dev.appbase.cv.CvMain {
+    public <init>(...);
+}
+
+-keep public class com.hardcodedjoy.appbase.contentview.CvAboutBase {
+    public <init>(...);
+}
+
+-keep public class com.hardcodedjoy.dev.appbase.cv.CvSettings {
+    public <init>(...);
+}
+
+-keep public class com.hardcodedjoy.dev.appbase.Settings {
+    public <init>(...);
+}
+
+-keep class com.hardcodedjoy.appbase.R$style {
+    *;
+}
