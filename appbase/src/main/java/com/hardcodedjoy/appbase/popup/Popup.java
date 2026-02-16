@@ -26,8 +26,11 @@ SOFTWARE.
 
 package com.hardcodedjoy.appbase.popup;
 
+import android.graphics.Rect;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.LinearLayout;
 
 import com.hardcodedjoy.appbase.R;
@@ -73,5 +76,61 @@ abstract public class Popup extends LinearLayout {
 
     static protected String getString(int resId) {
         return ContentView.getActivity().getString(resId);
+    }
+
+
+
+    // Adjust if softInput keyboard opens:
+
+    private ViewTreeObserver viewTreeObserver;
+    private ViewTreeObserver.OnGlobalLayoutListener listener;
+    private final Rect contentAreaOfWindowBounds = new Rect();
+    private int usableHeightPrevious = 0;
+
+    private void possiblyResizeLayout() {
+        getWindowVisibleDisplayFrame(contentAreaOfWindowBounds);
+        int usableHeightNow = contentAreaOfWindowBounds.height();
+
+        if(usableHeightNow != usableHeightPrevious) {
+
+            int screenHeight = getRootView().getHeight();
+            int keypadHeight = screenHeight - usableHeightNow;
+
+            //noinspection StatementWithEmptyBody
+            if(keypadHeight > screenHeight * 0.125) {
+                // keyboard is opened
+                // onSoftInputOpened();
+            } else {
+                // keyboard is closed
+                // onSoftInputClosed();
+            }
+
+            ViewGroup.LayoutParams params = getLayoutParams();
+            params.height = usableHeightNow;
+            setLayoutParams(params);
+
+            usableHeightPrevious = usableHeightNow;
+        }
+    }
+
+    @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        if(viewTreeObserver != null) {
+            if(viewTreeObserver.isAlive()) {
+                viewTreeObserver.removeOnGlobalLayoutListener(listener);
+            }
+        }
+        viewTreeObserver = getViewTreeObserver();
+        listener = this::possiblyResizeLayout;
+        viewTreeObserver.addOnGlobalLayoutListener(listener);
+    }
+
+    @Override
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        if(viewTreeObserver != null && viewTreeObserver.isAlive()) {
+            viewTreeObserver.removeOnGlobalLayoutListener(listener);
+        }
     }
 }

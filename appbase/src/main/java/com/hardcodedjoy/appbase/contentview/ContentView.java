@@ -31,10 +31,13 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Point;
+import android.graphics.Rect;
 import android.net.Uri;
 import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
+import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
@@ -83,6 +86,7 @@ public class ContentView extends LinearLayout {
     protected ContentView cvPrevious;
 
     private boolean showAlreadyCalled;
+    private boolean adjustResizeOnKeyboardToggle;
 
     static public void setActivity(SingleActivity activity) {
         ContentView.activity = activity;
@@ -110,10 +114,13 @@ public class ContentView extends LinearLayout {
         THEME_COLOR_RED = ThemeUtil.getColor(activity, R.attr.appBaseColorButtonTextRed);
     }
 
+    public void setAdjustResizeOnKeyboardToggle(boolean adjust) {
+        this.adjustResizeOnKeyboardToggle = adjust;
+    }
+
     public void inflate(int resId) { inflater.inflate(resId, this); }
 
     public void show() {
-
         getActivity().runOnUiThread(() -> {
             if(!showAlreadyCalled) { // first time
                 cvPrevious = getActivity().getContentView();
@@ -157,6 +164,65 @@ public class ContentView extends LinearLayout {
         cvPrevious.show();
         return true; // consumed
     }
+
+    // Adjust height if softInput keyboard opens / closes:
+
+    private ViewTreeObserver viewTreeObserver;
+    private ViewTreeObserver.OnGlobalLayoutListener listener;
+    private final Rect contentAreaOfWindowBounds = new Rect();
+    private int usableHeightPrevious = 0;
+
+    @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        if(!adjustResizeOnKeyboardToggle) { return; }
+        if(viewTreeObserver != null) {
+            if(viewTreeObserver.isAlive()) {
+                viewTreeObserver.removeOnGlobalLayoutListener(listener);
+            }
+        }
+        viewTreeObserver = getViewTreeObserver();
+        listener = this::possiblyResizeLayout;
+        viewTreeObserver.addOnGlobalLayoutListener(listener);
+    }
+
+    @Override
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        if(!adjustResizeOnKeyboardToggle) { return; }
+        if(viewTreeObserver != null && viewTreeObserver.isAlive()) {
+            viewTreeObserver.removeOnGlobalLayoutListener(listener);
+        }
+    }
+
+    private void possiblyResizeLayout() {
+        getWindowVisibleDisplayFrame(contentAreaOfWindowBounds);
+        int usableHeightNow = contentAreaOfWindowBounds.height();
+
+        if(usableHeightNow != usableHeightPrevious) {
+
+            int screenHeight = getRootView().getHeight();
+            int keypadHeight = screenHeight - usableHeightNow;
+
+            //noinspection StatementWithEmptyBody
+            if(keypadHeight > screenHeight * 0.125) {
+                // keyboard is opened
+                // onSoftInputOpened();
+            } else {
+                // keyboard is closed
+                // onSoftInputClosed();
+            }
+
+            ViewGroup.LayoutParams params = getLayoutParams();
+            params.height = usableHeightNow;
+            setLayoutParams(params);
+
+            usableHeightPrevious = usableHeightNow;
+        }
+    }
+
+
+
 
     static public String getString(int resId) { return getActivity().getString(resId); }
 
