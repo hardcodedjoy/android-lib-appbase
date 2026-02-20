@@ -168,7 +168,7 @@ public class HttpsTransfer {
                 contents.toArray(new byte[][]{}));
     }
 
-    private byte[] postForBytes(String urlString, String[] names, byte[][] contents) {
+    public byte[] postForBytes(String urlString, String[] names, byte[][] contents) {
         try {
             String boundary = Long.toHexString(System.currentTimeMillis());
             URL destinationURL = new URL(urlString);
