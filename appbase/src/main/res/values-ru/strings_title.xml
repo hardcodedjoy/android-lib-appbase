@@ -353,4 +353,10 @@ SOFTWARE.
     <string name="title_access_token">Токен доступа</string>
     <string name="title_free">Бесплатно</string>
     <string name="title_install">Установить</string>
+    <string name="title_take_picture">Сделать фото</string>
+    <string name="title_value">Значение</string>
+    <string name="title_rect_top">Верх</string>
+    <string name="title_rect_bottom">Низ</string>
+    <string name="title_rect_left">Лево</string>
+    <string name="title_rect_right">Право</string>
 </resources>

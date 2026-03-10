@@ -353,4 +353,10 @@ SOFTWARE.
     <string name="title_access_token">Jeton d\'accès</string>
     <string name="title_free">Gratuit</string>
     <string name="title_install">Installer</string>
+    <string name="title_take_picture">Prendre photo</string>
+    <string name="title_value">Valeur</string>
+    <string name="title_rect_top">Haut</string>
+    <string name="title_rect_bottom">Bas</string>
+    <string name="title_rect_left">Gauche</string>
+    <string name="title_rect_right">Droite</string>
 </resources>

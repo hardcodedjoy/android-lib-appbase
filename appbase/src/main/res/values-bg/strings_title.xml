@@ -353,4 +353,10 @@ SOFTWARE.
     <string name="title_access_token">Токен за достъп</string>
     <string name="title_free">Безплатно</string>
     <string name="title_install">Инсталиране</string>
+    <string name="title_take_picture">Направи снимка</string>
+    <string name="title_value">Стойност</string>
+    <string name="title_rect_top">Горе</string>
+    <string name="title_rect_bottom">Долу</string>
+    <string name="title_rect_left">Ляво</string>
+    <string name="title_rect_right">Дясно</string>
 </resources>

@@ -280,6 +280,9 @@ public class ImageUtil {
     }
 
     static public void saveAsJPG(Bitmap bitmap, OutputStream os, int jpegQuality) {
+        // limit quality in interval 0 .. 100 to prevent Exception:
+        if(jpegQuality < 0) { jpegQuality = 0; }
+        if(jpegQuality > 100) { jpegQuality = 100; }
         bitmap.compress(Bitmap.CompressFormat.JPEG, jpegQuality, os);
     }
 

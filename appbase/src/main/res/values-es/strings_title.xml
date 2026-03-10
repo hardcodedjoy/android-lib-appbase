@@ -353,4 +353,10 @@ SOFTWARE.
     <string name="title_access_token">Token de acceso</string>
     <string name="title_free">Gratis</string>
     <string name="title_install">Instalar</string>
+    <string name="title_take_picture">Hacer foto</string>
+    <string name="title_value">Valor</string>
+    <string name="title_rect_top">Superior</string>
+    <string name="title_rect_bottom">Inferior</string>
+    <string name="title_rect_left">Izquierda</string>
+    <string name="title_rect_right">Derecha</string>
 </resources>

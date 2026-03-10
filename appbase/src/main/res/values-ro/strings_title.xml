@@ -353,4 +353,10 @@ SOFTWARE.
     <string name="title_access_token">Token de acces</string>
     <string name="title_free">Gratuit</string>
     <string name="title_install">Instalează</string>
+    <string name="title_take_picture">Captură foto</string>
+    <string name="title_value">Valoare</string>
+    <string name="title_rect_top">Sus</string>
+    <string name="title_rect_bottom">Jos</string>
+    <string name="title_rect_left">Stânga</string>
+    <string name="title_rect_right">Dreapta</string>
 </resources>

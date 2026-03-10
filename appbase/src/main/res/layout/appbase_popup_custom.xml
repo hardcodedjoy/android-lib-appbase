@@ -54,7 +54,8 @@ SOFTWARE.
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1.0">
+            android:layout_weight="1.0"
+            android:fadeScrollbars="false">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -70,10 +71,10 @@ SOFTWARE.
                     android:layout_marginRight="5dp"
                     android:orientation="vertical" />
 
-                <include layout="@layout/appbase_popup_btn_cancel_ok"/>
-
             </LinearLayout>
         </ScrollView>
+
+        <include layout="@layout/appbase_popup_btn_cancel_ok"/>
 
     </LinearLayout>
 </LinearLayout>

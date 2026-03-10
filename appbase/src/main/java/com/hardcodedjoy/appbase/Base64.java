@@ -26,22 +26,53 @@ SOFTWARE.
 
 package com.hardcodedjoy.appbase;
 
-@SuppressWarnings("CharsetObjectCanBeUsed")
 public class Base64 {
 
+    static public String encode(byte[] bytes) {
+        byte[] output = android.util.Base64.encode(
+                bytes, android.util.Base64.NO_WRAP);
+        return StringUtil.fromBytesUTF8(output);
+    }
+
+    static public String[] encode(byte[][] bytes) {
+        if(bytes == null) { return null; }
+        int n = bytes.length;
+        String[] output = new String[n];
+        for(int i=0; i<n; i++) { output[i] = encode(bytes[i]); }
+        return output;
+    }
+
     static public String encode(String s) {
-        try {
-            byte[] input = s.getBytes("UTF-8");
-            byte[] output = android.util.Base64.encode(input, android.util.Base64.DEFAULT);
-            return new String(output, "UTF-8");
-        } catch (Exception e) { return ""; }
+        byte[] input = StringUtil.getBytesUTF8(s);
+        return encode(input);
+    }
+
+    static public String[] encode(String[] s) {
+        byte[][] input = StringUtil.getBytesUTF8(s);
+        return encode(input);
+    }
+
+    static public byte[] decodeToBytes(String s) {
+        byte[] input = StringUtil.getBytesUTF8(s);
+        return android.util.Base64.decode(
+                input, android.util.Base64.NO_WRAP);
+    }
+
+    static public byte[][] decodeToBytes(String[] s) {
+        if(s == null) { return null; }
+        int n = s.length;
+        byte[][] output = new byte[n][];
+        for(int i=0; i<n; i++) { output[i] = decodeToBytes(s[i]); }
+        return output;
     }
 
     static public String decode(String s) {
-        try {
-            byte[] input = s.getBytes("UTF-8");
-            byte[] output = android.util.Base64.decode(input, android.util.Base64.DEFAULT);
-            return new String(output, "UTF-8");
-        } catch (Exception e) { return ""; }
+        byte[] output = decodeToBytes(s);
+        return StringUtil.fromBytesUTF8(output);
+    }
+
+    static public String[] decode(String[] s) {
+        byte[][] output = decodeToBytes(s);
+        return StringUtil.fromBytesUTF8(output);
     }
 }

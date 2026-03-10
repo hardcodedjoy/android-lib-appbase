@@ -83,6 +83,7 @@ abstract public class PopupCustom extends Popup {
 
     @SuppressWarnings("unused")
     public PopupCustom setContentView(int viewId) {
+        llContent.removeAllViews();
         inflater.inflate(viewId, llContent);
         return this;
     }

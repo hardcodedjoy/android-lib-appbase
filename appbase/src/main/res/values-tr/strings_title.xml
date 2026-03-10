@@ -353,4 +353,10 @@ SOFTWARE.
     <string name="title_access_token">Erişim belirteci</string>
     <string name="title_free">Ücretsiz</string>
     <string name="title_install">Yükle</string>
+    <string name="title_take_picture">Fotoğraf çek</string>
+    <string name="title_value">Değer</string>
+    <string name="title_rect_top">Üst</string>
+    <string name="title_rect_bottom">Alt</string>
+    <string name="title_rect_left">Sol</string>
+    <string name="title_rect_right">Sağ</string>
 </resources>

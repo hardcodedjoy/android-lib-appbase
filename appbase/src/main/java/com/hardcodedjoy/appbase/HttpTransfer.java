@@ -46,6 +46,8 @@ public class HttpTransfer {
     private String protocol;
     private final Vector<NameValuePair> additionalHeaders;
     private int responseCode;
+    private int connectTimeout;
+    private int readTimeout;
 
     public HttpTransfer() { this.additionalHeaders = new Vector<>(); }
 
@@ -67,6 +69,12 @@ public class HttpTransfer {
 
     public void clearHeaders() { additionalHeaders.clear(); }
 
+    public void setConnectTimeout(int ms) { this.connectTimeout = ms; }
+    public int getConnectTimeout() { return connectTimeout; }
+
+    public void setReadTimeout(int ms) { this.readTimeout = ms; }
+    public int getReadTimeout() { return readTimeout; }
+
     public String getAsString(String urlString) {
         byte[] ba = getAsBytes(urlString);
         return StringUtil.fromBytesUTF8(ba);
@@ -77,6 +85,9 @@ public class HttpTransfer {
             URL url = new URL(urlString);
             //noinspection ExtractMethodRecommender
             HttpURLConnection c = (HttpURLConnection) url.openConnection();
+
+            if(connectTimeout != 0) { c.setConnectTimeout(connectTimeout); }
+            if(readTimeout != 0) { c.setReadTimeout(readTimeout); }
 
             c.setRequestMethod("GET");
             c.setUseCaches(false);
@@ -91,8 +102,10 @@ public class HttpTransfer {
 
             InputStream is = getInputStreamOrErrorStream(c);
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            StreamIO.copyStream(is, baos);
-            is.close();
+            if(is != null) {
+                StreamIO.copyStream(is, baos);
+                is.close();
+            }
             c.disconnect();
 
             return baos.toByteArray();
@@ -114,6 +127,9 @@ public class HttpTransfer {
             //noinspection ExtractMethodRecommender
             HttpURLConnection c = (HttpURLConnection) url.openConnection();
 
+            if(connectTimeout != 0) { c.setConnectTimeout(connectTimeout); }
+            if(readTimeout != 0) { c.setReadTimeout(readTimeout); }
+
             c.setRequestMethod("DELETE");
             c.setUseCaches(false);
             // c.setDoOutput(true); no output for DELETE (fixed 2026-02-05)
@@ -127,8 +143,10 @@ public class HttpTransfer {
 
             InputStream is = getInputStreamOrErrorStream(c);
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            StreamIO.copyStream(is, baos);
-            is.close();
+            if(is != null) {
+                StreamIO.copyStream(is, baos);
+                is.close();
+            }
             c.disconnect();
 
             return baos.toByteArray();
@@ -171,6 +189,9 @@ public class HttpTransfer {
             URL destinationURL = new URL(urlString);
             HttpURLConnection c = (HttpURLConnection) destinationURL.openConnection();
 
+            if(connectTimeout != 0) { c.setConnectTimeout(connectTimeout); }
+            if(readTimeout != 0) { c.setReadTimeout(readTimeout); }
+
             c.setRequestMethod("POST");
             c.setUseCaches(false);
             c.setDoOutput(true);
@@ -210,9 +231,10 @@ public class HttpTransfer {
 
             InputStream is = getInputStreamOrErrorStream(c);
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            StreamIO.copyStream(is, baos);
-            is.close();
-
+            if(is != null) {
+                StreamIO.copyStream(is, baos);
+                is.close();
+            }
             c.disconnect();
 
             return baos.toByteArray();
@@ -223,29 +245,43 @@ public class HttpTransfer {
     }
 
     // for POST / PUT / PATCH
-    public String sendJsonForString(String requestMethod, String urlString, String jsonBody) {
+    public String sendJsonForString(String requestMethod,
+                                    String urlString,
+                                    String jsonBody) {
         byte[] ba = sendJsonForBytes(requestMethod, urlString, jsonBody);
         return StringUtil.fromBytesUTF8(ba);
     }
 
     // for POST / PUT / PATCH
-    public byte[] sendJsonForBytes(String requestMethod, String urlString, String jsonBody) {
+    public String sendBytesForString(String requestMethod,
+                                     String urlString,
+                                     byte[] data) {
+        byte[] ba = sendBytesForBytes(requestMethod, urlString, data);
+        return StringUtil.fromBytesUTF8(ba);
+    }
+
+    // for POST / PUT / PATCH
+    public byte[] sendJsonForBytes(String requestMethod,
+                                   String urlString,
+                                   String jsonBody) {
         try {
             //noinspection ExtractMethodRecommender
             URL destinationURL = new URL(urlString);
             HttpURLConnection c = (HttpURLConnection)
                     destinationURL.openConnection();
 
+            if(connectTimeout != 0) { c.setConnectTimeout(connectTimeout); }
+            if(readTimeout != 0) { c.setReadTimeout(readTimeout); }
+
             c.setRequestMethod(requestMethod);
             c.setUseCaches(false);
             c.setDoOutput(true);
 
             if(userAgent != null) { c.setRequestProperty("User-Agent", userAgent); }
+            c.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
             for(NameValuePair nvp : additionalHeaders) {
                 c.setRequestProperty(nvp.getName(), nvp.getValueString());
             }
-
-            c.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
 
             OutputStream os = c.getOutputStream();
             outputAsUTF8Bytes(os, jsonBody);
@@ -253,9 +289,52 @@ public class HttpTransfer {
 
             InputStream is = getInputStreamOrErrorStream(c);
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            StreamIO.copyStream(is, baos);
-            is.close();
+            if(is != null) {
+                StreamIO.copyStream(is, baos);
+                is.close();
+            }
+            c.disconnect();
 
+            return baos.toByteArray();
+        } catch (Exception e) {
+            e.printStackTrace(System.err);
+            return null;
+        }
+    }
+
+    // for POST / PUT / PATCH
+    public byte[] sendBytesForBytes(String requestMethod,
+                                    String urlString,
+                                    byte[] data) {
+        try {
+            //noinspection ExtractMethodRecommender
+            URL destinationURL = new URL(urlString);
+            HttpURLConnection c = (HttpURLConnection)
+                    destinationURL.openConnection();
+
+            if(connectTimeout != 0) { c.setConnectTimeout(connectTimeout); }
+            if(readTimeout != 0) { c.setReadTimeout(readTimeout); }
+
+            c.setRequestMethod(requestMethod);
+            c.setUseCaches(false);
+            c.setDoOutput(true);
+
+            if(userAgent != null) { c.setRequestProperty("User-Agent", userAgent); }
+            c.setRequestProperty("Content-Type", "application/octet-stream");
+            for(NameValuePair nvp : additionalHeaders) {
+                c.setRequestProperty(nvp.getName(), nvp.getValueString());
+            }
+
+            OutputStream os = c.getOutputStream();
+            os.write(data);
+            os.close();
+
+            InputStream is = getInputStreamOrErrorStream(c);
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            if(is != null) {
+                StreamIO.copyStream(is, baos);
+                is.close();
+            }
             c.disconnect();
 
             return baos.toByteArray();

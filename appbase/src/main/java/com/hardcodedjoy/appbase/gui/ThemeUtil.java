@@ -57,7 +57,12 @@ public class ThemeUtil {
         if(Build.VERSION.SDK_INT >= 23) {
             Window window = activity.getWindow();
             View decorView = window.getDecorView();
-            window.setStatusBarColor(getColor(activity, android.R.attr.colorForeground));
+
+            if(Build.VERSION.SDK_INT < 35) {
+                window.setStatusBarColor(getColor(activity,
+                        android.R.attr.colorForeground));
+            }
+
             if(currentThemeIsDarkNotLight(activity)) {
                 // dark theme -> light title bar and status bar
                 // adjust status bar text accordingly:
@@ -78,7 +83,10 @@ public class ThemeUtil {
                 if(Build.VERSION.SDK_INT < 30) {
                     decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
                 } else {
-                    window.setNavigationBarColor(Color.TRANSPARENT); // important!
+                    if(Build.VERSION.SDK_INT < 35) {
+                        window.setNavigationBarColor(Color.TRANSPARENT); // important!
+                    }
+
                     WindowInsetsControllerCompat controller =
                             WindowCompat.getInsetsController(window, window.getDecorView());
                     controller.setAppearanceLightStatusBars(false); // white text and icons

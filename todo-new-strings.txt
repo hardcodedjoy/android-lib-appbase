@@ -1,0 +1,21 @@
+message: data_from_x_will_be_erased
+
+misc unknown
+
+option_files
+option_empty
+option_none
+
+title_microphone
+title_speaker
+title_headphones
+title_unit
+title_data_type
+title_data_representation
+title_output_data_type
+title_mode_bin - Binary
+title_mode_dec - Decimal
+title_on_color
+title_off_color
+title_handle_color
+title_endianness_byte_order Endianness (Byte order)

@@ -84,7 +84,8 @@ public class StringUtil {
 		return delimited;
 	}
 
-		static public String spaceSeparatedHexString(byte[] buf, int offset, int length) {
+	static public String spaceSeparatedHexString(byte[] buf, int offset, int length) {
+		if(buf == null) { return null; }
 		StringBuilder sb = new StringBuilder();
 
 		for(int i=0; i<length; i++) {
@@ -99,10 +100,20 @@ public class StringUtil {
 	}
 
 	static public String spaceSeparatedHexString(byte[] buf) {
+		if(buf == null) { return null; }
 		return spaceSeparatedHexString(buf, 0, buf.length);
 	}
 
+	static public String[] spaceSeparatedHexString(byte[][] buf) {
+		if(buf == null) { return null; }
+		int n = buf.length;
+		String[] res = new String[n];
+		for(int i=0; i<n; i++) { res[i] = spaceSeparatedHexString(buf[i]); }
+		return res;
+	}
+
 	static public byte[] hexStringToByteArray(String s) {
+		if(s == null) { return null; }
 		// remove spaces (if any)
 
 		// replace() replaces all, not only first occurrence :)
@@ -138,6 +149,14 @@ public class StringUtil {
 					+ Character.digit(ca[i+1], 16));
 		}
 		return data;
+	}
+
+	static public byte[][] hexStringToByteArray(String[] s) {
+		if(s == null) { return null; }
+		int n = s.length;
+		byte[][] res = new byte[n][];
+		for(int i=0; i<n; i++) { res[i] = hexStringToByteArray(s[i]); }
+		return res;
 	}
 
 	static public String millisToMMSS(long n) {
@@ -317,6 +336,14 @@ public class StringUtil {
 		return null;
 	}
 
+	static public byte[][] getBytesUTF8(String[] s) {
+		if(s == null) { return null; }
+		int n = s.length;
+		byte[][] res = new byte[n][];
+		for(int i=0; i<n; i++) { res[i] = getBytesUTF8(s[i]); }
+		return res;
+	}
+
 	static public String fromBytesUTF8(byte[] ba) {
 		if(ba == null) { return null; }
 		try {
@@ -326,6 +353,14 @@ public class StringUtil {
 			e.printStackTrace(System.err);
 		}
 		return null;
+	}
+
+	static public String[] fromBytesUTF8(byte[][] ba) {
+		if(ba == null) { return null; }
+		int n = ba.length;
+		String[] res = new String[n];
+		for(int i=0; i<n; i++) { res[i] = fromBytesUTF8(ba[i]); }
+		return res;
 	}
 
 	static public String join(CharSequence delimiter, CharSequence... elements) {
