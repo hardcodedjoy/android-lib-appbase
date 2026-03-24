@@ -191,4 +191,7 @@ SOFTWARE.
     <string name="option_all_posts">alle Beiträge</string>
     <string name="option_new_post">neuer Beitrag</string>
     <string name="option_edit_post">Beitrag bearbeiten</string>
+    <string name="option_always_ask">Immer fragen</string>
+    <string name="option_use_service_record">Service-Record verwenden</string>
+    <string name="option_use_channel_number">Kanalnummer verwenden</string>
 </resources>

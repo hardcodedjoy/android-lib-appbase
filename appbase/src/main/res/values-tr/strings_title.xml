@@ -359,4 +359,11 @@ SOFTWARE.
     <string name="title_rect_bottom">Alt</string>
     <string name="title_rect_left">Sol</string>
     <string name="title_rect_right">Sağ</string>
+    <string name="title_bluetooth">Bluetooth</string>
+    <string name="title_service_uuid">Servis UUID\'si</string>
+    <string name="title_channel_number">Kanal numarası</string>
+    <string name="title_service_name">Servis adı</string>
+    <string name="title_connect_to">Şuna bağlan</string>
+    <string name="title_connection_mode">Bağlantı modu</string>
+    <string name="title_channel">Kanal</string>
 </resources>

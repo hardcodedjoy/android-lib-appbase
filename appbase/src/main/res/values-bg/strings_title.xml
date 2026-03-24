@@ -359,4 +359,11 @@ SOFTWARE.
     <string name="title_rect_bottom">Долу</string>
     <string name="title_rect_left">Ляво</string>
     <string name="title_rect_right">Дясно</string>
+    <string name="title_bluetooth">Bluetooth</string>
+    <string name="title_service_uuid">UUID на услугата</string>
+    <string name="title_channel_number">Номер на канала</string>
+    <string name="title_service_name">Име на услугата</string>
+    <string name="title_connect_to">Свързване с</string>
+    <string name="title_connection_mode">Режим на свързване</string>
+    <string name="title_channel">Канал</string>
 </resources>

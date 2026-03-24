@@ -191,4 +191,7 @@ SOFTWARE.
     <string name="option_all_posts">wszystkie posty</string>
     <string name="option_new_post">nowy post</string>
     <string name="option_edit_post">edytuj post</string>
+    <string name="option_always_ask">zawsze pytaj</string>
+    <string name="option_use_service_record">użyj rekordu usługi</string>
+    <string name="option_use_channel_number">użyj numeru kanału</string>
 </resources>

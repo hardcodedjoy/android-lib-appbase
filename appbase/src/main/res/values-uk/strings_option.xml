@@ -191,4 +191,7 @@ SOFTWARE.
     <string name="option_all_posts">всі дописи</string>
     <string name="option_new_post">новий допис</string>
     <string name="option_edit_post">редагувати допис</string>
+    <string name="option_always_ask">завжди запитувати</string>
+    <string name="option_use_service_record">використ. запис служби</string>
+    <string name="option_use_channel_number">використ. номер каналу</string>
 </resources>

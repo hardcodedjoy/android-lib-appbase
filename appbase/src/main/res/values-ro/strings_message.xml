@@ -81,4 +81,6 @@ SOFTWARE.
     <string name="expecting_x">Se așteaptă [x].</string>
     <string name="x_requires_y_full_version">[x] necesită [y] (versiunea completă).</string>
     <string name="image_lib_no_items_available_you_can_save">Nu există elemente disponibile. Puteți salva imagini în bibliotecă și vor apărea aici.</string>
+    <string name="status_waiting_for_client">Se așteaptă client …</string>
+    <string name="status_client_x_connected">Client [x] conectat</string>
 </resources>

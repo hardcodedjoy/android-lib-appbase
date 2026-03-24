@@ -81,4 +81,6 @@ SOFTWARE.
     <string name="expecting_x">Ожидается [x].</string>
     <string name="x_requires_y_full_version">[x] требует [y] (полная версия).</string>
     <string name="image_lib_no_items_available_you_can_save">Нет доступных элементов. Вы можете сохранить изображения в библиотеке, и они появятся здесь.</string>
+    <string name="status_waiting_for_client">Ожидание клиента …</string>
+    <string name="status_client_x_connected">Клиент [x] подключен</string>
 </resources>

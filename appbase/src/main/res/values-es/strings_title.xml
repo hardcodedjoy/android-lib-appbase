@@ -359,4 +359,11 @@ SOFTWARE.
     <string name="title_rect_bottom">Inferior</string>
     <string name="title_rect_left">Izquierda</string>
     <string name="title_rect_right">Derecha</string>
+    <string name="title_bluetooth">Bluetooth</string>
+    <string name="title_service_uuid">UUID de servicio</string>
+    <string name="title_channel_number">Número de canal</string>
+    <string name="title_service_name">Nombre del servicio</string>
+    <string name="title_connect_to">Conectar a</string>
+    <string name="title_connection_mode">Modo de conexión</string>
+    <string name="title_channel">Canal</string>
 </resources>
