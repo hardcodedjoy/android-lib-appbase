@@ -62,4 +62,6 @@ SOFTWARE.
     <string name="integer_number">număr întreg</string>
     <string name="english">Engleză</string>
     <string name="dont_ask_again">nu întreba din nou</string>
+    <string name="pv_unlimited_items_in_main_dir">• număr de elemente nelimitat în folderul principal</string>
+    <string name="pv_more_features_will_be_added">• vor fi adăugate mai multe funcții dacă aplicația obține suficiente descărcări</string>
 </resources>

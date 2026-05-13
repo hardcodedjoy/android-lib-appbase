@@ -133,23 +133,23 @@ public class ContentView extends LinearLayout {
     public void onPause() {}
     public void onResume() {}
 
-    public int getDisplayWidth() {
+    static public int getDisplayWidth() {
         Point displaySize = new Point();
         display.getSize(displaySize);
         return displaySize.x;
     }
 
-    public int getDisplayHeight() {
+    static public int getDisplayHeight() {
         Point displaySize = new Point();
         display.getSize(displaySize);
         return displaySize.y;
     }
 
     @SuppressWarnings("unused")
-    public boolean isPortrait() { return ( getDisplayHeight() > getDisplayWidth()); }
+    static public boolean isPortrait() { return (getDisplayHeight() > getDisplayWidth()); }
 
     @SuppressWarnings("unused")
-    public boolean isLandscape() { return ( getDisplayHeight() < getDisplayWidth()); }
+    static public boolean isLandscape() { return (getDisplayHeight() < getDisplayWidth()); }
 
     // to be overridden by apps that can be started by intents other than Intent.ACTION_MAIN
     // @NonNull intent, @NonNull intent.getAction()

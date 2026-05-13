@@ -82,4 +82,11 @@ SOFTWARE.
     <string name="btn_continue">Continue</string>
     <string name="btn_clear_file">Clear File</string>
     <string name="btn_menu">Menu</string>
+    <string name="btn_calculate">Calculate</string>
+    <string name="btn_recalculate">Recalculate</string>
+    <string name="btn_previous">Prev.</string>
+    <string name="btn_go">Go</string>
+    <string name="btn_new_clip">New clip</string>
+    <string name="btn_plus_new_clip">+ new clip</string>
+    <string name="btn_plus_new">+ new</string>
 </resources>

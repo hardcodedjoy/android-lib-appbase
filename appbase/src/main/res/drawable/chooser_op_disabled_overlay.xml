@@ -26,6 +26,6 @@ SOFTWARE.
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle" >
 
-    <solid android:color="?attr/appBaseColorBackgroundA80" />
+    <solid android:color="#80E0F0F0" />
 
 </shape>

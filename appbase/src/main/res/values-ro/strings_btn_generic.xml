@@ -82,4 +82,11 @@ SOFTWARE.
     <string name="btn_continue">Continuă</string>
     <string name="btn_clear_file">Golește fișierul</string>
     <string name="btn_menu">Meniu</string>
+    <string name="btn_calculate">Calculează</string>
+    <string name="btn_recalculate">Recalculează</string>
+    <string name="btn_previous">Anterior</string>
+    <string name="btn_go">Mergi</string>
+    <string name="btn_new_clip">Clip nou</string>
+    <string name="btn_plus_new_clip">+ clip nou</string>
+    <string name="btn_plus_new">+ nou</string>
 </resources>

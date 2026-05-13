@@ -45,7 +45,7 @@ SOFTWARE.
             <shape>
                 <corners android:radius="4dp" />
                 <solid
-                    android:color="?android:colorFocusedHighlight"
+                    android:color="#FF00C381"
                     android:alpha="0.9" />
             </shape>
         </clip>
@@ -56,7 +56,7 @@ SOFTWARE.
             <shape>
                 <corners android:radius="4dp" />
                 <solid
-                    android:color="?android:colorFocusedHighlight"
+                    android:color="#FF00C381"
                     android:alpha="0.75" />
             </shape>
         </clip>

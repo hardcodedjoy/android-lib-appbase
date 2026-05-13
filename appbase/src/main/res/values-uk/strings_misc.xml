@@ -62,4 +62,6 @@ SOFTWARE.
     <string name="integer_number">ціле число</string>
     <string name="english">Англійська</string>
     <string name="dont_ask_again">більше не питати</string>
+    <string name="pv_unlimited_items_in_main_dir">• необмежену кількість елементів у головній папці</string>
+    <string name="pv_more_features_will_be_added">• буде додано більше функцій, якщо програма отримає достатньо завантажень</string>
 </resources>

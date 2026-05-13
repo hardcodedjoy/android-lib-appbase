@@ -366,4 +366,16 @@ SOFTWARE.
     <string name="title_connect_to">Şuna bağlan</string>
     <string name="title_connection_mode">Bağlantı modu</string>
     <string name="title_channel">Kanal</string>
+    <string name="title_dithering">Dithering</string>
+    <string name="title_portrait">Dikey</string>
+    <string name="title_landscape">Yatay</string>
+    <string name="title_view">Görünüm</string>
+    <string name="title_checksum">Sağlama toplamı</string>
+    <string name="title_offset">Ofset</string>
+    <string name="title_data_inspector">Veri Denetçisi</string>
+    <string name="title_created">Oluşturuldu</string>
+    <string name="title_modified">Değiştirildi</string>
+    <string name="title_go_to_offset">Ofsete git</string>
+    <string name="title_clip">Klip</string>
+    <string name="title_delete_clip">Klibi sil</string>
 </resources>

@@ -194,4 +194,11 @@ SOFTWARE.
     <string name="option_always_ask">preguntar siempre</string>
     <string name="option_use_service_record">usar registro de servicio</string>
     <string name="option_use_channel_number">usar número de canal</string>
+    <string name="option_binary">binario</string>
+    <string name="option_find">buscar</string>
+    <string name="option_replace_all">reemplazar todo</string>
+    <string name="option_regex">Regex</string>
+    <string name="option_case_sensitive">mayúsculas/minúsculas</string>
+    <string name="option_replace_with">reemplazar con</string>
+    <string name="option_files">archivos</string>
 </resources>

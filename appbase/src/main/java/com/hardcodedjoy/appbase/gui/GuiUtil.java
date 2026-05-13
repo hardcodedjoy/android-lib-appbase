@@ -123,7 +123,9 @@ public class GuiUtil {
                 ((TextView) v).setText(spannableString);
             } else if (v instanceof ImageView) {
                 ImageUtil.setTint((ImageView) v, color);
-                ((ImageView) v).setImageTintMode(PorterDuff.Mode.SRC_IN);
+                if(android.os.Build.VERSION.SDK_INT >= 21) {
+                    ((ImageView) v).setImageTintMode(PorterDuff.Mode.SRC_IN);
+                }
             }
         }
     }

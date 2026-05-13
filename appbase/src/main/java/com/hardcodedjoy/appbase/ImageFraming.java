@@ -29,7 +29,8 @@ package com.hardcodedjoy.appbase;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.RectF;
-import android.util.Size;
+
+import com.hardcodedjoy.appbase.gui.Size;
 
 public class ImageFraming {
     static public final String CROP = "CROP";

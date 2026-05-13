@@ -32,10 +32,12 @@ import android.content.Context;
 import android.database.Cursor;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
+import android.os.Build;
 import android.provider.DocumentsContract;
 import android.provider.OpenableColumns;
 import android.webkit.MimeTypeMap;
 
+import androidx.annotation.RequiresApi;
 import androidx.documentfile.provider.DocumentFile;
 
 import com.hardcodedjoy.appbase.handlers.StringHandler;
@@ -467,6 +469,7 @@ public class FileUtil {
         return files;
     }
 
+    @RequiresApi(api = 21)
     static public String[][] listFilesUriNameMime(Context context, Uri treeUri) {
 
         ArrayList<String[]> res = new ArrayList<>();

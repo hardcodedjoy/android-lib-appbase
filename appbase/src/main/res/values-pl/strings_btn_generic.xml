@@ -82,4 +82,11 @@ SOFTWARE.
     <string name="btn_continue">Kontynuować</string>
     <string name="btn_clear_file">Wyczyść plik</string>
     <string name="btn_menu">Menu</string>
+    <string name="btn_calculate">Oblicz</string>
+    <string name="btn_recalculate">Oblicz ponownie</string>
+    <string name="btn_previous">Poprzedni</string>
+    <string name="btn_go">Idź</string>
+    <string name="btn_new_clip">Nowy klip</string>
+    <string name="btn_plus_new_clip">+ nowy klip</string>
+    <string name="btn_plus_new">+ nowy</string>
 </resources>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+MIT License
+
+Copyright © 2026 HARDCODED JOY S.R.L. (https://hardcodedjoy.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<resources>
+
+    <style name="SeaSaltEmerald" parent="android:Theme.DeviceDefault.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/seaSalt</item>
+
+        <item name="android:colorBackground">@color/seaSalt</item>
+        <item name="appBaseColorBackgroundA80">@color/seaSaltA80</item>
+        <item name="appBaseColorBackgroundA60">@color/seaSaltA60</item>
+        <item name="appBaseColorBackgroundA40">@color/seaSaltA40</item>
+        <item name="appBaseColorBackgroundA20">@color/seaSaltA20</item>
+
+        <item name="android:colorForeground">@color/charcoal</item>
+        <item name="appBaseColorForegroundA80">@color/charcoalA80</item>
+        <item name="appBaseColorForegroundA60">@color/charcoalA60</item>
+        <item name="appBaseColorForegroundA40">@color/charcoalA40</item>
+        <item name="appBaseColorForegroundA20">@color/charcoalA20</item>
+
+        <item name="android:textColor">@color/charcoal</item>
+        <item name="android:textColorHint">@color/charcoalA60</item>
+        <item name="android:textColorLink">@color/neonBlue</item>
+        <item name="android:editTextColor">@color/charcoal</item>
+
+        <item name="android:textColorHighlight">@color/emeraldA80</item>
+        <item name="android:colorMultiSelectHighlight">@color/emeraldA80</item>
+        <item name="android:colorFocusedHighlight">@color/emerald</item>
+        <item name="android:colorControlNormal">@color/emerald</item>
+        <item name="android:colorControlActivated">@color/emerald</item>
+        <item name="android:colorControlHighlight">@color/emeraldA80</item>
+
+        <item name="appBaseColorPopupUnder">@color/grayAA0</item>
+        <item name="appBaseColorButtonDisabled">@color/charcoalA60</item>
+        <item name="appBaseColorButtonTextRed">@color/bittersweet</item>
+        <item name="appBaseColorButtonTextGreen">@color/lime</item>
+        <item name="appBaseColorTextDisabled">@color/charcoalA60</item>
+
+        <item name="appBaseColorButton2Stroke">@color/charcoalA20</item>
+        <item name="appBaseColorButton2Solid">@color/charcoalA20</item>
+        <item name="appBaseColorButton2DisabledStroke">@color/transparent</item>
+        <item name="appBaseColorButton2DisabledSolid">@color/charcoalA10</item>
+
+
+        <item name="android:textViewStyle">@style/TextView</item>
+        <item name="android:editTextStyle">@style/EditText</item>
+        <item name="android:buttonStyle">@style/Button</item>
+        <item name="android:imageButtonStyle">@style/ImageButton</item>
+        <item name="android:radioButtonStyle">@style/RadioButton</item>
+        <item name="android:checkboxStyle">@style/CheckBox</item>
+        <item name="android:progressBarStyle">@style/ProgressBar</item>
+        <item name="android:seekBarStyle">@style/SeekBar</item>
+        <item name="android:buttonStyleToggle">@style/ToggleButton</item>
+    </style>
+
+    <style name="CharcoalEmerald" parent="android:Theme.DeviceDefault.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/charcoal</item>
+
+        <item name="android:colorBackground">@color/charcoal</item>
+        <item name="appBaseColorBackgroundA80">@color/charcoalA80</item>
+        <item name="appBaseColorBackgroundA60">@color/charcoalA60</item>
+        <item name="appBaseColorBackgroundA40">@color/charcoalA40</item>
+        <item name="appBaseColorBackgroundA20">@color/charcoalA20</item>
+
+        <item name="android:colorForeground">@color/seaSalt</item>
+        <item name="appBaseColorForegroundA80">@color/seaSaltA80</item>
+        <item name="appBaseColorForegroundA60">@color/seaSaltA60</item>
+        <item name="appBaseColorForegroundA40">@color/seaSaltA40</item>
+        <item name="appBaseColorForegroundA20">@color/seaSaltA20</item>
+
+        <item name="android:textColor">@color/seaSalt</item>
+        <item name="android:textColorHint">@color/seaSaltA30</item>
+        <item name="android:textColorLink">@color/cornflowerBlue</item>
+        <item name="android:editTextColor">@color/seaSalt</item>
+
+        <item name="android:textColorHighlight">@color/emeraldA80</item>
+        <item name="android:colorMultiSelectHighlight">@color/emeraldA80</item>
+        <item name="android:colorFocusedHighlight">@color/emerald</item>
+        <item name="android:colorControlNormal">@color/emerald</item>
+        <item name="android:colorControlActivated">@color/emerald</item>
+        <item name="android:colorControlHighlight">@color/emeraldA80</item>
+
+        <item name="appBaseColorPopupUnder">@color/grayAA0</item>
+        <item name="appBaseColorButtonDisabled">@color/seaSaltA30</item>
+        <item name="appBaseColorButtonTextRed">@color/poppy</item>
+        <item name="appBaseColorButtonTextGreen">@color/forest</item>
+        <item name="appBaseColorTextDisabled">@color/seaSaltA30</item>
+
+        <item name="appBaseColorButton2Stroke">@color/seaSaltA10</item>
+        <item name="appBaseColorButton2Solid">@color/seaSaltA20</item>
+        <item name="appBaseColorButton2DisabledStroke">@color/transparent</item>
+        <item name="appBaseColorButton2DisabledSolid">@color/seaSaltA10</item>
+
+        <item name="android:textViewStyle">@style/TextView</item>
+        <item name="android:editTextStyle">@style/EditText</item>
+        <item name="android:buttonStyle">@style/Button</item>
+        <item name="android:imageButtonStyle">@style/ImageButton</item>
+        <item name="android:radioButtonStyle">@style/RadioButton</item>
+        <item name="android:checkboxStyle">@style/CheckBox</item>
+        <item name="android:progressBarStyle">@style/ProgressBar</item>
+        <item name="android:seekBarStyle">@style/SeekBar</item>
+        <item name="android:buttonStyleToggle">@style/ToggleButton</item>
+    </style>
+
+    <style name="PlatinumIris" parent="android:Theme.DeviceDefault.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/platinum</item>
+
+        <item name="android:colorBackground">@color/platinum</item>
+        <item name="appBaseColorBackgroundA80">@color/platinumA80</item>
+        <item name="appBaseColorBackgroundA60">@color/platinumA60</item>
+        <item name="appBaseColorBackgroundA40">@color/platinumA40</item>
+        <item name="appBaseColorBackgroundA20">@color/platinumA20</item>
+
+        <item name="android:colorForeground">@color/pennBlue</item>
+        <item name="appBaseColorForegroundA80">@color/pennBlueA80</item>
+        <item name="appBaseColorForegroundA60">@color/pennBlueA60</item>
+        <item name="appBaseColorForegroundA40">@color/pennBlueA40</item>
+        <item name="appBaseColorForegroundA20">@color/pennBlueA20</item>
+
+        <item name="android:textColor">@color/pennBlue</item>
+        <item name="android:textColorHint">@color/pennBlueA60</item>
+        <item name="android:textColorLink">@color/violetBlue</item>
+        <item name="android:editTextColor">@color/pennBlue</item>
+
+        <item name="android:textColorHighlight">@color/violetBlueA80</item>
+        <item name="android:colorMultiSelectHighlight">@color/violetBlueA80</item>
+        <item name="android:colorFocusedHighlight">@color/violetBlue</item>
+        <item name="android:colorControlNormal">@color/violetBlue</item>
+        <item name="android:colorControlActivated">@color/violetBlue</item>
+        <item name="android:colorControlHighlight">@color/violetBlueA80</item>
+
+        <item name="appBaseColorPopupUnder">@color/grayAA0</item>
+        <item name="appBaseColorButtonDisabled">@color/pennBlueA60</item>
+        <item name="appBaseColorButtonTextRed">@color/bittersweet</item>
+        <item name="appBaseColorButtonTextGreen">@color/lime</item>
+        <item name="appBaseColorTextDisabled">@color/pennBlueA60</item>
+
+        <item name="appBaseColorButton2Stroke">@color/pennBlueA20</item>
+        <item name="appBaseColorButton2Solid">@color/pennBlueA20</item>
+        <item name="appBaseColorButton2DisabledStroke">@color/transparent</item>
+        <item name="appBaseColorButton2DisabledSolid">@color/pennBlueA10</item>
+
+        <item name="android:textViewStyle">@style/TextView</item>
+        <item name="android:editTextStyle">@style/EditText</item>
+        <item name="android:buttonStyle">@style/Button</item>
+        <item name="android:imageButtonStyle">@style/ImageButton</item>
+        <item name="android:radioButtonStyle">@style/RadioButton</item>
+        <item name="android:checkboxStyle">@style/CheckBox</item>
+        <item name="android:progressBarStyle">@style/ProgressBar</item>
+        <item name="android:seekBarStyle">@style/SeekBar</item>
+        <item name="android:buttonStyleToggle">@style/ToggleButton</item>
+    </style>
+
+    <style name="JetFire" parent="android:Theme.DeviceDefault.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/jet</item>
+
+        <item name="android:colorBackground">@color/jet</item>
+        <item name="appBaseColorBackgroundA80">@color/jetA80</item>
+        <item name="appBaseColorBackgroundA60">@color/jetA60</item>
+        <item name="appBaseColorBackgroundA40">@color/jetA40</item>
+        <item name="appBaseColorBackgroundA20">@color/jetA20</item>
+
+        <item name="android:colorForeground">@color/silver</item>
+        <item name="appBaseColorForegroundA80">@color/silverA80</item>
+        <item name="appBaseColorForegroundA60">@color/silverA60</item>
+        <item name="appBaseColorForegroundA40">@color/silverA40</item>
+        <item name="appBaseColorForegroundA20">@color/silverA20</item>
+
+        <item name="android:textColor">@color/silver</item>
+        <item name="android:textColorHint">@color/silverA30</item>
+        <item name="android:textColorLink">@color/oilBlue</item>
+        <item name="android:editTextColor">@color/silver</item>
+
+        <item name="android:textColorHighlight">@color/fireA80</item>
+        <item name="android:colorMultiSelectHighlight">@color/fireA80</item>
+        <item name="android:colorFocusedHighlight">@color/fire</item>
+        <item name="android:colorControlNormal">@color/fire</item>
+        <item name="android:colorControlActivated">@color/fire</item>
+        <item name="android:colorControlHighlight">@color/fireA80</item>
+
+        <item name="appBaseColorPopupUnder">@color/grayAA0</item>
+        <item name="appBaseColorButtonDisabled">@color/silverA30</item>
+        <item name="appBaseColorButtonTextRed">@color/poppy</item>
+        <item name="appBaseColorButtonTextGreen">@color/forest</item>
+        <item name="appBaseColorTextDisabled">@color/silverA30</item>
+
+        <item name="appBaseColorButton2Stroke">@color/silverA10</item>
+        <item name="appBaseColorButton2Solid">@color/silverA20</item>
+        <item name="appBaseColorButton2DisabledStroke">@color/transparent</item>
+        <item name="appBaseColorButton2DisabledSolid">@color/silverA10</item>
+
+        <item name="android:textViewStyle">@style/TextView</item>
+        <item name="android:editTextStyle">@style/EditText</item>
+        <item name="android:buttonStyle">@style/Button</item>
+        <item name="android:imageButtonStyle">@style/ImageButton</item>
+        <item name="android:radioButtonStyle">@style/RadioButton</item>
+        <item name="android:checkboxStyle">@style/CheckBox</item>
+        <item name="android:progressBarStyle">@style/ProgressBar</item>
+        <item name="android:seekBarStyle">@style/SeekBar</item>
+        <item name="android:buttonStyleToggle">@style/ToggleButton</item>
+    </style>
+</resources>

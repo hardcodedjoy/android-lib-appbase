@@ -82,4 +82,11 @@ SOFTWARE.
     <string name="btn_continue">Продовжити</string>
     <string name="btn_clear_file">Очистити файл</string>
     <string name="btn_menu">Меню</string>
+    <string name="btn_calculate">Обчислити</string>
+    <string name="btn_recalculate">Перерахувати</string>
+    <string name="btn_previous">Поперед.</string>
+    <string name="btn_go">Перейти</string>
+    <string name="btn_new_clip">Новий кліп</string>
+    <string name="btn_plus_new_clip">+ новий кліп</string>
+    <string name="btn_plus_new">+ новий</string>
 </resources>

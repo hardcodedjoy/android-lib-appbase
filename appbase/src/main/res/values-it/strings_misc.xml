@@ -62,4 +62,6 @@ SOFTWARE.
     <string name="integer_number">numero intero</string>
     <string name="english">Inglese</string>
     <string name="dont_ask_again">non chiedere più</string>
+    <string name="pv_unlimited_items_in_main_dir">• elementi illimitati nella cartella principale</string>
+    <string name="pv_more_features_will_be_added">• verranno aggiunte altre funzionalità se l\'app riceverà abbastanza download</string>
 </resources>

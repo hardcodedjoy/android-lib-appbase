@@ -366,4 +366,16 @@ SOFTWARE.
     <string name="title_connect_to">Verbinden mit</string>
     <string name="title_connection_mode">Verbindungsmodus</string>
     <string name="title_channel">Kanal</string>
+    <string name="title_dithering">Dithering</string>
+    <string name="title_portrait">Hochformat</string>
+    <string name="title_landscape">Querformat</string>
+    <string name="title_view">Ansicht</string>
+    <string name="title_checksum">Prüfsumme</string>
+    <string name="title_offset">Offset</string>
+    <string name="title_data_inspector">Daten-Inspektor</string>
+    <string name="title_created">Erstellt</string>
+    <string name="title_modified">Geändert</string>
+    <string name="title_go_to_offset">Gehe zu Offset</string>
+    <string name="title_clip">Clip</string>
+    <string name="title_delete_clip">Clip löschen</string>
 </resources>

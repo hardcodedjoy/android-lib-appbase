@@ -38,12 +38,12 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.ExifInterface;
 import android.net.Uri;
-import android.util.Size;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.hardcodedjoy.appbase.contentview.ContentView;
 import com.hardcodedjoy.appbase.gui.DisplayUnit;
+import com.hardcodedjoy.appbase.gui.Size;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -405,7 +405,7 @@ public class ImageUtil {
         Bitmap bitmap = ImageUtil.loadImage(is); // also closes the is
 
         Size inputSize = new Size(bitmap.getWidth(), bitmap.getHeight());
-        Size outputSize = ImageUtil.limitSizeKeepRatio(inputSize, maxSizePixels);
+        Size outputSize = limitSizeKeepRatio(inputSize, maxSizePixels);
 
         bitmap = Bitmap.createScaledBitmap(bitmap,
                 outputSize.getWidth(), outputSize.getHeight(), true);
@@ -452,23 +452,47 @@ public class ImageUtil {
 
     static public Drawable getDrawable(int resId) {
         Activity activity = ContentView.getActivity();
-        Resources.Theme theme = activity.getTheme();
-        return activity.getResources().getDrawable(resId, theme);
+        if(android.os.Build.VERSION.SDK_INT >= 21) {
+            Resources.Theme theme = activity.getTheme();
+            return activity.getResources().getDrawable(resId, theme);
+        } else {
+            //noinspection deprecation
+            return activity.getResources().getDrawable(resId);
+        }
     }
 
     static public void setTint(ImageView iv, int tintColor) {
-        iv.setImageTintList(ColorStateList.valueOf(tintColor));
-        iv.setImageTintMode(PorterDuff.Mode.SRC_ATOP);
+        if(android.os.Build.VERSION.SDK_INT >= 21) {
+            iv.setImageTintList(ColorStateList.valueOf(tintColor));
+            iv.setImageTintMode(PorterDuff.Mode.SRC_ATOP);
+        } else {
+            Drawable d = iv.getDrawable();
+            if(d != null) {
+                d.mutate().setColorFilter(tintColor, PorterDuff.Mode.SRC_ATOP);
+            }
+        }
     }
 
     static public void setTint(ImageButton button, int tintColor) {
-        button.setImageTintList(ColorStateList.valueOf(tintColor));
-        button.setImageTintMode(PorterDuff.Mode.SRC_ATOP);
+        if(android.os.Build.VERSION.SDK_INT >= 21) {
+            button.setImageTintList(ColorStateList.valueOf(tintColor));
+            button.setImageTintMode(PorterDuff.Mode.SRC_ATOP);
+        } else {
+            Drawable d = button.getDrawable();
+            if(d != null) {
+                d.mutate().setColorFilter(tintColor, PorterDuff.Mode.SRC_ATOP);
+            }
+        }
     }
 
     static public void setTint(Drawable drawable, int tintColor) {
-        drawable.setTintList(ColorStateList.valueOf(tintColor));
-        drawable.setTintMode(PorterDuff.Mode.SRC_ATOP);
+        if(drawable == null) { return; }
+        if(android.os.Build.VERSION.SDK_INT >= 21) {
+            drawable.setTintList(ColorStateList.valueOf(tintColor));
+            drawable.setTintMode(PorterDuff.Mode.SRC_ATOP);
+        } else {
+            drawable.mutate().setColorFilter(tintColor, PorterDuff.Mode.SRC_ATOP);
+        }
     }
 
     static public Bitmap loadAssetImage(String assetFileName) throws Exception {

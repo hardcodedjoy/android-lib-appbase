@@ -195,4 +195,11 @@ SOFTWARE.
     <string name="option_always_ask">always ask</string>
     <string name="option_use_service_record">use service record</string>
     <string name="option_use_channel_number">use channel number</string>
+    <string name="option_binary">binary</string>
+    <string name="option_find">find</string>
+    <string name="option_replace_all">replace all</string>
+    <string name="option_regex">Regex</string>
+    <string name="option_case_sensitive">case sensitive</string>
+    <string name="option_replace_with">replace with</string>
+    <string name="option_files">files</string>
 </resources>

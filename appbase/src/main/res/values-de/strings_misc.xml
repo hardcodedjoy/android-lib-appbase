@@ -62,4 +62,6 @@ SOFTWARE.
     <string name="integer_number">Ganzzahl</string>
     <string name="english">Englisch</string>
     <string name="dont_ask_again">nicht mehr zu fragen</string>
+    <string name="pv_unlimited_items_in_main_dir">• unbegrenzte Anzahl an Elementen im Hauptordner</string>
+    <string name="pv_more_features_will_be_added">• Weitere Funktionen werden hinzugefügt, wenn die App genügend Downloads erhält</string>
 </resources>

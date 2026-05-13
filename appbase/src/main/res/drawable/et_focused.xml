@@ -44,7 +44,7 @@ SOFTWARE.
                 android:right="10dp"/>
             <stroke
                 android:width="2dp"
-                android:color="?android:colorFocusedHighlight" />
+                android:color="#FF00C381" />
             <solid android:color="#00000000" />
         </shape>
     </item>

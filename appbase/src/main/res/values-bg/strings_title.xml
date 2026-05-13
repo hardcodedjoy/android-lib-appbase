@@ -366,4 +366,16 @@ SOFTWARE.
     <string name="title_connect_to">Свързване с</string>
     <string name="title_connection_mode">Режим на свързване</string>
     <string name="title_channel">Канал</string>
+    <string name="title_dithering">Дитеринг</string>
+    <string name="title_portrait">Портрет</string>
+    <string name="title_landscape">Пейзаж</string>
+    <string name="title_view">Изглед</string>
+    <string name="title_checksum">Контролна сума</string>
+    <string name="title_offset">Офсет</string>
+    <string name="title_data_inspector">Инспектор на данни</string>
+    <string name="title_created">Създаден</string>
+    <string name="title_modified">Променен</string>
+    <string name="title_go_to_offset">Отиди на отместване</string>
+    <string name="title_clip">Клип</string>
+    <string name="title_delete_clip">Изтриване на клипа</string>
 </resources>

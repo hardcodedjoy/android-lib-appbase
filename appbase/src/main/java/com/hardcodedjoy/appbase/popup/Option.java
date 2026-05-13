@@ -26,7 +26,6 @@ SOFTWARE.
 
 package com.hardcodedjoy.appbase.popup;
 
-import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -121,10 +120,11 @@ public class Option {
             ivIcon.setLayoutParams(params);
         }
 
+        Drawable d = ivIcon.getDrawable();
+        if(d == null) { return; }
         int iconTint = getIconTintColor();
-        if(iconTint != 0) { // is set
-            ivIcon.setImageTintList(ColorStateList.valueOf(iconTint));
-            ivIcon.setImageTintMode(PorterDuff.Mode.SRC_ATOP);
+        if(iconTint != 0) {
+            d.mutate().setColorFilter(iconTint, PorterDuff.Mode.SRC_ATOP);
         }
     }
 

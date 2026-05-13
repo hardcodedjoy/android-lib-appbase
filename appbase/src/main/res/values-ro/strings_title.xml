@@ -366,4 +366,16 @@ SOFTWARE.
     <string name="title_connect_to">Conectare la</string>
     <string name="title_connection_mode">Mod conectare</string>
     <string name="title_channel">Canal</string>
+    <string name="title_dithering">Dithering</string>
+    <string name="title_portrait">Portret</string>
+    <string name="title_landscape">Peisaj</string>
+    <string name="title_view">Vizualizare</string>
+    <string name="title_checksum">Sumă de control</string>
+    <string name="title_offset">Offset</string>
+    <string name="title_data_inspector">Inspector date</string>
+    <string name="title_created">Creat</string>
+    <string name="title_modified">Modificat</string>
+    <string name="title_go_to_offset">Mergi la offset</string>
+    <string name="title_clip">Clip</string>
+    <string name="title_delete_clip">Șterge clipul</string>
 </resources>

@@ -38,7 +38,7 @@ SOFTWARE.
                 android:left="12dp"
                 android:right="12dp"/>
 
-            <solid android:color="?attr/appBaseColorButtonDisabled" />
+            <solid android:color="#602C3C4C" />
         </shape>
     </item>
 </layer-list>
