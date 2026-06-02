@@ -85,4 +85,5 @@ SOFTWARE.
     <string name="status_client_x_connected">[x] istemcisi bağlandı</string>
     <string name="not_enough_memory_to_copy_x">[x] kopyalamak için yetersiz bellek.</string>
     <string name="try_a_smaller_selection">Daha küçük bir seçim deneyin.</string>
+    <string name="this_will_rec_over_existing">Bu işlem, bu konumdan itibaren mevcut görüntünün üzerine kayıt yapacaktır.</string>
 </resources>

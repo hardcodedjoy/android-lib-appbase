@@ -378,4 +378,10 @@ SOFTWARE.
     <string name="title_go_to_offset">Ofsete git</string>
     <string name="title_clip">Klip</string>
     <string name="title_delete_clip">Klibi sil</string>
+    <string name="title_video_kbps">Video kbps</string>
+    <string name="title_audio_kbps">Ses kbps</string>
+    <string name="title_recording">Kaydediliyor</string>
+    <string name="title_ready_to_record">Kayda hazır</string>
+    <string name="title_confirm_overwrite">Üzerine Yazmayı Onayla</string>
+    <string name="title_overwrite">Üzerine Yaz</string>
 </resources>

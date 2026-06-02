@@ -94,7 +94,8 @@ public class ContentView extends LinearLayout {
         if(android.os.Build.VERSION.SDK_INT >= 30) {
             ContentView.display = activity.getDisplay();
         } else {
-            ContentView.display = activity.getWindow().getWindowManager().getDefaultDisplay();
+            ContentView.display = activity.getWindow()
+                    .getWindowManager().getDefaultDisplay();
         }
 
         ContentView.inflater = activity.getLayoutInflater();

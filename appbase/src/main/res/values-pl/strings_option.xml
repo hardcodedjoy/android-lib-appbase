@@ -201,4 +201,5 @@ SOFTWARE.
     <string name="option_case_sensitive">uwzględniaj wielkość liter</string>
     <string name="option_replace_with">zamień na</string>
     <string name="option_files">pliki</string>
+    <string name="option_show_overwrite_warning">pokaż ostrzeżenie o nadpisaniu</string>
 </resources>

@@ -85,4 +85,5 @@ SOFTWARE.
     <string name="status_client_x_connected">Klient [x] połączony</string>
     <string name="not_enough_memory_to_copy_x">Za mało pamięci, aby skopiować [x].</string>
     <string name="try_a_smaller_selection">Spróbuj mniejszego zaznaczenia.</string>
+    <string name="this_will_rec_over_existing">Spowoduje to nadpisanie istniejącego materiału od tego miejsca.</string>
 </resources>

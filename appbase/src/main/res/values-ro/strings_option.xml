@@ -106,8 +106,8 @@ SOFTWARE.
     <string name="option_vertical">vertical</string>
     <string name="option_horizontal">orizontal</string>
     <string name="option_square">pătrat</string>
-    <string name="option_fill">umple</string>
-    <string name="option_fit">potrivește</string>
+    <string name="option_fill">umplere</string>
+    <string name="option_fit">potrivire</string>
     <string name="option_save_to_library">salvează în bibl.</string>
     <string name="option_insert_from_library">inserare din bibl.</string>
     <string name="option_new">nou</string>
@@ -201,4 +201,5 @@ SOFTWARE.
     <string name="option_case_sensitive">senzitiv la majuscule</string>
     <string name="option_replace_with">înlocuiește cu</string>
     <string name="option_files">fișiere</string>
+    <string name="option_show_overwrite_warning">afișează avertismentul de suprascriere</string>
 </resources>

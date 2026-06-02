@@ -177,11 +177,17 @@ public class ImageUtil {
     static public Bitmap loadThumb(Uri uri, int sizeDp) throws Exception {
         if(uri == null) { throw new Exception("uri == null"); }
         InputStream is = ContentView.openInputStream(uri);
-        Matrix matrix = getRotationMatrix(is);
+        Matrix matrix;
+        BitmapFactory.Options options;
+        try {
+            matrix = getRotationMatrix(is);
+            options = new BitmapFactory.Options();
+            options.inJustDecodeBounds = true;
+            BitmapFactory.decodeStream(is, null, options);
+        } finally {
+            is.close();
+        }
 
-        BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inJustDecodeBounds = true;
-        BitmapFactory.decodeStream(is, null, options);
         int width = options.outWidth;
         int height = options.outHeight;
 
@@ -192,23 +198,40 @@ public class ImageUtil {
         else { scale = sizePixels / (float) height; }
 
         options = new BitmapFactory.Options();
-        options.inSampleSize = (int) (1 / scale + 0.5f);
+        float inSampleSizeFloat = 1.0f / scale;
+        int inSampleSize = 1;
+        while (inSampleSize < inSampleSizeFloat) {
+            inSampleSize *= 2;
+        }
+        options.inSampleSize = inSampleSize;
 
         width = (int) (width * scale + 0.5f);
         height = (int) (height * scale + 0.5f);
 
-        is = ContentView.openInputStream(uri);
-        Bitmap bitmap = BitmapFactory.decodeStream(is, null, options);
-        if(bitmap == null) { return null; }
-        bitmap = Bitmap.createScaledBitmap(bitmap, width, height, true);
-        if(matrix != null) {
-            bitmap = Bitmap.createBitmap(bitmap, 0, 0,
-                    bitmap.getWidth(), bitmap.getHeight(), matrix, true); // rotate
+        Bitmap bitmap;
+        try (InputStream isDecode = ContentView.openInputStream(uri)) {
+            bitmap = BitmapFactory.decodeStream(
+                    isDecode, null, options);
         }
-        return bitmap;
+
+        if(bitmap == null) { return null; }
+
+        Bitmap scaledBitmap = Bitmap.createScaledBitmap(
+                bitmap, width, height, true);
+        if(scaledBitmap != bitmap) { bitmap.recycle(); }
+        Bitmap rotatedBitmap = scaledBitmap;
+        if(matrix != null) {
+            // rotate:
+            rotatedBitmap = Bitmap.createBitmap(scaledBitmap, 0, 0,
+                    scaledBitmap.getWidth(),
+                    scaledBitmap.getHeight(),
+                    matrix, true);
+        }
+        if(rotatedBitmap != scaledBitmap) { scaledBitmap.recycle(); }
+        return rotatedBitmap;
     }
 
-    // TODO: don't repeat code
+    // TODO: don't repeat code, apply updates from loadThumb(Uri uri, int sizeDp)
     static public Bitmap loadThumbFixedWidth(Uri uri, int widthDp) throws Exception {
         if(uri == null) { throw new Exception("uri == null"); }
         InputStream is = ContentView.openInputStream(uri);
@@ -241,7 +264,7 @@ public class ImageUtil {
         return bitmap;
     }
 
-    // TODO: don't repeat code
+    // TODO: don't repeat code, apply updates from loadThumb(Uri uri, int sizeDp)
     static public Bitmap loadThumbFixedHeight(Uri uri, int heightDp) throws Exception {
         if(uri == null) { throw new Exception("uri == null"); }
         InputStream is = ContentView.openInputStream(uri);

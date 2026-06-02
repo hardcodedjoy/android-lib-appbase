@@ -201,4 +201,5 @@ SOFTWARE.
     <string name="option_case_sensitive">учитывать регистр</string>
     <string name="option_replace_with">заменить на</string>
     <string name="option_files">файлы</string>
+    <string name="option_show_overwrite_warning">показывать предупреждение о перезаписи</string>
 </resources>

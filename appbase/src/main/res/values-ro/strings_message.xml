@@ -85,4 +85,5 @@ SOFTWARE.
     <string name="status_client_x_connected">Client [x] conectat</string>
     <string name="not_enough_memory_to_copy_x">Memorie insuficientă pentru a copia [x].</string>
     <string name="try_a_smaller_selection">Încearcă o selecție mai mică.</string>
+    <string name="this_will_rec_over_existing">Aceasta va înregistra peste filmarea existentă din această poziție.</string>
 </resources>

@@ -172,10 +172,11 @@ public class SingleActivity extends Activity {
         super.setContentView(frameLayout);
         cvCurrent = cv;
 
-        // added for API15+:
+        // added for Android 15+:
         int colorDecorViewBG = ThemeUtil.getColor(this,
                 android.R.attr.colorForeground);
         Window window = getWindow();
+
         window.getDecorView().setBackgroundColor(colorDecorViewBG);
         ViewCompat.setOnApplyWindowInsetsListener(window.getDecorView(),
                 (v, insets) -> {

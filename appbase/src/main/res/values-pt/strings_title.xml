@@ -378,4 +378,10 @@ SOFTWARE.
     <string name="title_go_to_offset">Ir para o deslocamento</string>
     <string name="title_clip">Clip</string>
     <string name="title_delete_clip">Excluir clip</string>
+    <string name="title_video_kbps">Vídeo kbps</string>
+    <string name="title_audio_kbps">Áudio kbps</string>
+    <string name="title_recording">Gravando</string>
+    <string name="title_ready_to_record">Pronto para gravar</string>
+    <string name="title_confirm_overwrite">Confirmar substituição</string>
+    <string name="title_overwrite">Substituir</string>
 </resources>

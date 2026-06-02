@@ -54,6 +54,8 @@ public class CvMain extends CvTMSLL {
 
         ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_menu_1, R.string.popups, () -> new CvPopups().show()));
         ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_menu_1, R.string.ddl_test, () -> new CvDDLTest().show()));
+        ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_image_1, com.hardcodedjoy.appbase.R.string.title_image_framing,
+                () -> new CvImageFramingTest().show()));
         ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_image_1, R.string.icons, () -> new CvIcons().show()));
         ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_preview_1, R.string.theme_view, () -> new CvThemeView().show()));
 

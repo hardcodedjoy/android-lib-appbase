@@ -378,4 +378,10 @@ SOFTWARE.
     <string name="title_go_to_offset">Mergi la offset</string>
     <string name="title_clip">Clip</string>
     <string name="title_delete_clip">Șterge clipul</string>
+    <string name="title_video_kbps">Video kbps</string>
+    <string name="title_audio_kbps">Audio kbps</string>
+    <string name="title_recording">Înregistrare</string>
+    <string name="title_ready_to_record">Pregătit pentru înregistrare</string>
+    <string name="title_confirm_overwrite">Confirmă suprascrierea</string>
+    <string name="title_overwrite">Suprascrie</string>
 </resources>

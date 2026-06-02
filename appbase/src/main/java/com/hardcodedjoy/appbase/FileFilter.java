@@ -76,7 +76,7 @@ abstract public class FileFilter implements java.io.FileFilter {
                 ".txt", ".md", ".ini", ".cfg", ".conf", ".config",
                 ".sh",
                 ".asm", ".c", ".h", ".cpp", ".ino", ".m",
-                ".java", ".xml",
+                ".java", ".xml", ".json",
                 ".htm", ".html", ".css",
                 ".js", ".py", ".lua",
                 ".csv", ".hex"

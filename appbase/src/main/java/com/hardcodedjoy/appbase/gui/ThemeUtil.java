@@ -41,7 +41,6 @@ import androidx.core.view.WindowInsetsControllerCompat;
 
 import com.hardcodedjoy.appbase.R;
 import com.hardcodedjoy.appbase.SettingsKeys;
-import com.hardcodedjoy.appbase.contentview.ContentView;
 
 import java.lang.reflect.Field;
 import java.util.Vector;
@@ -53,45 +52,54 @@ public class ThemeUtil {
         String packageName = activity.getPackageName();
         int id = resources.getIdentifier(themeName, "style", packageName);
         activity.setTheme(id);
+        adjustStatusAndNavBarColors(activity);
+    }
 
-        if(Build.VERSION.SDK_INT >= 23) {
-            Window window = activity.getWindow();
-            View decorView = window.getDecorView();
+    static public void adjustStatusAndNavBarColors(Activity activity) {
+        if(Build.VERSION.SDK_INT < 23) { return; }
 
-            if(Build.VERSION.SDK_INT < 35) {
-                window.setStatusBarColor(getColor(activity,
-                        android.R.attr.colorForeground));
-            }
+        Window window = activity.getWindow();
+        View decorView = window.getDecorView();
 
-            if(currentThemeIsDarkNotLight(activity)) {
-                // dark theme -> light title bar and status bar
-                // adjust status bar text accordingly:
-                if(Build.VERSION.SDK_INT < 26) {
-                    decorView.setSystemUiVisibility(
-                            View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-                } else if(Build.VERSION.SDK_INT < 30) {
-                    decorView.setSystemUiVisibility(
-                            View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR |
-                                    View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
-                } else {
-                    WindowInsetsControllerCompat controller =
-                            WindowCompat.getInsetsController(window, window.getDecorView());
-                    controller.setAppearanceLightStatusBars(true);
-                    controller.setAppearanceLightNavigationBars(true);
-                }
+        if(Build.VERSION.SDK_INT < 35) {
+            //noinspection deprecation
+            window.setStatusBarColor(getColor(activity,
+                    android.R.attr.colorForeground));
+        }
+
+        if(currentThemeIsDarkNotLight(activity)) {
+            // dark theme -> light title bar and status bar
+            // adjust status bar text accordingly:
+            if(Build.VERSION.SDK_INT < 26) {
+                //noinspection deprecation
+                decorView.setSystemUiVisibility(
+                        View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+            } else if(Build.VERSION.SDK_INT < 30) {
+                //noinspection deprecation
+                decorView.setSystemUiVisibility(
+                        View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR |
+                                View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
             } else {
-                if(Build.VERSION.SDK_INT < 30) {
-                    decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
-                } else {
-                    if(Build.VERSION.SDK_INT < 35) {
-                        window.setNavigationBarColor(Color.TRANSPARENT); // important!
-                    }
+                WindowInsetsControllerCompat controller =
+                        WindowCompat.getInsetsController(window, window.getDecorView());
+                controller.setAppearanceLightStatusBars(true);
+                controller.setAppearanceLightNavigationBars(true);
+            }
+        } else {
+            if(Build.VERSION.SDK_INT < 30) {
+                //noinspection deprecation
+                decorView.setSystemUiVisibility(
+                        View.SYSTEM_UI_FLAG_VISIBLE);
+            } else {
+                // if(Build.VERSION.SDK_INT < 35) {
+                    //noinspection deprecation
+                    window.setNavigationBarColor(Color.TRANSPARENT); // important!
+                // }
 
-                    WindowInsetsControllerCompat controller =
-                            WindowCompat.getInsetsController(window, window.getDecorView());
-                    controller.setAppearanceLightStatusBars(false); // white text and icons
-                    controller.setAppearanceLightNavigationBars(false); // white icons*/
-                }
+                WindowInsetsControllerCompat controller = WindowCompat
+                        .getInsetsController(window, window.getDecorView());
+                controller.setAppearanceLightStatusBars(false); // white text and icons
+                controller.setAppearanceLightNavigationBars(false); // white icons*/
             }
         }
     }

@@ -85,4 +85,5 @@ SOFTWARE.
     <string name="status_client_x_connected">Клиент [x] се свърза</string>
     <string name="not_enough_memory_to_copy_x">Няма достатъчно памет за копиране на [x].</string>
     <string name="try_a_smaller_selection">Опитайте с по-малка селекция.</string>
+    <string name="this_will_rec_over_existing">Това ще презапише съществуващия запис от тази позиция.</string>
 </resources>

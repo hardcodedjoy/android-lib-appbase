@@ -378,4 +378,10 @@ SOFTWARE.
     <string name="title_go_to_offset">Aller à l\'offset</string>
     <string name="title_clip">Clip</string>
     <string name="title_delete_clip">Supprimer le clip</string>
+    <string name="title_video_kbps">Vidéo kbps</string>
+    <string name="title_audio_kbps">Audio kbps</string>
+    <string name="title_recording">Enregistrement</string>
+    <string name="title_ready_to_record">Prêt à enregistrer</string>
+    <string name="title_confirm_overwrite">Confirmer l\'écrasement</string>
+    <string name="title_overwrite">Écraser</string>
 </resources>

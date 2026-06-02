@@ -45,6 +45,9 @@ public class DisplayUnit {
     public static float pxToSp(int px) {
         return px / Resources.getSystem().getDisplayMetrics().scaledDensity;
     }
+
+    public static float spToDp(float sp) { return pxToDp(spToPx(sp)); }
+    public static float dpToSp(float dp) { return pxToSp(dpToPx(dp)); }
     
     public static int getPx(String s) {
         s = s.toLowerCase();

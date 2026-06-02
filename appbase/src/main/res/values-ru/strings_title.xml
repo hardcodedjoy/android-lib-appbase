@@ -378,4 +378,10 @@ SOFTWARE.
     <string name="title_go_to_offset">Перейти по смещению</string>
     <string name="title_clip">Клип</string>
     <string name="title_delete_clip">Удалить клип</string>
+    <string name="title_video_kbps">Видео kbps</string>
+    <string name="title_audio_kbps">Аудио kbps</string>
+    <string name="title_recording">Идет запись</string>
+    <string name="title_ready_to_record">Готов к записи</string>
+    <string name="title_confirm_overwrite">Подтвердите перезапись</string>
+    <string name="title_overwrite">Перезаписать</string>
 </resources>

@@ -34,6 +34,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.hardcodedjoy.appbase.R;
+import com.hardcodedjoy.appbase.gui.DisplayUnit;
 import com.hardcodedjoy.appbase.gui.DropDownMenu;
 import com.hardcodedjoy.appbase.popup.Option;
 
@@ -110,7 +111,11 @@ public class CvTM extends ContentView { // Content View with Title and Menu
     }
 
     @SuppressWarnings("unused")
-    public void setTitleTextSize(float sp) {
+    public void setTitleTextSizeDp(float dp) {
+        setTitleTextSizeSp(DisplayUnit.dpToSp(dp));
+    }
+
+    public void setTitleTextSizeSp(float sp) {
         TextView tvTitle = findViewById(R.id.appbase_tv_title);
         tvTitle.setTextSize(sp);
     }

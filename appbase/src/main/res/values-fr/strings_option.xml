@@ -201,4 +201,5 @@ SOFTWARE.
     <string name="option_case_sensitive">respecter la casse</string>
     <string name="option_replace_with">remplacer par</string>
     <string name="option_files">fichiers</string>
+    <string name="option_show_overwrite_warning">afficher l\'avertissement d\'écrasement</string>
 </resources>

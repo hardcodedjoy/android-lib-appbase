@@ -85,4 +85,5 @@ SOFTWARE.
     <string name="status_client_x_connected">Client [x] verbunden</string>
     <string name="not_enough_memory_to_copy_x">Nicht genügend Speicher vorhanden, um [x] zu kopieren.</string>
     <string name="try_a_smaller_selection">Versuchen Sie es mit einer kleineren Auswahl.</string>
+    <string name="this_will_rec_over_existing">Dadurch wird das vorhandene Material ab dieser Position überschrieben.</string>
 </resources>

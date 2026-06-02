@@ -38,9 +38,11 @@ abstract public class PopupCustom extends Popup {
     private final TextView tvMessage;
     private final LinearLayout llContent;
 
+    public boolean validateInputOK() { return true; }
     abstract public void onOK();
+    public void onInvalidInput() {}
     @Override
-    public void onCancel() { }
+    public void onCancel() {}
 
     public PopupCustom(String title, String message) {
 
@@ -62,11 +64,22 @@ abstract public class PopupCustom extends Popup {
 
     @Override
     void oclOnClick(View view) {
-        ContentView.removePopUp(this); // dismiss
-
         int id = view.getId();
-        if(id == R.id.appbase_btn_ok || id == R.id.appbase_btn_ok_text) { onOK(); }
-        else if(id == R.id.appbase_btn_cancel || id == R.id.appbase_btn_cancel_text) { onCancel(); }
+        if(id == R.id.appbase_btn_ok || id == R.id.appbase_btn_ok_text) {
+            if(validateInputOK()) {
+                ContentView.removePopUp(this); // dismiss
+                onOK();
+            } else {
+                // no dismiss if invalid input !!!
+                onInvalidInput();
+            }
+        } else if(id == R.id.appbase_btn_cancel ||
+                id == R.id.appbase_btn_cancel_text) {
+            ContentView.removePopUp(this); // dismiss
+            onCancel();
+        } else {
+            ContentView.removePopUp(this); // dismiss
+        }
     }
 
     public PopupCustom(String title) { this(title, null); }

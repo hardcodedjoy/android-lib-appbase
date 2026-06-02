@@ -102,7 +102,11 @@ public class CvTBBLL extends ContentView { // Content View with Title, Button Ba
     }
 
     @SuppressWarnings("unused")
-    public void setTitleTextSize(float sp) {
+    public void setTitleTextSizeDp(float dp) {
+        setTitleTextSizeSp(DisplayUnit.dpToSp(dp));
+    }
+
+    public void setTitleTextSizeSp(float sp) {
         TextView tvTitle = findViewById(R.id.appbase_tv_title);
         tvTitle.setTextSize(sp);
     }
