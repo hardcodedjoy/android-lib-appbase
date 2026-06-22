@@ -56,13 +56,22 @@ public class FileList {
     }
 
     public void add(File file) { if(!contains(file)) { files.add(file); } }
+
+    public void add(File[] files) { for(File file : files) { add(file); } }
+
+    public void addDirsOnly(File[] files) {
+        FileFilter filter = FileFilter.filterDirsOnly();
+        for(File file : files) { if(filter.accept(file)) { add(file); } }
+    }
+
     public void remove(File file) { files.remove(indexOf(file)); }
+
     public int size() { return files.size(); }
+
     public File get(int index) { return files.get(index); }
 
     public int indexOf(File file) {
         int n = files.size();
-        if(n == 0) { return -1; }
         for(int i=0; i<n; i++) {
             if(isSame(file, files.get(i))) { return i; }
         }
@@ -76,4 +85,8 @@ public class FileList {
 
         return a.getAbsolutePath().equals(b.getAbsolutePath());
     }
+
+    public void clear() { files.clear(); }
+
+    public boolean isEmpty() { return files.isEmpty(); }
 }

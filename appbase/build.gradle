@@ -10,8 +10,8 @@ android {
     defaultConfig {
         minSdkVersion 19
         targetSdk 36
-        versionCode 124
-        versionName "2.4.4"
+        versionCode 125
+        versionName "2.4.5"
         buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
         buildConfigField "String", "VERSION_NAME", "\"" + versionName + "\""
     }

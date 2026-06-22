@@ -162,7 +162,9 @@ public class GuiLinker {
         int n = rg.getChildCount();
         RadioButton rb;
         for(int i=0; i<n; i++) {
-            rb = (RadioButton) rg.getChildAt(i);
+            View view = rg.getChildAt(i);
+            if(!(view instanceof RadioButton)) { continue; }
+            rb = (RadioButton) view;
             if(rb.getText().toString().equals(current)) {
                 rb.setChecked(true);
                 break;

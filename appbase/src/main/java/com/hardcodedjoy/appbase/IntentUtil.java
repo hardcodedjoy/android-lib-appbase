@@ -30,6 +30,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.ClipData;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -66,105 +67,170 @@ public class IntentUtil {
         }
     }
 
-    static public void shareFiles(ArrayList<Uri> uriList, String title, String mimeType) {
+    static public void shareFiles(ArrayList<Uri> uriList,
+                                  String title,
+                                  String mimeType) {
         shareFiles(uriList, title, mimeType, null);
     }
 
-    static public void shareFiles(
-            ArrayList<Uri> uriList, String title, String mimeType, String packageName) {
+    static public void shareFiles(ArrayList<Uri> uriList,
+                                  String title,
+                                  String mimeType,
+                                  String packageName,
+                                  String activityName) {
 
         // mimeType = "audio/*" for audio files
 
         if(uriList == null)   { return; }
         if(uriList.isEmpty()) { return; }
 
-        Intent shareIntent;
+        Intent intent;
 
-        if(uriList.size() == 1) { shareIntent = new Intent(Intent.ACTION_SEND);          }
-        else                    { shareIntent = new Intent(Intent.ACTION_SEND_MULTIPLE); }
+        if(uriList.size() == 1) { intent = new Intent(Intent.ACTION_SEND);          }
+        else                    { intent = new Intent(Intent.ACTION_SEND_MULTIPLE); }
 
-        shareIntent.setType(mimeType);
+        intent.setType(mimeType);
 
-        if(packageName != null) { shareIntent.setPackage(packageName); }
+        if(packageName != null) {
+            intent.setPackage(packageName);
+            if(activityName != null) {
+                ComponentName cn = new ComponentName(packageName, activityName);
+                intent.setComponent(cn);
+            }
+        }
 
-        if(uriList.size() == 1) { shareIntent.putExtra(Intent.EXTRA_STREAM, uriList.get(0)); }
-        else { shareIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uriList); }
+        if(uriList.size() == 1) { intent.putExtra(Intent.EXTRA_STREAM, uriList.get(0)); }
+        else { intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uriList); }
 
-        shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        activity.startActivity(Intent.createChooser(shareIntent, title));
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        activity.startActivity(Intent.createChooser(intent, title));
+    }
+
+    static public void shareFiles(ArrayList<Uri> uriList,
+                                  String title,
+                                  String mimeType,
+                                  String packageName) {
+        shareFiles(uriList, title, mimeType, packageName, null);
     }
 
     @SuppressWarnings("unused")
-    static public void shareFile(Uri uri, String title, String mimeType) {
+    static public void shareFile(Uri uri,
+                                 String title,
+                                 String mimeType) {
         shareFile(uri, title, mimeType, null);
     }
 
-    static public void shareFile(Uri uri, String title, String mimeType, String packageName) {
+    static public void shareFile(Uri uri,
+                                 String title,
+                                 String mimeType,
+                                 String packageName) {
         if(uri == null) { return; }
         ArrayList<Uri> uriList = new ArrayList<>();
         uriList.add(uri);
         shareFiles(uriList, title, mimeType, packageName);
     }
 
-    static public void shareText(String text, String title) {
-        Intent shareIntent = new Intent(Intent.ACTION_SEND);
-        shareIntent.putExtra(Intent.EXTRA_TEXT, text);
-        shareIntent.setType("text/plain");
-        activity.startActivity(Intent.createChooser(shareIntent, title));
+    static public void shareText(String text,
+                                 String title) {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_TEXT, text);
+        intent.setType("text/plain");
+        activity.startActivity(Intent.createChooser(intent, title));
     }
 
-    static public void viewFile(Uri uri, String mimeType, int flags) {
+    static public void viewFile(Uri uri,
+                                String mimeType,
+                                int flags) {
         viewFile(uri, mimeType, null, flags);
     }
 
-    static public void viewFile(Uri uri, String mimeType, String packageName, int flags) {
+    static public void viewFile(Uri uri,
+                                String mimeType,
+                                String packageName,
+                                String activityName,
+                                int flags) {
         if(uri == null) { return; }
-        Intent intentView = new Intent();
-        intentView.setAction(Intent.ACTION_VIEW);
-        intentView.setDataAndType(uri, mimeType);
-        if(packageName != null) { intentView.setPackage(packageName); }
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.setDataAndType(uri, mimeType);
 
-        intentView.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | flags);
-        activity.startActivity(intentView);
+        if(packageName != null) {
+            intent.setPackage(packageName);
+            if(activityName != null) {
+                ComponentName cn = new ComponentName(packageName, activityName);
+                intent.setComponent(cn);
+            }
+        }
+
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | flags);
+        activity.startActivity(intent);
     }
 
-    static public void editFile(Uri uri, String mimeType) {
+    static public void viewFile(Uri uri,
+                                String mimeType,
+                                String packageName,
+                                int flags) {
+        viewFile(uri, mimeType, packageName, null, flags);
+    }
+
+    static public void editFile(Uri uri,
+                                String mimeType) {
         editFile(uri, mimeType, null);
     }
 
 
-    static public void editFile(Uri uri, String mimeType, String packageName) {
+    static public void editFile(Uri uri,
+                                String mimeType,
+                                String packageName,
+                                String activityName) {
         if(uri == null) { return; }
-        Intent intentEdit = new Intent();
-        intentEdit.setAction(Intent.ACTION_EDIT);
-        intentEdit.setDataAndType(uri, mimeType);
-        if(packageName != null) { intentEdit.setPackage(packageName); }
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_EDIT);
+        intent.setDataAndType(uri, mimeType);
 
-        intentEdit.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        intentEdit.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-        activity.startActivity(intentEdit);
+        if(packageName != null) {
+            intent.setPackage(packageName);
+            if(activityName != null) {
+                ComponentName cn = new ComponentName(packageName, activityName);
+                intent.setComponent(cn);
+            }
+        }
+
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+        activity.startActivity(intent);
+    }
+
+    static public void editFile(Uri uri,
+                                String mimeType,
+                                String packageName) {
+        editFile(uri, mimeType, packageName, null);
     }
 
 
     // TODO: test (not tested)
-    static public void editFileWith(Uri uri, String title, String mimeType) {
+    static public void editFileWith(Uri uri,
+                                    String title,
+                                    String mimeType) {
         if(uri == null) { return; }
-        Intent intentEdit = new Intent();
-        intentEdit.setAction(Intent.ACTION_EDIT);
-        intentEdit.setDataAndType(uri, mimeType);
-        intentEdit.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        intentEdit.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-        activity.startActivity(Intent.createChooser(intentEdit, title));
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_EDIT);
+        intent.setDataAndType(uri, mimeType);
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+        activity.startActivity(Intent.createChooser(intent, title));
     }
 
     // TODO: test (not tested)
-    static public void openFileWith(Uri uri, String title, String mimeType) {
+    static public void openFileWith(Uri uri,
+                                    String title,
+                                    String mimeType) {
         if(uri == null) { return; }
-        Intent intentView = new Intent();
-        intentView.setAction(Intent.ACTION_VIEW);
-        intentView.setDataAndType(uri, mimeType);
-        intentView.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        activity.startActivity(Intent.createChooser(intentView, title));
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.setDataAndType(uri, mimeType);
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        activity.startActivity(Intent.createChooser(intent, title));
     }
 
     static public void startForegroundService(Intent intent) {

@@ -32,7 +32,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
-import android.os.Build;
 import android.provider.DocumentsContract;
 import android.provider.OpenableColumns;
 import android.webkit.MimeTypeMap;
@@ -464,6 +463,14 @@ public class FileUtil {
     static public File[] listFilesSorted(File dir) {
         if(dir == null) { return new File[0]; }
         File[] files = dir.listFiles();
+        if(files == null) { return new File[0]; }
+        Arrays.sort(files);
+        return files;
+    }
+
+    static public File[] listFilesSorted(File dir, FileFilter filter) {
+        if(dir == null) { return new File[0]; }
+        File[] files = dir.listFiles(filter);
         if(files == null) { return new File[0]; }
         Arrays.sort(files);
         return files;
