@@ -86,4 +86,5 @@ SOFTWARE.
     <string name="not_enough_memory_to_copy_x">Not enough memory to copy [x].</string>
     <string name="try_a_smaller_selection">Try a smaller selection.</string>
     <string name="this_will_rec_over_existing">This will record over the existing footage from this position.</string>
+    <string name="reached_limit_x_elements">You\'ve reached the limit of [x] elements in this list.</string>
 </resources>

@@ -29,49 +29,128 @@ package com.hardcodedjoy.appbase;
 import java.io.File;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
 @SuppressWarnings("unused")
 public class FileSort {
 
-    static public void newestFirstDirsFirst(File[] files) {
-        Arrays.sort(files, (o1, o2) -> {
+    static private Comparator<File> getComparatorNewestFirstDirsFirst() {
+        return (o1, o2) -> {
             if(o1.isDirectory() && (!o2.isDirectory())) { return -1; }
             if((!o1.isDirectory()) && o2.isDirectory()) { return 1; }
             long a = o1.lastModified();
             long b = o2.lastModified();
             return Long.compare(b, a);
-        });
+        };
+    }
+
+    static private Comparator<File> getComparatorOldestFirstDirsFirst() {
+        return (o1, o2) -> {
+            if(o1.isDirectory() && (!o2.isDirectory())) { return -1; }
+            if((!o1.isDirectory()) && o2.isDirectory()) { return 1; }
+            long a = o1.lastModified();
+            long b = o2.lastModified();
+            return Long.compare(a, b);
+        };
+    }
+
+    static private Comparator<File> getComparatorAlphabeticallyDirsFirst() {
+        return (o1, o2) -> {
+            if(o1.isDirectory() && (!o2.isDirectory())) { return -1; }
+            if((!o1.isDirectory()) && o2.isDirectory()) { return 1; }
+            String fn1 = o1.getName().toLowerCase(Locale.US);
+            String fn2 = o2.getName().toLowerCase(Locale.US);
+            return fn1.compareTo(fn2);
+        };
+    }
+
+    static private Comparator<File> getComparatorReverseAlphabeticallyDirsFirst() {
+        return (o1, o2) -> {
+            if(o1.isDirectory() && (!o2.isDirectory())) { return -1; }
+            if((!o1.isDirectory()) && o2.isDirectory()) { return 1; }
+            String fn1 = o1.getName().toLowerCase(Locale.US);
+            String fn2 = o2.getName().toLowerCase(Locale.US);
+            return fn2.compareTo(fn1);
+        };
+    }
+
+    static private Comparator<File> getComparatorLargestFirstDirsFirst() {
+        return (o1, o2) -> {
+            // dirs first
+            if(o1.isDirectory() && (!o2.isDirectory())) { return -1; }
+            if((!o1.isDirectory()) && o2.isDirectory()) { return 1; }
+            // if both are directories: sort alphabetically, ignoring case
+            if (o1.isDirectory() && o2.isDirectory()) {
+                return o1.getName().compareToIgnoreCase(o2.getName());
+            }
+            return Long.compare(o2.length(), o1.length());
+        };
+    }
+
+    static private Comparator<File> getComparatorSmallestFirstDirsFirst() {
+        return (o1, o2) -> {
+            // dirs first
+            if(o1.isDirectory() && (!o2.isDirectory())) { return -1; }
+            if((!o1.isDirectory()) && o2.isDirectory()) { return 1; }
+            // if both are directories: sort alphabetically, ignoring case
+            if (o1.isDirectory() && o2.isDirectory()) {
+                return o1.getName().compareToIgnoreCase(o2.getName());
+            }
+            return Long.compare(o1.length(), o2.length());
+        };
+    }
+
+    static public void newestFirstDirsFirst(File[] files) {
+        Arrays.sort(files, getComparatorNewestFirstDirsFirst());
     }
 
     static public void newestFirstDirsFirst(List<File> files) {
-        Collections.sort(files, (o1, o2) -> {
-            if(o1.isDirectory() && (!o2.isDirectory())) { return -1; }
-            if((!o1.isDirectory()) && o2.isDirectory()) { return 1; }
-            long a = o1.lastModified();
-            long b = o2.lastModified();
-            return Long.compare(b, a);
-        });
+        Collections.sort(files, getComparatorNewestFirstDirsFirst());
     }
 
-    static public void alphabeticalDirsFirst(File[] files) { // case-insensitive
-        Arrays.sort(files, (o1, o2) -> {
-            if(o1.isDirectory() && (!o2.isDirectory())) { return -1; }
-            if((!o1.isDirectory()) && o2.isDirectory()) { return 1; }
-            String fn1 = o1.getName().toLowerCase(Locale.US);
-            String fn2 = o2.getName().toLowerCase(Locale.US);
-            return fn1.compareTo(fn2);
-        });
+    static public void oldestFirstDirsFirst(File[] files) {
+        Arrays.sort(files, getComparatorOldestFirstDirsFirst());
     }
 
-    static public void alphabeticalDirsFirst(List<File> files) { // case-insensitive
-        Collections.sort(files, (o1, o2) -> {
-            if(o1.isDirectory() && (!o2.isDirectory())) { return -1; }
-            if((!o1.isDirectory()) && o2.isDirectory()) { return 1; }
-            String fn1 = o1.getName().toLowerCase(Locale.US);
-            String fn2 = o2.getName().toLowerCase(Locale.US);
-            return fn1.compareTo(fn2);
-        });
+    static public void oldestFirstDirsFirst(List<File> files) {
+        Collections.sort(files, getComparatorOldestFirstDirsFirst());
+    }
+
+    static public void alphabeticallyDirsFirst(File[] files) {
+        // case-insensitive
+        Arrays.sort(files, getComparatorAlphabeticallyDirsFirst());
+    }
+
+    static public void alphabeticallyDirsFirst(List<File> files) {
+        // case-insensitive
+        Collections.sort(files, getComparatorAlphabeticallyDirsFirst());
+    }
+
+    static public void reverseAlphabeticallyDirsFirst(File[] files) {
+        // case-insensitive
+        Arrays.sort(files, getComparatorReverseAlphabeticallyDirsFirst());
+    }
+
+    static public void reverseAlphabeticallyDirsFirst(List<File> files) {
+        // case-insensitive
+        Collections.sort(files, getComparatorReverseAlphabeticallyDirsFirst());
+    }
+
+    static public void largestFirstDirsFirst(File[] files) {
+        Arrays.sort(files, getComparatorLargestFirstDirsFirst());
+    }
+
+    static public void largestFirstDirsFirst(List<File> files) {
+        Collections.sort(files, getComparatorLargestFirstDirsFirst());
+    }
+
+    static public void smallestFirstDirsFirst(File[] files) {
+        Arrays.sort(files, getComparatorSmallestFirstDirsFirst());
+    }
+
+    static public void smallestFirstDirsFirst(List<File> files) {
+        Collections.sort(files, getComparatorSmallestFirstDirsFirst());
     }
 }

@@ -384,4 +384,7 @@ SOFTWARE.
     <string name="title_ready_to_record">Готов к записи</string>
     <string name="title_confirm_overwrite">Подтвердите перезапись</string>
     <string name="title_overwrite">Перезаписать</string>
+    <string name="title_servers">Серверы</string>
+    <string name="title_user_agent">User Agent</string>
+    <string name="title_url">URL</string>
 </resources>

@@ -26,15 +26,39 @@ SOFTWARE.
 
 package com.hardcodedjoy.appbase.gui;
 
+import androidx.annotation.NonNull;
+
+import java.util.regex.Pattern;
+
 public class Size {
-    private final int width;
-    private final int height;
+    private int width;
+    private int height;
 
     public Size(int width, int height) {
         this.width = width;
         this.height = height;
     }
 
+    static public Size fromStringWxH(String stringWxH) {
+        int w = 0;
+        int h = 0;
+        String[] s = stringWxH.split(Pattern.quote("x"));
+        if(s.length == 2) {
+            try {
+                w = Integer.parseInt(s[0]);
+                h = Integer.parseInt(s[1]);
+            } catch (Exception ignored) {}
+        }
+        return new Size(w, h);
+    }
+
+    public void setWidth(int width) { this.width = width; }
     public int getWidth() { return width; }
+
+    public void setHeight(int height) { this.height = height; }
     public int getHeight() { return height; }
+
+    @NonNull
+    @Override
+    public String toString() { return width + "x" + height; }
 }

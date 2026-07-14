@@ -86,4 +86,5 @@ SOFTWARE.
     <string name="not_enough_memory_to_copy_x">Няма достатъчно памет за копиране на [x].</string>
     <string name="try_a_smaller_selection">Опитайте с по-малка селекция.</string>
     <string name="this_will_rec_over_existing">Това ще презапише съществуващия запис от тази позиция.</string>
+    <string name="reached_limit_x_elements">Достигнахте лимита от [x] елемента в този списък.</string>
 </resources>

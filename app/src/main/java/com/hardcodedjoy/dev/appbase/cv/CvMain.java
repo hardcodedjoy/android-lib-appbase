@@ -30,10 +30,13 @@ import android.annotation.SuppressLint;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.hardcodedjoy.appbase.contentview.CvListEditor;
 import com.hardcodedjoy.appbase.contentview.CvTMSLL;
 import com.hardcodedjoy.appbase.popup.Option;
+import com.hardcodedjoy.appbase.popup.PopupInput;
 import com.hardcodedjoy.dev.appbase.R;
 
+import java.util.ArrayList;
 import java.util.Vector;
 
 @SuppressLint("ViewConstructor")
@@ -62,6 +65,32 @@ public class CvMain extends CvTMSLL {
         ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_circle_2, "Color Test", () -> new CvColorTest().show()));
 
         ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_circle_2, "Button Bar Test", () -> new CvTBBLLTest().show()));
+
+        ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_list_1, "List Editor", () -> {
+            int icResId = com.hardcodedjoy.appbase.R.drawable.ic_list_1;
+            String title = "List Editor";
+            ArrayList<String> list = new ArrayList<>();
+            list.add("item 1");
+            list.add("item 2");
+            list.add("item 3");
+            CvListEditor<String> listEditor = new CvListEditor<String>(icResId, title, list) {
+                @Override
+                public void onEditItemAt(int index) {
+                    String s = "";
+                    if(index >= 0 && index < list.size()) {
+                        s = list.get(index);
+                    }
+                    int titleResId = com.hardcodedjoy.appbase.R.string.title_value;
+                    PopupInput popupInput = new PopupInput(titleResId, s) {
+                        @Override
+                        public void onOK(String s) { insertNewItem(s, index); }
+                    };
+                    popupInput.enableDismissByOutsideClick();
+                    popupInput.show();
+                }
+            };
+            listEditor.show();
+        }));
 
         ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_info_1, "Device Info", () -> new CvDeviceInfo().show()));
 

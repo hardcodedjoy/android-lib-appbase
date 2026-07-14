@@ -384,4 +384,7 @@ SOFTWARE.
     <string name="title_ready_to_record">Pronto para gravar</string>
     <string name="title_confirm_overwrite">Confirmar substituição</string>
     <string name="title_overwrite">Substituir</string>
+    <string name="title_servers">Servidores</string>
+    <string name="title_user_agent">Agente do Usuário (User Agent)</string>
+    <string name="title_url">URL</string>
 </resources>

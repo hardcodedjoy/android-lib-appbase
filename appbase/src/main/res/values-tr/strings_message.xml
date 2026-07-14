@@ -86,4 +86,5 @@ SOFTWARE.
     <string name="not_enough_memory_to_copy_x">[x] kopyalamak için yetersiz bellek.</string>
     <string name="try_a_smaller_selection">Daha küçük bir seçim deneyin.</string>
     <string name="this_will_rec_over_existing">Bu işlem, bu konumdan itibaren mevcut görüntünün üzerine kayıt yapacaktır.</string>
+    <string name="reached_limit_x_elements">Bu listedeki [x] öğe sınırına ulaştınız.</string>
 </resources>

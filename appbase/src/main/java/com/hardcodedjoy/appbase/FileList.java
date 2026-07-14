@@ -44,7 +44,12 @@ public class FileList {
 
     public List<File> getFiles() { return files; }
 
-    public void sortAlphabeticalDirsFirst() { FileSort.alphabeticalDirsFirst(files); }
+    public void sortAlphabeticallyDirsFirst() { FileSort.alphabeticallyDirsFirst(files); }
+    public void sortReverseAlphabeticallyDirsFirst() { FileSort.reverseAlphabeticallyDirsFirst(files); }
+    public void sortLargerFirstDirsFirst() { FileSort.largestFirstDirsFirst(files); }
+    public void sortSmallerFirstDirsFirst() { FileSort.smallestFirstDirsFirst(files); }
+    public void sortNewestFirstDirsFirst() { FileSort.newestFirstDirsFirst(files); }
+    public void sortOldestFirstDirsFirst() { FileSort.oldestFirstDirsFirst(files); }
 
     public boolean contains(File what) {
         if(what == null) { return false; }

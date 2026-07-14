@@ -86,4 +86,5 @@ SOFTWARE.
     <string name="not_enough_memory_to_copy_x">Za mało pamięci, aby skopiować [x].</string>
     <string name="try_a_smaller_selection">Spróbuj mniejszego zaznaczenia.</string>
     <string name="this_will_rec_over_existing">Spowoduje to nadpisanie istniejącego materiału od tego miejsca.</string>
+    <string name="reached_limit_x_elements">Osiągnięto limit [x] elementów na tej liście.</string>
 </resources>

@@ -86,4 +86,5 @@ SOFTWARE.
     <string name="not_enough_memory_to_copy_x">Недостатньо пам\'яті для копіювання [x].</string>
     <string name="try_a_smaller_selection">Спробуйте менший фрагмент.</string>
     <string name="this_will_rec_over_existing">Це запише поверх існуючого матеріалу з цієї позиції.</string>
+    <string name="reached_limit_x_elements">Ви досягли ліміту в [x] елементів у цьому списку.</string>
 </resources>

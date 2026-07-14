@@ -86,4 +86,5 @@ SOFTWARE.
     <string name="not_enough_memory_to_copy_x">Mémoire insuffisante pour copier [x].</string>
     <string name="try_a_smaller_selection">Essayez une sélection plus petite.</string>
     <string name="this_will_rec_over_existing">Cela enregistrera par-dessus la vidéo existante à partir de cette position.</string>
+    <string name="reached_limit_x_elements">Vous avez atteint la limite de [x] éléments dans cette liste.</string>
 </resources>

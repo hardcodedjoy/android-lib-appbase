@@ -53,7 +53,7 @@ public class PopupChoose extends Popup {
     private final ImageButton btnAdd;
     private final ImageButton btnRefresh;
 
-    private final Vector<Option> options;
+    protected final Vector<Option> options;
 
     private final int colorSelected;
 
