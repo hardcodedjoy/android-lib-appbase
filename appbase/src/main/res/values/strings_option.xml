@@ -203,4 +203,11 @@ SOFTWARE.
     <string name="option_replace_with">replace with</string>
     <string name="option_files">files</string>
     <string name="option_show_overwrite_warning">show overwrite warning</string>
+    <string name="option_sort_by">sort by</string>
+    <string name="option_modification_date">modification date</string>
+    <string name="option_reversed_order">reversed order</string>
+    <string name="option_name">name</string>
+    <string name="option_size">size</string>
+    <string name="option_prepare">prepare</string>
+    <string name="option_live_monitoring">live monitoring</string>
 </resources>

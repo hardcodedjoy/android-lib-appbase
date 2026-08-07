@@ -35,6 +35,8 @@ import android.widget.LinearLayout;
 
 import com.hardcodedjoy.appbase.R;
 import com.hardcodedjoy.appbase.contentview.ContentView;
+import com.hardcodedjoy.appbase.gui.DisplayUnit;
+import com.hardcodedjoy.appbase.gui.GuiUtil;
 
 abstract public class Popup extends LinearLayout {
 
@@ -73,6 +75,19 @@ abstract public class Popup extends LinearLayout {
     }
 
     public void show() { ContentView.showPopUp(this); }
+
+    public void setWidthMatchParent(float lrMarginDp) {
+        // make it bigger than usual popups:
+        LinearLayout llOutsidePopup = findViewById(
+                com.hardcodedjoy.appbase.R.id.appbase_ll_outside_popup);
+        LinearLayout ll = (LinearLayout) llOutsidePopup.getChildAt(0);
+        LinearLayout.LayoutParams params =
+                (LinearLayout.LayoutParams) ll.getLayoutParams();
+        params.width = LayoutParams.MATCH_PARENT;
+        ll.setLayoutParams(params);
+        int margin = DisplayUnit.dpToPx(lrMarginDp);
+        GuiUtil.setMargins(ll, margin, margin, margin, margin);
+    }
 
     static protected String getString(int resId) {
         return ContentView.getActivity().getString(resId);

@@ -202,4 +202,11 @@ SOFTWARE.
     <string name="option_replace_with">замени с</string>
     <string name="option_files">файлове</string>
     <string name="option_show_overwrite_warning">показване на предупреждение за презаписване</string>
+    <string name="option_sort_by">сортиране по</string>
+    <string name="option_modification_date">дата на промяна</string>
+    <string name="option_reversed_order">обратен ред</string>
+    <string name="option_name">име</string>
+    <string name="option_size">размер</string>
+    <string name="option_prepare">подготовка</string>
+    <string name="option_live_monitoring">мониторинг в реално време</string>
 </resources>

@@ -202,4 +202,11 @@ SOFTWARE.
     <string name="option_replace_with">заменить на</string>
     <string name="option_files">файлы</string>
     <string name="option_show_overwrite_warning">показывать предупреждение о перезаписи</string>
+    <string name="option_sort_by">сортировка по</string>
+    <string name="option_modification_date">дата изменения</string>
+    <string name="option_reversed_order">обратный порядок</string>
+    <string name="option_name">название</string>
+    <string name="option_size">размер</string>
+    <string name="option_prepare">подготовить</string>
+    <string name="option_live_monitoring">мониторинг в реальном времени</string>
 </resources>

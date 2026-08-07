@@ -387,4 +387,7 @@ SOFTWARE.
     <string name="title_servers">Servidores</string>
     <string name="title_user_agent">Agente do Usuário (User Agent)</string>
     <string name="title_url">URL</string>
+    <string name="title_keep_your_recordings_safe">Guarde suas gravações em segurança</string>
+    <string name="title_image_width_stride">Largura da imagem (stride)</string>
+    <string name="title_pixel_format">Formato de pixel</string>
 </resources>

@@ -387,4 +387,7 @@ SOFTWARE.
     <string name="title_servers">Серверы</string>
     <string name="title_user_agent">User Agent</string>
     <string name="title_url">URL</string>
+    <string name="title_keep_your_recordings_safe">Храните свои записи в безопасности</string>
+    <string name="title_image_width_stride">Ширина изображения (stride)</string>
+    <string name="title_pixel_format">Формат пикселей</string>
 </resources>

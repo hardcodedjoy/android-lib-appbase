@@ -202,4 +202,11 @@ SOFTWARE.
     <string name="option_replace_with">substituir por</string>
     <string name="option_files">arquivos</string>
     <string name="option_show_overwrite_warning">mostrar aviso de substituição</string>
+    <string name="option_sort_by">ordenar por</string>
+    <string name="option_modification_date">data de modificação</string>
+    <string name="option_reversed_order">ordem inversa</string>
+    <string name="option_name">nome</string>
+    <string name="option_size">tamanho</string>
+    <string name="option_prepare">preparar</string>
+    <string name="option_live_monitoring">monitoramento ao vivo</string>
 </resources>

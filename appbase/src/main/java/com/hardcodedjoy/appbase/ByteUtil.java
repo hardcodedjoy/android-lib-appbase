@@ -353,46 +353,46 @@ public class ByteUtil {
     ///////////////////////////////////////////////////////////////////////////
 
     static public char charFromBytesBE(byte[] byteArray) {
-        char value = (char) (byteArray[0] & 0xFF); value = (char) (value << 8);
-        value     |= (char) (byteArray[1] & 0xFF);
-        return value;
+        int v = (byteArray[0] & 0xFF); v = v << 8;
+        v    |= (byteArray[1] & 0xFF);
+        return (char) v;
     }
 
     static public char[] charArrayFromBytesBE(byte[] byteArray) {
         int n = byteArray.length / 2;
         char[] res = new char[n];
-        char v;
+        int v;
         for(int i=0, j=0; i<n; i++, j+=2) {
-            v  = (char) (byteArray[j  ] & 0xFF); v = (char) (v << 8);
-            v |= (char) (byteArray[j+1] & 0xFF);
-            res[i] = v;
+            v  = (byteArray[j  ] & 0xFF); v = v << 8;
+            v |= (byteArray[j+1] & 0xFF);
+            res[i] = (char) v;
         }
         return res;
     }
 
     static public short shortFromBytesBE(byte[] byteArray) {
-        short value = (short) (byteArray[0] & 0xFF); value = (short) (value << 8);
-        value      |= (short) (byteArray[1] & 0xFF);
-        return value;
+        int value = (byteArray[0] & 0xFF); value = value << 8;
+        value      |= (byteArray[1] & 0xFF);
+        return (short) value;
     }
 
     static public short[] shortArrayFromBytesBE(byte[] byteArray) {
         int n = byteArray.length / 2;
         short[] res = new short[n];
-        short v;
+        int v;
         for(int i=0, j=0; i<n; i++, j+=2) {
-            v  = (short) (byteArray[j  ] & 0xFF); v = (short) (v << 8);
-            v |= (short) (byteArray[j+1] & 0xFF);
-            res[i] = v;
+            v  = (byteArray[j  ] & 0xFF); v = v << 8;
+            v |= (byteArray[j+1] & 0xFF);
+            res[i] = (short) v;
         }
         return res;
     }
 
     static public int intFromBytesBE(byte[] byteArray) {
-        int value = byteArray[0] & 0xFF; value = value << 8;
-        value    |= byteArray[1] & 0xFF; value = value << 8;
-        value    |= byteArray[2] & 0xFF; value = value << 8;
-        value    |= byteArray[3] & 0xFF;
+        int value = (byteArray[0] & 0xFF); value = value << 8;
+        value    |= (byteArray[1] & 0xFF); value = value << 8;
+        value    |= (byteArray[2] & 0xFF); value = value << 8;
+        value    |= (byteArray[3] & 0xFF);
         return value;
     }
 
@@ -401,25 +401,54 @@ public class ByteUtil {
         int[] res = new int[n];
         int v;
         for(int i=0, j=0; i<n; i++, j+=4) {
-            v  = byteArray[j  ] & 0xFF; v = v << 8;
-            v |= byteArray[j+1] & 0xFF; v = v << 8;
-            v |= byteArray[j+2] & 0xFF; v = v << 8;
-            v |= byteArray[j+3] & 0xFF;
+            v  = (byteArray[j  ] & 0xFF); v = v << 8;
+            v |= (byteArray[j+1] & 0xFF); v = v << 8;
+            v |= (byteArray[j+2] & 0xFF); v = v << 8;
+            v |= (byteArray[j+3] & 0xFF);
+            res[i] = v;
+        }
+        return res;
+    }
+
+    static public int int24FromBytesBE(byte[] byteArray) {
+        int value = (byteArray[0] & 0xFF); value = value << 8;
+        value    |= (byteArray[1] & 0xFF); value = value << 8;
+        value    |= (byteArray[2] & 0xFF);
+
+        // store sign:
+        value = value << 8;
+        value = value >> 8;
+
+        return value;
+    }
+
+    static public int[] int24ArrayFromBytesBE(byte[] byteArray) {
+        int n = byteArray.length / 3;
+        int[] res = new int[n];
+        int v;
+        for(int i=0, j=0; i<n; i++, j+=3) {
+            v  = (byteArray[j  ] & 0xFF); v = v << 8;
+            v |= (byteArray[j+1] & 0xFF); v = v << 8;
+            v |= (byteArray[j+2] & 0xFF);
+
+            v = v << 8;
+            v = v >> 8;
+
             res[i] = v;
         }
         return res;
     }
 
     static public long longFromBytesBE(byte[] byteArray) {
-        long value = byteArray[0] & 0xFF; value = value << 8;
-        value     |= byteArray[1] & 0xFF; value = value << 8;
-        value     |= byteArray[2] & 0xFF; value = value << 8;
-        value     |= byteArray[3] & 0xFF; value = value << 8;
-        value     |= byteArray[4] & 0xFF; value = value << 8;
-        value     |= byteArray[5] & 0xFF; value = value << 8;
-        value     |= byteArray[6] & 0xFF; value = value << 8;
-        value     |= byteArray[7] & 0xFF;
-        return value;
+        long v = (byteArray[0] & 0xFF); v = v << 8;
+        v     |= (byteArray[1] & 0xFF); v = v << 8;
+        v     |= (byteArray[2] & 0xFF); v = v << 8;
+        v     |= (byteArray[3] & 0xFF); v = v << 8;
+        v     |= (byteArray[4] & 0xFF); v = v << 8;
+        v     |= (byteArray[5] & 0xFF); v = v << 8;
+        v     |= (byteArray[6] & 0xFF); v = v << 8;
+        v     |= (byteArray[7] & 0xFF);
+        return v;
     }
 
     static public long[] longArrayFromBytesBE(byte[] byteArray) {
@@ -427,24 +456,24 @@ public class ByteUtil {
         long[] res = new long[n];
         long v;
         for(int i=0, j=0; i<n; i++, j+=8) {
-            v  = byteArray[j  ] & 0xFF; v = v << 8;
-            v |= byteArray[j+1] & 0xFF; v = v << 8;
-            v |= byteArray[j+2] & 0xFF; v = v << 8;
-            v |= byteArray[j+3] & 0xFF; v = v << 8;
-            v |= byteArray[j+4] & 0xFF; v = v << 8;
-            v |= byteArray[j+5] & 0xFF; v = v << 8;
-            v |= byteArray[j+6] & 0xFF; v = v << 8;
-            v |= byteArray[j+7] & 0xFF;
+            v  = (byteArray[j  ] & 0xFF); v = v << 8;
+            v |= (byteArray[j+1] & 0xFF); v = v << 8;
+            v |= (byteArray[j+2] & 0xFF); v = v << 8;
+            v |= (byteArray[j+3] & 0xFF); v = v << 8;
+            v |= (byteArray[j+4] & 0xFF); v = v << 8;
+            v |= (byteArray[j+5] & 0xFF); v = v << 8;
+            v |= (byteArray[j+6] & 0xFF); v = v << 8;
+            v |= (byteArray[j+7] & 0xFF);
             res[i] = v;
         }
         return res;
     }
 
     static public float floatFromBytesBE(byte[] byteArray) {
-        int value = byteArray[0] & 0xFF; value = value << 8;
-        value    |= byteArray[1] & 0xFF; value = value << 8;
-        value    |= byteArray[2] & 0xFF; value = value << 8;
-        value    |= byteArray[3] & 0xFF;
+        int value = (byteArray[0] & 0xFF); value = value << 8;
+        value    |= (byteArray[1] & 0xFF); value = value << 8;
+        value    |= (byteArray[2] & 0xFF); value = value << 8;
+        value    |= (byteArray[3] & 0xFF);
         return Float.intBitsToFloat(value);
     }
 
@@ -453,24 +482,24 @@ public class ByteUtil {
         float[] res = new float[n];
         int v;
         for(int i=0, j=0; i<n; i++, j+=4) {
-            v  = byteArray[j  ] & 0xFF; v = v << 8;
-            v |= byteArray[j+1] & 0xFF; v = v << 8;
-            v |= byteArray[j+2] & 0xFF; v = v << 8;
-            v |= byteArray[j+3] & 0xFF;
+            v  = (byteArray[j  ] & 0xFF); v = v << 8;
+            v |= (byteArray[j+1] & 0xFF); v = v << 8;
+            v |= (byteArray[j+2] & 0xFF); v = v << 8;
+            v |= (byteArray[j+3] & 0xFF);
             res[i] = Float.intBitsToFloat(v);
         }
         return res;
     }
 
     static public double doubleFromBytesBE(byte[] byteArray) {
-        long value = byteArray[0] & 0xFF; value = value << 8;
-        value     |= byteArray[1] & 0xFF; value = value << 8;
-        value     |= byteArray[2] & 0xFF; value = value << 8;
-        value     |= byteArray[3] & 0xFF; value = value << 8;
-        value     |= byteArray[4] & 0xFF; value = value << 8;
-        value     |= byteArray[5] & 0xFF; value = value << 8;
-        value     |= byteArray[6] & 0xFF; value = value << 8;
-        value     |= byteArray[7] & 0xFF;
+        long value = (byteArray[0] & 0xFF); value = value << 8;
+        value     |= (byteArray[1] & 0xFF); value = value << 8;
+        value     |= (byteArray[2] & 0xFF); value = value << 8;
+        value     |= (byteArray[3] & 0xFF); value = value << 8;
+        value     |= (byteArray[4] & 0xFF); value = value << 8;
+        value     |= (byteArray[5] & 0xFF); value = value << 8;
+        value     |= (byteArray[6] & 0xFF); value = value << 8;
+        value     |= (byteArray[7] & 0xFF);
         return Double.longBitsToDouble(value);
     }
 
@@ -479,14 +508,14 @@ public class ByteUtil {
         double[] res = new double[n];
         long v;
         for(int i=0, j=0; i<n; i++, j+=8) {
-            v  = byteArray[j  ] & 0xFF; v = v << 8;
-            v |= byteArray[j+1] & 0xFF; v = v << 8;
-            v |= byteArray[j+2] & 0xFF; v = v << 8;
-            v |= byteArray[j+3] & 0xFF; v = v << 8;
-            v |= byteArray[j+4] & 0xFF; v = v << 8;
-            v |= byteArray[j+5] & 0xFF; v = v << 8;
-            v |= byteArray[j+6] & 0xFF; v = v << 8;
-            v |= byteArray[j+7] & 0xFF;
+            v  = (byteArray[j  ] & 0xFF); v = v << 8;
+            v |= (byteArray[j+1] & 0xFF); v = v << 8;
+            v |= (byteArray[j+2] & 0xFF); v = v << 8;
+            v |= (byteArray[j+3] & 0xFF); v = v << 8;
+            v |= (byteArray[j+4] & 0xFF); v = v << 8;
+            v |= (byteArray[j+5] & 0xFF); v = v << 8;
+            v |= (byteArray[j+6] & 0xFF); v = v << 8;
+            v |= (byteArray[j+7] & 0xFF);
             res[i] = Double.longBitsToDouble(v);
         }
         return res;
@@ -496,47 +525,47 @@ public class ByteUtil {
     ///////////////////////////////////////////////////////////////////////////
 
     static public char charFromBytesLE(byte[] byteArray) {
-        char value = (char) (byteArray[1] & 0xFF); value = (char) (value << 8);
-        value     |= (char) (byteArray[0] & 0xFF);
-        return value;
+        int v = (byteArray[1] & 0xFF); v = v << 8;
+        v    |= (byteArray[0] & 0xFF);
+        return (char) v;
     }
 
     static public char[] charArrayFromBytesLE(byte[] byteArray) {
         int n = byteArray.length / 2;
         char[] res = new char[n];
-        char v;
+        int v;
         for(int i=0, j=0; i<n; i++, j+=2) {
-            v  = (char) (byteArray[j+1] & 0xFF); v = (char) (v << 8);
-            v |= (char) (byteArray[j  ] & 0xFF);
-            res[i] = v;
+            v  = (byteArray[j+1] & 0xFF); v = v << 8;
+            v |= (byteArray[j  ] & 0xFF);
+            res[i] = (char) v;
         }
         return res;
     }
 
     static public short shortFromBytesLE(byte[] byteArray) {
-        short value = byteArray[1]; value = (short) (value << 8);
-        value      |= byteArray[0];
-        return value;
+        int v = (byteArray[1] & 0xFF); v = v << 8;
+        v    |= (byteArray[0] & 0xFF);
+        return (short) v;
     }
 
     static public short[] shortArrayFromBytesLE(byte[] byteArray) {
         int n = byteArray.length / 2;
         short[] res = new short[n];
-        short v;
+        int v;
         for(int i=0, j=0; i<n; i++, j+=2) {
-            v  = (short) (byteArray[j+1] & 0xFF); v = (short) (v << 8);
-            v |= (short) (byteArray[j  ] & 0xFF);
-            res[i] = v;
+            v  = (byteArray[j+1] & 0xFF); v = v << 8;
+            v |= (byteArray[j  ] & 0xFF);
+            res[i] = (short) v;
         }
         return res;
     }
 
     static public int intFromBytesLE(byte[] byteArray) {
-        int value = byteArray[3]; value = value << 8;
-        value    |= byteArray[2]; value = value << 8;
-        value    |= byteArray[1]; value = value << 8;
-        value    |= byteArray[0];
-        return value;
+        int v = (byteArray[3] & 0xFF); v = v << 8;
+        v    |= (byteArray[2] & 0xFF); v = v << 8;
+        v    |= (byteArray[1] & 0xFF); v = v << 8;
+        v    |= (byteArray[0] & 0xFF);
+        return v;
     }
 
     static public int[] intArrayFromBytesLE(byte[] byteArray) {
@@ -544,25 +573,54 @@ public class ByteUtil {
         int[] res = new int[n];
         int v;
         for(int i=0, j=0; i<n; i++, j+=4) {
-            v  = byteArray[j+3] & 0xFF; v = v << 8;
-            v |= byteArray[j+2] & 0xFF; v = v << 8;
-            v |= byteArray[j+1] & 0xFF; v = v << 8;
-            v |= byteArray[j  ] & 0xFF;
+            v  = (byteArray[j+3] & 0xFF); v = v << 8;
+            v |= (byteArray[j+2] & 0xFF); v = v << 8;
+            v |= (byteArray[j+1] & 0xFF); v = v << 8;
+            v |= (byteArray[j  ] & 0xFF);
+            res[i] = v;
+        }
+        return res;
+    }
+
+    static public int int24FromBytesLE(byte[] byteArray) {
+        int v = (byteArray[2] & 0xFF); v = v << 8;
+        v    |= (byteArray[1] & 0xFF); v = v << 8;
+        v    |= (byteArray[0] & 0xFF);
+
+        // store sign:
+        v = v << 8;
+        v = v >> 8;
+
+        return v;
+    }
+
+    static public int[] int24ArrayFromBytesLE(byte[] byteArray) {
+        int n = byteArray.length / 3;
+        int[] res = new int[n];
+        int v;
+        for(int i=0, j=0; i<n; i++, j+=3) {
+            v  = (byteArray[j+2] & 0xFF); v = v << 8;
+            v |= (byteArray[j+1] & 0xFF); v = v << 8;
+            v |= (byteArray[j  ] & 0xFF);
+
+            v = v << 8;
+            v = v >> 8;
+
             res[i] = v;
         }
         return res;
     }
 
     static public long longFromBytesLE(byte[] byteArray) {
-        long value = byteArray[7]; value = value << 8;
-        value     |= byteArray[6]; value = value << 8;
-        value     |= byteArray[5]; value = value << 8;
-        value     |= byteArray[4]; value = value << 8;
-        value     |= byteArray[3]; value = value << 8;
-        value     |= byteArray[2]; value = value << 8;
-        value     |= byteArray[1]; value = value << 8;
-        value     |= byteArray[0];
-        return value;
+        long v = (byteArray[7] & 0xFF); v = v << 8;
+        v     |= (byteArray[6] & 0xFF); v = v << 8;
+        v     |= (byteArray[5] & 0xFF); v = v << 8;
+        v     |= (byteArray[4] & 0xFF); v = v << 8;
+        v     |= (byteArray[3] & 0xFF); v = v << 8;
+        v     |= (byteArray[2] & 0xFF); v = v << 8;
+        v     |= (byteArray[1] & 0xFF); v = v << 8;
+        v     |= (byteArray[0] & 0xFF);
+        return v;
     }
 
     static public long[] longArrayFromBytesLE(byte[] byteArray) {
@@ -570,25 +628,25 @@ public class ByteUtil {
         long[] res = new long[n];
         long v;
         for(int i=0, j=0; i<n; i++, j+=8) {
-            v  = byteArray[j+7] & 0xFF; v = v << 8;
-            v |= byteArray[j+6] & 0xFF; v = v << 8;
-            v |= byteArray[j+5] & 0xFF; v = v << 8;
-            v |= byteArray[j+4] & 0xFF; v = v << 8;
-            v |= byteArray[j+3] & 0xFF; v = v << 8;
-            v |= byteArray[j+2] & 0xFF; v = v << 8;
-            v |= byteArray[j+1] & 0xFF; v = v << 8;
-            v |= byteArray[j  ] & 0xFF;
+            v  = (byteArray[j+7] & 0xFF); v = v << 8;
+            v |= (byteArray[j+6] & 0xFF); v = v << 8;
+            v |= (byteArray[j+5] & 0xFF); v = v << 8;
+            v |= (byteArray[j+4] & 0xFF); v = v << 8;
+            v |= (byteArray[j+3] & 0xFF); v = v << 8;
+            v |= (byteArray[j+2] & 0xFF); v = v << 8;
+            v |= (byteArray[j+1] & 0xFF); v = v << 8;
+            v |= (byteArray[j  ] & 0xFF);
             res[i] = v;
         }
         return res;
     }
 
     static public float floatFromBytesLE(byte[] byteArray) {
-        int value = byteArray[3]; value = value << 8;
-        value    |= byteArray[2]; value = value << 8;
-        value    |= byteArray[1]; value = value << 8;
-        value    |= byteArray[0];
-        return Float.intBitsToFloat(value);
+        int v = (byteArray[3] & 0xFF); v = v << 8;
+        v    |= (byteArray[2] & 0xFF); v = v << 8;
+        v    |= (byteArray[1] & 0xFF); v = v << 8;
+        v    |= (byteArray[0] & 0xFF);
+        return Float.intBitsToFloat(v);
     }
 
     static public float[] floatArrayFromBytesLE(byte[] byteArray) {
@@ -596,25 +654,25 @@ public class ByteUtil {
         float[] res = new float[n];
         int v;
         for(int i=0, j=0; i<n; i++, j+=4) {
-            v  = byteArray[j+3] & 0xFF; v = v << 8;
-            v |= byteArray[j+2] & 0xFF; v = v << 8;
-            v |= byteArray[j+1] & 0xFF; v = v << 8;
-            v |= byteArray[j  ] & 0xFF;
+            v  = (byteArray[j+3] & 0xFF); v = v << 8;
+            v |= (byteArray[j+2] & 0xFF); v = v << 8;
+            v |= (byteArray[j+1] & 0xFF); v = v << 8;
+            v |= (byteArray[j  ] & 0xFF);
             res[i] = Float.intBitsToFloat(v);
         }
         return res;
     }
 
     static public double doubleFromBytesLE(byte[] byteArray) {
-        long value = byteArray[7]; value = value << 8;
-        value     |= byteArray[6]; value = value << 8;
-        value     |= byteArray[5]; value = value << 8;
-        value     |= byteArray[4]; value = value << 8;
-        value     |= byteArray[3]; value = value << 8;
-        value     |= byteArray[2]; value = value << 8;
-        value     |= byteArray[1]; value = value << 8;
-        value     |= byteArray[0];
-        return Double.longBitsToDouble(value);
+        long v = (byteArray[7] & 0xFF); v = v << 8;
+        v     |= (byteArray[6] & 0xFF); v = v << 8;
+        v     |= (byteArray[5] & 0xFF); v = v << 8;
+        v     |= (byteArray[4] & 0xFF); v = v << 8;
+        v     |= (byteArray[3] & 0xFF); v = v << 8;
+        v     |= (byteArray[2] & 0xFF); v = v << 8;
+        v     |= (byteArray[1] & 0xFF); v = v << 8;
+        v     |= (byteArray[0] & 0xFF);
+        return Double.longBitsToDouble(v);
     }
 
     static public double[] doubleArrayFromBytesLE(byte[] byteArray) {
@@ -622,14 +680,14 @@ public class ByteUtil {
         double[] res = new double[n];
         long v;
         for(int i=0, j=0; i<n; i++, j+=8) {
-            v  = byteArray[j+7] & 0xFF; v = v << 8;
-            v |= byteArray[j+6] & 0xFF; v = v << 8;
-            v |= byteArray[j+5] & 0xFF; v = v << 8;
-            v |= byteArray[j+4] & 0xFF; v = v << 8;
-            v |= byteArray[j+3] & 0xFF; v = v << 8;
-            v |= byteArray[j+2] & 0xFF; v = v << 8;
-            v |= byteArray[j+1] & 0xFF; v = v << 8;
-            v |= byteArray[j  ] & 0xFF;
+            v  = (byteArray[j+7] & 0xFF); v = v << 8;
+            v |= (byteArray[j+6] & 0xFF); v = v << 8;
+            v |= (byteArray[j+5] & 0xFF); v = v << 8;
+            v |= (byteArray[j+4] & 0xFF); v = v << 8;
+            v |= (byteArray[j+3] & 0xFF); v = v << 8;
+            v |= (byteArray[j+2] & 0xFF); v = v << 8;
+            v |= (byteArray[j+1] & 0xFF); v = v << 8;
+            v |= (byteArray[j  ] & 0xFF);
             res[i] = Double.longBitsToDouble(v);
         }
         return res;
