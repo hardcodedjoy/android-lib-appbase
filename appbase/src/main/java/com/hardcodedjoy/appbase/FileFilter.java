@@ -74,12 +74,18 @@ abstract public class FileFilter implements java.io.FileFilter {
     static public boolean isText(String fileNameLowerCase) {
         return isExt(fileNameLowerCase, new String[] {
                 ".txt", ".md", ".ini", ".cfg", ".conf", ".config",
-                ".sh",
-                ".asm", ".c", ".h", ".cpp", ".ino", ".m",
+                ".sh", ".bash", ".bat", ".cmd",
+                ".asm", ".s", ".c", ".h", ".cpp", ".ino", ".m",
                 ".java", ".xml", ".json",
-                ".htm", ".html", ".css",
-                ".js", ".py", ".lua",
-                ".csv", ".hex"
+                ".kt", ".kts", ".cs", ".swift",
+                ".php", ".htm", ".html", ".css", ".sass", ".scss",
+                ".js", ".jsx", ".py", ".lua",
+                ".ts", ".tsx",
+                ".rs", ".go", ".rb", ".pl",
+                ".yml", ".yaml", ".toml",
+                ".csv", ".tsv", ".hex",
+                ".properties", ".env",
+                ".gcode"
         });
     }
 

@@ -209,4 +209,10 @@ SOFTWARE.
     <string name="option_size">Größe</string>
     <string name="option_prepare">bereitstellen</string>
     <string name="option_live_monitoring">live-überwachung</string>
+    <string name="option_save_to">Speichern unter</string>
+    <string name="option_word_wrap">Zeilenumbruch</string>
+    <string name="option_syntax_highlighting">Syntax-Hervorhebung</string>
+    <string name="option_create_input">Eingang erstellen</string>
+    <string name="option_create_output">Ausgang erstellen</string>
+    <string name="option_duplicate">Duplizieren</string>
 </resources>

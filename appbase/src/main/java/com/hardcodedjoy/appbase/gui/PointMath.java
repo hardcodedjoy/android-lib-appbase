@@ -26,7 +26,9 @@ SOFTWARE.
 
 package com.hardcodedjoy.appbase.gui;
 
+import android.graphics.Point;
 import android.graphics.PointF;
+import android.graphics.RectF;
 
 public class PointMath {
 
@@ -36,9 +38,56 @@ public class PointMath {
         return (float) Math.sqrt(dx * dx + dy * dy);
     }
 
+    static public float distance(Point p1, Point p2) {
+        float dx = p1.x - p2.x;
+        float dy = p1.y - p2.y;
+        return (float) Math.sqrt(dx * dx + dy * dy);
+    }
+
+    static public float distance(RectF rectF, PointF p) {
+        return distance(rectF, p.x, p.y);
+    }
+
+    static public float distance(RectF rectF, float x, float y) {
+        float dx = 0;
+        float dy = 0;
+
+        if (x < rectF.left) {
+            dx = rectF.left - x;
+        } else if (x > rectF.right) {
+            dx = x - rectF.right;
+        }
+
+        if (y < rectF.top) {
+            dy = rectF.top - y;
+        } else if (y > rectF.bottom) {
+            dy = y - rectF.bottom;
+        }
+
+        if (dx == 0 && dy == 0) {
+            // The point is inside the rectangle, so distance is zero
+            return 0;
+        } else if (dx == 0) {
+            // The point is vertically aligned with the rectangle
+            return dy;
+        } else if (dy == 0) {
+            // The point is horizontally aligned with the rectangle
+            return dx;
+        } else {
+            // The point is outside both horizontally and vertically,
+            // compute Euclidean distance
+            return (float) Math.sqrt(dx * dx + dy * dy);
+        }
+    }
+
     static public PointF average(PointF p1, PointF p2) {
         float x = (p1.x + p2.x)/2;
         float y = (p1.y + p2.y)/2;
         return new PointF(x, y);
+    }
+
+    static public void average(PointF p1, PointF p2, PointF result) {
+        result.x = (p1.x + p2.x)/2;
+        result.y = (p1.y + p2.y)/2;
     }
 }

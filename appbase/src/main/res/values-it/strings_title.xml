@@ -390,4 +390,5 @@ SOFTWARE.
     <string name="title_keep_your_recordings_safe">Custodisci le tue registrazioni in sicurezza</string>
     <string name="title_image_width_stride">Larghezza immagine (stride)</string>
     <string name="title_pixel_format">Formato pixel</string>
+    <string name="title_text_editor">Editor di testo</string>
 </resources>

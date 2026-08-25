@@ -209,4 +209,10 @@ SOFTWARE.
     <string name="option_size">tamaño</string>
     <string name="option_prepare">preparar</string>
     <string name="option_live_monitoring">monitoreo en vivo</string>
+    <string name="option_save_to">guardar en</string>
+    <string name="option_word_wrap">ajuste de línea</string>
+    <string name="option_syntax_highlighting">resaltado de sintaxis</string>
+    <string name="option_create_input">crear entrada</string>
+    <string name="option_create_output">crear salida</string>
+    <string name="option_duplicate">duplicar</string>
 </resources>

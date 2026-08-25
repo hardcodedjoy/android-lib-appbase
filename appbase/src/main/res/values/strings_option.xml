@@ -210,4 +210,10 @@ SOFTWARE.
     <string name="option_size">size</string>
     <string name="option_prepare">prepare</string>
     <string name="option_live_monitoring">live monitoring</string>
+    <string name="option_save_to">save to</string>
+    <string name="option_word_wrap">word wrap</string>
+    <string name="option_syntax_highlighting">syntax highlighting</string>
+    <string name="option_create_input">create input</string>
+    <string name="option_create_output">create output</string>
+    <string name="option_duplicate">duplicate</string>
 </resources>

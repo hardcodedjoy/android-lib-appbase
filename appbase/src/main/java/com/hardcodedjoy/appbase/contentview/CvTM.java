@@ -38,6 +38,7 @@ import com.hardcodedjoy.appbase.gui.DisplayUnit;
 import com.hardcodedjoy.appbase.gui.DropDownMenu;
 import com.hardcodedjoy.appbase.popup.Option;
 
+import java.util.List;
 import java.util.Vector;
 
 @SuppressLint("ViewConstructor")
@@ -97,8 +98,11 @@ public class CvTM extends ContentView { // Content View with Title and Menu
 
     @SuppressWarnings("unused")
     public void setMenuOptions(Vector<Option> ops) { this.menuOptions = ops; }
+    @SuppressWarnings("unused")
+    public void setMenuOptions(List<Option> ops) { this.menuOptions = new Vector<>(ops); }
 
     public void addMenuOptions(Vector<Option> ops, int index) { menuOptions.addAll(index, ops); }
+    public void addMenuOptions(List<Option> ops, int index) { menuOptions.addAll(index, ops); }
 
     public void setTitle(String title) {
         TextView tvTitle = findViewById(R.id.appbase_tv_title);
