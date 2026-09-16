@@ -391,4 +391,13 @@ SOFTWARE.
     <string name="title_image_width_stride">Ширина на изображението (stride)</string>
     <string name="title_pixel_format">Формат на пикселите</string>
     <string name="title_text_editor">Текстов редактор</string>
+    <string name="title_server_starting">Стартиране на сървъра</string>
+    <string name="title_this_server_ip">IP адрес на този сървър</string>
+    <string name="title_this_server_ips">IP адреси на този сървър</string>
+    <string name="title_server_stopped">Сървърът е спрян</string>
+    <string name="title_device">Устройство</string>
+    <string name="title_devices">Устройства</string>
+    <string name="title_transfer">Трансфер</string>
+    <string name="title_transferred">Прехвърлени</string>
+    <string name="title_sampling_period">Период на дискретизация</string>
 </resources>

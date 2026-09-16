@@ -391,4 +391,13 @@ SOFTWARE.
     <string name="title_image_width_stride">Lățime imagine (stride)</string>
     <string name="title_pixel_format">Format pixeli</string>
     <string name="title_text_editor">Editor text</string>
+    <string name="title_server_starting">Pornire server</string>
+    <string name="title_this_server_ip">IP-ul acestui server</string>
+    <string name="title_this_server_ips">IP-urile acestui server</string>
+    <string name="title_server_stopped">Server oprit</string>
+    <string name="title_device">Dispozitiv</string>
+    <string name="title_devices">Dispozitive</string>
+    <string name="title_transfer">Transfer</string>
+    <string name="title_transferred">Transferat</string>
+    <string name="title_sampling_period">Perioada de eșantionare</string>
 </resources>

@@ -391,4 +391,13 @@ SOFTWARE.
     <string name="title_image_width_stride">Larghezza immagine (stride)</string>
     <string name="title_pixel_format">Formato pixel</string>
     <string name="title_text_editor">Editor di testo</string>
+    <string name="title_server_starting">Avvio del server</string>
+    <string name="title_this_server_ip">IP di questo server</string>
+    <string name="title_this_server_ips">IP di questo server</string>
+    <string name="title_server_stopped">Server arrestato</string>
+    <string name="title_device">Dispositivo</string>
+    <string name="title_devices">Dispositivi</string>
+    <string name="title_transfer">Trasferimento</string>
+    <string name="title_transferred">Trasferito</string>
+    <string name="title_sampling_period">Periodo di campionamento</string>
 </resources>

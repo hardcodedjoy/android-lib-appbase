@@ -391,4 +391,13 @@ SOFTWARE.
     <string name="title_image_width_stride">Resim genişliği (stride)</string>
     <string name="title_pixel_format">Piksel biçimi</string>
     <string name="title_text_editor">Metin Düzenleyici</string>
+    <string name="title_server_starting">Sunucu başlatılıyor</string>
+    <string name="title_this_server_ip">Bu sunucunun IP adresi</string>
+    <string name="title_this_server_ips">Bu sunucunun IP adresleri</string>
+    <string name="title_server_stopped">Sunucu durduruldu</string>
+    <string name="title_device">Cihaz</string>
+    <string name="title_devices">Cihazlar</string>
+    <string name="title_transfer">Transfer</string>
+    <string name="title_transferred">Transfer edildi</string>
+    <string name="title_sampling_period">Örnekleme periyodu</string>
 </resources>

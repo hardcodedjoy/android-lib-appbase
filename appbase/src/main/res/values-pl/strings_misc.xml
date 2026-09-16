@@ -64,4 +64,5 @@ SOFTWARE.
     <string name="dont_ask_again">nie pytaj więcej</string>
     <string name="pv_unlimited_items_in_main_dir">• nieograniczona liczba elementów w folderze głównym</string>
     <string name="pv_more_features_will_be_added">• jeśli aplikacja zostanie pobrana wystarczająco często, dodamy więcej funkcji</string>
+    <string name="pv_full_access_to_all_future_premium_updates">• pełny dostęp do wszystkich przyszłych aktualizacji premium</string>
 </resources>

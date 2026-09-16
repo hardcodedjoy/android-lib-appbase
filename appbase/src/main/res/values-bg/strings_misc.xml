@@ -64,4 +64,5 @@ SOFTWARE.
     <string name="dont_ask_again">не питай отново</string>
     <string name="pv_unlimited_items_in_main_dir">• неограничени елементи в главната папка</string>
     <string name="pv_more_features_will_be_added">• ще бъдат добавени още функции, ако приложението получи достатъчно изтегляния</string>
+    <string name="pv_full_access_to_all_future_premium_updates">• пълен достъп до всички бъдещи премиум актуализации</string>
 </resources>

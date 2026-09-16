@@ -63,5 +63,6 @@ SOFTWARE.
     <string name="english">Inglés</string>
     <string name="dont_ask_again">no preguntes de nuevo</string>
     <string name="pv_unlimited_items_in_main_dir">• elementos ilimitados en la carpeta principal</string>
-    <string name="pv_more_features_will_be_added">• Se agregarán más funciones si la aplicación obtiene suficientes descargas.</string>
+    <string name="pv_more_features_will_be_added">• se agregarán más funciones si la aplicación obtiene suficientes descargas</string>
+    <string name="pv_full_access_to_all_future_premium_updates">• acceso completo a todas las futuras actualizaciones premium</string>
 </resources>

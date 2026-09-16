@@ -64,4 +64,5 @@ SOFTWARE.
     <string name="dont_ask_again">não pergunte novamente</string>
     <string name="pv_unlimited_items_in_main_dir">• itens ilimitados na pasta principal</string>
     <string name="pv_more_features_will_be_added">• mais recursos serão adicionados se o aplicativo obtiver downloads suficientes</string>
+    <string name="pv_full_access_to_all_future_premium_updates">• acesso total a todas as futuras atualizações premium</string>
 </resources>
