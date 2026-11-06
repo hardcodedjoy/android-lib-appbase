@@ -55,7 +55,8 @@ import com.hardcodedjoy.appbase.popup.PopupColorPicker;
 import com.hardcodedjoy.appbase.setgetters.IntSetGetter;
 import com.hardcodedjoy.appbase.setgetters.SetGetter;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GuiLinker {
 
@@ -240,7 +241,7 @@ public class GuiLinker {
         if(value != null) { et.setText(value); }
 
         View.OnClickListener ocl = view -> {
-            Vector<Option> ops = new Vector<>();
+            List<Option> ops = new ArrayList<>();
 
             for(int i=0; i<optionsKeys.length; i++) {
                 final int index = i;
@@ -272,7 +273,7 @@ public class GuiLinker {
 
     @SuppressLint("ClickableViewAccessibility")
     static private void showPopupChoose(String title,
-                                        Vector<Option> ops,
+                                        List<Option> ops,
                                         View btnRefresh,
                                         View.OnClickListener refreshOcl,
                                         boolean dismissBeforeRefresh) {

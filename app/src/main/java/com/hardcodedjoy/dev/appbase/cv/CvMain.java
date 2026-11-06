@@ -30,6 +30,7 @@ import android.annotation.SuppressLint;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.hardcodedjoy.appbase.activity.SingleActivity;
 import com.hardcodedjoy.appbase.contentview.CvListEditor;
 import com.hardcodedjoy.appbase.contentview.CvTMSLL;
 import com.hardcodedjoy.appbase.popup.Option;
@@ -37,7 +38,7 @@ import com.hardcodedjoy.appbase.popup.PopupInput;
 import com.hardcodedjoy.dev.appbase.R;
 
 import java.util.ArrayList;
-import java.util.Vector;
+import java.util.List;
 
 @SuppressLint("ViewConstructor")
 public class CvMain extends CvTMSLL {
@@ -46,14 +47,28 @@ public class CvMain extends CvTMSLL {
 
     public CvMain() {
         // add initialization code here (that must run only one time)
-        Vector<Option> ops = new Vector<>();
+        List<Option> ops = new ArrayList<>();
 
         ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_fullscreen_1,
                 com.hardcodedjoy.appbase.R.string.fullscreen,
-                () -> goFullscreen(true)));
+                () -> getActivity().setWindowDisplayMode(
+                        SingleActivity.WindowDisplayMode.IMMERSIVE_FULLSCREEN)));
         ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_exit_fullscreen_1,
                 com.hardcodedjoy.appbase.R.string.normal_not_fullscreen,
-                () -> goFullscreen(false)));
+                () -> getActivity().setWindowDisplayMode(
+                        SingleActivity.WindowDisplayMode.NORMAL_BARS_THEMED_FG)));
+        ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_exit_fullscreen_1,
+                com.hardcodedjoy.appbase.R.string.normal_not_fullscreen,
+                () -> getActivity().setWindowDisplayMode(
+                        SingleActivity.WindowDisplayMode.NORMAL_BARS_THEMED_BG)));
+        ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_exit_fullscreen_1,
+                com.hardcodedjoy.appbase.R.string.normal_not_fullscreen,
+                () -> getActivity().setWindowDisplayMode(
+                        SingleActivity.WindowDisplayMode.NORMAL_BARS_BLACK)));
+        ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_exit_fullscreen_1,
+                com.hardcodedjoy.appbase.R.string.normal_not_fullscreen,
+                () -> getActivity().setWindowDisplayMode(
+                        SingleActivity.WindowDisplayMode.NORMAL_BARS_BLACK_HIDE_NOTIFICATIONS)));
 
         ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_menu_1, R.string.popups, () -> new CvPopups().show()));
         ops.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_menu_1, R.string.ddl_test, () -> new CvDDLTest().show()));

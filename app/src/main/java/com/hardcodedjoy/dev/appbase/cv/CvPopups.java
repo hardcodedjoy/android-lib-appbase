@@ -48,7 +48,8 @@ import com.hardcodedjoy.appbase.popup.PopupSetPassword;
 import com.hardcodedjoy.appbase.popup.PopupSetTimeHHmmssmmm;
 import com.hardcodedjoy.dev.appbase.R;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 @SuppressLint("ViewConstructor")
 public class CvPopups extends ContentView {
@@ -120,7 +121,7 @@ public class CvPopups extends ContentView {
     }
 
     private void showPopupChoose() {
-        Vector<Option> op = new Vector<>();
+        List<Option> op = new ArrayList<>();
 
         op.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_settings_1, "option A", () -> {}));
         op.add(new Option(com.hardcodedjoy.appbase.R.drawable.ic_info_1, "option B", () -> {}));
@@ -152,10 +153,7 @@ public class CvPopups extends ContentView {
     }
 
     private void showPopupImage() {
-        new PopupImage("Image title", null, "fig.1") {
-            @Override
-            public void onCancel() {}
-        }.show();
+        new PopupImage("Image title", null, "fig.1").show();
     }
 
     private void showPopupInput() {

@@ -75,7 +75,7 @@ abstract public class FileFilter implements java.io.FileFilter {
         return isExt(fileNameLowerCase, new String[] {
                 ".txt", ".md", ".ini", ".cfg", ".conf", ".config",
                 ".sh", ".bash", ".bat", ".cmd",
-                ".asm", ".s", ".c", ".h", ".cpp", ".ino", ".m",
+                ".asm", ".s", ".c", ".h", ".hpp", ".cpp", ".ino", ".m",
                 ".java", ".xml", ".json",
                 ".kt", ".kts", ".cs", ".swift",
                 ".php", ".htm", ".html", ".css", ".sass", ".scss",

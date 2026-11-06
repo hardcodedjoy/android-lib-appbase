@@ -44,7 +44,7 @@ import com.hardcodedjoy.appbase.R;
 import com.hardcodedjoy.appbase.contentview.ContentView;
 import com.hardcodedjoy.appbase.gui.ThemeUtil;
 
-import java.util.Vector;
+import java.util.List;
 
 @SuppressLint("ViewConstructor")
 public class PopupChoose extends Popup {
@@ -53,7 +53,7 @@ public class PopupChoose extends Popup {
     private final ImageButton btnAdd;
     private final ImageButton btnRefresh;
 
-    protected final Vector<Option> options;
+    protected final List<Option> options;
 
     private final int colorSelected;
 
@@ -64,7 +64,7 @@ public class PopupChoose extends Popup {
     public void onOther() {}
     public void onAfterOptionExecuted() {}
 
-    public PopupChoose(String title, String message, Vector<Option> options) {
+    public PopupChoose(String title, String message, List<Option> options) {
 
         this.options = options;
 
@@ -118,11 +118,11 @@ public class PopupChoose extends Popup {
 
     private void addOptions(LinearLayout llOptions,
                             LinearLayout llOptionsOverlays,
-                            Vector<Option> options) {
+                            List<Option> options) {
 
         if(options.isEmpty()) { return; }
 
-        Option firstOption = options.firstElement();
+        Option firstOption = options.get(0);
         boolean withIcon = (firstOption.getIconId() != 0)
                 | (firstOption.getIconDrawable() != null)
                 | (firstOption.getIconBitmap() != null);
@@ -160,7 +160,7 @@ public class PopupChoose extends Popup {
         int n = options.size();
 
         for(int i=0; i<n; i++) {
-            option = options.elementAt(i);
+            option = options.get(i);
 
             inflater.inflate(R.layout.appbase_popup_ci_opt_ic, llOptions);
 
@@ -195,7 +195,7 @@ public class PopupChoose extends Popup {
         if(view.getParent().getParent() == llOptions) { // option clicked
             int i = view.getId();
             ContentView.removePopUp(this); // dismiss
-            options.elementAt(i).run();
+            options.get(i).run();
             onAfterOptionExecuted();
             return;
         }

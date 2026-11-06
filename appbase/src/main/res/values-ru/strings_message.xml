@@ -87,4 +87,7 @@ SOFTWARE.
     <string name="try_a_smaller_selection">Выберите меньший фрагмент.</string>
     <string name="this_will_rec_over_existing">Это запишет поверх существующего материала с этой позиции.</string>
     <string name="reached_limit_x_elements">Вы достигли лимита в [x] элементов в этом списке.</string>
+    <string name="please_choose_plan">Чтобы воспользоваться этими преимуществами, выберите тарифный план ниже.</string>
+    <string name="purchases_successfully_restored">Покупки успешно восстановлены!</string>
+    <string name="no_prev_purchases_found">Ранее сделанные покупки для этого аккаунта Google не найдены.</string>
 </resources>

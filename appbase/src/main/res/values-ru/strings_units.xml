@@ -38,9 +38,18 @@ SOFTWARE.
     <string name="unit_kilobits_per_second">кбит/с</string>
     <string name="unit_frames_per_second">Кадры/с</string>
 
-    <string name="item">объект</string>
-    <string name="items_a">объекта</string>
-    <string name="items_ov">объектов</string>
+    <string name="unit_item">элемент</string>
+    <string name="unit_items_a">элемента</string>
+    <string name="unit_items_ov">элементов</string>
+
+    <string name="unit_file">файл</string>
+    <string name="unit_files_a">файла</string>
+    <string name="unit_files_ov">файлов</string>
+
+    <string name="unit_page">страница</string>
+    <string name="unit_pages_a">страницы</string>
+    <string name="unit_pages_ov">страниц</string>
+
     <string name="unit_x">x</string>
     <string name="unit_samples">образцы</string>
     <string name="unit_pixels">пиксели</string>

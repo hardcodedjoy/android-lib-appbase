@@ -87,4 +87,7 @@ SOFTWARE.
     <string name="try_a_smaller_selection">Спробуйте менший фрагмент.</string>
     <string name="this_will_rec_over_existing">Це запише поверх існуючого матеріалу з цієї позиції.</string>
     <string name="reached_limit_x_elements">Ви досягли ліміту в [x] елементів у цьому списку.</string>
+    <string name="please_choose_plan">Щоб скористатися цими перевагами, виберіть план нижче.</string>
+    <string name="purchases_successfully_restored">Покупки успішно відновлено!</string>
+    <string name="no_prev_purchases_found">Раніше зроблених покупок для цього облікового запису Google не знайдено.</string>
 </resources>

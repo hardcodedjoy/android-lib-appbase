@@ -126,16 +126,18 @@ public class ImageUtil {
     static public Bitmap loadImage(InputStream is) throws Exception {
         if(is == null) { throw new Exception("is == null"); }
 
-        Matrix matrix = getRotationMatrix(is);
-        if(matrix == null) {
-            Bitmap bitmap = BitmapFactory.decodeStream(is);
-            is.close();
-            return bitmap;
-        }
+        Matrix matrix = getRotationMatrix(is); // also resets the is
+
+        // use options to remove the warning in Google Play
+        // this method still loads the full size Bitmap
+        // we will take care to use other method when needed
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        Bitmap bitmap = BitmapFactory.decodeStream(is, null, options);
+        is.close();
+
+        if(matrix == null) { return bitmap; }
 
         // else -> apply matrix:
-        Bitmap bitmap = BitmapFactory.decodeStream(is);
-        is.close();
 
         int w = bitmap.getWidth();
         int h = bitmap.getHeight();
@@ -210,8 +212,7 @@ public class ImageUtil {
 
         Bitmap bitmap;
         try (InputStream isDecode = ContentView.openInputStream(uri)) {
-            bitmap = BitmapFactory.decodeStream(
-                    isDecode, null, options);
+            bitmap = BitmapFactory.decodeStream(isDecode, null, options);
         }
 
         if(bitmap == null) { return null; }
@@ -229,6 +230,133 @@ public class ImageUtil {
         }
         if(rotatedBitmap != scaledBitmap) { scaledBitmap.recycle(); }
         return rotatedBitmap;
+    }
+
+    static public Bitmap loadThumb(File file, int sizeDp) throws Exception {
+        if(file == null) { throw new Exception("file == null"); }
+        //noinspection IOStreamConstructor
+        InputStream is = new FileInputStream(file);
+        Matrix matrix;
+        BitmapFactory.Options options;
+        try {
+            matrix = getRotationMatrix(is);
+            options = new BitmapFactory.Options();
+            options.inJustDecodeBounds = true;
+            BitmapFactory.decodeStream(is, null, options);
+        } finally {
+            is.close();
+        }
+
+        int width = options.outWidth;
+        int height = options.outHeight;
+
+        int sizePixels = DisplayUnit.dpToPx(sizeDp);
+
+        float scale;
+        if(width > height) { scale = sizePixels / (float) width; }
+        else { scale = sizePixels / (float) height; }
+
+        options = new BitmapFactory.Options();
+        float inSampleSizeFloat = 1.0f / scale;
+        int inSampleSize = 1;
+        while (inSampleSize < inSampleSizeFloat) {
+            inSampleSize *= 2;
+        }
+        options.inSampleSize = inSampleSize;
+
+        width = (int) (width * scale + 0.5f);
+        height = (int) (height * scale + 0.5f);
+
+        Bitmap bitmap;
+        //noinspection IOStreamConstructor
+        try (InputStream isDecode = new FileInputStream(file)) {
+            bitmap = BitmapFactory.decodeStream(isDecode, null, options);
+        }
+
+        if(bitmap == null) { return null; }
+
+        Bitmap scaledBitmap = Bitmap.createScaledBitmap(
+                bitmap, width, height, true);
+        if(scaledBitmap != bitmap) { bitmap.recycle(); }
+        Bitmap rotatedBitmap = scaledBitmap;
+        if(matrix != null) {
+            // rotate:
+            rotatedBitmap = Bitmap.createBitmap(scaledBitmap, 0, 0,
+                    scaledBitmap.getWidth(),
+                    scaledBitmap.getHeight(),
+                    matrix, true);
+        }
+        if(rotatedBitmap != scaledBitmap) { scaledBitmap.recycle(); }
+        return rotatedBitmap;
+    }
+
+    static public Bitmap loadThumb(File file, int sizeDp, int precalculatedExifRotDeg) throws Exception {
+        if(file == null) { throw new Exception("file == null"); }
+        String path = file.getAbsolutePath();
+
+        // Get bounds in a single pass without full decode
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeFile(path, options);
+
+        int width = options.outWidth;
+        int height = options.outHeight;
+        int sizePixels = DisplayUnit.dpToPx(sizeDp);
+
+        // Account for dimensions if rotated 90 or 270 degrees
+        if(precalculatedExifRotDeg == 90 || precalculatedExifRotDeg == 270) {
+            int temp = width;
+            //noinspection ReassignedVariable,SuspiciousNameCombination
+            width = height;
+            height = temp;
+        }
+
+        float scale;
+        if(width > height) { scale = sizePixels / (float) width; }
+        else               { scale = sizePixels / (float) height; }
+
+        // Calculate optimal sample size (powers of 2)
+        options = new BitmapFactory.Options();
+        options.inPreferredConfig = Bitmap.Config.ARGB_8888;
+        float inSampleSizeFloat = 1.0f / scale;
+        int inSampleSize = 1;
+        while(inSampleSize < inSampleSizeFloat) {
+            inSampleSize *= 2;
+        }
+        options.inSampleSize = inSampleSize;
+
+        // Decode the downsampled bitmap once
+        Bitmap decodedBitmap = BitmapFactory.decodeFile(path, options);
+        if (decodedBitmap == null) { return null; }
+
+        // Combine Scaling and Rotation into a SINGLE Matrix pass
+        Matrix matrix = new Matrix();
+
+        // Adjust scale factor relative to the sample size already applied by BitmapFactory
+        float actualScaleX = ((float) options.outWidth / inSampleSize > 0) ?
+                (scale * inSampleSize) : scale;
+        float actualScaleY = ((float) options.outHeight / inSampleSize > 0) ?
+                (scale * inSampleSize) : scale;
+
+        if(precalculatedExifRotDeg != 0) {
+            matrix.postRotate(precalculatedExifRotDeg);
+        }
+        matrix.postScale(actualScaleX, actualScaleY);
+
+        // Single-pass transformation: handles scale + rotation simultaneously,
+        // eliminating intermediate createScaledBitmap allocations.
+        Bitmap finalBitmap = Bitmap.createBitmap(
+                decodedBitmap,
+                0, 0,
+                decodedBitmap.getWidth(),
+                decodedBitmap.getHeight(),
+                matrix,
+                true
+        );
+
+        if(finalBitmap != decodedBitmap) { decodedBitmap.recycle(); }
+
+        return finalBitmap;
     }
 
     // TODO: don't repeat code, apply updates from loadThumb(Uri uri, int sizeDp)

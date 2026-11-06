@@ -33,7 +33,8 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PermissionUtil {
 
@@ -43,9 +44,9 @@ public class PermissionUtil {
     static public void setActivity(Activity activity) { PermissionUtil.activity = activity; }
 
     static private int requestCode = 0;
-    static private final Vector<Integer> requestCodes = new Vector<>();
-    static private final Vector<Runnable> tasksOnGranted = new Vector<>();
-    static private final Vector<Runnable> tasksOnDenied = new Vector<>();
+    static private final List<Integer> requestCodes = new ArrayList<>();
+    static private final List<Runnable> tasksOnGranted = new ArrayList<>();
+    static private final List<Runnable> tasksOnDenied = new ArrayList<>();
 
     @SuppressWarnings("unused")
     static public void runWithPermission(String permission, Runnable onGranted) {
@@ -91,7 +92,7 @@ public class PermissionUtil {
     }
 
     static private String[] onlyNonGranted(String[] permissions) {
-        Vector<String> nonGranted = new Vector<>();
+        List<String> nonGranted = new ArrayList<>();
         for(String p : permissions) { if(!permissionAlreadyGranted(p)) { nonGranted.add(p); } }
         return nonGranted.toArray(new String[0]);
     }
@@ -108,12 +109,12 @@ public class PermissionUtil {
         synchronized(requestCodes) {
             int n = requestCodes.size();
             for(int i=0; i<n; i++) {
-                if(requestCodes.elementAt(i) != requestCode) { continue; }
+                if(requestCodes.get(i) != requestCode) { continue; }
 
                 if(grantResult == PackageManager.PERMISSION_GRANTED) {
-                    tasksOnGranted.elementAt(i).run();
+                    tasksOnGranted.get(i).run();
                 } else if(grantResult == PackageManager.PERMISSION_DENIED) {
-                    tasksOnDenied.elementAt(i).run();
+                    tasksOnDenied.get(i).run();
                 }
 
                 requestCodes.remove(i);
@@ -141,22 +142,26 @@ public class PermissionUtil {
         return (activity.checkSelfPermission(permission) == PackageManager.PERMISSION_GRANTED);
     }
 
+    /** @noinspection unused*/
     static public void takePersistableUriPermissionRead(Uri uri) {
         activity.getContentResolver().takePersistableUriPermission(
                 uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
     }
 
+    /** @noinspection unused*/
     static public void takePersistableUriPermissionReadWrite(Uri uri) {
         activity.getContentResolver().takePersistableUriPermission(
                 uri, Intent.FLAG_GRANT_READ_URI_PERMISSION |
                         Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
     }
 
+    /** @noinspection unused*/
     static public void releasePersistableUriPermissionRead(Uri uri) {
         activity.getContentResolver().releasePersistableUriPermission(
                 uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
     }
 
+    /** @noinspection unused*/
     static public void releasePersistableUriPermissionReadWrite(Uri uri) {
         activity.getContentResolver().releasePersistableUriPermission(
                 uri, Intent.FLAG_GRANT_READ_URI_PERMISSION |

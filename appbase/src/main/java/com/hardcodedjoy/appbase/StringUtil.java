@@ -269,21 +269,65 @@ public class StringUtil {
 		                                     { return StringUtil.getSizeInB (sizeInBytes); }
 	}
 
-	static public int getItemsStringId(int itemCount) {
-		if("ru".equals(ContentView.getAppLanguage())) {
-			if(itemCount == 0) { return R.string.items_ov; }
-			if(itemCount >= 10 && itemCount <= 20) { return R.string.items_ov; }
-			if((itemCount%10) == 1) { return R.string.item; }
-			if((itemCount%10) >= 2 && (itemCount%10) <= 4) { return R.string.items_a; }
-			return R.string.items_ov;
-		}
+	static public int getPluralStringId(int count, int resIdItem, int resIdItemsA, int resIdItemsOv) {
 
-		if(itemCount == 1) { return R.string.item; }
-		return R.string.items_ov;
+		String lang = ContentView.getAppLanguage();
+
+		// Normalize negative numbers just in case
+		int absCount = Math.abs(count);
+		int last2D = absCount % 100;
+		int lastD = absCount % 10;
+
+		switch(lang) {
+			case "pl":
+				if (absCount == 1) { return resIdItem; }
+				if (last2D >= 10 && last2D <= 20) { return resIdItemsOv; }
+				if (lastD >= 2 && lastD <= 4) { return resIdItemsA; }
+				return resIdItemsOv;
+
+			case "ro":
+				if (absCount == 1) { return resIdItem; }
+				if (absCount == 0 || (last2D > 0 && last2D < 20)) { return resIdItemsA; }
+				return resIdItemsOv; // ("de x")
+
+			case "ru":
+			case "uk":
+				if (last2D >= 10 && last2D <= 20) { return resIdItemsOv; }
+				if (lastD == 1) { return resIdItem; }
+				if (lastD >= 2 && lastD <= 4) { return resIdItemsA; }
+				return resIdItemsOv;
+
+			default:
+				if (absCount == 1) { return resIdItem; }
+				return resIdItemsOv;
+		}
 	}
 
-	static public String getItemCountString(int itemCount) {
-		return itemCount + " " + ContentView.getString(getItemsStringId(itemCount));
+	static public int getItemsStringId(int itemCount) {
+		return getPluralStringId(itemCount, R.string.unit_item,
+				R.string.unit_items_a, R.string.unit_items_ov);
+	}
+
+	static public int getFilesStringId(int fileCount) {
+		return getPluralStringId(fileCount, R.string.unit_file,
+				R.string.unit_files_a, R.string.unit_files_ov);
+	}
+
+	static public int getPagesStringId(int pageCount) {
+		return getPluralStringId(pageCount, R.string.unit_page,
+				R.string.unit_pages_a, R.string.unit_pages_ov);
+	}
+
+	static public String getItemCountString(int n) {
+		return n + " " + ContentView.getString(getItemsStringId(n));
+	}
+
+	static public String getFileCountString(int n) {
+		return n + " " + ContentView.getString(getFilesStringId(n));
+	}
+
+	static public String getPageCountString(int n) {
+		return n + " " + ContentView.getString(getPagesStringId(n));
 	}
 
 	static public String trim(String s, String[] matchSequences) {

@@ -38,9 +38,18 @@ SOFTWARE.
     <string name="unit_kilobits_per_second">kbit/s</string>
     <string name="unit_frames_per_second">FPS</string>
 
-    <string name="item">obiect</string>
-    <string name="items_a">obiecte</string>
-    <string name="items_ov">obiecte</string>
+    <string name="unit_item">element</string>
+    <string name="unit_items_a">elemente</string>
+    <string name="unit_items_ov">de elemente</string>
+
+    <string name="unit_file">fișier</string>
+    <string name="unit_files_a">fișiere</string>
+    <string name="unit_files_ov">de fișiere</string>
+
+    <string name="unit_page">pagină</string>
+    <string name="unit_pages_a">pagini</string>
+    <string name="unit_pages_ov">de pagini</string>
+
     <string name="unit_x">x</string>
     <string name="unit_samples">eșantioane</string>
     <string name="unit_pixels">px</string>

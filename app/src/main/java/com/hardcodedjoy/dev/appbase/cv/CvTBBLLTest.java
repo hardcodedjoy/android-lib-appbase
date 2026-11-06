@@ -34,7 +34,8 @@ import com.hardcodedjoy.appbase.contentview.CvTBBLL;
 import com.hardcodedjoy.appbase.popup.Option;
 import com.hardcodedjoy.dev.appbase.R;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 @SuppressLint("ViewConstructor")
 public class CvTBBLLTest extends CvTBBLL {
@@ -45,10 +46,10 @@ public class CvTBBLLTest extends CvTBBLL {
 
         setTitle("1234567890 1234567890 1234567890");
 
-        Vector<Option> ops;
+        List<Option> ops;
 
         {
-            ops = new Vector<>();
+            ops = new ArrayList<>();
 
             ops.add(new Option(
                     com.hardcodedjoy.appbase.R.drawable.ic_file_type_file_3,
@@ -86,7 +87,7 @@ public class CvTBBLLTest extends CvTBBLL {
 
 
         {
-            ops = new Vector<>();
+            ops = new ArrayList<>();
 
             ops.add(new Option(
                     com.hardcodedjoy.appbase.R.drawable.ic_edit_undo_1,
@@ -122,12 +123,12 @@ public class CvTBBLLTest extends CvTBBLL {
         }
 
         {
-            ops = new Vector<>();
+            ops = new ArrayList<>();
             addButton("super very and ultra long string", ops);
         }
 
         {
-            ops = new Vector<>();
+            ops = new ArrayList<>();
 
             ops.add(new Option(
                     com.hardcodedjoy.appbase.R.drawable.ic_edit_undo_1,

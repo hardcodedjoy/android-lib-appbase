@@ -400,4 +400,10 @@ SOFTWARE.
     <string name="title_transfer">Передача</string>
     <string name="title_transferred">Передано</string>
     <string name="title_sampling_period">Период дискретизации</string>
+    <string name="title_last_modified">Последнее изменение</string>
+    <string name="title_scan_code_or_text">Сканирование кода или текста</string>
+    <string name="title_pro_features">ПРО Функции</string>
+    <string name="title_active">Активно</string>
+    <string name="title_unlocked">Доступно</string>
+    <string name="title_available_products">Доступные продукты</string>
 </resources>

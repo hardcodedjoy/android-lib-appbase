@@ -400,4 +400,10 @@ SOFTWARE.
     <string name="title_transfer">Transfer</string>
     <string name="title_transferred">Transferred</string>
     <string name="title_sampling_period">Sampling period</string>
+    <string name="title_last_modified">Last modified</string>
+    <string name="title_scan_code_or_text">Scan code or text</string>
+    <string name="title_pro_features">Pro Features</string>
+    <string name="title_active">Active</string>
+    <string name="title_unlocked">Unlocked</string>
+    <string name="title_available_products">Available products</string>
 </resources>

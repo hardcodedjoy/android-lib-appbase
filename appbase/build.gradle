@@ -10,8 +10,8 @@ android {
     defaultConfig {
         minSdkVersion 19
         targetSdk 36
-        versionCode 129
-        versionName "2.4.9"
+        versionCode 130
+        versionName "2.5.0"
         buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
         buildConfigField "String", "VERSION_NAME", "\"" + versionName + "\""
     }
@@ -42,7 +42,11 @@ dependencies {
     // don't increase version for core, as it will include kotlin libs
     //noinspection GradleDependency
     implementation ("androidx.core:core:1.10.1")
+    //noinspection GradleDependency
     implementation ("androidx.documentfile:documentfile:1.0.0")
+    // don't increase version for fragment, as it will require API 21+
+    //noinspection GradleDependency
+    implementation ("androidx.fragment:fragment:1.3.6")
 }
 
 afterEvaluate {

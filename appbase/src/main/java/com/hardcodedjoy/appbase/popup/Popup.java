@@ -43,6 +43,7 @@ abstract public class Popup extends LinearLayout {
     protected LayoutInflater inflater;
     protected OnClickListener ocl;
     protected LinearLayout llOutsidePopup;
+    protected Runnable onBackPressedRunnable;
 
     abstract void oclOnClick(View view);
     abstract public void onCancel();
@@ -71,6 +72,14 @@ abstract public class Popup extends LinearLayout {
     public void performOutsideClick() {
         if(llOutsidePopup != null) {
             llOutsidePopup.performClick();
+        }
+    }
+
+    public void setOnBackPressedRunnable(Runnable r) { this.onBackPressedRunnable = r; }
+
+    public void onBackPressed() {
+        if(onBackPressedRunnable != null) {
+            onBackPressedRunnable.run();
         }
     }
 

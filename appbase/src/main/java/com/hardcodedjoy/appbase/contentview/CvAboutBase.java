@@ -50,9 +50,10 @@ import com.hardcodedjoy.appbase.gui.ThemeUtil;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
-import java.util.Vector;
 
 @SuppressLint("ViewConstructor")
 public class CvAboutBase extends ContentView {
@@ -63,8 +64,8 @@ public class CvAboutBase extends ContentView {
     static private int appUsageType = 0;
     static private String linkEULA = null;
 
-    static private final Vector<String> otherAppNames = new Vector<>();
-    static private final Vector<String> otherAppURLs = new Vector<>();
+    static private final List<String> otherAppNames = new ArrayList<>();
+    static private final List<String> otherAppURLs = new ArrayList<>();
 
     public CvAboutBase() {
         inflate(R.layout.appbase_cv_about);
@@ -228,7 +229,7 @@ public class CvAboutBase extends ContentView {
         tv.setClickable(true);
         tv.setMovementMethod(LinkMovementMethod.getInstance());
 
-        if(otherAppNames.size() == 0) {
+        if(otherAppNames.isEmpty()) {
             findViewById(R.id.appbase_tv_you_might_also_like).setVisibility(GONE);
             findViewById(R.id.appbase_ll_links_to_other_apps).setVisibility(GONE);
         } else {
@@ -237,8 +238,8 @@ public class CvAboutBase extends ContentView {
             int n = otherAppNames.size();
             for(int i=0; i<n; i++) {
                 tv = new TextView(getActivity());
-                s = otherAppNames.elementAt(i);
-                s = "<a href=\"" + otherAppURLs.elementAt(i) + "\">" + s + "</a>";
+                s = otherAppNames.get(i);
+                s = "<a href=\"" + otherAppURLs.get(i) + "\">" + s + "</a>";
                 setAsLink(tv, s);
                 ll.addView(tv);
             }

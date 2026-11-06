@@ -45,7 +45,7 @@ import com.hardcodedjoy.appbase.gui.LinearLayoutHorizontal;
 import com.hardcodedjoy.appbase.gui.ThemeUtil;
 import com.hardcodedjoy.appbase.popup.Option;
 
-import java.util.Vector;
+import java.util.List;
 
 @SuppressLint("ViewConstructor")
 public class CvTBBLL extends ContentView { // Content View with Title, Button Bar and LL
@@ -129,12 +129,12 @@ public class CvTBBLL extends ContentView { // Content View with Title, Button Ba
         ivTitleIcon.setVisibility(VISIBLE);
     }
 
-    public void addButton(int btnTextStringId, Vector<Option> options) {
+    public void addButton(int btnTextStringId, List<Option> options) {
         String btnText = getString(btnTextStringId);
         addButton(btnText, options);
     }
 
-    public void addButton(String btnText, Vector<Option> options) {
+    public void addButton(String btnText, List<Option> options) {
         Button button = new Button(getActivity());
         button.setText(btnText);
         button.setOnClickListener(view -> {

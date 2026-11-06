@@ -67,6 +67,49 @@ public class IntentUtil {
         }
     }
 
+    static public String getText(Intent intent) {
+        if(intent == null) { return null; }
+
+        // PRIMARY STRATEGY: Extract from ClipData (Modern Android Sharing)
+        ClipData clipData = intent.getClipData();
+        if(clipData != null && clipData.getItemCount() > 0) {
+            StringBuilder sb = new StringBuilder();
+            int n = clipData.getItemCount();
+            for(int i = 0; i < n; i++) {
+                ClipData.Item item = clipData.getItemAt(i);
+                if(item != null) {
+                    CharSequence text = item.getText();
+                    if(text != null) {
+                        if(sb.length() > 0) {
+                            // Delimit multiple texts:
+                            sb.append("\n");
+                        }
+                        sb.append(text);
+                    }
+                }
+            }
+            if(sb.length() > 0) { return sb.toString(); }
+        }
+
+        // FALLBACK STRATEGY:
+        // Extract from standard Bundle Extras (Legacy / Simple Apps)
+        String extraText = intent.getStringExtra(android.content.Intent.EXTRA_TEXT);
+        if(extraText != null) { return extraText; }
+
+        // LAST RESORT: Check raw Intent Data stream
+        // (In case text was passed as a URI string)
+        Uri dataUri = intent.getData();
+        if(dataUri != null) {
+            String scheme = dataUri.getScheme();
+            // If it's not a file path,
+            // the raw URI data string itself might be the text
+            if(scheme != null && !scheme.equals("content") && !scheme.equals("file")) {
+                return dataUri.toString();
+            }
+        }
+        return null;
+    }
+
     static public void shareFiles(ArrayList<Uri> uriList,
                                   String title,
                                   String mimeType) {

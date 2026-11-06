@@ -400,4 +400,10 @@ SOFTWARE.
     <string name="title_transfer">Transfer</string>
     <string name="title_transferred">Transferat</string>
     <string name="title_sampling_period">Perioada de eșantionare</string>
+    <string name="title_last_modified">Ultima modificare</string>
+    <string name="title_scan_code_or_text">Scanează cod sau text</string>
+    <string name="title_pro_features">Funcții Pro</string>
+    <string name="title_active">Activ</string>
+    <string name="title_unlocked">Deblocat</string>
+    <string name="title_available_products">Produse disponibile</string>
 </resources>

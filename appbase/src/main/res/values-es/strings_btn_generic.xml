@@ -89,4 +89,6 @@ SOFTWARE.
     <string name="btn_new_clip">Nuevo clip</string>
     <string name="btn_plus_new_clip">+ nuevo clip</string>
     <string name="btn_plus_new">+ nuevo</string>
+    <string name="btn_merge">Combinar</string>
+    <string name="btn_restore_purchases">Restaurar compras</string>
 </resources>

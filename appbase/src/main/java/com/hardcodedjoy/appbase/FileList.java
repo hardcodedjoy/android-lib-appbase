@@ -50,6 +50,7 @@ public class FileList {
     public void sortSmallerFirstDirsFirst() { FileSort.smallestFirstDirsFirst(files); }
     public void sortNewestFirstDirsFirst() { FileSort.newestFirstDirsFirst(files); }
     public void sortOldestFirstDirsFirst() { FileSort.oldestFirstDirsFirst(files); }
+    public void sort(String byWhat) { FileSort.sortBy(files, byWhat); }
 
     public boolean contains(File what) {
         if(what == null) { return false; }

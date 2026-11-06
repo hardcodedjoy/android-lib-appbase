@@ -87,4 +87,7 @@ SOFTWARE.
     <string name="try_a_smaller_selection">Încearcă o selecție mai mică.</string>
     <string name="this_will_rec_over_existing">Aceasta va înregistra peste filmarea existentă din această poziție.</string>
     <string name="reached_limit_x_elements">Ați atins limita de [x] elemente în această listă.</string>
+    <string name="please_choose_plan">Vă rugăm să alegeți un plan de mai jos pentru a vă bucura de aceste beneficii.</string>
+    <string name="purchases_successfully_restored">Achizițiile au fost restaurate cu succes!</string>
+    <string name="no_prev_purchases_found">Nu s-au găsit achiziții anterioare pentru acest cont Google.</string>
 </resources>

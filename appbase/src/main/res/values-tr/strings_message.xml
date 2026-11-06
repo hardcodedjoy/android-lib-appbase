@@ -87,4 +87,7 @@ SOFTWARE.
     <string name="try_a_smaller_selection">Daha küçük bir seçim deneyin.</string>
     <string name="this_will_rec_over_existing">Bu işlem, bu konumdan itibaren mevcut görüntünün üzerine kayıt yapacaktır.</string>
     <string name="reached_limit_x_elements">Bu listedeki [x] öğe sınırına ulaştınız.</string>
+    <string name="please_choose_plan">Bu avantajlardan yararlanmak için lütfen aşağıdan bir plan seçin.</string>
+    <string name="purchases_successfully_restored">Satın almalar başarıyla geri yüklendi!</string>
+    <string name="no_prev_purchases_found">Bu Google hesabı için önceki bir satın alma bulunamadı.</string>
 </resources>

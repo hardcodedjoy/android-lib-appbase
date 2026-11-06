@@ -29,14 +29,16 @@ package com.hardcodedjoy.appbase.activity;
 import android.app.Activity;
 import android.content.Intent;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ActivityUtil {
 
     static private int requestCode = 0;
-    static private final Vector<Integer> requestCodes = new Vector<>();
-    static private final Vector<ActivityResultTask> tasks = new Vector<>();
+    static private final List<Integer> requestCodes = new ArrayList<>();
+    static private final List<ActivityResultTask> tasks = new ArrayList<>();
 
+    /** @noinspection unused*/
     static public void startActivity(Activity activity, Class<?> c) {
         activity.startActivity(new Intent(activity, c));
     }
@@ -76,9 +78,9 @@ public class ActivityUtil {
         synchronized(tasks) {
             int n = tasks.size();
             for(int i=0; i<n; i++) {
-                if(requestCodes.elementAt(i) == requestCode) {
-                    tasks.elementAt(i).setData(data);
-                    tasks.elementAt(i).getRunnable().run();
+                if(requestCodes.get(i) == requestCode) {
+                    tasks.get(i).setData(data);
+                    tasks.get(i).getRunnable().run();
                     requestCodes.remove(i);
                     tasks.remove(i);
                     return;

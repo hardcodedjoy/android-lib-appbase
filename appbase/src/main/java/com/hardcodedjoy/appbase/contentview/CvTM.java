@@ -38,8 +38,8 @@ import com.hardcodedjoy.appbase.gui.DisplayUnit;
 import com.hardcodedjoy.appbase.gui.DropDownMenu;
 import com.hardcodedjoy.appbase.popup.Option;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
 
 @SuppressLint("ViewConstructor")
 public class CvTM extends ContentView { // Content View with Title and Menu
@@ -52,12 +52,12 @@ public class CvTM extends ContentView { // Content View with Title and Menu
 
     protected FrameLayout flMenuOptions; // menu together with 1dp border and scrollview
     protected LinearLayout llMenuOptions; // container for the menu options
-    protected Vector<Option> menuOptions;
+    protected List<Option> menuOptions;
 
     protected float titleTextSizeDefault;
 
     protected CvTM() {
-        menuOptions = new Vector<>();
+        menuOptions = new ArrayList<>();
         menuOptions.add(new Option(R.drawable.ic_info_1, R.string.title_about, () -> {
             try { ((ContentView)aboutCvClass.newInstance()).show();
             } catch (Exception e) { e.printStackTrace(System.err); }
@@ -94,14 +94,11 @@ public class CvTM extends ContentView { // Content View with Title and Menu
     }
 
     @SuppressWarnings("unused")
-    public Vector<Option> getMenuOptions() { return menuOptions; }
+    public List<Option> getMenuOptions() { return menuOptions; }
 
     @SuppressWarnings("unused")
-    public void setMenuOptions(Vector<Option> ops) { this.menuOptions = ops; }
-    @SuppressWarnings("unused")
-    public void setMenuOptions(List<Option> ops) { this.menuOptions = new Vector<>(ops); }
+    public void setMenuOptions(List<Option> ops) { this.menuOptions = ops; }
 
-    public void addMenuOptions(Vector<Option> ops, int index) { menuOptions.addAll(index, ops); }
     public void addMenuOptions(List<Option> ops, int index) { menuOptions.addAll(index, ops); }
 
     public void setTitle(String title) {

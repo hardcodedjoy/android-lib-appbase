@@ -1,6 +1,6 @@
 # AppBase
 
-<code>com.hardcodedjoy.appbase</code> <code>v2.4.9</code><br/>
+<code>com.hardcodedjoy.appbase</code> <code>v2.5.0</code><br/>
 minSdkVersion: <code>19</code><br/>
 targetSdkVersion: <code>36</code><br/>
 
@@ -35,7 +35,7 @@ Menu button opens a drop-down menu:
 - "SETTINGS" screen;
 - add more options:
 <code>
-Vector<Option> ops = new Vector<>();
+List<Option> ops = new ArrayList<>();
 ops.add(new Option(...));
 ...
 addMenuOptions(ops, 0);

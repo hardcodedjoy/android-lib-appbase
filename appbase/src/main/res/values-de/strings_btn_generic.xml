@@ -90,4 +90,6 @@ SOFTWARE.
     <string name="btn_new_clip">Neuer Clip</string>
     <string name="btn_plus_new_clip">+ neuer Clip</string>
     <string name="btn_plus_new">+ neu</string>
+    <string name="btn_merge">Zusammenführen</string>
+    <string name="btn_restore_purchases">Käufe wiederherstellen</string>
 </resources>

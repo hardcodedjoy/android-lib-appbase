@@ -215,4 +215,7 @@ SOFTWARE.
     <string name="option_create_input">crea ingresso</string>
     <string name="option_create_output">crea uscita</string>
     <string name="option_duplicate">duplica</string>
+    <string name="option_camera_input">input fotocamera</string>
+    <string name="option_apply_to_all">applica a tutti</string>
+    <string name="option_system_default">predefinita di sistema</string>
 </resources>

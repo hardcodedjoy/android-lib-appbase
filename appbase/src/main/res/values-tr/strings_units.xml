@@ -38,9 +38,18 @@ SOFTWARE.
     <string name="unit_kilobits_per_second">kbit/s</string>
     <string name="unit_frames_per_second">FPS</string>
 
-    <string name="item">öğe</string>
-    <string name="items_a">öğeler</string>
-    <string name="items_ov">öğeler</string>
+    <string name="unit_item">öğe</string>
+    <string name="unit_items_a">öğeler</string>
+    <string name="unit_items_ov">öğeler</string>
+
+    <string name="unit_file">dosya</string>
+    <string name="unit_files_a">dosya</string>
+    <string name="unit_files_ov">dosya</string>
+
+    <string name="unit_page">sayfa</string>
+    <string name="unit_pages_a">sayfa</string>
+    <string name="unit_pages_ov">sayfa</string>
+
     <string name="unit_x">x</string>
     <string name="unit_samples">örnekler</string>
     <string name="unit_pixels">pikseller</string>

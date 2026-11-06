@@ -65,4 +65,8 @@ SOFTWARE.
     <string name="pv_unlimited_items_in_main_dir">• ana klasörde sınırsız öğe</string>
     <string name="pv_more_features_will_be_added">• uygulama yeterli sayıda indirme alırsa daha fazla özellik eklenecektir</string>
     <string name="pv_full_access_to_all_future_premium_updates">• gelecekteki tüm premium güncellemelere tam erişim</string>
+    <string name="total">toplam</string>
+    <string name="one_time_payment">(tek seferlik ödeme)</string>
+    <string name="tap_to_buy">(satın almak için dokunun)</string>
+    <string name="pro_features_intro">Ek pro özelliklerin kilidini açın:</string>
 </resources>

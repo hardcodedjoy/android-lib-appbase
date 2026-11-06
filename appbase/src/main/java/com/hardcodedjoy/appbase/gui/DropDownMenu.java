@@ -37,15 +37,15 @@ import com.hardcodedjoy.appbase.R;
 import com.hardcodedjoy.appbase.contentview.ContentView;
 import com.hardcodedjoy.appbase.popup.Option;
 
-import java.util.Vector;
+import java.util.List;
 
 abstract public class DropDownMenu {
 
-    private final Vector<Option> options;
+    private final List<Option> options;
 
     abstract public void hideMenu();
 
-    public DropDownMenu(Vector<Option> options) {
+    public DropDownMenu(List<Option> options) {
         this.options = options;
     }
 

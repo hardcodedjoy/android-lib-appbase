@@ -400,4 +400,10 @@ SOFTWARE.
     <string name="title_transfer">Transfer</string>
     <string name="title_transferred">Przesłano</string>
     <string name="title_sampling_period">Okres próbkowania</string>
+    <string name="title_last_modified">Ostatnia modyfikacja</string>
+    <string name="title_scan_code_or_text">Zeskanuj kod lub tekst</string>
+    <string name="title_pro_features">Funkcje Pro</string>
+    <string name="title_active">Aktywne</string>
+    <string name="title_unlocked">Odblokowano</string>
+    <string name="title_available_products">Dostępne produkty</string>
 </resources>

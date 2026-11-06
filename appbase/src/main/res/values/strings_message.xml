@@ -87,4 +87,7 @@ SOFTWARE.
     <string name="try_a_smaller_selection">Try a smaller selection.</string>
     <string name="this_will_rec_over_existing">This will record over the existing footage from this position.</string>
     <string name="reached_limit_x_elements">You\'ve reached the limit of [x] elements in this list.</string>
+    <string name="please_choose_plan">Please choose a plan below to enjoy these benefits.</string>
+    <string name="purchases_successfully_restored">Purchases successfully restored!</string>
+    <string name="no_prev_purchases_found">No previous purchases found for this Google account.</string>
 </resources>

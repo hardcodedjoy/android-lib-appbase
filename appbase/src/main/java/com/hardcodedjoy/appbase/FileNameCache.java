@@ -28,24 +28,25 @@ package com.hardcodedjoy.appbase;
 
 import android.net.Uri;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 @SuppressWarnings("unused")
 public class FileNameCache {
 
-    private Vector<Uri> uris;
-    private Vector<String> fileNames;
+    private List<Uri> uris;
+    private List<String> fileNames;
 
     public FileNameCache() {
-        this.uris = new Vector<>();
-        this.fileNames = new Vector<>();
+        this.uris = new ArrayList<>();
+        this.fileNames = new ArrayList<>();
     }
 
     public void add(Uri uri) {
         if(uri == null) { return; }
         int n = uris.size();
         for(int i=0; i<n; i++) {
-            if(uris.elementAt(i).equals(uri)) { return; } // already exists
+            if(uris.get(i).equals(uri)) { return; } // already exists
         }
         uris.add(uri);
         fileNames.add(FileUtil.getFileName(uri));
@@ -55,13 +56,13 @@ public class FileNameCache {
         if(uri == null) { return null; }
         int n = uris.size();
         for(int i=0; i<n; i++) {
-            if(uris.elementAt(i).equals(uri)) { return fileNames.elementAt(i); }
+            if(uris.get(i).equals(uri)) { return fileNames.get(i); }
         }
         return null;
     }
 
     public void reset() {
-        this.uris = new Vector<>();
-        this.fileNames = new Vector<>();
+        this.uris = new ArrayList<>();
+        this.fileNames = new ArrayList<>();
     }
 }

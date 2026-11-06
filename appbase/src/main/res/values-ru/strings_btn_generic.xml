@@ -89,4 +89,6 @@ SOFTWARE.
     <string name="btn_new_clip">Новый клип</string>
     <string name="btn_plus_new_clip">+ новый клип</string>
     <string name="btn_plus_new">+ новый</string>
+    <string name="btn_merge">Объединить</string>
+    <string name="btn_restore_purchases">Восстановить покупки</string>
 </resources>

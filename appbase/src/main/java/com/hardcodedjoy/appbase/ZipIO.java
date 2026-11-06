@@ -30,7 +30,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
@@ -38,30 +39,33 @@ import java.util.zip.ZipOutputStream;
 @SuppressWarnings("unused")
 public class ZipIO {
 
-    static public void writeFile(ZipOutputStream zos, String fileName, FileInputStream fis, String dirPath) throws IOException, InterruptedException {
+    public static long writeFile(ZipOutputStream zos, String fileName, FileInputStream fis, String dirPath) throws IOException, InterruptedException {
         if(dirPath != null) { fileName = dirPath + "/" + fileName; }
         ZipEntry e = new ZipEntry(fileName);
         zos.putNextEntry(e);
-        StreamIO.copyStream(fis, zos);
-        fis.close();
-        zos.closeEntry();
+        try {
+            return StreamIO.copyStream(fis, zos); // sizeInBytes of the file written
+        } finally {
+            fis.close();
+            zos.closeEntry();
+        }
     }
 
-    static public void writeFile(ZipOutputStream zos, File file, String dirPath) throws IOException, InterruptedException {
+    public static long writeFile(ZipOutputStream zos, File file, String dirPath) throws IOException, InterruptedException {
         FileInputStream fis = new FileInputStream(file);
         String fileName = file.getName();
-        writeFile(zos, fileName, fis, dirPath);
+        return writeFile(zos, fileName, fis, dirPath);
     }
 
-    static public void writeFile(ZipOutputStream zos, File file) throws IOException, InterruptedException {
-        writeFile(zos, file, null);
+    public static long writeFile(ZipOutputStream zos, File file) throws IOException, InterruptedException {
+        return writeFile(zos, file, null);
     }
 
-    static public void writeFile(ZipOutputStream zos, String fileName, FileInputStream fis) throws IOException, InterruptedException {
-        writeFile(zos, fileName, fis, null);
+    public static long writeFile(ZipOutputStream zos, String fileName, FileInputStream fis) throws IOException, InterruptedException {
+        return writeFile(zos, fileName, fis, null);
     }
 
-    static public void writeFolder(ZipOutputStream zos, File file, String dirPath) throws IOException, InterruptedException {
+    public static long writeFolder(ZipOutputStream zos, File file, String dirPath) throws IOException, InterruptedException {
         File[] files = file.listFiles();
         if(files == null) { files = new File[0]; }
 
@@ -76,30 +80,35 @@ public class ZipIO {
         zos.putNextEntry(e);
         zos.closeEntry();
 
+        long totalBytesWritten = 0;
         // add the files, if any:
-        for(File childFile : files) { write(zos, childFile, dirPath); }
+        for(File childFile : files) {
+            totalBytesWritten += write(zos, childFile, dirPath);
+        }
+        return totalBytesWritten;
     }
 
-    static public void writeFolder(ZipOutputStream zos, File file) throws IOException, InterruptedException {
-        writeFolder(zos, file, null);
+    public static long writeFolder(ZipOutputStream zos, File file) throws IOException, InterruptedException {
+        return writeFolder(zos, file, null);
     }
 
-    static public void write(ZipOutputStream zos, File file, String dirPath) throws IOException, InterruptedException {
+    public static long write(ZipOutputStream zos, File file, String dirPath) throws IOException, InterruptedException {
         if(file.isDirectory()) {
-            writeFolder(zos, file, dirPath);
+            return writeFolder(zos, file, dirPath);
         } else {
-            writeFile(zos, file, dirPath);
+            return writeFile(zos, file, dirPath);
         }
     }
 
-    static public void write(ZipOutputStream zos, File file) throws IOException, InterruptedException {
-        write(zos, file, null);
+    public static long write(ZipOutputStream zos, File file) throws IOException, InterruptedException {
+        return write(zos, file, null);
     }
 
 
-    static public RamFile[] getFiles(ZipInputStream zis) throws IOException, InterruptedException {
+    public static RamFile[] getFiles(ZipInputStream zis) throws IOException, InterruptedException {
+        // will load in RAM, use for small ZIPs only !!!
 
-        Vector<RamFile> vec = new Vector<>();
+        List<RamFile> fileList = new ArrayList<>();
 
         ZipEntry e;
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -114,19 +123,19 @@ public class ZipIO {
             // else:
             baos.reset();
             StreamIO.copyStream(zis, baos);
-            vec.add(new RamFile(e.getName(), baos.toByteArray()));
+            fileList.add(new RamFile(e.getName(), baos.toByteArray()));
             zis.closeEntry();
         }
 
-        RamFile[] files = new RamFile[vec.size()];
+        RamFile[] files = new RamFile[fileList.size()];
         for(int i=0; i<files.length; i++) {
-            files[i] = vec.elementAt(i);
+            files[i] = fileList.get(i);
         }
 
         return files;
     }
 
-    static public int countEntries(ZipInputStream zis) throws IOException {
+    public static int countEntries(ZipInputStream zis) throws IOException {
         ZipEntry e;
         int res = 0;
         while (true) {
@@ -134,6 +143,16 @@ public class ZipIO {
             if(e == null) { return res; }
             zis.closeEntry();
             res++;
+        }
+    }
+
+    public static ZipInputStream getZipInputStream(File zipFile) {
+        if(zipFile == null) { return null; }
+        try {
+            //noinspection IOStreamConstructor
+            return new ZipInputStream(new FileInputStream(zipFile));
+        } catch (Exception e) {
+            return null;
         }
     }
 }

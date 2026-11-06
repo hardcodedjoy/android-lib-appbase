@@ -87,4 +87,7 @@ SOFTWARE.
     <string name="try_a_smaller_selection">Spróbuj mniejszego zaznaczenia.</string>
     <string name="this_will_rec_over_existing">Spowoduje to nadpisanie istniejącego materiału od tego miejsca.</string>
     <string name="reached_limit_x_elements">Osiągnięto limit [x] elementów na tej liście.</string>
+    <string name="please_choose_plan">Wybierz plan poniżej, aby cieszyć się tymi korzyściami.</string>
+    <string name="purchases_successfully_restored">Zakupy zostały pomyślnie przywrócone!</string>
+    <string name="no_prev_purchases_found">Nie znaleziono wcześniejszych zakupów dla tego konta Google.</string>
 </resources>

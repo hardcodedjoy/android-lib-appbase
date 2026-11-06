@@ -41,13 +41,15 @@ import androidx.core.view.WindowInsetsControllerCompat;
 
 import com.hardcodedjoy.appbase.R;
 import com.hardcodedjoy.appbase.SettingsKeys;
+import com.hardcodedjoy.appbase.activity.SingleActivity;
 
 import java.lang.reflect.Field;
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ThemeUtil {
 
-    static public void setTheme(Activity activity, String themeName) {
+    static public void setTheme(SingleActivity activity, String themeName) {
         Resources resources = activity.getResources();
         String packageName = activity.getPackageName();
         int id = resources.getIdentifier(themeName, "style", packageName);
@@ -55,7 +57,7 @@ public class ThemeUtil {
         adjustStatusAndNavBarColors(activity);
     }
 
-    static public void adjustStatusAndNavBarColors(Activity activity) {
+    static public void adjustStatusAndNavBarColors(SingleActivity activity) {
         if(Build.VERSION.SDK_INT < 23) { return; }
 
         Window window = activity.getWindow();
@@ -67,8 +69,22 @@ public class ThemeUtil {
                     android.R.attr.colorForeground));
         }
 
-        if(currentThemeIsDarkNotLight(activity)) {
-            // dark theme -> light title bar and status bar
+        boolean lightBarsNotDark;
+
+        switch(activity.getWindowDisplayMode()) {
+            case NORMAL_BARS_THEMED_FG:
+                lightBarsNotDark = currentThemeIsDarkNotLight(activity);
+                break;
+            case NORMAL_BARS_THEMED_BG:
+                lightBarsNotDark = !currentThemeIsDarkNotLight(activity);
+                break;
+            default:
+                lightBarsNotDark = false;
+                break;
+        }
+
+        if(lightBarsNotDark) {
+            // light title bar and status bar
             // adjust status bar text accordingly:
             if(Build.VERSION.SDK_INT < 26) {
                 //noinspection deprecation
@@ -91,10 +107,10 @@ public class ThemeUtil {
                 decorView.setSystemUiVisibility(
                         View.SYSTEM_UI_FLAG_VISIBLE);
             } else {
-                // if(Build.VERSION.SDK_INT < 35) {
+                if(Build.VERSION.SDK_INT < 35) {
                     //noinspection deprecation
                     window.setNavigationBarColor(Color.TRANSPARENT); // important!
-                // }
+                }
 
                 WindowInsetsControllerCompat controller = WindowCompat
                         .getInsetsController(window, window.getDecorView());
@@ -141,7 +157,7 @@ public class ThemeUtil {
         Field[] fields = c.getFields();
         String themeName;
 
-        Vector<String> themes = new Vector<>();
+        List<String> themes = new ArrayList<>();
 
         // String dbg = "";
 

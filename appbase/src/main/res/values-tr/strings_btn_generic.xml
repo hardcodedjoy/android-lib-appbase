@@ -89,4 +89,6 @@ SOFTWARE.
     <string name="btn_new_clip">Yeni klip</string>
     <string name="btn_plus_new_clip">+ yeni klip</string>
     <string name="btn_plus_new">+ yeni</string>
+    <string name="btn_merge">Birleştir</string>
+    <string name="btn_restore_purchases">Satın alımları geri yükle</string>
 </resources>

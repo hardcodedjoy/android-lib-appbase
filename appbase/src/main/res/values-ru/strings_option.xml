@@ -215,4 +215,7 @@ SOFTWARE.
     <string name="option_create_input">создать вход</string>
     <string name="option_create_output">создать выход</string>
     <string name="option_duplicate">дублировать</string>
+    <string name="option_camera_input">ввод с камеры</string>
+    <string name="option_apply_to_all">применить ко всем</string>
+    <string name="option_system_default">по умолчанию из системы</string>
 </resources>

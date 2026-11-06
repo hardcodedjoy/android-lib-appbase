@@ -38,14 +38,8 @@ import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.Toast;
-
-import androidx.core.view.WindowCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.core.view.WindowInsetsControllerCompat;
 
 import com.hardcodedjoy.appbase.LanguageUtil;
 import com.hardcodedjoy.appbase.R;
@@ -388,38 +382,6 @@ public class ContentView extends LinearLayout {
                                                       Runnable onMoreDetails) {
         String message = getString(messageStringId);
         showPopupFreeVersionLimitation(message, onAccept, onMoreDetails);
-    }
-
-    static public void goFullscreen(boolean fullscreen) {
-        Window window = getActivity().getWindow();
-
-        WindowInsetsControllerCompat controller =
-                WindowCompat.getInsetsController(window, window.getDecorView());
-
-        if(fullscreen) {
-            // black bar around the camera hole
-            window.getDecorView().setBackgroundColor(0xFF000000);
-            window.clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
-            window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-            controller.setSystemBarsBehavior(
-                    WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);
-            controller.hide(WindowInsetsCompat.Type.statusBars());
-            controller.hide(WindowInsetsCompat.Type.navigationBars());
-        } else {
-            // not fullscreen
-            // colorForeground around the camera hole, same color as notification bar
-            int colorDecorViewBG = ThemeUtil.getColor(getActivity(),
-                    android.R.attr.colorForeground);
-            window.getDecorView().setBackgroundColor(colorDecorViewBG);
-            window.addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
-            window.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-            controller.setSystemBarsBehavior(
-                    WindowInsetsControllerCompat.BEHAVIOR_DEFAULT);
-            controller.show(WindowInsetsCompat.Type.statusBars());
-            controller.show(WindowInsetsCompat.Type.navigationBars());
-        }
     }
 
     static public void waitUntil(AtomicBoolean atomicBooleanModifiedByOtherThread) {

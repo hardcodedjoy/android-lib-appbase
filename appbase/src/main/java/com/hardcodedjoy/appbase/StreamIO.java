@@ -36,30 +36,42 @@ import java.util.concurrent.atomic.AtomicBoolean;
 @SuppressWarnings("unused")
 public class StreamIO {
 
-    static public void copyStream(InputStream is, OutputStream os) throws IOException, InterruptedException {
+    public static long copyStream(InputStream is, OutputStream os) throws IOException, InterruptedException {
         byte[] buffer = new byte[65536];
+        long totalBytesCopied = 0;
+
         int read = is.read(buffer, 0, buffer.length);
-        while (read != -1) {
+        while(read != -1) {
             os.write(buffer, 0, read);
+            totalBytesCopied += read;
             read = is.read(buffer, 0, buffer.length);
             if (Thread.interrupted()) { throw new InterruptedException(); }
         }
+        return totalBytesCopied;
     }
 
-    static public void copyStream(InputStream is, OutputStream os, long len) throws IOException, InterruptedException {
+    public static long copyStream(InputStream is, OutputStream os, long len) throws IOException, InterruptedException {
+        if(len <= 0) { return 0; }
+
         byte[] buffer = new byte[65536];
-        int read = is.read(buffer, 0, buffer.length < len ? buffer.length : (int)len);
-        len -= read;
-        while(read != -1) {
+        long totalBytesCopied = 0;
+
+
+        while(len > 0) {
+            int maxToRead = (len < buffer.length) ? (int) len : buffer.length;
+            int read = is.read(buffer, 0, maxToRead);
+            if(read == -1) { break; }
+
             os.write(buffer, 0, read);
-            if(len <= 0) { break; }
-            read = is.read(buffer, 0, buffer.length < len ? buffer.length : (int)len);
+            totalBytesCopied += read;
             len -= read;
-            if (Thread.interrupted()) { throw new InterruptedException(); }
+
+            if(Thread.interrupted()) { throw new InterruptedException(); }
         }
+        return totalBytesCopied;
     }
 
-    static public void copyStream(InputStream is,
+    public static void copyStream(InputStream is,
                                   OutputStream os,
                                   int blockLen,
                                   AtomicBoolean cancel,
@@ -77,11 +89,11 @@ public class StreamIO {
         }
     }
 
-    static public void write8(long val, OutputStream os) throws IOException {
+    public static void write8(long val, OutputStream os) throws IOException {
         os.write( (int)(val & 0xFF) );
     }
 
-    static public void write16LE(long val, OutputStream os) throws IOException {
+    public static void write16LE(long val, OutputStream os) throws IOException {
         byte[] ba = new byte[2];
         int i = 0;
         ba[i++] = (byte) (val & 0xFF); val = val >> 8; // Least significant Byte first
@@ -89,7 +101,7 @@ public class StreamIO {
         os.write(ba);
     }
 
-    static public void write24LE(long val, OutputStream os) throws IOException {
+    public static void write24LE(long val, OutputStream os) throws IOException {
         byte[] ba = new byte[3];
         int i = 0;
         ba[i++] = (byte) (val & 0xFF); val = val >> 8; // Least significant Byte first
@@ -98,7 +110,7 @@ public class StreamIO {
         os.write(ba);
     }
 
-    static public void write32LE(long val, OutputStream os) throws IOException {
+    public static void write32LE(long val, OutputStream os) throws IOException {
         byte[] ba = new byte[4];
         int i = 0;
         ba[i++] = (byte) (val & 0xFF); val = val >> 8; // Least significant Byte first
@@ -108,7 +120,7 @@ public class StreamIO {
         os.write(ba);
     }
 
-    static public void write64LE(long val, OutputStream os) throws IOException {
+    public static void write64LE(long val, OutputStream os) throws IOException {
         byte[] ba = new byte[8];
         int i = 0;
         ba[i++] = (byte) (val & 0xFF); val = val >> 8; // Least significant Byte first
@@ -122,7 +134,7 @@ public class StreamIO {
         os.write(ba);
     }
 
-    static public void write16BE(long val, OutputStream os) throws IOException {
+    public static void write16BE(long val, OutputStream os) throws IOException {
         byte[] ba = new byte[2];
         int i = ba.length-1;
         ba[i--] = (byte) (val & 0xFF); val = val >> 8; // Least significant Byte last
@@ -130,7 +142,7 @@ public class StreamIO {
         os.write(ba);
     }
 
-    static public void write24BE(long val, OutputStream os) throws IOException {
+    public static void write24BE(long val, OutputStream os) throws IOException {
         byte[] ba = new byte[3];
         int i = ba.length-1;
         ba[i--] = (byte) (val & 0xFF); val = val >> 8; // Least significant Byte last
@@ -139,7 +151,7 @@ public class StreamIO {
         os.write(ba);
     }
 
-    static public void write32BE(long val, OutputStream os) throws IOException {
+    public static void write32BE(long val, OutputStream os) throws IOException {
         byte[] ba = new byte[4];
         int i = ba.length-1;
         ba[i--] = (byte) (val & 0xFF); val = val >> 8; // Least significant Byte last
@@ -149,7 +161,7 @@ public class StreamIO {
         os.write(ba);
     }
 
-    static public void write64BE(long val, OutputStream os) throws IOException {
+    public static void write64BE(long val, OutputStream os) throws IOException {
         byte[] ba = new byte[8];
         int i = ba.length-1;
         ba[i--] = (byte) (val & 0xFF); val = val >> 8; // Least significant Byte last
@@ -163,11 +175,11 @@ public class StreamIO {
         os.write(ba);
     }
 
-    static public int read8(InputStream is) throws IOException {
+    public static int read8(InputStream is) throws IOException {
         return is.read();
     }
 
-    static public int read16BE(InputStream is) throws IOException {
+    public static int read16BE(InputStream is) throws IOException {
         byte[] ba = new byte[2];
         int read = is.read(ba);
         if(read != ba.length) { return -1; }
@@ -178,7 +190,7 @@ public class StreamIO {
         return res;
     }
 
-    static public int read24BE(InputStream is) throws IOException {
+    public static int read24BE(InputStream is) throws IOException {
         byte[] ba = new byte[3];
         int read = is.read(ba);
         if(read != ba.length) { return -1; }
@@ -190,7 +202,7 @@ public class StreamIO {
         return res;
     }
 
-    static public long read32BE(InputStream is) throws IOException {
+    public static long read32BE(InputStream is) throws IOException {
         byte[] ba = new byte[4];
         int read = is.read(ba);
         if(read != ba.length) { return -1; }
@@ -203,7 +215,7 @@ public class StreamIO {
         return res;
     }
 
-    static public long read64BE(InputStream is) throws IOException {
+    public static long read64BE(InputStream is) throws IOException {
         byte[] ba = new byte[8];
         int read = is.read(ba);
         if(read != ba.length) { return -1; }
@@ -220,7 +232,7 @@ public class StreamIO {
         return res;
     }
 
-    static public int read16LE(InputStream is) throws IOException {
+    public static int read16LE(InputStream is) throws IOException {
         byte[] ba = new byte[2];
         int read = is.read(ba);
         if(read != ba.length) { return -1; }
@@ -231,7 +243,7 @@ public class StreamIO {
         return res;
     }
 
-    static public int read24LE(InputStream is) throws IOException {
+    public static int read24LE(InputStream is) throws IOException {
         byte[] ba = new byte[3];
         int read = is.read(ba);
         if(read != ba.length) { return -1; }
@@ -243,7 +255,7 @@ public class StreamIO {
         return res;
     }
 
-    static public long read32LE(InputStream is) throws IOException {
+    public static long read32LE(InputStream is) throws IOException {
         byte[] ba = new byte[4];
         int read = is.read(ba);
         if(read != ba.length) { return -1; }
@@ -256,7 +268,7 @@ public class StreamIO {
         return res;
     }
 
-    static public long read64LE(InputStream is) throws IOException {
+    public static long read64LE(InputStream is) throws IOException {
         byte[] ba = new byte[8];
         int read = is.read(ba);
         if(read != ba.length) { return -1; }

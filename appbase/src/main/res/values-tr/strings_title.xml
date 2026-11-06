@@ -400,4 +400,10 @@ SOFTWARE.
     <string name="title_transfer">Transfer</string>
     <string name="title_transferred">Transfer edildi</string>
     <string name="title_sampling_period">Örnekleme periyodu</string>
+    <string name="title_last_modified">Son değiştirme</string>
+    <string name="title_scan_code_or_text">Kod veya metin tara</string>
+    <string name="title_pro_features">Pro Özellikler</string>
+    <string name="title_active">Aktif</string>
+    <string name="title_unlocked">Açık</string>
+    <string name="title_available_products">Kullanılabilir ürünler</string>
 </resources>

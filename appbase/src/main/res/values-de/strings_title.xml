@@ -400,4 +400,10 @@ SOFTWARE.
     <string name="title_transfer">Übertragung</string>
     <string name="title_transferred">Übertragen</string>
     <string name="title_sampling_period">Abtastperiode</string>
+    <string name="title_last_modified">Zuletzt geändert</string>
+    <string name="title_scan_code_or_text">Code- oder Textscan</string>
+    <string name="title_pro_features">Pro-Funktionen</string>
+    <string name="title_active">Aktiv</string>
+    <string name="title_unlocked">Freigeschaltet</string>
+    <string name="title_available_products">Verfügbare Produkte</string>
 </resources>

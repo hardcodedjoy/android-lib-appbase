@@ -26,6 +26,7 @@ SOFTWARE.
 
 package com.hardcodedjoy.appbase.popup;
 
+import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.view.View;
 import android.widget.ImageButton;
@@ -35,7 +36,8 @@ import android.widget.TextView;
 import com.hardcodedjoy.appbase.R;
 import com.hardcodedjoy.appbase.contentview.ContentView;
 
-abstract public class PopupImage extends Popup {
+@SuppressLint("ViewConstructor")
+public class PopupImage extends Popup {
 
     @Override
     public void onCancel() { }

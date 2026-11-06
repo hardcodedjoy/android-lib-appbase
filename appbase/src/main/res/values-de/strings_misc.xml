@@ -65,4 +65,8 @@ SOFTWARE.
     <string name="pv_unlimited_items_in_main_dir">• unbegrenzte Anzahl an Elementen im Hauptordner</string>
     <string name="pv_more_features_will_be_added">• Weitere Funktionen werden hinzugefügt, wenn die App genügend Downloads erhält</string>
     <string name="pv_full_access_to_all_future_premium_updates">• voller Zugang zu allen zukünftigen Premium-Updates</string>
+    <string name="total">Gesamt</string>
+    <string name="one_time_payment">(Einmalzahlung)</string>
+    <string name="tap_to_buy">(zum Kaufen tippen)</string>
+    <string name="pro_features_intro">Zusätzliche Pro-Funktionen freischalten:</string>
 </resources>

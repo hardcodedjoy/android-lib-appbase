@@ -86,10 +86,27 @@ public class HardcodedJoyConstants {
 
     static public Bitmap devLogo() {
         byte[] ba = android.util.Base64.decode(devLogoBase64, android.util.Base64.DEFAULT);
+
+        /* Warning: missing BitmapFactory.Options parameter
         Bitmap bmpLogo = BitmapFactory.decodeByteArray(ba, 0, ba.length);
         int w = DisplayUnit.dpToPx(240);
         int h = (bmpLogo.getHeight() * w) / bmpLogo.getWidth();
-        return Bitmap.createScaledBitmap(bmpLogo, w, h, true);
+        return Bitmap.createScaledBitmap(bmpLogo, w, h, true); */
+
+        int w = DisplayUnit.dpToPx(240);
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeByteArray(ba, 0, ba.length, options);
+        options.inSampleSize = 1;
+        while ((options.outWidth / options.inSampleSize) / 2 >= w) {
+            options.inSampleSize *= 2;
+        }
+        options.inJustDecodeBounds = false;
+        Bitmap tmp = BitmapFactory.decodeByteArray(ba, 0, ba.length, options);
+        int h = (tmp.getHeight() * w) / tmp.getWidth();
+        Bitmap bitmap = Bitmap.createScaledBitmap(tmp, w, h, true);
+        if(tmp != bitmap) { tmp.recycle(); } // reclaim the intermediate memory immediately
+        return bitmap;
     }
 
     static public String mitLicenseTextHTML() {

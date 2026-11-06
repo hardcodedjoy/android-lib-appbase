@@ -30,29 +30,28 @@ import android.annotation.SuppressLint;
 
 import com.hardcodedjoy.appbase.contentview.ContentView;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Vector;
+import java.util.List;
 
 @SuppressLint("ViewConstructor")
 public class PopupMenuUpDownDelete<T> extends PopupChoose {
 
-    private final ArrayList<T> list;
+    private final List<T> list;
     private final T item;
     private final Runnable onAfterOpExecuted;
 
     public PopupMenuUpDownDelete(String title,
-                                 ArrayList<T> list,
+                                 List<T> list,
                                  T item,
                                  Runnable onAfterOpExecuted) {
-        super(title, null, new Vector<>(Arrays.asList(
+        super(title, null, Arrays.asList(
                 new Option(com.hardcodedjoy.appbase.R.drawable.ic_arrow_v_up_1,
                         com.hardcodedjoy.appbase.R.string.option_move_up, null),
                 new Option(com.hardcodedjoy.appbase.R.drawable.ic_arrow_v_down_1,
                         com.hardcodedjoy.appbase.R.string.option_move_down, null),
                 new Option(com.hardcodedjoy.appbase.R.drawable.ic_content_delete_1,
                         com.hardcodedjoy.appbase.R.string.option_delete, null)
-        )));
+        ));
 
         this.list = list;
         this.item = item;

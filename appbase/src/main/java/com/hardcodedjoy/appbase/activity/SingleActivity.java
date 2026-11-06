@@ -28,10 +28,12 @@ package com.hardcodedjoy.appbase.activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.window.OnBackInvokedCallback;
 import android.window.OnBackInvokedDispatcher;
@@ -39,7 +41,9 @@ import android.window.OnBackInvokedDispatcher;
 import androidx.annotation.NonNull;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 
 import com.hardcodedjoy.appbase.FileUtil;
 import com.hardcodedjoy.appbase.IntentUtil;
@@ -49,16 +53,28 @@ import com.hardcodedjoy.appbase.SettingsBase;
 import com.hardcodedjoy.appbase.gui.ThemeUtil;
 import com.hardcodedjoy.appbase.popup.Popup;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SingleActivity extends Activity {
 
     // class of cv to be displayed on app start
     static private Class<?> cvInitialClass = null;
     static private ContentView cvCurrent = null;
-    static private final Vector<Popup> popups = new Vector<>();
+    static private final List<Popup> popups = new ArrayList<>();
 
     private OnBackInvokedCallback onBackInvokedCallback;
+
+    public enum WindowDisplayMode {
+        NORMAL_BARS_THEMED_FG,
+        NORMAL_BARS_THEMED_BG,
+        NORMAL_BARS_BLACK,
+        NORMAL_BARS_BLACK_HIDE_NOTIFICATIONS,
+        IMMERSIVE_FULLSCREEN
+    }
+
+    private WindowDisplayMode currentWindowDisplayMode =
+            WindowDisplayMode.NORMAL_BARS_THEMED_FG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +105,58 @@ public class SingleActivity extends Activity {
             getOnBackInvokedDispatcher().registerOnBackInvokedCallback(
                     OnBackInvokedDispatcher.PRIORITY_DEFAULT, onBackInvokedCallback);
         }
+
+        // added for Android 15+ Edge-to-Edge:
+        Window window = getWindow();
+        int colorDecorViewBG = ThemeUtil.getColor(this,
+                android.R.attr.colorForeground);
+        window.getDecorView().setBackgroundColor(colorDecorViewBG);
+
+        // Use standard window edge-to-edge flag handling for API 35+
+        WindowCompat.setDecorFitsSystemWindows(window, false);
+
+        /*ViewCompat.setOnApplyWindowInsetsListener(window.getDecorView(),
+                (v, insets) -> {
+                    Insets bars = insets.getInsets(
+                            WindowInsetsCompat.Type.systemBars()
+                                    | WindowInsetsCompat.Type.displayCutout()
+                    );
+                    v.setPadding(bars.left, bars.top, bars.right, bars.bottom);
+                    return WindowInsetsCompat.CONSUMED;
+                });*/
+
+
+        ViewCompat.setOnApplyWindowInsetsListener(window.getDecorView(),
+                (v, insets) -> {
+                    // Check if we are currently in immersive fullscreen mode
+                    boolean isImmersive = (currentWindowDisplayMode == WindowDisplayMode.IMMERSIVE_FULLSCREEN);
+
+                    // In immersive mode, we drop the cutout type so padding is 0 around the camera
+                    int insetTypes = isImmersive
+                            ? WindowInsetsCompat.Type.systemBars()
+                            : (WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.displayCutout());
+
+                    Insets bars = insets.getInsets(insetTypes);
+                    v.setPadding(bars.left, bars.top, bars.right, bars.bottom);
+                    return WindowInsetsCompat.CONSUMED;
+                });
+
+        // 1. RESTORE STATE FIRST (before any layout or view initialization calls)
+        if(savedInstanceState != null) {
+            int savedModeOrdinal = savedInstanceState.getInt("current_viewer_mode", -1);
+            if(savedModeOrdinal >= 0 && savedModeOrdinal < WindowDisplayMode.values().length) {
+                currentWindowDisplayMode = WindowDisplayMode.values()[savedModeOrdinal];
+            }
+        }
+
+        // Apply the mode once layout is ready
+        setWindowDisplayMode(currentWindowDisplayMode);
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("current_viewer_mode", currentWindowDisplayMode.ordinal());
     }
 
     @Override
@@ -160,7 +228,7 @@ public class SingleActivity extends Activity {
         int n = popups.size();
         Popup popup;
         for(int i=0; i<n; i++) {
-            popup = popups.elementAt(i);
+            popup = popups.get(i);
             parent = popup.getParent();
             if(parent != null) { ((ViewGroup) parent).removeView(popup); }
         }
@@ -168,25 +236,9 @@ public class SingleActivity extends Activity {
         // now put on screen:
         FrameLayout frameLayout = new FrameLayout(this);
         frameLayout.addView(cv);
-        for(int i=0; i<n; i++) { frameLayout.addView(popups.elementAt(i)); }
+        for(int i=0; i<n; i++) { frameLayout.addView(popups.get(i)); }
         super.setContentView(frameLayout);
         cvCurrent = cv;
-
-        // added for Android 15+:
-        int colorDecorViewBG = ThemeUtil.getColor(this,
-                android.R.attr.colorForeground);
-        Window window = getWindow();
-
-        window.getDecorView().setBackgroundColor(colorDecorViewBG);
-        ViewCompat.setOnApplyWindowInsetsListener(window.getDecorView(),
-                (v, insets) -> {
-                    Insets bars = insets.getInsets(
-                            WindowInsetsCompat.Type.systemBars()
-                                    | WindowInsetsCompat.Type.displayCutout()
-                    );
-                    v.setPadding(bars.left, bars.top, bars.right, bars.bottom);
-                    return WindowInsetsCompat.CONSUMED;
-                });
     }
 
     public ContentView getContentView() { return cvCurrent; }
@@ -205,7 +257,8 @@ public class SingleActivity extends Activity {
 
     private void handleOnBackPressed() {
         if(!popups.isEmpty()) {
-            Popup popup = popups.lastElement();
+            Popup popup = popups.get(popups.size()-1); // last element
+            popup.onBackPressed();
             popup.performOutsideClick();
             removePopup(popup);
             return;
@@ -269,5 +322,104 @@ public class SingleActivity extends Activity {
             if(frameLayout.getChildAt(i) == popup) { return true; }
         }
         return false;
+    }
+
+    public void setWindowDisplayMode(WindowDisplayMode mode) {
+        this.currentWindowDisplayMode = mode;
+
+        Window window = getWindow();
+        WindowInsetsControllerCompat controller =
+                WindowCompat.getInsetsController(window, window.getDecorView());
+
+        switch (mode) {
+            case NORMAL_BARS_THEMED_FG:
+                // not fullscreen
+                // colorForeground around the camera hole,
+                // colorForeground as notification bar
+                window.getDecorView().setBackgroundColor(ThemeUtil.getColor(
+                        this, android.R.attr.colorForeground));
+                // legacy window.addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+                // legacy window.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+                controller.setSystemBarsBehavior(
+                        WindowInsetsControllerCompat.BEHAVIOR_DEFAULT);
+                controller.show(WindowInsetsCompat.Type.statusBars());
+                controller.show(WindowInsetsCompat.Type.navigationBars());
+                break;
+
+            case NORMAL_BARS_THEMED_BG:
+                // not fullscreen
+                // colorBackground around the camera hole,
+                // colorBackground as notification bar
+                window.getDecorView().setBackgroundColor(ThemeUtil.getColor(
+                        this, android.R.attr.colorBackground));
+                // legacy window.addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+                // legacy window.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+                controller.setSystemBarsBehavior(
+                        WindowInsetsControllerCompat.BEHAVIOR_DEFAULT);
+                controller.show(WindowInsetsCompat.Type.statusBars());
+                controller.show(WindowInsetsCompat.Type.navigationBars());
+                break;
+
+            case NORMAL_BARS_BLACK:
+                // not fullscreen
+                // BLACK color around the camera hole,
+                // BLACK color as notification bar
+                window.getDecorView().setBackgroundColor(Color.BLACK);
+                // legacy window.addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+                // legacy window.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+                controller.setSystemBarsBehavior(
+                        WindowInsetsControllerCompat.BEHAVIOR_DEFAULT);
+                controller.show(WindowInsetsCompat.Type.statusBars());
+                controller.show(WindowInsetsCompat.Type.navigationBars());
+                break;
+
+            case NORMAL_BARS_BLACK_HIDE_NOTIFICATIONS:
+                // not fullscreen
+                // BLACK color around the camera hole,
+                // BLACK color as notification bar
+                window.getDecorView().setBackgroundColor(Color.BLACK);
+                // legacy window.addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+                // legacy window.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+                controller.setSystemBarsBehavior(
+                        WindowInsetsControllerCompat.BEHAVIOR_DEFAULT);
+                controller.hide(WindowInsetsCompat.Type.statusBars());
+                controller.show(WindowInsetsCompat.Type.navigationBars());
+                break;
+
+            case IMMERSIVE_FULLSCREEN:
+                // black bar around the camera hole
+                window.getDecorView().setBackgroundColor(0xFF000000);
+                // legacy window.clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+                // legacy window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+                controller.setSystemBarsBehavior(WindowInsetsControllerCompat
+                        .BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);
+                controller.hide(WindowInsetsCompat.Type.statusBars());
+                controller.hide(WindowInsetsCompat.Type.navigationBars());
+                break;
+        }
+
+        if(android.os.Build.VERSION.SDK_INT >= 28) {
+            WindowManager.LayoutParams params = window.getAttributes();
+            switch(mode) {
+                case NORMAL_BARS_BLACK:
+                case NORMAL_BARS_BLACK_HIDE_NOTIFICATIONS:
+                case IMMERSIVE_FULLSCREEN:
+                    params.layoutInDisplayCutoutMode = WindowManager.LayoutParams
+                            .LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES;
+                    break;
+                default:
+                    params.layoutInDisplayCutoutMode = WindowManager.LayoutParams
+                            .LAYOUT_IN_DISPLAY_CUTOUT_MODE_DEFAULT;
+                    break;
+            }
+            window.setAttributes(params);
+        }
+
+        ThemeUtil.adjustStatusAndNavBarColors(this);
+        ViewCompat.requestApplyInsets(window.getDecorView());
+    }
+
+    public WindowDisplayMode getWindowDisplayMode() {
+        return currentWindowDisplayMode;
     }
 }

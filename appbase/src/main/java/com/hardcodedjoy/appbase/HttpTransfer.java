@@ -31,7 +31,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 @SuppressWarnings("unused")
 public class HttpTransfer {
@@ -44,12 +45,12 @@ public class HttpTransfer {
     private String accept;
     private String acceptLanguage;
     private String protocol;
-    private final Vector<NameValuePair> additionalHeaders;
+    private final List<NameValuePair> additionalHeaders;
     private int responseCode;
     private int connectTimeout;
     private int readTimeout;
 
-    public HttpTransfer() { this.additionalHeaders = new Vector<>(); }
+    public HttpTransfer() { this.additionalHeaders = new ArrayList<>(); }
 
     public void setUserAgent(String userAgent) { this.userAgent = userAgent; }
     public String getUserAgent() { return userAgent; }
@@ -161,7 +162,7 @@ public class HttpTransfer {
         return postForString(urlString, new String[]{ name }, new byte[][]{ content });
     }
 
-    public String postForString(String urlString, Vector<String> names, Vector<byte[]> contents) {
+    public String postForString(String urlString, List<String> names, List<byte[]> contents) {
         return postForString(urlString,
                 names.toArray(new String[]{}),
                 contents.toArray(new byte[][]{}));
@@ -176,7 +177,7 @@ public class HttpTransfer {
         return postForBytes(urlString, new String[]{ name }, new byte[][]{ content });
     }
 
-    public byte[] postForBytes(String urlString, Vector<String> names, Vector<byte[]> contents) {
+    public byte[] postForBytes(String urlString, List<String> names, List<byte[]> contents) {
         return postForBytes(urlString,
                 names.toArray(new String[]{}),
                 contents.toArray(new byte[][]{}));
